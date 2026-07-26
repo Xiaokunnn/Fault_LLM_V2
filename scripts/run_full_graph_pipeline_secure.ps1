@@ -8,7 +8,14 @@ param(
 $ErrorActionPreference = "Stop"
 $ProjectRoot = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot "..")).Path
 Set-Location -LiteralPath $ProjectRoot
-$Bundled = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+$UserHome = if (-not [string]::IsNullOrWhiteSpace($env:USERPROFILE)) {
+    $env:USERPROFILE
+} elseif (-not [string]::IsNullOrWhiteSpace($env:HOME)) {
+    $env:HOME
+} else {
+    [Environment]::GetFolderPath([Environment+SpecialFolder]::UserProfile)
+}
+$Bundled = Join-Path $UserHome ".cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
 $PythonExe = if (-not [string]::IsNullOrWhiteSpace($Python)) { $Python } elseif (Test-Path $Bundled) { $Bundled } else { "python" }
 $Started = Get-Date
 
