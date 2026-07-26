@@ -1,0 +1,123 @@
+{
+  "status": "success",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "model_requested": "qwen3.7-max",
+  "page_text_sha256": "fd9cb74797d6033c75c4f436e6f701f4057ddeea72cdf2f4bb9f79d1510ad48d",
+  "doc_id": "MP001",
+  "pdf_page_number": 52,
+  "api_record": {
+    "request_id": "chatcmpl-1b16cd4a-3a8f-9d26-babe-8fdd44e1a541",
+    "model": "qwen3.7-max",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 1102,
+      "prompt_tokens": 1781,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 2883
+    },
+    "latency_ms": 15513,
+    "requested_at": "2026-07-23T16:17:05.173Z",
+    "responded_at": "2026-07-23T16:17:20.686Z",
+    "attempt": 1,
+    "response_json": {
+      "triples": [
+        {
+          "head": "High vibration",
+          "head_type": "Symptom",
+          "relation": "indicates",
+          "tail": "Equipment requires maintenance to determine cause of high vibration and to repair",
+          "tail_type": "MaintenanceAction",
+          "evidence_text": "Equipment requires maintenance to determine cause of high vibration and to repair.",
+          "triple_confidence": 0.9,
+          "fault_class_ids": [],
+          "evidence_role": "symptom"
+        },
+        {
+          "head": "High vibration",
+          "head_type": "Symptom",
+          "relation": "indicates",
+          "tail": "Equipment failure is imminent and should be shut down so as to determine cause of high vibration and to repair",
+          "tail_type": "MaintenanceAction",
+          "evidence_text": "Equipment failure is imminent and should be shut down so as to determine cause of high vibration and to repair.",
+          "triple_confidence": 0.9,
+          "fault_class_ids": [],
+          "evidence_role": "symptom"
+        },
+        {
+          "head": "Shock pulse analysis",
+          "head_type": "InspectionMethod",
+          "relation": "diagnosed_by",
+          "tail": "lubricant problems",
+          "tail_type": "FaultMode",
+          "evidence_text": "It can identify issues such as lubricant problems, problems with oil seals and packings, incorrect bearing installation or alignment.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "inspection_or_maintenance"
+        },
+        {
+          "head": "Shock pulse analysis",
+          "head_type": "InspectionMethod",
+          "relation": "diagnosed_by",
+          "tail": "problems with oil seals and packings",
+          "tail_type": "FaultMode",
+          "evidence_text": "It can identify issues such as lubricant problems, problems with oil seals and packings, incorrect bearing installation or alignment.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "mechanical_seal_failure"
+          ],
+          "evidence_role": "inspection_or_maintenance"
+        },
+        {
+          "head": "Shock pulse analysis",
+          "head_type": "InspectionMethod",
+          "relation": "diagnosed_by",
+          "tail": "incorrect bearing installation or alignment",
+          "tail_type": "FaultMode",
+          "evidence_text": "It can identify issues such as lubricant problems, problems with oil seals and packings, incorrect bearing installation or alignment.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "inspection_or_maintenance"
+        },
+        {
+          "head": "Bearing damage",
+          "head_type": "FailureMechanism",
+          "relation": "causes",
+          "tail": "excite the bearing ring frequency",
+          "tail_type": "SignalFeature",
+          "evidence_text": "bearing damage can excite the bearing ring frequency which vibrates at a precise frequency based upon the bearing geometry",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Metal-to-metal contact",
+          "head_type": "FailureMechanism",
+          "relation": "causes",
+          "tail": "wear",
+          "tail_type": "FaultMode",
+          "evidence_text": "metal-to-metal contact is a source of wear",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        }
+      ],
+      "page_summary": "Page provides vibration severity alarm thresholds for various pump types and describes Shock Pulse Analysis as a technique for monitoring roller bearings, identifying lubricant issues, seal problems, and misalignment via high-frequency impact signals.",
+      "warnings": [
+        "The relation 'diagnosed_by' is used in reverse direction (InspectionMethod -> diagnosed_by -> FaultMode) to satisfy the constraint that evidence must support the triple while adhering to allowed relations; standard semantic interpretation would be FaultMode -> diagnosed_by -> InspectionMethod.",
+        "Fault class IDs for seal and alignment issues are inferred from the text 'oil seals' and 'alignment' mapping to allowed classes, though not explicitly named as the specific fault class IDs in the text."
+      ]
+    },
+    "prompt_sha256": "00fd6170df5a69f75442de35d831d74cb3cce9a0296ea1313fff4af7f03e52f3"
+  },
+  "request_config_sha256": "ba82030a3a7f14cc7c44ab98e5d172476b8fdc0baaa4355a2833a236d47a1d54"
+}

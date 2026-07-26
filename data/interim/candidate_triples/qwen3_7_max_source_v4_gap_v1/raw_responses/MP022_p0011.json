@@ -1,0 +1,116 @@
+{
+  "page_key": "MP022:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e277814d-f82f-9f38-a114-600b01ba0f8c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 987,
+    "prompt_tokens": 1738,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2725
+  },
+  "latency_ms": 12806,
+  "attempt": 1,
+  "prompt_sha256": "8487658457c361b2c62b847a0ee6c34d98316dbba7310566481e3e654ddf4fa2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "connections",
+        "head_canonical_zh": "连接",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure that the connections are tight",
+        "tail_canonical_zh": "确保连接紧固",
+        "tail_type": "InspectionAction",
+        "evidence_text": "2. Ensure that the connections are tight.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pipelines",
+        "head_canonical_zh": "管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure that the pipelines are routed correctly",
+        "tail_canonical_zh": "确保管路走向正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1. Ensure that the pipelines are routed correctly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal rings",
+        "head_canonical_zh": "密封圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Remember seal rings",
+        "tail_canonical_zh": "检查密封圈",
+        "tail_type": "InspectionAction",
+        "evidence_text": "3. Remember seal rings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Piping system",
+        "head_canonical_zh": "管路系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "self-supported",
+        "tail_canonical_zh": "自支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping system must be self-supported",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "page_key": "MP003:p0763",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b801d530-1ab6-9925-974e-55f4261c21dc",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1868,
+    "prompt_tokens": 1919,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3787
+  },
+  "latency_ms": 23982,
+  "attempt": 1,
+  "prompt_sha256": "20c1c26ef7ffae6bffbb436a0bd3564b5e07db8964b30e66d3be4540145aa8d0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "activation of the protection of a harmonic filter circuit",
+        "head_canonical_zh": "谐波滤波器电路保护动作",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alert the crew",
+        "tail_canonical_zh": "船员报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Arrangements are to be provided to alert the crew in the event of activation of the protection of a harmonic filter circuit.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "current unbalance",
+        "head_canonical_zh": "电流不平衡",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alerting the crew",
+        "tail_canonical_zh": "船员报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Additionally, there is to be installed a current unbalance detection system independent of the overcurrent protection alerting the crew in case of current unbalance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rupturing",
+        "head_canonical_zh": "电容器破裂",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage",
+        "tail_canonical_zh": "损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "Consideration is to be given to additional protection for the individual capacitor element as (e.g., relief valve or overpressure disconnector) in order to protect against damage from rupturing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "activation of overload or short-circuit protection",
+        "head_canonical_zh": "过载或短路保护动作",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "An alarm is to be initiated in a continuously manned location",
+        "tail_canonical_zh": "有人值守处所报警",
+        "tail_type": "Symptom",
+        "evidence_text": "An alarm is to be initiated in a continuously manned location in the event of an activation of overload or short-circuit protection.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "current imbalance exceeds the ratings of the individual filter circuit components",
+        "head_canonical_zh": "电流不平衡超过滤波器组件额定值",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "appropriate circuits shall automatically trip",
+        "tail_canonical_zh": "相应电路自动跳闸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the current imbalance exceeds the ratings of the individual filter circuit components, the appropriate circuits shall automatically trip and be prevented from interacting with other parts of the electrical network.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "capacitor(s) deterioration",
+        "head_canonical_zh": "电容器劣化",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alarmed locally at the equipment and in a continuously manned location",
+        "tail_canonical_zh": "设备本地及有人值守处所报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Detection of capacitor(s) deterioration shall be alarmed locally at the equipment and in a continuously manned location.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "detection of deterioration",
+        "head_canonical_zh": "劣化检测",
+        "head_type": "InspectionAction",
+        "relation": "causes",
+        "tail_surface": "Power to the harmonic filter circuit containing the deteriorated capacitor(s) shall be automatically disconnected and the capacitor discharged safely",
+        "tail_canonical_zh": "自动断开含劣化电容器的滤波器电路电源并安全放电",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Power to the harmonic filter circuit containing the deteriorated capacitor(s) shall be automatically disconnected and the capacitor discharged safely upon detection of deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leading power factor condition approaches the point of the generator(s) becoming self-excited",
+        "head_canonical_zh": "超前功率因数接近发电机自激点",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "appropriate capacitive circuits shall be automatically disconnected",
+        "tail_canonical_zh": "相应容性电路自动断开",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In cases where a leading power factor condition approaches the point of the generator(s) becoming self-excited, the appropriate capacitive circuits shall be automatically disconnected and prevented from interacting with the rest of the electrical network.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.89,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

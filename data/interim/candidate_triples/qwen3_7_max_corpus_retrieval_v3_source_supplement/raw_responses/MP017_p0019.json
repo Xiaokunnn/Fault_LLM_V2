@@ -1,0 +1,119 @@
+{
+  "page_key": "MP017:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5eb71868-99dd-9e64-a941-787dd15acca0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1075,
+    "prompt_tokens": 2028,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3103
+  },
+  "latency_ms": 14086,
+  "attempt": 1,
+  "prompt_sha256": "8b1f183b4c6477faed4ae6a604ccd923d32765e243b804056bcabc89017fa7f7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft misalignment",
+        "head_canonical_zh": "轴不对中",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Bearing overheating",
+        "tail_canonical_zh": "轴承过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Bearing overheating can also be caused by shaft misalignment and/or excessive vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "excessive vibration",
+        "head_canonical_zh": "过度振动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Bearing overheating",
+        "tail_canonical_zh": "轴承过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Bearing overheating can also be caused by shaft misalignment and/or excessive vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sudden increase in bearing temperature",
+        "head_canonical_zh": "轴承温度骤升",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearings are at the point of failing to operate properly",
+        "tail_canonical_zh": "轴承即将失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "A sudden increase in bearing temperature is a warning that the bearings are at the point of failing to operate properly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "large solids",
+        "head_canonical_zh": "大颗粒固体",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "clogging the drain port",
+        "tail_canonical_zh": "排放口堵塞",
+        "tail_type": "FaultMode",
+        "evidence_text": "To prevent large solids from clogging the drain port and preventing the pump from completely draining",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "contact-type thermometer",
+        "head_canonical_zh": "接触式温度计",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Bearing temperatures",
+        "tail_canonical_zh": "轴承温度",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Bearing temperatures can be measured accurately by placing a contact-type thermometer against the housing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

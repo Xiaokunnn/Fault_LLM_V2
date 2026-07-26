@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0030",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-aae63275-81c1-9a7f-9551-55b422ab9aa5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 424,
+    "prompt_tokens": 1597,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2021
+  },
+  "latency_ms": 5721,
+  "attempt": 1,
+  "prompt_sha256": "96d6ab11b4fbf5f6ca526728bb9e4e6b040a5675d1bdcc4b5a6d06d793de542f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "imminent bearing failure",
+        "tail_canonical_zh": "轴承即将失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "vibrations indicating imminent bearing failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "increasing level of contaminants in lubricating oil",
+        "head_canonical_zh": "润滑油中污染物含量增加",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "failures are in the process of occurring",
+        "tail_canonical_zh": "故障正在发生",
+        "tail_type": "FaultMode",
+        "evidence_text": "increasing level of contaminants in lubricating oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

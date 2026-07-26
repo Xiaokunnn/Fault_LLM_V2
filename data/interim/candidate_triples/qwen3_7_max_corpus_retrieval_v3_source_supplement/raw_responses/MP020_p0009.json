@@ -1,0 +1,118 @@
+{
+  "page_key": "MP020:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8ed51a09-e966-92b8-a65e-a1e2c83beb02",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1112,
+    "prompt_tokens": 2446,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3558
+  },
+  "latency_ms": 14840,
+  "attempt": 1,
+  "prompt_sha256": "b2d527277c1c69a97156bcd5fde754ff903b4c9bbe6c15bb0ba9cad11e6400a4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "discharge valve partly closed",
+        "head_canonical_zh": "排出阀部分关闭",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "POOR PRACTICES",
+        "tail_canonical_zh": "不良实践",
+        "tail_type": "Cause",
+        "evidence_text": "Do not design a system to operate with the discharge valve partly closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "small discharge valves, piping, and fittings",
+        "head_canonical_zh": "小口径排出阀、管路及管件",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "friction loss",
+        "tail_canonical_zh": "摩擦损失",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not use small discharge valves, piping, and fittings. This adds to friction loss.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tighten bolts on misaligned flanges",
+        "head_canonical_zh": "在未对中法兰上紧固螺栓",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "damage wear surfaces",
+        "tail_canonical_zh": "磨损面损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not tighten bolts on misaligned flanges. This can damage wear surfaces, bearings, coupling, overload motor, and create other problems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tighten bolts on misaligned flanges",
+        "head_canonical_zh": "在未对中法兰上紧固螺栓",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "bearings",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not tighten bolts on misaligned flanges. This can damage wear surfaces, bearings, coupling, overload motor, and create other problems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "tighten bolts on misaligned flanges",
+        "head_canonical_zh": "在未对中法兰上紧固螺栓",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "overload motor",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not tighten bolts on misaligned flanges. This can damage wear surfaces, bearings, coupling, overload motor, and create other problems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

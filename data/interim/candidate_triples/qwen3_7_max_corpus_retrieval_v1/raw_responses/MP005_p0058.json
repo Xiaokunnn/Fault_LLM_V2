@@ -1,0 +1,99 @@
+{
+  "page_key": "MP005:p0058",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d4a35b6a-ea3a-9b85-8646-9cccb9a41faa",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 850,
+    "prompt_tokens": 4265,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5115
+  },
+  "latency_ms": 10929,
+  "attempt": 1,
+  "prompt_sha256": "7473a749aa2258abc35a1da8fa7b89526d6255ce9f0914d85ef7822c2febe468",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Too high density of the fluid pumped",
+        "head_canonical_zh": "输送流体密度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Observe the density information in the order documentation",
+        "tail_canonical_zh": "遵守订单文件中的密度信息",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Observe the density information in the order documentation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Make sure that the motor has sufficient power reserves",
+        "tail_canonical_zh": "确保电机具有足够功率裕量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Make sure that the motor has sufficient power reserves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

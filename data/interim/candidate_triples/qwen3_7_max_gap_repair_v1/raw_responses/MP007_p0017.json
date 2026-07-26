@@ -1,0 +1,452 @@
+{
+  "page_key": "MP007:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6054e991-50ba-9d1b-8848-cc45dbeb9d09",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 5099,
+    "prompt_tokens": 16310,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 21409
+  },
+  "latency_ms": 57264,
+  "attempt": 1,
+  "prompt_sha256": "6c6c6da8f1cfd29e9b0ffd8cbf6debb68300ac8f68427339bcc23c9661ec0d88",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Leakage along the shaft",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check dust/grinding part of the pump",
+        "tail_canonical_zh": "检查泵内粉尘或研磨部件",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Leakage along the\nshaft",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r001:c00",
+          "MP007:p0017:t00:r001:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Running surface of the mechanical seal is damaged",
+        "head_canonical_zh": "机械密封摩擦面损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the mechanical seal",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Running surface of the\nmechanical seal is\ndamaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r001:c03",
+          "MP007:p0017:t00:r001:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "New pump: The mechanical seal is blocked during assembling",
+        "head_canonical_zh": "新泵装配时机械密封卡滞",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "When the pump is running, rapidly open and close the outlet valve",
+        "tail_canonical_zh": "运行时快速开关出口阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "New pump: The\nmechanical seal is\nblocked during assembling",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r002:c03",
+          "MP007:p0017:t00:r002:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The mechanical seal is installed incorrectly",
+        "head_canonical_zh": "机械密封安装不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Install the mechanical seal correctly, use water and soap as a lubricant during installation",
+        "tail_canonical_zh": "正确安装机械密封并使用肥皂水润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The mechanical seal is\ninstalled incorrectly",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r003:c03",
+          "MP007:p0017:t00:r003:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The elastomer is damaged due to impact of the medium",
+        "head_canonical_zh": "弹性体因介质冲击损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Choose correct mechanical seal elastomer",
+        "tail_canonical_zh": "选用正确的机械密封弹性体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The elastomer is damaged\ndue to impact of the\nmedium",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r004:c03",
+          "MP007:p0017:t00:r004:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pressure is too high",
+        "head_canonical_zh": "压力过高",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Use mechanical seal of correct type and pressure range",
+        "tail_canonical_zh": "使用类型和压力范围正确的机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pressure is too high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r005:c03",
+          "MP007:p0017:t00:r005:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The shaft is worn",
+        "head_canonical_zh": "轴磨损",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the shaft and mechanical seal",
+        "tail_canonical_zh": "更换轴和机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The shaft is worn",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r006:c03",
+          "MP007:p0017:t00:r006:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump runs without water, it is a dry running",
+        "head_canonical_zh": "泵无水干转",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the mechanical seal",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump runs without\nwater, it is a dry running",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r007:c03",
+          "MP007:p0017:t00:r007:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leakage at pump bracket top or pump bottom",
+        "head_canonical_zh": "泵支架顶部或泵底部泄漏",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "The O-ring is damaged",
+        "tail_canonical_zh": "O型圈损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Leakage at pump\nbracket top or pump\nbottom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r008:c00",
+          "MP007:p0017:t00:r008:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The O-ring is damaged",
+        "head_canonical_zh": "O型圈损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the O-ring",
+        "tail_canonical_zh": "更换O型圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The O-ring is damaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r008:c03",
+          "MP007:p0017:t00:r008:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The O-ring does not withstand the pumping medium",
+        "head_canonical_zh": "O型圈不耐输送介质",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace with an O-ring suitable for the pumping medium",
+        "tail_canonical_zh": "更换为适合输送介质的O型圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The O-ring does not\nwithstand the pumping\nmedium",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r009:c03",
+          "MP007:p0017:t00:r009:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump is deformed due to too much stress at the pump foot",
+        "head_canonical_zh": "泵脚应力过大导致泵体变形",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce the pressure on the pipe",
+        "tail_canonical_zh": "减小管路压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump is deformed due\nto too much stress at the\npump foot",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r010:c03",
+          "MP007:p0017:t00:r010:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump vibration and noise",
+        "head_canonical_zh": "泵振动和噪声",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "The coupling is installed incorrectly",
+        "tail_canonical_zh": "联轴器安装不当",
+        "tail_type": "Cause",
+        "evidence_text": "Pump vibration and\nnoise",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r011:c00",
+          "MP007:p0017:t00:r011:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The coupling is installed incorrectly",
+        "head_canonical_zh": "联轴器安装不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Check and re-install the coupling",
+        "tail_canonical_zh": "检查并重新安装联轴器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The coupling is installed\nincorrectly",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r011:c03",
+          "MP007:p0017:t00:r011:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is no medium in the pump",
+        "head_canonical_zh": "泵内无介质",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Fill the pump and discharge air",
+        "tail_canonical_zh": "灌泵并排气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "There is no medium in the\npump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r012:c03",
+          "MP007:p0017:t00:r012:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "There is no medium input",
+        "head_canonical_zh": "无介质输入",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Make sure that there is sufficient medium at the inlet",
+        "tail_canonical_zh": "确保入口有充足介质",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "There is no medium input",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r013:c03",
+          "MP007:p0017:t00:r013:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump bearing or motor bearing is damaged",
+        "head_canonical_zh": "泵轴承或电机轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the bearing",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump bearing or\nmotor bearing is damaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r014:c03",
+          "MP007:p0017:t00:r014:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is very little usable NPSH, and the pump has suffered cavitation",
+        "head_canonical_zh": "可用NPSH过低导致泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase pressure at the inlet",
+        "tail_canonical_zh": "提高入口压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "There is very little usable\nNPSH, and the pump has\nsuffered cavitation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r015:c03",
+          "MP007:p0017:t00:r015:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump fails to run within the specified operating range",
+        "head_canonical_zh": "泵未在指定工况范围内运行",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Adjust the system so that the pump runs within the specified range",
+        "tail_canonical_zh": "调整系统使泵在指定范围内运行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump fails to run\nwithin the specified\noperating range",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r016:c03",
+          "MP007:p0017:t00:r016:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump is installed on an uneven surface",
+        "head_canonical_zh": "泵安装在不平整表面",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Adjust installation",
+        "tail_canonical_zh": "调整安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump is installed on\nan uneven surface",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0017:t00:r017:c03",
+          "MP007:p0017:t00:r017:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

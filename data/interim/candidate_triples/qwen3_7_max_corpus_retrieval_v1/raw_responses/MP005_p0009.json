@@ -1,0 +1,131 @@
+{
+  "page_key": "MP005:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0aa83dce-2f0f-9554-bb68-43800d4b8b6e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1276,
+    "prompt_tokens": 8073,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9349
+  },
+  "latency_ms": 15436,
+  "attempt": 1,
+  "prompt_sha256": "feff143b3e1048ee5543146eb79878e22dedec0d88cffaf4caaf6d16b5f50a04",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Dry run",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "critical high temperatures at seal faces",
+        "tail_canonical_zh": "密封面临界高温",
+        "tail_type": "Symptom",
+        "evidence_text": "Dry run will result in frictional heat being developed causing critical high temperatures at seal faces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Choking or clogging of the pump",
+        "head_canonical_zh": "泵节流或堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "too low load",
+        "tail_canonical_zh": "负载过低",
+        "tail_type": "Symptom",
+        "evidence_text": "Choking or clogging of the pump can result in either too low load or overload of the motor or bending of the shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Choking or clogging of the pump",
+        "head_canonical_zh": "泵节流或堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "overload of the motor",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "Symptom",
+        "evidence_text": "Choking or clogging of the pump can result in either too low load or overload of the motor or bending of the shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Choking or clogging of the pump",
+        "head_canonical_zh": "泵节流或堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "bending of the shaft",
+        "tail_canonical_zh": "轴弯曲",
+        "tail_type": "Symptom",
+        "evidence_text": "Choking or clogging of the pump can result in either too low load or overload of the motor or bending of the shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power consumption being too low",
+        "head_canonical_zh": "功耗过低",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Dry run",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "A cos  measuring device can be fitted to the power circuit and set to trip the drive power in case of the power consumption being too low.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "outlet pressure being too high",
+        "head_canonical_zh": "出口压力过高",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Pumping against closed outlet valve",
+        "tail_canonical_zh": "关阀运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "A pressure switch can be fitted to trip the drive power in case of the outlet pressure being too high.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

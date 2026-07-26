@@ -1,0 +1,61 @@
+{
+  "page_key": "MP019:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0775b361-b14a-9b80-bdfb-35f56b0e6bc2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 428,
+    "prompt_tokens": 2018,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2446
+  },
+  "latency_ms": 6412,
+  "attempt": 1,
+  "prompt_sha256": "cb06b155e107d0902bb10bf1d62c369c7ddc7f10ef986a7cf848d42569d7268a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Excessive belt tension",
+        "head_canonical_zh": "皮带张力过大",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage bearings",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Excessive belt tension will damage bearings and can cause shaft damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Correct alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "bearing, vibration and possible shaft failures",
+        "tail_canonical_zh": "轴承、振动及可能的轴故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Correct alignment is essential to avoid bearing, vibration and possible shaft failures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

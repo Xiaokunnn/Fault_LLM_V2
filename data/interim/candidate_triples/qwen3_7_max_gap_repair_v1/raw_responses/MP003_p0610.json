@@ -1,0 +1,105 @@
+{
+  "page_key": "MP003:p0610",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fe55405e-206a-905e-8d7b-dbf6398d503a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1096,
+    "prompt_tokens": 7247,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8343
+  },
+  "latency_ms": 13237,
+  "attempt": 1,
+  "prompt_sha256": "6d1eaeb17501bdf3e3ab8cc544edc6d4286d00859fdddf9f46c5ef12d6e30c61",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Fuel delivery pipes",
+        "head_canonical_zh": "燃油输送管",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Leak alarm",
+        "tail_canonical_zh": "泄漏报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel delivery pipes        Leak alarm       4-6-5/3.3.7(a), 4-6-5/3.5.5 and\n                                                             4-6-5/3.7.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0610:t00:r006:c00",
+          "MP003:p0610:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Overflow tank",
+        "head_canonical_zh": "溢流柜",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "High-level alarm",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Overflow tank             High-level alarm      4-6-4/13.5.4",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0610:t00:r001:c00",
+          "MP003:p0610:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil tank",
+        "head_canonical_zh": "燃油柜",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "High-level alarm, unless overflow is\nfitted",
+        "tail_canonical_zh": "高液位报警（除非装有溢流管）",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil tank        High-level alarm, unless overflow is 4-6-4/13.5.6(e)\n                                          fitted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0610:t00:r002:c00",
+          "MP003:p0610:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil heaters",
+        "head_canonical_zh": "燃油加热器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "High-temperature alarm unless heating\nmedium precludes overheating.",
+        "tail_canonical_zh": "高温报警（除非加热介质可防止过热）",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil heaters     High-temperature alarm unless heating 4-6-4/13.5.7(b) and 4-6-4/13.7.4(b)\n                                   medium precludes overheating.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0610:t00:r003:c00",
+          "MP003:p0610:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

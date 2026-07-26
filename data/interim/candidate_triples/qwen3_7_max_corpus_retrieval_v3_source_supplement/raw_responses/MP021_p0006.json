@@ -1,0 +1,81 @@
+{
+  "page_key": "MP021:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d7b1d01c-a32a-993d-bb40-cb27c124018d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 726,
+    "prompt_tokens": 2325,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3051
+  },
+  "latency_ms": 10128,
+  "attempt": 1,
+  "prompt_sha256": "a55fc178e971f9390496cc48ca13ed37c0a34af9833a347da18ce8fbbc595a4d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Minute particles",
+        "head_canonical_zh": "微小颗粒",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "leakage",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Minute particles can scratch the seal faces and cause leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal rotary member",
+        "head_canonical_zh": "机械密封旋转环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Coat rotor shaft, tapered installation sleeve and inner diameter of mechanical seal with P-80® or equivalent before assembly",
+        "tail_canonical_zh": "组装前在转子轴、锥形安装套及机械密封内径涂抹P-80®或等效润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Coat rotor shaft, tapered installation sleeve and inner diameter of mechanical seal with P-80® or equivalent before assembly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Connect suckback or flush line or vent stuffing box for seals without circulation line until liquid is present on start up",
+        "tail_canonical_zh": "启动前为无循环管路的密封连接回吸/冲洗管线或填料函排气口直至有液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Connect suckback or flush line or vent stuffing box for seals without circulation line until liquid is present on start up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

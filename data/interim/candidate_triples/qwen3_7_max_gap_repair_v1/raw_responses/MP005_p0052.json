@@ -1,0 +1,137 @@
+{
+  "page_key": "MP005:p0052",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7bf9afbf-5c0d-94f1-9d86-b8684b539ba7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1394,
+    "prompt_tokens": 3343,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4737
+  },
+  "latency_ms": 17136,
+  "attempt": 1,
+  "prompt_sha256": "81b954b0c197d7e7d3e1ea2b16a98993f7c94b167bdb4a240d0799917ef045d9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Automatic venting and priming system",
+        "tail_canonical_zh": "自动排气与引水系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Automatic venting and priming system is designed for centrifugal pumps to prevent dry running\nwhile the liquid level is below the pump inlet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Vent the pump and the suction line and prime both with the fluid to be handled",
+        "tail_canonical_zh": "对泵及吸入管路排气并用输送介质引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Vent the pump and the suction line and prime both with the fluid to be handled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction line",
+        "head_canonical_zh": "吸入管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Vent the pump and the suction line and prime both with the fluid to be handled",
+        "tail_canonical_zh": "对泵及吸入管路排气并用输送介质引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Vent the pump and the suction line and prime both with the fluid to be handled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shut-off element in the suction line",
+        "head_canonical_zh": "吸入管路截止阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fully open the shut-off element in the suction line",
+        "tail_canonical_zh": "全开吸入管路截止阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Fully open the shut-off element in the suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "auxiliary feed lines",
+        "head_canonical_zh": "辅助供给管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fully open all auxiliary feed lines (barrier fluid, flushing liquid, etc.), if any",
+        "tail_canonical_zh": "全开所有辅助供给管路（如有）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "3. Fully open all auxiliary feed lines (barrier fluid, flushing liquid, etc.), if any.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vacuum balance line",
+        "head_canonical_zh": "真空平衡管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Open the shut-off element, if any, in the vacuum balance line, and close the vacuum-tight shut-off element, if any",
+        "tail_canonical_zh": "打开真空平衡管路截止阀并关闭真空气密截止阀（如有）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "4. Open the shut-off element, if any, in the vacuum balance line, and close the vacuum-tight shut-\n            off element, if any.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

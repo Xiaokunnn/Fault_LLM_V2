@@ -1,0 +1,74 @@
+{
+  "page_key": "MP005:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-32f84ebe-45f6-9f9d-940e-bdd25dcd8d4c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 614,
+    "prompt_tokens": 1776,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2390
+  },
+  "latency_ms": 7765,
+  "attempt": 1,
+  "prompt_sha256": "0ba8937876d12ab48ef6da6dd00d28598f401ba53ebcbd3c5b700cca0efb1290",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "max. allowed liquid temperature is 80°C",
+        "tail_canonical_zh": "最高允许液体温度80°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "As standard the max. allowed liquid temperature is 80°C for ATEX marked NSL pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "too high liquid temperatures",
+        "head_canonical_zh": "液体温度过高",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "risk",
+        "tail_canonical_zh": "风险",
+        "tail_type": "Risk",
+        "evidence_text": "if there’s a risk of too high liquid temperatures",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "PT100 sensor",
+        "head_canonical_zh": "PT100传感器",
+        "head_type": "InspectionMethod",
+        "relation": "mitigated_by",
+        "tail_surface": "too high liquid temperatures",
+        "tail_canonical_zh": "液体温度过高",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "if there’s a risk of too high liquid temperatures, then a PT100 sensor should be mounted in the pump casing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

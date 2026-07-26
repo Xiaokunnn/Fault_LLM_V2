@@ -1,0 +1,80 @@
+{
+  "page_key": "MP015:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-438324c9-996e-9bde-86ac-847d39c7468d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 731,
+    "prompt_tokens": 5235,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5966
+  },
+  "latency_ms": 10225,
+  "attempt": 1,
+  "prompt_sha256": "419c106ffe9c2c497f3fb41059e9be70edd537112a60ebcacedca0500ef63652",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bronze impeller",
+        "head_canonical_zh": "青铜叶轮",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "tail_canonical_zh": "叶轮流道密封间隙腐蚀导致泵卡死",
+        "tail_type": "FaultMode",
+        "evidence_text": "A bronze impeller is advisable for pumps which are frequently out of operation, to prevent the pump from getting jammed due to corrosion in the seal clearances around the impeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "corrosion in the seal clearances around the impeller",
+        "head_canonical_zh": "叶轮流道密封间隙腐蚀",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "pump from getting jammed",
+        "tail_canonical_zh": "泵卡死",
+        "tail_type": "FaultMode",
+        "evidence_text": "the pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.92,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "frequently out of operation",
+        "head_canonical_zh": "频繁停用",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "corrosion in the seal clearances around the impeller",
+        "tail_canonical_zh": "叶轮流道密封间隙腐蚀",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "pumps which are frequently out of operation, to prevent the pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.89,
+        "head_translation_confidence": 0.93,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

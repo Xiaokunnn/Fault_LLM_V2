@@ -1,0 +1,112 @@
+{
+  "page_key": "MP017:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e257fc60-2a06-913c-a226-2b6ce1cd346e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1066,
+    "prompt_tokens": 2035,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3101
+  },
+  "latency_ms": 14052,
+  "attempt": 1,
+  "prompt_sha256": "c3b0db1b715949dbb035fdd206e1b24bb2af01463ca0a114a1c9e4f9ef2c9f61",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "air leak",
+        "head_canonical_zh": "空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "vacuum reading falls off rapidly after stabilization",
+        "tail_canonical_zh": "稳定后真空读数迅速下降",
+        "tail_type": "Symptom",
+        "evidence_text": "If the vacuum reading falls off rapidly after stabilization, an air leak exists.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "strainer blockage",
+        "head_canonical_zh": "滤网堵塞",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "pump flow rate begins to drop",
+        "tail_canonical_zh": "泵流量开始下降",
+        "tail_type": "Symptom",
+        "evidence_text": "The strainer should also be checked if pump flow rate begins to drop.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unusual noises or excessive vibration",
+        "head_canonical_zh": "异常噪音或过度振动",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "Troubleshooting in the Maintenance And Repair Manual",
+        "tail_canonical_zh": "维护与修理手册中的故障排除",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "If noise or vibration is excessive, stop the pump and refer to Troubleshooting in the Maintenance And Repair Manual for possible causes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "stop the pump immediately and allow it to cool before servicing it",
+        "tail_canonical_zh": "立即停泵并在维修前使其冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating does occur, stop the pump immediately and allow it to cool before servicing it.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rupture or explosion due to heat",
+        "head_canonical_zh": "热致破裂或爆炸",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "pressure relief valve",
+        "tail_canonical_zh": "安全阀",
+        "tail_type": "Component",
+        "evidence_text": "As a safeguard against rupture or explosion due to heat, some pumps are equipped with a pressure relief valve which will open if vapor pressure within the pump casing reaches a critical point.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

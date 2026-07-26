@@ -1,0 +1,81 @@
+{
+  "version": "marine_pump_fault_scope_draft_v1",
+  "domain": "ship_engine_room_pump_system",
+  "scope_note": "FaultMode and mechanism targets only. Observable states such as low flow, vibration and temperature rise are modeled as Symptoms.",
+  "equipment_scope": [
+    "bilge_pump",
+    "ballast_pump",
+    "freshwater_cooling_pump",
+    "seawater_cooling_pump",
+    "fire_and_general_service_pump",
+    "deck_wash_pump"
+  ],
+  "fault_classes": [
+    {
+      "fault_id": "cavitation",
+      "name_zh": "汽蚀",
+      "expected_symptoms": ["异常噪声", "振动增强", "流量或扬程下降", "叶轮侵蚀"]
+    },
+    {
+      "fault_id": "air_ingress_or_loss_of_prime",
+      "name_zh": "空气侵入或失去自吸",
+      "expected_symptoms": ["无法自吸", "无流量", "流量波动"]
+    },
+    {
+      "fault_id": "hydraulic_blockage",
+      "name_zh": "流道、叶轮、过滤器或管路堵塞",
+      "expected_symptoms": ["流量不足", "扬程异常", "功率变化"]
+    },
+    {
+      "fault_id": "impeller_or_wear_part_damage",
+      "name_zh": "叶轮或耐磨部件磨损损坏",
+      "expected_symptoms": ["性能下降", "振动", "效率降低"]
+    },
+    {
+      "fault_id": "mechanical_seal_failure",
+      "name_zh": "机械密封失效与泄漏",
+      "expected_symptoms": ["可见泄漏", "压力下降", "密封部位温升"]
+    },
+    {
+      "fault_id": "bearing_or_lubrication_failure",
+      "name_zh": "轴承磨损、润滑不良或过热",
+      "expected_symptoms": ["轴承温升", "振动", "异响"]
+    },
+    {
+      "fault_id": "pump_motor_misalignment",
+      "name_zh": "泵电机联轴器或轴系不对中",
+      "expected_symptoms": ["振动", "联轴器磨损", "轴承异常负载"]
+    },
+    {
+      "fault_id": "motor_electrical_drive_failure",
+      "name_zh": "电机缺相、过载或电气驱动异常",
+      "expected_symptoms": ["无法启动", "电流过大", "电机温升", "间歇停机"]
+    },
+    {
+      "fault_id": "pipe_or_valve_integrity_failure",
+      "name_zh": "管路或阀件泄漏、卡滞和完整性失效",
+      "expected_symptoms": ["压力或流量异常", "机舱进水", "阀门无法开闭"]
+    },
+    {
+      "fault_id": "dry_running_or_maintenance_induced_failure",
+      "name_zh": "干运转、错误操作或维护引入故障",
+      "expected_symptoms": ["密封损坏", "过热", "泵无法工作", "突发泄漏"]
+    }
+  ],
+  "query_target_total": {
+    "minimum": 30,
+    "preferred": 40,
+    "maximum": 50
+  },
+  "query_distribution_per_class": {
+    "minimum": 3,
+    "preferred": 4,
+    "maximum": 5
+  },
+  "candidate_paths_per_query": {
+    "minimum": 30,
+    "preferred": 50,
+    "maximum": 80
+  },
+  "status": "lexical_pilot_gate_passed_requires_evidence_extraction"
+}

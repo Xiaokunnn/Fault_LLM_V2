@@ -1,0 +1,62 @@
+{
+  "page_key": "MP016:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-35aee83b-fe68-9356-90f6-685e267f25ee",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 438,
+    "prompt_tokens": 2027,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2465
+  },
+  "latency_ms": 5810,
+  "attempt": 1,
+  "prompt_sha256": "5c5039c40ab40a7cda56b1c498b856ee2f87ab5c75e56bc4836e14800f27608e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "lack of liquid",
+        "head_canonical_zh": "缺液",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "lack of liquid will damage the Impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction pipework is air tight",
+        "head_canonical_zh": "吸入管路气密",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "pump will not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "Symptom",
+        "evidence_text": "Ensure suction pipework is air tight or pump will not prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

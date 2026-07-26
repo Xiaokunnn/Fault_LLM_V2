@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0053",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-529b238e-7dd3-9d6b-9f17-50125a44cc87",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 445,
+    "prompt_tokens": 12797,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13242
+  },
+  "latency_ms": 6594,
+  "attempt": 1,
+  "prompt_sha256": "008126b4337bff104b6da4ded2bb783258c74abf1e808002f7ccc91c77c5a516",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Abnormal noises, vibrations, temperatures or leakage",
+        "head_canonical_zh": "异常噪声、振动、温升或泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High temperature",
+        "head_canonical_zh": "高温",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

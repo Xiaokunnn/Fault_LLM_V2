@@ -1,0 +1,80 @@
+{
+  "page_key": "MP015:p0041",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5dc4517f-2249-9875-ba6c-61f964ec87ca",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 640,
+    "prompt_tokens": 1870,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2510
+  },
+  "latency_ms": 7737,
+  "attempt": 1,
+  "prompt_sha256": "83ce5c5d6873c5202875d60862c06d319475f9ad7684430c556b872361e5498a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Assembly of the mechanical seal MG12",
+        "tail_canonical_zh": "MG12机械密封装配",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7.7.3 Assembly of the mechanical seal MG12",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Disassembly of the mechanical seal MG12",
+        "tail_canonical_zh": "MG12机械密封拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7.7.2 Disassembly of the mechanical seal MG12",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "PTFE (Teflon) covered O-rings",
+        "head_canonical_zh": "PTFE包覆O形圈",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "easily damaged during assembly",
+        "tail_canonical_zh": "装配时易损坏",
+        "tail_type": "Risk",
+        "evidence_text": "These rings are easily damaged during assembly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

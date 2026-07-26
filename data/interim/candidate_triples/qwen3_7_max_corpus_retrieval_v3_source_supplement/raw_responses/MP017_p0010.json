@@ -1,0 +1,97 @@
+{
+  "page_key": "MP017:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1a51328a-1e5e-9556-883e-f94e02552f47",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 923,
+    "prompt_tokens": 23233,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24156
+  },
+  "latency_ms": 13270,
+  "attempt": 1,
+  "prompt_sha256": "b8b5b93fd870f05ede87583c443882ce3baeb21d75c35f9bec92888d92ed16d4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "siphoning action",
+        "head_canonical_zh": "虹吸作用",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "a siphoning action causing damage to the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "discharge line is open",
+        "head_canonical_zh": "排出管路畅通",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "air from the suction line must be vented to atmosphere on the discharge side",
+        "tail_canonical_zh": "吸入管路空气从排出侧排向大气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the discharge line is open, this air will be vented through the discharge",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "check valve has been installed in the discharge line",
+        "head_canonical_zh": "排出管路安装止回阀",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "self-priming centrifugal pump will not prime",
+        "tail_canonical_zh": "自吸离心泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "if a check valve has been installed in the discharge line... A self-priming centrifugal pump will not prime if there is sufficient static liquid head to hold the discharge check valve closed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bypass line installed between the pump discharge and the check valve",
+        "head_canonical_zh": "泵出口与止回阀之间安装旁通管",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "self-priming centrifugal pump will not prime",
+        "tail_canonical_zh": "自吸离心泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "the discharge side of the pump must be opened to atmospheric pressure through a bypass line installed between the pump discharge and the check valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

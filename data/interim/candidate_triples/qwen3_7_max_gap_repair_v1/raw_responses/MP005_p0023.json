@@ -1,0 +1,59 @@
+{
+  "page_key": "MP005:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ee524db1-1180-972d-9069-cf44e333f7c5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 481,
+    "prompt_tokens": 12841,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13322
+  },
+  "latency_ms": 6930,
+  "attempt": 1,
+  "prompt_sha256": "41eb88cf74bc86777c81b90623b2803e5aa5713ed61c821897a7c8fddb6d6603",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump cavitation",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Minimum inlet pressure",
+        "tail_canonical_zh": "最小入口压力",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Minimum inlet pressure\nNPSH  + Suction pipework friction + Fluid vapour pressure – Fluid surface pressure+0.5m\n          req     \n(It is the pressure that will not lead pump cavitation in specific pump operational conditions and specific pumping media.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump vibrations",
+        "head_canonical_zh": "泵振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "anti-vibration foundation or other vibration reduction measure on pump",
+        "tail_canonical_zh": "防振基础或其他泵减振措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adding any external excited vibrations on site the pump vibrations to be less than 7 mm/s\notherwise anti-vibration foundation or other vibration reduction measure on pump to be applied.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

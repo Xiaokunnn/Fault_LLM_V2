@@ -1,0 +1,310 @@
+{
+  "report_version": "marine_pump_strict_coverage_v2",
+  "eligibility_policy": "build_train + stable source_family_id + silver_candidate + confidence threshold + E1/E2 + relation entailment + non-inferred",
+  "require_chinese_graph_ready": false,
+  "thresholds": {
+    "symptom": 5,
+    "cause_or_mechanism": 3,
+    "inspection_or_maintenance": 2,
+    "independent_documents": 2,
+    "source_families": 2,
+    "minimum_silver_confidence": 0.8
+  },
+  "input_records": 1807,
+  "eligible_build_silver_records": 535,
+  "fault_coverage": {
+    "cavitation": {
+      "eligible_triples": 25,
+      "unique_evidence_units": 25,
+      "symptom_evidence": 12,
+      "cause_or_mechanism_evidence": 12,
+      "inspection_or_maintenance_evidence": 6,
+      "document_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP015",
+        "MP016",
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "ABS",
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "air_ingress_or_loss_of_prime": {
+      "eligible_triples": 34,
+      "unique_evidence_units": 34,
+      "symptom_evidence": 11,
+      "cause_or_mechanism_evidence": 26,
+      "inspection_or_maintenance_evidence": 7,
+      "document_ids": [
+        "MP004",
+        "MP005",
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "hydraulic_blockage": {
+      "eligible_triples": 22,
+      "unique_evidence_units": 22,
+      "symptom_evidence": 6,
+      "cause_or_mechanism_evidence": 17,
+      "inspection_or_maintenance_evidence": 5,
+      "document_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP016",
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "ABS",
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "impeller_or_wear_part_damage": {
+      "eligible_triples": 23,
+      "unique_evidence_units": 23,
+      "symptom_evidence": 7,
+      "cause_or_mechanism_evidence": 9,
+      "inspection_or_maintenance_evidence": 10,
+      "document_ids": [
+        "MP004",
+        "MP015",
+        "MP016",
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "mechanical_seal_failure": {
+      "eligible_triples": 32,
+      "unique_evidence_units": 32,
+      "symptom_evidence": 3,
+      "cause_or_mechanism_evidence": 14,
+      "inspection_or_maintenance_evidence": 15,
+      "document_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016",
+        "MP018",
+        "MP021",
+        "MP022"
+      ],
+      "source_families": [
+        "ABS",
+        "ALFA_LAVAL",
+        "DESMI",
+        "IDEX__VIKING_PUMP",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": false,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": false
+    },
+    "bearing_or_lubrication_failure": {
+      "eligible_triples": 62,
+      "unique_evidence_units": 62,
+      "symptom_evidence": 33,
+      "cause_or_mechanism_evidence": 41,
+      "inspection_or_maintenance_evidence": 14,
+      "document_ids": [
+        "MP001",
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP018",
+        "MP019",
+        "MP020"
+      ],
+      "source_families": [
+        "ABB",
+        "ABS",
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "pump_motor_misalignment": {
+      "eligible_triples": 15,
+      "unique_evidence_units": 15,
+      "symptom_evidence": 8,
+      "cause_or_mechanism_evidence": 10,
+      "inspection_or_maintenance_evidence": 5,
+      "document_ids": [
+        "MP001",
+        "MP018",
+        "MP019",
+        "MP020"
+      ],
+      "source_families": [
+        "ABB",
+        "ABS",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "motor_electrical_drive_failure": {
+      "eligible_triples": 21,
+      "unique_evidence_units": 21,
+      "symptom_evidence": 10,
+      "cause_or_mechanism_evidence": 14,
+      "inspection_or_maintenance_evidence": 8,
+      "document_ids": [
+        "MP005",
+        "MP019",
+        "MP020",
+        "MP022"
+      ],
+      "source_families": [
+        "ABB",
+        "ALFA_LAVAL",
+        "DESMI",
+        "INDICOR__CORNELL_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": true
+    },
+    "pipe_or_valve_integrity_failure": {
+      "eligible_triples": 31,
+      "unique_evidence_units": 31,
+      "symptom_evidence": 11,
+      "cause_or_mechanism_evidence": 27,
+      "inspection_or_maintenance_evidence": 1,
+      "document_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "ABS",
+        "DESMI",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": false,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": false
+    },
+    "dry_running_or_maintenance_induced_failure": {
+      "eligible_triples": 9,
+      "unique_evidence_units": 9,
+      "symptom_evidence": 4,
+      "cause_or_mechanism_evidence": 5,
+      "inspection_or_maintenance_evidence": 2,
+      "document_ids": [
+        "MP005",
+        "MP007",
+        "MP022"
+      ],
+      "source_families": [
+        "ALFA_LAVAL",
+        "DESMI"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": false,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": false
+    }
+  },
+  "fault_classes_passing_gate": 7
+}

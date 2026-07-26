@@ -1,0 +1,199 @@
+{
+  "schema_version": "marine_pump_provenance_v1_2",
+  "required_fields": [
+    "triple_id",
+    "head",
+    "head_type",
+    "relation",
+    "tail",
+    "tail_type",
+    "doc_id",
+    "page_or_section",
+    "evidence_text",
+    "triple_confidence",
+    "extractor",
+    "source_url"
+  ],
+  "optional_fields": [
+    "chunk_id",
+    "local_file",
+    "source_tier",
+    "publication_date",
+    "retrieved_at",
+    "document_sha256",
+    "extraction_run_id",
+    "validation_votes",
+    "validation_status",
+    "license_note",
+    "pdf_page_number",
+    "printed_page_label",
+    "document_split",
+    "fault_class_ids",
+    "evidence_role",
+    "model_confidence",
+    "normalization_actions",
+    "rejected_fault_class_ids",
+    "inferred_edge",
+    "publisher",
+    "visual_layout_checked",
+    "model_request_id",
+    "api_latency_ms",
+    "validator",
+    "semantic_review_reason",
+    "semantic_audit_status",
+    "rejection_reasons",
+    "fault_class_validation_scope",
+    "model_page_warnings"
+  ],
+  "node_types": [
+    "Equipment",
+    "Component",
+    "FaultMode",
+    "FailureMechanism",
+    "Symptom",
+    "SignalFeature",
+    "Cause",
+    "OperatingCondition",
+    "InspectionMethod",
+    "InspectionAction",
+    "MaintenanceAction",
+    "Standard",
+    "Risk"
+  ],
+  "relations": [
+    "contains",
+    "located_in",
+    "causes",
+    "indicates",
+    "manifests_as",
+    "evolves_to",
+    "diagnosed_by",
+    "inspected_by",
+    "mitigated_by",
+    "maintained_by",
+    "operates_under",
+    "increases_risk_of",
+    "specified_by"
+  ],
+  "relation_type_constraints": {
+    "contains": {
+      "head_types": ["Equipment", "Component"],
+      "tail_types": ["Component"]
+    },
+    "located_in": {
+      "head_types": ["Equipment", "Component"],
+      "tail_types": ["Equipment", "Component"]
+    },
+    "causes": {
+      "head_types": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "OperatingCondition",
+        "Component"
+      ],
+      "tail_types": [
+        "FailureMechanism",
+        "FaultMode",
+        "Symptom",
+        "SignalFeature",
+        "Risk"
+      ]
+    },
+    "indicates": {
+      "head_types": ["Symptom", "SignalFeature"],
+      "tail_types": ["Cause", "FailureMechanism", "FaultMode", "Risk"]
+    },
+    "manifests_as": {
+      "head_types": ["FailureMechanism", "FaultMode"],
+      "tail_types": ["Symptom", "SignalFeature"]
+    },
+    "evolves_to": {
+      "head_types": ["FailureMechanism", "FaultMode"],
+      "tail_types": ["FailureMechanism", "FaultMode", "Risk"]
+    },
+    "diagnosed_by": {
+      "head_types": [
+        "FailureMechanism",
+        "FaultMode",
+        "Symptom",
+        "SignalFeature",
+        "OperatingCondition",
+        "Risk"
+      ],
+      "tail_types": ["InspectionMethod", "InspectionAction"]
+    },
+    "inspected_by": {
+      "head_types": [
+        "Equipment",
+        "Component",
+        "FailureMechanism",
+        "FaultMode"
+      ],
+      "tail_types": ["InspectionMethod", "InspectionAction"]
+    },
+    "mitigated_by": {
+      "head_types": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "Symptom",
+        "Risk"
+      ],
+      "tail_types": ["InspectionAction", "MaintenanceAction"]
+    },
+    "maintained_by": {
+      "head_types": ["Equipment", "Component"],
+      "tail_types": ["MaintenanceAction"]
+    },
+    "operates_under": {
+      "head_types": ["Equipment", "Component"],
+      "tail_types": ["OperatingCondition"]
+    },
+    "increases_risk_of": {
+      "head_types": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "OperatingCondition"
+      ],
+      "tail_types": ["Risk"]
+    },
+    "specified_by": {
+      "head_types": [
+        "Equipment",
+        "Component",
+        "FaultMode",
+        "FailureMechanism",
+        "Symptom",
+        "SignalFeature",
+        "Cause",
+        "OperatingCondition",
+        "InspectionMethod",
+        "InspectionAction",
+        "MaintenanceAction",
+        "Risk"
+      ],
+      "tail_types": ["Standard"]
+    }
+  },
+  "confidence": {
+    "minimum_to_store": 0.6,
+    "minimum_for_silver_evidence": 0.8,
+    "definition": "Model explicitness confidence multiplied by evidence-span validation and source-tier components, bounded to [0,1].",
+    "components": [
+      "model_confidence",
+      "validation_votes.evidence_confidence_component",
+      "validation_votes.source_confidence_component"
+    ]
+  },
+  "evidence_rules": {
+    "page_or_section_must_be_resolvable": true,
+    "evidence_text_must_be_exact_contiguous_source_span": true,
+    "evidence_text_must_contain_or_entail_triple": true,
+    "source_url_must_be_public_or_archived": true,
+    "inferred_edges_must_be_marked": true,
+    "silver_paths_cannot_use_only_inferred_edges": true,
+    "development_evidence_cannot_fill_build_coverage_gate": true
+  }
+}

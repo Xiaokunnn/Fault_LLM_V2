@@ -1,0 +1,67 @@
+{
+  "page_key": "MP003:p0965",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5df3df31-35f0-9adf-a528-8b571cd83fe0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 554,
+    "prompt_tokens": 24555,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 25109
+  },
+  "latency_ms": 8480,
+  "attempt": 1,
+  "prompt_sha256": "acefb6f674a3b23450c133e2bc3773e6c4ad6cdb84aa53a563f91f384e7cdb15",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing temp. or oil\noutlet temp. - high",
+        "head_canonical_zh": "轴承温度或滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Lubricating\noil",
+        "tail_canonical_zh": "润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Lubricating\noil      C3 Bearing temp. or oil x x                           \n                              outlet temp. - high                                 ",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0965:t00:r001:c01",
+          "MP003:p0965:t00:r003:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Filter differential\npressure",
+        "head_canonical_zh": "滤器压差",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Lubricating\noil",
+        "tail_canonical_zh": "润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Lubricating\noil      C4 Filter differential x                              \n                              pressure                                          ",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0965:t00:r001:c01",
+          "MP003:p0965:t00:r004:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

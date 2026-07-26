@@ -1,0 +1,771 @@
+{
+  "page_key": "MP019:p0020",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1af9ac5a-c42b-9a9b-9b44-abff37704683",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8473,
+    "prompt_tokens": 21023,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 29496
+  },
+  "latency_ms": 100459,
+  "attempt": 1,
+  "prompt_sha256": "03eff8ada1a14d2eb5e4581c202f7da09f1c96d89062d935cdede7310a8190ef",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor takes too long to accelerate and/or draws high current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r001:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Low voltage during start",
+        "head_canonical_zh": "启动时电压过低",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check for high resistance. Make sure that adequate cable size is used.",
+        "tail_canonical_zh": "检查高电阻并确认电缆尺寸充足",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Low voltage during start",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r002:c02",
+          "MP019:p0020:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Defective squirrel cage rotor",
+        "head_canonical_zh": "鼠笼转子缺陷",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace with new rotor.",
+        "tail_canonical_zh": "更换新转子",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defective squirrel cage rotor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r003:c02",
+          "MP019:p0020:t00:r003:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Applied voltage too low",
+        "head_canonical_zh": "施加电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Correct power supply.",
+        "tail_canonical_zh": "修正电源",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Applied voltage too low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r004:c02",
+          "MP019:p0020:t00:r004:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wrong rotation direction",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reverse connections at motor or at switchboard.",
+        "tail_canonical_zh": "在电机或配电板处反接连线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wrong rotation direction",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r005:c01",
+          "MP019:p0020:t00:r005:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor overheats while running",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor overheats while\nrunning",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r006:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Frame or ventilation openings may be full of dirt and prevent proper ventilation of motor",
+        "head_canonical_zh": "机壳或通风口积尘阻碍电机正常通风",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Open vent holes and check for a continuous stream of air from the motor.",
+        "tail_canonical_zh": "打开通风孔并检查电机是否有连续气流",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Frame or ventilation openings may\nbe full of dirt and prevent proper\nventilation of motor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r007:c02",
+          "MP019:p0020:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor may have one phase open",
+        "head_canonical_zh": "电机可能缺相",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check to make sure that all leads are well connected.",
+        "tail_canonical_zh": "检查确保所有引线连接良好",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor may have one phase open",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r008:c02",
+          "MP019:p0020:t00:r008:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Grounded coil",
+        "head_canonical_zh": "线圈接地",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor must be rewound",
+        "tail_canonical_zh": "电机必须重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Grounded coil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r009:c02",
+          "MP019:p0020:t00:r009:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Unbalanced terminal voltage",
+        "head_canonical_zh": "端电压不平衡",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check for faulty leads, connections and transformers.",
+        "tail_canonical_zh": "检查故障引线、连接和变压器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unbalanced terminal voltage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r010:c02",
+          "MP019:p0020:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Realign.",
+        "tail_canonical_zh": "重新对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r011:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Weak support",
+        "head_canonical_zh": "支撑薄弱",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Strengthen base.",
+        "tail_canonical_zh": "加固基座",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Weak support",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r012:c02",
+          "MP019:p0020:t00:r012:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Coupling out of balance",
+        "head_canonical_zh": "联轴器不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Balance coupling.",
+        "tail_canonical_zh": "对联轴器进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Coupling out of balance",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r013:c02",
+          "MP019:p0020:t00:r013:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Driven equipment unbalanced",
+        "head_canonical_zh": "被驱动设备不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Rebalance driven equipment.",
+        "tail_canonical_zh": "对被驱动设备进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Driven equipment unbalanced",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r014:c02",
+          "MP019:p0020:t00:r014:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Defective bearings",
+        "head_canonical_zh": "轴承缺陷",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace bearings.",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defective bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r015:c02",
+          "MP019:p0020:t00:r015:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearings not in line",
+        "head_canonical_zh": "轴承不对中",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Repair motor.",
+        "tail_canonical_zh": "修理电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bearings not in line",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r016:c02",
+          "MP019:p0020:t00:r016:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Balancing weights shifted",
+        "head_canonical_zh": "平衡块移位",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Rebalance motor.",
+        "tail_canonical_zh": "对电机进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Balancing weights shifted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r017:c02",
+          "MP019:p0020:t00:r017:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Contradiction between balancing of rotor and coupling (half key - full key)",
+        "head_canonical_zh": "转子与联轴器平衡矛盾（半键-全键）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Rebalance coupling or motor.",
+        "tail_canonical_zh": "对联轴器或电机进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Contradiction between balancing of\nrotor and coupling (half key - full key)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r018:c02",
+          "MP019:p0020:t00:r018:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Polyphase motor running single phase",
+        "head_canonical_zh": "多相电机单相运行",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check for open circuit.",
+        "tail_canonical_zh": "检查开路",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Polyphase motor running single phase",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r019:c02",
+          "MP019:p0020:t00:r019:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Excessive end play",
+        "head_canonical_zh": "轴向窜动过大",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Adjust bearing or add shim.",
+        "tail_canonical_zh": "调整轴承或加垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Excessive end play",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r020:c02",
+          "MP019:p0020:t00:r020:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Scraping noise",
+        "head_canonical_zh": "刮擦噪声",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Correct fan mounting.",
+        "tail_canonical_zh": "纠正风扇安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Scraping noise",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r021:c01",
+          "MP019:p0020:t00:r021:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Loose on bedplate",
+        "head_canonical_zh": "底座松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tighten holding bolts.",
+        "tail_canonical_zh": "紧固固定螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Loose on bedplate",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r022:c02",
+          "MP019:p0020:t00:r022:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Noisy operation",
+        "head_canonical_zh": "运行噪声大",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Check and correct end shield fits or bearing fits.",
+        "tail_canonical_zh": "检查并修正端盖配合或轴承配合",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Noisy operation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r023:c01",
+          "MP019:p0020:t00:r023:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Rotor unbalance",
+        "head_canonical_zh": "转子不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Rebalance rotor.",
+        "tail_canonical_zh": "对转子进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Rotor unbalance",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r024:c02",
+          "MP019:p0020:t00:r024:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Hot bearings",
+        "head_canonical_zh": "轴承过热",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Straighten or replace shaft.",
+        "tail_canonical_zh": "校直或更换轴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Hot bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r025:c01",
+          "MP019:p0020:t00:r025:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Excessive belt pull",
+        "head_canonical_zh": "皮带拉力过大",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Decrease belt tension.",
+        "tail_canonical_zh": "降低皮带张力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Excessive belt pull",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r026:c02",
+          "MP019:p0020:t00:r026:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pulleys too far away from shaft shoulder",
+        "head_canonical_zh": "皮带轮离轴肩过远",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Move pulley closer to motor bearing.",
+        "tail_canonical_zh": "将皮带轮移近电机轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pulleys too far away from shaft shoulder",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r027:c02",
+          "MP019:p0020:t00:r027:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pulley diameter too small",
+        "head_canonical_zh": "皮带轮直径过小",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Use larger pulleys.",
+        "tail_canonical_zh": "使用更大的皮带轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pulley diameter too small",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r028:c02",
+          "MP019:p0020:t00:r028:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Correct by realignment of the drive.",
+        "tail_canonical_zh": "通过驱动装置重新对中纠正",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Misalignment",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r029:c02",
+          "MP019:p0020:t00:r029:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Insufficient grease",
+        "head_canonical_zh": "润滑脂不足",
+        "head_type": "Cause",
+        "relation": "maintained_by",
+        "tail_surface": "Maintain proper quality and amount of grease in bearing.",
+        "tail_canonical_zh": "保持轴承内润滑脂的适当质量和数量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Insufficient grease",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r030:c02",
+          "MP019:p0020:t00:r030:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Deterioration of grease or lubricant contaminated",
+        "head_canonical_zh": "润滑脂劣化或润滑油污染",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Remove old grease, wash bearings thoroughly in kerosene and replace with new grease.",
+        "tail_canonical_zh": "清除旧脂，用煤油彻底清洗轴承并更换新脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Deterioration of grease or lubricant\ncontaminated",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r031:c02",
+          "MP019:p0020:t00:r031:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Excess lubricant",
+        "head_canonical_zh": "润滑剂过多",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce quantity of grease, bearing should not be more than half full.",
+        "tail_canonical_zh": "减少润滑脂量，轴承不应超过半满",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Excess lubricant",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r032:c02",
+          "MP019:p0020:t00:r032:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overloaded bearing",
+        "head_canonical_zh": "轴承载荷过大",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check alignment, side and end thrust.",
+        "tail_canonical_zh": "检查对中、侧向和轴向推力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Overloaded bearing",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r033:c02",
+          "MP019:p0020:t00:r033:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Broken ball or rough races",
+        "head_canonical_zh": "滚珠破损或滚道粗糙",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace bearing, clean housing thoroughly first.",
+        "tail_canonical_zh": "更换轴承，先彻底清洁轴承室",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Broken ball or rough races",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r034:c02",
+          "MP019:p0020:t00:r034:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

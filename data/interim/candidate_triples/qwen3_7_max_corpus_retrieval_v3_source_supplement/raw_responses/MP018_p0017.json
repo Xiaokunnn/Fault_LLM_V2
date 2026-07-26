@@ -1,0 +1,118 @@
+{
+  "page_key": "MP018:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f889517c-6021-9dd8-a224-69cb26336612",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1163,
+    "prompt_tokens": 2874,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4037
+  },
+  "latency_ms": 14806,
+  "attempt": 1,
+  "prompt_sha256": "8c1e46399859ad2091226b25564675c7d57bc911296e851d6cb5eb1f9733ae04",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "substitution of the other greases for Fina Lithium 2R grease",
+        "head_canonical_zh": "替代Fina Lithium 2R润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "substitution of the other greases for Fina Lithium 2R grease is not recommended due to some mixing of grease with the oil in the oil lubricated thrust bearing. If substitution of grease is desired, please contact factory for recommendations. WARNING!! Failure to observe this may cause premature bearing failure and subsequent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Use of improper oil",
+        "head_canonical_zh": "使用不当润滑油",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "WARNING ! ! Use of improper oil can cause premature bearing failure and subsequent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "moisture",
+        "head_canonical_zh": "水分",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Before placing pump into operation, check oil for presence of moisture. If present, clean the bearing and replace oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "oil lubricated spherical roller thrust bearing",
+        "head_canonical_zh": "油润滑球面滚子推力轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "check oil for presence of moisture",
+        "tail_canonical_zh": "检查油中水分",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before placing pump into operation, check oil for presence of moisture.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "grease lubricated antifriction bearing",
+        "head_canonical_zh": "脂润滑减摩轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "All old grease must be flushed out from the bearing chambers before lubricating",
+        "tail_canonical_zh": "润滑前冲洗旧脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All old grease must be flushed out from the bearing chambers before lubricating, if another type of grease has been used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

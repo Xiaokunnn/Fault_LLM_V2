@@ -1,0 +1,207 @@
+{
+  "status": "success",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "model_requested": "qwen3.7-max",
+  "page_text_sha256": "ee461b659024bdb3127eac7d9dc995e492ea7600f854fdf5c53e56604c646179",
+  "doc_id": "MP004",
+  "pdf_page_number": 11,
+  "api_record": {
+    "request_id": "chatcmpl-fca64313-2a36-9554-9f68-e41a276838e5",
+    "model": "qwen3.7-max",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 3086,
+      "prompt_tokens": 1284,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 4370
+    },
+    "latency_ms": 35743,
+    "requested_at": "2026-07-23T16:09:22.271Z",
+    "responded_at": "2026-07-23T16:09:58.014Z",
+    "attempt": 1,
+    "response_json": {
+      "triples": [
+        {
+          "head": "The pump is not filled with liquid",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Leaking non-return valve in pump",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Wrong direction of rotation",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces\n                                            3. Wrong direction of           Change direction of rotation\n                                               rotation                     Lower suction pipe/Tighten",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Air is drawn in because of too little liquid or leaking suction line",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces\n                                            3. Wrong direction of           Change direction of rotation\n                                               rotation                     Lower suction pipe/Tighten\n                                            4. Air is drawn in because      suction line\n                                               of too little liquid or\n                                               leaking suction line",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Liquid lock in outlet line",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces\n                                            3. Wrong direction of           Change direction of rotation\n                                               rotation                     Lower suction pipe/Tighten\n                                            4. Air is drawn in because      suction line\n                                               of too little liquid or\n                                               leaking suction line\n                                            5. Liquid lock in outlet line   Change the pressure line so\n                                                                            that the air can pass out",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Temperature of liquid too high",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces\n                                            3. Wrong direction of           Change direction of rotation\n                                               rotation                     Lower suction pipe/Tighten\n                                            4. Air is drawn in because      suction line\n                                               of too little liquid or\n                                               leaking suction line\n                                            5. Liquid lock in outlet line   Change the pressure line so\n                                                                            that the air can pass out\n                                                                            freely\n                                            6. Temperature of liquid        Replace liquid in pump\n                                               too high                     casing/Wrong dimensioning/",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Air cannot escape on pressure side",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump does not prime",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump does not                      1. The pump is not filled       Fill pump casing with liquid\n     prime                                     with liquid\n                                            2. Leaking non-return           Remove foreign body in\n                                               valve in pump                pump/Remove any coating\n                                                                            on mating faces\n                                            3. Wrong direction of           Change direction of rotation\n                                               rotation                     Lower suction pipe/Tighten\n                                            4. Air is drawn in because      suction line\n                                               of too little liquid or\n                                               leaking suction line\n                                            5. Liquid lock in outlet line   Change the pressure line so\n                                                                            that the air can pass out\n                                                                            freely\n                                            6. Temperature of liquid        Replace liquid in pump\n                                               too high                     casing/Wrong dimensioning/\n                                                                            Contact DESMI\n                                            7. Air cannot escape on         Ventilate the system\n                                               pressure side",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Wrong direction of rotation",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Piping system choked",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "The pump is choked",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace\n                                            3. The pump is choked           Clean the pump",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Suction line leaks, pump takes air",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace\n                                            3. The pump is choked           Clean the pump\n                                            4. Suction line leaks,          Find the leakage, repair the\n                                               pump takes air               fault, non-return valve not\n                                                                            submerged",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Suction lift too high",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace\n                                            3. The pump is choked           Clean the pump\n                                            4. Suction line leaks,          Find the leakage, repair the\n                                               pump takes air               fault, non-return valve not\n                                                                            submerged\n                                            5. Suction lift too high        Check data sheet Q/H curve\n                                                                            and NPSH or contact DESMI",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump and piping system wrongly dimensioned",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace\n                                            3. The pump is choked           Clean the pump\n                                            4. Suction line leaks,          Find the leakage, repair the\n                                               pump takes air               fault, non-return valve not\n                                                                            submerged\n                                            5. Suction lift too high        Check data sheet Q/H curve\n                                                                            and NPSH or contact DESMI\n                                            6. Pump and piping              As 5\n                                               system wrongly\n                                               dimensioned",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "RPM too low",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "The pump has no or                     1. Wrong direction of           Change direction of rotation\n     too low capacity                          rotation                     to clockwise when viewed\n                                                                            from shaft end (the direction\n                                                                            of the arrow)\n                                            2. Piping system choked         Clean or replace\n                                            3. The pump is choked           Clean the pump\n                                            4. Suction line leaks,          Find the leakage, repair the\n                                               pump takes air               fault, non-return valve not\n                                                                            submerged\n                                            5. Suction lift too high        Check data sheet Q/H curve\n                                                                            and NPSH or contact DESMI\n                                            6. Pump and piping              As 5\n                                               system wrongly\n                                               dimensioned\n                                            7. RPM too low                  Fit smaller V-belt pulley on\n                                                                            pump. Change RPM of\n                                                                            electric motor",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        }
+      ],
+      "page_summary": "Troubleshooting table listing causes and remedies for two pump symptoms: failure to prime and no/low capacity.",
+      "warnings": []
+    },
+    "prompt_sha256": "b40fb59da132b2cda933e9ce23b7d98a9299776af0bc4b9324f3636a1bf07c63"
+  },
+  "request_config_sha256": "ba82030a3a7f14cc7c44ab98e5d172476b8fdc0baaa4355a2833a236d47a1d54"
+}

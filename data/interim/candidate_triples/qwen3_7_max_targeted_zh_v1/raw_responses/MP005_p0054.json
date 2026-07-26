@@ -1,0 +1,100 @@
+{
+  "page_key": "MP005:p0054",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-74a24dea-5120-9473-8058-73b9cf448cd9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 945,
+    "prompt_tokens": 1686,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2631
+  },
+  "latency_ms": 16784,
+  "attempt": 1,
+  "prompt_sha256": "38cd3167d8af4c7b207a94516c7eba77a09844cc79cea62321bdf98d88e39a45",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "rotated at least 2-3 times monthly",
+        "tail_canonical_zh": "每月盘车至少2-3次",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "rotated at least 2-3 times monthly",
+        "tail_canonical_zh": "每月盘车至少2-3次",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "run at least 300 rpm",
+        "tail_canonical_zh": "运行转速至少300 rpm",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "For the sake of the shaft seal lifetime, it is recommended to run at least 300 rpm and use max. 1 minute on acceleration from 0 to 300 rpm and max. 1 minute on deceleration from 300 to 0 rpm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the shaft rotates freely without jarring sounds",
+        "tail_canonical_zh": "检查轴转动自由且无刺耳声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before starting the pump check that: - The shaft rotates freely without jarring sounds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

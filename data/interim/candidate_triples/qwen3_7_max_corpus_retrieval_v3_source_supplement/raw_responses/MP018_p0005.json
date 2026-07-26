@@ -1,0 +1,80 @@
+{
+  "page_key": "MP018:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-77619dc6-fda0-95f6-9553-e00d2210260e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 826,
+    "prompt_tokens": 1778,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2604
+  },
+  "latency_ms": 10298,
+  "attempt": 1,
+  "prompt_sha256": "37b68345c603e471ff0021d70d23dbf2e41824de2c092e355bf263ca70d2c380",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearings are fully lubricated",
+        "head_canonical_zh": "轴承充分润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Equipment which is not in service should be kept in a clean, dry area",
+        "tail_canonical_zh": "停用设备存放于清洁干燥区域",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Equipment which is not in service should be kept in a clean, dry area. If equipment is to be stored for long periods of time (6 months or more), the following precautions should be taken to insure that the equipment remains in good condition: 1) Be sure that bearings are fully lubricated.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "The shaft should be rotated 10 to 15 revolutions by hand periodically",
+        "head_canonical_zh": "定期手动盘车10至15转",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "pump shaft does not begin to sag",
+        "tail_canonical_zh": "泵轴下垂",
+        "tail_type": "FaultMode",
+        "evidence_text": "The shaft should be rotated 10 to 15 revolutions by hand periodically in order to spread lubricant over all the bearing surfaces. Suitable intervals are from one to three months, depending on atmospheric conditions, etc. In order to insure that the pump shaft does not begin to sag in horizontal pumps, do not leave the shaft in the same position each time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.92,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "bearings should be cleaned and packed with petrolatum or other suitable anti-rust agents",
+        "head_canonical_zh": "清洗轴承并填充凡士林或其他防锈剂",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "periodical rotation of the shaft is not possible",
+        "tail_canonical_zh": "无法定期盘车",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "If periodical rotation of the shaft is not possible, the bearings should be cleaned and packed with petrolatum or other suitable anti-rust agents, according to the advice of a reputable supplier.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

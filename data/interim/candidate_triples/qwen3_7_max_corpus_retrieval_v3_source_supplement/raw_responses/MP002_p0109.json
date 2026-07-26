@@ -1,0 +1,67 @@
+{
+  "page_key": "MP002:p0109",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8f3c9d0e-a7c3-9f34-b8fe-7d9b15d7c07b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 659,
+    "prompt_tokens": 5308,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5967
+  },
+  "latency_ms": 9142,
+  "attempt": 1,
+  "prompt_sha256": "7dc3051f801ca608b2eb9181fb105d924f7a1bf8ca949961a49c4dd19c53af96",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Connecting rod",
+        "head_canonical_zh": "连杆",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "Plugged/choked passageways\n(internal to the rod)",
+        "tail_canonical_zh": "通道堵塞/节流（杆内部）",
+        "tail_type": "FaultMode",
+        "evidence_text": "Connecting rod ● Cracked              \n                         ●  Fractured              \n                         ●  Worn                   \n                                                                                   \n                         ●  Deformed               \n                         ●  Corroded               \n                                                                                   \n                         ●  Loosened               \n                         ●  Sticking               \n                         ●  Vibrating              \n                                                                                   \n                                                        ●  Plugged/choked passageways\n                                                           (internal to the rod)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0109:t00:r001:c02",
+          "MP002:p0109:t00:r001:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Crankcase explosion\nrelief valve",
+        "head_canonical_zh": "曲轴箱防爆阀",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "Plugged/choked",
+        "tail_canonical_zh": "堵塞/节流",
+        "tail_type": "FaultMode",
+        "evidence_text": "Crankcase explosion ● External leak/rupture\n                                            relief valve                          \n                         ●  Fatigue                     ●  Plugged/choked         \n                         ●  Fractured                   ●  Fails to open on demand\n                         ●  Fretting                    ●  Opens prematurely",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0109:t00:r003:c02",
+          "MP002:p0109:t00:r003:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.94
+      }
+    ],
+    "warnings": []
+  }
+}

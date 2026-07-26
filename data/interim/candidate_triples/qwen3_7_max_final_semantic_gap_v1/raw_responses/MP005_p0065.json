@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0065",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3762929f-bfc1-93aa-b461-166fb86ee1cc",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 437,
+    "prompt_tokens": 2243,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2680
+  },
+  "latency_ms": 7393,
+  "attempt": 1,
+  "prompt_sha256": "fa426fa3b2372b8ea8fe98c54b4fb882ded93254b56f8522be5b6392f61f5954",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "initial leakage",
+        "head_canonical_zh": "初始泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "drops or a small trickle",
+        "tail_canonical_zh": "滴漏或小股流",
+        "tail_type": "Symptom",
+        "evidence_text": "A mechanical seal might have some initial leakage like drops or a small trickle during first start-up",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal failure",
+        "head_canonical_zh": "机械密封失效",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "leakage",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Inspect the pumps regularly for initial leakage. If leakage is observed it is important to take action to replace seal as quickly as possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

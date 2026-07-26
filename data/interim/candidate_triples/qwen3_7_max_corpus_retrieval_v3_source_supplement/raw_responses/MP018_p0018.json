@@ -1,0 +1,156 @@
+{
+  "page_key": "MP018:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ec47544f-4ab7-91d5-8f8e-26ce24dac95b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1588,
+    "prompt_tokens": 2126,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3714
+  },
+  "latency_ms": 21156,
+  "attempt": 1,
+  "prompt_sha256": "4b832d881ccaa3f90b355260d7e908e034cb0aeffefa72f95f70c90431a98a9e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "foaming",
+        "head_canonical_zh": "油液起泡",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "moisture is present",
+        "tail_canonical_zh": "水分存在",
+        "tail_type": "Cause",
+        "evidence_text": "If foaming occurs, moisture is present.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is black",
+        "head_canonical_zh": "油液发黑",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing is running hot and burning the oil",
+        "tail_canonical_zh": "轴承过热并烧油",
+        "tail_type": "FaultMode",
+        "evidence_text": "If the oil is black, the bearing is running hot and burning the oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is brown",
+        "head_canonical_zh": "油液呈棕色",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "contaminants have mixed with the oil",
+        "tail_canonical_zh": "污染物混入油中",
+        "tail_type": "Cause",
+        "evidence_text": "If the oil is brown, contaminants have mixed with the oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "grease from the radial bearing will mix with the oil",
+        "head_canonical_zh": "径向轴承润滑脂混入油中",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "thicken the oil",
+        "tail_canonical_zh": "油液变稠",
+        "tail_type": "Symptom",
+        "evidence_text": "some of the grease from the radial bearing will mix with the oil with a tendency to thicken the oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flushing hot, light (no heavier than SAE 10) oil through the housing",
+        "head_canonical_zh": "用热轻质油冲洗轴承箱",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "thrust bearing oil should be replaced as it will be contaminated by the oil used for flushing",
+        "tail_canonical_zh": "推力轴承油被冲洗油污染需更换",
+        "tail_type": "Risk",
+        "evidence_text": "Whenever the grease lubricated bearing is cleaned without dismounting by flushing hot, light (no heavier than SAE 10) oil through the housing, the thrust bearing oil should be replaced as it will be contaminated by the oil used for flushing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "tighten gland to be leakproof",
+        "head_canonical_zh": "将填料压盖拧紧至无泄漏",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "overheating and undue wear on shaft sleeves",
+        "tail_canonical_zh": "过热及轴套过度磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Never tighten gland to be leakproof as this will cause overheating and undue wear on shaft sleeves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft sleeve",
+        "head_canonical_zh": "轴套",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the shaft sleeve for wear, if it is scored or grooved, it should be replaced",
+        "tail_canonical_zh": "检查轴套磨损、划痕或沟槽并更换",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the shaft sleeve for wear, if it is scored or grooved, it should be replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

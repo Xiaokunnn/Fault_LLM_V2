@@ -1,0 +1,196 @@
+{
+  "page_key": "MP005:p0067",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3fd276ce-4eb0-9719-8f0a-62a5b1630c9b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1868,
+    "prompt_tokens": 10003,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11871
+  },
+  "latency_ms": 22640,
+  "attempt": 1,
+  "prompt_sha256": "e3d2c3c46719a05d87fa647abc66b3914c07f02775e3b79cd8e21462fdd7b019",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Incorrectly serviced barrier fluid system",
+        "head_canonical_zh": "屏障液系统维护不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Incorrectly serviced barrier fluid system will cause damage to the pump, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Regularly service the barrier fluid system",
+        "head_canonical_zh": "定期维护屏障液系统",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Incorrectly serviced barrier fluid system",
+        "tail_canonical_zh": "屏障液系统维护不当",
+        "tail_type": "Cause",
+        "evidence_text": "Regularly service the barrier fluid system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Monitor the barrier fluid pressure",
+        "head_canonical_zh": "监测屏障液压力",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "barrier fluid system",
+        "tail_canonical_zh": "屏障液系统",
+        "tail_type": "Component",
+        "evidence_text": "Monitor the barrier fluid pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "increased wear to the pump",
+        "tail_canonical_zh": "泵磨损加剧",
+        "tail_type": "FaultMode",
+        "evidence_text": "Dry running will cause increased wear to the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill",
+        "head_canonical_zh": "禁止无液运行泵组",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Do not operate the pump set without liquid fill.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Too high temperature of fluid handled",
+        "head_canonical_zh": "输送流体温度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high temperature of fluid handled could damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Vibrations, noise and an increased incurrent input",
+        "head_canonical_zh": "振动、噪声及电流增加",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear",
+        "tail_canonical_zh": "磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Vibrations, noise and an increased incurrent input occurring during unchanged operating conditions indicate wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Check the shaft seal",
+        "head_canonical_zh": "检查轴封",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "Check the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Check the rolling element bearings for running noises",
+        "head_canonical_zh": "检查滚动轴承运转噪声",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "rolling element bearings",
+        "tail_canonical_zh": "滚动轴承",
+        "tail_type": "Component",
+        "evidence_text": "Check the rolling element bearings for running noises.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

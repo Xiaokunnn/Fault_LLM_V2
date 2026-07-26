@@ -1,0 +1,158 @@
+{
+  "page_key": "MP016:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bc5d6248-b9a8-9544-8152-2e6f3ed4e5b1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1515,
+    "prompt_tokens": 5649,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7164
+  },
+  "latency_ms": 20384,
+  "attempt": 1,
+  "prompt_sha256": "fbbb81ab692df6e9babae55af675b8d55674e91e5175f54b847b282cb807f1fe",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage seals and Impeller",
+        "tail_canonical_zh": "密封和叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "dry running can damage seals and Impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Iodine or Phosphoric based cleaners",
+        "head_canonical_zh": "碘基或磷酸基清洁剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "attack the pump and degrade its performance",
+        "tail_canonical_zh": "腐蚀泵体并降低性能",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use Iodine or Phosphoric based cleaners as these will attack the pump and degrade its performance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visual checks",
+        "tail_canonical_zh": "目视检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Visually check Impeller for damage or wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal housing",
+        "head_canonical_zh": "密封腔体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visually check ... for leaks",
+        "tail_canonical_zh": "目视检查泄漏",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Visually check ... seal housing for leaks",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "seeing if there is any movement of the shaft side to side or forwards and backwards",
+        "tail_canonical_zh": "检查轴径向或轴向窜动",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check bearing wear on Pedestal units by seeing if there is any movement of the shaft side to side or forwards and backwards",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "movement of the shaft side to side or forwards and backwards",
+        "head_canonical_zh": "轴径向或轴向窜动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing wear",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Check bearing wear on Pedestal units by seeing if there is any movement of the shaft side to side or forwards and backwards",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal faces",
+        "head_canonical_zh": "密封端面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect ... for wear and condition of elastomers",
+        "tail_canonical_zh": "检查磨损及弹性体状况",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Inspect seal faces for wear and condition of elastomers",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

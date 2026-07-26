@@ -1,0 +1,169 @@
+{
+  "page_key": "MP017:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-64529d3c-9c4c-92ce-b4d4-431b1862350d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1861,
+    "prompt_tokens": 2272,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4133
+  },
+  "latency_ms": 23070,
+  "attempt": 1,
+  "prompt_sha256": "c868f98edaac2fd6419a53899c1b82b8e993d19b2f1f5673cb07c69fc8e9aa04",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "air leak",
+        "head_canonical_zh": "空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Open the suction line, and read the vacuum gauge with the pump primed and at operation speed. Shut off the pump. The vacuum gauge reading will immediately drop proportionate to static suction lift, and should then stabilize. If the vacuum reading falls off rapidly after stabilization, an air leak exists.",
+        "tail_canonical_zh": "真空表读数稳定后快速下降检查法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Open the suction line, and read the vacuum gauge with the pump primed and at operation speed. Shut off the pump. The vacuum gauge reading will immediately drop proportionate to static suction lift, and should then stabilize. If the vacuum reading falls off rapidly after stabilization, an air leak exists.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air leak",
+        "head_canonical_zh": "空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check for air leaks in the seal, gasket, or discharge plug",
+        "tail_canonical_zh": "检查密封、垫片或排放丝堵处的空气泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check for air leaks in the seal, gasket, or discharge plug",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vacuum gauge",
+        "head_canonical_zh": "真空表安装点",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the point of installation of the vacuum gauge",
+        "tail_canonical_zh": "检查真空表安装点",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before checking for the source of the leak, check the point of installation of the vacuum gauge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "suction strainer",
+        "head_canonical_zh": "吸入滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "check the strainer regularly, and clean it as necessary",
+        "tail_canonical_zh": "定期检查并清洁滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "check the strainer regularly, and clean it as necessary",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "strainer blockage",
+        "head_canonical_zh": "滤器堵塞",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "monitor and record the readings regularly to detect strainer blockage",
+        "tail_canonical_zh": "定期监测并记录真空表读数以检测滤器堵塞",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If a vacuum suction gauge has been installed, monitor and record the readings regularly to detect strainer blockage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure relief valve assembly",
+        "head_canonical_zh": "安全泄压阀组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "be replaced at each overhaul, or any time the pump casing overheats and activates the valve",
+        "tail_canonical_zh": "每次大修或泵壳过热触发阀门时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is recommended that the pressure relief valve assembly be replaced at each overhaul, or any time the pump casing overheats and activates the valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check the pump for unusual noises or excessive vibration while it is operating",
+        "tail_canonical_zh": "运行中检查异常噪声或过度振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the pump for unusual noises or excessive vibration while it is operating.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pump Vacuum Check",
+        "tail_canonical_zh": "泵真空度检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pump Vacuum Check With the pump inoperative, install a vacuum gauge in the system, using pipe dope on the threads. Block the suction line and start the pump. At operating speed the pump should pull a vacuum of 20 inches (508 mm) or more of mercury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

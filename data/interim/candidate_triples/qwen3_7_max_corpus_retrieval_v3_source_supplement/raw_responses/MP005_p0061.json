@@ -1,0 +1,177 @@
+{
+  "page_key": "MP005:p0061",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9fafc316-69c6-9d7b-917d-c862b94f02a2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2333,
+    "prompt_tokens": 9494,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11827
+  },
+  "latency_ms": 27867,
+  "attempt": 1,
+  "prompt_sha256": "69b78aa34632be41e9789ec88a4a9c606388f53ec9b0a0c3b8f8dfc78aa4b837",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Cavitation in pump",
+        "head_canonical_zh": "泵内汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The pump makes noise",
+        "tail_canonical_zh": "泵产生噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "The pump makes\nnoise                                                                     \n                                               Suction lift is too high / Suction \n        The pump makes  1. Cavitation in pump                                     \n                                               line wrongly dimensioned / Liquid  \n        noise                                                                     \n                                               temperature is too high            ",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t00:r002:c00",
+          "MP005:p0061:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nafter storage",
+        "head_canonical_zh": "储存后静止导致机械密封滑环卡死引起泵抱死",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Mechanical seal\nfailure/leaking after\nshort time",
+        "tail_canonical_zh": "短时间内机械密封失效或泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nafter storage                      Mechanical seal\nfailure/leaking after\nshort time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c00",
+          "MP005:p0061:t01:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mechanical seal\nfailure/leaking after\nshort time",
+        "head_canonical_zh": "短时间内机械密封失效或泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "1. Initial leaking\nafter first start up\nthat does not\nstop after short\ntime",
+        "tail_canonical_zh": "首次启动后初始泄漏且短时间内未停止",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical seal\nfailure/leaking after\nshort time                             1. Initial leaking\nafter first start up\nthat does not\nstop after short\ntime",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c03",
+          "MP005:p0061:t01:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nin system / stored\nwith water inside for\nlonger duration of\ntime",
+        "head_canonical_zh": "系统内静止或长期存水导致机械密封滑环卡死引起泵抱死",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Medium could\nchange properties\nwhen standstill in\npump based on the\nenvironment and\ntype of medium",
+        "tail_canonical_zh": "介质在泵内静止时因环境和介质类型改变性质",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nin system / stored\nwith water inside for\nlonger duration of\ntime                 Medium could\nchange properties\nwhen standstill in\npump based on the\nenvironment and\ntype of medium",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r003:c00",
+          "MP005:p0061:t01:r003:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Medium could\nchange properties\nwhen standstill in\npump based on the\nenvironment and\ntype of medium",
+        "head_canonical_zh": "介质在泵内静止时因环境和介质类型改变性质",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "1. Higher power\nconsumption\nthan calculated\nshort time after\nstartup\n2. Leakage from\nmech. shaft seal\nafter start up",
+        "tail_canonical_zh": "启动后短时间内功耗高于计算值及启动后机械密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Medium could\nchange properties\nwhen standstill in\npump based on the\nenvironment and\ntype of medium                                      1. Higher power\nconsumption\nthan calculated\nshort time after\nstartup\n2. Leakage from\nmech. shaft seal\nafter start up",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r003:c03",
+          "MP005:p0061:t01:r003:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lack of NPSH\navailable vs. NPSH\nrequired",
+        "head_canonical_zh": "可用NPSH不足相对于所需NPSH",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage",
+        "tail_canonical_zh": "汽蚀工况导致振动和机械损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Lack of NPSH\navailable vs. NPSH\nrequired         Cavitation duty,\ncreating vibration\nand mechanical\ndamage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r004:c00",
+          "MP005:p0061:t01:r004:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage",
+        "head_canonical_zh": "汽蚀工况导致振动和机械损伤",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "1. Vibration and\nnoise from the\npump\n2. Wear on\nimpeller/seal\nring, and\npossible leaking\nmec. seal",
+        "tail_canonical_zh": "泵振动和噪声及叶轮或密封环磨损并可能机械密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage                             1. Vibration and\nnoise from the\npump\n2. Wear on\nimpeller/seal\nring, and\npossible leaking\nmec. seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r004:c03",
+          "MP005:p0061:t01:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

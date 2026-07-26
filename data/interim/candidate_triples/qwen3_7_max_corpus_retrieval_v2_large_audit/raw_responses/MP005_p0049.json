@@ -1,0 +1,62 @@
+{
+  "page_key": "MP005:p0049",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-251b594e-0cde-945e-a216-900432194a7a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 482,
+    "prompt_tokens": 1619,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2101
+  },
+  "latency_ms": 6431,
+  "attempt": 1,
+  "prompt_sha256": "bdd3b30ca7328078dbf1e32086c1205fc576cbee9587fdb72a045614bd8bdd38",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "insulated all the way up to the motor flange",
+        "head_canonical_zh": "保温层延伸至电机法兰",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The ball bearings and/or windings coils in the motor can overheat",
+        "tail_canonical_zh": "电机球轴承或绕组线圈过热",
+        "tail_type": "Symptom",
+        "evidence_text": "The ball bearings and/or windings coils in the motor can overheat if a pump is insulated all the way up to the motor flange.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unrestricted ventilation of the motor bracket",
+        "head_canonical_zh": "电机支架无阻碍通风",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "overheat",
+        "tail_canonical_zh": "过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Unrestricted ventilation of the motor bracket is therefore necessary to provide sufficient cooling of pump and motor bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

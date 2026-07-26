@@ -1,0 +1,91 @@
+{
+  "page_key": "MP004:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-871c1903-acb5-9921-a267-5a6679be5a13",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 781,
+    "prompt_tokens": 2077,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2858
+  },
+  "latency_ms": 10382,
+  "attempt": 1,
+  "prompt_sha256": "5bfa6ce733042d60b35d8250c23c3a1c376438b04fc20c03f274fe0a5533dd9d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "frost periods",
+        "head_canonical_zh": "霜冻期",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "frost damage",
+        "tail_canonical_zh": "冻害",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumps which are not in operation during frost periods are to be drained to avoid frost damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drained",
+        "head_canonical_zh": "排空",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "frost damage",
+        "tail_canonical_zh": "冻害",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumps which are not in operation during frost periods are to be drained to avoid frost damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Remove the plug at the bottom",
+        "head_canonical_zh": "拆除底部螺塞",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "frost damage",
+        "tail_canonical_zh": "冻害",
+        "tail_type": "FaultMode",
+        "evidence_text": "Remove the plug at the bottom to empty the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "anti-freeze liquids",
+        "head_canonical_zh": "防冻液",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "frost damage",
+        "tail_canonical_zh": "冻害",
+        "tail_type": "FaultMode",
+        "evidence_text": "Alternatively, it is possible to use anti-freeze liquids in normal constructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

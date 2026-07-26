@@ -1,0 +1,266 @@
+{
+  "page_key": "MP005:p0061",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-71ca3aef-268b-990d-a17f-be7007e8ef76",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3430,
+    "prompt_tokens": 9714,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13144
+  },
+  "latency_ms": 39421,
+  "attempt": 1,
+  "prompt_sha256": "ed63459bdb1d19bd07b762211bc7bf6433238f81e4bb00c11e776683baad88fd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "The pump makes noise",
+        "head_canonical_zh": "泵产生噪声",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "Cavitation in pump",
+        "tail_canonical_zh": "泵内汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump makes\nnoise                                                                                                     \n                                               Suction lift is too high / Suction \n        The pump makes  1. Cavitation in pump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t00:r002:c00",
+          "MP005:p0061:t00:r002:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanical seal failure/leaking after short time",
+        "head_canonical_zh": "机械密封短期失效或泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Initial leaking after first start up that does not stop after short time",
+        "tail_canonical_zh": "首次启动后初始泄漏且短时不停止",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical seal\nfailure/leaking after\nshort time                                                                                              \n1. Initial leaking\nafter first start up\nthat does not\nstop after short\ntime",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c03",
+          "MP005:p0061:t01:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mechanical seal failure/leaking after short time",
+        "head_canonical_zh": "机械密封短期失效或泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Ensure correct storage of pumps",
+        "tail_canonical_zh": "确保泵正确存储",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Mechanical seal\nfailure/leaking after\nshort time                                                                                              \n1. Ensure correct\nstorage of pumps",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c03",
+          "MP005:p0061:t01:r002:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanical seal failure/leaking after short time",
+        "head_canonical_zh": "机械密封短期失效或泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Preventive maintenance to be followed for long term storage",
+        "tail_canonical_zh": "长期存储遵循预防性维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Mechanical seal\nfailure/leaking after\nshort time                                                                                              \n2. Preventive            \nmaintenance to        \nbe followed for       \nlong term             \nstorage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c03",
+          "MP005:p0061:t01:r002:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mechanical seal failure/leaking after short time",
+        "head_canonical_zh": "机械密封短期失效或泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Rotate pump carefully by hand prior to first start up, to ensure integrity of mech. shaft seal",
+        "tail_canonical_zh": "首次启动前手动小心盘泵以确保机械轴封完好",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mechanical seal\nfailure/leaking after\nshort time                                                                                              \n3. Rotate pump           \ncarefully by hand     \nprior to first start  \nup, to ensure         \nintegrity of mech.    \nshaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r002:c03",
+          "MP005:p0061:t01:r002:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leakage from mech. shaft seal after start up",
+        "head_canonical_zh": "启动后机械轴封泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Pump settled (due to seizing sliding rings in mechanical shaft seal) due to standstill in system / stored with water inside for longer duration of time",
+        "tail_canonical_zh": "因系统停机或带水长期存放致机械轴封滑环卡死导致泵卡滞",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nin system / stored\nwith water inside for\nlonger duration of\ntime                                                                                                    \n2. Leakage from\nmech. shaft seal\nafter start up",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r003:c00",
+          "MP005:p0061:t01:r003:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Pump settled (due to seizing sliding rings in mechanical shaft seal) due to standstill in system / stored with water inside for longer duration of time",
+        "head_canonical_zh": "因系统停机或带水长期存放致机械轴封滑环卡死导致泵卡滞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Rotate the pump regularly, to avoid seizing",
+        "tail_canonical_zh": "定期盘泵以避免卡死",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nin system / stored\nwith water inside for\nlonger duration of\ntime                                                                                                    \n1. Rotate the pump      \nregularly, to         \navoid seizing",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r003:c00",
+          "MP005:p0061:t01:r003:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump settled (due to seizing sliding rings in mechanical shaft seal) due to standstill in system / stored with water inside for longer duration of time",
+        "head_canonical_zh": "因系统停机或带水长期存放致机械轴封滑环卡死导致泵卡滞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "If not possible, pumps should be drained",
+        "tail_canonical_zh": "若无法盘泵则应排空泵内液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pump settled (due to\nseizing sliding rings\nin mechanical shaft\nseal) due to standstill\nin system / stored\nwith water inside for\nlonger duration of\ntime                                                                                                    \n2. If not possible,      \npumps should be       \ndrained",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r003:c00",
+          "MP005:p0061:t01:r003:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation duty, creating vibration and mechanical damage",
+        "head_canonical_zh": "汽蚀工况引起振动和机械损伤",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Vibration and noise from the pump",
+        "tail_canonical_zh": "泵振动和噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage                                                                                                \n1. Vibration and\nnoise from the\npump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r004:c03",
+          "MP005:p0061:t01:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation duty, creating vibration and mechanical damage",
+        "head_canonical_zh": "汽蚀工况引起振动和机械损伤",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Wear on impeller/seal ring, and possible leaking mec. seal",
+        "tail_canonical_zh": "叶轮或密封环磨损及可能的机械密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage                                                                                                \n2. Wear on                               \nimpeller/seal                          \nring, and                              \npossible leaking                       \nmec. seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r004:c03",
+          "MP005:p0061:t01:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation duty, creating vibration and mechanical damage",
+        "head_canonical_zh": "汽蚀工况引起振动和机械损伤",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Make sure to have sufficient NPSHa at all times",
+        "tail_canonical_zh": "始终确保足够的有效汽蚀余量",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Cavitation duty,\ncreating vibration\nand mechanical\ndamage                                                                                                \n1. Make sure to        \nhave sufficient      \nNPSHa at all          \ntimes",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0061:t01:r004:c03",
+          "MP005:p0061:t01:r004:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

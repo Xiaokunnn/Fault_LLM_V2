@@ -1,0 +1,142 @@
+{
+  "page_key": "MP005:p0054",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7ce72e76-94bb-9955-a49e-1d481c6d8d7e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1480,
+    "prompt_tokens": 1733,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3213
+  },
+  "latency_ms": 18736,
+  "attempt": 1,
+  "prompt_sha256": "dbb0d99fd93783b8014973a958d5b584ed5e6b7159d1f7333fc4051cfcd23f6a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "standstill",
+        "head_canonical_zh": "停机状态",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "standstill damage to shaft seal and bearings",
+        "tail_canonical_zh": "轴封和轴承停机损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft rotation",
+        "head_canonical_zh": "盘车",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "standstill damage to shaft seal and bearings",
+        "tail_canonical_zh": "轴封和轴承停机损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seizing of the impeller and/or the shaft seal",
+        "head_canonical_zh": "叶轮和/或轴封咬死",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "special applications",
+        "tail_canonical_zh": "特殊应用工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "In special applications, it may require more frequent shaft rotation or start-up in order to avoid seizing of the impeller and/or the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "more frequent shaft rotation or start-up",
+        "head_canonical_zh": "更频繁的盘车或启动",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "seizing of the impeller and/or the shaft seal",
+        "tail_canonical_zh": "叶轮和/或轴封咬死",
+        "tail_type": "FaultMode",
+        "evidence_text": "In special applications, it may require more frequent shaft rotation or start-up in order to avoid seizing of the impeller and/or the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "lead liquid (either one way or the other) through a passively rotating pump",
+        "head_canonical_zh": "液体流过被动旋转的泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "It is not recommended to lead liquid (either one way or the other) through a passively rotating pump, as this may damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The shaft rotates freely without jarring sounds",
+        "head_canonical_zh": "轴自由转动且无刺耳声",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Before starting the pump",
+        "tail_canonical_zh": "启动前检查",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Before starting the pump check that: - The shaft rotates freely without jarring sounds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "Triple index 2 reversed cause direction due to ambiguous phrasing; 'special applications' is context rather than direct cause of seizing, but retained as operating condition per text structure.",
+      "Triple index 5 head entity is an inspection criterion rather than a standard inspection method name; mapped to InspectionAction as closest allowed type."
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0066",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3df1e278-1b96-9076-abaa-865a63cca0b9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 499,
+    "prompt_tokens": 11000,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11499
+  },
+  "latency_ms": 6349,
+  "attempt": 1,
+  "prompt_sha256": "3a55d24f2d24850eefdb981e4bd274899c41705cd89349f476c751074748e8fe",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Damaged or deformed shaft seal",
+        "head_canonical_zh": "轴封损坏或变形",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "LEAKAGE OF HOT OR HAZARD FLUIDS!",
+        "tail_canonical_zh": "高温或危险流体泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "LEAKAGE OF HOT OR HAZARD FLUIDS!\n\nDAMAGE TO THE PUMP SET!\n\nRISK OF BURNS AND FIRE HAZARD!\n\nDamaged or deformed shaft seal will cause damage to the pump, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Do the maintenance on the shaft seal regularly.",
+        "tail_canonical_zh": "定期维护轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Damaged or deformed shaft seal will cause damage to the pump, death or serious injury.\n\nDo the maintenance on the shaft seal regularly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

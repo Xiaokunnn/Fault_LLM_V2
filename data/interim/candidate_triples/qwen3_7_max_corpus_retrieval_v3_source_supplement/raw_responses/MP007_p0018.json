@@ -1,0 +1,351 @@
+{
+  "page_key": "MP007:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bd9d7c60-78c8-9e93-b5c8-79f877fadff2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 5679,
+    "prompt_tokens": 14311,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 19990
+  },
+  "latency_ms": 65538,
+  "attempt": 1,
+  "prompt_sha256": "0fa68a714a3c3afec4ffaf7ee6157230f517e4fc23a226355fdf172ab5a3d86f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "The pump interior is blocked",
+        "head_canonical_zh": "泵内部堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump startup failure",
+        "tail_canonical_zh": "泵启动失败",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump startup failure No power Check the power supply ● Current          \n                                                        ● Main switch             \n                                                        ● Fuse                    \n                                        Check the safety setting of ● Leakage switch\n                                        the motor       ● Heat protection switch  \n                         The heat protection switch The heat protection switch Check if the set value is\n                         of the motor is triggered of the motor. If this correct  \n                                        problem often occurs,                     \n                                        please contact the                        \n                                        supplier.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r000:c01",
+          "MP007:p0018:t00:r001:c00"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The coupling between the pump and the motor is loose",
+        "head_canonical_zh": "泵与电机联轴器松动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor started but pump failure to work",
+        "tail_canonical_zh": "电机已启动但泵不工作",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor started but pump The coupling between the Check and tighten the   \n           failure to work pump and the motor is coupling bolt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r004:c00",
+          "MP007:p0018:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump shaft is damaged",
+        "head_canonical_zh": "泵轴损坏",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor started but pump failure to work",
+        "tail_canonical_zh": "电机已启动但泵不工作",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor started but pump The coupling between the Check and tighten the   \n           failure to work pump and the motor is coupling bolt                    \n                         loose                                                    \n                         The pump shaft is Contact the manufacturer               \n                         damaged        to replace it",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r004:c00",
+          "MP007:p0018:t00:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The outlet or inlet valve is closed",
+        "head_canonical_zh": "出口或进口阀门关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is air in the pump",
+        "head_canonical_zh": "泵内有空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pressure at the pump suction end is low",
+        "head_canonical_zh": "泵吸入端压力低",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump rotating direction is wrong",
+        "head_canonical_zh": "泵旋转方向错误",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is no air discharge in the suction pipe",
+        "head_canonical_zh": "吸入管未排气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is air leakage at the suction end",
+        "head_canonical_zh": "吸入端漏气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water flow is very low, the bubble pump is blocked",
+        "head_canonical_zh": "水流量极低导致气泡泵堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r012:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The diameter of suction pipe is small",
+        "head_canonical_zh": "吸入管径过小",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used                              \n                         The diameter of suction Increase the pipe diameter       \n                         pipe is small",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The bottom valve is blocked",
+        "head_canonical_zh": "底阀堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used                              \n                         The diameter of suction Increase the pipe diameter       \n                         pipe is small                                            \n                         The bottom valve is Clean the bottom valve               \n                         blocked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r014:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The impeller or pump chamber is blocked",
+        "head_canonical_zh": "叶轮或泵腔堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used                              \n                         The diameter of suction Increase the pipe diameter       \n                         pipe is small                                            \n                         The bottom valve is Clean the bottom valve               \n                         blocked                                                  \n                         The impeller or pump Clean the pump interior             \n                         chamber is blocked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The O-ring of the diffuser is damaged",
+        "head_canonical_zh": "导流器O型圈损坏",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used                              \n                         The diameter of suction Increase the pipe diameter       \n                         pipe is small                                            \n                         The bottom valve is Clean the bottom valve               \n                         blocked                                                  \n                         The impeller or pump Clean the pump interior             \n                         chamber is blocked                                       \n                         The O-ring of the diffuser Replace the O-ring            \n                         is damaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r016:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The O-ring is not suitable for the pumping medium",
+        "head_canonical_zh": "O型圈不适用于输送介质",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insufficient flow or/and pressure of pump",
+        "tail_canonical_zh": "泵流量或压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient flow or/and The outlet or inlet valve is Open the valve    \n           pressure of pump closed                                                \n                         There is air in the pump Discharge air in the pump       \n                         Pressure at the pump Increase pressure at the            \n                         suction end is low pump suction end                      \n                         The pump rotating Replace two phases of                  \n                         direction is wrong three-phase wiring                    \n                         There is no air discharge Discharge air in the           \n                         in the suction pipe suction pipe.                        \n                         There is air leakage at the Check the air leakage        \n                         suction end    position.                                 \n                         Water flow is very low, the Make sure that flow is       \n                         bubble pump is blocked increased or a smaller            \n                                        pump is used                              \n                         The diameter of suction Increase the pipe diameter       \n                         pipe is small                                            \n                         The bottom valve is Clean the bottom valve               \n                         blocked                                                  \n                         The impeller or pump Clean the pump interior             \n                         chamber is blocked                                       \n                         The O-ring of the diffuser Replace the O-ring            \n                         is damaged                                               \n                         The O-ring is not suitable Replace with an O-ring        \n                         for the pumping medium suitable for the pumping          \n                                        medium.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r017:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

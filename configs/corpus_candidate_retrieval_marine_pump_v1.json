@@ -1,0 +1,55 @@
+{
+  "version": "marine_pump_corpus_candidate_retrieval_v1",
+  "eligible_split": "build_train",
+  "max_pages_per_fault_role": 12,
+  "max_pages_per_source_family_per_fault_role": 5,
+  "max_total_candidate_pages": 240,
+  "minimum_page_score": 6.0,
+  "require_pump_scope_for_generic_sources": true,
+  "generic_source_families": ["ABS"],
+  "pump_scope_patterns": [
+    "\\bpumps?\\b",
+    "\\bimpeller\\w*\\b",
+    "\\bsuction\\b",
+    "\\bdischarge\\b",
+    "\\bpump shaft\\b",
+    "\\bpump casing\\b",
+    "(?:泵|叶轮|吸入|排出|泵轴|泵壳)"
+  ],
+  "role_patterns": {
+    "symptom": [
+      "\\b(?:symptom|noise|vibrat\\w*|leak\\w*|overheat\\w*|hot|temperature|alarm|low (?:flow|capacity|pressure)|reduced (?:flow|capacity|head)|cannot start|fails? to start)\\b",
+      "(?:症状|噪声|振动|泄漏|过热|温升|报警|流量低|压力低|无法启动|不能启动)"
+    ],
+    "cause_or_mechanism": [
+      "\\b(?:cause|caused by|due to|because|reason|result(?:s|ed)? from|insufficient|excessive|blocked|clogged|choked|misalign\\w*|wear|worn|corrosion|erosion|dry[- ]?runn?ing)\\b",
+      "(?:原因|导致|由于|不足|过量|堵塞|不对中|磨损|腐蚀|冲蚀|干运转)"
+    ],
+    "inspection": [
+      "\\b(?:inspect\\w*|check\\w*|monitor\\w*|measure\\w*|test\\w*|verify|examin\\w*|detect\\w*|diagnos\\w*)\\b",
+      "(?:检查|检验|监测|测量|测试|确认|诊断|检测)"
+    ],
+    "maintenance": [
+      "\\b(?:maintain\\w*|maintenance|replace\\w*|repair\\w*|clean\\w*|lubricat\\w*|adjust\\w*|align\\w*|dismantl\\w*|renew\\w*)\\b",
+      "(?:维护|维修|更换|修理|清理|清洗|润滑|调整|对中|拆卸)"
+    ]
+  },
+  "fault_query_terms": {
+    "cavitation": ["cavitation", "cavitating", "vapor bubbles"],
+    "air_ingress_or_loss_of_prime": ["loss of prime", "fails to prime", "air ingress", "suction line leak", "pump takes air"],
+    "hydraulic_blockage": ["blocked", "clogged", "choked", "obstruction", "dirty filter", "strainer"],
+    "impeller_or_wear_part_damage": ["impeller wear", "impeller damage", "impeller erosion", "wear ring", "wear plate"],
+    "mechanical_seal_failure": ["mechanical seal leak", "seal failure", "seal damage", "seal wear", "seal overheat"],
+    "bearing_or_lubrication_failure": ["bearing failure", "bearing wear", "bearing noise", "bearing vibration", "lubrication"],
+    "pump_motor_misalignment": ["misalignment", "incorrect alignment", "pump motor alignment", "coupling alignment"],
+    "motor_electrical_drive_failure": ["motor failure", "motor overload", "phase loss", "overcurrent", "motor cannot start", "motor overheating"],
+    "pipe_or_valve_integrity_failure": ["pipe leak", "piping leak", "valve stuck", "valve failure", "pipe damage", "pipe rupture"],
+    "dry_running_or_maintenance_induced_failure": ["dry running", "run dry", "incorrect maintenance", "improper installation", "maintenance error"]
+  },
+  "page_filters": {
+    "exclude_table_of_contents": true,
+    "exclude_low_value_pages": true,
+    "minimum_text_characters": 80,
+    "near_duplicate_hamming_distance": 3
+  }
+}

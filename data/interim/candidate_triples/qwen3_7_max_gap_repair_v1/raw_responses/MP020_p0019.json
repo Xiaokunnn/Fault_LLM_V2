@@ -1,0 +1,78 @@
+{
+  "page_key": "MP020:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d40182fd-cc00-961b-8a35-2bd542cdd18c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 662,
+    "prompt_tokens": 3017,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3679
+  },
+  "latency_ms": 9668,
+  "attempt": 1,
+  "prompt_sha256": "2a9144cb0509006193d1b5c967cfe099d42eaf7df6f750af9bccb41681055d41",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "centrifugal pumps to lose prime",
+        "head_canonical_zh": "离心泵失去灌注",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "vent of air during filling of pump & line",
+        "tail_canonical_zh": "泵和管路充液期间排气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Caution must be taken to vent of air during filling of pump & line. As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "centrifugal pumps to lose prime",
+        "head_canonical_zh": "离心泵失去灌注",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "3% entrained air",
+        "tail_canonical_zh": "3%夹带空气",
+        "tail_type": "Cause",
+        "evidence_text": "As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Close vent and supply valves prior to pump operation",
+        "tail_canonical_zh": "泵运行前关闭排气阀和供给阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Close vent and supply valves prior to pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

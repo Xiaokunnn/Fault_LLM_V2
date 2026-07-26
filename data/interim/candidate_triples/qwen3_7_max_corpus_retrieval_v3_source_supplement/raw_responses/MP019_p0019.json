@@ -1,0 +1,65 @@
+{
+  "page_key": "MP019:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-89efc655-ab9d-9a7e-8286-a45fbcdb68b9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 644,
+    "prompt_tokens": 13171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13815
+  },
+  "latency_ms": 8867,
+  "attempt": 1,
+  "prompt_sha256": "eeccbb59b37ac34687dee9c677c194591a9152405fac61fbed4734ed6b3cef0d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Mechanical failure",
+        "head_canonical_zh": "机械故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Motor fails to start",
+        "tail_canonical_zh": "电机无法启动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor fails to start Blown fuses  Replace fuses with proper type and rating. \n                 Overload trips        Check and reset overload in starter.       \n                 Improper power supply Check to see that power supplied agrees with motor rating plate and\n                                       load factor.                               \n                 Improper line connections Check connections against diagram supplied with motor.\n                 Open circuit in winding or control Indicated by humming sound when switch is closed. Check for loose\n                 switch                wiring connections.                        \n                                       Also ensure that all control contacts are closing.\n                 Mechanical failure    Check to see if motor and drive turn freely. Check bearings and\n                                       lubrication.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanical failure",
+        "head_canonical_zh": "机械故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check bearings and\n                                       lubrication.",
+        "tail_canonical_zh": "检查轴承和润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mechanical failure    Check to see if motor and drive turn freely. Check bearings and\n                                       lubrication.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r006:c01",
+          "MP019:p0019:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

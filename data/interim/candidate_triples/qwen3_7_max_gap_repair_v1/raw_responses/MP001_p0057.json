@@ -1,0 +1,86 @@
+{
+  "page_key": "MP001:p0057",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d815d832-028f-93d3-9e77-6e7b901510f5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 849,
+    "prompt_tokens": 6203,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7052
+  },
+  "latency_ms": 10110,
+  "attempt": 1,
+  "prompt_sha256": "0fd7c5abf630a84f2457e1724ae641866c3c1e14fa89051f79b944bc86e0d45c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Dry running pumps",
+        "head_canonical_zh": "泵干运转",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Spike EnergyTM",
+        "tail_canonical_zh": "Spike Energy™监测技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Spike\nEnergyTM cavitation, flow\nchange, bearing loose\nfit, bearing wear\ncausing metal-to-metal\ncontact, surface flaws\nof gear teeth, high\npressure steam or air\nflow, control valves\nnoise, poor bearing\nlubrication",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0057:t00:r001:c00",
+          "MP001:p0057:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Spike EnergyTM",
+        "tail_canonical_zh": "Spike Energy™监测技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Spike\nEnergyTM cavitation, flow\nchange, bearing loose\nfit, bearing wear\ncausing metal-to-metal\ncontact, surface flaws\nof gear teeth, high\npressure steam or air\nflow, control valves\nnoise, poor bearing\nlubrication",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0057:t00:r001:c00",
+          "MP001:p0057:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal-less pump problems",
+        "head_canonical_zh": "无密封泵故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Sensitive high frequency measurement parameters",
+        "tail_canonical_zh": "高频敏感测量参数",
+        "tail_type": "SignalFeature",
+        "evidence_text": "• Sensitive high\nfrequency\nmeasurement\nparameters for\ndetection of seal-less\npump problems which\nare difficult to detect\nwith velocity meters /\naccelerometers",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0057:t00:r001:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

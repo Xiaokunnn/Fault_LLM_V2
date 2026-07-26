@@ -1,0 +1,63 @@
+{
+  "page_key": "MP001:p0026",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5aed2e71-dfc7-9bc3-977f-fc7483323ed7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 511,
+    "prompt_tokens": 5127,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5638
+  },
+  "latency_ms": 7531,
+  "attempt": 1,
+  "prompt_sha256": "914ed260eed70e736b1c32afb32e597330ef33c10430bffd92ba327f2187e94e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump impeller",
+        "head_canonical_zh": "泵叶轮",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Pattern B – Traditional Wear-out",
+        "tail_canonical_zh": "模式B-传统磨损失效",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pattern B – Traditional Wear-out:\nConstant or slowly increasing failure rate followed by a\ndistinct wear-out zone\nExample: reciprocating engine, pump impeller",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0026:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "roller/ball bearings",
+        "head_canonical_zh": "滚动轴承/球轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Pattern E – Random Failure",
+        "tail_canonical_zh": "模式E-随机失效",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pattern E – Random Failure:\nConstant failure rate in all operating periods\nExample: roller/ball bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0026:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

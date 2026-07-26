@@ -1,0 +1,99 @@
+{
+  "page_key": "MP017:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2c8bfe41-02b4-97d0-b2be-14737810f0d5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 961,
+    "prompt_tokens": 1804,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2765
+  },
+  "latency_ms": 12411,
+  "attempt": 1,
+  "prompt_sha256": "351443e6d5c992311cbb057407344f452418c3426362069bafa707cbf33bc675",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "electrical service available matches the motor requirements",
+        "head_canonical_zh": "电源与电机铭牌要求匹配检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "check that the electrical service available matches the motor requirements stamped on the motor nameplate before connecting a motor to the incoming power",
+        "tail_canonical_zh": "连接电源前核对电源与电机铭牌参数",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If the pump is driven by an electric motor, check that the electrical service available matches the motor requirements stamped on the motor nameplate before connecting a motor to the incoming power.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor speed meets pump specifications",
+        "head_canonical_zh": "电机转速符合泵规格检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the motor speed meets pump specifications",
+        "tail_canonical_zh": "核查电机转速满足泵规格",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the motor speed meets pump specifications.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "rotation is incorrect on a three-phase motor",
+        "head_canonical_zh": "三相电机转向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "have a qualified electrician interchange any two of the three phase wires to change direction",
+        "tail_canonical_zh": "由合格电工交换任意两根相线以改变转向",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a three-phase motor, have a qualified electrician interchange any two of the three phase wires to change direction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "rotation is incorrect on a single-phase motor",
+        "head_canonical_zh": "单相电机转向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "consult the literature supplied with the motor for specific instructions",
+        "tail_canonical_zh": "查阅电机随附文献获取具体纠正说明",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a single-phase motor, consult the literature supplied with the motor for specific instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

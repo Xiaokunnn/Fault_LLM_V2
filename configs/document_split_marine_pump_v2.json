@@ -1,0 +1,65 @@
+{
+  "version": "marine_pump_document_split_v2",
+  "status": "frozen_before_targeted_v2_extraction",
+  "frozen_at": "2026-07-25",
+  "split_unit": "whole_document",
+  "selection_context": "MP015 and MP016 were selected after a documented build-source gap analysis and are therefore assigned only to build_train.",
+  "build_train_doc_ids": [
+    "MP001",
+    "MP002",
+    "MP003",
+    "MP004",
+    "MP005",
+    "MP006",
+    "MP007",
+    "MP015",
+    "MP016"
+  ],
+  "development_doc_ids": [
+    "MP008"
+  ],
+  "held_out_test_doc_ids": [
+    "MP009",
+    "MP010",
+    "MP011",
+    "MP012",
+    "MP013"
+  ],
+  "source_family_policy": {
+    "build_train": [
+      "ABS",
+      "DESMI",
+      "SPX_FLOW__JOHNSON_PUMP",
+      "XYLEM__JABSCO"
+    ],
+    "development": [
+      "GRUNDFOS"
+    ],
+    "held_out_test": [
+      "SULZER",
+      "MAIB"
+    ],
+    "same_source_family_can_count_as_multiple_documents_but_only_one_source_family": true
+  },
+  "pre_split_screening_disclosures": {
+    "MP009": {
+      "source_screened_before_v2_split": true,
+      "strict_blind_test": false,
+      "allowed_use": "non-blind held-out transfer analysis"
+    },
+    "MP010-MP013": {
+      "source_screened_before_v2_split": false,
+      "strict_blind_test": true,
+      "allowed_use": "frozen external held-out evaluation after localization"
+    }
+  },
+  "constraints": {
+    "extract_after_split": true,
+    "development_evidence_cannot_fill_build_coverage_gate": true,
+    "held_out_test_documents_cannot_enter_primary_graph": true,
+    "held_out_test_documents_cannot_tune_prompts_or_thresholds": true,
+    "all_automatic_or_semiautomatic_labels_are_silver": true,
+    "source_family_id_required_for_formal_coverage": true,
+    "pump_type_and_applicability_scope_must_be_preserved": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "page_key": "MP004:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d05d76c2-ec49-9831-8454-94064931f498",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1377,
+    "prompt_tokens": 1875,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3252
+  },
+  "latency_ms": 22277,
+  "attempt": 1,
+  "prompt_sha256": "bd9a3820790247cad8fce6edd2e408ea16b6a0ec83087add7cc857c0409c739a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing has been filled with liquid",
+        "head_canonical_zh": "泵壳未充液",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "self-priming centrifugal pump will not function",
+        "tail_canonical_zh": "自吸离心泵无法运行",
+        "tail_type": "Symptom",
+        "evidence_text": "A self-priming centrifugal pump will not function until the pump casing has been filled with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run dry",
+        "head_canonical_zh": "干转",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "Risk",
+        "evidence_text": "Furthermore, the pump must never run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps)",
+        "head_canonical_zh": "关闭排出阀运行超时或超温",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "risk of damage to the pump and, at worst, of a steam explosion",
+        "tail_canonical_zh": "泵损坏及蒸汽爆炸风险",
+        "tail_type": "Risk",
+        "evidence_text": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps). Otherwise there is a risk of damage to the pump and, at worst, of a steam explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "considerably smaller delivery head than expected",
+        "head_canonical_zh": "实际扬程远低于预期",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation in pump and piping",
+        "tail_canonical_zh": "泵及管路汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "impeller may show signs of heavy erosion",
+        "tail_canonical_zh": "叶轮严重冲蚀",
+        "tail_type": "Symptom",
+        "evidence_text": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion) which may at times render an impeller unfit for use in a very short time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "measuring the current intensity of the connected motor",
+        "head_canonical_zh": "测量电机电流强度",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "quantity of water delivered",
+        "tail_canonical_zh": "输水量",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Therefore, after start-up, it is necessary to check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

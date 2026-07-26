@@ -1,0 +1,61 @@
+{
+  "page_key": "MP007:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-97a59fa6-9303-978d-bfa8-7feda93f1719",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 469,
+    "prompt_tokens": 4608,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5077
+  },
+  "latency_ms": 6216,
+  "attempt": 1,
+  "prompt_sha256": "919eda32f29fc794ffe0c01ea909f350876567efc0596b8d0924b30de0cd43c4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "pump bearing and shaft seal will be damaged",
+        "tail_canonical_zh": "泵轴承和轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "In case of dry running,\npump bearing and shaft seal will be damaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not start the pump before water is filled and air is discharged",
+        "head_canonical_zh": "注水排气前禁止启动泵",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\npump bearing and shaft seal will be damaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "page_key": "MP020:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c52b9083-fd33-9ed9-9780-100d31b38334",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 623,
+    "prompt_tokens": 3221,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3844
+  },
+  "latency_ms": 11002,
+  "attempt": 1,
+  "prompt_sha256": "7d3ce813294126432e4180d75bec0b1b16af92c71e707ec3e9769f09440bb1d6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Correct Alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "Reinstall coupling guard before start-up.",
+        "tail_canonical_zh": "启动前重新安装联轴器防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Correct Alignment           Reinstall coupling guard\n                                                                before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Incorrect Alignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reinstall coupling guard before start-up.",
+        "tail_canonical_zh": "启动前重新安装联轴器防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Incorrect Alignment            before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "STRAIGHT EDGE",
+        "head_canonical_zh": "直尺法",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "ALIGNMENT",
+        "tail_canonical_zh": "对中检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "*Suggested method when double indicator or laser alignment is not used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

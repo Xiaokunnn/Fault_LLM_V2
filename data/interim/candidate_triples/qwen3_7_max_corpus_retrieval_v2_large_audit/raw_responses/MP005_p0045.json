@@ -1,0 +1,80 @@
+{
+  "page_key": "MP005:p0045",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-37598e0b-2388-99f6-a0ce-44278ac8b58e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 599,
+    "prompt_tokens": 1454,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2053
+  },
+  "latency_ms": 7730,
+  "attempt": 1,
+  "prompt_sha256": "e5a8b5fa3a815aa0e45fa1e1bb849e36f81ab923ae5f18e5e0e9ba470322df6f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impurities",
+        "head_canonical_zh": "杂质",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pump",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Recommend installing filter and monitor device to avoid impurities into pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "filter",
+        "head_canonical_zh": "过滤器",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "impurities",
+        "tail_canonical_zh": "杂质",
+        "tail_type": "Cause",
+        "evidence_text": "Install a filter into the suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "differential pressure gauge",
+        "head_canonical_zh": "压差表",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "impurity",
+        "tail_canonical_zh": "杂质",
+        "tail_type": "Cause",
+        "evidence_text": "Install a differential pressure gauge to monitor impurity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

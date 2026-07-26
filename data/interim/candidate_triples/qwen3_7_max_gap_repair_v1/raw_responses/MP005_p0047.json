@@ -1,0 +1,111 @@
+{
+  "page_key": "MP005:p0047",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-01be7e16-468a-974f-bf0a-19b52370f699",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1039,
+    "prompt_tokens": 4968,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6007
+  },
+  "latency_ms": 12680,
+  "attempt": 1,
+  "prompt_sha256": "3993b6d8482804278f8ec22f67beb45187948c37650d52ad64959b80285364c0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor (drive end)",
+        "head_canonical_zh": "电机驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration alarm level (mm/s)",
+        "tail_canonical_zh": "振动报警值",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (drive end)          >7                       >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0047:t00:r002:c00",
+          "MP005:p0047:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (non drive end)",
+        "head_canonical_zh": "电机非驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration alarm level (mm/s)",
+        "tail_canonical_zh": "振动报警值",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (non drive end)      >10                      >15",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0047:t00:r003:c00",
+          "MP005:p0047:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (drive end)",
+        "head_canonical_zh": "电机驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration trip level(mm/s)",
+        "tail_canonical_zh": "振动跳闸值",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (drive end)          >7                       >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0047:t00:r002:c00",
+          "MP005:p0047:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (non drive end)",
+        "head_canonical_zh": "电机非驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration trip level(mm/s)",
+        "tail_canonical_zh": "振动跳闸值",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (non drive end)      >10                      >15",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0047:t00:r003:c00",
+          "MP005:p0047:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

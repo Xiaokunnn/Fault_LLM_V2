@@ -1,0 +1,57 @@
+{
+  "page_key": "MP019:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8b919465-4037-98ca-8f92-292eaed72bbd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 443,
+    "prompt_tokens": 1784,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2227
+  },
+  "latency_ms": 6152,
+  "attempt": 1,
+  "prompt_sha256": "7a4505f531b3b5fa0763f5b057e3b0862d00ce2eb25d9a59a9c2d80a27ced970",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water cannot enter the motor or the terminal boxes",
+        "head_canonical_zh": "水进入电机或接线盒",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "The seals of terminal boxes must be placed correctly in the slots provided",
+        "tail_canonical_zh": "接线盒密封件正确安装于槽内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The seals of terminal boxes must be placed correctly in the slots provided, to ensure the correct IP class.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Using a higher measuring voltage or current",
+        "head_canonical_zh": "使用过高的测量电压或电流",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "errors in readings or damage the system",
+        "tail_canonical_zh": "读数错误或系统损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "Using a higher measuring voltage or current may cause errors in readings or damage the system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

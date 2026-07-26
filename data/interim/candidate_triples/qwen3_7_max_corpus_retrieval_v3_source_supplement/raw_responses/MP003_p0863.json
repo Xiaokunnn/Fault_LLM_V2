@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0863",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d77767be-9182-9668-a60c-0ea82f678bcb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 683,
+    "prompt_tokens": 1950,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2633
+  },
+  "latency_ms": 9676,
+  "attempt": 1,
+  "prompt_sha256": "7dd53fc9dbf2302dd7c0706456889d317c0740afe9a463df9b7141c5efe86787",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "removal of the field current",
+        "head_canonical_zh": "励磁电流切除",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damaging flashover in the DC propulsion motor",
+        "tail_canonical_zh": "直流推进电机破坏性闪络",
+        "tail_type": "FaultMode",
+        "evidence_text": "A possible cause of a damaging flashover would be removal of the field current.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "accidental loss of the field",
+        "head_canonical_zh": "励磁意外丢失",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "increase in armature current",
+        "tail_canonical_zh": "电枢电流增加",
+        "tail_type": "Symptom",
+        "evidence_text": "increase in armature current created by the removal of the field current, due to accidental loss of the field",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "activation of a protection feature intended to protect the field",
+        "head_canonical_zh": "励磁保护功能动作",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "increase in armature current",
+        "tail_canonical_zh": "电枢电流增加",
+        "tail_type": "Symptom",
+        "evidence_text": "increase in armature current created by the removal of the field current, due to ... activation of a protection feature intended to protect the field",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

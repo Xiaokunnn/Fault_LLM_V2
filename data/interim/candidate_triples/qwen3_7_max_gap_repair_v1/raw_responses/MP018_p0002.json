@@ -1,0 +1,62 @@
+{
+  "page_key": "MP018:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cae4a3cf-e31e-99f1-9eac-06b620b1384c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 503,
+    "prompt_tokens": 1817,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2320
+  },
+  "latency_ms": 8287,
+  "attempt": 1,
+  "prompt_sha256": "05473ccdeeebf383858c4e5f17a7d63e6f8c0be103b2ceef492a65e21aa3ac02",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "reviewed with a Patterson Pump Company representative",
+        "tail_canonical_zh": "与Patterson泵公司代表复核工况变更",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If any one of these conditions has changed since the order was placed, it is recommended that the change be reviewed with a Patterson Pump Company representative.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "followed carefully",
+        "tail_canonical_zh": "严格遵循安装运行维护说明",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "As a safeguard to keeping the warranty valid, instructions should be followed carefully.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "页面未提供针对cavitation的明确检查方法或诊断动作，仅给出工况变更时建议复核的通用指导，故inspection关系置信度较低。",
+      "页面主要为安全与保修提示，缺少具体的维护步骤描述，maintenance关系基于对instructions应被遵循的泛化表述抽取。"
+    ]
+  }
+}

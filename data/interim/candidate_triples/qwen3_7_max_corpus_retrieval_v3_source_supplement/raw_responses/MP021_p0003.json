@@ -1,0 +1,115 @@
+{
+  "page_key": "MP021:p0003",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4d45db75-4650-9132-8e72-3a5200dc2900",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1058,
+    "prompt_tokens": 2537,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3595
+  },
+  "latency_ms": 13775,
+  "attempt": 1,
+  "prompt_sha256": "45b643b71f75a09beed4921db6fa3bfff53e0a0789f0f1c56b7ee9f4d9d27e26",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "External lubrication",
+        "head_canonical_zh": "外部润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "multi-purpose grease, NLGI # 2",
+        "tail_canonical_zh": "NLGI #2多用途润滑脂",
+        "tail_type": "Standard",
+        "evidence_text": "External lubrication must be applied slowly with a hand gun to all lubrication fittings every 500 hours of operation with multi-purpose grease, NLGI # 2.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "New packed pumps",
+        "head_canonical_zh": "新填料泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "initial packing adjustment",
+        "tail_canonical_zh": "初始填料调整",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "New packed pumps require initial packing adjustment to control leakage as packing “runs in”.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "packing gland",
+        "head_canonical_zh": "填料压盖",
+        "tail_surface": "over -tighten",
+        "tail_canonical_zh": "过度拧紧",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_type": "Cause",
+        "evidence_text": "do not over -tighten packing gland",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "rotating pump shaft by hand one complete revolution every 30 days",
+        "tail_canonical_zh": "每30天手动盘车一圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Viking suggests rotating pump shaft by hand one complete revolution every 30 days to circulate the oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "circulation line",
+        "head_canonical_zh": "循环管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "insulated",
+        "tail_canonical_zh": "保温检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If pump is handling heated product, be sure circulation line is insulated to assure continued flow.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

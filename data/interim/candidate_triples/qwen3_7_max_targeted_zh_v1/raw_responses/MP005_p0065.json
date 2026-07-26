@@ -1,0 +1,119 @@
+{
+  "page_key": "MP005:p0065",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4e4d3472-cbb6-9b0c-a73d-1cb553a45196",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1170,
+    "prompt_tokens": 1826,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2996
+  },
+  "latency_ms": 19881,
+  "attempt": 1,
+  "prompt_sha256": "f2e878db7a6097f89aa0f659a0140385e257fc6e7d9e83cca5b2d2bb303f1f3a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "clogged shaft seal leak hole",
+        "head_canonical_zh": "轴封泄漏孔堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "A clogged shaft seal leak hole can lead to premature bearing failure due to water rising up into the pump ball bearings when the shaft seal is worn out and/or damaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water rising up into the pump ball bearings",
+        "head_canonical_zh": "水进入泵滚动轴承",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "premature bearing failure due to water rising up into the pump ball bearings when the shaft seal is worn out and/or damaged",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal is worn out and/or damaged",
+        "head_canonical_zh": "轴封磨损或损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "water rising up into the pump ball bearings",
+        "tail_canonical_zh": "水进入泵滚动轴承",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "water rising up into the pump ball bearings when the shaft seal is worn out and/or damaged",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "Inspect the pumps regularly for initial leakage",
+        "head_canonical_zh": "定期检查泵的初始泄漏",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "initial leakage",
+        "tail_canonical_zh": "初始泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Inspect the pumps regularly for initial leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Check regularly that the shaft seal leak drain hole in the rear cover (or in bearing cover / bracket on some pump designs) is not clogged up",
+        "head_canonical_zh": "定期检查后盖（或某些泵设计中的轴承盖/支架）上的轴封泄漏排放孔是否堵塞",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "shaft seal leak drain hole",
+        "tail_canonical_zh": "轴封泄漏排放孔",
+        "tail_type": "Component",
+        "evidence_text": "Check regularly that the shaft seal leak drain hole in the rear cover (or in bearing cover / bracket on some pump designs) is not clogged up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

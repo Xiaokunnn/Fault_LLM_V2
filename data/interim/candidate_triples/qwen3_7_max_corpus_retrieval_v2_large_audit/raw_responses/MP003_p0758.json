@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0758",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3c5c51e5-6c4d-990e-aa97-9e09f2dde5ff",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 474,
+    "prompt_tokens": 1862,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2336
+  },
+  "latency_ms": 6280,
+  "attempt": 1,
+  "prompt_sha256": "cb25cb4dc25c2d00f62f60b901d725973b40be099f15f2d574937fe0f6d268e1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "total load exceeds the rated capacity of the running generator",
+        "head_canonical_zh": "总负载超过运行发电机额定容量",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "automatic load-shedding arrangements",
+        "tail_canonical_zh": "自动卸载装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "due to the switching on of additional loads, whether manually or automatically initiated, the total load exceeds the rated capacity of the running generator",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of one of the parallel running generators",
+        "head_canonical_zh": "并联运行发电机之一故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "automatic load-shedding arrangements",
+        "tail_canonical_zh": "自动卸载装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "upon the failure of one of the parallel running generators, the total connected load exceeds the total capacity of the remaining generator(s)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "page_key": "MP007:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-630f388d-d2a5-96a3-af5a-ba476c58bb2d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 739,
+    "prompt_tokens": 1717,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2456
+  },
+  "latency_ms": 9772,
+  "attempt": 1,
+  "prompt_sha256": "e6457a1404c7350bbb7419ab3b9cc574b9b58c22fe1b08543ddd4df7019e9795",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "ambient temperature exceeds +40°C",
+        "head_canonical_zh": "环境温度超过+40°C",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率(P2)下降",
+        "tail_type": "Symptom",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor is installed above 1,000m altitude",
+        "head_canonical_zh": "电机安装在海拔1000米以上",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率(P2)下降",
+        "tail_type": "Symptom",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "poor motor cooling effect caused by low air density",
+        "head_canonical_zh": "低空气密度导致的电机冷却效果差",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率(P2)下降",
+        "tail_type": "Symptom",
+        "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

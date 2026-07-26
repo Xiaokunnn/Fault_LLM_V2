@@ -1,0 +1,99 @@
+{
+  "page_key": "MP020:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9b72f902-dd27-981d-b5a9-48229a6acaa5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 845,
+    "prompt_tokens": 4234,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5079
+  },
+  "latency_ms": 10609,
+  "attempt": 1,
+  "prompt_sha256": "1ea84d67b2f9c232fd1016205dc6686ade07b6d5d939ce27a02e02ecb17a1277",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "FLOW STRAIGHTENER",
+        "head_canonical_zh": "整流器",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "clear liquids applications only",
+        "tail_canonical_zh": "仅适用于清洁液体工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "*Flow straigheners are for clear liquids applications only.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "FRICTION LOSSES",
+        "head_canonical_zh": "摩擦损失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "KEEP VELOCITIES LOW (3-8 FT/SEC)",
+        "tail_canonical_zh": "保持低流速(3-8 FT/SEC)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "KEEP VELOCITIES LOW (3-8 FT/SEC) TO REDUCE FRICTION LOSSES",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ENTRANCE LOSSES",
+        "head_canonical_zh": "入口损失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "USE SUCTION BELL",
+        "tail_canonical_zh": "使用吸入喇叭口",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "USE SUCTION BELL TO REDUCE ENTRANCE LOSSES",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ENTRANCE LOSSES",
+        "head_canonical_zh": "入口损失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "CONTOURED ENTRANCE",
+        "tail_canonical_zh": "流线型入口",
+        "tail_type": "Component",
+        "evidence_text": "CONTOURED ENTRANCE TO REDUCE ENTRANCE LOSSES",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.91,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.88
+      }
+    ],
+    "warnings": []
+  }
+}

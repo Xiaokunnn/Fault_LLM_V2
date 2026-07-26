@@ -1,0 +1,57 @@
+{
+  "version": "marine_pump_record_level_relation_repairs_v1_1",
+  "policy": "Exact-record, fail-closed repairs from candidate audits. No rule generalizes from these IDs.",
+  "repairs": {
+    "MPT-13cac1eef9648e12e3d4": {
+      "expected": {"head_type": "Symptom", "relation": "causes", "tail_type": "Risk"},
+      "set": {"head_type": "OperatingCondition"},
+      "action": "record_audit_high_temperature_as_operating_condition"
+    },
+    "MPT-663dc383e7e73110658d": {
+      "expected": {"head_type": "Symptom", "relation": "causes", "tail_type": "FaultMode"},
+      "set": {"head_type": "FailureMechanism"},
+      "action": "record_audit_steam_formation_as_failure_mechanism"
+    },
+    "MPT-8f13acb30da3989b4310": {
+      "expected": {"head_type": "FaultMode", "relation": "indicates", "tail_type": "SignalFeature"},
+      "swap_head_tail": true,
+      "action": "reoriented_record_audit_signal_indicates_misalignment"
+    },
+    "MPT-db2e18a2245329291f21": {
+      "expected": {"head_type": "FaultMode", "relation": "mitigated_by", "tail_type": "InspectionAction"},
+      "set": {"relation": "inspected_by"},
+      "action": "record_audit_prevention_check_as_inspection"
+    },
+    "MPT-9b6ce27200a01a7fe192": {
+      "expected": {"head_type": "SignalFeature", "relation": "causes", "tail_type": "FaultMode"},
+      "set": {"head_type": "OperatingCondition"},
+      "action": "record_audit_excess_vibration_as_operating_condition"
+    },
+    "MPT-1f779a30be0798252e38": {
+      "expected": {"head_type": "Symptom", "relation": "causes", "tail_type": "Risk"},
+      "set": {"head_type": "OperatingCondition"},
+      "action": "record_audit_excess_temperature_as_operating_condition"
+    },
+    "MPT-f0f057ddb58e28dd7c55": {
+      "expected": {"head_type": "Component", "relation": "inspected_by", "tail_type": "MaintenanceAction"},
+      "set": {"relation": "maintained_by"},
+      "action": "record_audit_component_replacement_as_maintenance"
+    },
+    "MPT-c1aa7baa2a37f9c8bdeb": {
+      "expected": {"head_type": "Symptom", "relation": "causes", "tail_type": "Risk"},
+      "set": {"head_type": "OperatingCondition"},
+      "action": "record_audit_inlet_pressure_as_operating_condition"
+    },
+    "MPT-f3de072e9db0b6c6ddf4": {
+      "expected": {
+        "head": "Leaking shaft seal",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail": "Running dry",
+        "tail_type": "Cause"
+      },
+      "set": {"head_type": "Symptom"},
+      "action": "record_audit_troubleshooting_problem_as_observable_symptom"
+    }
+  }
+}

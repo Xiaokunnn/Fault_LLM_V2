@@ -1,0 +1,80 @@
+{
+  "page_key": "MP017:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1ae07303-d538-91c5-af07-4be17355c684",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 748,
+    "prompt_tokens": 2227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2975
+  },
+  "latency_ms": 9351,
+  "attempt": 1,
+  "prompt_sha256": "19eb49215ae6052dd4064e6a2f533e37201d5c98c790be1a492d34508f7ea058",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Allow an over-heated pump to cool before servicing",
+        "tail_canonical_zh": "维修前让过热泵冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A closed manual shut-off valve may cause a pump which has lost prime to continue to operate without reaching prime, causing dangerous overheating and possible explosive rupture of the pump casing. Personnel could be severely injured. Allow an over-heated pump to cool before servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "explosive rupture of the pump casing",
+        "head_canonical_zh": "泵壳爆炸性破裂",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Allow an over-heated pump to cool before servicing",
+        "tail_canonical_zh": "维修前让过热泵冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A closed manual shut-off valve may cause a pump which has lost prime to continue to operate without reaching prime, causing dangerous overheating and possible explosive rupture of the pump casing. Personnel could be severely injured. Allow an over-heated pump to cool before servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "over-heated pump",
+        "head_canonical_zh": "过热泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "drain the liquid from the pump by removing the casing drain plug",
+        "tail_canonical_zh": "通过拆卸泵壳排放塞排放泵内液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "After the pump cools, drain the liquid from the pump by removing the casing drain plug.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

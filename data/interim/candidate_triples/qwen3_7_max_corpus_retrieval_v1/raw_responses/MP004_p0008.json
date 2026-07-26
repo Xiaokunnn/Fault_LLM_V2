@@ -1,0 +1,99 @@
+{
+  "page_key": "MP004:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-46e2fc4f-648a-98ee-8a4a-cfdda52a3fad",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 856,
+    "prompt_tokens": 1849,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2705
+  },
+  "latency_ms": 11782,
+  "attempt": 1,
+  "prompt_sha256": "5a50800d126693164b342a916078a6a5f54282a450593f49c0c042be08a8d807",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Wear plate/impeller",
+        "head_canonical_zh": "耐磨板/叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the following parts for wear and damage",
+        "tail_canonical_zh": "检查磨损和损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check the following parts for wear and damage:\n\n- Wear plate/impeller : Max. clearance 0.4 - 0.5 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Shaft seal/rear cover",
+        "head_canonical_zh": "轴封/后盖",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check seat for flatness and cracks",
+        "tail_canonical_zh": "检查密封座平面度和裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "- Shaft seal/rear cover : Check seat for flatness and cracks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Replace in case of wear and noise",
+        "tail_canonical_zh": "磨损或噪音时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Bearings         : Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear and noise",
+        "head_canonical_zh": "磨损和噪音",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Bearings",
+        "tail_canonical_zh": "轴承",
+        "tail_type": "Component",
+        "evidence_text": "- Bearings         : Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

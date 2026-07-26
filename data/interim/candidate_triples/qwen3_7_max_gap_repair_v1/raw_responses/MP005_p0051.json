@@ -1,0 +1,99 @@
+{
+  "page_key": "MP005:p0051",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0431c40a-85eb-9c3e-b951-39bb938937e8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 900,
+    "prompt_tokens": 7169,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8069
+  },
+  "latency_ms": 11257,
+  "attempt": 1,
+  "prompt_sha256": "c1b34ce0dc5f583eb286a63a6410c68edd9a8d9501a2c2b17ddc6aa3983bf22b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "vent the suction line and the pump, and prime them with the fluid to be handled",
+        "tail_canonical_zh": "对吸入管路和泵进行排气并用输送液体灌泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before starting up the pump, vent the suction line and the pump, and prime them with the fluid to be handled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump set",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Do not operate the pump set without liquid fill",
+        "tail_canonical_zh": "禁止在无液体填充情况下运行泵组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Dry running will cause increased wear to the pump.\n\n                  Do not operate the pump set without liquid fill.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "The direction of rotation is checked",
+        "tail_canonical_zh": "检查旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The direction of rotation is checked.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor bearings",
+        "head_canonical_zh": "电机轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "motor bearings to be greased acc. to motor manual before starting the pump",
+        "tail_canonical_zh": "启动泵前按电机手册对电机轴承加注润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If re-greasable then motor bearings to be greased acc. to motor manual before starting the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "page_key": "MP017:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-639f42f6-4199-9677-8be8-675a3615e9aa",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 679,
+    "prompt_tokens": 1706,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2385
+  },
+  "latency_ms": 9284,
+  "attempt": 1,
+  "prompt_sha256": "d34fc69fc408453563023e6eae3d188fb75d47441d472254aaa7e5e749702185",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "solids that may have accumulated in the diaphragm chamber",
+        "head_canonical_zh": "隔膜腔内积聚的固体",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "flushed out during the next priming cycle",
+        "tail_canonical_zh": "下次引水循环冲洗排出",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Any solids that may have accumulated in the diaphragm chamber settle to the bottom and are flushed out during the next priming cycle.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump does not reach its designed capacity or head",
+        "head_canonical_zh": "泵未达到设计流量或扬程",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "The valve will remain open",
+        "tail_canonical_zh": "阀门保持开启",
+        "tail_type": "Symptom",
+        "evidence_text": "The valve will remain open if the pump does not reach its designed capacity or head.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "independently mounted in a horizontal position",
+        "tail_canonical_zh": "独立水平安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The Automatic Air Release Valve must be independently mounted in a horizontal position",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

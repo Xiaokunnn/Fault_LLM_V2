@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0052",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bb1a584d-656e-90c1-b6c7-84f5c3a53526",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 445,
+    "prompt_tokens": 3112,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3557
+  },
+  "latency_ms": 5975,
+  "attempt": 1,
+  "prompt_sha256": "4741f06308d1e9f9b6927c9558656199e1f6fe9e29020f3cca514651733ec883",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Automatic venting and priming system",
+        "head_canonical_zh": "自动排气和引水系统",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "FaultMode",
+        "evidence_text": "Automatic venting and priming system is designed for centrifugal pumps to prevent dry running",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "liquid level is below the pump inlet",
+        "head_canonical_zh": "液位低于泵进口",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "FaultMode",
+        "evidence_text": "prevent dry running while the liquid level is below the pump inlet",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

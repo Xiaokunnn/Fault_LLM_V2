@@ -1,0 +1,276 @@
+{
+  "version": "marine_pump_zh_terminology_v2_0",
+  "status": "active_gap_repair_with_prevention_relation",
+  "graph_display_language": "zh-CN",
+  "policy": {
+    "source_evidence_must_remain_verbatim": true,
+    "canonical_entity_label_language": "zh",
+    "machine_relation_codes_remain_stable": true,
+    "machine_entity_type_codes_remain_stable": true,
+    "model_translation_alone_is_graph_eligible": false,
+    "eligible_translation_statuses": [
+      "source_zh_exact",
+      "dictionary_approved",
+      "secondary_ai_verified",
+      "human_approved"
+    ],
+    "unreviewed_translation_status": "needs_review"
+  },
+  "node_type_labels_zh": {
+    "Equipment": "设备",
+    "Component": "部件",
+    "FaultMode": "故障模式",
+    "FailureMechanism": "失效机理",
+    "Symptom": "症状",
+    "SignalFeature": "信号特征",
+    "Cause": "原因",
+    "OperatingCondition": "运行工况",
+    "InspectionMethod": "检查方法",
+    "InspectionAction": "检查动作",
+    "MaintenanceAction": "维护动作",
+    "Standard": "标准规范",
+    "Risk": "风险"
+  },
+  "relation_labels_zh": {
+    "contains": "包含",
+    "located_in": "位于",
+    "occurs_at": "发生于",
+    "causes": "导致",
+    "indicates": "指示",
+    "manifests_as": "表现为",
+    "evolves_to": "演化为",
+    "diagnosed_by": "诊断方法为",
+    "inspected_by": "检查方法为",
+    "mitigated_by": "缓解措施为",
+    "prevented_by": "预防措施为",
+    "maintained_by": "维护方式为",
+    "operates_under": "运行于",
+    "increases_risk_of": "增加风险",
+    "specified_by": "由规范规定"
+  },
+  "protected_term_patterns": [
+    "\\bAPI\\s*\\d[\\w./-]*\\b",
+    "\\bNPSH(?:A|R)?\\b",
+    "\\bISO\\s*\\d[\\w./-]*\\b",
+    "\\bIEC\\s*\\d[\\w./-]*\\b",
+    "\\bRPM\\b",
+    "\\b[A-Z]{2,}[A-Z0-9-]*\\d[A-Z0-9./-]*\\b"
+  ],
+  "terms": [
+    {
+      "terminology_id": "MPTERM-EQUIPMENT-PUMP",
+      "entity_type": "Equipment",
+      "canonical_label_zh": "泵",
+      "source_forms": [
+        {"language": "en", "surface": "pump"},
+        {"language": "zh", "surface": "泵"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-EQUIPMENT-CENTRIFUGAL-PUMP",
+      "entity_type": "Equipment",
+      "canonical_label_zh": "离心泵",
+      "source_forms": [
+        {"language": "en", "surface": "centrifugal pump"},
+        {"language": "zh", "surface": "离心泵"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-EQUIPMENT-SELF-PRIMING-PUMP",
+      "entity_type": "Equipment",
+      "canonical_label_zh": "自吸泵",
+      "source_forms": [
+        {"language": "en", "surface": "self-priming pump"},
+        {"language": "zh", "surface": "自吸泵"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-EQUIPMENT-FLEXIBLE-IMPELLER-PUMP",
+      "entity_type": "Equipment",
+      "canonical_label_zh": "柔性叶轮泵",
+      "source_forms": [
+        {"language": "en", "surface": "flexible impeller pump"},
+        {"language": "zh", "surface": "柔性叶轮泵"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-IMPELLER",
+      "entity_type": "Component",
+      "canonical_label_zh": "叶轮",
+      "source_forms": [
+        {"language": "en", "surface": "impeller"},
+        {"language": "zh", "surface": "叶轮"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-WEAR-RING",
+      "entity_type": "Component",
+      "canonical_label_zh": "耐磨环",
+      "source_forms": [
+        {"language": "en", "surface": "wear ring"},
+        {"language": "zh", "surface": "耐磨环"},
+        {"language": "zh", "surface": "口环"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-BEARING",
+      "entity_type": "Component",
+      "canonical_label_zh": "轴承",
+      "source_forms": [
+        {"language": "en", "surface": "bearing"},
+        {"language": "en", "surface": "bearings"},
+        {"language": "zh", "surface": "轴承"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-MECHANICAL-SEAL",
+      "entity_type": "Component",
+      "canonical_label_zh": "机械密封",
+      "source_forms": [
+        {"language": "en", "surface": "mechanical seal"},
+        {"language": "zh", "surface": "机械密封"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-SUCTION-LINE",
+      "entity_type": "Component",
+      "canonical_label_zh": "吸入管路",
+      "source_forms": [
+        {"language": "en", "surface": "suction line"},
+        {"language": "en", "surface": "suction pipe"},
+        {"language": "zh", "surface": "吸入管路"},
+        {"language": "zh", "surface": "吸入管"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-COUPLING",
+      "entity_type": "Component",
+      "canonical_label_zh": "联轴器",
+      "source_forms": [
+        {"language": "en", "surface": "coupling"},
+        {"language": "zh", "surface": "联轴器"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-COMPONENT-MOTOR",
+      "entity_type": "Component",
+      "canonical_label_zh": "电动机",
+      "source_forms": [
+        {"language": "en", "surface": "motor"},
+        {"language": "en", "surface": "electric motor"},
+        {"language": "zh", "surface": "电动机"},
+        {"language": "zh", "surface": "电机"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-FAULT-CAVITATION",
+      "entity_type": "FaultMode",
+      "canonical_label_zh": "汽蚀",
+      "source_forms": [
+        {"language": "en", "surface": "cavitation"},
+        {"language": "zh", "surface": "汽蚀"},
+        {"language": "zh", "surface": "气蚀"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-FAULT-LOSS-OF-PRIME",
+      "entity_type": "FaultMode",
+      "canonical_label_zh": "失去自吸",
+      "source_forms": [
+        {"language": "en", "surface": "loss of prime"},
+        {"language": "en", "surface": "failure to prime"},
+        {"language": "zh", "surface": "失去自吸"},
+        {"language": "zh", "surface": "无法自吸"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-FAULT-DRY-RUNNING",
+      "entity_type": "FaultMode",
+      "canonical_label_zh": "干运转",
+      "source_forms": [
+        {"language": "en", "surface": "dry running"},
+        {"language": "en", "surface": "running dry"},
+        {"language": "zh", "surface": "干运转"},
+        {"language": "zh", "surface": "干运行"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-FAULT-MISALIGNMENT",
+      "entity_type": "FaultMode",
+      "canonical_label_zh": "不对中",
+      "source_forms": [
+        {"language": "en", "surface": "misalignment"},
+        {"language": "zh", "surface": "不对中"},
+        {"language": "zh", "surface": "对中不良"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-SYMPTOM-HEAVY-EROSION",
+      "entity_type": "Symptom",
+      "canonical_label_zh": "严重冲蚀",
+      "source_forms": [
+        {"language": "en", "surface": "heavy erosion"},
+        {"language": "zh", "surface": "严重冲蚀"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-SYMPTOM-HIGH-VIBRATION",
+      "entity_type": "Symptom",
+      "canonical_label_zh": "振动过大",
+      "source_forms": [
+        {"language": "en", "surface": "high vibration"},
+        {"language": "en", "surface": "excessive vibration"},
+        {"language": "zh", "surface": "振动过大"},
+        {"language": "zh", "surface": "高振动"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-SYMPTOM-NO-OR-LOW-CAPACITY",
+      "entity_type": "Symptom",
+      "canonical_label_zh": "泵无流量或流量过低",
+      "source_forms": [
+        {"language": "en", "surface": "the pump has no or too low capacity"},
+        {"language": "zh", "surface": "泵无流量或流量过低"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-SYMPTOM-INCREASED-POWER",
+      "entity_type": "Symptom",
+      "canonical_label_zh": "功耗增加",
+      "source_forms": [
+        {"language": "en", "surface": "increased power consumption"},
+        {"language": "zh", "surface": "功耗增加"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-CONDITION-LOWER-DELIVERY-HEAD",
+      "entity_type": "OperatingCondition",
+      "canonical_label_zh": "实际输送扬程显著低于预期",
+      "source_forms": [
+        {
+          "language": "en",
+          "surface": "considerably smaller delivery head than expected"
+        },
+        {"language": "zh", "surface": "实际输送扬程显著低于预期"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-ACTION-REPLACE-BEARINGS",
+      "entity_type": "MaintenanceAction",
+      "canonical_label_zh": "更换轴承",
+      "source_forms": [
+        {"language": "en", "surface": "replace bearings"},
+        {"language": "zh", "surface": "更换轴承"}
+      ]
+    },
+    {
+      "terminology_id": "MPTERM-ACTION-CHECK-ALIGNMENT",
+      "entity_type": "InspectionAction",
+      "canonical_label_zh": "检查对中状态",
+      "source_forms": [
+        {"language": "en", "surface": "check the alignment"},
+        {"language": "zh", "surface": "检查对中状态"}
+      ]
+    }
+  ]
+}

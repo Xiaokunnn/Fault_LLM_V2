@@ -1,0 +1,61 @@
+{
+  "page_key": "MP015:p0030",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-360f4147-f579-9521-908b-eefa19945c65",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 432,
+    "prompt_tokens": 1549,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1981
+  },
+  "latency_ms": 5744,
+  "attempt": 1,
+  "prompt_sha256": "df15a39e3b80ccae97c53a0ac05451efc722cbe9a6541f6f507d5641765da9c1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "crackling noise",
+        "head_canonical_zh": "噼啪声",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "A crackling noise can indicate cavitation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "filter or the suction strainer is fouled",
+        "head_canonical_zh": "滤器或吸入滤网脏污",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "inlet pressure may become too low",
+        "tail_canonical_zh": "进口压力过低",
+        "tail_type": "Symptom",
+        "evidence_text": "the inlet pressure may become too low if the filter or the suction strainer is fouled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

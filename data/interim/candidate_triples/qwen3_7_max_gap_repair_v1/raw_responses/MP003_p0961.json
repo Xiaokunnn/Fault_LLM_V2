@@ -1,0 +1,189 @@
+{
+  "page_key": "MP003:p0961",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9e7f6125-d94f-92c7-93c5-d330b5e2ce0f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1944,
+    "prompt_tokens": 24711,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 26655
+  },
+  "latency_ms": 26253,
+  "attempt": 1,
+  "prompt_sha256": "53439c51d19641972831dafb60c271a071113ea2752d78b480c72ce984f93943",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pump pressure at outlet - low",
+        "head_canonical_zh": "泵出口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Display",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "E1 Pump pressure at outlet - low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r005:c02",
+          "MP003:p0961:t00:r005:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump pressure at outlet - low",
+        "head_canonical_zh": "泵出口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto start",
+        "tail_canonical_zh": "自动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "E1 Pump pressure at outlet - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r005:c02",
+          "MP003:p0961:t00:r005:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ignition or flame of burners - fails",
+        "head_canonical_zh": "燃烧器点火或火焰故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Display",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F3 Ignition or flame of burners - fails x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r011:c02",
+          "MP003:p0961:t00:r011:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ignition or flame of burners - fails",
+        "head_canonical_zh": "燃烧器点火或火焰故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "shutdown the corresponding burner fuel valves",
+        "tail_canonical_zh": "关闭相应燃烧器燃油阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For multiple burners, flame failure of a single burner is to shutdown the corresponding burner fuel valves.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r011:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Flame scanner - fails",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F4 Flame scanner - fails x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r012:c02",
+          "MP003:p0961:t00:r012:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flame scanner - fails",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "shut down the corresponding burner fuel valves",
+        "tail_canonical_zh": "关闭相应燃烧器燃油阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "failure of flame scanner is to shut down the corresponding burner fuel valves.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r012:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Control system power supply - fails",
+        "head_canonical_zh": "控制系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "G1 Control system power supply - fails x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r014:c02",
+          "MP003:p0961:t00:r014:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control system power supply - fails",
+        "head_canonical_zh": "控制系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic closing of fuel valve(s)",
+        "tail_canonical_zh": "自动关闭燃油阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Control system power supply - fails Automatic closing of fuel valve(s)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r014:c02",
+          "MP003:p0961:t00:r014:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

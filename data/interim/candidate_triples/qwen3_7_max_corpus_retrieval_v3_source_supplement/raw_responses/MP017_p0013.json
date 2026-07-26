@@ -1,0 +1,97 @@
+{
+  "page_key": "MP017:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-85e52562-f59b-9afb-969c-e1f1cd0066f1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 809,
+    "prompt_tokens": 3373,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4182
+  },
+  "latency_ms": 11301,
+  "attempt": 1,
+  "prompt_sha256": "9ad7c4bc425ade2665ad8f17b578e42c361625ec70215873963c536fffb1f6fb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "trouble-free mechanical operation",
+        "tail_canonical_zh": "无故障机械运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Thealignment ofthe pumpand itspower sourceis critical for trouble-free mechanical operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "transit and handling",
+        "tail_canonical_zh": "运输和搬运",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Misalign- ment will occur in transit and handling.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Check Rotation",
+        "tail_canonical_zh": "旋转方向检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check Rotation, Section C, before final alignment of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "tighten the foundation bolts",
+        "tail_canonical_zh": "紧固地脚螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before checking alignment, tighten the foundation bolts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

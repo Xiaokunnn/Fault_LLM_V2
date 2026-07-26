@@ -1,0 +1,67 @@
+{
+  "page_key": "MP002:p0111",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6cfac556-1236-9a1e-ba54-a77cabad47ad",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 522,
+    "prompt_tokens": 6271,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6793
+  },
+  "latency_ms": 7228,
+  "attempt": 1,
+  "prompt_sha256": "5d7d0a4bc9373d48c870131da836532baa71514af0e115c96a0477b8b98e62b7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Piston rod",
+        "head_canonical_zh": "活塞杆",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "Plugged/choked passageways\n(internal to the rod)",
+        "tail_canonical_zh": "通道堵塞/节流（杆内部）",
+        "tail_type": "FaultMode",
+        "evidence_text": "● Plugged/choked passageways\n                            (internal to the rod)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0111:t00:r004:c00",
+          "MP002:p0111:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Scavenging air valve",
+        "head_canonical_zh": "扫气阀",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "Plugged/choked",
+        "tail_canonical_zh": "堵塞/节流",
+        "tail_type": "FaultMode",
+        "evidence_text": "● Plugged/choked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0111:t00:r004:c02",
+          "MP002:p0111:t00:r004:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.96,
+        "tail_translation_confidence": 0.94
+      }
+    ],
+    "warnings": []
+  }
+}

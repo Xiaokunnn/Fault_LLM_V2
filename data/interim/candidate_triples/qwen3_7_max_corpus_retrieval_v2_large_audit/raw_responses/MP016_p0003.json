@@ -1,0 +1,212 @@
+{
+  "page_key": "MP016:p0003",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d2c4bc86-65fb-90c1-80ea-03e0e530561e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2223,
+    "prompt_tokens": 2066,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4289
+  },
+  "latency_ms": 29252,
+  "attempt": 1,
+  "prompt_sha256": "9ac69dddb13c367fbc7cab375ce81d80fd5463f768eba0dd9d8c4c206a6b75a5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insufficient inlet pressure",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitate",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "low performance",
+        "tail_canonical_zh": "性能降低",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitate",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noise",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High Temperature",
+        "head_canonical_zh": "高温",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Normally atmospheric pressure is sufficient but the actual pressure needed (Net Inlet Pressure Required or NIPR), is higher for: • High Temperature • High Pump Speeds Insufficient inlet pressure will cause the pump to cavitate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High Pump Speeds",
+        "head_canonical_zh": "高泵速",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Normally atmospheric pressure is sufficient but the actual pressure needed (Net Inlet Pressure Required or NIPR), is higher for: • High Temperature • High Pump Speeds Insufficient inlet pressure will cause the pump to cavitate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operate the pump above the maximum differential pressure",
+        "head_canonical_zh": "超过最大压差运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not operate the pump above the maximum differential pressure shown on the Datasheet, not even for a few seconds, as damage to the Impeller will result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run the pump against a closed valve",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Never run the pump against a closed valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump light fraction petroleum derivatives, thinners, solvents, highly concentrated or organic acids",
+        "head_canonical_zh": "泵送轻质石油衍生物、稀释剂、溶剂、高浓度或有机酸",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "short pump life",
+        "tail_canonical_zh": "泵寿命缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not pump light fraction petroleum derivatives, thinners, solvents, highly concentrated or organic acids. Pump life will be prolonged if flushed with water or neutralizing agent after each operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flushed with water or neutralizing agent after each operation",
+        "head_canonical_zh": "每次运行后用水或中和剂冲洗",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Pump life will be prolonged",
+        "tail_canonical_zh": "延长泵寿命",
+        "tail_type": "Risk",
+        "evidence_text": "Pump life will be prolonged if flushed with water or neutralizing agent after each operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Check the pump for any physical damage sustained in shipping",
+        "head_canonical_zh": "检查泵在运输中的物理损伤",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Flexible Impeller Pumps",
+        "tail_canonical_zh": "柔性叶轮泵",
+        "tail_type": "Equipment",
+        "evidence_text": "b. Check the pump for any physical damage sustained in shipping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

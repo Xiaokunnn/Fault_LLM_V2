@@ -1,0 +1,59 @@
+{
+  "page_key": "MP016:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-eb550189-b266-9e31-b616-79ca103f79e7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 523,
+    "prompt_tokens": 2661,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3184
+  },
+  "latency_ms": 6380,
+  "attempt": 1,
+  "prompt_sha256": "39ef2a36f20efb90dc1b9810746659b006a63694ea7786d1c5c4275725d835dd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Assurez-vous que les tuyaux d’entrée sont courts, de gros diamètre et ne s’effondrent pas sous vide",
+        "tail_canonical_zh": "确保吸入管路短、大口径且耐真空不塌陷",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Une pression d’entrée insuffisante entraînera une cavitation de la pompe, entraînant de faibles performances, du bruit et une courte durée de vie de la pompe. Assurez-vous que les tuyaux d’entrée sont courts, de gros diamètre et ne s’effondrent pas sous vide.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "pompes à turbine flexibles",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "rincée avec de l’eau ou un agent neutralisant après chaque opération",
+        "tail_canonical_zh": "每次运行后用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "La durée de vie de la pompe sera prolongée si elle est rincée avec de l’eau ou un agent neutralisant après chaque opération.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.93
+      }
+    ],
+    "warnings": []
+  }
+}

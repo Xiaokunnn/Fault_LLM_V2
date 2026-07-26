@@ -1,0 +1,83 @@
+{
+  "page_key": "MP016:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-adfc48c0-3dda-91d5-9fa2-e55dc2933102",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 704,
+    "prompt_tokens": 2135,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2839
+  },
+  "latency_ms": 9017,
+  "attempt": 1,
+  "prompt_sha256": "1239e2d5d94220ebd6128691faa87925250c1e8a64e4c36ddfc309836e7d3886",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "clogged filter",
+        "head_canonical_zh": "过滤器堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "A clogged filter will cause cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run dry for more than 30 seconds",
+        "head_canonical_zh": "干转超过30秒",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "excessive heating of the seal faces",
+        "tail_canonical_zh": "密封面过热",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pumps must never be run dry for more than 30 seconds, as this will cause excessive heating of the seal faces and Impeller damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "run dry for more than 30 seconds",
+        "head_canonical_zh": "干转超过30秒",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Impeller damage",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumps must never be run dry for more than 30 seconds, as this will cause excessive heating of the seal faces and Impeller damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

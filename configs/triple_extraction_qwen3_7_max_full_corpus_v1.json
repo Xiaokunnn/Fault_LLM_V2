@@ -1,0 +1,29 @@
+{
+  "version": "triple_extraction_qwen3_7_max_full_corpus_v1",
+  "status": "frozen_for_build_train_full_extraction",
+  "model": "qwen3.7-max",
+  "prompt_version": "marine_pump_full_corpus_prompt_v4",
+  "input_page_schema": "marine_pump_page_layout_v2_2",
+  "input_page_dir": "data/interim/parsed_pages/corpus_v2",
+  "output_dir": "data/interim/candidate_triples/qwen3_7_max_full_corpus_v1",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "document_split_version": "marine_pump_document_split_v4",
+  "page_plan_version": "marine_pump_full_extraction_page_plan_v1",
+  "provenance_schema_version": "marine_pump_provenance_v3.0.0",
+  "terminology_version": "marine_pump_zh_terminology_v2_0",
+  "terminology_path": "configs/entity_terminology_zh_marine_pump_v2.json",
+  "fault_mapping_version": "marine_pump_fault_ontology_v1_4",
+  "graph_display_language": "zh-CN",
+  "temperature": 0,
+  "enable_thinking": false,
+  "timeout_seconds": 180,
+  "max_retries": 5,
+  "response_format": {
+    "type": "json_object"
+  },
+  "source_surface_policy": "verbatim_source_language",
+  "canonical_entity_policy": "chinese_dictionary_or_independently_verified",
+  "model_translation_default_status": "needs_review",
+  "api_key_source": "DASHSCOPE_API_KEY environment variable only",
+  "api_key_persistence": false
+}

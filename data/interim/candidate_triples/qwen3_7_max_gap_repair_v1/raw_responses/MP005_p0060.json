@@ -1,0 +1,217 @@
+{
+  "page_key": "MP005:p0060",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-02e527b7-406c-9f69-80fa-d0a425fc3d1f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2341,
+    "prompt_tokens": 7767,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10108
+  },
+  "latency_ms": 26831,
+  "attempt": 1,
+  "prompt_sha256": "c39e5c2fe353fe574041d8c6cd6d21609b6f5db7c6a46f1e59905af6ccc02d4b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "measuring the current intensity of the connected motor",
+        "tail_canonical_zh": "测量连接电机电流强度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Therefore, after start-up, it is necessary to check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "quantity of liquid delivered",
+        "head_canonical_zh": "液体输送量",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "reading of the differential pressure",
+        "tail_canonical_zh": "读取压差",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Together with a reading of the differential pressure, the quantity of water delivered can be determined against the characteristics of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump has no or too low capacity",
+        "head_canonical_zh": "泵无流量或流量过低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Change direction of rotation to clockwise when viewed from shaft end (the direction of the arrow)",
+        "tail_canonical_zh": "从轴端观察将旋转方向改为顺时针（箭头方向）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump has no or\ntoo low capacity",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r001:c00",
+          "MP005:p0060:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump has no or too low capacity",
+        "head_canonical_zh": "泵无流量或流量过低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Clean or replace the piping system",
+        "tail_canonical_zh": "清洁或更换管路系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump has no or\ntoo low capacity",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r001:c00",
+          "MP005:p0060:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump has no or too low capacity",
+        "head_canonical_zh": "泵无流量或流量过低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Clean the pump",
+        "tail_canonical_zh": "清洁泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump has no or\ntoo low capacity",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r001:c00",
+          "MP005:p0060:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump has no or too low capacity",
+        "head_canonical_zh": "泵无流量或流量过低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Find the leakage, repair the fault, non-return valve not submerged",
+        "tail_canonical_zh": "查找泄漏点并修复故障，确保止回阀浸没",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump has no or\ntoo low capacity",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r001:c00",
+          "MP005:p0060:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump has no or too low capacity",
+        "head_canonical_zh": "泵无流量或流量过低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check data sheet Q/H curve and NPSH or contact DESMI",
+        "tail_canonical_zh": "检查数据表Q/H曲线和NPSH或联系DESMI",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The pump has no or\ntoo low capacity",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r001:c00",
+          "MP005:p0060:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功耗过大",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Insert orifice plate or check valve / Contact DESMI",
+        "tail_canonical_zh": "安装孔板或止回阀/联系DESMI",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r008:c00",
+          "MP005:p0060:t00:r008:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功耗过大",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Dismantle the pump, remove the cause",
+        "tail_canonical_zh": "拆卸泵并排除原因",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0060:t00:r008:c00",
+          "MP005:p0060:t00:r010:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "page_key": "MP021:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c6ee4fba-a4df-990d-ac5f-ab4657559f2a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 2605,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3440
+  },
+  "latency_ms": 10581,
+  "attempt": 1,
+  "prompt_sha256": "09a22ddbd3b91909a79b312a07b1ef279d4a9713356ad476bb09439c38d6119d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pressure gauges/sensors",
+        "tail_canonical_zh": "压力表/传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "INSTALL pressure gauges/sensors next to the pump suction and discharge connections to monitor pressures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "routine maintenance",
+        "tail_canonical_zh": "例行维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "THE PUMP must be installed in a manner that allows safe access for routine maintenance and for inspection during operation to check for leakage and monitor pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "inspection during operation to check for leakage",
+        "tail_canonical_zh": "运行期间泄漏检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "THE PUMP must be installed in a manner that allows safe access for routine maintenance and for inspection during operation to check for leakage and monitor pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "inspection during operation to check for leakage",
+        "tail_canonical_zh": "运行期间泄漏检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "THE PUMP must be installed in a manner that allows safe access for routine maintenance and for inspection during operation to check for leakage and monitor pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

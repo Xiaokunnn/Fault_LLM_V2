@@ -1,0 +1,234 @@
+{
+  "version": "marine_pump_fault_ontology_v1_4",
+  "domain": "ship_engine_room_pump_system",
+  "status": "claim_scoped_direct_preventive_action_mapping",
+  "mapping_policy": {
+    "allowed_text_scope": [
+      "head_surface",
+      "tail_surface",
+      "validated_evidence_units"
+    ],
+    "whole_page_keyword_assignment_forbidden": true,
+    "lexical_match_is_silver_evidence": false,
+    "multiple_classes_allowed": true,
+    "unmapped_is_valid_state": true,
+    "supported_source_languages": ["en", "zh", "multilingual"],
+    "canonical_fault_labels_language": "zh"
+  },
+  "coverage_gate": {
+    "symptom": 5,
+    "cause_or_mechanism": 3,
+    "inspection_or_maintenance": 2,
+    "independent_documents": 2,
+    "independent_source_families": 2,
+    "eligible_split": "build_train",
+    "eligible_decision": "silver_candidate",
+    "eligible_evidence_levels": [
+      "E1",
+      "E2"
+    ]
+  },
+  "fault_classes": [
+    {
+      "fault_id": "cavitation",
+      "name_zh": "汽蚀",
+      "selection_patterns": [
+        "\\bcavitat(?:e|es|ed|ing|ion)\\w*\\b",
+        "\\bvapou?r bubbles?\\b",
+        "(?:汽蚀|气蚀|蒸汽气泡)"
+      ],
+      "mapping_patterns": [
+        "\\bcavitat(?:e|es|ed|ing|ion)\\w*\\b",
+        "(?:汽蚀|气蚀)"
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "air_ingress_or_loss_of_prime",
+      "name_zh": "空气侵入或失去自吸",
+      "selection_patterns": [
+        "\\b(?:loss|lose|lost|fails?|failed|unable|does not|cannot|won't)\\b.{0,40}\\bprim(?:e|ing)\\b",
+        "\\bair\\b.{0,40}\\b(?:drawn|enter|ingress|leak)\\w*\\b",
+        "\\bsuction (?:line )?leak\\w*\\b",
+        "(?:空气|气体).{0,20}(?:进入|侵入|吸入|泄漏)",
+        "(?:失去自吸|不能自吸|无法自吸|灌泵失败)"
+      ],
+      "mapping_patterns": [
+        "\\b(?:loss|lose|lost|fails?|failed|unable|does not|cannot|won't)\\b.{0,40}\\bprim(?:e|ing)\\b",
+        "\\bair\\b.{0,40}\\b(?:drawn|enter|ingress|leak)\\w*\\b",
+        "\\bsuction (?:line )?leak\\w*\\b",
+        "(?:空气|气体).{0,20}(?:进入|侵入|吸入|泄漏)",
+        "(?:失去自吸|不能自吸|无法自吸|灌泵失败)"
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "hydraulic_blockage",
+      "name_zh": "流道、叶轮、过滤器或管路堵塞",
+      "selection_patterns": [
+        "\\b(?:block(?:ed|age)|clog(?:ged|ging)?|obstruct(?:ed|ion)|chok(?:e|ed|ing))\\w*\\b",
+        "\\b(?:strainer|filter)\\b.{0,35}\\b(?:dirty|blocked|clogged|choked)\\b",
+        "(?:流道|叶轮|过滤器|滤器|管路|管道|吸入管|排出管|进口管|出口管).{0,20}(?:堵塞|阻塞|淤塞)",
+        "(?:堵塞|阻塞|淤塞).{0,20}(?:流道|叶轮|过滤器|滤器|管路|管道|吸入管|排出管|进口管|出口管)"
+      ],
+      "mapping_patterns": [
+        "\\b(?:block(?:ed|age)|clog(?:ged|ging)?|obstruct(?:ed|ion)|chok(?:e|ed|ing))\\w*\\b",
+        "(?:流道|叶轮|过滤器|滤器|管路|管道|吸入管|排出管|进口管|出口管).{0,20}(?:堵塞|阻塞|淤塞)",
+        "(?:堵塞|阻塞|淤塞).{0,20}(?:流道|叶轮|过滤器|滤器|管路|管道|吸入管|排出管|进口管|出口管)"
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "impeller_or_wear_part_damage",
+      "name_zh": "叶轮或耐磨部件磨损损坏",
+      "selection_patterns": [
+        "\\bimpeller\\b.{0,40}\\b(?:worn|wear|damage|erosion|corrosion|broken)\\w*\\b",
+        "\\b(?:worn|wear|damage|erosion|corrosion|broken)\\w*\\b.{0,40}\\bimpeller\\b",
+        "\\bwear (?:ring|plate)\\w*\\b",
+        "(?:叶轮|耐磨环|口环|耐磨板).{0,20}(?:磨损|损坏|冲蚀|侵蚀|腐蚀|破裂)",
+        "(?:磨损|损坏|冲蚀|侵蚀|腐蚀|破裂).{0,20}(?:叶轮|耐磨环|口环|耐磨板)"
+      ],
+      "mapping_patterns": [
+        "\\bimpeller\\b.{0,40}\\b(?:worn|wear|damage|erosion|corrosion|broken)\\w*\\b",
+        "\\b(?:worn|wear|damage|erosion|corrosion|broken)\\w*\\b.{0,40}\\bimpeller\\b",
+        "\\bwear (?:ring|plate)\\w*\\b",
+        "(?:叶轮|耐磨环|口环|耐磨板).{0,20}(?:磨损|损坏|冲蚀|侵蚀|腐蚀|破裂)",
+        "(?:磨损|损坏|冲蚀|侵蚀|腐蚀|破裂).{0,20}(?:叶轮|耐磨环|口环|耐磨板)"
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "mechanical_seal_failure",
+      "name_zh": "机械密封失效与泄漏",
+      "selection_patterns": [
+        "\\b(?:mechanical )?seal\\w*\\b.{0,40}\\b(?:fail|leak|wear|worn|damage|overheat|burn)\\w*\\b",
+        "\\b(?:fail|leak|wear|worn|damage|overheat|burn)\\w*\\b.{0,40}\\b(?:mechanical )?seal\\w*\\b",
+        "(?:机械密封|轴封|密封).{0,20}(?:失效|泄漏|磨损|损坏|过热|烧毁)",
+        "(?:失效|泄漏|磨损|损坏|过热|烧毁).{0,20}(?:机械密封|轴封|密封)"
+      ],
+      "mapping_patterns": [
+        "\\b(?:mechanical )?seal\\w*\\b.{0,40}\\b(?:fail|leak|wear|worn|damage|overheat|burn)\\w*\\b",
+        "\\b(?:fail|leak|wear|worn|damage|overheat|burn)\\w*\\b.{0,40}\\b(?:mechanical )?seal\\w*\\b",
+        "(?:机械密封|轴封|密封).{0,20}(?:失效|泄漏|磨损|损坏|过热|烧毁)",
+        "(?:失效|泄漏|磨损|损坏|过热|烧毁).{0,20}(?:机械密封|轴封|密封)"
+      ],
+      "exclusion_patterns": [
+        "\\boil seals? and packings\\b"
+      ]
+    },
+    {
+      "fault_id": "bearing_or_lubrication_failure",
+      "name_zh": "轴承磨损、润滑不良或过热",
+      "selection_patterns": [
+        "\\bbearing\\w*\\b.{0,40}\\b(?:fail|wear|worn|damage|hot|temperature|vibrat|lubricat|noise)\\w*\\b",
+        "\\b(?:insufficient|poor|lack of|loss of|incorrect)\\b.{0,25}\\blubricat\\w*\\b",
+        "(?:轴承).{0,20}(?:失效|磨损|损坏|过热|温升|振动|噪声|润滑不良)",
+        "(?:润滑不足|润滑不良|缺少润滑|润滑错误)"
+      ],
+      "mapping_patterns": [
+        "\\bbearing\\w*\\b.{0,40}\\b(?:fail|wear|worn|damage|hot|overheat|vibrat|lubricat|noise)\\w*\\b",
+        "\\b(?:insufficient|poor|lack of|loss of|incorrect)\\b.{0,25}\\blubricat\\w*\\b",
+        "(?:轴承).{0,20}(?:失效|磨损|损坏|过热|温升|振动|噪声|润滑不良)",
+        "(?:润滑不足|润滑不良|缺少润滑|润滑错误)"
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "pump_motor_misalignment",
+      "name_zh": "泵电机联轴器或轴系不对中",
+      "selection_patterns": [
+        "\\bmisalign\\w*\\b",
+        "\\bincorrect(?:ly)? align(?:ed|ment)\\b",
+        "\\b(?:pump|motor|coupling|shaft)\\b.{0,30}\\bmisalign\\w*\\b",
+        "(?:不对中|未对中|对中不良|对中错误)"
+      ],
+      "mapping_patterns": [
+        "\\bmisalign\\w*\\b",
+        "\\bincorrect(?:ly)? align(?:ed|ment)\\b",
+        "(?:不对中|未对中|对中不良|对中错误)"
+      ],
+      "exclusion_patterns": [
+        "\\bcheck(?:ing)? (?:the )?alignment\\b",
+        "\\balignment (?:check|procedure|tolerance)\\b",
+        "(?:检查对中|对中检查|对中程序|对中公差)"
+      ]
+    },
+    {
+      "fault_id": "motor_electrical_drive_failure",
+      "name_zh": "电机缺相、过载或电气驱动异常",
+      "selection_patterns": [
+        "\\bmotor\\b.{0,45}\\b(?:fail|overload|trip|phase|current|temperature|start|stop|hot|burn)\\w*\\b",
+        "\\b(?:fail|overload|trip|phase|current|temperature|start|stop|hot|burn)\\w*\\b.{0,45}\\bmotor\\b",
+        "(?:电机|电动机).{0,25}(?:失效|缺相|过载|跳闸|过流|无法启动|不能启动|过热|烧毁)",
+        "(?:失效|缺相|过载|跳闸|过流|无法启动|不能启动|过热|烧毁).{0,25}(?:电机|电动机)"
+      ],
+      "mapping_patterns": [
+        "\\bmotor\\b.{0,45}\\b(?:fail|overload|trip|phase loss|overcurrent|cannot start|does not start|overheat|burn)\\w*\\b",
+        "\\b(?:motor failure|motor overload|phase loss|overcurrent)\\b",
+        "(?:电机|电动机).{0,25}(?:失效|缺相|过载|跳闸|过流|无法启动|不能启动|过热|烧毁)",
+        "(?:失效|缺相|过载|跳闸|过流|无法启动|不能启动|过热|烧毁).{0,25}(?:电机|电动机)"
+      ],
+      "exclusion_patterns": [
+        "\\bmotor data\\b",
+        "\\bmotor rating\\b",
+        "(?:电机数据|电机额定参数)"
+      ]
+    },
+    {
+      "fault_id": "pipe_or_valve_integrity_failure",
+      "name_zh": "管路或阀件泄漏、卡滞和完整性失效",
+      "selection_patterns": [
+        "\\b(?:pipe|piping|line|valve)\\w*\\b.{0,45}\\b(?:leak|fracture|rupture|block|stuck|fail|damage|stress)\\w*\\b",
+        "\\b(?:leak|fracture|rupture|block|stuck|fail|damage)\\w*\\b.{0,45}\\b(?:pipe|piping|line|valve)\\w*\\b",
+        "(?:管路|管道|阀门|阀件).{0,25}(?:泄漏|破裂|断裂|卡滞|失效|损坏)",
+        "(?:泄漏|破裂|断裂|卡滞|失效|损坏).{0,25}(?:管路|管道|阀门|阀件)"
+      ],
+      "mapping_patterns": [
+        "\\b(?:pipe|piping|line|valve)\\w*\\b.{0,45}\\b(?:leak|fracture|rupture|stuck|fail|damage)\\w*\\b",
+        "\\b(?:leak|fracture|rupture|stuck|fail|damage)\\w*\\b.{0,45}\\b(?:pipe|piping|line|valve)\\w*\\b",
+        "(?:管路|管道|阀门|阀件).{0,25}(?:泄漏|破裂|断裂|卡滞|失效|损坏)",
+        "(?:泄漏|破裂|断裂|卡滞|失效|损坏).{0,25}(?:管路|管道|阀门|阀件)"
+      ],
+      "claim_only_mapping_patterns": [
+        {
+          "rule_id": "pipe_integrity_preventive_action_en_forward_v2",
+          "pattern": "\\b(?:pipe|piping|pipeline|valve)\\w*\\b.{0,60}\\b(?:inspect|ensure|verify|rout|support|tighten|repair|replace|maintain)\\w*\\b"
+        },
+        {
+          "rule_id": "pipe_integrity_preventive_action_en_reverse_v2",
+          "pattern": "\\b(?:inspect|ensure|verify|rout|support|tighten|repair|replace|maintain)\\w*\\b.{0,60}\\b(?:pipe|piping|pipeline|valve)\\w*\\b"
+        },
+        {
+          "rule_id": "pipe_integrity_preventive_action_zh_v2",
+          "pattern": "(?:检查|核查|确认|确保|紧固|支撑|维修|更换|维护).{0,30}(?:管路|管道|阀门|阀件)|(?:管路|管道|阀门|阀件).{0,30}(?:检查|核查|确认|确保|紧固|支撑|维修|更换|维护)"
+        }
+      ],
+      "exclusion_patterns": []
+    },
+    {
+      "fault_id": "dry_running_or_maintenance_induced_failure",
+      "name_zh": "干运转、错误操作或维护引入故障",
+      "selection_patterns": [
+        "\\bdry[- ]?runn?ing\\b",
+        "\\b(?:run|running|operat\\w*)\\b.{0,20}\\bdry\\b",
+        "\\boperat\\w*\\b.{0,35}\\bwithout (?:water|liquid|lubricat\\w*)\\b",
+        "\\bincorrect\\w*\\b.{0,35}\\b(?:installation|assembly|maintenance|operation)\\b",
+        "\\b(?:maintenance|installation|assembly)\\b.{0,35}\\b(?:error|incorrect|improper)\\w*\\b",
+        "(?:干运转|干运行|无水运行|无液运行|无润滑运行)",
+        "(?:错误|不正确|不当).{0,20}(?:安装|装配|维护|维修|操作)",
+        "(?:安装|装配|维护|维修|操作).{0,20}(?:错误|不正确|不当)"
+      ],
+      "mapping_patterns": [
+        "\\bdry[- ]?runn?ing\\b",
+        "\\b(?:run|running|operat\\w*)\\b.{0,20}\\bdry\\b",
+        "\\boperat\\w*\\b.{0,35}\\bwithout (?:water|liquid|lubricat\\w*)\\b",
+        "\\bincorrect\\w*\\b.{0,35}\\b(?:installation|assembly|maintenance|operation)\\b",
+        "\\b(?:maintenance|installation|assembly)\\b.{0,35}\\b(?:error|incorrect|improper)\\w*\\b",
+        "(?:干运转|干运行|无水运行|无液运行|无润滑运行)",
+        "(?:错误|不正确|不当).{0,20}(?:安装|装配|维护|维修|操作)",
+        "(?:安装|装配|维护|维修|操作).{0,20}(?:错误|不正确|不当)"
+      ],
+      "exclusion_patterns": []
+    }
+  ]
+}

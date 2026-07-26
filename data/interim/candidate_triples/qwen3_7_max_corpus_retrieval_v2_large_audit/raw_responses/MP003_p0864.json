@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0864",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e259bd3b-b914-9fb5-ae91-c6b98ff06b9c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 938,
+    "prompt_tokens": 1925,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2863
+  },
+  "latency_ms": 11956,
+  "attempt": 1,
+  "prompt_sha256": "f590f13d837adafeb82788f2df52914dad90546afe89618de60be068d832962a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "defect in the desired value transmitters or in the cables between the control station and the propulsion system",
+        "head_canonical_zh": "期望值变送器或控制站与推进系统间电缆缺陷",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "substantial increase in the propeller speed",
+        "tail_canonical_zh": "螺旋桨转速显著升高",
+        "tail_type": "Symptom",
+        "evidence_text": "any defect in the desired value transmitters or in the cables between the control station and the propulsion system will not cause a substantial increase in the propeller speed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Failure of a control signal",
+        "head_canonical_zh": "控制信号失效",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "excessive increase in propeller speed",
+        "tail_canonical_zh": "螺旋桨转速过度升高",
+        "tail_type": "Symptom",
+        "evidence_text": "Failure of a control signal is not to cause an excessive increase in propeller speed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the power supply",
+        "head_canonical_zh": "电源供应失效",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "systems with power-aided control",
+        "tail_canonical_zh": "动力辅助控制系统",
+        "tail_type": "Equipment",
+        "evidence_text": "If failure of the power supply occurs in systems with power-aided control (e.g. with electric, pneumatic or hydraulic aid)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Controls for electric propulsion equipment",
+        "head_canonical_zh": "电力推进设备控制装置",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "dielectric strength tests and insulation resistance measurements",
+        "tail_canonical_zh": "介电强度试验和绝缘电阻测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Controls for electric propulsion equipment are to be inspected when finished and dielectric strength tests and insulation resistance measurements made on the various circuits",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

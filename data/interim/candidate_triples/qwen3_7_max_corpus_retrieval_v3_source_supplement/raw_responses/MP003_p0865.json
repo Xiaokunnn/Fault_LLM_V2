@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0865",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-df584545-552d-9e4d-94c1-214c79e50f86",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 719,
+    "prompt_tokens": 2020,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2739
+  },
+  "latency_ms": 9945,
+  "attempt": 1,
+  "prompt_sha256": "dfe063b110df5672ba52f79a2bf777e01a15cc17087489f90ae0bbbf69693b7f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "opening of the control system assemblies or compartments",
+        "head_canonical_zh": "控制系统组件或隔间开启",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "inadvertent or automatic loss of propulsion",
+        "tail_canonical_zh": "意外或自动丧失推进动力",
+        "tail_type": "FaultMode",
+        "evidence_text": "opening of the control system assemblies or compartments will not cause inadvertent or automatic loss of propulsion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "steam or oil will not come in contact with the energized parts",
+        "tail_canonical_zh": "蒸汽或油接触带电部件",
+        "tail_type": "FaultMode",
+        "evidence_text": "steam or oil will not come in contact with the energized parts in case of leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "disturbance, for example, in the ventilators for propulsion motors, in the converters, cooling water supply or load limitation of the generators",
+        "head_canonical_zh": "推进电机通风机、变流器、冷却水供应或发电机负载限制中的扰动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Power limitation",
+        "tail_canonical_zh": "功率限制",
+        "tail_type": "Symptom",
+        "evidence_text": "“Power limitation”: in case of disturbance, for example, in the ventilators for propulsion motors, in the converters, cooling water supply or load limitation of the generators.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "page_key": "MP005:p0050",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-af2e8b9c-a128-9e32-a18d-9c6601e39983",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 747,
+    "prompt_tokens": 2165,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2912
+  },
+  "latency_ms": 9893,
+  "attempt": 1,
+  "prompt_sha256": "8cc7275a5d9d42dc4714488adf0518e78d1b0ed715f8649e525e06ca651cd561",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "room temperature not exceeding 45 °C",
+        "head_canonical_zh": "室温不超过45°C",
+        "head_type": "OperatingCondition",
+        "relation": "operates_under",
+        "tail_surface": "pump motor",
+        "tail_canonical_zh": "泵电机",
+        "tail_type": "Equipment",
+        "evidence_text": "The room temperature not exceeding 45 °C. • Ensure airflow around the pump motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "admissible temperature are exceeded",
+        "head_canonical_zh": "超过允许温度",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "additional measures must be taken",
+        "tail_canonical_zh": "需采取额外措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: If the admissible temperature are exceeded, additional measures must be taken.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0050:t00:r000:c00"
+        ],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "admissible temperature are exceeded",
+        "head_canonical_zh": "超过允许温度",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Maintenance intervals and maintenance measures may have to be adjusted accordingly",
+        "tail_canonical_zh": "维护间隔和维护措施需相应调整",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: If the admissible temperature are exceeded, additional measures must be taken. Maintenance intervals and maintenance measures may have to be adjusted accordingly.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0050:t00:r000:c00",
+          "MP005:p0050:t00:r001:c00"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.88
+      }
+    ],
+    "warnings": []
+  }
+}

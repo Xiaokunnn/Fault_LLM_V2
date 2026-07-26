@@ -1,0 +1,120 @@
+{
+  "page_key": "MP019:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-11baf797-d1d3-9169-9fd8-67daa326770a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1397,
+    "prompt_tokens": 4464,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5861
+  },
+  "latency_ms": 18518,
+  "attempt": 1,
+  "prompt_sha256": "7d2ca190df83668534bad916f857dcdfa874bd036c0d2ddaca256051f1d3ac79",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Variable speed drives",
+        "head_canonical_zh": "变速驱动器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "higher voltage stresses than the sinusoidal supply on the winding of the motor",
+        "tail_canonical_zh": "电机绕组承受高于正弦电源的电压应力",
+        "tail_type": "Cause",
+        "evidence_text": "Variable speed drives cause higher voltage stresses than the sinusoidal supply on the winding of the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "变频器额定供电电压UN≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standard insulation",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N ABB Standard insulation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r001:c00",
+          "MP019:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "变频器额定供电电压UN≤500V且U≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standard insulation + dU/dt filters OR ABB Special insulation (variant code 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N ABB Standard insulation ABB Standard insulation + dU/dt filters OR ABB Special insulation (variant code 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r002:c00",
+          "MP019:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "变频器额定供电电压UN≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Special insulation (variant code 405) AND dU/dt-filters at converter output",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)且变频器输出端加装dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (variant code 405) ABB Special insulation (variant code 405) AND dU/dt-filters at converter output",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r003:c00",
+          "MP019:p0011:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N AND cable length > 150 m",
+        "head_canonical_zh": "变频器额定供电电压UN≤690V且电缆长度大于150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Special insulation (variant code 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N AND cable length > 150 m output ABB Special insulation (variant code 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r004:c00",
+          "MP019:p0011:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.91,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

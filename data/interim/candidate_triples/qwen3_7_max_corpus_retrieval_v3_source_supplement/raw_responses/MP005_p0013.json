@@ -1,0 +1,99 @@
+{
+  "page_key": "MP005:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-420afd42-367c-9994-abf3-c04c1eaeed1d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 895,
+    "prompt_tokens": 1594,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2489
+  },
+  "latency_ms": 11531,
+  "attempt": 1,
+  "prompt_sha256": "527b4891c9383ae7411687a9cad1c135d3c032507f461c2b14d20d7cc738469a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "exceed the permissible operating limits",
+        "head_canonical_zh": "超出允许运行限值",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation damage",
+        "tail_canonical_zh": "汽蚀损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Never exceed the permissible operating limits (pressure, temperature, etc.) specified in the product literature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "throttle the flow rate on the suction side of the pump",
+        "head_canonical_zh": "在泵吸入侧节流流量",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation damage",
+        "tail_canonical_zh": "汽蚀损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not throttle the flow rate on the suction side of the pump (to prevent cavitation damage).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "maximum flow rates",
+        "head_canonical_zh": "最大流量",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "mechanical seal damage",
+        "tail_canonical_zh": "机械密封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Observe the information on maximum flow rates specified in the product literature (to prevent overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "maximum flow rates",
+        "head_canonical_zh": "最大流量",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation damage",
+        "tail_canonical_zh": "汽蚀损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Observe the information on maximum flow rates specified in the product literature (to prevent overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

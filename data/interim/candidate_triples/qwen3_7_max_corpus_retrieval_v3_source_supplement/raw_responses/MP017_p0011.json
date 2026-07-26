@@ -1,0 +1,99 @@
+{
+  "page_key": "MP017:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-78fd065b-5d1d-9e0f-929c-2f08d042ff1c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 959,
+    "prompt_tokens": 1986,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2945
+  },
+  "latency_ms": 12285,
+  "attempt": 1,
+  "prompt_sha256": "b98600fa37e7ea339891413e2937776fd7a951cff8bac8dfebef8e55581f4226",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "A closed manual shut-off valve",
+        "head_canonical_zh": "手动截止阀关闭",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "dangerous overheating and possible explosive rupture of the pump casing",
+        "tail_canonical_zh": "泵壳过热及爆炸性破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "A closed manual shut-off valve may cause a pump which has lost prime to continue to operate without reaching prime, causing dangerous overheating and possible explosive rupture of the pump casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vapor pressure within the pump",
+        "head_canonical_zh": "泵内蒸汽压力",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "parts being disengaged to be ejected with great force",
+        "tail_canonical_zh": "部件受力弹出",
+        "tail_type": "Risk",
+        "evidence_text": "Liquid within the pump can reach boiling temperatures, and vapor pressure within the pump can cause parts being disengaged to be ejected with great force.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Allow an over-heated pump to cool before servicing",
+        "head_canonical_zh": "维修前冷却过热泵",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "dangerous overheating and possible explosive rupture of the pump casing",
+        "tail_canonical_zh": "泵壳过热及爆炸性破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Allow an over-heated pump to cool before servicing. Do not remove plates, covers, gauges, or fittings from an over-heated pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drain the liquid from the pump by removing the casing drain plug",
+        "head_canonical_zh": "拆卸泵壳排放塞排液",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "vapor pressure within the pump",
+        "tail_canonical_zh": "泵内蒸汽压力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "After the pump cools, drain the liquid from the pump by removing the casing drain plug.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

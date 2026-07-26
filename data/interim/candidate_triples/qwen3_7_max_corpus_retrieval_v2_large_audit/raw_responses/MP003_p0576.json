@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0576",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-386553b9-3963-980e-9b8e-58212b708611",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 671,
+    "prompt_tokens": 1944,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2615
+  },
+  "latency_ms": 11030,
+  "attempt": 1,
+  "prompt_sha256": "8deda1276329af8f6139b8193c9a63abf8eed1e6881abfac78f5e0b352f206fe",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "butterfly valves",
+        "head_canonical_zh": "蝶阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "positive holding arrangements, or equivalent",
+        "tail_canonical_zh": "正向保持装置或等效装置",
+        "tail_type": "Component",
+        "evidence_text": "Where butterfly valves are used, they are to be of a type with positive holding arrangements, or equivalent, that will prevent movement of the valve position due to vibration or flow of fluids.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "vibration or flow of fluids",
+        "head_canonical_zh": "振动或流体流动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "movement of the valve position",
+        "tail_canonical_zh": "阀位移动",
+        "tail_type": "FaultMode",
+        "evidence_text": "prevent movement of the valve position due to vibration or flow of fluids",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.96,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "Remote control valves",
+        "head_canonical_zh": "遥控阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "readily accessible manual means to close the valves",
+        "tail_canonical_zh": "易于接近的手动关闭装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "provided that there is a readily accessible manual means to close the valves upon loss of power",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

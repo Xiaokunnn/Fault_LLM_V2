@@ -1,0 +1,118 @@
+{
+  "page_key": "MP017:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3c45406d-f6cf-9a24-91ff-c53e97d1ccda",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1178,
+    "prompt_tokens": 1945,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3123
+  },
+  "latency_ms": 17516,
+  "attempt": 1,
+  "prompt_sha256": "899921a7ca6dd55b8a58febdc6bb4c63fd1790be5b2745806cb73860cc87dde5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "air pockets",
+        "head_canonical_zh": "气穴",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "affect priming, head, and capacity",
+        "tail_canonical_zh": "影响自吸、扬程和流量",
+        "tail_type": "Symptom",
+        "evidence_text": "Since even a slight leak will affect priming, head, and capacity, especially when operating with a high suction lift, all connections in the suction line should be sealed with pipe dope to ensure an air-tight seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "slight leak",
+        "head_canonical_zh": "轻微泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "affect priming, head, and capacity",
+        "tail_canonical_zh": "影响自吸、扬程和流量",
+        "tail_type": "Symptom",
+        "evidence_text": "Since even a slight leak will affect priming, head, and capacity, especially when operating with a high suction lift, all connections in the suction line should be sealed with pipe dope to ensure an air-tight seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sealed with pipe dope",
+        "head_canonical_zh": "使用管道密封膏密封",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "slight leak",
+        "tail_canonical_zh": "轻微泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "all connections in the suction line should be sealed with pipe dope to ensure an air-tight seal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air entering the suction line",
+        "head_canonical_zh": "空气进入吸入管路",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "reduce pump efficiency",
+        "tail_canonical_zh": "降低泵效率",
+        "tail_type": "Symptom",
+        "evidence_text": "air entering the suction line will reduce pump efficiency",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "install a baffle between the inflow and the suction inlet",
+        "head_canonical_zh": "在进水口与吸入口之间安装挡板",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "air entering the suction line",
+        "tail_canonical_zh": "空气进入吸入管路",
+        "tail_type": "FaultMode",
+        "evidence_text": "install a baffle between the inflow and the suction inlet at a distance 1-1/2 times the diameter of the suction pipe. The baffle will allow entrained air to escape from the liquid before it is drawn into the suction inlet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

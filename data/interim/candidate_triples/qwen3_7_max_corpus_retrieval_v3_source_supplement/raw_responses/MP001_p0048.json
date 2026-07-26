@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b704cb9b-73df-934e-850b-13e7683727da",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 467,
+    "prompt_tokens": 2003,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2470
+  },
+  "latency_ms": 6021,
+  "attempt": 1,
+  "prompt_sha256": "dc435e0f4428705c95fd2805cd4373bb897f4c2353eedc563ac9764b7ac0a309",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Broad Band Vibration Analysis",
+        "tail_canonical_zh": "宽带振动分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "This technique can be used to monitor changes in vibrational characteristics attributed to fatigue, wear, imbalance, misalignment, mechanical looseness, turbulence, etc., in shafts, gearboxes, belt drives, compressors, engines, roller bearings, journal bearings, electric motors, pumps, and turbines.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spectrum Analysis",
+        "head_canonical_zh": "频谱分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "misalignment",
+        "tail_canonical_zh": "不对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "The literature has specific spectral patterns for each failure mode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      }
+    ],
+    "warnings": []
+  }
+}

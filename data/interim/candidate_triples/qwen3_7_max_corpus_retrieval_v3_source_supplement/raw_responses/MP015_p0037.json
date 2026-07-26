@@ -1,0 +1,99 @@
+{
+  "page_key": "MP015:p0037",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-22699345-7820-9a15-b329-38d743a6c90a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 927,
+    "prompt_tokens": 3833,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4760
+  },
+  "latency_ms": 10573,
+  "attempt": 1,
+  "prompt_sha256": "ab1e2bf42c280f30805ce66cee5f8709bc88409e9a62c328bba021b5f3ba5934",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "wear of the impeller and in the wear plate",
+        "head_canonical_zh": "叶轮及耐磨板磨损",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "decline in the performance characteristics of the pump",
+        "tail_canonical_zh": "泵性能下降",
+        "tail_type": "Symptom",
+        "evidence_text": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "decline in the performance characteristics of the pump",
+        "head_canonical_zh": "泵性能下降",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear of the impeller and in the wear plate",
+        "tail_canonical_zh": "叶轮及耐磨板磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "measure the clearance between the impeller and the wear plate",
+        "head_canonical_zh": "测量叶轮与耐磨板间隙",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "wear of the impeller and in the wear plate",
+        "tail_canonical_zh": "叶轮及耐磨板磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "To check this the pump must be dismantled in order to measure the clearance between the impeller and the wear plate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impeller and wear plate",
+        "head_canonical_zh": "叶轮和耐磨板",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the calculated shim thickness exceeds 0,6 mm, impeller and wear plate must be replaced!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

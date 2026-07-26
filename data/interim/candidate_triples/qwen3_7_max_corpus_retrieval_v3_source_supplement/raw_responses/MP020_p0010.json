@@ -1,0 +1,80 @@
+{
+  "page_key": "MP020:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3d38c614-1897-9ff7-b01b-7e658011a352",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 646,
+    "prompt_tokens": 5590,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6236
+  },
+  "latency_ms": 8727,
+  "attempt": 1,
+  "prompt_sha256": "5522f44a42aa0b984ce9dce35bb1d3c9badf33a43edb8692f413149f47286b2f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Entrained air",
+        "head_canonical_zh": "夹带空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lose performance, efficiency, and possibly prime",
+        "tail_canonical_zh": "性能、效率下降及可能失吸",
+        "tail_type": "Symptom",
+        "evidence_text": "Entrained air can be carried to a nearby suction pipe. The pump will lose performance, efficiency, and possibly prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Adding a baffle",
+        "head_canonical_zh": "加装挡板",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Entrained air",
+        "tail_canonical_zh": "夹带空气",
+        "tail_type": "Cause",
+        "evidence_text": "Adding a baffle may help if the 'in-flow' already contains air bubbles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "very fine screen",
+        "head_canonical_zh": "极细滤网",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "plug easily and possibly collapse",
+        "tail_canonical_zh": "易堵塞及可能塌陷",
+        "tail_type": "FaultMode",
+        "evidence_text": "Avoid use of very fine screen. It will plug easily and possibly collapse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

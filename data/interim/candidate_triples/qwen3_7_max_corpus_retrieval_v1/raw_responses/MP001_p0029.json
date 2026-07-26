@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0029",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-145b77db-0c1e-9453-8449-4114d9290096",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 510,
+    "prompt_tokens": 1913,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2423
+  },
+  "latency_ms": 6575,
+  "attempt": 1,
+  "prompt_sha256": "897c7a779a196a07a89eadffc0d14b57b052adcc0ad964e96c61220301a0282e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "no or low lube oil flow",
+        "head_canonical_zh": "无或低润滑油流量",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "main engine bearing damage",
+        "tail_canonical_zh": "主发动机轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "mitigating main engine bearing damage caused by no or low lube oil flow",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings",
+        "head_canonical_zh": "在润滑油泵出口加装低压传感器以启动备用泵维持主发动机轴承供油",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "main engine bearing damage",
+        "tail_canonical_zh": "主发动机轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "mitigating main engine bearing damage caused by no or low lube oil flow by adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

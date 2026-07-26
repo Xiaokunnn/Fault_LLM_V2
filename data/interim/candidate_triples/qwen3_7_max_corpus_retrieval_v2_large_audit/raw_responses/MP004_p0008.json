@@ -1,0 +1,156 @@
+{
+  "page_key": "MP004:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-619ddc39-3e93-9490-8041-855854ca567b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1625,
+    "prompt_tokens": 1926,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3551
+  },
+  "latency_ms": 19474,
+  "attempt": 1,
+  "prompt_sha256": "f23e2e7a90c098a2c762895f3330c64e977d031645bcff9c9670519b9f0256d9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Wear plate/impeller",
+        "head_canonical_zh": "耐磨板/叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the following parts for wear and damage",
+        "tail_canonical_zh": "检查磨损和损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check the following parts for wear and damage:\n\n- Wear plate/impeller : Max. clearance 0.4 - 0.5 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Shaft seal/rear cover",
+        "head_canonical_zh": "轴封/后盖",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check seat for flatness and cracks",
+        "tail_canonical_zh": "检查密封座平面度和裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "- Shaft seal/rear cover : Check seat for flatness and cracks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Replace in case of wear and noise",
+        "tail_canonical_zh": "磨损或噪音时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Bearings         : Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear and noise",
+        "head_canonical_zh": "磨损和噪音",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Bearings",
+        "tail_canonical_zh": "轴承",
+        "tail_type": "Component",
+        "evidence_text": "- Bearings         : Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "distortion of the base plate",
+        "head_canonical_zh": "底座变形",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "break-downs of a pump coupled to a motor on the same base plate through a flexible coupling",
+        "tail_canonical_zh": "通过弹性联轴器连接在同一底座上的泵与电机故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "In order to avoid break-downs of a pump coupled to a motor on the same base plate through a flexible coupling, the following should be observed:\n\n1. Avoid distortion of the base plate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "distortion in the piping system",
+        "head_canonical_zh": "管路系统变形",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "break-downs of a pump coupled to a motor on the same base plate through a flexible coupling",
+        "tail_canonical_zh": "通过弹性联轴器连接在同一底座上的泵与电机故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "In order to avoid break-downs of a pump coupled to a motor on the same base plate through a flexible coupling, the following should be observed:\n\n2. Avoid distortion in the piping system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump and motor are aligned accurately",
+        "head_canonical_zh": "泵与电机精确对中",
+        "head_type": "InspectionAction",
+        "relation": "mitigated_by",
+        "tail_surface": "break-downs of a pump coupled to a motor on the same base plate through a flexible coupling",
+        "tail_canonical_zh": "通过弹性联轴器连接在同一底座上的泵与电机故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "In order to avoid break-downs of a pump coupled to a motor on the same base plate through a flexible coupling, the following should be observed:\n\n3. Check on the coupling that pump and motor are aligned accurately.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

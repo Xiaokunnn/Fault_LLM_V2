@@ -1,0 +1,57 @@
+{
+  "page_key": "MP001:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-83a4cd2f-70bd-9f91-a8d0-5ec711a51aa7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 422,
+    "prompt_tokens": 1670,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2092
+  },
+  "latency_ms": 5808,
+  "attempt": 1,
+  "prompt_sha256": "207e13a604e21ffb1803329f513852e70b6a959f60d638fa2f03e40ca22bbfa0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "scheduled overhauls",
+        "head_canonical_zh": "定期大修",
+        "head_type": "MaintenanceAction",
+        "relation": "increases_risk_of",
+        "tail_surface": "infant mortality",
+        "tail_canonical_zh": "早期故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Sometimes, scheduled overhauls may increase overall failure rates by introducing infant mortality, human errors or both into otherwise stable systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "human errors",
+        "head_canonical_zh": "人为失误",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "overall failure rates",
+        "tail_canonical_zh": "总体故障率",
+        "tail_type": "Risk",
+        "evidence_text": "Sometimes, scheduled overhauls may increase overall failure rates by introducing infant mortality, human errors or both into otherwise stable systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0317",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2776e774-d47a-9547-b4c2-0fab6ed48e1b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 454,
+    "prompt_tokens": 1939,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2393
+  },
+  "latency_ms": 6271,
+  "attempt": 1,
+  "prompt_sha256": "67da981bd7cc6ffe2d6ea2a2bbe62b2f6607f61db3f331fda79a0338cb39eb34",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "failure of the primary lubricating system",
+        "head_canonical_zh": "主润滑系统故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "emergency supply of lubricating water is to be provided",
+        "tail_canonical_zh": "提供应急润滑水供应",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "an emergency supply of lubricating water is to be provided in case of failure of the primary lubricating system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failures",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alarmed",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "any failures are to be alarmed as indicated in 4-3-2/15.3.1(d) TABLE 5",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

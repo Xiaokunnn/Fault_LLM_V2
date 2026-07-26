@@ -1,0 +1,108 @@
+{
+  "page_key": "MP005:p0070",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d53770bc-d144-96a1-b35a-2bce8db413d7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1048,
+    "prompt_tokens": 6385,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7433
+  },
+  "latency_ms": 14609,
+  "attempt": 1,
+  "prompt_sha256": "5ce3aa7b8e939adc8826879574c448999579c1de5ee3cda4595a200032fc0fad",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Light bearing housing",
+        "head_canonical_zh": "轻型轴承箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "relubricated through the lubricator nipple (84) in the bearing cover (15)",
+        "tail_canonical_zh": "通过轴承盖(15)上的注油嘴(84)进行再润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The bearing is to be relubricated through the lubricator nipple\n(84) in the bearing cover (15).",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0070:t00:r001:c00",
+          "MP005:p0070:t00:r001:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Heavy bearing housing",
+        "head_canonical_zh": "重型轴承箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "relubricated through the lubricator nipple (84) in the bearing cover (15)",
+        "tail_canonical_zh": "通过轴承盖(15)上的注油嘴(84)进行再润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The bearings are to be relubricated through the lubricator nipple\n(84) in the bearing cover (15).",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0070:t00:r002:c00",
+          "MP005:p0070:t00:r002:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "noise",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing wear",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "The bearing is to be replaced in case of noise or bearing wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Light bearing housing",
+        "head_canonical_zh": "轻型轴承箱",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "4500 hours",
+        "tail_canonical_zh": "4500运行小时",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "4500 hours",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0070:t01:r001:c01",
+          "MP005:p0070:t01:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

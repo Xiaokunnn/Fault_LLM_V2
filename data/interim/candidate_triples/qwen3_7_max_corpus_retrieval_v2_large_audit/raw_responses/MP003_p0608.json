@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0608",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d6f396ec-abf8-90af-aa1e-499b3ce8d12e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 652,
+    "prompt_tokens": 2250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2902
+  },
+  "latency_ms": 8274,
+  "attempt": 1,
+  "prompt_sha256": "fde58ff0c24a76ad57926d784a68dff10eb8842631619ef55fa664f1ee6200cf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "high-pressure line failure",
+        "head_canonical_zh": "高压燃油管路失效",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "jacketed piping system",
+        "tail_canonical_zh": "双层管系",
+        "tail_type": "Equipment",
+        "evidence_text": "All external high-pressure fuel delivery lines between the high-pressure fuel pumps and fuel injectors are to be protected with a jacketed piping system capable of containing fuel from a high-pressure line failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fuel line failure",
+        "head_canonical_zh": "燃油管路失效",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "arrangements are to be provided for an alarm to be given of a fuel line failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of the high pressure common rail system",
+        "head_canonical_zh": "高压共轨系统失效",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "provided with arrangement for leak collection and alarm in case of a failure of the high pressure common rail system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

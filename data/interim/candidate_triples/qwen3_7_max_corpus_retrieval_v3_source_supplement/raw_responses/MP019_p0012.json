@@ -1,0 +1,86 @@
+{
+  "page_key": "MP019:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-15976213-b70a-9530-a809-b0ed31e0bd27",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 823,
+    "prompt_tokens": 4337,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5160
+  },
+  "latency_ms": 11402,
+  "attempt": 1,
+  "prompt_sha256": "3587ba3d1337220ad58630771ab3425c4a7daa7d06403e8aa81874f1a3c610d5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insulated non-drive end bearing",
+        "head_canonical_zh": "绝缘非驱动端轴承",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴承电流",
+        "tail_type": "FaultMode",
+        "evidence_text": "methods must be used to avoid harmful bearing currents in the motors: ... Pn ≥ 100 kW OR IEC 315 ≤ Frame size ≤ IEC 355 Insulated non-drive end bearing",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0012:t00:r002:c00",
+          "MP019:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Common mode filter at the converter",
+        "head_canonical_zh": "变频器共模滤波器",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴承电流",
+        "tail_type": "FaultMode",
+        "evidence_text": "methods must be used to avoid harmful bearing currents in the motors: ... Pn ≥ 350 kW OR IEC 400 ≤ Frame size ≤ IEC 450 Insulated non-drive end bearing AND Common mode filter at the converter",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0012:t00:r003:c00",
+          "MP019:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insulated bearings which have aluminum oxide coated inner and/or outer bores or ceramic rolling elements",
+        "head_canonical_zh": "氧化铝涂层或陶瓷滚动体绝缘轴承",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴承电流",
+        "tail_type": "FaultMode",
+        "evidence_text": "Insulated bearings which have aluminum oxide coated inner and/or outer bores or ceramic rolling elements, are recommended.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

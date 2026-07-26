@@ -1,0 +1,109 @@
+{
+  "page_key": "MP003:p0961",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-20c17f0d-374d-9e22-b884-5cc32cd22cf0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1023,
+    "prompt_tokens": 24436,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 25459
+  },
+  "latency_ms": 13352,
+  "attempt": 1,
+  "prompt_sha256": "78166be4c42548b4e3a06f6d98b267980a4d0a0380dc7cb6fd6c8152aee8c132",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pump pressure at outlet -\nlow",
+        "head_canonical_zh": "泵出口压力低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "Auto start",
+        "tail_canonical_zh": "自动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pump pressure at outlet -\nlow x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r005:c02",
+          "MP003:p0961:t00:r005:c05"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rotating air heater motor -\nfailure",
+        "head_canonical_zh": "回转式空气预热器电机故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Rotating air heater motor -\nfailure x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r002:c02",
+          "MP003:p0961:t00:r002:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control system power\nsupply - fails",
+        "head_canonical_zh": "控制系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Control system power\nsupply - fails x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r014:c02",
+          "MP003:p0961:t00:r014:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control system power\nsupply - fails",
+        "head_canonical_zh": "控制系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic closing of fuel valve(s)",
+        "tail_canonical_zh": "燃油阀自动关闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Control system power\nsupply - fails Automatic closing of fuel valve(s)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0961:t00:r014:c02",
+          "MP003:p0961:t00:r014:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "page_key": "MP005:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9a11dc9b-3017-90ac-b34b-746a656c79ae",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 633,
+    "prompt_tokens": 1575,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2208
+  },
+  "latency_ms": 8276,
+  "attempt": 1,
+  "prompt_sha256": "b8fe0a090a3ea8b8c72c6b74abea1c11c569595531913cf196cc02ecf12b2c1b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump inlet pressure is lower than the vapor pressure of the pumped liquid",
+        "head_canonical_zh": "泵入口压力低于液体饱和蒸汽压",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "If the pump inlet pressure is lower than the vapor pressure of the pumped liquid, cavitation will occur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "deliver less flow",
+        "tail_canonical_zh": "流量减少",
+        "tail_type": "Symptom",
+        "evidence_text": "damaged due to cavitation and/or deliver less flow",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "less differential pressure",
+        "tail_canonical_zh": "压差降低",
+        "tail_type": "Symptom",
+        "evidence_text": "deliver less flow and/or less differential pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

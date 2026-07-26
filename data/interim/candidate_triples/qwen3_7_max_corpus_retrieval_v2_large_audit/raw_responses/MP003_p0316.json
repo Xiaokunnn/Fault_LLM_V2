@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0316",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-62c1b47d-e1e6-9f2d-a2fe-31ebc546ac0f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1045,
+    "prompt_tokens": 1894,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2939
+  },
+  "latency_ms": 13100,
+  "attempt": 1,
+  "prompt_sha256": "232df22bdec41b910667943bed94a8b00c7f3ae04d6ede7f433576af20ad82aa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Stern tube bearing lubricating oil",
+        "head_canonical_zh": "尾管轴承润滑油",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "sampled monthly under service conditions, and analyzed for water content using a suitable on-board test kit",
+        "tail_canonical_zh": "在运行工况下每月取样并使用合适的船上测试套件分析水分含量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Stern tube bearing lubricating oil is to be sampled monthly under service conditions, and analyzed for water content using a suitable on-board test kit.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil samples",
+        "head_canonical_zh": "油样",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "submitted for analysis to a recognized laboratory where testing is to be conducted for the following: i) Free water content in oil, if present ii) Bearing metals content (Pb, Fe, Cu, Al, Cr, Sn, Si, Ni) iii) Viscosity at 40°C",
+        "tail_canonical_zh": "提交至认可实验室进行分析，测试项目包括：i) 油中游离水（如存在）ii) 轴承金属含量（Pb, Fe, Cu, Al, Cr, Sn, Si, Ni）iii) 40°C粘度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Additionally, at least every six months, oil samples are to be submitted for analysis to a recognized laboratory where testing is to be conducted for the following: i) Free water content in oil, if present ii) Bearing metals content (Pb, Fe, Cu, Al, Cr, Sn, Si, Ni) iii) Viscosity at 40°C",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stern tube bearing temperatures",
+        "head_canonical_zh": "尾管轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "monitored and temperature recorded daily",
+        "tail_canonical_zh": "每日监测并记录温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Stern tube bearing temperatures are to be monitored and temperature recorded daily.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The system’s oil consumption",
+        "head_canonical_zh": "系统油耗",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "recorded monthly",
+        "tail_canonical_zh": "每月记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The system’s oil consumption is to be recorded monthly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

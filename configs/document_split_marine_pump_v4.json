@@ -1,0 +1,83 @@
+{
+  "version": "marine_pump_document_split_v4",
+  "status": "frozen_after_gap_repair_7_of_10",
+  "frozen_at": "2026-07-26",
+  "split_unit": "whole_document",
+  "selection_context": "MP022 was selected only after the frozen gap-repair audit reached 7/10 and identified an independent-source and evidence-role gap for dry-running/maintenance-induced failure. It is build-only supplementation, not a blind evaluation source.",
+  "build_train_doc_ids": [
+    "MP001",
+    "MP002",
+    "MP003",
+    "MP004",
+    "MP005",
+    "MP006",
+    "MP007",
+    "MP015",
+    "MP016",
+    "MP017",
+    "MP018",
+    "MP019",
+    "MP020",
+    "MP021",
+    "MP022"
+  ],
+  "development_doc_ids": [
+    "MP008"
+  ],
+  "held_out_test_doc_ids": [
+    "MP009",
+    "MP010",
+    "MP011",
+    "MP012",
+    "MP013"
+  ],
+  "source_family_policy": {
+    "build_train": [
+      "ABS",
+      "DESMI",
+      "SPX_FLOW__JOHNSON_PUMP",
+      "XYLEM__JABSCO",
+      "GORMAN_RUPP",
+      "PATTERSON_PUMP",
+      "ABB",
+      "INDICOR__CORNELL_PUMP",
+      "IDEX__VIKING_PUMP",
+      "ALFA_LAVAL"
+    ],
+    "development": ["GRUNDFOS"],
+    "held_out_test": ["SULZER", "MAIB"],
+    "same_source_family_can_count_as_multiple_documents_but_only_one_source_family": true
+  },
+  "pre_split_screening_disclosures": {
+    "MP009": {
+      "source_screened_before_v2_split": true,
+      "strict_blind_test": false,
+      "allowed_use": "non-blind held-out transfer analysis"
+    },
+    "MP010-MP013": {
+      "source_screened_before_v2_split": false,
+      "strict_blind_test": true,
+      "allowed_use": "frozen external held-out evaluation after localization"
+    },
+    "MP017-MP021": {
+      "source_selected_after_coverage_audit": true,
+      "strict_blind_test": false,
+      "allowed_use": "build-only targeted source supplementation"
+    },
+    "MP022": {
+      "source_selected_after_gap_repair_7_of_10": true,
+      "strict_blind_test": false,
+      "allowed_use": "build-only dry-running and maintenance gap supplementation"
+    }
+  },
+  "constraints": {
+    "extract_after_split": true,
+    "development_evidence_cannot_fill_build_coverage_gate": true,
+    "held_out_test_documents_cannot_enter_primary_graph": true,
+    "held_out_test_documents_cannot_tune_prompts_or_thresholds": true,
+    "all_automatic_or_semiautomatic_labels_are_silver": true,
+    "source_family_id_required_for_formal_coverage": true,
+    "pump_type_and_applicability_scope_must_be_preserved": true,
+    "post_audit_build_supplementation_must_be_disclosed": true
+  }
+}

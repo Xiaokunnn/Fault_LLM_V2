@@ -1,0 +1,150 @@
+{
+  "page_key": "MP005:p0074",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-84d0761e-95c2-9680-9864-36c0ad8a02d4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1440,
+    "prompt_tokens": 9582,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11022
+  },
+  "latency_ms": 19136,
+  "attempt": 1,
+  "prompt_sha256": "c7794dedd165dffc823ffee1ced640076354463aa6f6cef6c0460f2709c50d13",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "friction, impact or frictional sparks",
+        "head_canonical_zh": "摩擦、冲击或摩擦火花",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Too high temperature",
+        "tail_canonical_zh": "温度过高",
+        "tail_type": "Symptom",
+        "evidence_text": "Too high temperature caused by friction, impact or frictional sparks can cause fire",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Too high temperature",
+        "head_canonical_zh": "温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "fire",
+        "tail_canonical_zh": "火灾",
+        "tail_type": "Risk",
+        "evidence_text": "Too high temperature caused by friction, impact or frictional sparks can cause fire",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "coupling guard",
+        "head_canonical_zh": "联轴器护罩",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Regularly check the coupling guard regarding screws being tightened and/or regarding deformation for ensuring sufficient distance from rotating parts",
+        "tail_canonical_zh": "定期检查联轴器护罩螺钉紧固及变形情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly check the coupling guard regarding screws being tightened and/or regarding deformation for ensuring sufficient distance from rotating parts",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "clogged filter in the suction line",
+        "head_canonical_zh": "吸入管路滤器堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Incorrect inlet pressure",
+        "tail_canonical_zh": "进口压力异常",
+        "tail_type": "Symptom",
+        "evidence_text": "Incorrect inlet pressure due to clogged filter in the suction line could damage the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Incorrect inlet pressure",
+        "head_canonical_zh": "进口压力异常",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "Risk",
+        "evidence_text": "Incorrect inlet pressure due to clogged filter in the suction line could damage the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "filter",
+        "head_canonical_zh": "滤器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor contamination of filter with suitable instruments (for example, using differential pressure gauge)",
+        "tail_canonical_zh": "使用合适仪表监测滤器污染程度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Monitor contamination of filter with suitable instruments (for example, using differential pressure gauge)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "filter",
+        "head_canonical_zh": "滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Clean the filter at appropriate intervals",
+        "tail_canonical_zh": "定期清洗滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Clean the filter at appropriate intervals",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

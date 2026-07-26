@@ -1,0 +1,99 @@
+{
+  "page_key": "MP022:p0021",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-419a8415-5362-9522-af56-10a3afea701e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 860,
+    "prompt_tokens": 1784,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2644
+  },
+  "latency_ms": 10925,
+  "attempt": 1,
+  "prompt_sha256": "d232497780444efbd1da1ff262423c0725bde47d7e7c2fcedf1080a434653a16",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "must not run dry",
+        "tail_canonical_zh": "禁止干运转",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The shaft seal must not run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inlet side",
+        "head_canonical_zh": "进口侧",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Never throttle the inlet side",
+        "tail_canonical_zh": "禁止节流进口侧",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never throttle the inlet side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Double mechanical shaft seal",
+        "head_canonical_zh": "双机械轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Connect the inlet of the flushing liquid correctly (R1/8”)",
+        "tail_canonical_zh": "正确连接冲洗液入口(R1/8”)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Double mechanical shaft seal:\n1. Connect the inlet of the flushing liquid correctly\n(R1/8”)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Double mechanical shaft seal",
+        "head_canonical_zh": "双机械轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Regulate the water supply correctly",
+        "tail_canonical_zh": "正确调节供水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Double mechanical shaft seal:\n1. Connect the inlet of the flushing liquid correctly\n(R1/8”)\n2. Regulate the water supply correctly",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

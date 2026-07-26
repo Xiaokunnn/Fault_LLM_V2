@@ -1,0 +1,318 @@
+{
+  "status": "success",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "model_requested": "qwen3.7-max",
+  "page_text_sha256": "6bdf50fae4938bbde79b2cfd94f979e5e81e5ca832bafc13fe94be1283de0331",
+  "doc_id": "MP008",
+  "pdf_page_number": 26,
+  "api_record": {
+    "request_id": "chatcmpl-fe3892de-8705-9c0f-ab97-c1f64c491cb2",
+    "model": "qwen3.7-max",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 3133,
+      "prompt_tokens": 1643,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 4776
+    },
+    "latency_ms": 39410,
+    "requested_at": "2026-07-23T16:13:41.517Z",
+    "responded_at": "2026-07-23T16:14:20.927Z",
+    "attempt": 1,
+    "response_json": {
+      "triples": [
+        {
+          "head": "Wrong direction of rotation",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. a) Wrong direction of rotation.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Air in suction pipe",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. ... b) Air in suction pipe.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump draws in air due to defective gaskets",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. ... c) Pump draws in air due to defective gaskets.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Counter-pressure too high",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. ... d) Counter-pressure too high.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Inlet pressure too low",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. ... e) Inlet pressure too low.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Suction pipe or impeller blocked",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump delivers no or too little water",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Pump delivers no or too little water. ... f) Suction pipe or impeller blocked.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Inlet pressure too low (cavitation)",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. a) Inlet pressure too low (cavitation).",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Air in suction pipe or pump",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... b) Air in suction pipe or pump.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Impeller out of balance",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... c) Impeller out of balance.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "impeller_or_wear_part_damage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Inner pump parts worn",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... d) Inner pump parts worn.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "impeller_or_wear_part_damage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump stressed by the pipework",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... e) Pump stressed by the pipework.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Defective bearings",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... f) Defective bearings.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Defective coupling",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... g) Defective coupling.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "pump_motor_misalignment"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Foreign bodies in the pump",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Pump is noisy and/or runs unevenly",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Pump is noisy and/or runs unevenly. ... h) Foreign bodies in the pump.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump stressed by the pipework",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Leakage from pump",
+          "tail_type": "Symptom",
+          "evidence_text": "3. Leakage from pump. a) Pump stressed by the pipework.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump housing gaskets or pipe gaskets defective",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Leakage from pump",
+          "tail_type": "Symptom",
+          "evidence_text": "3. Leakage from pump. ... b) Pump housing gaskets or pipe gaskets defective.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "mechanical_seal_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Stuffing box packing too loose",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Excessive leakage from stuffing box",
+          "tail_type": "Symptom",
+          "evidence_text": "4. Excessive leakage from stuffing box. a) Stuffing box packing too loose.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "mechanical_seal_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Stuffing box packing worn",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Excessive leakage from stuffing box",
+          "tail_type": "Symptom",
+          "evidence_text": "4. Excessive leakage from stuffing box. ... b) Stuffing box packing worn.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "mechanical_seal_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Air in the pump",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Too high pump temperature",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Too high pump temperature. a) Air in the pump.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Inlet pressure too low",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Too high pump temperature",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Too high pump temperature. ... b) Inlet pressure too low.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Bearings lubricated with too little, too much or unsuitable lubricant",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Too high pump temperature",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Too high pump temperature. ... c) Bearings lubricated with too little, too much or unsuitable lubricant.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "bearing_or_lubrication_failure"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump with bearing seat stressed by pipework",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Too high pump temperature",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Too high pump temperature. ... d) Pump with bearing seat stressed by pipework.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Axial pressure too high",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "Too high pump temperature",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Too high pump temperature. ... e) Axial pressure too high.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        }
+      ],
+      "page_summary": "Fault finding table for firefighting pumps listing symptoms (no flow, noise, leakage, high temperature), their specific causes (rotation, air ingress, blockage, cavitation, wear, stress, lubrication), and corresponding remedies.",
+      "warnings": []
+    },
+    "prompt_sha256": "4e2e9745ad5805700363ed0eca2cb4b108857549a2000598e0fa5f8b9fa11573"
+  },
+  "request_config_sha256": "ba82030a3a7f14cc7c44ab98e5d172476b8fdc0baaa4355a2833a236d47a1d54"
+}

@@ -1,0 +1,99 @@
+{
+  "page_key": "MP015:p0040",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-46f7f8a0-0155-98c8-b77f-d7ad37188d19",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1064,
+    "prompt_tokens": 1624,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2688
+  },
+  "latency_ms": 12218,
+  "attempt": 1,
+  "prompt_sha256": "c00c7232de5f3f81970767f24a2f5ad4f0e76b241aa3590fcfb5a457911e7d4e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "between the impeller and the wear ring",
+        "tail_canonical_zh": "叶轮与耐磨环之间",
+        "tail_type": "Component",
+        "evidence_text": "For pump with a closed impeller the wear occurs between the impeller and the wear ring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "This wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Measure the thickness (d) and the width (b) of the ring",
+        "tail_canonical_zh": "测量耐磨环厚度(d)和宽度(b)",
+        "tail_type": "InspectionAction",
+        "evidence_text": "This wear may not exceed 1,2 mm to the diameter.\n                       After removing the Back-Pull-Out unit the wear ring can be removed. In most cases the\n                       ring has been fixed so tightly that it cannot be removed undamaged.\n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                         A                         B              \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                                                                  \n                                          C                                       \n                                                                    D             \n                                                                                  \n                                                                                  \n                       Figure 14: Removal of wear ring.                           \n                       1 Measure the thickness (d) and the width (b) of the ring, see figure 14 A.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear ring",
+        "head_canonical_zh": "耐磨环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Use a drill with a diameter just a little bit smaller than the thickness (d) of the ring and drill two holes in the ring",
+        "tail_canonical_zh": "使用略小于环厚度的钻头在环上钻两个孔",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "3 Use a drill with a diameter just a little bit smaller than the thickness (d) of the ring and drill two holes in the ring, see figure 14 C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "wear ring",
+        "head_canonical_zh": "耐磨环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Use a chisel to cut the remaining part of the ring thickness",
+        "tail_canonical_zh": "使用凿子切割环剩余厚度部分",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "4 Use a chisel to cut the remaining part of the ring thickness.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

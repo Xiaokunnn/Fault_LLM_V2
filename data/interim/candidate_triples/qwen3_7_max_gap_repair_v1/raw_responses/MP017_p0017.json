@@ -1,0 +1,156 @@
+{
+  "page_key": "MP017:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-57f7cfdb-fca1-9059-ba07-6ef39d84cfa4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1602,
+    "prompt_tokens": 2263,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3865
+  },
+  "latency_ms": 27412,
+  "attempt": 1,
+  "prompt_sha256": "f59461c2fac5ff73d4be8edc05d6e41324eb786c43afe541d5525e65dcf79275",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "incorrect rotation",
+        "head_canonical_zh": "转向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "interchange any two of the three phase wires",
+        "tail_canonical_zh": "交换三相电机任意两根相线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a three-phase motor, have a qualified electrician interchange any two of the three phase wires to change direction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump fails to prime within five minutes",
+        "head_canonical_zh": "五分钟内未建立自吸",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "check the suction line for leaks",
+        "tail_canonical_zh": "检查吸入管路泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If the pump fails to prime within five minutes, stop it and check the suction line for leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "No leakage should be visible at pump mating surfaces, or at pump connections or fittings",
+        "tail_canonical_zh": "目视检查泵接合面及连接件无泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Leakage\nNo leakage should be visible at pump mating surfaces, or at pump connections or fittings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Keep all line connections and fittings tight",
+        "tail_canonical_zh": "保持所有管路连接和接头紧固",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Keep all line connections and fittings tight to maintain maximum pump efficiency.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "liquid could come to a boil, build pressure, and cause the pump casing to rupture or explode",
+        "tail_canonical_zh": "液体沸腾升压导致泵壳破裂或爆炸",
+        "tail_type": "Symptom",
+        "evidence_text": "Overheating can occur if operated with the valves in the suction or discharge lines closed. Operating against closed valves could bring the liquid to a boil, build pressure, and cause the pump to rupture or explode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "stop the pump and allow it to cool before servicing it. Refill the pump casing with cool liquid",
+        "tail_canonical_zh": "停泵冷却后再维修并向泵壳注入冷液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating occurs, stop the pump and allow it to cool before servicing it. Refill the pump casing with cool liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.97,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "over-heated pump",
+        "head_canonical_zh": "过热泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Allow an over-heated pump to completely cool before servicing",
+        "tail_canonical_zh": "过热泵完全冷却后再维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Allow an over-heated pump to completely cool before servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "page_key": "MP003:p0574",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-04d5d545-8b89-9ea7-9eb5-8880a1372e15",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1173,
+    "prompt_tokens": 2028,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3201
+  },
+  "latency_ms": 17390,
+  "attempt": 1,
+  "prompt_sha256": "267c29ee9c1612c839cb82931ca694b684078b1ac09b3e1e66586abc7918c244",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "damage to such bilge piping",
+        "head_canonical_zh": "舱底管路损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "progressive flooding of intact spaces",
+        "tail_canonical_zh": "完整处所渐进浸水",
+        "tail_type": "Symptom",
+        "evidence_text": "The damage to such bilge piping will lead to progressive flooding of intact spaces through open ends in the bilge piping system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "non-return valves",
+        "head_canonical_zh": "止回阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "progressive flooding of these spaces",
+        "tail_canonical_zh": "处所渐进浸水",
+        "tail_type": "Symptom",
+        "evidence_text": "Affected bilge piping is to be fitted with non-return valves in the lines in the intact spaces to prevent the progressive flooding of these spaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive rise of bilge water",
+        "head_canonical_zh": "舱底水水位过高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "two independent systems to detect excessive rise of bilge water",
+        "tail_canonical_zh": "两套独立舱底水高位检测系统",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The cargo holds are to be provided with two independent systems to detect excessive rise of bilge water in the bilges or bilge wells.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump is operating more frequently than would normally be expected",
+        "head_canonical_zh": "泵运行频率异常偏高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "means are to be provided to indicate, at the centralized control station",
+        "tail_canonical_zh": "集中控制站指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "pump is operating for an excessive length of time",
+        "head_canonical_zh": "泵运行时间过长",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "means are to be provided to indicate, at the centralized control station",
+        "tail_canonical_zh": "集中控制站指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, ... when the pump is operating for an excessive length of time",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "Evidence text for 'pump is operating for an excessive length of time' contains ellipsis due to intervening clause in source sentence; strictly contiguous span covering both head and tail includes unrelated text."
+    ]
+  }
+}

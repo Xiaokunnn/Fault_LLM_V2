@@ -1,0 +1,59 @@
+{
+  "page_key": "MP007:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d8f55a08-9fe3-9c8c-9628-fb1441187746",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 417,
+    "prompt_tokens": 6511,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6928
+  },
+  "latency_ms": 6751,
+  "attempt": 1,
+  "prompt_sha256": "f7a84d0a98fb3a0680c25e6ac1b2350b0c1ef24355a42928a3295b61f133c117",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "air lock",
+        "head_canonical_zh": "气锁",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "inlet side of the pump",
+        "tail_canonical_zh": "泵进口侧",
+        "tail_type": "Component",
+        "evidence_text": "Install pipes to avoid air lock, especially at\n                                              the inlet side of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "backflow of medium",
+        "head_canonical_zh": "介质倒流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "check valve",
+        "tail_canonical_zh": "止回阀",
+        "tail_type": "Component",
+        "evidence_text": "Use a check\n                                              valve to prevent backflow of medium and to\n                                              protect the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

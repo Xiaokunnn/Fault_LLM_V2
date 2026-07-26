@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0759",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a12cf9fb-f783-9834-9752-bd9e4a4a9c7c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 941,
+    "prompt_tokens": 1997,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2938
+  },
+  "latency_ms": 12019,
+  "attempt": 1,
+  "prompt_sha256": "8f4d42645f503c302701934742372332da544968307ce70676b3102b2da5fadb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fault in the generator or in the supply cable between the generator and its circuit breaker",
+        "head_canonical_zh": "发电机或供电电缆故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "trip the generator circuit breaker",
+        "tail_canonical_zh": "发电机断路器跳闸",
+        "tail_type": "Symptom",
+        "evidence_text": "Alternative suitable protection, such as generator differential protection, which will trip the generator circuit breaker in the event of a fault in the generator or in the supply cable between the generator and its circuit breaker, would also be acceptable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fault current",
+        "head_canonical_zh": "故障电流",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "thermal damages",
+        "tail_canonical_zh": "热损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Generator circuit breakers at the main and emergency switchboard are to have tripping characteristics and to be set such that they will open before the generator sustains thermal damages due to the fault current.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shutting down of the prime mover",
+        "head_canonical_zh": "原动机关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "tripping of the generator circuit breaker",
+        "tail_canonical_zh": "发电机断路器跳闸",
+        "tail_type": "Symptom",
+        "evidence_text": "The shutting down of the prime mover is to cause the tripping of the generator circuit breaker.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "generator voltage collapses",
+        "head_canonical_zh": "发电机电压崩溃",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "open the same",
+        "tail_canonical_zh": "断路器断开",
+        "tail_type": "Symptom",
+        "evidence_text": "Generators arranged for parallel operation are to be provided with means to prevent the generator circuit breaker from closing if the generator is not generating, and to open the same when the generator voltage collapses.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

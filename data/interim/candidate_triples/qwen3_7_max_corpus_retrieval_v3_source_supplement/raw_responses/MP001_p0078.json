@@ -1,0 +1,70 @@
+{
+  "page_key": "MP001:p0078",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-10ef0089-7c2b-9266-b344-b1d12faf0e5f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 630,
+    "prompt_tokens": 9487,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10117
+  },
+  "latency_ms": 9542,
+  "attempt": 1,
+  "prompt_sha256": "94871dd1e54eee1ce1c7537e000af88211513c17721f7e3b237b6105e9bc0ecc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "suorref dna suorref-non selcitrap",
+        "head_canonical_zh": "铁磁性和非铁磁性颗粒",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "eugitaf dna raew",
+        "tail_canonical_zh": "疲劳与磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "suorref dna suorref-non selcitrap yb desuac eugitaf dna raew",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r006:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.6,
+        "tail_translation_confidence": 0.6
+      },
+      {
+        "head_surface": "sgniraeb enibrut saG",
+        "head_canonical_zh": "燃气轮机轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "lateM-llA srosneS sirbeD",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "sgniraeb enibrut saG lateM-llA srosneS sirbeD",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r005:c02",
+          "MP001:p0078:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.5,
+        "head_translation_confidence": 0.7,
+        "tail_translation_confidence": 0.6
+      }
+    ],
+    "warnings": [
+      "Table text appears reversed or corrupted (e.g., 'segatnavdasiD' for 'Disadvantages'), reducing confidence in entity extraction and relation direction.",
+      "Evidence text is reversed English; canonical names are inferred translations of the reversed strings.",
+      "Only relations explicitly supported by the garbled table content were extracted; many potential triples were skipped due to unreadable evidence."
+    ]
+  }
+}

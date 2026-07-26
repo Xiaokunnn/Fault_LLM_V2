@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0058",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-818f7de2-0a50-9b1d-90a5-94eb3390cfe4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 462,
+    "prompt_tokens": 4329,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4791
+  },
+  "latency_ms": 6637,
+  "attempt": 1,
+  "prompt_sha256": "cdf2ebb1a42295d1a50b1dd46ec3e5542b5633ee68ab480d182260c4ef722bfb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Too high density of the fluid pumped",
+        "head_canonical_zh": "输送流体密度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fluids containing abrasive substances",
+        "head_canonical_zh": "含磨蚀性物质的流体",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "increased wear of the hydraulic system and the shaft seal",
+        "tail_canonical_zh": "水力系统和轴封磨损加剧",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "When the pump handles fluids containing abrasive substances, increased wear of the hydraulic\nsystem and the shaft seal are to be expected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "page_key": "MP005:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c28d4cda-de5a-90e7-b8ea-d36c200962e8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 458,
+    "prompt_tokens": 1857,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2315
+  },
+  "latency_ms": 5696,
+  "attempt": 1,
+  "prompt_sha256": "1dccf5faa7d93cae44090c46ac1ed6a7b55da8335e4b92ca35c6af1246598404",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "a minimum pressure at the side of pump must be guaranteed",
+        "tail_canonical_zh": "保证泵侧最小压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To avoid cavitation, a minimum pressure at the side of pump must be guaranteed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The maximum suction up height should be lower than the following calculated value",
+        "tail_canonical_zh": "最大吸上高度低于计算值",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The maximum suction up height should be lower than the following calculated value. If not, the pump will not work normally and might be damaged due to cavitation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

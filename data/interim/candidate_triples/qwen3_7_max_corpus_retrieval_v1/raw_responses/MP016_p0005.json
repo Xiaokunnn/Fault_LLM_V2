@@ -1,0 +1,114 @@
+{
+  "page_key": "MP016:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-be4e6c33-988a-9157-b228-8bd498a2a75d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1067,
+    "prompt_tokens": 5602,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6669
+  },
+  "latency_ms": 12948,
+  "attempt": 1,
+  "prompt_sha256": "f7da40ba4bb1e8a603970947661f2a05fd450258d4372b7ca9ff542d824bb483",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage seals and Impeller",
+        "tail_canonical_zh": "密封和叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "dry running can damage seals and Impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not use Iodine or Phosphoric based cleaners",
+        "head_canonical_zh": "禁用碘基或磷酸基清洁剂",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "attack the pump and degrade its performance",
+        "tail_canonical_zh": "泵体腐蚀及性能下降",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use Iodine or Phosphoric based cleaners as these will attack the pump and degrade its performance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "movement of the shaft side to side or forwards and backwards",
+        "head_canonical_zh": "轴径向或轴向窜动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing wear",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Check bearing wear on Pedestal units by seeing if there is any movement of the shaft side to side or forwards and backwards",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Inspect seal faces for wear and condition of elastomers",
+        "head_canonical_zh": "检查密封面磨损及弹性体状况",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "seal faces",
+        "tail_canonical_zh": "密封面",
+        "tail_type": "Component",
+        "evidence_text": "Inspect seal faces for wear and condition of elastomers",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Remove Impeller for visual inspection and signs of wear",
+        "head_canonical_zh": "拆卸叶轮进行目视检查及磨损检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Impeller",
+        "tail_canonical_zh": "叶轮",
+        "tail_type": "Component",
+        "evidence_text": "Remove Impeller for visual inspection and signs of wear if so replace",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "page_key": "MP017:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5865286c-5272-9074-9fcb-b496626b62ea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1106,
+    "prompt_tokens": 1975,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3081
+  },
+  "latency_ms": 14726,
+  "attempt": 1,
+  "prompt_sha256": "c7d1aa97759001c43bf0219bdc5152c6af99a43389395bfc820477ccdd3d094f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "double grease lubricated seal",
+        "head_canonical_zh": "双脂润滑密封",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "maximum incoming pressure must be reduced to 10 p.s.i.",
+        "tail_canonical_zh": "最大入口压力须降至10 p.s.i.",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "If the pump is fittedwith a Gorman-Rupp double grease lubricated seal, the maximum incoming pressure must be reduced to 10 p.s.i.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incoming pressure",
+        "head_canonical_zh": "入口压力",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "performance and safety",
+        "tail_canonical_zh": "性能与安全",
+        "tail_type": "Risk",
+        "evidence_text": "Since the pressure supplied to the pump is critical to performance and safety, besuretolimittheincomingpressureto50%ofthe maximum permissible operating pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump and power source",
+        "head_canonical_zh": "泵及动力源",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect ... for cracks, dents, damaged threads, and other obvious damage",
+        "tail_canonical_zh": "检查裂纹、凹痕、螺纹损坏及其他明显损伤",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the pump and power source (if so equipped) for cracks, dents, damaged threads, and other obvious damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "mating surfaces",
+        "head_canonical_zh": "配合面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check for loose hardware",
+        "tail_canonical_zh": "检查紧固件松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Since gaskets tend to shrink after drying, check for loose hardware at mating surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gaskets",
+        "head_canonical_zh": "垫片",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "loose hardware at mating surfaces",
+        "tail_canonical_zh": "配合面紧固件松动",
+        "tail_type": "FaultMode",
+        "evidence_text": "Since gaskets tend to shrink after drying, check for loose hardware at mating surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

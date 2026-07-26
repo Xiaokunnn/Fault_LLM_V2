@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0761",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-67870a0f-0fb0-9eb3-9dbd-28d1d6758ce2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1457,
+    "prompt_tokens": 2271,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3728
+  },
+  "latency_ms": 16784,
+  "attempt": 1,
+  "prompt_sha256": "5b35ac27504b7a09f5181d4dc6618327d0fa18d749e10467b7d4f0fc629309ed",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motors having power rating exceeding 0.5 kW (0.7 hp)",
+        "head_canonical_zh": "功率超过0.5kW的电动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Undervoltage protection",
+        "tail_canonical_zh": "欠压保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Undervoltage protection is to be provided for motors having power rating exceeding 0.5 kW (0.7 hp) to prevent undesired restarting upon restoration of the normal voltage, after a stoppage due to a low voltage condition or voltage failure condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Primary essential services",
+        "head_canonical_zh": "主要重要设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Undervoltage release",
+        "tail_canonical_zh": "欠压释放",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Undervoltage release is to be provided for the following motors unless the automatic restart upon restoration of the normal voltage will cause hazardous conditions:\n\ni)   Primary essential services (see 4-8-1/7.3.3 TABLE 1).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fire pumps and other fire extinguishing medium pumps",
+        "head_canonical_zh": "消防泵及其他灭火介质泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Undervoltage release",
+        "tail_canonical_zh": "欠压释放",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ii)  Only those secondary essential services (see 4-8-1/7.3.3 TABLE 2) necessary for safety,\n                      such as:                                                    \n\n                      ●  Fire pumps and other fire extinguishing medium pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ventilating fans for engine and boiler rooms",
+        "head_canonical_zh": "机舱和锅炉舱通风机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Undervoltage release",
+        "tail_canonical_zh": "欠压释放",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "●  Ventilating fans for engine and boiler rooms where their failure to restart may prevent\n                         the normal operation of the propulsion machinery (See Note 1 below)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ventilation fans for engine and boiler room",
+        "head_canonical_zh": "机舱和锅炉舱通风机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Undervoltage protection",
+        "tail_canonical_zh": "欠压保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1: Undervoltage protection is to be provided for ventilation fans for engine and boiler room, which\n                         are supplied by an emergency source of power for the purpose of removing smoke from the space\n                         after a fire has been extinguished.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "steering gear feeder",
+        "head_canonical_zh": "舵机馈线",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "short-circuit protection only",
+        "tail_canonical_zh": "仅短路保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The steering gear feeder is to be provided with short-circuit protection only, which is to be located at the main or emergency switchboard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

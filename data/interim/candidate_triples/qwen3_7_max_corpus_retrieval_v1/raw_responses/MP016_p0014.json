@@ -1,0 +1,137 @@
+{
+  "page_key": "MP016:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-187e0a3c-4898-9468-b9c8-e2fd92bc104f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1315,
+    "prompt_tokens": 2395,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3710
+  },
+  "latency_ms": 15384,
+  "attempt": 1,
+  "prompt_sha256": "39c2dc55ecd491c28997756ef75aecf689c9dab4258f565eb478b2cbe9dbf493",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Une pression d’entrée insuffisante",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation de la pompe",
+        "tail_canonical_zh": "泵汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Une pression d’entrée insuffisante entraînera une cavitation de la pompe",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation de la pompe",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "faibles performances",
+        "tail_canonical_zh": "性能低下",
+        "tail_type": "Symptom",
+        "evidence_text": "une cavitation de la pompe, entraînant de faibles performances",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation de la pompe",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "bruit",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "une cavitation de la pompe, entraînant de faibles performances, du bruit",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation de la pompe",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "courte durée de vie de la pompe",
+        "tail_canonical_zh": "泵寿命缩短",
+        "tail_type": "Symptom",
+        "evidence_text": "une cavitation de la pompe, entraînant de faibles performances, du bruit et une courte durée de vie de la pompe",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Haute température",
+        "head_canonical_zh": "高温",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "pression d’entrée nette requise ou NIPR",
+        "tail_canonical_zh": "必需净入口压力(NIPR)",
+        "tail_type": "SignalFeature",
+        "evidence_text": "la pression réelle nécessaire (pression d’entrée nette requise ou NIPR) est plus élevée pour : • Haute température",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Vitesses de pompe élevées",
+        "head_canonical_zh": "高泵转速",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "pression d’entrée nette requise ou NIPR",
+        "tail_canonical_zh": "必需净入口压力(NIPR)",
+        "tail_type": "SignalFeature",
+        "evidence_text": "la pression réelle nécessaire (pression d’entrée nette requise ou NIPR) est plus élevée pour : ... • Vitesses de pompe élevées",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

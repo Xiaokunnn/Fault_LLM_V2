@@ -1,0 +1,78 @@
+{
+  "page_key": "MP022:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6b584c72-46d2-923c-a408-fdf35285316b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 705,
+    "prompt_tokens": 1588,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2293
+  },
+  "latency_ms": 9501,
+  "attempt": 1,
+  "prompt_sha256": "3f90f2cf75a817511ff66293816528d6df09567f6ea8a5d538843be0f8d123a9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "connections on pump inlet and inlet pipe, and pump outlet and outlet pipe",
+        "head_canonical_zh": "泵进口与进口管及泵出口与出口管的连接",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "No gaps between connections on pump inlet and inlet pipe, and pump outlet and outlet pipe",
+        "tail_canonical_zh": "检查泵进出口连接处无间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "No gaps between connections on pump inlet and inlet pipe, and pump outlet and outlet pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "connections on pump inler and inlet pipe, pump outlet and outlet pipe",
+        "head_canonical_zh": "泵进口与进口管及泵出口与出口管的连接",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Angel between connections on pump inler and inlet pipe, pump outlet and outlet pipe not allowed",
+        "tail_canonical_zh": "检查泵进出口连接处不允许有角度偏差",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Angel between connections on pump inler and inlet pipe, pump outlet and outlet pipe not allowed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

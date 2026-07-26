@@ -1,0 +1,118 @@
+{
+  "page_key": "MP016:p0003",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fd25864d-ac9e-9453-a462-18c6369efbc4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1075,
+    "prompt_tokens": 2006,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3081
+  },
+  "latency_ms": 18207,
+  "attempt": 1,
+  "prompt_sha256": "61f131690eb5387cb76f0dcbad4a0cac02584dce5e10d46f7f9e25e7c59f7301",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insufficient inlet pressure",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitate",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "low performance",
+        "tail_canonical_zh": "性能低下",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitate",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noise",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operate the pump above the maximum differential pressure",
+        "head_canonical_zh": "超过最大压差运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not operate the pump above the maximum differential pressure shown on the Datasheet, not even for a few seconds, as damage to the Impeller will result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run the pump against a closed valve",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "damage to the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Never run the pump against a closed valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

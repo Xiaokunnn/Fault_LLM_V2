@@ -1,0 +1,59 @@
+{
+  "page_key": "MP021:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6a24392a-4f5d-9b51-b87d-5be345a25db1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 456,
+    "prompt_tokens": 12863,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13319
+  },
+  "latency_ms": 6621,
+  "attempt": 1,
+  "prompt_sha256": "6527529efe1dd9957f8e964d2bd960b3d91ba2d9e530d93a4dec3f71f3fb6d27",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failure to tighten locknut or engage lockwasher tang",
+        "head_canonical_zh": "锁紧螺母未拧紧或止动垫圈卡舌未啮合",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "early bearing failure",
+        "tail_canonical_zh": "轴承早期失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to tighten locknut or engage lockwasher tang could result in early bearing failure and cause damage to rest of pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Operating the pump at higher temperatures or viscosities",
+        "head_canonical_zh": "高温或高粘度工况运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "require additional end clearance",
+        "tail_canonical_zh": "需要增加端面间隙",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Operating the pump at higher temperatures or viscosities may require additional end clearance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

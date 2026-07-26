@@ -1,0 +1,77 @@
+{
+  "version": "triple_extraction_qwen3_7_max_pilot_v1",
+  "run_id": "qwen3_7_max_triple_pilot_v1",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "postprocessor_version": "marine_pump_triple_postprocess_v3",
+  "model": "qwen3.7-max",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_protocol": "openai_compatible_chat_completions",
+  "enable_thinking": false,
+  "response_format": {
+    "type": "json_object"
+  },
+  "temperature": 0,
+  "representative_doc_ids": [
+    "MP001",
+    "MP004",
+    "MP005",
+    "MP008"
+  ],
+  "trial_page_keys": [
+    "MP001:52",
+    "MP004:11",
+    "MP005:60",
+    "MP008:26"
+  ],
+  "request_priority": [
+    "MP004:11",
+    "MP008:26",
+    "MP005:60",
+    "MP001:52",
+    "MP004:12",
+    "MP005:61",
+    "MP005:62",
+    "MP005:63",
+    "MP001:53",
+    "MP001:57"
+  ],
+  "page_metadata_overrides": {
+    "MP001:52": {
+      "printed_page_label": "52",
+      "visual_layout_checked": true
+    },
+    "MP004:11": {
+      "printed_page_label": "10",
+      "visual_layout_checked": true
+    },
+    "MP005:60": {
+      "printed_page_label": "59",
+      "visual_layout_checked": true
+    },
+    "MP008:26": {
+      "printed_page_label": "26",
+      "visual_layout_checked": true
+    }
+  },
+  "semantic_review_overrides": {
+    "MPT-1324506a8718d8d01eae": {
+      "confidence_ceiling": 0.6,
+      "reviewer_type": "secondary_ai_audit",
+      "status": "fail",
+      "reason": "The quoted sentence directly links motor-current measurement to pump power consumption; delivered quantity additionally requires differential pressure and pump-characteristic information."
+    }
+  },
+  "max_pages_per_document": 8,
+  "minimum_page_characters": 120,
+  "request_timeout_seconds": 180,
+  "max_retries": 3,
+  "concurrency": 1,
+  "minimum_candidate_confidence": 0.6,
+  "minimum_silver_candidate_confidence": 0.8,
+  "reconstructed_evidence_confidence": 0.75,
+  "secret_policy": {
+    "api_key_source": "DASHSCOPE_API_KEY environment variable or in-memory caller argument",
+    "persist_api_key": false,
+    "log_authorization_header": false
+  }
+}

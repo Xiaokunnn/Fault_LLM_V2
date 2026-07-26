@@ -1,0 +1,552 @@
+{
+  "version": "marine_pump_large_candidate_corpus_sufficiency_v1",
+  "candidate_pages": 326,
+  "strict_classes_passing": 1,
+  "classes_with_candidate_level_source_or_role_gap": 3,
+  "global_decision": "do_not_start_full_extraction",
+  "fault_classes": [
+    {
+      "fault_id": "cavitation",
+      "name_zh": "汽蚀",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 6,
+        "unique_evidence_units": 6,
+        "symptom_evidence": 3,
+        "cause_or_mechanism_evidence": 4,
+        "inspection_or_maintenance_evidence": 0,
+        "document_ids": [
+          "MP004",
+          "MP005",
+          "MP015",
+          "MP016"
+        ],
+        "source_families": [
+          "DESMI",
+          "SPX_FLOW__JOHNSON_PUMP",
+          "XYLEM__JABSCO"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": false,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 15,
+        "cause_or_mechanism": 11,
+        "inspection": 14,
+        "maintenance": 15
+      },
+      "candidate_documents": [
+        "MP001",
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "air_ingress_or_loss_of_prime",
+      "name_zh": "空气侵入或失去自吸",
+      "decision": "current_documents_insufficient_at_candidate_evidence_level",
+      "next_action": "add_independent_documents_for_missing_roles_or_sources",
+      "strict_coverage": {
+        "eligible_triples": 15,
+        "unique_evidence_units": 15,
+        "symptom_evidence": 1,
+        "cause_or_mechanism_evidence": 15,
+        "inspection_or_maintenance_evidence": 0,
+        "document_ids": [
+          "MP004",
+          "MP005"
+        ],
+        "source_families": [
+          "DESMI"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": false,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": false
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 4,
+        "cause_or_mechanism": 4,
+        "inspection": 3,
+        "maintenance": 4
+      },
+      "candidate_documents": [
+        "MP004",
+        "MP005",
+        "MP015"
+      ],
+      "candidate_source_families": [
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": false,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "hydraulic_blockage",
+      "name_zh": "流道、叶轮、过滤器或管路堵塞",
+      "decision": "current_documents_sufficient",
+      "next_action": "eligible_for_full_extraction",
+      "strict_coverage": {
+        "eligible_triples": 17,
+        "unique_evidence_units": 17,
+        "symptom_evidence": 5,
+        "cause_or_mechanism_evidence": 14,
+        "inspection_or_maintenance_evidence": 3,
+        "document_ids": [
+          "MP003",
+          "MP004",
+          "MP005",
+          "MP016"
+        ],
+        "source_families": [
+          "ABS",
+          "DESMI",
+          "XYLEM__JABSCO"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": true,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": true,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": true
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 18,
+        "cause_or_mechanism": 19,
+        "inspection": 14,
+        "maintenance": 20
+      },
+      "candidate_documents": [
+        "MP002",
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "impeller_or_wear_part_damage",
+      "name_zh": "叶轮或耐磨部件磨损损坏",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 6,
+        "unique_evidence_units": 6,
+        "symptom_evidence": 1,
+        "cause_or_mechanism_evidence": 3,
+        "inspection_or_maintenance_evidence": 3,
+        "document_ids": [
+          "MP004",
+          "MP015",
+          "MP016"
+        ],
+        "source_families": [
+          "DESMI",
+          "SPX_FLOW__JOHNSON_PUMP",
+          "XYLEM__JABSCO"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": true,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 6,
+        "cause_or_mechanism": 28,
+        "inspection": 8,
+        "maintenance": 21
+      },
+      "candidate_documents": [
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "mechanical_seal_failure",
+      "name_zh": "机械密封失效与泄漏",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 9,
+        "unique_evidence_units": 9,
+        "symptom_evidence": 0,
+        "cause_or_mechanism_evidence": 5,
+        "inspection_or_maintenance_evidence": 4,
+        "document_ids": [
+          "MP003",
+          "MP004",
+          "MP005",
+          "MP016"
+        ],
+        "source_families": [
+          "ABS",
+          "DESMI",
+          "XYLEM__JABSCO"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": true,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 21,
+        "cause_or_mechanism": 21,
+        "inspection": 21,
+        "maintenance": 22
+      },
+      "candidate_documents": [
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "bearing_or_lubrication_failure",
+      "name_zh": "轴承磨损、润滑不良或过热",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 10,
+        "unique_evidence_units": 10,
+        "symptom_evidence": 2,
+        "cause_or_mechanism_evidence": 3,
+        "inspection_or_maintenance_evidence": 4,
+        "document_ids": [
+          "MP001",
+          "MP003",
+          "MP005",
+          "MP007",
+          "MP015"
+        ],
+        "source_families": [
+          "ABS",
+          "DESMI",
+          "SPX_FLOW__JOHNSON_PUMP"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": true,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 17,
+        "cause_or_mechanism": 14,
+        "inspection": 19,
+        "maintenance": 20
+      },
+      "candidate_documents": [
+        "MP001",
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "pump_motor_misalignment",
+      "name_zh": "泵电机联轴器或轴系不对中",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 3,
+        "unique_evidence_units": 3,
+        "symptom_evidence": 0,
+        "cause_or_mechanism_evidence": 0,
+        "inspection_or_maintenance_evidence": 3,
+        "document_ids": [
+          "MP001"
+        ],
+        "source_families": [
+          "ABS"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": false,
+          "inspection_or_maintenance_at_least_2": true,
+          "independent_documents_at_least_2": false,
+          "source_families_at_least_2": false
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 5,
+        "cause_or_mechanism": 5,
+        "inspection": 5,
+        "maintenance": 4
+      },
+      "candidate_documents": [
+        "MP001",
+        "MP004"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "motor_electrical_drive_failure",
+      "name_zh": "电机缺相、过载或电气驱动异常",
+      "decision": "current_documents_insufficient_at_candidate_evidence_level",
+      "next_action": "add_independent_documents_for_missing_roles_or_sources",
+      "strict_coverage": {
+        "eligible_triples": 2,
+        "unique_evidence_units": 2,
+        "symptom_evidence": 0,
+        "cause_or_mechanism_evidence": 2,
+        "inspection_or_maintenance_evidence": 0,
+        "document_ids": [
+          "MP005"
+        ],
+        "source_families": [
+          "DESMI"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": false,
+          "inspection_or_maintenance_at_least_2": false,
+          "independent_documents_at_least_2": false,
+          "source_families_at_least_2": false
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 4,
+        "cause_or_mechanism": 3,
+        "inspection": 4,
+        "maintenance": 3
+      },
+      "candidate_documents": [
+        "MP003",
+        "MP005"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": false,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "pipe_or_valve_integrity_failure",
+      "name_zh": "管路或阀件泄漏、卡滞和完整性失效",
+      "decision": "current_documents_insufficient_at_candidate_evidence_level",
+      "next_action": "add_independent_documents_for_missing_roles_or_sources",
+      "strict_coverage": {
+        "eligible_triples": 20,
+        "unique_evidence_units": 20,
+        "symptom_evidence": 3,
+        "cause_or_mechanism_evidence": 19,
+        "inspection_or_maintenance_evidence": 0,
+        "document_ids": [
+          "MP003",
+          "MP004",
+          "MP005"
+        ],
+        "source_families": [
+          "ABS",
+          "DESMI"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": false,
+          "independent_documents_at_least_2": true,
+          "source_families_at_least_2": true
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 2,
+        "cause_or_mechanism": 1,
+        "inspection": 2,
+        "maintenance": 2
+      },
+      "candidate_documents": [
+        "MP003",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": false,
+        "cause_candidate_pages_at_least_3": false,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    },
+    {
+      "fault_id": "dry_running_or_maintenance_induced_failure",
+      "name_zh": "干运转、错误操作或维护引入故障",
+      "decision": "not_proven_sufficient",
+      "next_action": "inspect_extraction_or_validation_gap_before_new_sources",
+      "strict_coverage": {
+        "eligible_triples": 3,
+        "unique_evidence_units": 3,
+        "symptom_evidence": 2,
+        "cause_or_mechanism_evidence": 3,
+        "inspection_or_maintenance_evidence": 0,
+        "document_ids": [
+          "MP005"
+        ],
+        "source_families": [
+          "DESMI"
+        ],
+        "gate_checks": {
+          "symptom_at_least_5": false,
+          "cause_or_mechanism_at_least_3": true,
+          "inspection_or_maintenance_at_least_2": false,
+          "independent_documents_at_least_2": false,
+          "source_families_at_least_2": false
+        },
+        "gate_passed": false
+      },
+      "direct_candidate_page_counts": {
+        "symptom": 11,
+        "cause_or_mechanism": 12,
+        "inspection": 11,
+        "maintenance": 11
+      },
+      "candidate_documents": [
+        "MP001",
+        "MP004",
+        "MP005",
+        "MP007",
+        "MP015",
+        "MP016"
+      ],
+      "candidate_source_families": [
+        "ABS",
+        "DESMI",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "candidate_potential_checks": {
+        "symptom_candidate_pages_at_least_5": true,
+        "cause_candidate_pages_at_least_3": true,
+        "action_candidate_pages_at_least_2": true,
+        "documents_at_least_2": true,
+        "source_families_at_least_2": true
+      }
+    }
+  ]
+}

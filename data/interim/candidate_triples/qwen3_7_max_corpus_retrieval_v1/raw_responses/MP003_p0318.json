@@ -1,0 +1,83 @@
+{
+  "page_key": "MP003:p0318",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fc1e157c-8334-96b7-b981-c7104a093aec",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 677,
+    "prompt_tokens": 20747,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 21424
+  },
+  "latency_ms": 9233,
+  "attempt": 1,
+  "prompt_sha256": "486ffd53ca3c561f13bad44e7dee3b9e99fadcccddc05f2cfb294b4b2c11ab69",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing Temperature",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Bearing Temperature OL & CL High",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r005:c00",
+          "MP003:p0318:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Water filtration System",
+        "head_canonical_zh": "水过滤系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Sampling and testing procedures",
+        "tail_canonical_zh": "取样与测试程序",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A sampling point is to be provided after the water filtration system for periodical testing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "return lubricant line",
+        "head_canonical_zh": "回油管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "sampling system",
+        "tail_canonical_zh": "取样系统",
+        "tail_type": "InspectionAction",
+        "evidence_text": "For closed loop systems, an additional sampling system is to be provided in the return lubricant line, after bearing lubrication.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

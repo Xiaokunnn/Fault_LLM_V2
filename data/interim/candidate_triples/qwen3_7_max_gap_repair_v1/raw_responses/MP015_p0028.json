@@ -1,0 +1,116 @@
+{
+  "page_key": "MP015:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-04db5b94-70c9-9e0a-8234-a9907b2d743d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1168,
+    "prompt_tokens": 2027,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3195
+  },
+  "latency_ms": 13971,
+  "attempt": 1,
+  "prompt_sha256": "c549b476dd92e800d607268d9d568ef413c15ed16eeaec1dfa42aee4ad3a5885",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "vaporization in the pump",
+        "head_canonical_zh": "泵内汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Check whether the absolute inlet pressure is sufficient",
+        "tail_canonical_zh": "检查绝对入口压力是否充足",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the absolute inlet pressure is sufficient, to prevent vaporization in the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the pressure difference between suction and delivery side corresponds with the specifications of the pump's duty point",
+        "tail_canonical_zh": "检查吸排侧压差是否符合泵工况点规格",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the pressure difference between suction and delivery side corresponds with the specifications of the pump's duty point.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "double mechanical seal (versions MD1)",
+        "head_canonical_zh": "双机械密封(MD1型)",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "flushing liquid ... always must have the appropriate pressure set. This pressure must be 1,5 bar higher than the pressure at the impeller hub",
+        "tail_canonical_zh": "冲洗液压力设定为高于叶轮轮毂压力1.5 bar",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The flushing liquid of a double mechanical seal (versions MD1) always must have the appropriate pressure set. This pressure must be 1,5 bar higher than the pressure at the impeller hub.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the pump with the liquid to be handled through the filling plug at the pump front until the liquid starts to overflow",
+        "tail_canonical_zh": "通过泵前端注油塞注液直至溢出",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the pump with the liquid to be handled through the filling plug at the pump front until the liquid starts to overflow.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noise level may exceed 85 dB(A)",
+        "tail_canonical_zh": "噪声级超过85 dB(A)",
+        "tail_type": "Symptom",
+        "evidence_text": "in case of cavitation, the noise level may exceed 85 dB(A)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

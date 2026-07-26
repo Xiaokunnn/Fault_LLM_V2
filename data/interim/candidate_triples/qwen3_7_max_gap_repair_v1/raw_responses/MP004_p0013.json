@@ -1,0 +1,61 @@
+{
+  "page_key": "MP004:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c49f9e4a-709e-9fae-bbf5-43e58170eaf1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 410,
+    "prompt_tokens": 1976,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2386
+  },
+  "latency_ms": 5048,
+  "attempt": 1,
+  "prompt_sha256": "3615c12654b7f50d396722e3fc51837bf9fe0a49f65ea8e52f0f2831d5b8de28",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the shaft seal for leaks at regular intervals",
+        "tail_canonical_zh": "定期检查轴封泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the shaft seal for leaks at regular intervals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leaks",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "Inspect the shaft seal for leaks at regular intervals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

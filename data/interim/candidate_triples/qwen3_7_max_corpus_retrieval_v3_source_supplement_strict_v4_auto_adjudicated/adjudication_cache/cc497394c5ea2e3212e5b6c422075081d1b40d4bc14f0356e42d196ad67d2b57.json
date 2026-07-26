@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-d7dad7ac-cce0-9e67-8518-b17d3098497d",
+  "latency_ms": 10031,
+  "prompt_sha256": "cc497394c5ea2e3212e5b6c422075081d1b40d4bc14f0356e42d196ad67d2b57",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-be6e51546d6d18278fb7",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Fit the mechanical seal cover (1230) to the intermediate cover... Tighten bolts (1800) crosswise.",
+        "reason_code": "direct_maintenance_instruction"
+      },
+      {
+        "id": "MPT-c005a52203fe48139677",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Indentations\n--- CELL ---\n1. Dirt in the bearings.",
+        "reason_code": "tabular_cause_effect_list"
+      },
+      {
+        "id": "MPT-c17c0596838932a648e6",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Operation of the pump at incorrect bearing temperature could damage the pump.",
+        "reason_code": "explicit_conditional_causation"
+      },
+      {
+        "id": "MPT-c38926a96226ab3fc0ba",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "A self-priming centrifugal pump will not function until the pump casing has been filled with liquid.",
+        "reason_code": "causal_direction_reversed"
+      },
+      {
+        "id": "MPT-c4a5a7abbab070d25cb5",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Wear\n--- CELL ---\n... 2. Bearing locked by dirt and turning of shaft or in housing.",
+        "reason_code": "tabular_cause_effect_list"
+      },
+      {
+        "id": "MPT-c53cb52243c6ab5553b6",
+        "verdict": "uncertain",
+        "confidence": 0.4,
+        "supporting_quote": "Vertical Pump (8' - 12' Height) < 5.9 5.9–9.0 9.0  13.5",
+        "reason_code": "ambiguous_table_row_mapping"
+      },
+      {
+        "id": "MPT-c6581d3e0e216342a298",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Dirt and grit will find their way into, and damage bearings, shaft sleeves or both.",
+        "reason_code": "explicit_direct_causation"
+      },
+      {
+        "id": "MPT-c77d15c417421b6d9291",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "le manque de liquide endommagerait la roue",
+        "reason_code": "explicit_direct_causation"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "page_key": "MP015:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dbf32e37-e626-920a-8098-5f7afa8daf08",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 661,
+    "prompt_tokens": 1639,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2300
+  },
+  "latency_ms": 8284,
+  "attempt": 1,
+  "prompt_sha256": "0a86b864b87fea9cbb85099324dde0fb2ed573e4e1fa563e885c094aeccd94c7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "turning the shaft end at the coupling a few times by hand",
+        "tail_canonical_zh": "手动转动联轴器处轴端数圈",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the pump shaft turns freely. Do this by turning the shaft end at the coupling a few times by hand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil chamber",
+        "head_canonical_zh": "油腔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the oil chamber with oil",
+        "tail_canonical_zh": "向油腔注油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the oil chamber with oil, see paragraph 10.1 \"Oil chamber\" for the appropriate type and quantity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sense of rotation",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Let the motor run for only a short time and check the sense of rotation",
+        "tail_canonical_zh": "短时运行电机并检查旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Let the motor run for only a short time and check the sense of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

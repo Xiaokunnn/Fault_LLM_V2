@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-48116bfa-46c7-952a-99c6-70b3f2c80704",
+  "latency_ms": 10202,
+  "prompt_sha256": "217f5b458f57dc33f4104febaba68fc9ff9fba28745b9b25b0c7f002fbbcebcb",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-b2213b5648198d4dc890",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "propulsion can be maintained in case of failure of an excitation system or failure of a power supply for an excitation system. Propulsion may be at reduced power under such conditions",
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "id": "MPT-b2c6c1f1c06f4e5f67e7",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Mechanical failure\n--- CELL ---\nCheck to see if motor and drive turn freely. Check bearings and\n                                       lubrication.",
+        "reason_code": "table_row_correspondence"
+      },
+      {
+        "id": "MPT-b56d8ac5e9fb880be347",
+        "verdict": "entailed",
+        "confidence": 0.85,
+        "supporting_quote": "7.6.10 Assembling the wear ring",
+        "reason_code": "section_title_implies_action"
+      },
+      {
+        "id": "MPT-b5b439ba2572a038e87f",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "The pump suctions are to be sized\n            and positioned to prevent cavitation or starvation of the pump.",
+        "reason_code": "design_requirement_not_maintenance"
+      },
+      {
+        "id": "MPT-b75cb0cbd70ac225b3f3",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "drain the liquid inside it so as to\n          avoid any damage to the pump",
+        "reason_code": "preventive_action_mitigates_fault"
+      },
+      {
+        "id": "MPT-b7df8973d0563fab71ef",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "When air is aspirated, the mating faces of the mechanical seal are hardly cooled or\n                       lubricated by the liquid handled.",
+        "reason_code": "conditional_causation"
+      },
+      {
+        "id": "MPT-bb98239002395c34a70b",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "If the pump inlet pressure is lower than the vapor pressure of the pumped liquid, cavitation will\n          occur.",
+        "reason_code": "explicit_conditional_cause"
+      },
+      {
+        "id": "MPT-bbc180bd7f12fff707db",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Sometimes,\n            scheduled overhauls may increase overall failure rates by introducing infant mortality, human errors or\n            both into otherwise stable systems.",
+        "reason_code": "wrong_causal_agent"
+      }
+    ]
+  }
+}

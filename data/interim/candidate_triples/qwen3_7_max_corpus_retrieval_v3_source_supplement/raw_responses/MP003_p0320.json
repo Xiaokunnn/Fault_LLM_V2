@@ -1,0 +1,118 @@
+{
+  "page_key": "MP003:p0320",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1501dac4-0ba7-90c6-babf-a4a582757bbe",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1051,
+    "prompt_tokens": 1869,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2920
+  },
+  "latency_ms": 13927,
+  "attempt": 1,
+  "prompt_sha256": "4fef157134e18cbdf58c3f4c13fb9a95e5eb4e15c3ca7a09484a7276ee933754",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Contents of bearing particles",
+        "head_canonical_zh": "轴承颗粒含量",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "bearing_or_lubrication_failure",
+        "tail_canonical_zh": "轴承或润滑故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Contents of bearing particles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stern tube bearing temperatures",
+        "head_canonical_zh": "尾管轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Bearings Operating Condition",
+        "tail_canonical_zh": "轴承运行状态",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Stern tube bearing temperatures are to be continuously monitored and recorded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lubricant flow",
+        "head_canonical_zh": "润滑油流量",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Lubricant Operating Condition",
+        "tail_canonical_zh": "润滑剂运行状态",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Lubricant flow is to be continuously monitored and recorded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wear Down Measurement",
+        "head_canonical_zh": "磨损量测量",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "manual device",
+        "tail_canonical_zh": "手动装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Wear down is to be continuously monitored or measured using manual device at least twice in five years",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stern tube bearings",
+        "head_canonical_zh": "尾管轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "borescope inspection",
+        "tail_canonical_zh": "内窥镜检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "arrangements are to be made for borescope inspection of the system (e.g., bearing, shaft surface, et al.)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

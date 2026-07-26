@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0761",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e1905c71-21c3-9f28-8b52-03c1526ead74",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 472,
+    "prompt_tokens": 2000,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2472
+  },
+  "latency_ms": 6168,
+  "attempt": 1,
+  "prompt_sha256": "de60b61794646f19c2cf6cd949c5741798b195d134f153c076a739bf4c457ac6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "low voltage condition",
+        "head_canonical_zh": "低电压工况",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "undesired restarting upon restoration of the normal voltage",
+        "tail_canonical_zh": "电压恢复时非预期重启",
+        "tail_type": "FaultMode",
+        "evidence_text": "to prevent undesired restarting upon restoration of the normal voltage, after a stoppage due to a low voltage condition or voltage failure condition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "voltage failure condition",
+        "head_canonical_zh": "电压故障工况",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "undesired restarting upon restoration of the normal voltage",
+        "tail_canonical_zh": "电压恢复时非预期重启",
+        "tail_type": "FaultMode",
+        "evidence_text": "to prevent undesired restarting upon restoration of the normal voltage, after a stoppage due to a low voltage condition or voltage failure condition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

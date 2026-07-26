@@ -1,0 +1,143 @@
+{
+  "page_key": "MP001:p0075",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c30a1df9-24f5-9617-8f78-22277eaa5f87",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1383,
+    "prompt_tokens": 9298,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10681
+  },
+  "latency_ms": 17933,
+  "attempt": 1,
+  "prompt_sha256": "16662432f3b2051c3870753a19a7c73fb45807af60ad37a71cabd7d2c79afa03",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Water",
+        "head_canonical_zh": "水污染",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insulating oil contamination",
+        "tail_canonical_zh": "绝缘油污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Water or cooling system humidity collects in tank prior to equipment filling with oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "micro-organisms",
+        "head_canonical_zh": "微生物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "malfunctions",
+        "tail_canonical_zh": "故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "These micro-organisms can degrade the fuel/lubricant, block filters, and increase corrosion leading to system malfunctions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Install centrifuge",
+        "head_canonical_zh": "安装离心机",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Insulating oil contamination",
+        "tail_canonical_zh": "绝缘油污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Install centrifuge, heat or evaporate water as practical particles",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Treat with biocides",
+        "head_canonical_zh": "使用杀菌剂处理",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "micro-organisms",
+        "tail_canonical_zh": "微生物",
+        "tail_type": "Cause",
+        "evidence_text": "Treat with biocides Consider other preventive actions to minimize future infestations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Dielectric Strength (ASTM D117)",
+        "head_canonical_zh": "介电强度(ASTM D117)",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Insulating oil contamination",
+        "tail_canonical_zh": "绝缘油污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Dielectric Strength (ASTM D117) Insulating oil contamination",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r006:c01",
+          "MP001:p0075:t00:r008:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Determine quantity of micro-organisms (ASTM D6469)",
+        "head_canonical_zh": "测定微生物数量(ASTM D6469)",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Biological activity in fluid",
+        "tail_canonical_zh": "流体中的生物活性",
+        "tail_type": "Symptom",
+        "evidence_text": "Determine quantity of micro-organisms (ASTM D6469) Biological activity in fluid",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r006:c02",
+          "MP001:p0075:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

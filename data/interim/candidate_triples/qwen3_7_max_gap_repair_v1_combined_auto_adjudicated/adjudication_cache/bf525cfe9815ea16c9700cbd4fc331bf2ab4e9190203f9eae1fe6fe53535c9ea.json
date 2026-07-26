@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-8f05b7f7-197f-939b-921c-0b3bb7c59560",
+  "latency_ms": 10503,
+  "prompt_sha256": "bf525cfe9815ea16c9700cbd4fc331bf2ab4e9190203f9eae1fe6fe53535c9ea",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-9004e76bb7426dd8c0e6",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Applied voltage too low\n--- CELL ---\nCorrect power supply.",
+        "reason_code": "table_row_cause_action"
+      },
+      {
+        "id": "MPT-92826a1f325be412b463",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Loose on bedplate\n--- CELL ---\nTighten holding bolts.",
+        "reason_code": "table_row_cause_action"
+      },
+      {
+        "id": "MPT-92c3587a2ede75521fc5",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Broken rotor bars or loose rotor\n--- CELL ---\nLook for cracks near the rings. A new rotor may be required, as\n                                       repairs are usually temporary.",
+        "reason_code": "table_row_fault_remedy"
+      },
+      {
+        "id": "MPT-950ed44f922346c56a34",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Rotate the shaft, if\n                 possible, to allow any air trapped in the impeller passages to escape.",
+        "reason_code": "explicit_instruction"
+      },
+      {
+        "id": "MPT-951e170f298e3517da40",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Shown is patented Cycloseal® mechanical seal configuration. Allows for longer bearing and seal life, reduces\n       stuffing box pressure, reduces maintenance costs, and minimizes axial thrust loads.",
+        "reason_code": "tail_not_action"
+      },
+      {
+        "id": "MPT-958952735af36d542390",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Open primary circuit\n--- CELL ---\nLocate fault with testing device and repair.",
+        "reason_code": "table_row_fault_inspection"
+      },
+      {
+        "id": "MPT-9adc6f6696690ef7b634",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "in case of cavitation, the\n                       noise level may exceed 85 dB(A)",
+        "reason_code": "explicit_symptom_link"
+      },
+      {
+        "id": "MPT-9ae6a32462140e274c52",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\n                pump bearing and shaft seal will be damaged.",
+        "reason_code": "prevention_warning"
+      }
+    ]
+  }
+}

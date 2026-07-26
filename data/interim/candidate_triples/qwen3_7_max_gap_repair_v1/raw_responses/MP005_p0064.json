@@ -1,0 +1,86 @@
+{
+  "page_key": "MP005:p0064",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b9360bbe-b814-9254-8130-e8abc1cbc3e0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 755,
+    "prompt_tokens": 7438,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8193
+  },
+  "latency_ms": 9133,
+  "attempt": 1,
+  "prompt_sha256": "6afd92ecf12372a3c6b2b905e42055f38cbf00812225f706dd60dd0fd39f70ea",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noise",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Shutting down and closing valves creates noise and give hydraulic shocks to the whole system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump parts (e.g. vent/flush piping) in pump clogged up ... Seal leakage after short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c00",
+          "MP005:p0064:t00:r003:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Production faults from maker",
+        "head_canonical_zh": "制造商生产缺陷",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Production faults from maker ... Seal leakage after short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c00",
+          "MP005:p0064:t00:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

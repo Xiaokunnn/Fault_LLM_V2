@@ -1,0 +1,127 @@
+{
+  "page_key": "MP021:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-062b1e26-aa0b-9c14-b016-5b9d1a4fdf64",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1365,
+    "prompt_tokens": 2091,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3456
+  },
+  "latency_ms": 16848,
+  "attempt": 1,
+  "prompt_sha256": "23c1ca8bbaeb483dbda5014a9e37b70fd89572c39980008bfe61205ff2404e6a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "all of the liquid bypassing through a pump mounted internal type relief valve",
+        "head_canonical_zh": "液体全部经泵内置安全阀旁通",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "heat build-up in the pump",
+        "tail_canonical_zh": "泵内热量积聚",
+        "tail_type": "FaultMode",
+        "evidence_text": "DON’T operate the pump with all of the liquid bypassing through a pump mounted internal type relief valve, or without any flow of liquid going through the pump for more than a couple of minutes. Operation under either of these conditions may result in a heat build-up in the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "without any flow of liquid going through the pump for more than a couple of minutes",
+        "head_canonical_zh": "泵内无液体流动超过数分钟",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "heat build-up in the pump",
+        "tail_canonical_zh": "泵内热量积聚",
+        "tail_type": "FaultMode",
+        "evidence_text": "DON’T operate the pump with all of the liquid bypassing through a pump mounted internal type relief valve, or without any flow of liquid going through the pump for more than a couple of minutes. Operation under either of these conditions may result in a heat build-up in the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "heat build-up in the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "hazardous conditions or happenings",
+        "tail_canonical_zh": "危险工况或事故",
+        "tail_type": "Risk",
+        "evidence_text": "Operation under either of these conditions may result in a heat build-up in the pump, which could cause hazardous conditions or happenings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "periodic lubrication",
+        "head_canonical_zh": "定期润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "service life",
+        "tail_canonical_zh": "使用寿命",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "a few simple preventative maintenance procedures such as periodic lubrication, adjustment of end clearance, examination of internal parts, etc., will extend the service life of your pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "adjustment of end clearance",
+        "head_canonical_zh": "端面间隙调整",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "service life",
+        "tail_canonical_zh": "使用寿命",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "a few simple preventative maintenance procedures such as periodic lubrication, adjustment of end clearance, examination of internal parts, etc., will extend the service life of your pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "examination of internal parts",
+        "head_canonical_zh": "内部零件检查",
+        "head_type": "InspectionAction",
+        "relation": "mitigated_by",
+        "tail_surface": "service life",
+        "tail_canonical_zh": "使用寿命",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "a few simple preventative maintenance procedures such as periodic lubrication, adjustment of end clearance, examination of internal parts, etc., will extend the service life of your pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

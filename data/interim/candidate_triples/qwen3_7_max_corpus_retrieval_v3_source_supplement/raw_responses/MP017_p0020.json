@@ -1,0 +1,99 @@
+{
+  "page_key": "MP017:p0020",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fb7b6681-3d38-9bb8-8d34-28f011ebd509",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 863,
+    "prompt_tokens": 1760,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2623
+  },
+  "latency_ms": 10731,
+  "attempt": 1,
+  "prompt_sha256": "85a7014dbd852a7b7fd089fb2baac7f74d26ddef8208cba2a1ac534e219c6e62",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Over-lubrication",
+        "head_canonical_zh": "过度润滑",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "bearings to over-heat",
+        "tail_canonical_zh": "轴承过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Over-lubrication can cause the bearings to over-heat, resulting in premature bearing failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings to over-heat",
+        "head_canonical_zh": "轴承过热",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Over-lubrication can cause the bearings to over-heat, resulting in premature bearing failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rust or moisture condensation",
+        "head_canonical_zh": "锈蚀或冷凝水",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing lubricant",
+        "tail_canonical_zh": "轴承润滑剂",
+        "tail_type": "Component",
+        "evidence_text": "Monitor the condition of the bearing lubricant regularly for evidence of rust or moisture condensation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "variable hot and cold temperatures",
+        "head_canonical_zh": "冷热温度变化",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "rust or moisture condensation",
+        "tail_canonical_zh": "锈蚀或冷凝水",
+        "tail_type": "Symptom",
+        "evidence_text": "This is especially important in areas where variable hot and cold temperatures are common.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

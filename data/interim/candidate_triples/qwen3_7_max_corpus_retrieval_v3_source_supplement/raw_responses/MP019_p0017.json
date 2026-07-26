@@ -1,0 +1,61 @@
+{
+  "page_key": "MP019:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-99475d5a-728c-93c9-9570-2280345b6b01",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 467,
+    "prompt_tokens": 1938,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2405
+  },
+  "latency_ms": 6500,
+  "attempt": 1,
+  "prompt_sha256": "6fde967d821d8723d6c2300d806459dbdc6c2812aac719ed4905207fddc8a68a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Incompatible lubricants",
+        "head_canonical_zh": "不相容润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "bearing damage",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Incompatible lubricants may cause bearing damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lubricants containing EP admixtures",
+        "head_canonical_zh": "含EP添加剂的润滑脂",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "high bearing temperatures in frame sizes 280 to 450",
+        "tail_canonical_zh": "280至450机座号下的高轴承温度",
+        "tail_type": "Risk",
+        "evidence_text": "Lubricants containing EP admixtures are not recommended in high bearing temperatures in frame sizes 280 to 450.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

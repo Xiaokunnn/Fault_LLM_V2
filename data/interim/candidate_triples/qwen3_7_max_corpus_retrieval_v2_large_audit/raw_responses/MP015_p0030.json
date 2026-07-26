@@ -1,0 +1,97 @@
+{
+  "page_key": "MP015:p0030",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e209bd31-7e30-9b5e-a0cc-17944f0b518e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 880,
+    "prompt_tokens": 1600,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2480
+  },
+  "latency_ms": 11292,
+  "attempt": 1,
+  "prompt_sha256": "576c2e723a0ba869e4a75784d43a663f272514e6994b349ec81b483af6760ef3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "filter or the suction strainer is fouled",
+        "head_canonical_zh": "滤器或吸入滤网脏污",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "inlet pressure may become too low",
+        "tail_canonical_zh": "进口压力过低",
+        "tail_type": "Symptom",
+        "evidence_text": "the inlet pressure may become too low if the filter or the suction strainer is fouled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "crackling noise",
+        "head_canonical_zh": "噼啪噪声",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "A crackling noise can indicate cavitation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "excessive motor noise",
+        "head_canonical_zh": "电机噪声过大",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "deterioration of the bearings",
+        "tail_canonical_zh": "轴承劣化",
+        "tail_type": "FaultMode",
+        "evidence_text": "excessive motor noise can indicate deterioration of the bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Regularly clean the filter in the suction pipe or the suction strainer at the bottom of the suction pipe",
+        "head_canonical_zh": "定期清洗吸入管路滤器或吸入滤网",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "inlet pressure may become too low",
+        "tail_canonical_zh": "进口压力过低",
+        "tail_type": "Symptom",
+        "evidence_text": "Regularly clean the filter in the suction pipe or the suction strainer at the bottom of the suction pipe, as the inlet pressure may become too low if the filter or the suction strainer is fouled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

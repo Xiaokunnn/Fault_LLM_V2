@@ -1,0 +1,156 @@
+{
+  "page_key": "MP015:p0029",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d7332d60-6d0b-9b6c-a81e-741ae36e0a3b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1470,
+    "prompt_tokens": 1663,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3133
+  },
+  "latency_ms": 17421,
+  "attempt": 1,
+  "prompt_sha256": "0abb6df3ed272e448319c6488b82270b49df3ce0d9c55e804578475495f1c950",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sudden cooling down",
+        "head_canonical_zh": "骤冷",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "burst",
+        "tail_canonical_zh": "破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "The sudden cooling down may cause them to burst and hot water may flow out!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Flawed maintenance",
+        "head_canonical_zh": "维护不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "shorter lifespan",
+        "tail_canonical_zh": "寿命缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "Flawed maintenance will result in shorter lifespan, possible break down and in any event loss of warranty.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Flawed maintenance",
+        "head_canonical_zh": "维护不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "possible break down",
+        "tail_canonical_zh": "可能故障停机",
+        "tail_type": "FaultMode",
+        "evidence_text": "Flawed maintenance will result in shorter lifespan, possible break down and in any event loss of warranty.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "run dry",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "mechanical seal",
+        "tail_canonical_zh": "机械密封",
+        "tail_type": "Component",
+        "evidence_text": "it should never be allowed to run dry",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Dismantling",
+        "head_canonical_zh": "拆卸",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "replacement of the mechanical seal",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Dismantling always means replacement of the mechanical seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal is leaking",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "mechanical seal",
+        "tail_canonical_zh": "机械密封",
+        "tail_type": "Component",
+        "evidence_text": "When the shaft seal is leaking it has to be replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal should start to leak",
+        "head_canonical_zh": "机械密封开始泄漏",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "oil chamber will overflow via the hole in the oil filler cap",
+        "tail_canonical_zh": "油腔经注油帽孔溢出",
+        "tail_type": "Symptom",
+        "evidence_text": "If the mechanical seal should start to leak, the oil chamber will overflow via the hole in the oil filler cap",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

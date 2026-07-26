@@ -1,0 +1,155 @@
+{
+  "page_key": "MP002:p0094",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-68cb9d42-56aa-99a5-89bb-9fefd688414b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1626,
+    "prompt_tokens": 6340,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7966
+  },
+  "latency_ms": 25750,
+  "attempt": 1,
+  "prompt_sha256": "e234690f22a006060016de105b3a5b49d19e5679a96c2ae5bc6c717440af4119",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Generator",
+        "head_canonical_zh": "发电机",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Fails to start on demand",
+        "tail_canonical_zh": "按需启动失败",
+        "tail_type": "FaultMode",
+        "evidence_text": "Generator ● Produces high voltage\n● Produces low voltage\n● Produces high current\n● Procedures low current \n● Fails to start on demand",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r001:c02",
+          "MP002:p0094:t00:r001:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Fails with no output voltage/\ncurrent",
+        "tail_canonical_zh": "无输出电压/电流故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor controller ● Fails with no output voltage/\ncurrent",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r002:c02",
+          "MP002:p0094:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.94
+      },
+      {
+        "head_surface": "Motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Fails to transfer correctly",
+        "tail_canonical_zh": "切换失败",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor controller ● Fails with no output voltage/\ncurrent\n● Fails to transfer correctly",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r002:c02",
+          "MP002:p0094:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Fails with low output/current",
+        "tail_canonical_zh": "低输出/电流故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor controller ● Fails with no output voltage/\ncurrent\n● Fails to transfer correctly\n● Fails with low output/current",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r002:c02",
+          "MP002:p0094:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "Motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Operates prematurely",
+        "tail_canonical_zh": "过早运行",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor controller ● Fails with no output voltage/\ncurrent\n● Fails to transfer correctly\n● Fails with low output/current\n● Operates prematurely",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r002:c02",
+          "MP002:p0094:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.91
+      },
+      {
+        "head_surface": "Motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Operates too long",
+        "tail_canonical_zh": "运行时间过长",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor controller ● Fails with no output voltage/\ncurrent\n● Fails to transfer correctly\n● Fails with low output/current\n● Operates prematurely   \n                                                                                   \n                         ●  Fails with high output hertz ● Operates too long",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0094:t00:r002:c02",
+          "MP002:p0094:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

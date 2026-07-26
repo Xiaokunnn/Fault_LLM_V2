@@ -1,0 +1,108 @@
+{
+  "page_key": "MP017:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c313534b-8907-908b-a89e-c531b986c202",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 927,
+    "prompt_tokens": 3630,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4557
+  },
+  "latency_ms": 11981,
+  "attempt": 1,
+  "prompt_sha256": "0b352ea9c4329c9372e761defc96e1169e6c91efafec89b7e787c007f91f3719",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "checked",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is imperative that alignment be checked after the pump and piping are installed, and before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "checked",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Pumps must be checked and realigned before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "maintained_by",
+        "tail_surface": "realigned",
+        "tail_canonical_zh": "重新对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumps must be checked and realigned before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Check Rotation",
+        "tail_canonical_zh": "检查转向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check Rotation, Section C, before final alignment of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foundation bolts",
+        "head_canonical_zh": "地脚螺栓",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "tighten",
+        "tail_canonical_zh": "紧固",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before checking alignment, tighten the foundation bolts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

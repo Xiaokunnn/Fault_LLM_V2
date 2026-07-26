@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-b261ec91-55f2-9dc9-a4b2-b2f251399ca8",
+  "latency_ms": 9541,
+  "prompt_sha256": "0c0fc29f26026f6eed8bf1f84d4aa517e84c47cc76bd368b78a1a4648a8e7f38",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-787dcfd62b1245433c85",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "If the oil is black, the bearing is running hot and burning the oil.",
+        "reason_code": "direct_conditional_indication"
+      },
+      {
+        "id": "MPT-79298b2fe500340616ff",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "Do not hang an unsupported pump on piping. This is a source of bearing problems",
+        "reason_code": "explicit_causal_source"
+      },
+      {
+        "id": "MPT-79b9be7d867ec4db3c6d",
+        "verdict": "not_entailed",
+        "confidence": 0.99,
+        "supporting_quote": "If the drain hole clogs up, leaking liquid and/or vapor from the shaft seal can be forced up into the bearing unit",
+        "reason_code": "causal_direction_reversed"
+      },
+      {
+        "id": "MPT-7b0d4744784e082a2544",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "An alarm is to be initiated... in the event of an activation of overload or short-circuit protection.",
+        "reason_code": "direct_manifestation_link"
+      },
+      {
+        "id": "MPT-7bf8aaebeaca20f938b3",
+        "verdict": "not_entailed",
+        "confidence": 0.99,
+        "supporting_quote": "prevent the nozzles from becoming clogged by impurities in the water",
+        "reason_code": "negation_ignored"
+      },
+      {
+        "id": "MPT-7c4653f69bfc55d83aa4",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Inspect the pumps regularly for initial leakage.",
+        "reason_code": "direct_diagnostic_instruction"
+      },
+      {
+        "id": "MPT-7ca809285f6d020be772",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Vertical Pump (12' - 20' Height) < 6.7 6.7–10.7 10.7 16.2",
+        "reason_code": "table_row_concatenation_error"
+      },
+      {
+        "id": "MPT-7d3fe9d3969beb2ae0b5",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "Avoid the entry of big or hard particles by installing a strainer.",
+        "reason_code": "direct_mitigation_action"
+      }
+    ]
+  }
+}

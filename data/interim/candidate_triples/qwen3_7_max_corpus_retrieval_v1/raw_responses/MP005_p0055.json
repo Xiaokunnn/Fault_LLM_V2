@@ -1,0 +1,59 @@
+{
+  "page_key": "MP005:p0055",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-25cba8c0-a32f-96b6-a3c7-259fbf93bc41",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 424,
+    "prompt_tokens": 8222,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8646
+  },
+  "latency_ms": 6206,
+  "attempt": 1,
+  "prompt_sha256": "2362eced2bd74b4a494c4c1e91b916e41d285c5ad7317ca8cf1fc885693e1cc5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Start-up against open discharge line",
+        "head_canonical_zh": "排出管路开启状态下启动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Heat build-up inside the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

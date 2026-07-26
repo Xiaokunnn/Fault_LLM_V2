@@ -1,0 +1,93 @@
+{
+  "page_key": "MP018:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-84e61fcb-7fac-9772-95d1-ebf0c4b0d7aa",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 926,
+    "prompt_tokens": 1941,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2867
+  },
+  "latency_ms": 11412,
+  "attempt": 1,
+  "prompt_sha256": "60e0a6728285a8b3ae21160e91fb15208e0f323c0cb32266c6ab748d7b496ed9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Stuffing Box",
+        "head_canonical_zh": "填料箱",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check to see that this grease fitting is present and that the stuffing box is properly lubricated with grease",
+        "tail_canonical_zh": "检查油脂嘴存在及填料箱润滑状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check to see that this grease fitting is present and that the stuffing box is properly lubricated with grease.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stuffing Box",
+        "head_canonical_zh": "填料箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "remove the grease fitting and install automatic lubricator and/or lubrication line",
+        "tail_canonical_zh": "拆除油脂嘴并安装自动润滑器或润滑管线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If lubrication of the stuffing box is to be accomplished by means other than a grease gun, remove the grease fitting and install automatic lubricator and/or lubrication line as dictated by the job requirements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stuffing box",
+        "head_canonical_zh": "填料箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fresh cool water from an outside source should be piped to the stuffing box at a pressure about one atmosphere higher than maximum discharge pressure",
+        "tail_canonical_zh": "引入外部冷却水并保持压力高于最大排出压力约一个大气压",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the liquid being pumped is not suitable for stuffing box lubrication, fresh cool water from an outside source should be piped to the stuffing box at a pressure about one atmosphere higher than maximum discharge pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bushing",
+        "head_canonical_zh": "衬套",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Water lubrication is required through this line",
+        "tail_canonical_zh": "通过该管线进行水润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Water lubrication is required through this line for pumps having either water or grease lubricated stuffing boxes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": "qwen3_7_max_triple_pilot_strict_v2_revalidation",
+  "input_candidates": 31,
+  "output_candidates": 31,
+  "duplicates_removed": 0,
+  "decisions": {
+    "rejected": 17,
+    "candidate_needs_review": 11,
+    "silver_candidate": 3
+  },
+  "evidence_levels": {
+    "E1": 24,
+    "E3": 7
+  },
+  "legacy_to_strict_transitions": {
+    "silver_candidate->rejected": 17,
+    "silver_candidate->candidate_needs_review": 3,
+    "candidate_needs_review->candidate_needs_review": 8,
+    "silver_candidate->silver_candidate": 3
+  },
+  "reason_counts": {
+    "evidence_not_automatic_silver": 22,
+    "entailment_not_automatic_silver": 26,
+    "evidence_invalid": 15,
+    "relation_not_entailed": 15,
+    "relation_entailment_undetermined": 11,
+    "relation_type_invalid": 2
+  },
+  "interpretation": "Strict-v2 local replay only. No external model was called. E2 table promotion requires parser-generated units and visual verification, so legacy candidates without those units remain E1/E3/review/rejected. Chinese graph readiness is evaluated separately after source-language evidence validation.",
+  "chinese_graph_ready_silver_records": 3,
+  "graph_display_language": "zh-CN",
+  "strict_build_silver_records": 3,
+  "fault_classes_passing_gate": 0
+}

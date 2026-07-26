@@ -1,0 +1,125 @@
+{
+  "run_id": "qwen3_7_max_triple_pilot_v1",
+  "updated_at": "2026-07-23T17:35:24.292Z",
+  "complete": true,
+  "config_version": "triple_extraction_qwen3_7_max_pilot_v1",
+  "split_version": "marine_pump_document_split_pilot_v1",
+  "schema_version": "marine_pump_provenance_v1_2",
+  "model_requested": "qwen3.7-max",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_protocol": "openai_compatible_chat_completions",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "postprocessor_version": "marine_pump_triple_postprocess_v3",
+  "system_prompt_sha256": "20241d8e163d7ea9ede816bc2f8cc0668286e104f4eda7431066f92ad0d2c63b",
+  "request_config_sha256": "ba82030a3a7f14cc7c44ab98e5d172476b8fdc0baaa4355a2833a236d47a1d54",
+  "artifact_sha256": {
+    "extraction_script": "12070f9ed8096e8763268b38c9fd198547e2d2c588db432388c99d6f250d5cd8",
+    "cli_runner": "314b2205ca54fd05b5b15d9269f5d97a6fa454efb81b6624f82eceff0be4adaa",
+    "extraction_config": "944c52902891b2b530c474aad3cb539db3bc7db35b1b0f24407f9155d8dc34db",
+    "document_split": "54dae5e86abaf8279acab45ef3288620c858c436bc782efe53dd38b2976e5ca7",
+    "provenance_schema": "30fbb4eeaeb37a9b92c68a6ffaa06482d14982d7d552348bfa16caff35910327",
+    "source_manifest": "6c1458b3e8cf72891bead4010d157985c233e0b837d84854de8f61fae8c95179"
+  },
+  "runtime_versions": {
+    "node": "v24.14.0",
+    "node_executable": "C:\\Users\\25021\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "pdftotext": "pdftotext version 25.02.0"
+  },
+  "api_key_persisted": false,
+  "selected_pages": 4,
+  "completed_pages": 4,
+  "failed_pages": 0,
+  "remaining_pages": 0,
+  "new_requests_this_invocation": 0,
+  "candidate_triples": 31,
+  "raw_model_proposals": 56,
+  "candidate_proposals_before_dedup": 31,
+  "rejected_before_candidate": 25,
+  "duplicates_removed": 0,
+  "rejection_reason_counts": {
+    "evidence_span_not_verified": 25,
+    "below_candidate_confidence": 25
+  },
+  "per_document_extraction_stats": [
+    {
+      "doc_id": "MP001",
+      "document_split": "build_train",
+      "raw_model_proposals": 7,
+      "retained_candidates": 7,
+      "high_confidence_silver_candidates": 7,
+      "review_pending_candidates": 0,
+      "rejected_before_candidate": 0,
+      "model_page_warning_count": 2,
+      "retention_rate_percent": 100
+    },
+    {
+      "doc_id": "MP004",
+      "document_split": "build_train",
+      "raw_model_proposals": 14,
+      "retained_candidates": 12,
+      "high_confidence_silver_candidates": 12,
+      "review_pending_candidates": 0,
+      "rejected_before_candidate": 2,
+      "model_page_warning_count": 0,
+      "retention_rate_percent": 85.7
+    },
+    {
+      "doc_id": "MP005",
+      "document_split": "build_train",
+      "raw_model_proposals": 12,
+      "retained_candidates": 10,
+      "high_confidence_silver_candidates": 3,
+      "review_pending_candidates": 7,
+      "rejected_before_candidate": 2,
+      "model_page_warning_count": 2,
+      "retention_rate_percent": 83.3
+    },
+    {
+      "doc_id": "MP008",
+      "document_split": "development",
+      "raw_model_proposals": 23,
+      "retained_candidates": 2,
+      "high_confidence_silver_candidates": 1,
+      "review_pending_candidates": 1,
+      "rejected_before_candidate": 21,
+      "model_page_warning_count": 0,
+      "retention_rate_percent": 8.7
+    }
+  ],
+  "model_page_warnings_by_document": {
+    "MP004": [],
+    "MP008": [],
+    "MP005": [
+      "Evidence text for table-based triples includes non-contiguous layout artifacts due to PDF column extraction; quotes represent closest contiguous spans available in provided text stream.",
+      "Fault class 'cavitation' assigned to 'Suction lift is too high' based on explicit NPSH reference in remedy column contextually linked to cavitation risk described in preceding paragraph."
+    ],
+    "MP001": [
+      "The relation 'diagnosed_by' is used in reverse direction (InspectionMethod -> diagnosed_by -> FaultMode) to satisfy the constraint that evidence must support the triple while adhering to allowed relations; standard semantic interpretation would be FaultMode -> diagnosed_by -> InspectionMethod.",
+      "Fault class IDs for seal and alignment issues are inferred from the text 'oil seals' and 'alignment' mapping to allowed classes, though not explicitly named as the specific fault class IDs in the text."
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 6121,
+    "completion_tokens": 9059,
+    "total_tokens": 15180
+  },
+  "api_latency_ms": {
+    "count": 4,
+    "min": 15513,
+    "median": 23439,
+    "p95": 39410,
+    "max": 39410,
+    "mean": 28526
+  },
+  "models_returned": [
+    "qwen3.7-max"
+  ],
+  "failures": [],
+  "outputs": {
+    "parsed_pages": "data/interim/parsed_pages/representative_pilot_v1",
+    "page_selection": "results/experiments/qwen3_7_max_triple_pilot_v1/page_selection.json",
+    "raw_responses": "results/experiments/qwen3_7_max_triple_pilot_v1/raw_responses",
+    "candidate_triples": "data/interim/candidate_triples/qwen3_7_max_triple_pilot_v1/candidate_triples.jsonl",
+    "rejected_proposals": "data/interim/candidate_triples/qwen3_7_max_triple_pilot_v1/rejected_proposals.jsonl"
+  }
+}

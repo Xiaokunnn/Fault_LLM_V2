@@ -1,0 +1,61 @@
+{
+  "page_key": "MP020:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-79d80024-169b-955e-b17e-ea3fd78219b2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 456,
+    "prompt_tokens": 2745,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3201
+  },
+  "latency_ms": 6479,
+  "attempt": 1,
+  "prompt_sha256": "ad69d6fd49a8408a0ac857ff11cf4e677c4d86d747f648a9f61100a22e7d8c9c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "entrained air",
+        "head_canonical_zh": "夹带空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vent of air during filling of pump & line",
+        "head_canonical_zh": "泵及管路充液时排气",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Caution must be taken to vent of air during filling of pump & line. As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

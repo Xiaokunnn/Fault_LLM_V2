@@ -1,0 +1,78 @@
+{
+  "page_key": "MP018:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8050ce44-cec1-9d6e-8c64-17705aa08923",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 671,
+    "prompt_tokens": 1785,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2456
+  },
+  "latency_ms": 8590,
+  "attempt": 1,
+  "prompt_sha256": "4ad597882f71dacced868b1da89e4b820d23f983898f9d4347bb879386207fff",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Operation of the pump without proper lubrication",
+        "head_canonical_zh": "润滑不当运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation of the pump without proper lubrication will cause damage to the pump and possible personal injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operated against a closed valve for more than a few minutes",
+        "head_canonical_zh": "闭阀运行超时",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Overheating",
+        "tail_canonical_zh": "过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Overheating and/or loss of prime will result if the pump is operated against a closed valve for more than a few minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operated against a closed valve for more than a few minutes",
+        "head_canonical_zh": "闭阀运行超时",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "loss of prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Overheating and/or loss of prime will result if the pump is operated against a closed valve for more than a few minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "page_key": "MP015:p0040",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-33423a09-1339-9f37-927a-b823d4f5b11c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 860,
+    "prompt_tokens": 1633,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2493
+  },
+  "latency_ms": 9898,
+  "attempt": 1,
+  "prompt_sha256": "1262bc7804d189e6668442460a84bf9b8decea684ddf24bd13e4c9c2cc973927",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "wear ring",
+        "head_canonical_zh": "耐磨环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Disassembling the wear ring",
+        "tail_canonical_zh": "拆卸耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7.6.9 Disassembling the wear ring",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear ring",
+        "head_canonical_zh": "耐磨环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Assembling the wear ring",
+        "tail_canonical_zh": "装配耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7.6.10 Assembling the wear ring",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "between the impeller and the wear ring",
+        "tail_canonical_zh": "叶轮与耐磨环之间",
+        "tail_type": "Component",
+        "evidence_text": "For pump with a closed impeller the wear occurs between the impeller and the wear ring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Measure the thickness (d) and the width (b) of the ring",
+        "tail_canonical_zh": "测量环的厚度(d)和宽度(b)",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1 Measure the thickness (d) and the width (b) of the ring, see figure 14 A.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

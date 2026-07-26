@@ -1,0 +1,118 @@
+{
+  "page_key": "MP004:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-77e3915f-9c91-9844-a373-dea067b6b291",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1055,
+    "prompt_tokens": 1716,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2771
+  },
+  "latency_ms": 11625,
+  "attempt": 1,
+  "prompt_sha256": "e3414327f207dcabe68d076505d2fbe696f7bbc16fed4eea412dc16dc1142058",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "noise",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "ball bearings",
+        "tail_canonical_zh": "球轴承",
+        "tail_type": "Component",
+        "evidence_text": "they require no attention but are to be replaced in case of noise or bearing wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing wear",
+        "head_canonical_zh": "轴承磨损",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "ball bearings",
+        "tail_canonical_zh": "球轴承",
+        "tail_type": "Component",
+        "evidence_text": "they require no attention but are to be replaced in case of noise or bearing wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ball bearings",
+        "head_canonical_zh": "球轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "they require no attention but are to be replaced in case of noise or bearing wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Place a bead of grease on the sides of cleaned or newly mounted bearings",
+        "tail_canonical_zh": "在清洁或新装轴承侧面涂抹润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Place a bead of grease on the sides of cleaned or newly mounted bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "semi-closed bearings",
+        "head_canonical_zh": "半封闭轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "place grease on the open side of the bearing only",
+        "tail_canonical_zh": "仅在轴承开口侧涂抹润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "As fas as semi-closed bearings are concerned, place grease on the open side of the bearing only",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.87,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

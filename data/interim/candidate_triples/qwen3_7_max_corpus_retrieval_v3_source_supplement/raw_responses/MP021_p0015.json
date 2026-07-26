@@ -1,0 +1,156 @@
+{
+  "page_key": "MP021:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0ab00c97-a9d7-9840-a617-1aa60f728d96",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1613,
+    "prompt_tokens": 2521,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4134
+  },
+  "latency_ms": 20725,
+  "attempt": 1,
+  "prompt_sha256": "0f302035e06ce63037ae529f738120401ce6ed76fef5ff8ea3957a7bc3094eae",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Leaks in the suction line permitting air to be drawn in",
+        "head_canonical_zh": "吸入管路泄漏导致空气吸入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "noisy pump",
+        "tail_canonical_zh": "泵噪声大",
+        "tail_type": "Symptom",
+        "evidence_text": "Leaks in the suction line permitting air to be drawn in may cause a noisy pump or a reduction in capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaks in the suction line permitting air to be drawn in",
+        "head_canonical_zh": "吸入管路泄漏导致空气吸入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "reduction in capacity",
+        "tail_canonical_zh": "流量降低",
+        "tail_type": "Symptom",
+        "evidence_text": "Leaks in the suction line permitting air to be drawn in may cause a noisy pump or a reduction in capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air pockets in the suction line",
+        "head_canonical_zh": "吸入管路气穴",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "hard for the pump to prime",
+        "tail_canonical_zh": "泵难以引液",
+        "tail_type": "Symptom",
+        "evidence_text": "Air pockets in the suction line make it hard for the pump to prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foreign objects",
+        "head_canonical_zh": "异物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lock the pump",
+        "tail_canonical_zh": "泵卡死",
+        "tail_type": "FaultMode",
+        "evidence_text": "Without a strainer objects can lock the pump, and damage the internals and drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "piping strain",
+        "head_canonical_zh": "管路应力",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "casing distortion",
+        "tail_canonical_zh": "泵壳变形",
+        "tail_type": "FaultMode",
+        "evidence_text": "dragging would indicate unit misalignment or casing distortion from piping strain.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rise in temperature",
+        "head_canonical_zh": "温度升高",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pump or piping will rupture",
+        "tail_canonical_zh": "泵或管路破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "The rise in temperature causes the liquid to expand; if there is no provision for pressure relief in the closed off section, there is a chance that the pump or piping will rupture.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "remove the head of the pump and with a feeler gauge determine if there is clearance all the way around between the rotor and casing",
+        "head_canonical_zh": "拆卸泵头并用塞尺检查转子与泵壳间隙",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "unit misalignment or casing distortion from piping strain",
+        "tail_canonical_zh": "机组不对中或管路应力导致的泵壳变形",
+        "tail_type": "FaultMode",
+        "evidence_text": "remove the head of the pump and with a feeler gauge determine if there is clearance all the way around between the rotor and casing. Because of manufacturing tolerances, bushing clearances, etc., the rotor may not be centered in the casing, but it should not drag; dragging would indicate unit misalignment or casing distortion from piping strain.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

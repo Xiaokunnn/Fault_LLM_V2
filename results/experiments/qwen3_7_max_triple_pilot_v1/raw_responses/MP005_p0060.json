@@ -1,0 +1,184 @@
+{
+  "status": "success",
+  "prompt_version": "marine_pump_triple_prompt_v2",
+  "model_requested": "qwen3.7-max",
+  "page_text_sha256": "b2ab402d3aae5d049d17f43f40e271d59056f7aab86f082ceb3a952eb84e66d3",
+  "doc_id": "MP005",
+  "pdf_page_number": 60,
+  "api_record": {
+    "request_id": "chatcmpl-eea30a24-5318-97a6-8bbf-f7d6ae90ed15",
+    "model": "qwen3.7-max",
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 1738,
+      "prompt_tokens": 1413,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 3151
+    },
+    "latency_ms": 23439,
+    "requested_at": "2026-07-23T16:16:07.514Z",
+    "responded_at": "2026-07-23T16:16:30.954Z",
+    "attempt": 1,
+    "response_json": {
+      "triples": [
+        {
+          "head": "Considerably smaller delivery head than expected",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail": "Increased power consumption",
+          "tail_type": "Symptom",
+          "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Considerably smaller delivery head than expected",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail": "Cavitation",
+          "tail_type": "FaultMode",
+          "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Cavitation",
+          "head_type": "FaultMode",
+          "relation": "causes",
+          "tail": "Heavy erosion",
+          "tail_type": "Symptom",
+          "evidence_text": "In the pump, the impeller may show signs of heavy erosion caused by cavitation (corrosion) which may at times render an impeller unfit for use in a very short time.",
+          "triple_confidence": 0.95,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Wrong direction of rotation",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Wrong direction of rotation       The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Piping system is choked",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "2. Piping system is choked           The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "The pump is choked",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "3. The pump is choked                The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Suction line leaks",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "4. Suction line leaks                The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Pump takes air",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "5. Pump takes air                    The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "air_ingress_or_loss_of_prime"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Suction lift is too high",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump has no or too low capacity",
+          "tail_type": "Symptom",
+          "evidence_text": "6. Suction lift is too high          The pump has no or too low capacity",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "cavitation"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Counter-pressure is too low",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump uses too much power",
+          "tail_type": "Symptom",
+          "evidence_text": "1. Counter-pressure is too low       The pump uses too much power",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Foreign body in pump",
+          "head_type": "Cause",
+          "relation": "causes",
+          "tail": "The pump uses too much power",
+          "tail_type": "Symptom",
+          "evidence_text": "3. Foreign body in pump              The pump uses too much power",
+          "triple_confidence": 0.85,
+          "fault_class_ids": [
+            "hydraulic_blockage"
+          ],
+          "evidence_role": "cause_or_mechanism"
+        },
+        {
+          "head": "Measuring the current intensity of the connected motor",
+          "head_type": "InspectionMethod",
+          "relation": "diagnosed_by",
+          "tail": "Quantity of liquid delivered",
+          "tail_type": "SignalFeature",
+          "evidence_text": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor",
+          "triple_confidence": 0.9,
+          "fault_class_ids": [],
+          "evidence_role": "inspection_or_maintenance"
+        }
+      ],
+      "page_summary": "Troubleshooting guide for DESMI NSL pumps covering symptoms of incorrect delivery head, low capacity, and excessive power consumption, along with associated causes like wrong rotation, choking, air ingress, and suction issues, plus inspection methods involving current measurement and differential pressure.",
+      "warnings": [
+        "Evidence text for table-based triples includes non-contiguous layout artifacts due to PDF column extraction; quotes represent closest contiguous spans available in provided text stream.",
+        "Fault class 'cavitation' assigned to 'Suction lift is too high' based on explicit NPSH reference in remedy column contextually linked to cavitation risk described in preceding paragraph."
+      ]
+    },
+    "prompt_sha256": "e4b02cfd5130bf6f83a4f9e5692f38bde5911044c0affa5fae80dc5fb21d1802"
+  },
+  "request_config_sha256": "ba82030a3a7f14cc7c44ab98e5d172476b8fdc0baaa4355a2833a236d47a1d54"
+}

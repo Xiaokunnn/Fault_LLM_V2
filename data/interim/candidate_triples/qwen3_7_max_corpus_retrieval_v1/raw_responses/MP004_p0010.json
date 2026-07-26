@@ -1,0 +1,114 @@
+{
+  "page_key": "MP004:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-75fb2d13-e3ae-9110-b43b-c710c52018ad",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1070,
+    "prompt_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2931
+  },
+  "latency_ms": 12668,
+  "attempt": 1,
+  "prompt_sha256": "9375e22c72784d9ad5dd46b685b886467302fe7eb9acf8131d2b00c011952432",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the pump casing is filled with liquid",
+        "tail_canonical_zh": "检查泵壳已充满液体",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The liquid also serves as coolant for the shaft seal. Consequently, the pump must under no circumstances be started before it has been primed with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "relief valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "see paragraph 10",
+        "tail_canonical_zh": "参见第10段",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "As regards maintenance of the relief valve - see paragraph 10.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "check that the shaft rotates freely without jarring sounds",
+        "tail_canonical_zh": "检查轴自由旋转且无刺耳声音",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before starting the pump check that - the shaft rotates freely without jarring sounds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "check that the pump casing is filled with liquid",
+        "tail_canonical_zh": "检查泵壳已充满液体",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before starting the pump check that ... the pump casing is filled with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "measuring the current intensity of the connected motor",
+        "tail_canonical_zh": "测量连接电机的电流强度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Therefore, after start-up, it is necessary to check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

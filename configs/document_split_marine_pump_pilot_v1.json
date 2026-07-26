@@ -1,0 +1,43 @@
+{
+  "version": "marine_pump_document_split_pilot_v1",
+  "status": "pilot_frozen_pending_maib_p0_localization",
+  "frozen_at": "2026-07-23",
+  "split_unit": "whole_document",
+  "build_train_doc_ids": [
+    "MP001",
+    "MP002",
+    "MP003",
+    "MP004",
+    "MP005",
+    "MP006",
+    "MP007"
+  ],
+  "development_doc_ids": [
+    "MP008"
+  ],
+  "held_out_test_doc_ids": [
+    "MP009",
+    "MP010",
+    "MP011",
+    "MP012",
+    "MP013"
+  ],
+  "representative_trial_doc_ids": [
+    "MP001",
+    "MP004",
+    "MP005",
+    "MP008"
+  ],
+  "constraints": {
+    "extract_after_split": true,
+    "development_evidence_cannot_fill_build_coverage_gate": true,
+    "held_out_test_documents_cannot_enter_primary_graph": true,
+    "held_out_test_documents_cannot_tune_prompts_or_thresholds": true,
+    "all_automatic_or_semiautomatic_labels_are_silver": true
+  },
+  "notes": [
+    "MP010-MP013 are registered public MAIB sources but are not yet local files.",
+    "The pilot split is sufficient for representative trial extraction but must be versioned again after P0 MAIB files are localized and hashed.",
+    "MP008 is parsed in the pilot only to test cross-vendor extraction-rule transfer; its evidence does not count toward the build-set coverage gate."
+  ]
+}

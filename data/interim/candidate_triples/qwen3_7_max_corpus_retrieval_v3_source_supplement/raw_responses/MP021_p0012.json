@@ -1,0 +1,99 @@
+{
+  "page_key": "MP021:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-17fc3c14-90ef-9d28-b8c4-3a7ec34c6a16",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1089,
+    "prompt_tokens": 2004,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3093
+  },
+  "latency_ms": 15412,
+  "attempt": 1,
+  "prompt_sha256": "1ef7074c782e8363ca30204ca712cb9996b6baf80db9043d7b9bc414b34afc23",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "discharge line is blocked or closed",
+        "head_canonical_zh": "排出管路堵塞或关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pressure can build up until the motor stalls, the drive equipment fails, a pump part breaks or ruptures, or the piping bursts",
+        "tail_canonical_zh": "压力升高导致电机堵转、驱动设备故障、泵部件破裂或管路爆裂",
+        "tail_type": "Symptom",
+        "evidence_text": "If there is no place for this liquid to go, i.e. the discharge line is blocked or closed, pressure can build up until the motor stalls, the drive equipment fails, a pump part breaks or ruptures, or the piping bursts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "relief valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "pressure can build up until the motor stalls, the drive equipment fails, a pump part breaks or ruptures, or the piping bursts",
+        "tail_canonical_zh": "压力升高导致电机堵转、驱动设备故障、泵部件破裂或管路爆裂",
+        "tail_type": "Symptom",
+        "evidence_text": "Because of this, some form of pressure protection must be used with a positive displacement pump. This may be a relief valve mounted directly on the pump, an inline relief valve, a torque limiting device or a rupture disk.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "torque limiting devices",
+        "head_canonical_zh": "扭矩限制装置",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "pressure can build up until the motor stalls, the drive equipment fails, a pump part breaks or ruptures, or the piping bursts",
+        "tail_canonical_zh": "压力升高导致电机堵转、驱动设备故障、泵部件破裂或管路爆裂",
+        "tail_type": "Symptom",
+        "evidence_text": "Because of this, some form of pressure protection must be used with a positive displacement pump. This may be a relief valve mounted directly on the pump, an inline relief valve, a torque limiting device or a rupture disk.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rupture disks",
+        "head_canonical_zh": "爆破片",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "pressure can build up until the motor stalls, the drive equipment fails, a pump part breaks or ruptures, or the piping bursts",
+        "tail_canonical_zh": "压力升高导致电机堵转、驱动设备故障、泵部件破裂或管路爆裂",
+        "tail_type": "Symptom",
+        "evidence_text": "Because of this, some form of pressure protection must be used with a positive displacement pump. This may be a relief valve mounted directly on the pump, an inline relief valve, a torque limiting device or a rupture disk.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

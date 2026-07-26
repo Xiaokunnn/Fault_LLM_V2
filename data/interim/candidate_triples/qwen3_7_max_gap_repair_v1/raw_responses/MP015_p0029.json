@@ -1,0 +1,135 @@
+{
+  "page_key": "MP015:p0029",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b5c05b74-acac-9f0d-8b0a-df44252ae688",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1310,
+    "prompt_tokens": 1944,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3254
+  },
+  "latency_ms": 16188,
+  "attempt": 1,
+  "prompt_sha256": "d43df656e5bcebffbb96928ff9d2b072b975b485161fa3d0357754b91640c4c9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "outlet pressure",
+        "head_canonical_zh": "出口压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Regularly check the outlet pressure",
+        "tail_canonical_zh": "定期检查出口压力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly check the outlet pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Drain the oil or the liquid every 2000 hours of operation or once a year and replace it by fresh oil or liquid",
+        "tail_canonical_zh": "每运行2000小时或每年排油并更换新油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Drain the oil or the liquid every 2000 hours of operation or once a year and replace it by fresh oil or liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal is leaking",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "it has to be replaced",
+        "tail_canonical_zh": "必须更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When the shaft seal is leaking it has to be replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal should start to leak",
+        "head_canonical_zh": "机械密封开始泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "the oil chamber will overflow via the hole in the oil filler cap",
+        "tail_canonical_zh": "油室通过注油盖孔溢出",
+        "tail_type": "Symptom",
+        "evidence_text": "If the mechanical seal should start to leak, the oil chamber will overflow via the hole in the oil filler cap",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal should start to leak",
+        "head_canonical_zh": "机械密封开始泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "the pump must be immediately stopped to replace the mechanical seal",
+        "tail_canonical_zh": "立即停泵并更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the pump must be immediately stopped to replace the mechanical seal!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pressure of the flushing liquid",
+        "head_canonical_zh": "冲洗液压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Regularly check the pressure of the flushing liquid",
+        "tail_canonical_zh": "定期检查冲洗液压力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly check the pressure of the flushing liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

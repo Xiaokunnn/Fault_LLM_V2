@@ -1,0 +1,185 @@
+{
+  "page_key": "MP005:p0053",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6b3a6076-b608-95d1-9f19-6e2f1aafa3ec",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1801,
+    "prompt_tokens": 12565,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 14366
+  },
+  "latency_ms": 21862,
+  "attempt": 1,
+  "prompt_sha256": "2a93b01ebd10e7d2ff57e52da7256b72ba9f2d52903728021f0b55abaeab05cd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "suction and/or discharge line closed",
+        "head_canonical_zh": "吸入或排出管路关闭",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "incorrect pressure and temperature",
+        "tail_canonical_zh": "异常压力和温度",
+        "tail_type": "Symptom",
+        "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "High temperature",
+        "tail_canonical_zh": "高温",
+        "tail_type": "Symptom",
+        "evidence_text": "High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "too much gas content in the fluid handled",
+        "head_canonical_zh": "输送介质含气量过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "High temperature",
+        "tail_canonical_zh": "高温",
+        "tail_type": "Symptom",
+        "evidence_text": "High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Abnormal noises",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "temperatures",
+        "head_canonical_zh": "温度异常",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "liquid",
+        "head_canonical_zh": "液体",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "The liquid also serves as coolant for the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run dry",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "In order to protect the shaft seal, the pump must not run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

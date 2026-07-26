@@ -1,0 +1,1840 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fault-llm-v2:marine-pump:provenance-schema:v2.1",
+  "title": "Marine Pump Evidence Graph Package Schema V2.1",
+  "description": "Normative package schema for a Chinese-canonical marine-engine-room pump semantic graph with verbatim multilingual EvidenceAssertion records. Claim aggregation must preserve every independently sourced assertion.",
+  "schema_version": "marine_pump_provenance_v2.1.0",
+  "status": "normative",
+  "effective_scope": "research_point_1_marine_pump_graph_evidence",
+  "record_model": {
+    "layers": [
+      "DocumentSource",
+      "CanonicalEntity",
+      "Claim",
+      "EvidenceAssertion"
+    ],
+    "semantic_layer": [
+      "CanonicalEntity",
+      "Claim"
+    ],
+    "provenance_layer": [
+      "DocumentSource",
+      "EvidenceAssertion"
+    ],
+    "source_of_truth": "EvidenceAssertion",
+    "claim_semantics": "A Claim is a normalized semantic triple. It is not evidence by itself and is eligible for the released graph only through one or more eligible EvidenceAssertion records.",
+    "multi_source_policy": "Assertions from different documents, pages, publishers, or source families must remain distinct and must never be overwritten by Claim-level aggregation.",
+    "graph_display_language": "zh-CN",
+    "semantic_language_policy": "Every released CanonicalEntity label is Chinese. Stable entity-type and relation machine codes remain English enums with frozen Chinese display labels.",
+    "evidence_language_policy": "EvidenceAssertion surfaces and evidence_text remain verbatim in the source language. Any Chinese evidence translation is non-evidentiary and must not participate in span, entailment, hash, or coverage validation."
+  },
+  "node_type_registry": {
+    "Equipment": "A pump, pump set, drive, or explicitly named pump-system equipment.",
+    "Component": "A physical component of a pump or its connected suction, discharge, sealing, lubrication, drive, valve, or pipe system.",
+    "FaultMode": "An observable or diagnosable failure state.",
+    "FailureMechanism": "A physical process through which degradation or failure develops.",
+    "Symptom": "An observable qualitative manifestation.",
+    "SignalFeature": "A measured or computed diagnostic feature.",
+    "Cause": "A stated initiating cause that is not merely a component name.",
+    "OperatingCondition": "A load, pressure, temperature, flow, speed, medium, or environmental condition.",
+    "InspectionMethod": "A named diagnostic or inspection method.",
+    "InspectionAction": "A concrete inspection or verification action.",
+    "MaintenanceAction": "A concrete repair, adjustment, cleaning, replacement, or preventive-maintenance action.",
+    "Standard": "A standard, rule, guide, specification, or acceptance criterion.",
+    "Risk": "A stated adverse consequence or risk state."
+  },
+  "node_type_labels_zh": {
+    "Equipment": "设备",
+    "Component": "部件",
+    "FaultMode": "故障模式",
+    "FailureMechanism": "失效机理",
+    "Symptom": "症状",
+    "SignalFeature": "信号特征",
+    "Cause": "原因",
+    "OperatingCondition": "运行工况",
+    "InspectionMethod": "检查方法",
+    "InspectionAction": "检查动作",
+    "MaintenanceAction": "维护动作",
+    "Standard": "标准规范",
+    "Risk": "风险"
+  },
+  "relation_registry": {
+    "contains": {
+      "label_zh": "包含",
+      "canonical_direction": "Equipment_or_Component -> Component",
+      "domain": [
+        "Equipment",
+        "Component"
+      ],
+      "range": [
+        "Component"
+      ],
+      "evidence_roles": [
+        "structural_context"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": false
+    },
+    "located_in": {
+      "label_zh": "位于",
+      "canonical_direction": "Component -> Equipment_or_Component",
+      "domain": [
+        "Component"
+      ],
+      "range": [
+        "Equipment",
+        "Component"
+      ],
+      "evidence_roles": [
+        "structural_context"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": false
+    },
+    "occurs_at": {
+      "label_zh": "发生于",
+      "canonical_direction": "FaultMode_or_FailureMechanism -> Equipment_or_Component",
+      "domain": [
+        "FaultMode",
+        "FailureMechanism"
+      ],
+      "range": [
+        "Equipment",
+        "Component"
+      ],
+      "evidence_roles": [
+        "structural_context"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "causes": {
+      "label_zh": "导致",
+      "canonical_direction": "Cause_or_Mechanism_or_Condition_or_Fault -> Mechanism_or_Fault_or_Symptom_or_Risk",
+      "domain": [
+        "Cause",
+        "FailureMechanism",
+        "OperatingCondition",
+        "FaultMode"
+      ],
+      "range": [
+        "FailureMechanism",
+        "FaultMode",
+        "Symptom",
+        "SignalFeature",
+        "Risk"
+      ],
+      "evidence_roles": [
+        "cause_or_mechanism"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "indicates": {
+      "label_zh": "指示",
+      "canonical_direction": "Symptom_or_SignalFeature -> Cause_or_Mechanism_or_Fault_or_Risk",
+      "domain": [
+        "Symptom",
+        "SignalFeature"
+      ],
+      "range": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "Risk"
+      ],
+      "evidence_roles": [
+        "symptom"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "manifests_as": {
+      "label_zh": "表现为",
+      "canonical_direction": "FaultMode_or_FailureMechanism -> Symptom_or_SignalFeature",
+      "domain": [
+        "FaultMode",
+        "FailureMechanism"
+      ],
+      "range": [
+        "Symptom",
+        "SignalFeature"
+      ],
+      "evidence_roles": [
+        "symptom"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "evolves_to": {
+      "label_zh": "演化为",
+      "canonical_direction": "FaultMode_or_FailureMechanism -> FaultMode_or_FailureMechanism_or_Risk",
+      "domain": [
+        "FaultMode",
+        "FailureMechanism"
+      ],
+      "range": [
+        "FaultMode",
+        "FailureMechanism",
+        "Risk"
+      ],
+      "evidence_roles": [
+        "cause_or_mechanism"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "diagnosed_by": {
+      "label_zh": "诊断方法为",
+      "canonical_direction": "DiagnosticTarget -> InspectionMethod_or_InspectionAction",
+      "domain": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "Symptom",
+        "SignalFeature",
+        "Risk"
+      ],
+      "range": [
+        "InspectionMethod",
+        "InspectionAction"
+      ],
+      "evidence_roles": [
+        "inspection"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "inspected_by": {
+      "label_zh": "检查方法为",
+      "canonical_direction": "Equipment_or_Component_or_DiagnosticTarget -> InspectionMethod_or_InspectionAction",
+      "domain": [
+        "Equipment",
+        "Component",
+        "Cause",
+        "FailureMechanism",
+        "FaultMode"
+      ],
+      "range": [
+        "InspectionMethod",
+        "InspectionAction"
+      ],
+      "evidence_roles": [
+        "inspection"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "mitigated_by": {
+      "label_zh": "缓解措施为",
+      "canonical_direction": "Cause_or_Mechanism_or_Fault_or_Risk -> MaintenanceAction",
+      "domain": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "Risk"
+      ],
+      "range": [
+        "MaintenanceAction"
+      ],
+      "evidence_roles": [
+        "maintenance"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "maintained_by": {
+      "label_zh": "维护方式为",
+      "canonical_direction": "Equipment_or_Component -> MaintenanceAction",
+      "domain": [
+        "Equipment",
+        "Component"
+      ],
+      "range": [
+        "MaintenanceAction"
+      ],
+      "evidence_roles": [
+        "maintenance"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "operates_under": {
+      "label_zh": "运行于",
+      "canonical_direction": "Equipment_or_Component -> OperatingCondition",
+      "domain": [
+        "Equipment",
+        "Component"
+      ],
+      "range": [
+        "OperatingCondition"
+      ],
+      "evidence_roles": [
+        "operating_condition"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": false
+    },
+    "increases_risk_of": {
+      "label_zh": "增加风险",
+      "canonical_direction": "Cause_or_Mechanism_or_Fault_or_Condition -> Risk",
+      "domain": [
+        "Cause",
+        "FailureMechanism",
+        "FaultMode",
+        "OperatingCondition"
+      ],
+      "range": [
+        "Risk"
+      ],
+      "evidence_roles": [
+        "risk"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": true
+    },
+    "specified_by": {
+      "label_zh": "由规范规定",
+      "canonical_direction": "SemanticEntity -> Standard",
+      "domain": [
+        "Equipment",
+        "Component",
+        "FaultMode",
+        "FailureMechanism",
+        "Symptom",
+        "SignalFeature",
+        "Cause",
+        "OperatingCondition",
+        "InspectionMethod",
+        "InspectionAction",
+        "MaintenanceAction",
+        "Risk"
+      ],
+      "range": [
+        "Standard"
+      ],
+      "evidence_roles": [
+        "standard"
+      ],
+      "inverse_storage_allowed": false,
+      "core_diagnostic_relation": false
+    }
+  },
+  "evidence_level_registry": {
+    "E1": {
+      "name": "direct_contiguous_span",
+      "definition": "The complete Claim is supported by a single exact contiguous span on one physical PDF page.",
+      "required_span_mode": "contiguous_text",
+      "visual_layout_check_required": false,
+      "automatic_core_graph_eligibility_possible": true,
+      "coverage_gate_eligibility_possible": true
+    },
+    "E2": {
+      "name": "verified_visual_table_row",
+      "definition": "The complete Claim is supported by verbatim cells in one visually verified table row or one bounded table region on one physical PDF page.",
+      "required_span_mode": "table_cells",
+      "visual_layout_check_required": true,
+      "automatic_core_graph_eligibility_possible": true,
+      "coverage_gate_eligibility_possible": true
+    },
+    "E3": {
+      "name": "same_page_multi_span_composition",
+      "definition": "The Claim requires combining multiple source spans on one page or semantic reconstruction beyond one verified table row.",
+      "required_span_mode": "multi_span",
+      "visual_layout_check_required": true,
+      "automatic_core_graph_eligibility_possible": false,
+      "coverage_gate_eligibility_possible": false
+    }
+  },
+  "normative_policies": {
+    "claim_identity_key": "sha256(schema_major_version + canonical_head_entity_id + canonical_relation + canonical_tail_entity_id)",
+    "assertion_identity_key": "sha256(claim_id + document_id + pdf_page_number + evidence_text_sha256 + source_geometry_checksum_sha256)",
+    "assertion_deduplication_scope": "Only byte-equivalent or canonically equivalent assertions from the same document page and same source geometry may be collapsed.",
+    "cross_document_evidence_merge": "forbidden",
+    "source_family_independence": "Independent-source counts use source_family_id, not file count.",
+    "split_isolation": "Development and held-out assertions may be evaluated but must not satisfy build-set coverage gates or enter build-only indexes.",
+    "silver_naming": "All automatically extracted or partially reviewed benchmark and graph evidence is Silver.",
+    "prohibited_operations": [
+      {
+        "policy_id": "P01_NO_RULE_INJECTION",
+        "rule": "Do not add triples, intermediate mechanisms, symptoms, causes, or maintenance actions that are not supported by the recorded source evidence.",
+        "enforcement": "reject_assertion"
+      },
+      {
+        "policy_id": "P02_NO_RETROACTIVE_PROVENANCE_BACKFILL",
+        "rule": "Do not construct a semantic edge first and later infer its document, page, quotation, or URL from matching entity pairs.",
+        "enforcement": "reject_claim_release"
+      },
+      {
+        "policy_id": "P03_NO_DEGREE_BASED_EVIDENCE_DELETION",
+        "rule": "Do not delete an otherwise valid assertion or Claim because its graph degree is low.",
+        "enforcement": "build_audit_failure"
+      },
+      {
+        "policy_id": "P04_NO_FREQUENCY_DIRECTION_RESOLUTION",
+        "rule": "Do not choose relation direction by occurrence frequency. Direction must follow the relation registry and the source semantics.",
+        "enforcement": "reject_assertion"
+      },
+      {
+        "policy_id": "P05_NO_FORCED_DAG",
+        "rule": "Do not delete valid edges merely to force the released evidence graph to be acyclic.",
+        "enforcement": "build_audit_failure"
+      },
+      {
+        "policy_id": "P06_NO_UNCONSTRAINED_VECTOR_MERGE",
+        "rule": "Do not automatically merge entities solely because embedding similarity exceeds a threshold. Vector similarity may only nominate same-type alias candidates for review.",
+        "enforcement": "normalization_audit_failure"
+      },
+      {
+        "policy_id": "P07_NO_PARALLEL_SOURCE_LOSS",
+        "rule": "Do not collapse independently sourced EvidenceAssertion records into one source-less edge.",
+        "enforcement": "build_audit_failure"
+      },
+      {
+        "policy_id": "P08_NO_INFERRED_CORE_EVIDENCE",
+        "rule": "Inferred or reconstructed edges may be retained only as excluded context and may not enter the core graph or a coverage gate.",
+        "enforcement": "set_core_and_coverage_eligibility_false"
+      },
+      {
+        "policy_id": "P09_NO_TRANSLATED_EVIDENCE_REPLACEMENT",
+        "rule": "Never replace raw source surfaces or evidence_text with a Chinese translation. Optional translations are non-evidentiary reading aids only.",
+        "enforcement": "reject_assertion"
+      },
+      {
+        "policy_id": "P10_CHINESE_CANONICAL_RELEASE_GATE",
+        "rule": "Every released CanonicalEntity must have a Chinese canonical label and an approved terminology or translation status. Model translation alone is insufficient.",
+        "enforcement": "reject_entity_release"
+      }
+    ]
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest",
+    "documents",
+    "entities",
+    "claims",
+    "evidence_assertions"
+  ],
+  "properties": {
+    "manifest": {
+      "$ref": "#/$defs/GraphBuildManifest"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/DocumentSource"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/CanonicalEntity"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Claim"
+      }
+    },
+    "evidence_assertions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/EvidenceAssertion"
+      }
+    }
+  },
+  "$defs": {
+    "Sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "SourceLanguage": {
+      "type": "string",
+      "enum": [
+        "en",
+        "zh",
+        "multilingual",
+        "und"
+      ]
+    },
+    "SemanticEntityType": {
+      "type": "string",
+      "enum": [
+        "Equipment",
+        "Component",
+        "FaultMode",
+        "FailureMechanism",
+        "Symptom",
+        "SignalFeature",
+        "Cause",
+        "OperatingCondition",
+        "InspectionMethod",
+        "InspectionAction",
+        "MaintenanceAction",
+        "Standard",
+        "Risk"
+      ]
+    },
+    "CanonicalRelation": {
+      "type": "string",
+      "enum": [
+        "contains",
+        "located_in",
+        "occurs_at",
+        "causes",
+        "indicates",
+        "manifests_as",
+        "evolves_to",
+        "diagnosed_by",
+        "inspected_by",
+        "mitigated_by",
+        "maintained_by",
+        "operates_under",
+        "increases_risk_of",
+        "specified_by"
+      ]
+    },
+    "EvidenceRole": {
+      "type": "string",
+      "enum": [
+        "symptom",
+        "cause_or_mechanism",
+        "inspection",
+        "maintenance",
+        "structural_context",
+        "operating_condition",
+        "risk",
+        "standard"
+      ]
+    },
+    "DocumentSplit": {
+      "type": "string",
+      "enum": [
+        "build_train",
+        "development",
+        "held_out_test"
+      ]
+    },
+    "DocumentSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "title",
+        "publisher",
+        "source_family_id",
+        "source_url",
+        "local_file",
+        "document_sha256",
+        "document_split",
+        "document_language",
+        "language_detection_method",
+        "pump_type",
+        "service",
+        "applicability_scope",
+        "retrieved_at",
+        "source_metadata_version",
+        "metadata_checksum_sha256"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "local_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "document_split": {
+          "$ref": "#/$defs/DocumentSplit"
+        },
+        "document_language": {
+          "$ref": "#/$defs/SourceLanguage"
+        },
+        "language_detection_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pump_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service": {
+          "type": "string",
+          "minLength": 1
+        },
+        "applicability_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication_date": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_tier": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "license_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_metadata_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metadata_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      }
+    },
+    "CanonicalEntity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_id",
+        "canonical_label",
+        "entity_type",
+        "language",
+        "aliases",
+        "source_forms",
+        "terminology_id",
+        "terminology_version",
+        "translation_method",
+        "translation_status",
+        "normalization_method",
+        "normalization_version",
+        "normalization_status",
+        "entity_checksum_sha256"
+      ],
+      "properties": {
+        "entity_id": {
+          "type": "string",
+          "pattern": "^MPE-[A-Za-z0-9._:-]+$"
+        },
+        "canonical_label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "[㐀-䶿一-鿿豈-﫿]",
+          "description": "Released semantic-layer label. It must be a Chinese canonical term and must never replace source-language evidence text."
+        },
+        "entity_type": {
+          "$ref": "#/$defs/SemanticEntityType"
+        },
+        "language": {
+          "type": "string",
+          "const": "zh"
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "source_forms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "surface",
+              "language",
+              "assertion_ids"
+            ],
+            "properties": {
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "language": {
+                "type": "string",
+                "enum": [
+                  "en",
+                  "zh",
+                  "multilingual",
+                  "und"
+                ]
+              },
+              "assertion_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "pattern": "^MPA-[A-Za-z0-9._:-]+$"
+                },
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        "terminology_id": {
+          "type": "string",
+          "pattern": "^MPTERM-[A-Za-z0-9._:-]+$"
+        },
+        "terminology_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "translation_method": {
+          "type": "string",
+          "enum": [
+            "source_zh_exact",
+            "type_scoped_dictionary",
+            "secondary_ai_verified",
+            "human_reviewed"
+          ]
+        },
+        "translation_status": {
+          "type": "string",
+          "enum": [
+            "source_zh_exact",
+            "dictionary_approved",
+            "secondary_ai_verified",
+            "human_approved"
+          ]
+        },
+        "normalization_method": {
+          "type": "string",
+          "enum": [
+            "exact",
+            "type_scoped_dictionary",
+            "reviewed_alias_candidate",
+            "reviewed_cross_language_mapping"
+          ]
+        },
+        "normalization_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalization_status": {
+          "type": "string",
+          "enum": [
+            "auto_exact",
+            "dictionary_approved",
+            "reviewed_approved",
+            "needs_review"
+          ]
+        },
+        "source_assertion_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^MPA-[A-Za-z0-9._:-]+$"
+          },
+          "uniqueItems": true
+        },
+        "entity_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "head_entity_id",
+        "head_entity_type",
+        "relation",
+        "tail_entity_id",
+        "tail_entity_type",
+        "claim_key_sha256",
+        "claim_schema_version",
+        "evidence_assertion_ids",
+        "independent_document_count",
+        "independent_source_family_count",
+        "release_status",
+        "claim_checksum_sha256"
+      ],
+      "properties": {
+        "claim_id": {
+          "type": "string",
+          "pattern": "^MPC-[A-Za-z0-9._:-]+$"
+        },
+        "head_entity_id": {
+          "type": "string",
+          "pattern": "^MPE-[A-Za-z0-9._:-]+$"
+        },
+        "head_entity_type": {
+          "$ref": "#/$defs/SemanticEntityType"
+        },
+        "relation": {
+          "$ref": "#/$defs/CanonicalRelation"
+        },
+        "tail_entity_id": {
+          "type": "string",
+          "pattern": "^MPE-[A-Za-z0-9._:-]+$"
+        },
+        "tail_entity_type": {
+          "$ref": "#/$defs/SemanticEntityType"
+        },
+        "claim_key_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "claim_schema_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_assertion_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^MPA-[A-Za-z0-9._:-]+$"
+          },
+          "uniqueItems": true
+        },
+        "independent_document_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "independent_source_family_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "release_status": {
+          "type": "string",
+          "enum": [
+            "core_silver",
+            "candidate_needs_review",
+            "context_only",
+            "rejected"
+          ]
+        },
+        "fault_class_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "claim_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      }
+    },
+    "SourceGeometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "span_mode",
+        "source_geometry_checksum_sha256"
+      ],
+      "properties": {
+        "span_mode": {
+          "type": "string",
+          "enum": [
+            "contiguous_text",
+            "table_cells",
+            "multi_span"
+          ]
+        },
+        "char_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "char_end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "table_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "row_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "column_names": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "cell_texts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "bounding_boxes": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "component_spans": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "text_sha256"
+            ],
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text_sha256": {
+                "$ref": "#/$defs/Sha256"
+              },
+              "char_start": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "char_end": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "bounding_box": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              }
+            }
+          }
+        },
+        "source_geometry_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      }
+    },
+    "EvidenceAssertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assertion_id",
+        "claim_id",
+        "raw_head",
+        "raw_head_language",
+        "raw_head_type",
+        "raw_relation",
+        "raw_tail",
+        "raw_tail_language",
+        "raw_tail_type",
+        "source_language",
+        "document_id",
+        "document_split",
+        "publisher",
+        "source_family_id",
+        "source_url",
+        "document_sha256",
+        "pdf_page_number",
+        "printed_page_label",
+        "printed_page_label_status",
+        "page_text_sha256",
+        "evidence_text",
+        "evidence_text_sha256",
+        "evidence_level",
+        "evidence_role",
+        "source_geometry",
+        "visual_layout_checked",
+        "inferred_edge",
+        "eligible_for_core_graph",
+        "eligible_for_coverage_gate",
+        "model_confidence",
+        "validation_status",
+        "review_status",
+        "extraction_run_id",
+        "model_id",
+        "prompt_version",
+        "parser_version",
+        "postprocessor_version",
+        "validator_version",
+        "schema_version",
+        "created_at",
+        "assertion_content_sha256"
+      ],
+      "properties": {
+        "assertion_id": {
+          "type": "string",
+          "pattern": "^MPA-[A-Za-z0-9._:-]+$"
+        },
+        "claim_id": {
+          "type": "string",
+          "pattern": "^MPC-[A-Za-z0-9._:-]+$"
+        },
+        "raw_head": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_head_language": {
+          "$ref": "#/$defs/SourceLanguage"
+        },
+        "raw_head_type": {
+          "$ref": "#/$defs/SemanticEntityType"
+        },
+        "raw_relation": {
+          "$ref": "#/$defs/CanonicalRelation"
+        },
+        "raw_tail": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_tail_language": {
+          "$ref": "#/$defs/SourceLanguage"
+        },
+        "raw_tail_type": {
+          "$ref": "#/$defs/SemanticEntityType"
+        },
+        "source_language": {
+          "$ref": "#/$defs/SourceLanguage"
+        },
+        "document_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document_split": {
+          "$ref": "#/$defs/DocumentSplit"
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "document_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "pdf_page_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "printed_page_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "printed_page_label_status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "absent_on_page",
+            "not_applicable"
+          ]
+        },
+        "page_text_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "evidence_text": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Verbatim source text. Paraphrases and model-completed text are forbidden."
+        },
+        "evidence_translation_zh": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Optional Chinese reading aid. It is non-evidentiary and may not participate in span matching, relation entailment, hashes, or coverage counts."
+        },
+        "evidence_translation_non_evidentiary": {
+          "type": "boolean",
+          "const": true
+        },
+        "evidence_text_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "evidence_level": {
+          "type": "string",
+          "enum": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        },
+        "evidence_role": {
+          "$ref": "#/$defs/EvidenceRole"
+        },
+        "source_geometry": {
+          "$ref": "#/$defs/SourceGeometry"
+        },
+        "visual_layout_checked": {
+          "type": "boolean"
+        },
+        "inferred_edge": {
+          "type": "boolean"
+        },
+        "eligible_for_core_graph": {
+          "type": "boolean"
+        },
+        "eligible_for_coverage_gate": {
+          "type": "boolean"
+        },
+        "model_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "validation_status": {
+          "type": "string",
+          "enum": [
+            "accepted_silver",
+            "candidate_needs_review",
+            "context_only_reviewed",
+            "rejected"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "not_reviewed",
+            "secondary_ai_reviewed",
+            "human_spot_checked",
+            "human_approved",
+            "rejected"
+          ]
+        },
+        "validation_checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "required_fields_valid": {
+              "type": "boolean"
+            },
+            "relation_domain_range_valid": {
+              "type": "boolean"
+            },
+            "canonical_direction_valid": {
+              "type": "boolean"
+            },
+            "evidence_span_valid": {
+              "type": "boolean"
+            },
+            "page_locator_valid": {
+              "type": "boolean"
+            },
+            "source_url_valid": {
+              "type": "boolean"
+            },
+            "document_hash_valid": {
+              "type": "boolean"
+            },
+            "split_valid": {
+              "type": "boolean"
+            },
+            "source_family_valid": {
+              "type": "boolean"
+            },
+            "semantic_entailment_valid": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "canonical_zh_valid": {
+              "type": "boolean"
+            },
+            "translation_alignment_valid": {
+              "type": "boolean"
+            },
+            "protected_terms_valid": {
+              "type": "boolean"
+            }
+          }
+        },
+        "extraction_run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parser_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "postprocessor_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "validator_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_version": {
+          "type": "string",
+          "const": "marine_pump_provenance_v2.1.0"
+        },
+        "normalization_actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rejection_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "assertion_content_sha256": {
+          "$ref": "#/$defs/Sha256"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "evidence_translation_zh"
+            ]
+          },
+          "then": {
+            "required": [
+              "evidence_translation_non_evidentiary"
+            ],
+            "properties": {
+              "evidence_translation_non_evidentiary": {
+                "const": true
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_level": {
+                "const": "E1"
+              }
+            },
+            "required": [
+              "evidence_level"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_geometry": {
+                "properties": {
+                  "span_mode": {
+                    "const": "contiguous_text"
+                  }
+                },
+                "required": [
+                  "char_start",
+                  "char_end"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_level": {
+                "const": "E2"
+              }
+            },
+            "required": [
+              "evidence_level"
+            ]
+          },
+          "then": {
+            "properties": {
+              "visual_layout_checked": {
+                "const": true
+              },
+              "source_geometry": {
+                "properties": {
+                  "span_mode": {
+                    "const": "table_cells"
+                  }
+                },
+                "required": [
+                  "table_id",
+                  "row_id",
+                  "column_names",
+                  "cell_texts",
+                  "bounding_boxes"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_level": {
+                "const": "E3"
+              }
+            },
+            "required": [
+              "evidence_level"
+            ]
+          },
+          "then": {
+            "properties": {
+              "visual_layout_checked": {
+                "const": true
+              },
+              "eligible_for_core_graph": {
+                "const": false
+              },
+              "eligible_for_coverage_gate": {
+                "const": false
+              },
+              "validation_status": {
+                "enum": [
+                  "candidate_needs_review",
+                  "context_only_reviewed",
+                  "rejected"
+                ]
+              },
+              "source_geometry": {
+                "properties": {
+                  "span_mode": {
+                    "const": "multi_span"
+                  }
+                },
+                "required": [
+                  "component_spans"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "inferred_edge": {
+                "const": true
+              }
+            },
+            "required": [
+              "inferred_edge"
+            ]
+          },
+          "then": {
+            "properties": {
+              "eligible_for_core_graph": {
+                "const": false
+              },
+              "eligible_for_coverage_gate": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "document_split": {
+                "enum": [
+                  "development",
+                  "held_out_test"
+                ]
+              }
+            },
+            "required": [
+              "document_split"
+            ]
+          },
+          "then": {
+            "properties": {
+              "eligible_for_core_graph": {
+                "const": false
+              },
+              "eligible_for_coverage_gate": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "validation_status": {
+                "enum": [
+                  "candidate_needs_review",
+                  "context_only_reviewed",
+                  "rejected"
+                ]
+              }
+            },
+            "required": [
+              "validation_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "eligible_for_core_graph": {
+                "const": false
+              },
+              "eligible_for_coverage_gate": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "validation_status": {
+                "const": "accepted_silver"
+              }
+            },
+            "required": [
+              "validation_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "evidence_level": {
+                "enum": [
+                  "E1",
+                  "E2"
+                ]
+              },
+              "inferred_edge": {
+                "const": false
+              },
+              "validation_checks": {
+                "properties": {
+                  "required_fields_valid": {
+                    "const": true
+                  },
+                  "relation_domain_range_valid": {
+                    "const": true
+                  },
+                  "canonical_direction_valid": {
+                    "const": true
+                  },
+                  "evidence_span_valid": {
+                    "const": true
+                  },
+                  "page_locator_valid": {
+                    "const": true
+                  },
+                  "source_url_valid": {
+                    "const": true
+                  },
+                  "document_hash_valid": {
+                    "const": true
+                  },
+                  "split_valid": {
+                    "const": true
+                  },
+                  "source_family_valid": {
+                    "const": true
+                  },
+                  "semantic_entailment_valid": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "required_fields_valid",
+                  "relation_domain_range_valid",
+                  "canonical_direction_valid",
+                  "evidence_span_valid",
+                  "page_locator_valid",
+                  "source_url_valid",
+                  "document_hash_valid",
+                  "split_valid",
+                  "source_family_valid",
+                  "semantic_entailment_valid"
+                ]
+              }
+            },
+            "required": [
+              "validation_checks"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "eligible_for_core_graph": {
+                "const": true
+              }
+            },
+            "required": [
+              "eligible_for_core_graph"
+            ]
+          },
+          "then": {
+            "properties": {
+              "document_split": {
+                "const": "build_train"
+              },
+              "validation_status": {
+                "const": "accepted_silver"
+              },
+              "evidence_level": {
+                "enum": [
+                  "E1",
+                  "E2"
+                ]
+              },
+              "inferred_edge": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "eligible_for_coverage_gate": {
+                "const": true
+              }
+            },
+            "required": [
+              "eligible_for_coverage_gate"
+            ]
+          },
+          "then": {
+            "properties": {
+              "document_split": {
+                "const": "build_train"
+              },
+              "validation_status": {
+                "const": "accepted_silver"
+              },
+              "evidence_level": {
+                "enum": [
+                  "E1",
+                  "E2"
+                ]
+              },
+              "inferred_edge": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "IndexManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index_id",
+        "index_version",
+        "graph_version",
+        "schema_version",
+        "index_kind",
+        "cpu_compatible",
+        "immutable",
+        "source_graph_checksum_sha256",
+        "node_order_checksum_sha256",
+        "id_map_checksum_sha256",
+        "index_checksum_sha256",
+        "built_at"
+      ],
+      "properties": {
+        "index_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "index_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "graph_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_version": {
+          "type": "string",
+          "const": "marine_pump_provenance_v2.1.0"
+        },
+        "index_kind": {
+          "type": "string",
+          "enum": [
+            "typed_lexical",
+            "typed_vector",
+            "typed_adjacency",
+            "claim_to_assertion",
+            "source_lookup",
+            "page_lookup"
+          ]
+        },
+        "cpu_compatible": {
+          "type": "boolean",
+          "const": true
+        },
+        "immutable": {
+          "type": "boolean",
+          "const": true
+        },
+        "target_entity_types": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SemanticEntityType"
+          },
+          "uniqueItems": true
+        },
+        "embedding_model_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "embedding_model_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "embedding_dimension": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "vector_dtype": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "float32",
+            "float16",
+            "int8",
+            null
+          ]
+        },
+        "distance_metric": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "cosine",
+            "inner_product",
+            "l2",
+            null
+          ]
+        },
+        "source_graph_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "node_order_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "edge_order_checksum_sha256": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "adjacency_checksum_sha256": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "embedding_matrix_checksum_sha256": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Sha256"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id_map_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "index_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "built_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "GraphBuildManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "build_id",
+        "graph_version",
+        "schema_version",
+        "built_at",
+        "build_split",
+        "graph_display_language",
+        "terminology_version",
+        "translation_policy_version",
+        "canonical_order_version",
+        "document_table_checksum_sha256",
+        "entity_table_checksum_sha256",
+        "claim_table_checksum_sha256",
+        "assertion_table_checksum_sha256",
+        "graph_topology_checksum_sha256",
+        "package_checksum_sha256",
+        "index_manifests"
+      ],
+      "properties": {
+        "build_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "graph_version": {
+          "type": "string",
+          "pattern": "^marine_pump_graph_v[0-9]+(\\.[0-9]+){0,2}$"
+        },
+        "schema_version": {
+          "type": "string",
+          "const": "marine_pump_provenance_v2.1.0"
+        },
+        "built_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "build_split": {
+          "type": "string",
+          "const": "build_train"
+        },
+        "graph_display_language": {
+          "type": "string",
+          "const": "zh-CN"
+        },
+        "terminology_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "translation_policy_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_order_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document_table_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "entity_table_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "claim_table_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "assertion_table_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "graph_topology_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "package_checksum_sha256": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "index_manifests": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/IndexManifest"
+          }
+        }
+      }
+    }
+  }
+}

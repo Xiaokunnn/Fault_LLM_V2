@@ -1,0 +1,59 @@
+{
+  "page_key": "MP001:p0104",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8d9aeb3f-22c9-96c5-b0e9-b758d8cbd1b7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 481,
+    "prompt_tokens": 1799,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2280
+  },
+  "latency_ms": 6405,
+  "attempt": 1,
+  "prompt_sha256": "6ec33d54dbf4d411761e6d68a5d87bc5b3284d552427e0548638f5da2bb11712",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Audio Inspections",
+        "head_canonical_zh": "听觉检查",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "poor mechanical equipment alignment",
+        "tail_canonical_zh": "机械设备对中不良",
+        "tail_type": "FaultMode",
+        "evidence_text": "The monitoring of machinery and equipment by listening to it operate helps identify a broad range of potential problems, including worn high-friction bearings, steam leaks, pressure relief valve leaks or discharges, coupling leaks, excessive loading on pumps, poor mechanical equipment alignment, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Visual Inspection",
+        "head_canonical_zh": "目视检查",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "loose or worn parts",
+        "tail_canonical_zh": "零件松动或磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Human observation helps identify a broad range of potential problems, including loose or worn parts; leaks of lubricating oils, hydraulic fluids and process liquids; missing parts; poor electrical or pipe connections; etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

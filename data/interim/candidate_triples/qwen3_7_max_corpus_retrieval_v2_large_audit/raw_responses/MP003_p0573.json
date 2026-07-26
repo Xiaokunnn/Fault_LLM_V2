@@ -1,0 +1,78 @@
+{
+  "page_key": "MP003:p0573",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-22789361-b759-91c7-81f0-df9a4393a0a5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 670,
+    "prompt_tokens": 2209,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2879
+  },
+  "latency_ms": 10344,
+  "attempt": 1,
+  "prompt_sha256": "97ea938fe558a1ad3946eeb17948dbbca4661e323fda3eaaf9cac974e9d97b8a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "control valves",
+        "head_canonical_zh": "控制阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "accessible at all times for maintenance",
+        "tail_canonical_zh": "随时可接近进行维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the control valves required in the branches from the bilge main are to be accessible at all times for maintenance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "single control valve failure",
+        "head_canonical_zh": "单个控制阀故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "disable the bilge pumping capability from any one space",
+        "tail_canonical_zh": "导致任一舱室舱底泵送能力丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "any single control valve failure will not disable the bilge pumping capability from any one space",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bilge lines leading into the machinery space",
+        "head_canonical_zh": "通往机舱的舱底管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "blanked off or closed off by lockable valves",
+        "tail_canonical_zh": "用盲板隔断或用可锁阀门关闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the bilge lines leading into the machinery space are to be blanked off or closed off by lockable valves",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

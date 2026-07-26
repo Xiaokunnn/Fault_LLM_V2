@@ -1,0 +1,89 @@
+{
+  "page_key": "MP003:p0960",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-58bb6b99-bbfd-9e75-943f-badc162fe257",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 776,
+    "prompt_tokens": 30370,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 31146
+  },
+  "latency_ms": 11262,
+  "attempt": 1,
+  "prompt_sha256": "cb40cc8d7eadd5a7cdf70a54aaf43461a524d5310741fa30dff152adb311438c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Vibration level – high",
+        "head_canonical_zh": "振动水平高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Turbine",
+        "tail_canonical_zh": "涡轮机",
+        "tail_type": "Equipment",
+        "evidence_text": "Turbine W1 Vibration level – high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0960:t00:r001:c00",
+          "MP003:p0960:t00:r001:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rotor axial displacement – large",
+        "head_canonical_zh": "转子轴向位移大",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Turbine",
+        "tail_canonical_zh": "涡轮机",
+        "tail_type": "Equipment",
+        "evidence_text": "W2 Rotor axial displacement – large x x Auto shutdown may be omitted for rotors fitted with roller bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0960:t00:r002:c02",
+          "MP003:p0960:t00:r001:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Feed water pump pressure - low",
+        "head_canonical_zh": "给水泵压力低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Feed water",
+        "tail_canonical_zh": "给水系统",
+        "tail_type": "Equipment",
+        "evidence_text": "A4 Feed water pump pressure - low x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0960:t01:r005:c02",
+          "MP003:p0960:t01:r002:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "version": "marine_pump_gap_repair_page_plan_v1",
+  "frozen_from_coverage_sha256": "2d813b80721f74dfcf706e6bbc2aac5c561a8b134ff85d05959e521765fd464f",
+  "frozen_from_records_sha256": "4fedd25b775b95ff311acce26df450484e2352364f670fada987d5821ceace85",
+  "frozen_from_pool_sha256": "eca78af5390fba2694f9b2e9ef1f64ba9ff0e5b69050139ad9764b0bfbac44c4",
+  "failed_fault_classes": [
+    "cavitation",
+    "air_ingress_or_loss_of_prime",
+    "mechanical_seal_failure",
+    "motor_electrical_drive_failure",
+    "pipe_or_valve_integrity_failure",
+    "dry_running_or_maintenance_induced_failure"
+  ],
+  "missing_roles": {
+    "cavitation": [
+      "inspection",
+      "maintenance"
+    ],
+    "air_ingress_or_loss_of_prime": [
+      "inspection",
+      "maintenance"
+    ],
+    "mechanical_seal_failure": [
+      "symptom"
+    ],
+    "motor_electrical_drive_failure": [
+      "inspection",
+      "maintenance"
+    ],
+    "pipe_or_valve_integrity_failure": [
+      "inspection",
+      "maintenance"
+    ],
+    "dry_running_or_maintenance_induced_failure": [
+      "inspection",
+      "maintenance",
+      "symptom"
+    ]
+  },
+  "candidate_pages": 82,
+  "pages_by_document": {
+    "MP001": 1,
+    "MP003": 7,
+    "MP004": 4,
+    "MP005": 22,
+    "MP007": 2,
+    "MP015": 6,
+    "MP016": 10,
+    "MP017": 8,
+    "MP018": 8,
+    "MP019": 2,
+    "MP020": 6,
+    "MP021": 6
+  },
+  "pages_by_fault_class": {
+    "cavitation": 28,
+    "air_ingress_or_loss_of_prime": 20,
+    "mechanical_seal_failure": 32,
+    "motor_electrical_drive_failure": 15,
+    "pipe_or_valve_integrity_failure": 19,
+    "dry_running_or_maintenance_induced_failure": 22
+  },
+  "table_reparse_pages": [
+    "MP004:11",
+    "MP005:60",
+    "MP015:32",
+    "MP016:5",
+    "MP017:13",
+    "MP018:26",
+    "MP019:19",
+    "MP019:20",
+    "MP020:22",
+    "MP020:26"
+  ],
+  "table_reparse_page_count": 10,
+  "selection_policy": [
+    "all wide-recall pages matching a failed role",
+    "all non-Silver candidates already mapped to a failed role",
+    "curated explicit troubleshooting/correction pages from source intake",
+    "no pages from the four already-passing classes solely for their passed roles"
+  ],
+  "label_policy": "Silver only; never Gold"
+}

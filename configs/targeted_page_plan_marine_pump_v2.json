@@ -1,0 +1,173 @@
+{
+  "version": "marine_pump_targeted_page_plan_v2",
+  "status": "frozen_before_targeted_extraction",
+  "created_at": "2026-07-25",
+  "split_version": "marine_pump_document_split_v2",
+  "ontology_version": "marine_pump_fault_ontology_v1_2",
+  "selection_policy": {
+    "lexical_hits_are_page_location_hints_only": true,
+    "lexical_hits_are_not_silver_evidence": true,
+    "priority_order": [
+      "inspection_or_maintenance_gap",
+      "zero_coverage_fault_classes",
+      "second_source_family",
+      "cross_layout_validation"
+    ],
+    "bulk_graph_construction_authorized": false
+  },
+  "phase_1_pages": [
+    {
+      "doc_id": "MP001",
+      "pdf_page": 53,
+      "target_fault_classes": ["cavitation", "bearing_or_lubrication_failure"],
+      "target_evidence_roles": ["symptom", "inspection"],
+      "scope_note": "ABS监测证据；只有原文明示泵或可迁移旋转机械关系时保留"
+    },
+    {
+      "doc_id": "MP001",
+      "pdf_page": 55,
+      "target_fault_classes": ["pump_motor_misalignment"],
+      "target_evidence_roles": ["symptom", "inspection"],
+      "scope_note": "不得把正常alignment check误映射为misalignment"
+    },
+    {
+      "doc_id": "MP001",
+      "pdf_page": 57,
+      "target_fault_classes": ["cavitation", "bearing_or_lubrication_failure", "pump_motor_misalignment"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism", "inspection"]
+    },
+    {
+      "doc_id": "MP001",
+      "pdf_page": 69,
+      "target_fault_classes": ["mechanical_seal_failure"],
+      "target_evidence_roles": ["symptom", "inspection"]
+    },
+    {
+      "doc_id": "MP002",
+      "pdf_page": 94,
+      "target_fault_classes": ["motor_electrical_drive_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP002",
+      "pdf_page": 100,
+      "target_fault_classes": ["hydraulic_blockage", "mechanical_seal_failure", "pipe_or_valve_integrity_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP002",
+      "pdf_page": 126,
+      "target_fault_classes": ["bearing_or_lubrication_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP002",
+      "pdf_page": 130,
+      "target_fault_classes": ["pump_motor_misalignment"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP004",
+      "pdf_page": 10,
+      "target_fault_classes": ["cavitation", "impeller_or_wear_part_damage", "motor_electrical_drive_failure"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP004",
+      "pdf_page": 11,
+      "target_fault_classes": ["air_ingress_or_loss_of_prime", "hydraulic_blockage", "pipe_or_valve_integrity_failure"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP004",
+      "pdf_page": 12,
+      "target_fault_classes": ["cavitation", "air_ingress_or_loss_of_prime", "pump_motor_misalignment", "pipe_or_valve_integrity_failure"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP004",
+      "pdf_page": 13,
+      "target_fault_classes": ["hydraulic_blockage", "mechanical_seal_failure", "bearing_or_lubrication_failure"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 51,
+      "target_fault_classes": ["motor_electrical_drive_failure", "dry_running_or_maintenance_induced_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 54,
+      "target_fault_classes": ["mechanical_seal_failure", "bearing_or_lubrication_failure"],
+      "target_evidence_roles": ["inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 60,
+      "target_fault_classes": ["cavitation", "air_ingress_or_loss_of_prime", "hydraulic_blockage", "impeller_or_wear_part_damage", "motor_electrical_drive_failure", "pipe_or_valve_integrity_failure"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 61,
+      "target_fault_classes": ["cavitation", "mechanical_seal_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 65,
+      "target_fault_classes": ["hydraulic_blockage", "mechanical_seal_failure", "bearing_or_lubrication_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP005",
+      "pdf_page": 67,
+      "target_fault_classes": ["mechanical_seal_failure", "bearing_or_lubrication_failure", "dry_running_or_maintenance_induced_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"]
+    },
+    {
+      "doc_id": "MP015",
+      "pdf_page": 30,
+      "target_fault_classes": ["cavitation", "motor_electrical_drive_failure"],
+      "target_evidence_roles": ["symptom", "inspection_or_maintenance"],
+      "scope_note": "物理页30/印刷页28；直接维护与噪声段落"
+    },
+    {
+      "doc_id": "MP015",
+      "pdf_page": 31,
+      "target_fault_classes": ["air_ingress_or_loss_of_prime", "bearing_or_lubrication_failure", "motor_electrical_drive_failure", "dry_running_or_maintenance_induced_failure"],
+      "target_evidence_roles": ["symptom"],
+      "scope_note": "Table 4仅给出原因编号；跨页原因连接默认待复核且不补覆盖门槛"
+    },
+    {
+      "doc_id": "MP015",
+      "pdf_page": 32,
+      "target_fault_classes": ["air_ingress_or_loss_of_prime", "hydraulic_blockage", "impeller_or_wear_part_damage", "mechanical_seal_failure", "bearing_or_lubrication_failure", "pipe_or_valve_integrity_failure"],
+      "target_evidence_roles": ["cause_or_mechanism"],
+      "scope_note": "Table 5只解析独立原因单元；不得脱离Table 4编造特定故障关系"
+    },
+    {
+      "doc_id": "MP016",
+      "pdf_page": 3,
+      "target_fault_classes": ["cavitation", "impeller_or_wear_part_damage"],
+      "target_evidence_roles": ["symptom", "cause_or_mechanism"],
+      "scope_note": "仅适用于船用发动机冷却柔性叶轮泵"
+    },
+    {
+      "doc_id": "MP016",
+      "pdf_page": 4,
+      "target_fault_classes": ["cavitation", "hydraulic_blockage", "mechanical_seal_failure", "pump_motor_misalignment", "dry_running_or_maintenance_induced_failure"],
+      "target_evidence_roles": ["cause_or_mechanism", "inspection_or_maintenance"],
+      "scope_note": "双栏页面必须使用坐标文本块，禁止跨栏拼句"
+    },
+    {
+      "doc_id": "MP016",
+      "pdf_page": 5,
+      "target_fault_classes": ["impeller_or_wear_part_damage", "mechanical_seal_failure", "bearing_or_lubrication_failure", "pipe_or_valve_integrity_failure", "dry_running_or_maintenance_induced_failure"],
+      "target_evidence_roles": ["symptom", "inspection_or_maintenance"],
+      "scope_note": "周期检查维护证据优先；保留柔性叶轮泵适用范围"
+    }
+  ],
+  "phase_1_page_count": 24
+}

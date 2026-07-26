@@ -1,0 +1,153 @@
+{
+  "page_key": "MP004:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-91b3e6b3-d96b-9a4d-bb99-6c951f13006c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1576,
+    "prompt_tokens": 1936,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3512
+  },
+  "latency_ms": 19915,
+  "attempt": 1,
+  "prompt_sha256": "8887640983412d42b1b194bfa71305a571b20f4f2c7b3177de3e566275a297e8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing has been filled with liquid",
+        "head_canonical_zh": "泵壳未充液",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "will not function",
+        "tail_canonical_zh": "泵无法运行",
+        "tail_type": "Symptom",
+        "evidence_text": "A self-priming centrifugal pump will not function until the pump casing has been filled with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "run dry",
+        "head_canonical_zh": "干运转",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "the pump must never run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps)",
+        "head_canonical_zh": "关阀运行超时或超温",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "steam explosion",
+        "tail_canonical_zh": "蒸汽爆炸",
+        "tail_type": "Risk",
+        "evidence_text": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps). Otherwise there is a risk of damage to the pump and, at worst, of a steam explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "considerably smaller delivery head than expected",
+        "head_canonical_zh": "实际扬程远低于预期",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "heavy erosion",
+        "tail_canonical_zh": "严重冲蚀",
+        "tail_type": "Symptom",
+        "evidence_text": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion) which may at times render an impeller unfit for use in a very short time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "measuring the current intensity of the connected motor",
+        "head_canonical_zh": "测量电机电流",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "quantity of liquid delivered",
+        "tail_canonical_zh": "液体输送量",
+        "tail_type": "SignalFeature",
+        "evidence_text": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "reading of the differential pressure",
+        "head_canonical_zh": "读取压差",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "quantity of water delivered",
+        "tail_canonical_zh": "输水量",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Together with a reading of the differential pressure the quantity of water delivered can be determined against the characteristics of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

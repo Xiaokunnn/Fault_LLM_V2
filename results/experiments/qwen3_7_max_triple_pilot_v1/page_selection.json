@@ -1,0 +1,108 @@
+{
+  "selection_version": "representative_page_selection_v1",
+  "created_at": "2026-07-23T17:35:22.731Z",
+  "config_version": "triple_extraction_qwen3_7_max_pilot_v1",
+  "split_version": "marine_pump_document_split_pilot_v1",
+  "method": "Frozen four-document representative-page pilot plan, chosen after lexical/table screening and visual layout review.",
+  "documents": [
+    {
+      "doc_id": "MP001",
+      "title": "Guidance Notes on Equipment Condition Monitoring Techniques",
+      "publisher": "ABS",
+      "split": "build_train",
+      "parsed_pages": 122,
+      "manifest_pages": 122,
+      "page_count_matches_manifest": true,
+      "selected_pages": [
+        {
+          "pdf_page_number": 52,
+          "page_or_section": "PDF p. 52",
+          "text_sha256": "fd9cb74797d6033c75c4f436e6f701f4057ddeea72cdf2f4bb9f79d1510ad48d",
+          "score": 39.5,
+          "fault_hits": {
+            "bearing_or_lubrication_failure": 4,
+            "dry_running_or_maintenance_induced_failure": 1
+          },
+          "cue_count": 32,
+          "table_cue": false
+        }
+      ]
+    },
+    {
+      "doc_id": "MP004",
+      "title": "DESMI SA Self-priming Centrifugal Pump Operation and Maintenance Instructions",
+      "publisher": "DESMI",
+      "split": "build_train",
+      "parsed_pages": 37,
+      "manifest_pages": 37,
+      "page_count_matches_manifest": true,
+      "selected_pages": [
+        {
+          "pdf_page_number": 11,
+          "page_or_section": "PDF p. 11",
+          "text_sha256": "ee461b659024bdb3127eac7d9dc995e492ea7600f854fdf5c53e56604c646179",
+          "score": 56.9,
+          "fault_hits": {
+            "air_ingress_or_loss_of_prime": 2,
+            "hydraulic_blockage": 2,
+            "pipe_or_valve_integrity_failure": 2
+          },
+          "cue_count": 14,
+          "table_cue": true
+        }
+      ]
+    },
+    {
+      "doc_id": "MP005",
+      "title": "DESMI NSL Monobloc and Spacer Operation and Maintenance Instructions",
+      "publisher": "DESMI",
+      "split": "build_train",
+      "parsed_pages": 152,
+      "manifest_pages": 152,
+      "page_count_matches_manifest": true,
+      "selected_pages": [
+        {
+          "pdf_page_number": 60,
+          "page_or_section": "PDF p. 60",
+          "text_sha256": "b2ab402d3aae5d049d17f43f40e271d59056f7aab86f082ceb3a952eb84e66d3",
+          "score": 97.3,
+          "fault_hits": {
+            "cavitation": 2,
+            "air_ingress_or_loss_of_prime": 1,
+            "hydraulic_blockage": 2,
+            "impeller_or_wear_part_damage": 2,
+            "motor_electrical_drive_failure": 1,
+            "pipe_or_valve_integrity_failure": 1
+          },
+          "cue_count": 18,
+          "table_cue": true
+        }
+      ]
+    },
+    {
+      "doc_id": "MP008",
+      "title": "Grundfos Firefighting Systems Installation and Operating Instructions",
+      "publisher": "Grundfos",
+      "split": "development",
+      "parsed_pages": 36,
+      "manifest_pages": 36,
+      "page_count_matches_manifest": true,
+      "selected_pages": [
+        {
+          "pdf_page_number": 26,
+          "page_or_section": "PDF p. 26",
+          "text_sha256": "6bdf50fae4938bbde79b2cfd94f979e5e81e5ca832bafc13fe94be1283de0331",
+          "score": 72.1,
+          "fault_hits": {
+            "cavitation": 1,
+            "hydraulic_blockage": 1,
+            "bearing_or_lubrication_failure": 1,
+            "pipe_or_valve_integrity_failure": 2
+          },
+          "cue_count": 26,
+          "table_cue": true
+        }
+      ]
+    }
+  ]
+}

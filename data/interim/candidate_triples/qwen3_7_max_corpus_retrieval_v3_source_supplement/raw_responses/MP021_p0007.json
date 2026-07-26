@@ -1,0 +1,80 @@
+{
+  "page_key": "MP021:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ab920059-d968-9a5a-8e16-6887b323ff6d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 708,
+    "prompt_tokens": 4375,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5083
+  },
+  "latency_ms": 9110,
+  "attempt": 1,
+  "prompt_sha256": "a8002b012b611019999a9590a6cb9453c37e7426f54a3e6d3ce068f3e178113f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Spinning bearings",
+        "head_canonical_zh": "轴承旋转",
+        "head_type": "MaintenanceAction",
+        "relation": "causes",
+        "tail_surface": "damage bearing components",
+        "tail_canonical_zh": "轴承部件损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Spinning bearings will damage bearing components",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Roughness",
+        "head_canonical_zh": "粗糙感",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear and damage",
+        "tail_canonical_zh": "磨损与损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Check lipseals, bearings, bushings, and idler pin and replace if necessary. Check all other parts for nicks, burrs, excessive wear and replace if necessary. Wash bearings in clean solvent. Blow out bearings with compressed air. Do not allow bearings to spin; turn them slowly by hand. Spinning bearings will damage bearing components. Make sure bearings are clean, then lubricate with light oil and check for roughness. Roughness can be determined by turning outer race by hand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "turning outer race by hand",
+        "head_canonical_zh": "手动转动外圈",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "Roughness",
+        "tail_canonical_zh": "粗糙感",
+        "tail_type": "Symptom",
+        "evidence_text": "Roughness can be determined by turning outer race by hand",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

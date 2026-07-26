@@ -1,0 +1,80 @@
+{
+  "page_key": "MP018:p0022",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-64b7bbce-db00-9c24-ac26-c932e2daef68",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 686,
+    "prompt_tokens": 1484,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2170
+  },
+  "latency_ms": 9690,
+  "attempt": 1,
+  "prompt_sha256": "cfb39ceee1d1a91a8a8f0ef07221d2fb1b299a86bba28fe41ba97fa9216dfd52",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Thrust bearings (18)",
+        "head_canonical_zh": "推力轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "WORKING AGAINST THE INNER RACE OF THE INNER MOST BEARING",
+        "tail_canonical_zh": "对最内侧轴承内圈施力拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thrust bearings (18) can be removed by WORKING AGAINST THE INNER RACE OF THE INNER MOST BEARING.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Failure to use this procedure",
+        "head_canonical_zh": "未使用该拆卸程序",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the bearing",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to use this procedure can damage the bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "grease seals (51)",
+        "head_canonical_zh": "油脂密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspected for any visible damage",
+        "tail_canonical_zh": "检查可见损伤",
+        "tail_type": "InspectionAction",
+        "evidence_text": "grease seals (51) for the thrust (37) and radial (35) bearing covers and the thrust bearing cartridge (141) these should be inspected for any visible damage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "page_key": "MP015:p0024",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-37d1d49e-d9e4-9a62-ad3e-f508305d8599",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1104,
+    "prompt_tokens": 14503,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 15607
+  },
+  "latency_ms": 15201,
+  "attempt": 1,
+  "prompt_sha256": "d0a241645013c74cc8787f23eca6e320a89877e8407504222aee6491879a3d7c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Sudden changes in the rate of flow",
+        "head_canonical_zh": "流量突变",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "high pressure impulses",
+        "tail_canonical_zh": "高压冲击",
+        "tail_type": "Symptom",
+        "evidence_text": "Sudden changes in the rate of flow can lead to high pressure impulses in the pump and the piping (water shock).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "big or hard particles",
+        "head_canonical_zh": "大颗粒或硬质颗粒",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "impeller_or_wear_part_damage",
+        "tail_canonical_zh": "叶轮或易损件损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Avoid the entry of big or hard particles by installing a strainer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "installing a strainer",
+        "head_canonical_zh": "安装过滤器",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "entry of big or hard particles",
+        "tail_canonical_zh": "大颗粒或硬质颗粒进入",
+        "tail_type": "Cause",
+        "evidence_text": "Avoid the entry of big or hard particles by installing a strainer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flushing system",
+        "head_canonical_zh": "冲洗系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "connect the flushing chamber to the flushing system",
+        "tail_canonical_zh": "将冲洗腔连接至冲洗系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In case of a pump with a double mechanical seal (shaft sealing variant MD1), connect the flushing chamber to the flushing system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pressure of the flushing system must be 1,5 bar higher than the pressure at the impeller hub",
+        "head_canonical_zh": "冲洗系统压力须比叶轮轮毂处压力高1.5 bar",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "double mechanical seal",
+        "tail_canonical_zh": "双机械密封",
+        "tail_type": "Component",
+        "evidence_text": "The pressure of the flushing system must be 1,5 bar higher than the pressure at the impeller hub!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

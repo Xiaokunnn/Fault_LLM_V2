@@ -1,0 +1,59 @@
+{
+  "page_key": "MP015:p0021",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1dadc708-81b3-96e6-9f68-4b220ed07ed6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 473,
+    "prompt_tokens": 1666,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2139
+  },
+  "latency_ms": 6132,
+  "attempt": 1,
+  "prompt_sha256": "6192ce3e8c4385b19defe9ec6d77e892f6573970cddfa434647316acac787dbb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Ambient temperature or air humidity which is too high, or a dusty environment",
+        "head_canonical_zh": "过高环境温度/湿度或多尘环境",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "detrimental effect on the operation of the electric motor",
+        "tail_canonical_zh": "电动机运行受损",
+        "tail_type": "FaultMode",
+        "evidence_text": "An ambient temperature or air humidity which is too high, or a dusty environment, can have a detrimental effect on the operation of the electric motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump is provided with an isolation",
+        "head_canonical_zh": "泵加装保温层",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "temperature limits of shaft seal and bearing",
+        "tail_canonical_zh": "轴封和轴承温度超限",
+        "tail_type": "Risk",
+        "evidence_text": "In case the pump is provided with an isolation, special attention has to be paid To temperature limits of shaft seal and bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

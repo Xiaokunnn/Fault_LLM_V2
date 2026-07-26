@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0053",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3e54c609-c8ca-9864-86fe-cfa70f27cbba",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 438,
+    "prompt_tokens": 1744,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2182
+  },
+  "latency_ms": 11625,
+  "attempt": 1,
+  "prompt_sha256": "8bf4c5fd6bca48e75e8fdf8e986ee54c201d63d7eea7508c704758a39f4f3a38",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Test results",
+        "tail_canonical_zh": "测试结果",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Test results can be affected by equipment operating nearby or other components operating within the equipment as well as cavitation, new bearings, incorrect greasing, flow instabilities and gear noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ultrasonic Analysis",
+        "head_canonical_zh": "超声分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "bearing fatigue or wear",
+        "tail_canonical_zh": "轴承疲劳或磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "This technique can be used to monitor bearing fatigue or wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

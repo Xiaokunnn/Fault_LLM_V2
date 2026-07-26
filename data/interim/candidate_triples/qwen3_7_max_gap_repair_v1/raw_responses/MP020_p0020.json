@@ -1,0 +1,161 @@
+{
+  "page_key": "MP020:p0020",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7b41be8f-aebe-91b7-88b3-bc4ab914b250",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1542,
+    "prompt_tokens": 1900,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3442
+  },
+  "latency_ms": 18328,
+  "attempt": 1,
+  "prompt_sha256": "ecd9f39affba460dd9aa3ed402e4084f63c5e867719eb1ce5231c019c064ccd4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump rotational direction",
+        "head_canonical_zh": "泵旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "VERY SHORT on/off power pulse",
+        "tail_canonical_zh": "极短通断电脉冲",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check pump rotational direction. (VERY SHORT on/off power pulse).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor temperature",
+        "head_canonical_zh": "电机温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor the motor temperature",
+        "tail_canonical_zh": "监测电机温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Monitor the motor temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operating temperature of frame bearings",
+        "head_canonical_zh": "机架轴承运行温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Note the operating temperature of frame bearings",
+        "tail_canonical_zh": "记录机架轴承运行温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Note the operating temperature of frame bearings (if any).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shut-off pressure",
+        "head_canonical_zh": "关死点压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "checked for shut-off pressure with the pump performance curve",
+        "tail_canonical_zh": "依据泵性能曲线核查关死点压力",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The pump may be checked for shut-off pressure with the pump performance curve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Prime the pump",
+        "tail_canonical_zh": "给泵灌液引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Prime the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the system slowly",
+        "tail_canonical_zh": "缓慢向系统充液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the system slowly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "severe damage to equipment and/or personal injury",
+        "head_canonical_zh": "设备严重损坏和/或人身伤害",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "compliance is reached on all the applicable points above",
+        "tail_canonical_zh": "符合上述所有适用检查点",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A pump must not be started until compliance is reached on all the applicable points above and any others specified in the Operation and Maintenance Manual supplied with the pump. Failure to do so may cause severe damage to equipment and/or personal injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure",
+          "motor_electrical_drive_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

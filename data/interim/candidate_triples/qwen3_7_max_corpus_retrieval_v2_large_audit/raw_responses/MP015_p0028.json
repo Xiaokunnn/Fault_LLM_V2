@@ -1,0 +1,118 @@
+{
+  "page_key": "MP015:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-74cf5871-473e-9069-bf2f-f749b84cfc60",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1127,
+    "prompt_tokens": 1794,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2921
+  },
+  "latency_ms": 15147,
+  "attempt": 1,
+  "prompt_sha256": "09bdf7461983a1e11dff8a3c75414230e226f9279a788b61d8091844f5a475f5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "run dry",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "The pump should never run dry",
+        "tail_canonical_zh": "禁止干运转操作规范",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump should never run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vaporization in the pump",
+        "head_canonical_zh": "泵内汽化",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Check whether the absolute inlet pressure is sufficient",
+        "tail_canonical_zh": "检查绝对入口压力是否充足",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the absolute inlet pressure is sufficient, to prevent vaporization in the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "noise level may exceed 85 dB(A)",
+        "tail_canonical_zh": "噪声级超过85 dB(A)",
+        "tail_type": "Symptom",
+        "evidence_text": "in case of cavitation, the noise level may exceed 85 dB(A)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "double mechanical seal (version MD1)",
+        "head_canonical_zh": "双机械密封(MD1型)",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "appropriate pressure of the flushing liquid must be set",
+        "tail_canonical_zh": "设定适当的冲洗液压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When flushing a double mechanical seal (version MD1), the appropriate pressure of the flushing liquid must be set.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.92,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "double mechanical seal (versions MD1)",
+        "head_canonical_zh": "双机械密封(MD1型)",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "This pressure must be 1,5 bar higher than the pressure at the impeller hub",
+        "tail_canonical_zh": "冲洗液压力须高于叶轮轮毂压力1.5 bar",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The flushing liquid of a double mechanical seal (versions MD1) always must have the appropriate pressure set. This pressure must be 1,5 bar higher than the pressure at the impeller hub.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.92,
+        "tail_translation_confidence": 0.94
+      }
+    ],
+    "warnings": []
+  }
+}

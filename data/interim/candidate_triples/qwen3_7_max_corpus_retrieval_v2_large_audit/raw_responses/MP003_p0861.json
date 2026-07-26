@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0861",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-abc81273-0de2-90ab-b457-c508b697e601",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 690,
+    "prompt_tokens": 1958,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2648
+  },
+  "latency_ms": 9212,
+  "attempt": 1,
+  "prompt_sha256": "bbc84c1e17e0674bb69f54dacebd4cf4741c02f058c5a956cda629ec70421905",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failure of the power management system",
+        "head_canonical_zh": "功率管理系统故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed at a manned control station",
+        "tail_canonical_zh": "有人值守控制站报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Failure of the power management system is to be alarmed at a manned control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "regenerative power",
+        "head_canonical_zh": "再生功率",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "over speeding of the prime mover",
+        "tail_canonical_zh": "原动机超速",
+        "tail_type": "FaultMode",
+        "evidence_text": "the regenerative power is not to cause over speeding of the prime mover",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "regenerative power",
+        "head_canonical_zh": "再生功率",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "variations in the system voltage and frequency which exceeds the limits of 4-8-3/1.9",
+        "tail_canonical_zh": "系统电压和频率变化超过4-8-3/1.9限值",
+        "tail_type": "FaultMode",
+        "evidence_text": "regenerative power is not to cause ... variations in the system voltage and frequency which exceeds the limits of 4-8-3/1.9",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

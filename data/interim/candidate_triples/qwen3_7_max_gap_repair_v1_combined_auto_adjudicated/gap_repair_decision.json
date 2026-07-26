@@ -1,0 +1,22 @@
+{
+  "version": "marine_pump_gap_repair_decision_v1",
+  "fault_classes_passing": 7,
+  "failed_fault_classes": [
+    "mechanical_seal_failure",
+    "pipe_or_valve_integrity_failure",
+    "dry_running_or_maintenance_induced_failure"
+  ],
+  "corpus_decision": "add_1_or_2_dry_running_maintenance_sources",
+  "next_action": "Add only one or two independent dry-running/maintenance-failure documents, freeze them as post-gap build sources, and rerun this repair.",
+  "dry_running_gap": {
+    "symptom_evidence": 4,
+    "inspection_or_maintenance_evidence": 1,
+    "source_families": 1,
+    "symptom_gap": true,
+    "inspection_or_maintenance_gap": true,
+    "independent_source_gap": true,
+    "supplement_1_or_2_documents": true
+  },
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

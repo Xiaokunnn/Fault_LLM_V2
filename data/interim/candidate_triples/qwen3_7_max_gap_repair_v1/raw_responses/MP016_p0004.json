@@ -1,0 +1,134 @@
+{
+  "page_key": "MP016:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-24935012-7f3f-9437-9b41-b921138f5ed1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1337,
+    "prompt_tokens": 2366,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3703
+  },
+  "latency_ms": 17525,
+  "attempt": 1,
+  "prompt_sha256": "8c6b611e724a3378db5400ab98f28dcc082ab6db256eca380d15b8a3e5689335",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Keep pipe runs short and pipe diameters large; pipes may need to be larger diameter than pump ports especially when pumping viscous liquids",
+        "tail_canonical_zh": "保持管路短且管径大，输送粘性液体时管径可能需大于泵口",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Keep pipe runs short and pipe diameters large; pipes may need to be larger diameter than pump ports especially when pumping viscous liquids to prevent cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "A clogged filter",
+        "tail_canonical_zh": "过滤器堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "A clogged filter will cause cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "excessive heating of the seal faces and Impeller damage",
+        "head_canonical_zh": "密封面过热及叶轮损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "run dry for more than 30 seconds",
+        "tail_canonical_zh": "干转超过30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Pumps must never be run dry for more than 30 seconds, as this will cause excessive heating of the seal faces and Impeller damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal fitted",
+        "head_canonical_zh": "已安装的密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "establish that the seal fitted is suitable for the application before starting pump",
+        "tail_canonical_zh": "启动前确认所装密封适用于该工况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "you must establish that the seal fitted is suitable for the application before starting pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump to drive alignment",
+        "head_canonical_zh": "泵与驱动装置对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check pump to drive alignment after installation and before starting pump",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check pump to drive alignment after installation and before starting pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure conditions",
+        "head_canonical_zh": "压力状况",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Fit vacuum/pressure gauges each side of pump",
+        "tail_canonical_zh": "在泵两侧安装真空/压力表",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Fit vacuum/pressure gauges each side of pump to monitor pressure conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

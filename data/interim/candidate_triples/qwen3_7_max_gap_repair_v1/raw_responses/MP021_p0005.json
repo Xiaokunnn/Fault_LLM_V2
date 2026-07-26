@@ -1,0 +1,215 @@
+{
+  "page_key": "MP021:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c6273099-a869-9712-ab3a-0779dac36524",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2220,
+    "prompt_tokens": 2551,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4771
+  },
+  "latency_ms": 34001,
+  "attempt": 1,
+  "prompt_sha256": "bf479875227610ceabf7f39bca4f3ba9a49a25918cf520aaf89000d704e6ccc2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Burrs left on shaft",
+        "head_canonical_zh": "轴上毛刺",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage O-ring on seal sleeve",
+        "tail_canonical_zh": "密封套O型圈损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "NOTE: Burrs left on shaft can damage O-ring on seal sleeve during installation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect shaft for burrs",
+        "tail_canonical_zh": "检查轴上的毛刺",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect shaft for burrs and remove any found with a fine grade of emery cloth.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Burrs",
+        "head_canonical_zh": "毛刺",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "remove any found with a fine grade of emery cloth",
+        "tail_canonical_zh": "用细砂布去除发现的毛刺",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Inspect shaft for burrs and remove any found with a fine grade of emery cloth.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotor shaft and face of seal chamber",
+        "head_canonical_zh": "转子轴和密封腔端面",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Clean rotor shaft and face of seal chamber",
+        "tail_canonical_zh": "清洁转子轴和密封腔端面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Clean rotor shaft and face of seal chamber.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cartridge seal",
+        "head_canonical_zh": "筒式机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Coat rotor shaft, tapered installation sleeve, and O-ring in the inside diameter of cartridge seal sleeve with a generous amount of P-80® or equivalent",
+        "tail_canonical_zh": "在转子轴、锥形安装套及筒式密封套内径O型圈上涂抹足量P-80®或同等润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Coat rotor shaft, tapered installation sleeve, and O-ring in the inside diameter of cartridge seal sleeve with a generous amount of P-80® or equivalent.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "seal",
+        "head_canonical_zh": "密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "turn shaft several turns while gland is loose to center seal",
+        "tail_canonical_zh": "在压盖松动时转动轴数圈以使密封对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: turn shaft several turns while gland is loose to center seal; then tighten nuts enough to compress gland gasket.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Tighten only enough to contain leakage",
+        "tail_canonical_zh": "仅拧紧至足以遏制泄漏的程度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tighten only enough to contain leakage and not to distort gland.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "drive collar",
+        "head_canonical_zh": "驱动环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check drive collar for runout",
+        "tail_canonical_zh": "检查驱动环跳动量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Turn shaft by hand or jog motor to check drive collar for runout.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cartridge mechanical seals",
+        "head_canonical_zh": "筒式机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Connect circulation line or vent stuffing box seals without circulation line until liquid is present on start up",
+        "tail_canonical_zh": "连接循环管线或在无循环管线时排放填料函密封直至启动时有液体存在",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Connect circulation line or vent stuffing box seals without circulation line until liquid is present on start up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "seal",
+        "head_canonical_zh": "密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "circulation line should be used",
+        "tail_canonical_zh": "应使用循环管线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: For maximum seal life, circulation line should be used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

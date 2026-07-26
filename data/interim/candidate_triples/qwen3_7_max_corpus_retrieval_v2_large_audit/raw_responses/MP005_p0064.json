@@ -1,0 +1,157 @@
+{
+  "page_key": "MP005:p0064",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-578c847c-cd7f-93dd-9aab-d0580b54767e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1693,
+    "prompt_tokens": 7225,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8918
+  },
+  "latency_ms": 21276,
+  "attempt": 1,
+  "prompt_sha256": "cb54710d5a943bfdfbb2671ce0f55d786e568ed760a63b29a24fcbfb29500897",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "mechanical damage, not only to mechanical seals",
+        "tail_canonical_zh": "机械损伤（不仅限于机械密封）",
+        "tail_type": "Symptom",
+        "evidence_text": "2. Will cause mechanical damage, not only to mechanical seals",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c00",
+          "MP005:p0064:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Shutting down and closing valves",
+        "head_canonical_zh": "停机及关阀操作",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Water hammer / hydraulic shocks",
+        "tail_canonical_zh": "水锤/液压冲击",
+        "tail_type": "FaultMode",
+        "evidence_text": "1. Shutting down and closing valves creates noise and give hydraulic shocks to the whole system",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c00",
+          "MP005:p0064:t00:r002:c06"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Missing supply of liquid for cooling/lubrication of mechanical shaft seal",
+        "tail_canonical_zh": "机械轴封冷却/润滑液供应缺失",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pump parts (e.g. vent/flush piping) in pump clogged up Missing supply of liquid for cooling/lubrication of mechanical shaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c00",
+          "MP005:p0064:t00:r003:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump parts (e.g. vent/flush piping) in pump clogged up 1. Seal leakage after short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c00",
+          "MP005:p0064:t00:r003:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Production faults from maker",
+        "head_canonical_zh": "制造商生产缺陷",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Production faults from maker 1. Seal leakage after short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c00",
+          "MP005:p0064:t00:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Hydrostatic (leakage) and performance test 3.1 or 3.2",
+        "head_canonical_zh": "静压（泄漏）及性能试验3.1或3.2",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Production faults from maker",
+        "tail_canonical_zh": "制造商生产缺陷",
+        "tail_type": "Cause",
+        "evidence_text": "Production faults from maker 1. Hydrostatic (leakage) and performance test 3.1 or 3.2.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c00",
+          "MP005:p0064:t00:r004:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

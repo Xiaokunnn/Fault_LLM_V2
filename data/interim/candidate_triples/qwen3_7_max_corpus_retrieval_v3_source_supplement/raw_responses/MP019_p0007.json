@@ -1,0 +1,112 @@
+{
+  "page_key": "MP019:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f72d73ba-0179-9899-a305-f09f9bfcf8a3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1045,
+    "prompt_tokens": 1902,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2947
+  },
+  "latency_ms": 14130,
+  "attempt": 1,
+  "prompt_sha256": "683fd0c54a8372304e43dd03e7c1f41842bedc39383929b577d936a1daab1c3f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Running the motor with no radial force applied to the shaft",
+        "head_canonical_zh": "轴无径向力运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the roller bearing",
+        "tail_canonical_zh": "滚动轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Running the motor with no radial force applied to the shaft may damage the roller bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Running the motor with no axial force applied in the right direction in relation to the shaft",
+        "head_canonical_zh": "轴未施加正确方向轴向力运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the angular contact bearing",
+        "tail_canonical_zh": "角接触轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Running the motor with no axial force applied in the right direction in relation to the shaft may damage the angular contact bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "winding is too damp",
+        "head_canonical_zh": "绕组过潮",
+        "head_type": "Cause",
+        "relation": "indicates",
+        "tail_surface": "reference resistance value is not attained",
+        "tail_canonical_zh": "未达到参考电阻值",
+        "tail_type": "Symptom",
+        "evidence_text": "If the reference resistance value is not attained, the winding is too damp and must be oven dried.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oven dried",
+        "head_canonical_zh": "烘箱干燥",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "winding is too damp",
+        "tail_canonical_zh": "绕组过潮",
+        "tail_type": "Cause",
+        "evidence_text": "the winding is too damp and must be oven dried",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Measure insulation resistance",
+        "head_canonical_zh": "测量绝缘电阻",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "winding dampness",
+        "tail_canonical_zh": "绕组受潮",
+        "tail_type": "FaultMode",
+        "evidence_text": "Measure insulation resistance before commissioning and when winding dampness is suspected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

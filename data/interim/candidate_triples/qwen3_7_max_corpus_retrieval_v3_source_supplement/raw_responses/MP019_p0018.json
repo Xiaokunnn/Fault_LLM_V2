@@ -1,0 +1,61 @@
+{
+  "page_key": "MP019:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6ae858f0-ef02-9ae6-ba7b-e96af3bf95a3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 461,
+    "prompt_tokens": 1559,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2020
+  },
+  "latency_ms": 7514,
+  "attempt": 1,
+  "prompt_sha256": "97e6521799c93932d2d884c900922f959e11a9a6b82edcd8980d34bf9a5b394f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "removed using pullers and fitted by heating or using special tools for the purpose",
+        "tail_canonical_zh": "使用拉拔器拆卸并通过加热或专用工具安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "These must be removed using pullers and fitted by heating or using special tools for the purpose.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Bearing replacement",
+        "head_canonical_zh": "轴承更换",
+        "head_type": "MaintenanceAction",
+        "relation": "specified_by",
+        "tail_surface": "separate instruction leaflet available from the ABB Sales Office",
+        "tail_canonical_zh": "ABB销售处提供的单独指导手册",
+        "tail_type": "Standard",
+        "evidence_text": "Bearing replacement is described in detail in a separate instruction leaflet available from the ABB Sales Office.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}
