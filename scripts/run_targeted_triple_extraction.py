@@ -127,6 +127,63 @@ def _write_jsonl(path: Path, records: list[dict[str, object]]) -> None:
             handle.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
+def _chunk_table_page(
+    page: dict[str, object],
+    *,
+    max_row_groups: int,
+) -> list[dict[str, object]]:
+    """Split a dense table page without breaking parser row groups."""
+    tables = list(page.get("tables", []) or [])
+    if max_row_groups <= 0 or not tables:
+        return [page]
+    rows = [
+        (table_index, row)
+        for table_index, table in enumerate(tables)
+        for row in list(table.get("rows", []) or [])
+    ]
+    group_order: list[str] = []
+    for table_index, row in rows:
+        group_id = str(
+            row.get("row_group_id")
+            or row.get("row_id")
+            or f"table-{table_index}-row-{len(group_order)}"
+        )
+        qualified = f"{table_index}:{group_id}"
+        if qualified not in group_order:
+            group_order.append(qualified)
+    if len(group_order) <= max_row_groups:
+        return [page]
+
+    chunks: list[dict[str, object]] = []
+    for offset in range(0, len(group_order), max_row_groups):
+        selected = set(group_order[offset : offset + max_row_groups])
+        chunk = dict(page)
+        chunk_tables: list[dict[str, object]] = []
+        text_parts: list[str] = []
+        for table_index, table in enumerate(tables):
+            chunk_table = dict(table)
+            selected_rows = []
+            for row in list(table.get("rows", []) or []):
+                group_id = str(row.get("row_group_id") or row.get("row_id"))
+                if f"{table_index}:{group_id}" in selected:
+                    selected_rows.append(row)
+                    for cell in list(row.get("cells", []) or []):
+                        cell_text = str(cell.get("text", "")).strip()
+                        if cell_text:
+                            text_parts.append(cell_text)
+            if selected_rows:
+                chunk_table["rows"] = selected_rows
+                chunk_tables.append(chunk_table)
+        chunk["tables"] = chunk_tables
+        chunk["page_text"] = "\n".join(text_parts)
+        chunk["scope_note"] = (
+            str(page.get("scope_note") or "")
+            + f"; dense_table_chunk={len(chunks)+1}"
+        )
+        chunks.append(chunk)
+    return chunks
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -232,6 +289,13 @@ def main() -> None:
         cache_path = raw_dir / f"{key.replace(':', '_')}.json"
         prompt = build_user_prompt(page)
         prompt_hash = _sha256(system_prompt + "\n" + prompt)
+        chunk_config = dict(
+            dict(config.get("request_chunking", {})).get(key, {}) or {}
+        )
+        request_pages = _chunk_table_page(
+            page,
+            max_row_groups=int(chunk_config.get("max_table_row_groups", 0)),
+        )
         elapsed = time.perf_counter() - started
         print(
             f"[Stage 2][{index}/{len(pages)}] 开始 {key}，累计耗时={elapsed:.1f}s",
@@ -280,34 +344,97 @@ def main() -> None:
                     break
 
         if cached is None:
-            response = call_chat_completion(
-                api_key=str(api_key),
-                base_url=str(config["base_url"]),
-                model=str(config["model"]),
-                system_prompt=system_prompt,
-                user_prompt=prompt,
-                temperature=float(config["temperature"]),
-                enable_thinking=bool(config["enable_thinking"]),
-                response_format=dict(config["response_format"]),
-                timeout_seconds=int(config["timeout_seconds"]),
-                max_retries=int(config["max_retries"]),
-                retry_callback=lambda attempt, maximum, reason, wait: print(
-                    f"[Stage 2][{index}/{len(pages)}] {key} 请求失败，"
-                    f"第{attempt}/{maximum}次，{wait:.0f}s后重试：{reason}",
-                    flush=True,
-                ),
-            )
+            part_records = []
+            for part_index, request_page in enumerate(request_pages, start=1):
+                part_prompt = build_user_prompt(request_page)
+                part_hash = _sha256(system_prompt + "\n" + part_prompt)
+                part_path = (
+                    raw_dir
+                    / f"{key.replace(':', '_')}_part{part_index:02d}.json"
+                )
+                part_cached = None
+                if not args.no_resume and part_path.exists():
+                    candidate_part = json.loads(
+                        part_path.read_text(encoding="utf-8")
+                    )
+                    if (
+                        candidate_part.get("prompt_sha256") == part_hash
+                        and candidate_part.get("model_requested") == config["model"]
+                    ):
+                        part_cached = candidate_part
+                if part_cached is None:
+                    if len(request_pages) > 1:
+                        print(
+                            f"[Stage 2][{index}/{len(pages)}] {key} "
+                            f"表格分块 {part_index}/{len(request_pages)}",
+                            flush=True,
+                        )
+                    response = call_chat_completion(
+                        api_key=str(api_key),
+                        base_url=str(config["base_url"]),
+                        model=str(config["model"]),
+                        system_prompt=system_prompt,
+                        user_prompt=part_prompt,
+                        temperature=float(config["temperature"]),
+                        enable_thinking=bool(config["enable_thinking"]),
+                        response_format=dict(config["response_format"]),
+                        timeout_seconds=int(config["timeout_seconds"]),
+                        max_retries=int(config["max_retries"]),
+                        retry_callback=lambda attempt, maximum, reason, wait: print(
+                            f"[Stage 2][{index}/{len(pages)}] {key} 请求失败，"
+                            f"第{attempt}/{maximum}次，{wait:.0f}s后重试：{reason}",
+                            flush=True,
+                        ),
+                    )
+                    part_cached = {
+                        "page_key": key,
+                        "request_part": part_index,
+                        "request_part_count": len(request_pages),
+                        "model_requested": config["model"],
+                        "model_returned": response.model,
+                        "request_id": response.request_id,
+                        "finish_reason": response.finish_reason,
+                        "usage": response.usage,
+                        "latency_ms": response.latency_ms,
+                        "attempt": response.attempt,
+                        "prompt_sha256": part_hash,
+                        "response_json": response.content,
+                    }
+                    part_path.write_text(
+                        json.dumps(part_cached, ensure_ascii=False, indent=2)
+                        + "\n",
+                        encoding="utf-8",
+                    )
+                part_records.append(part_cached)
+            triples = []
+            warnings = []
+            for part in part_records:
+                triples.extend(
+                    list(part.get("response_json", {}).get("triples", []) or [])
+                )
+                warnings.extend(
+                    list(part.get("response_json", {}).get("warnings", []) or [])
+                )
             cached = {
                 "page_key": key,
                 "model_requested": config["model"],
-                "model_returned": response.model,
-                "request_id": response.request_id,
-                "finish_reason": response.finish_reason,
-                "usage": response.usage,
-                "latency_ms": response.latency_ms,
-                "attempt": response.attempt,
+                "model_returned": config["model"],
+                "request_id": "chunked:" + ",".join(
+                    str(part.get("request_id") or "") for part in part_records
+                ),
+                "finish_reason": "merged_chunks",
+                "usage": {"request_parts": len(part_records)},
+                "latency_ms": sum(
+                    int(part.get("latency_ms") or 0) for part in part_records
+                ),
+                "attempt": max(
+                    int(part.get("attempt") or 1) for part in part_records
+                ),
                 "prompt_sha256": prompt_hash,
-                "response_json": response.content,
+                "response_json": {
+                    "triples": triples,
+                    "warnings": list(dict.fromkeys(warnings)),
+                },
             }
             cache_path.write_text(
                 json.dumps(cached, ensure_ascii=False, indent=2) + "\n",
