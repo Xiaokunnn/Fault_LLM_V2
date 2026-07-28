@@ -1,0 +1,178 @@
+{
+  "page_key": "MP001:p0093",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-41be094c-2344-9e6c-98be-36b6ef948e7a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1792,
+    "prompt_tokens": 2304,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4096
+  },
+  "latency_ms": 28067,
+  "attempt": 1,
+  "prompt_sha256": "4ad9ab529c25518ca814017994e71f006dc6ebb4d881af6871a52b058c18dfc4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "surface discontinuities or cracks",
+        "head_canonical_zh": "表面不连续或裂纹",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Liquid Dye Penetrants",
+        "tail_canonical_zh": "液体染料渗透检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The use of liquid dye penetrants can help detect surface discontinuities or cracks due to problems such as fatigue, wear, surface shrinkage, and grinding.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue",
+        "head_canonical_zh": "疲劳",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "surface discontinuities or cracks",
+        "tail_canonical_zh": "表面不连续或裂纹",
+        "tail_type": "FaultMode",
+        "evidence_text": "surface discontinuities or cracks due to problems such as fatigue, wear, surface shrinkage, and grinding",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "surface discontinuities or cracks",
+        "tail_canonical_zh": "表面不连续或裂纹",
+        "tail_type": "FaultMode",
+        "evidence_text": "surface discontinuities or cracks due to problems such as fatigue, wear, surface shrinkage, and grinding",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leaks",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ultrasonic Leak Detection",
+        "tail_canonical_zh": "超声波泄漏检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ultrasonic analysis helps detect changes in sound patterns caused by problems such as leaks, wear, fatigue or deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FailureMechanism",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ultrasonic Leak Detection",
+        "tail_canonical_zh": "超声波泄漏检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ultrasonic analysis helps detect changes in sound patterns caused by problems such as leaks, wear, fatigue or deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue",
+        "head_canonical_zh": "疲劳",
+        "head_type": "FailureMechanism",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ultrasonic Leak Detection",
+        "tail_canonical_zh": "超声波泄漏检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ultrasonic analysis helps detect changes in sound patterns caused by problems such as leaks, wear, fatigue or deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "changes in sound patterns",
+        "head_canonical_zh": "声型变化",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "leaks",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ultrasonic analysis helps detect changes in sound patterns caused by problems such as leaks, wear, fatigue or deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leaks in pressure/vacuum systems and underground pipes or tanks",
+        "head_canonical_zh": "压力/真空系统及地下管道或储罐泄漏",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ultrasonic Leak Detection",
+        "tail_canonical_zh": "超声波泄漏检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "This technique can be used to detect leaks in pressure/vacuum systems and underground pipes or tanks, and to detect static discharge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

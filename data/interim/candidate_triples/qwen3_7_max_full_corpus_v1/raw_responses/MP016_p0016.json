@@ -1,0 +1,489 @@
+{
+  "page_key": "MP016:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-70e7a9c8-c468-953b-a71d-1b4193921eca",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 5805,
+    "prompt_tokens": 6339,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12144
+  },
+  "latency_ms": 65681,
+  "attempt": 1,
+  "prompt_sha256": "fcff5424af03862cb5ed85408d016df2f9d7aa583410d979d241b492df71144b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bruits",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Observez la pompe pendant les premières heures de fonctionnement - vérifiez les bruits",
+        "tail_canonical_zh": "运行初期观察泵并检查噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Observez la pompe pendant les premières heures de fonctionnement - vérifiez les bruits et le chauffage excessif de la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "chauffage excessif de la pompe",
+        "head_canonical_zh": "泵过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "vérifiez les bruits et le chauffage excessif de la pompe",
+        "tail_canonical_zh": "检查噪声和泵过热",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Observez la pompe pendant les premières heures de fonctionnement - vérifiez les bruits et le chauffage excessif de la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fuite du produit",
+        "head_canonical_zh": "产品泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Contrôles visuels de tous les joints et des signes de fuite du produit",
+        "tail_canonical_zh": "目视检查所有密封件及产品泄漏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Contrôles visuels de tous les joints et des signes de fuite du produit, du liquide de rinçage (le cas échéant).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bruit inhabituel",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Écoutez tout bruit inhabituel",
+        "tail_canonical_zh": "听任何异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Écoutez tout bruit inhabituel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez toute vibration ou changement de température inhabituel",
+        "tail_canonical_zh": "检查任何异常振动或温度变化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez toute vibration ou changement de température inhabituel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "changement de température inhabituel",
+        "head_canonical_zh": "异常温度变化",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez toute vibration ou changement de température inhabituel",
+        "tail_canonical_zh": "检查任何异常振动或温度变化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez toute vibration ou changement de température inhabituel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "turbine",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspectez la turbine pour détecter tout signe de dommage ou d’usure",
+        "tail_canonical_zh": "检查叶轮是否有损坏或磨损迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Retirez le couvercle d’extrémité de la pompe et inspectez la turbine pour détecter tout signe de dommage ou d’usure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dommage ou d’usure",
+        "head_canonical_zh": "损坏或磨损",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Réparez ou remplacez si nécessaire",
+        "tail_canonical_zh": "必要时修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Réparez ou remplacez si nécessaire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "turbine",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez visuellement la turbine pour déceler tout dommage ou usure",
+        "tail_canonical_zh": "目视检查叶轮是否有损坏或磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez visuellement la turbine pour déceler tout dommage ou usure et scellez le boîtier pour déceler des fuites.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "boîtier",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "scellez le boîtier pour déceler des fuites",
+        "tail_canonical_zh": "检查泵壳密封处是否泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez visuellement la turbine pour déceler tout dommage ou usure et scellez le boîtier pour déceler des fuites.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "joint torique du couvercle d’extrémité",
+        "head_canonical_zh": "端盖O形圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remplacez le joint torique du couvercle d’extrémité ou le joint du couvercle d’extrémité",
+        "tail_canonical_zh": "更换端盖O形圈或端盖密封垫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remplacez le joint torique du couvercle d’extrémité ou le joint du couvercle d’extrémité.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "joint du couvercle d’extrémité",
+        "head_canonical_zh": "端盖密封垫",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remplacez le joint torique du couvercle d’extrémité ou le joint du couvercle d’extrémité",
+        "tail_canonical_zh": "更换端盖O形圈或端盖密封垫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remplacez le joint torique du couvercle d’extrémité ou le joint du couvercle d’extrémité.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "turbine",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Retirez la turbine pour une inspection visuelle et des signes d’usure",
+        "tail_canonical_zh": "拆卸叶轮进行目视检查及磨损迹象检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Retirez la turbine pour une inspection visuelle et des signes d’usure, si c’est le cas, remplacez-la.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "signes d’usure",
+        "head_canonical_zh": "磨损迹象",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "remplacez-la",
+        "tail_canonical_zh": "更换叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Retirez la turbine pour une inspection visuelle et des signes d’usure, si c’est le cas, remplacez-la.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "arbre",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspection visuelle de l’arbre, nettoyer si nécessaire",
+        "tail_canonical_zh": "轴的目视检查，必要时清洁",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspection visuelle de l’arbre, nettoyer si nécessaire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "faces du joint",
+        "head_canonical_zh": "密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspectez les faces du joint pour vérifier l’usure et l’état des élastomères",
+        "tail_canonical_zh": "检查密封面以验证磨损情况及弹性体状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspectez les faces du joint pour vérifier l’usure et l’état des élastomères.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "garnitures mécaniques",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Changer les garnitures mécaniques si elles sont installées et si nécessaire",
+        "tail_canonical_zh": "如已安装且有必要则更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Changer les garnitures mécaniques si elles sont installées et si nécessaire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "joints toriques",
+        "head_canonical_zh": "O形圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Changez les joints toriques et/ou les joints de la tête de pompe",
+        "tail_canonical_zh": "更换泵头O形圈和/或密封垫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Changez les joints toriques et/ou les joints de la tête de pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "joints de la tête de pompe",
+        "head_canonical_zh": "泵头密封垫",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Changez les joints toriques et/ou les joints de la tête de pompe",
+        "tail_canonical_zh": "更换泵头O形圈和/或密封垫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Changez les joints toriques et/ou les joints de la tête de pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez l’usure des roulements sur les unités sur socle en vérifiant s’il y a un mouvement de l’arbre d’un côté à l’autre ou d’avant en arrière",
+        "tail_canonical_zh": "通过检查轴是否有左右或前后移动来验证底座式机组轴承磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez l’usure des roulements sur les unités sur socle en vérifiant s’il y a un mouvement de l’arbre d’un côté à l’autre ou d’avant en arrière.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mouvement de l’arbre",
+        "head_canonical_zh": "轴窜动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "usure des roulements",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Vérifiez l’usure des roulements sur les unités sur socle en vérifiant s’il y a un mouvement de l’arbre d’un côté à l’autre ou d’avant en arrière. Si un mouvement est perçu, démontez les roulements pour inspection",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "démontez les roulements pour inspection, remplacez-les avec les joints à lèvres si nécessaire",
+        "tail_canonical_zh": "拆卸轴承进行检查，必要时连同唇形密封一起更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si un mouvement est perçu, démontez les roulements pour inspection, remplacez-les avec les joints à lèvres si nécessaire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pompe",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "inspection visuelle quotidienne et des contrôles réguliers à intervalles planifiés",
+        "tail_canonical_zh": "每日目视检查及定期计划间隔的检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "En assurant une inspection visuelle quotidienne et des contrôles réguliers à intervalles planifiés, les pompes peuvent être maintenues à des performances maximales pendant de nombreuses années.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "nettoyants à base d’iode ou de phosphore",
+        "head_canonical_zh": "含碘或磷清洁剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "attaqueraient la pompe et dégraderaient ses performances",
+        "tail_canonical_zh": "腐蚀泵并降低其性能",
+        "tail_type": "FaultMode",
+        "evidence_text": "N’utilisez pas de nettoyants à base d’iode ou de phosphore car ils attaqueraient la pompe et dégraderaient ses performances.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "attaqueraient la pompe et dégraderaient ses performances",
+        "head_canonical_zh": "腐蚀泵并降低其性能",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "N’utilisez pas de nettoyants à base d’iode ou de phosphore",
+        "tail_canonical_zh": "不使用含碘或磷的清洁剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "N’utilisez pas de nettoyants à base d’iode ou de phosphore car ils attaqueraient la pompe et dégraderaient ses performances.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

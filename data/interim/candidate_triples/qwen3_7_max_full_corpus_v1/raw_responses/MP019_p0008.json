@@ -1,0 +1,212 @@
+{
+  "page_key": "MP019:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9aadd637-c21e-943f-9470-3003273a2e73",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2291,
+    "prompt_tokens": 2400,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4691
+  },
+  "latency_ms": 28892,
+  "attempt": 1,
+  "prompt_sha256": "39f86a09fb747b1e6d822e832b66a50c12cdd4f56873c8352a3545cea4d0d8b9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Excessive belt tension",
+        "head_canonical_zh": "皮带张力过大",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage bearings",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Excessive belt tension will damage bearings and can cause shaft damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Excessive belt tension",
+        "head_canonical_zh": "皮带张力过大",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "shaft damage",
+        "tail_canonical_zh": "轴损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Excessive belt tension will damage bearings and can cause shaft damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Coupling halves and pulleys must be fitted on the shaft by using suitable equipment and tools which do not damage the bearings and seals",
+        "head_canonical_zh": "使用合适工具安装联轴器半体和皮带轮",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "damage the bearings and seals",
+        "tail_canonical_zh": "轴承和密封件损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Coupling halves and pulleys must be fitted on the shaft by using suitable equipment and tools which do not damage the bearings and seals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Never fit a coupling half or pulley by hammering or by removing it using a lever pressed against the body of the motor",
+        "head_canonical_zh": "禁止锤击或撬动安装联轴器/皮带轮",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "damage the bearings and seals",
+        "tail_canonical_zh": "轴承和密封件损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Never fit a coupling half or pulley by hammering or by removing it using a lever pressed against the body of the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Correct alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "bearing, vibration and possible shaft failures",
+        "tail_canonical_zh": "轴承、振动及可能的轴故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Correct alignment is essential to avoid bearing, vibration and possible shaft failures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mounting accuracy of coupling half: check that clearance b is less than 0.05 mm and that the difference a1 to a2 is also less than 0.05 mm",
+        "head_canonical_zh": "检查联轴器半体安装精度",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "clearance b is less than 0.05 mm and that the difference a1 to a2 is also less than 0.05 mm",
+        "tail_canonical_zh": "间隙b小于0.05mm且a1与a2之差小于0.05mm",
+        "tail_type": "Standard",
+        "evidence_text": "Mounting accuracy of coupling half: check that clearance b is less than 0.05 mm and that the difference a1 to a2 is also less than 0.05 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Re-check the alignment after final tightening of the bolts or studs",
+        "head_canonical_zh": "最终紧固后重新检查对中",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "alignment",
+        "tail_canonical_zh": "对中",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Re-check the alignment after final tightening of the bolts or studs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Check that drain holes and plugs face downwards",
+        "head_canonical_zh": "检查排水孔和塞子朝下",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "drain holes and plugs face downwards",
+        "tail_canonical_zh": "排水孔和塞子朝下",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Check that drain holes and plugs face downwards.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "In very dusty environments, all drain holes should be closed",
+        "head_canonical_zh": "多尘环境中关闭所有排水孔",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Machines with drain plugs for condensation",
+        "tail_canonical_zh": "带冷凝排水塞的电机",
+        "tail_type": "Equipment",
+        "evidence_text": "In very dusty environments, all drain holes should be closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Check that the motor shaft is parallel with the drive shaft",
+        "head_canonical_zh": "检查电机轴与驱动轴平行",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "motor shaft is parallel with the drive shaft",
+        "tail_canonical_zh": "电机轴与驱动轴平行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Check that the motor shaft is parallel with the drive shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

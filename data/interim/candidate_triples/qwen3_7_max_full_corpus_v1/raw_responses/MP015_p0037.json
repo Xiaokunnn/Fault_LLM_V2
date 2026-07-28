@@ -1,0 +1,118 @@
+{
+  "page_key": "MP015:p0037",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-652554b0-ae03-9e3a-95a1-e62007ce605f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1161,
+    "prompt_tokens": 4221,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5382
+  },
+  "latency_ms": 16772,
+  "attempt": 1,
+  "prompt_sha256": "f67b77d362643827aa5121caab98281fe458b5199026829972ad750b07ae3f6b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "decline in the performance characteristics of the pump",
+        "head_canonical_zh": "泵性能下降",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear of the impeller and in the wear plate",
+        "tail_canonical_zh": "叶轮及耐磨板磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear of the impeller and in the wear plate",
+        "head_canonical_zh": "叶轮及耐磨板磨损",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "measure the clearance between the impeller and the wear plate",
+        "tail_canonical_zh": "测量叶轮与耐磨板间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "To check this the pump must be dismantled in order to measure the clearance between the impeller and the wear plate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impeller and wear plate",
+        "head_canonical_zh": "叶轮和耐磨板",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replacing the impeller and the wear ring",
+        "tail_canonical_zh": "更换叶轮和耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7.6   Replacing the impeller and the wear ring",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "calculated shim thickness exceeds 0,6 mm",
+        "head_canonical_zh": "计算垫片厚度超过0.6mm",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "impeller and wear plate must be replaced",
+        "tail_canonical_zh": "必须更换叶轮和耐磨板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the calculated shim thickness exceeds 0,6 mm, impeller and wear plate must be replaced!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "clearance between the half open impeller and the wear plate",
+        "head_canonical_zh": "半开式叶轮与耐磨板间隙",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "0,3 mm minimum and 0,6 mm maximum",
+        "tail_canonical_zh": "最小0.3mm最大0.6mm",
+        "tail_type": "Standard",
+        "evidence_text": "The clearance between the half open impeller and the wear plate may be 0,3 mm minimum and 0,6 mm maximum.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

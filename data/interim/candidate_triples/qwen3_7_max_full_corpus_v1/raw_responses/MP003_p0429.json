@@ -1,0 +1,129 @@
+{
+  "page_key": "MP003:p0429",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-73733e46-19a5-9fd1-b9f5-a30b973cbc9b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1391,
+    "prompt_tokens": 7731,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9122
+  },
+  "latency_ms": 16731,
+  "attempt": 1,
+  "prompt_sha256": "9773f94b32412b7fe09fee80ef39d98866898ddcbfa4787f70ee97d12b8bd3f4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Thermal oil expansion tank level -low",
+        "head_canonical_zh": "热油膨胀柜液位低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A1 Thermal oil expansion tank level -low   x         4-4-1/13.5",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0429:t00:r001:c01",
+          "MP003:p0429:t00:r001:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Thermal oil temperature at oil outlet - high",
+        "head_canonical_zh": "热油出口温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A2 Thermal oil temperature at oil outlet - x         4-4-1/13.5\n                high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0429:t00:r002:c01",
+          "MP003:p0429:t00:r002:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Thermal oil pressure or flow in circulationsystem -low",
+        "head_canonical_zh": "循环系统热油压力或流量低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A3 Thermal oil pressure or flow in         x         4-4-1/13.5\n                circulationsystem -low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0429:t00:r003:c01",
+          "MP003:p0429:t00:r003:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Exhaust gas temperature -high",
+        "head_canonical_zh": "废气温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "B1 Exhaust gas temperature -high x                  4-4-1/13.5.ii",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0429:t00:r004:c01",
+          "MP003:p0429:t00:r004:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure relief valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "sized to prevent the pressure in the vessel from rising more than 10% or 0.21 bar",
+        "tail_canonical_zh": "选型以防止容器压力升高超过10%或0.21 bar",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The relief valve is to be set at not more than the maximum allowable working pressure and is to be sized to prevent the pressure in the vessel from rising more than 10% or 0.21 bar (0.21 kgf/cm2, 3 psi), whichever is greater, above the maximum allowable working pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "page_key": "MP015:p0021",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6d8f4ece-559a-9d86-8790-f8a966b08797",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1723,
+    "prompt_tokens": 2039,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3762
+  },
+  "latency_ms": 22295,
+  "attempt": 1,
+  "prompt_sha256": "3a9eafe94fe4101c0cb048ebb6dacda71f7edca29a4c0ac1894abfeae89045b8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "liquids with a temperature of up to 95°C",
+        "tail_canonical_zh": "液体温度高达95°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Depending on the design the pumps are suitable for liquids with a temperature of up to 95°C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hot pump parts",
+        "head_canonical_zh": "高温泵部件",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "appropriate protection measures and warnings are fitted",
+        "tail_canonical_zh": "安装适当的防护措施和警告标识",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When installing the pump unit to work at 65°C and above the user should ensure that appropriate protection measures and warnings are fitted to prevent contact with the hot pump parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "static electricity",
+        "head_canonical_zh": "静电",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "the entire pump unit must be earthed",
+        "tail_canonical_zh": "整个泵组必须接地",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If there is danger of static electricity, the entire pump unit must be earthed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Possible leakage liquid from the shaft seal",
+        "head_canonical_zh": "轴封可能的泄漏液",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "discharged safely",
+        "tail_canonical_zh": "安全排放",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Possible leakage liquid from the shaft seal should also be discharged safely.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "corrosion",
+        "head_canonical_zh": "腐蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "the inside of the pump is treated with a preserving agent",
+        "tail_canonical_zh": "泵内部涂有防腐剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to prevent corrosion, the inside of the pump is treated with a preserving agent before leaving the factory.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "remove any preserving agents and flush the pump thoroughly with hot water",
+        "tail_canonical_zh": "去除所有防腐剂并用热水彻底冲洗泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before commissioning the pump remove any preserving agents and flush the pump thoroughly with hot water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "electric motor",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Behind the cooling air inlet of the motor there must be a free area of at least ¼ of the electric motor diameter",
+        "tail_canonical_zh": "电机冷却进风口后方必须有至少1/4电机直径的自由空间",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Behind the cooling air inlet of the motor there must be a free area of at least ¼ of the electric motor diameter, to ensure unobstructed air supply.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal and bearing",
+        "head_canonical_zh": "轴封和轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "special attention has to be paid To temperature limits",
+        "tail_canonical_zh": "需特别注意温度限值",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In case the pump is provided with an isolation, special attention has to be paid To temperature limits of shaft seal and bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

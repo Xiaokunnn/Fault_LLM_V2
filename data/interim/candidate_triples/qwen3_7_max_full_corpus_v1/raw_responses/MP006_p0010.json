@@ -1,0 +1,194 @@
+{
+  "page_key": "MP006:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c09cd597-9647-92d8-9258-2ce9d2089b1e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1967,
+    "prompt_tokens": 2026,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3993
+  },
+  "latency_ms": 25324,
+  "attempt": 1,
+  "prompt_sha256": "cd11a14b80edadb4675681b0559e010e23dba13d39d9c9a3ebc7f45374ce837c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "frequency converter",
+        "head_canonical_zh": "变频器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴电流",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "When a pump installation includes a frequency converter with the primary purpose of being able to regulate electric motor and thus pump RPM, the frequency converter can tend to generate very high current peaks. Failure to take this into account when designing the overall installation can cause damage, including bearing currents that can damage the motor’s bearings very quickly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing currents",
+        "head_canonical_zh": "轴电流",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage the motor’s bearings",
+        "tail_canonical_zh": "电机轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "bearing currents that can damage the motor’s bearings very quickly",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing currents",
+        "head_canonical_zh": "轴电流",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "using screened EMC cables and EMC screw assemblies",
+        "tail_canonical_zh": "使用屏蔽EMC电缆和EMC螺钉组件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "DESMI recommends using screened EMC cables and EMC screw assemblies to avoid electrical interferences",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electrical interferences",
+        "head_canonical_zh": "电气干扰",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "correctly potential equalised",
+        "tail_canonical_zh": "正确等电位连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the installation must be correctly potential equalised",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "paint residue etc. on screw assemblies",
+        "head_canonical_zh": "螺钉组件上的油漆残留等",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "removed",
+        "tail_canonical_zh": "清除",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is important that any paint residue etc. on screw assemblies in terminal boxes on motor and frequency converter is removed to achieve good electrical connection",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "common mode current peaks",
+        "head_canonical_zh": "共模电流峰值",
+        "head_type": "SignalFeature",
+        "relation": "mitigated_by",
+        "tail_surface": "installing a Common Mode filter",
+        "tail_canonical_zh": "安装共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "DESMI recommends installing a Common Mode filter, the function of which is to reduce common mode current peaks between the frequency converter and motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing currents",
+        "head_canonical_zh": "轴电流",
+        "head_type": "FailureMechanism",
+        "relation": "inspected_by",
+        "tail_surface": "measurement",
+        "tail_canonical_zh": "测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "if the person responsible for installation can confirm (via measurement) that no bearing currents occur",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "current peaking",
+        "head_canonical_zh": "电流峰值",
+        "head_type": "SignalFeature",
+        "relation": "mitigated_by",
+        "tail_surface": "Common Mode filter",
+        "tail_canonical_zh": "共模滤波器",
+        "tail_type": "Equipment",
+        "evidence_text": "A Common Mode filter will reduce but cannot eliminate current peaking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "destructive effect on the motor of such currents",
+        "head_canonical_zh": "此类电流对电机的破坏作用",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "using insulated bearings or hybrid (ceramic) bearings",
+        "tail_canonical_zh": "使用绝缘轴承或混合（陶瓷）轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The destructive effect on the motor of such currents can be strongly reduced by using insulated bearings or hybrid (ceramic) bearings in the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

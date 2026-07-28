@@ -1,0 +1,130 @@
+{
+  "page_key": "MP019:p0117",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-c8e595e1-7fb5-9059-bd59-c20889181e44",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 21533,
+  "attempt": 1,
+  "prompt_sha256": "0f640cf23375921a47c735b82cbc81e1d00df6198a700ce73f1559aeff2d9872",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Liitäntäkoteloiden tiivisteiden",
+        "head_canonical_zh": "接线盒密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "täytyy olla kunnolla urissaan",
+        "tail_canonical_zh": "正确安装在槽内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Liitäntäkoteloiden tiivisteiden täytyy olla kunnolla urissaan, jotta kotelon moottorin kotelointiluokka vastaa suunniteltua ja moottorin arvokilvessä mainittua IP-luokkaa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Termistorien enimmäismittausjännite on 2,5 V. Pt100:n enimmäismittausvirta on 5 mA. Suuremman mittausjännitteen tai -virran käyttäminen",
+        "head_canonical_zh": "过高的测量电压或电流",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "virheitä lukemiin tai vaurioittaa järjestelmää",
+        "tail_canonical_zh": "读数错误或系统损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Termistorien enimmäismittausjännite on 2,5 V. Pt100:n enimmäismittausvirta on 5 mA. Suuremman mittausjännitteen tai -virran käyttäminen voi aiheuttaa virheitä lukemiin tai vaurioittaa järjestelmää.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "virheitä lukemiin tai vaurioittaa järjestelmää",
+        "head_canonical_zh": "读数错误或系统损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Termistorien enimmäismittausjännite on 2,5 V. Pt100:n enimmäismittausvirta on 5 mA",
+        "tail_canonical_zh": "限制热敏电阻最大测量电压为2.5V及Pt100最大测量电流为5mA",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Termistorien enimmäismittausjännite on 2,5 V. Pt100:n enimmäismittausvirta on 5 mA. Suuremman mittausjännitteen tai -virran käyttäminen voi aiheuttaa virheitä lukemiin tai vaurioittaa järjestelmää.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Käämityksen lämpötila-anturien eristykset",
+        "head_canonical_zh": "绕组温度传感器绝缘",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "varmistettava riittävä eristys tai erotus, katso IEC 60664",
+        "tail_canonical_zh": "确认足够的绝缘或隔离(参照IEC 60664)",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kun antureita kytketään esimerkiksi ohjausjärjestelmiin, on varmistettava riittävä eristys tai erotus, katso IEC 60664.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "termistoripiirin eristystaso tai erotus",
+        "head_canonical_zh": "热敏电阻电路绝缘等级或隔离",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Varmista termistoripiirin eristystaso tai erotus, katso IEC 60664",
+        "tail_canonical_zh": "验证热敏电阻电路绝缘等级或隔离(参照IEC 60664)",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Varmista termistoripiirin eristystaso tai erotus, katso IEC 60664.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pyörimissuunta",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "tarkista, että pyörimissuunta on moottoriin merkityn nuolen mukainen",
+        "tail_canonical_zh": "检查旋转方向是否与电机标记箭头一致",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Jos moottorissa on vain yhteen suuntaan pyörivä tuuletin, tarkista, että pyörimissuunta on moottoriin merkityn nuolen mukainen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

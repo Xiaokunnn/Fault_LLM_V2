@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0387",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b96b9be2-3723-9c9a-a81b-1dff2a699521",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1114,
+    "prompt_tokens": 2530,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3644
+  },
+  "latency_ms": 13019,
+  "attempt": 1,
+  "prompt_sha256": "534415e93dab18c3299749fd4e027bfd23504d9281f4b524625b3fc8a2528783",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "active components (e.g. pumps, heaters, etc.)",
+        "head_canonical_zh": "主动部件（如泵、加热器等）",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "cross-connect the auxiliary service systems and size the active components (pumps, heaters, etc.) to be capable of supplying two or more propulsion machines simultaneously",
+        "tail_canonical_zh": "互连辅助服务系统并配置主动部件使其能同时供应两台及以上推进机械",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to meet this requirement, it will be necessary to either cross-connect the auxiliary service systems and size the active components (pumps, heaters, etc.) to be capable of supplying two or more propulsion machines simultaneously, or provide duplicate active components (pumps, heaters, etc.) in each auxiliary system in case one fails.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "active components (e.g. pumps, heaters, etc.)",
+        "head_canonical_zh": "主动部件（如泵、加热器等）",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "provide duplicate active components (pumps, heaters, etc.) in each auxiliary system in case one fails",
+        "tail_canonical_zh": "在每个辅助系统中提供冗余主动部件以防单件失效",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to meet this requirement, it will be necessary to either cross-connect the auxiliary service systems and size the active components (pumps, heaters, etc.) to be capable of supplying two or more propulsion machines simultaneously, or provide duplicate active components (pumps, heaters, etc.) in each auxiliary system in case one fails.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "attached pump",
+        "head_canonical_zh": "附装泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "A spare pump is required to be carried",
+        "tail_canonical_zh": "要求携带备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the failure of the attached pump is not to degrade the vessel propulsion capability beyond what is permitted in 4-3-7/7, (half design speed or 7 knots, whichever is less.) A spare pump is required to be carried.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "interconnections between auxiliary service systems",
+        "head_canonical_zh": "辅助服务系统之间的互连",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Position status of the disconnection or isolation means is to be provided at the navigation bridge and the centralized control station",
+        "tail_canonical_zh": "在驾驶台和集控站提供断开或隔离装置的位置状态指示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Position status of the disconnection or isolation means is to be provided at the navigation bridge and the centralized control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

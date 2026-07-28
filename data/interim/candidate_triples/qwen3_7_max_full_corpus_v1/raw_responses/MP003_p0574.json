@@ -1,0 +1,133 @@
+{
+  "page_key": "MP003:p0574",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-eaa65e16-b2be-9816-b1ff-50b3d74924e4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1398,
+    "prompt_tokens": 2419,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3817
+  },
+  "latency_ms": 17949,
+  "attempt": 1,
+  "prompt_sha256": "3eaf59a1e173968df21a7940be206cabf1dfa254999ec977b9ab2d57b6228ffc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bilge alarm",
+        "head_canonical_zh": "舱底水高位报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "excessive rise of bilge water",
+        "tail_canonical_zh": "舱底水过量积聚",
+        "tail_type": "FaultMode",
+        "evidence_text": "a bilge alarm system is to be provided. 5.5.13(a) Bilge Level. The cargo holds are to be provided with two independent systems to detect excessive rise of bilge water in the bilges or bilge wells.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump is operating more frequently than would normally be expected",
+        "head_canonical_zh": "泵运行频率异常偏高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "excessive rise of bilge water",
+        "tail_canonical_zh": "舱底水过量积聚",
+        "tail_type": "FaultMode",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump is operating for an excessive length of time",
+        "head_canonical_zh": "泵运行时间过长",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "excessive rise of bilge water",
+        "tail_canonical_zh": "舱底水过量积聚",
+        "tail_type": "FaultMode",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "progressive flooding of intact spaces",
+        "head_canonical_zh": "完整处所渐进浸水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "fitted with non-return valves",
+        "tail_canonical_zh": "安装止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Affected bilge piping is to be fitted with non-return valves in the lines in the intact spaces to prevent the progressive flooding of these spaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alarm",
+        "head_canonical_zh": "15PPM超标报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "15 PPM cannot be maintained",
+        "tail_canonical_zh": "含油量无法维持15PPM以下",
+        "tail_type": "FaultMode",
+        "evidence_text": "the equipment is to be fitted with an alarm and an arrangement to automatically stop the discharge when 15 PPM cannot be maintained.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "arrangement to automatically stop the discharge",
+        "head_canonical_zh": "自动停止排放装置",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "15 PPM cannot be maintained",
+        "tail_canonical_zh": "含油量无法维持15PPM以下",
+        "tail_type": "FaultMode",
+        "evidence_text": "the equipment is to be fitted with an alarm and an arrangement to automatically stop the discharge when 15 PPM cannot be maintained.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

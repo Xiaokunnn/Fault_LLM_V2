@@ -1,0 +1,115 @@
+{
+  "page_key": "MP001:p0067",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a90651d1-9499-9e0b-9b35-f5bf6750c3ab",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1138,
+    "prompt_tokens": 2280,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3418
+  },
+  "latency_ms": 17167,
+  "attempt": 1,
+  "prompt_sha256": "1736a779d24573685cfa537dcbf73e6df396e9a6918ef30990b1f81e9f728c65",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "particle count",
+        "head_canonical_zh": "颗粒计数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "effectiveness of the filtration systems",
+        "tail_canonical_zh": "过滤系统有效性",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "This technique can be used to analyze oil used in engines, compressors, transmissions, gearboxes, and hydraulic systems to evaluate the effectiveness of the filtration systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "particle count exceeds a predetermined maximum",
+        "head_canonical_zh": "颗粒计数超过预定最大值",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Ferrography testing",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "When the particle count exceeds a predetermined maximum, Ferrography testing (see 6/2.3) can be used to determine the source of the particles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air bubbles, water contamination and translucent particles",
+        "head_canonical_zh": "气泡、水污染和半透明颗粒",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "tests are dependent on good fluid conditions and are hampered",
+        "tail_canonical_zh": "测试受流体条件影响且受阻",
+        "tail_type": "FaultMode",
+        "evidence_text": "The tests are dependent on good fluid conditions and are hampered by air bubbles, water contamination and translucent particles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Potentiometric titration – TAN or TBN",
+        "head_canonical_zh": "电位滴定-总酸值或总碱值",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "extent of breakdown in lubrication or hydraulic oil",
+        "tail_canonical_zh": "润滑油或液压油劣化程度",
+        "tail_type": "FaultMode",
+        "evidence_text": "Potentiometric titration – TAN or TBN is used to determine the extent of breakdown in lubrication or hydraulic oil by determining the level of acidity or alkalinity in an oil sample.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "level of acidity or alkalinity",
+        "head_canonical_zh": "酸度或碱度水平",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "oil deterioration",
+        "tail_canonical_zh": "油品劣化",
+        "tail_type": "FaultMode",
+        "evidence_text": "The more KOH a sample uses, the higher the acid number and oil deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

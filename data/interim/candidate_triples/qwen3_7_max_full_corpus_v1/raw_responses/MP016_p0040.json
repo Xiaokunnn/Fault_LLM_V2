@@ -1,0 +1,169 @@
+{
+  "page_key": "MP016:p0040",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2f904b35-a9fd-9e07-bf93-beca65ab00a3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2075,
+    "prompt_tokens": 2872,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4947
+  },
+  "latency_ms": 24130,
+  "attempt": 1,
+  "prompt_sha256": "d974df321c50f44042a996573659087f4632cbd3b42b5a6822733ac174df42d7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pumpa inte petroleumderivat med lätta fraktioner, förtunnare, lösningsmedel, högkoncentrerade syror eller organiska syror",
+        "head_canonical_zh": "禁止泵送轻质石油衍生物、稀释剂、溶剂、高浓度酸或有机酸",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "spolas med vatten eller ett neutraliseringsmedel efter varje användning",
+        "tail_canonical_zh": "每次使用后用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumpa inte petroleumderivat med lätta fraktioner, förtunnare, lösningsmedel, högkoncentrerade syror eller organiska syror. Pumpens livslängd förlängs om den spolas med vatten eller ett neutraliseringsmedel efter varje användning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "explosion eller död",
+        "head_canonical_zh": "爆炸或死亡",
+        "head_type": "Risk",
+        "relation": "causes",
+        "tail_surface": "Använd inte någon Jablco-pump för bensin, petroleumprodukter eller andra produkter med en flampunkt under 37° C (98° F)",
+        "tail_canonical_zh": "禁止使用Jabsco泵输送闪点低于37°C的汽油、石油产品或其他产品",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Använd inte någon Jablco-pump för bensin, petroleumprodukter eller andra produkter med en flampunkt under 37° C (98° F), eftersom det kan leda till explosion eller död",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "kavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Håll rördragningarna korta och rördiametrarna stora",
+        "tail_canonical_zh": "保持管路短且管径大",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Håll rördragningarna korta och rördiametrarna stora. Rör kan behöva ha en större diameter än pumpportar, särskilt när man pumpar viskösa vätskor för att förhindra kavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "kavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Rör kan behöva ha en större diameter än pumpportar",
+        "tail_canonical_zh": "管道直径可能需要大于泵端口直径",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Rör kan behöva ha en större diameter än pumpportar, särskilt när man pumpar viskösa vätskor för att förhindra kavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Distorsion kan påverka kopplingsinriktningen",
+        "head_canonical_zh": "变形可能影响联轴器对中",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera alltid uppriktningen mellan pump och drivenhet efter installation och innan pumpen startas",
+        "tail_canonical_zh": "安装后及启动前始终检查泵与驱动装置的对中情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Distorsion kan påverka kopplingsinriktningen. Kontrollera alltid uppriktningen mellan pump och drivenhet efter installation och innan pumpen startas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump- och motoraxlarna ska vara exakt inriktade",
+        "head_canonical_zh": "泵轴和电机轴应精确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "i enlighet med kopplingstillverkarens instruktioner",
+        "tail_canonical_zh": "按照联轴器制造商的说明进行",
+        "tail_type": "Standard",
+        "evidence_text": "Pump- och motoraxlarna ska vara exakt inriktade i enlighet med kopplingstillverkarens instruktioner.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "fingrar, kläder eller verktyg vidrör rörliga delar",
+        "head_canonical_zh": "手指、衣物或工具接触运动部件",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Kopplingar, remmar och remskivor måste vara inneslutna",
+        "tail_canonical_zh": "联轴器、皮带和皮带轮必须加装防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kopplingar, remmar och remskivor måste vara inneslutna för att förhindra att fingrar, kläder eller verktyg vidrör rörliga delar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumpen får inte användas med demonterade skydd",
+        "head_canonical_zh": "严禁在防护罩拆卸状态下使用泵",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Skydd måste vara ordentligt fästa",
+        "tail_canonical_zh": "防护罩必须牢固固定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Skydd måste vara ordentligt fästa. • Pumpen får inte användas med demonterade skydd.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

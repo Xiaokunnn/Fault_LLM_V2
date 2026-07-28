@@ -1,0 +1,124 @@
+{
+  "page_key": "MP003:p0503",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bf711564-4164-97b3-8eb6-b643587f3d5a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1317,
+    "prompt_tokens": 5721,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7038
+  },
+  "latency_ms": 17348,
+  "attempt": 1,
+  "prompt_sha256": "69c679e7ac1826b813813014a9025601d853d2337f3beb3e54f4abe6e324ee60",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Furnace Butt Welded Pipes",
+        "head_canonical_zh": "炉焊管",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "not permitted",
+        "tail_canonical_zh": "不允许使用",
+        "tail_type": "Standard",
+        "evidence_text": "Class I permitted permitted not permitted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0503:t00:r001:c00",
+          "MP003:p0503:t00:r001:c03"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Furnace Butt Welded Pipes",
+        "head_canonical_zh": "炉焊管",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "not permitted",
+        "tail_canonical_zh": "不允许使用",
+        "tail_type": "Standard",
+        "evidence_text": "Class II permitted permitted not permitted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0503:t00:r002:c00",
+          "MP003:p0503:t00:r002:c03"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sea water piping systems in which sea water may be retained within the piping system in a stagnant or low flow condition (i.e., less than 1 m/sec)",
+        "head_canonical_zh": "海水滞留或低流速海水管系",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "chloride pitting",
+        "tail_canonical_zh": "氯化物点蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "For sea water piping systems in which sea water may be retained within the piping system in a stagnant or low flow condition (i.e., less than 1 m/sec), there is a potential for chloride pitting",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "304 and 304L stainless steels",
+        "head_canonical_zh": "304及304L不锈钢",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "the following grades are not to be used for the piping or piping components",
+        "tail_canonical_zh": "禁止用于管路或管件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "there is a potential for chloride pitting and the following grades are not to be used for the piping or piping components: ● 304 and 304L stainless steels",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "316 and 316L stainless steels with a molybdenum content of less than 2.5%",
+        "head_canonical_zh": "钼含量低于2.5%的316及316L不锈钢",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "the following grades are not to be used for the piping or piping components",
+        "tail_canonical_zh": "禁止用于管路或管件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "there is a potential for chloride pitting and the following grades are not to be used for the piping or piping components: ... ● 316 and 316L stainless steels with a molybdenum content of less than 2.5%",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

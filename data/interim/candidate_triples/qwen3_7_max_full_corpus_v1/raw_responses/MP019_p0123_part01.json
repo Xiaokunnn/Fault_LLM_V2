@@ -1,0 +1,235 @@
+{
+  "page_key": "MP019:p0123",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1eea35a3-0aa3-97e3-b0c1-5258a74101eb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2821,
+    "prompt_tokens": 2919,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5740
+  },
+  "latency_ms": 34694,
+  "attempt": 1,
+  "prompt_sha256": "c8ad3ead9fe63995aa82f312e7e9811b04c409d40221167065eb7b0dfee5a8d9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "lämpötilan kohoamista",
+        "head_canonical_zh": "温度升高",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Ensimmäisen käynnistyksen aikana tai laakerin voitelun jälkeen",
+        "tail_canonical_zh": "首次启动或轴承润滑后",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Ensimmäisen käynnistyksen aikana tai laakerin voitelun jälkeen voi esiintyä väliaikaista lämpötilan kohoamista noin 10–20 tunnin ajan.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Uudelleenvoitelu moottorin pyöriessä",
+        "head_canonical_zh": "电机旋转时重新润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "laakereilla varustetut moottorit",
+        "tail_canonical_zh": "配备可再润滑轴承的电机",
+        "tail_type": "Equipment",
+        "evidence_text": "6.2.2 Jälkivoideltavilla laakereilla varustetut moottorit ... A. Manuaalinen voitelu Uudelleenvoitelu moottorin pyöriessä",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "poista ne voitelun ajaksi",
+        "head_canonical_zh": "润滑期间拆除堵头或阀门",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "voiteluaineen poistoaukot on varustettu tiivistystulpilla tai sulkuventtiilillä",
+        "tail_canonical_zh": "润滑脂排出口装有密封堵头或截止阀",
+        "tail_type": "Component",
+        "evidence_text": "Jos voiteluaineen poistoaukot on varustettu tiivistystulpilla tai sulkuventtiilillä, poista ne voitelun ajaksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Varmista, että voitelukanava on auki",
+        "head_canonical_zh": "确认润滑通道畅通",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "voitelukanava",
+        "tail_canonical_zh": "润滑通道",
+        "tail_type": "Component",
+        "evidence_text": "Varmista, että voitelukanava on auki.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Anna moottorin pyöriä 1-2 tuntia varmistaaksesi, että ylimääräinen voiteluaine on poistunut",
+        "head_canonical_zh": "运转电机1-2小时以确认多余润滑脂排出",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "ylimääräinen voiteluaine on poistunut",
+        "tail_canonical_zh": "多余润滑脂已排出",
+        "tail_type": "Symptom",
+        "evidence_text": "Anna moottorin pyöriä 1-2 tuntia varmistaaksesi, että ylimääräinen voiteluaine on poistunut.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Sulje tiivistystulpilla varustetut poistoaukot tai sulkuventtiili",
+        "head_canonical_zh": "关闭带密封堵头的排出口或截止阀",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "laakereilla varustetut moottorit",
+        "tail_canonical_zh": "配备轴承的电机",
+        "tail_type": "Equipment",
+        "evidence_text": "Sulje tiivistystulpilla varustetut poistoaukot tai sulkuventtiili.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Uudelleenvoitelu moottorin ollessa pysähtyneenä",
+        "head_canonical_zh": "电机静止时重新润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "laakereilla varustetut moottorit",
+        "tail_canonical_zh": "配备可再润滑轴承的电机",
+        "tail_type": "Equipment",
+        "evidence_text": "Uudelleenvoitelu moottorin ollessa pysähtyneenä Moottorin voitelu suoritetaan yleensä moottorin pyöri essä, mutta voitelu voidaan suorittaa myös moottorin ollessa pysähtyneenä.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Poistoaukon tulppa on poistettava pysyvästi tai mahdollinen sulkuventtiili on avattava",
+        "head_canonical_zh": "永久拆除排出口堵头或打开截止阀",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "automaattivoitelua",
+        "tail_canonical_zh": "自动润滑",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Poistoaukon tulppa on poistettava pysyvästi tai mahdollinen sulkuventtiili on avattava, jos käytetään automaattista voitelua.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lämpötila täytyy mitata koko toiminta-alueelta",
+        "head_canonical_zh": "在整个运行范围内测量温度",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Taajuusmuuttajakäytössä",
+        "tail_canonical_zh": "变频器驱动运行中",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Taajuusmuuttajakäytössä (esim. taajuusmuuttaja-syötössä) laakerin lämpötila täytyy mitata koko toiminta-alueelta.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lämpötila ylittää 80 °C",
+        "head_canonical_zh": "温度超过80°C",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "voiteluväli täytyy puolittaa",
+        "tail_canonical_zh": "必须将润滑间隔减半",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Jos lämpötila ylittää 80 °C, voiteluväli täytyy puolittaa laakerin lämpötilan noustessa 15 °C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Voiteluaineen ja laakerin suurinta sallittua käyttölämpötilaa +110 °C ei saa ylittää",
+        "head_canonical_zh": "润滑脂和轴承最高允许工作温度不得超过+110°C",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "VAROITUS",
+        "tail_canonical_zh": "警告",
+        "tail_type": "Risk",
+        "evidence_text": "VAROITUS Voiteluaineen ja laakerin suurinta sallittua käyttölämpötilaa +110 °C ei saa ylittää.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

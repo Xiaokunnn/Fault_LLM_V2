@@ -1,0 +1,156 @@
+{
+  "page_key": "MP003:p0777",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8c4acaa0-b734-996e-9e54-bae0a3b95f22",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1618,
+    "prompt_tokens": 2283,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3901
+  },
+  "latency_ms": 19475,
+  "attempt": 1,
+  "prompt_sha256": "35426bec8898cc68e358e6289ec85d49e50ae934a999a88ec2f4b0ee34071359",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "circulating currents",
+        "head_canonical_zh": "轴循环电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Means are to be provided to prevent circulating currents from passing between the journals and the bearings",
+        "tail_canonical_zh": "设置防止轴颈与轴承间循环电流的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided to prevent circulating currents from passing between the journals and the bearings, where the design and arrangement of the machine is such that damaging current may be expected, due to the unbalance of magnetic fields.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "unbalance of magnetic fields",
+        "head_canonical_zh": "磁场不平衡",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damaging current",
+        "tail_canonical_zh": "损伤性电流",
+        "tail_type": "FaultMode",
+        "evidence_text": "damaging current may be expected, due to the unbalance of magnetic fields",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the generator’s lubricating system",
+        "head_canonical_zh": "发电机润滑系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "means to shut down their prime movers automatically",
+        "tail_canonical_zh": "自动关闭原动机的装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "generators are to be fitted with means to shut down their prime movers automatically upon failure of the generator’s lubricating system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "self-lubricating sleeve bearing",
+        "head_canonical_zh": "自润滑套筒轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "means for visual indication of oil level",
+        "tail_canonical_zh": "油位视觉指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Each self-lubricating sleeve bearing is to be fitted with a means for visual indication of oil level",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "entry of water into the machine",
+        "head_canonical_zh": "水进入电机内部",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "cooler is to be so arranged to avoid entry of water into the machine",
+        "tail_canonical_zh": "冷却器布置应避免水进入电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the cooler is to be so arranged to avoid entry of water into the machine, whether through leakage or condensation in the heat exchanger",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "moisture condensation",
+        "head_canonical_zh": "湿气冷凝",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "means to prevent moisture condensation in the machine when idle",
+        "tail_canonical_zh": "停机时防湿气冷凝措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All generators, and each propulsion motor, are to be provided with a means to prevent moisture condensation in the machine when idle",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "temperatures at each phase of the stationary windings",
+        "head_canonical_zh": "定子绕组各相温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Stator Temperature Detection",
+        "tail_canonical_zh": "定子温度检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "AC propulsion generators and motors rated above 500 kW (670 hp) are to be provided with means of obtaining the temperatures at each phase of the stationary windings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

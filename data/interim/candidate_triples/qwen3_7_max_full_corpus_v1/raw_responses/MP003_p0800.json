@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0800",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7a671697-40e6-9dd3-9b64-5e91fe4b1a51",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 723,
+    "prompt_tokens": 9710,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10433
+  },
+  "latency_ms": 12401,
+  "attempt": 1,
+  "prompt_sha256": "79500a1ca6870ddd41ab26b7ce77c7d0be0fbd86af16aefc59505c7529debbf8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Interphase reactors and transformers used with the semiconductor converters for main and auxiliary propulsion systems",
+        "head_canonical_zh": "主辅推进系统半导体变换器用相间电抗器和变压器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "high temperature alarm at the switchboard or the propulsion control station",
+        "tail_canonical_zh": "配电板或推进控制站高温报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Interphase reactors and transformers used with the semiconductor converters for main and auxiliary propulsion systems are to be provided with a high temperature alarm at the switchboard or the propulsion control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "high temperature alarm",
+        "head_canonical_zh": "高温报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "High Temperature",
+        "tail_canonical_zh": "高温",
+        "tail_type": "FaultMode",
+        "evidence_text": "Interphase reactors and transformers used with the semiconductor converters for main and auxiliary propulsion systems are to be provided with a high temperature alarm at the switchboard or the propulsion control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "capacitor discharge time",
+        "head_canonical_zh": "电容器放电时间",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "test and/or by calculation",
+        "tail_canonical_zh": "试验和/或计算",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Verification of the capacitor discharge time as required in 4-8-3/8.7.7 is required to be done by a test and/or by calculation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "page_key": "MP015:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d770c792-ec0e-9594-b86a-3c22e92afd80",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1788,
+    "prompt_tokens": 4434,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6222
+  },
+  "latency_ms": 22325,
+  "attempt": 1,
+  "prompt_sha256": "5ca04f2ce42732728245cb597578cbcbe86878e69808bf97071ca016ae26f055",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "FreFlow pumps",
+        "head_canonical_zh": "FreFlow泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Suction lifts up to 7 m",
+        "tail_canonical_zh": "吸程高达7米",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Suction lifts up to 7 m are possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "selfpriming action",
+        "head_canonical_zh": "自吸作用",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "The pump has to be filled with liquid once",
+        "tail_canonical_zh": "泵必须预先灌液一次",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump has to be filled with liquid once.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "good functioning",
+        "head_canonical_zh": "良好运行",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "aspirated air to escape without back pressure in the discharge line",
+        "tail_canonical_zh": "吸入空气在排出管路中无背压地逸出",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "A precondition for good functioning is that it should be possible for the aspirated air to escape without back pressure in the discharge line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "voluminous suction piping causing too long suction times",
+        "head_canonical_zh": "容积过大的吸入管路导致抽吸时间过长",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "install a non return valve in the pumps suction inlet",
+        "tail_canonical_zh": "在泵吸入口安装止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In case voluminous suction piping causing too long suction times, it is recommended to install a non return valve in the pumps suction inlet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "Water /air separation",
+        "tail_canonical_zh": "水气分离",
+        "tail_type": "Component",
+        "evidence_text": "Water /air separation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP015:p0017:t00:r000:c01",
+          "MP015:p0017:t00:r001:c01"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Volute",
+        "head_canonical_zh": "蜗壳",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "Water /air separation",
+        "tail_canonical_zh": "水气分离",
+        "tail_type": "Component",
+        "evidence_text": "Water /air separation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP015:p0017:t00:r000:c01",
+          "MP015:p0017:t00:r002:c01"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "Water /air separation",
+        "tail_canonical_zh": "水气分离",
+        "tail_type": "Component",
+        "evidence_text": "Water /air separation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP015:p0017:t00:r000:c01",
+          "MP015:p0017:t00:r003:c01"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Back flow opening",
+        "head_canonical_zh": "回流孔",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "Water /air separation",
+        "tail_canonical_zh": "水气分离",
+        "tail_type": "Component",
+        "evidence_text": "Water /air separation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP015:p0017:t00:r000:c01",
+          "MP015:p0017:t00:r004:c01"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

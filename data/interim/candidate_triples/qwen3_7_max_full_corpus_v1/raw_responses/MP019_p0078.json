@@ -1,0 +1,128 @@
+{
+  "page_key": "MP019:p0078",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-640a1e95-e718-9481-91d9-6945ab99fe3b",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 16734,
+  "attempt": 1,
+  "prompt_sha256": "d893362dfe906f32d9e43d5748f3970087554f32db699e1442244f808465da55",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "danni durante il trasporto",
+        "head_canonical_zh": "运输损坏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Ispezionare immediatamente il motore al ricevimento",
+        "tail_canonical_zh": "收货时立即检查电机",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ispezionare immediatamente il motore al ricevimento per verificare che non abbia subito danni durante il trasporto",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "golfari danneggiati",
+        "head_canonical_zh": "吊环损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "non devono essere utilizzati",
+        "tail_canonical_zh": "禁止使用",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "I golfari danneggiati non devono essere utilizzati.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "migrazioni di lubrificante",
+        "head_canonical_zh": "润滑剂迁移",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "L'albero deve essere ruotato a mano periodicamente",
+        "tail_canonical_zh": "定期手动盘车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "L'albero deve essere ruotato a mano periodicamente per prevenire migrazioni di lubrificante.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "formazione di condensa nel motore",
+        "head_canonical_zh": "电机内部凝露",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "utilizzare le resistenze anticondensa",
+        "tail_canonical_zh": "使用防冷凝加热器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si consiglia di utilizzare le resistenze anticondensa, se montate, per evitare formazione di condensa nel motore.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "danni ai cuscinetti",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "vibrazioni esterne",
+        "tail_canonical_zh": "外部振动",
+        "tail_type": "Cause",
+        "evidence_text": "Da fermo, il motore non deve essere sottoposto a vibrazioni esterne, per evitare danni ai cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "danni ai cuscinetti",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "non deve essere sottoposto a vibrazioni esterne",
+        "tail_canonical_zh": "避免承受外部振动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Da fermo, il motore non deve essere sottoposto a vibrazioni esterne, per evitare danni ai cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

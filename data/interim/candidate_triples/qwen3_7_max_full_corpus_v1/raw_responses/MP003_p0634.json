@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0634",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3dc014dd-6e5b-97d9-94a0-9fee16bf3db5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1453,
+    "prompt_tokens": 2518,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3971
+  },
+  "latency_ms": 17380,
+  "attempt": 1,
+  "prompt_sha256": "f1fadc199748d1cecf7ec80725ac45d5756eb0fdf39848cfdb0509d53f7721aa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dangerous lowering of pressure in the lubricating oil system",
+        "head_canonical_zh": "润滑油系统压力危险降低",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatically shut off the steam supply to the turbine through a quick acting device",
+        "tail_canonical_zh": "通过速动装置自动切断汽轮机蒸汽供应",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent rapid deterioration of the turbine or the gear upon dangerous lowering of pressure in the lubricating oil system of the turbine or the gear, means are to be fitted to automatically shut off the steam supply to the turbine through a quick acting device.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dangerous lowering of pressure in the lubricating oil system",
+        "head_canonical_zh": "润滑油系统压力危险降低",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "rapid deterioration of the turbine or the gear",
+        "tail_canonical_zh": "汽轮机或齿轮快速损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "To prevent rapid deterioration of the turbine or the gear upon dangerous lowering of pressure in the lubricating oil system of the turbine or the gear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "activation of this device",
+        "head_canonical_zh": "速动装置动作",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "dangerous lowering of pressure in the lubricating oil system",
+        "tail_canonical_zh": "润滑油系统压力危险降低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The activation of this device is to be alarmed at propulsion control stations.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the lubricating oil system",
+        "head_canonical_zh": "润滑油系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "emergency supply of lubricating oil",
+        "tail_canonical_zh": "应急润滑油供应",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "an emergency supply of lubricating oil is to be provided which will automatically come into operation upon failure of the lubricating oil system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the lubricating oil system",
+        "head_canonical_zh": "润滑油系统故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Audible and visual alarms",
+        "tail_canonical_zh": "声光报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Audible and visual alarms are to be fitted for each lubricating oil system serving propulsion turbines and reduction gears to warn of the failure of the lubricating oil system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "arranged and located so that, in the event of leakage, oil will not spray onto surfaces with temperature in excess of 220°C (428°F)",
+        "tail_canonical_zh": "布置和定位使泄漏油不喷溅到超过220°C的表面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Strainers and filters are also to be arranged and located so that, in the event of leakage, oil will not spray onto surfaces with temperature in excess of 220°C (428°F).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

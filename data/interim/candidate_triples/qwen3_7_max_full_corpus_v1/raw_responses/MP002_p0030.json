@@ -1,0 +1,91 @@
+{
+  "page_key": "MP002:p0030",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6b7aff45-19f4-9a4b-8bc3-2770261d323c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 961,
+    "prompt_tokens": 2320,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3281
+  },
+  "latency_ms": 12944,
+  "attempt": 1,
+  "prompt_sha256": "f4b55204d3a88e94d517e6b632230450b8a5344015c40f3a314bf6e0a0677d45",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failure Modes Effects and Criticality Analysis (FMECA)",
+        "head_canonical_zh": "故障模式影响及危害性分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Condition-monitoring or planned maintenance tasks",
+        "tail_canonical_zh": "状态监测或计划维护任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Failure Modes Effects and Criticality Analysis (FMECA). This process analyzes asset sub-assemblies and components to identify failure modes and their accompanying causes and system effects. Each failure mode has a risk calculation performed to prioritize and quantify the level of mitigation required. Condition-monitoring or planned maintenance tasks are identified with a preference to apply non-disruptive predictive technologies as the primary option.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure modes",
+        "head_canonical_zh": "故障模式",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Failure Modes Effects and Criticality Analysis (FMECA)",
+        "tail_canonical_zh": "故障模式影响及危害性分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Failure Modes Effects and Criticality Analysis (FMECA). This process analyzes asset sub-assemblies and components to identify failure modes and their accompanying causes and system effects.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Maintenance Task Analysis (MTA)",
+        "head_canonical_zh": "维护任务分析",
+        "head_type": "InspectionMethod",
+        "relation": "maintained_by",
+        "tail_surface": "replacement value added maintenance tasks",
+        "tail_canonical_zh": "增值更换维护任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Maintenance Task Analysis (MTA). This process reviews all previous asset maintenance and performance records with the objective to reaffirm or select replacement value added maintenance tasks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Basic Strategy Development (BSD)",
+        "head_canonical_zh": "基本策略制定",
+        "head_type": "InspectionMethod",
+        "relation": "maintained_by",
+        "tail_surface": "Original Equipment Manufacturer (OEM) recommendations",
+        "tail_canonical_zh": "原始设备制造商建议",
+        "tail_type": "Standard",
+        "evidence_text": "Basic Strategy Development (BSD). This is a review of the current maintenance tasks and the affiliated job plans that are presently in place to develop a standard to be followed based on utilizing the current content. If no current content exists, Original Equipment Manufacturer (OEM) recommendations will be the baseline for standard development.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

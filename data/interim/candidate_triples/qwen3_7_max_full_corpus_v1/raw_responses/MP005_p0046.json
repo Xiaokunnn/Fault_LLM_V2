@@ -1,0 +1,233 @@
+{
+  "page_key": "MP005:p0046",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-17fa6dca-17a7-9520-a67b-7ed266a85e36",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2655,
+    "prompt_tokens": 2218,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4873
+  },
+  "latency_ms": 32726,
+  "attempt": 1,
+  "prompt_sha256": "2c675eb4c353e1500b2566d49a3134994edf0b7e03d24e0f557912153a4dfa55",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "run against a closed valve",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "rise in temperature / formation of steam in the pump",
+        "tail_canonical_zh": "泵内温升或蒸汽形成",
+        "tail_type": "Symptom",
+        "evidence_text": "The pump must not run against a closed valve as this will cause a rise in temperature / formation of steam in the pump which may cause damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rise in temperature / formation of steam in the pump",
+        "head_canonical_zh": "泵内温升或蒸汽形成",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "rise in temperature / formation of steam in the pump which may cause damage to the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "run against a closed valve",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "connection of a bypass or drain to the outlet pipe",
+        "tail_canonical_zh": "连接旁通管或排放管至出口管路",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If there is any special design of the pump running against a closed valve, ensure a minimum liquid flow through the pump by connection of a bypass or drain to the outlet pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operation outside 70 to 120 % of BEP flow",
+        "head_canonical_zh": "在70%至120%最佳效率点流量范围外运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "reduce the pump life (incl. shaft seal and pump bearings) significantly",
+        "tail_canonical_zh": "显著缩短泵寿命（含轴封和轴承）",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation outside 70 to 120 % of BEP flow reduce the pump life (incl. shaft seal and pump bearings) significantly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration levels above 7 mm/s",
+        "head_canonical_zh": "振动速度超过7 mm/s",
+        "head_type": "SignalFeature",
+        "relation": "causes",
+        "tail_surface": "shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors)",
+        "tail_canonical_zh": "泵轴承或轴封及电机轴承寿命缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "vibration levels above 7 mm/s are damaging – i.e. this will result in shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors) than normally expected",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration levels above 7 mm/s",
+        "head_canonical_zh": "振动速度超过7 mm/s",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "ISO10816-3",
+        "tail_canonical_zh": "ISO10816-3标准",
+        "tail_type": "Standard",
+        "evidence_text": "This agrees with the recommendations in the international standard ISO10816-3.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High vibration levels at pump / motor top",
+        "head_canonical_zh": "泵/电机顶部高振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "external excited vibrations combined with the relative high Centre of Gravity compared with the size of the pump baseplate and/or the foundation stiffness below",
+        "tail_canonical_zh": "外部激励振动叠加重心过高或基座刚度不足",
+        "tail_type": "Cause",
+        "evidence_text": "Often external excited vibrations combined with the relative high Centre of Gravity compared with the size of the pump baseplate and/or the foundation stiffness below result in too high vibration levels in pump and motor top.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump is running with much higher flow than it is designed for",
+        "head_canonical_zh": "泵流量远超设计值",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "excessive vibrations",
+        "tail_canonical_zh": "过度振动",
+        "tail_type": "Symptom",
+        "evidence_text": "pump is running with much higher flow than it is designed for – this can cause so high turbulence levels in pump and piping system that excessive vibrations occur",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High vibration levels",
+        "head_canonical_zh": "高振动水平",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "reinforcing the foundation stiffness below the base plate of the pump",
+        "tail_canonical_zh": "加强泵基板下方基础刚度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Changing the structure can minimize the vibration level significantly - either by reinforcing the foundation stiffness below the base plate of the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High vibration levels",
+        "head_canonical_zh": "高振动水平",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "adding lateral supports at pump top / motor mounting flange level",
+        "tail_canonical_zh": "在泵顶部或电机安装法兰处增加侧向支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Changing the structure can minimize the vibration level significantly - ... or by adding lateral supports at pump top / motor mounting flange level",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lateral supports are transferring hull vibrations",
+        "head_canonical_zh": "侧向支撑传递船体振动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "flexible element can then be added",
+        "tail_canonical_zh": "加装柔性元件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In cases where the lateral supports are transferring hull vibrations (e.g. from main engine in ship) to the support connection points on pump or motor then a flexible element can then be added",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

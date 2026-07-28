@@ -1,0 +1,377 @@
+{
+  "page_key": "MP005:p0069",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-14e3333e-d7f0-92c5-bba3-554ad9a24bdb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4215,
+    "prompt_tokens": 23469,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 27684
+  },
+  "latency_ms": 49659,
+  "attempt": 1,
+  "prompt_sha256": "9518116bcb18c2c90c19fd6b466c6dcd8d165a0cab29b4fefb8132baa1498b21",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Shaft seal leakage",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Daily",
+        "tail_canonical_zh": "每日检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Shaft seal leakage (normally less\nthan 0.5 mL/hour (~10 drops/hour) –\nif more than 5 mL/hour shaft seal\nreplacement is recommended\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r004:c00",
+          "MP005:p0069:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Shaft seal leakage",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "shaft seal replacement",
+        "tail_canonical_zh": "轴封更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "if more than 5 mL/hour shaft seal\nreplacement is recommended",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r004:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor ampere and/or power consumption within normal range",
+        "head_canonical_zh": "电机电流及功率消耗正常范围检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Daily",
+        "tail_canonical_zh": "每日检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor ampere and/or power\nconsumption within normal range\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r005:c00",
+          "MP005:p0069:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unusual noise",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Daily",
+        "tail_canonical_zh": "每日检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unusual noise\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r006:c00",
+          "MP005:p0069:t00:r006:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unusual vibration",
+        "head_canonical_zh": "异常振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Daily",
+        "tail_canonical_zh": "每日检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unusual vibration (normally less\nthan 2.8 mm/s from pump itself –\nand less than 7 mm/s incl. external\nexcited vibrations)\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r007:c00",
+          "MP005:p0069:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pressure gauge readings to be within normal range",
+        "head_canonical_zh": "压力表读数正常范围检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Daily",
+        "tail_canonical_zh": "每日检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Pressure gauge readings to be\nwithin normal range (i.e. keep flow\nwithin 70 to 120% of BEP flow if\nallowed by NPSHa <> NPSHr, see\nnote below)\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r008:c00",
+          "MP005:p0069:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unusual bearing temperatures",
+        "head_canonical_zh": "轴承温度异常",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Weekly",
+        "tail_canonical_zh": "每周检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unusual bearing temperatures\n(normally less than 85°C)\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r009:c00",
+          "MP005:p0069:t00:r009:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drain hole for shaft seal",
+        "head_canonical_zh": "轴封泄放孔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Check (clean if required)",
+        "tail_canonical_zh": "检查（必要时清洁）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check (clean if required) drain hole\nfor shaft seal\nI (M)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r010:c00",
+          "MP005:p0069:t00:r010:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gap between coupling and bearing bracket/cover",
+        "head_canonical_zh": "联轴器与轴承支架/盖间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Monthly",
+        "tail_canonical_zh": "每月检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "For pump with bearing(s): Check\ngap between coupling and bearing\nbracket/cover – to be at least 1 mm\n(see Section 10.3.8)\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r011:c00",
+          "MP005:p0069:t00:r011:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pumps not running",
+        "head_canonical_zh": "泵停用状态",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "Rotate pump shaft 2 to 3 revolutions or start shortly",
+        "tail_canonical_zh": "盘车2-3转或短时启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumps not running: Rotate pump\nshaft 2 to 3 revolutions or start\nshortly (if pump is filled with liquid)\nM",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r012:c00",
+          "MP005:p0069:t00:r012:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump and/or motor bearings",
+        "head_canonical_zh": "泵和/或电机轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Regrease",
+        "tail_canonical_zh": "补充润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Regrease pump and/or motor\nbearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r013:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spacer coupling elastomer(s)",
+        "head_canonical_zh": "间隔联轴器弹性体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "8000 running hours or 12 months",
+        "tail_canonical_zh": "8000运行小时或12个月检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Spacer coupling elastomer(s)\nI",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r014:c00",
+          "MP005:p0069:t00:r014:c05"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical shaft seal and V-ring",
+        "head_canonical_zh": "机械密封及V型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Replace mechanical shaft seal and\nV-ring\nM",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r015:c00",
+          "MP005:p0069:t00:r015:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump bearings",
+        "head_canonical_zh": "泵轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Replace pump bearings\nM",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r016:c00",
+          "MP005:p0069:t00:r016:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spacer coupling elastomer(s)",
+        "head_canonical_zh": "间隔联轴器弹性体",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Replace Spacer coupling\nelastomer(s)\nM",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0069:t00:r017:c00",
+          "MP005:p0069:t00:r017:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Operation outside 70 to 120 % of BEP flow",
+        "head_canonical_zh": "在BEP流量70%-120%范围外运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "reduce the pump life (incl. shaft seal and pump bearings) significantly",
+        "tail_canonical_zh": "显著缩短泵寿命（含轴封和轴承）",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation outside 70 to 120 % of BEP flow reduce the pump life (incl. shaft seal and pump\nbearings) significantly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

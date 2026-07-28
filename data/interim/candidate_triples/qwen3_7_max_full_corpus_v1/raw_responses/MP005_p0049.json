@@ -1,0 +1,97 @@
+{
+  "page_key": "MP005:p0049",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8db99769-6a35-9b8e-9d98-a50f9db9c580",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 934,
+    "prompt_tokens": 1963,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2897
+  },
+  "latency_ms": 11592,
+  "attempt": 1,
+  "prompt_sha256": "48ac868387173e55eea9809fcc9d650be6de91053527c0a45aecc9c903984961",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump and electric motor",
+        "head_canonical_zh": "泵和电动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "lifting gear, such as access for cranes, lifting points, ceiling beams or other approved equipment",
+        "tail_canonical_zh": "起重设备（如起重机通道、吊点、顶梁或其他批准设备）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To facilitate future servicing of pump and electric motor, lifting gear, such as access for cranes, lifting points, ceiling beams or other approved equipment for the purpose, should be installed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ball bearings and/or windings coils in the motor",
+        "head_canonical_zh": "电机球轴承和/或绕组线圈",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "overheat",
+        "tail_canonical_zh": "过热",
+        "tail_type": "FaultMode",
+        "evidence_text": "The ball bearings and/or windings coils in the motor can overheat if a pump is insulated all the way up to the motor flange.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheat",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Unrestricted ventilation of the motor bracket",
+        "tail_canonical_zh": "电机支架无限制通风",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unrestricted ventilation of the motor bracket is therefore necessary to provide sufficient cooling of pump and motor bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump housing",
+        "head_canonical_zh": "泵壳体",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "insulated for heat or cold except at the top of the pump housing",
+        "tail_canonical_zh": "除泵壳体顶部外进行隔热或保冷",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumps supplied by DESMI can in general be insulated for heat or cold except at the top of the pump housing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

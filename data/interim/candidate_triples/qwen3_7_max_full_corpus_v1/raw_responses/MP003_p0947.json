@@ -1,0 +1,431 @@
+{
+  "page_key": "MP003:p0947",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-88d440ed-a19d-9df1-a574-4d1611a37af6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4858,
+    "prompt_tokens": 24519,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 29377
+  },
+  "latency_ms": 55426,
+  "attempt": 1,
+  "prompt_sha256": "287840687d6d3a082a5c6809d53705b4379fcbeb2866ef8ea9680e79d2b41c54",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lube oil inlet, pressure - low",
+        "head_canonical_zh": "涡轮增压器润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "C1 Lube oil inlet, pressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r001:c02",
+          "MP003:p0947:t00:r001:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lube oil outlet (each bearing), temp. - high",
+        "head_canonical_zh": "涡轮增压器各轴承润滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "C2 Lube oil outlet (each bearing), temp. - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r002:c02",
+          "MP003:p0947:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lube oil outlet (each bearing), temp. - high",
+        "head_canonical_zh": "涡轮增压器各轴承润滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Continuous monitoring of inlet pressure and inlet temperature in combination with specific intervals for bearing inspection",
+        "tail_canonical_zh": "连续监测进口压力和温度并结合定期轴承检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where outlet temperature from each bearing cannot be monitored due to the engine/turbocharger design, alternative arrangements may be accepted. Continuous monitoring of inlet pressure and inlet temperature in combination with specific intervals for bearing inspection in accordance with the turbocharger manufacturer’s instructions may be accepted as an alternative.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r002:c02",
+          "MP003:p0947:t00:r002:c08"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Speed",
+        "head_canonical_zh": "涡轮增压器转速",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "C3 Speed x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r003:c02",
+          "MP003:p0947:t00:r003:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant inlet, pressure - low",
+        "head_canonical_zh": "活塞冷却液进口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D1 Coolant inlet, pressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r004:c02",
+          "MP003:p0947:t00:r004:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant inlet, pressure - low",
+        "head_canonical_zh": "活塞冷却液进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto slow down",
+        "tail_canonical_zh": "自动减速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "D1 Coolant inlet, pressure - low x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r004:c02",
+          "MP003:p0947:t00:r004:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant outlet (each cylinder), temp. - high",
+        "head_canonical_zh": "各缸活塞冷却液出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D2 Coolant outlet (each cylinder), temp. - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r005:c02",
+          "MP003:p0947:t00:r005:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant outlet (each cylinder), temp. - high",
+        "head_canonical_zh": "各缸活塞冷却液出口温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto slow down",
+        "tail_canonical_zh": "自动减速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "D2 Coolant outlet (each cylinder), temp. - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r005:c02",
+          "MP003:p0947:t00:r005:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant outlet (each cylinder), flow - low",
+        "head_canonical_zh": "各缸活塞冷却液出口流量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D3 Coolant outlet (each cylinder), flow - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r006:c02",
+          "MP003:p0947:t00:r006:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant outlet (each cylinder), flow - low",
+        "head_canonical_zh": "各缸活塞冷却液出口流量低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto slow down",
+        "tail_canonical_zh": "自动减速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "D3 Coolant outlet (each cylinder), flow - low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r006:c02",
+          "MP003:p0947:t00:r006:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Coolant in expansion tank, level - low",
+        "head_canonical_zh": "活塞冷却膨胀柜液位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D4 Coolant in expansion tank, level - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r007:c02",
+          "MP003:p0947:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Sea water cooling, pressure - low",
+        "head_canonical_zh": "海水冷却压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "E1 Sea water cooling, pressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r008:c02",
+          "MP003:p0947:t00:r008:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water inlet, pressure - low",
+        "head_canonical_zh": "气缸淡水冷却水进口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F1 Water inlet, pressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r009:c02",
+          "MP003:p0947:t00:r009:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water inlet, pressure - low",
+        "head_canonical_zh": "气缸淡水冷却水进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto slow down",
+        "tail_canonical_zh": "自动减速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "F1 Water inlet, pressure - low x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r009:c02",
+          "MP003:p0947:t00:r009:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water outlet from each cylinder, temp. - high; or common water outlet, temp. - high",
+        "head_canonical_zh": "各缸或公共冷却水出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F2 Water outlet from each cylinder, temp. - high; or common water outlet, temp. - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r010:c02",
+          "MP003:p0947:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water outlet from each cylinder, temp. - high; or common water outlet, temp. - high",
+        "head_canonical_zh": "各缸或公共冷却水出口温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto slow down",
+        "tail_canonical_zh": "自动减速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "F2 Water outlet from each cylinder, temp. - high; or common water outlet, temp. - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r010:c02",
+          "MP003:p0947:t00:r010:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oily contamination of engine cooling water system.",
+        "head_canonical_zh": "发动机冷却水系统含油污染",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F3 Oily contamination of engine cooling water system. x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r011:c02",
+          "MP003:p0947:t00:r011:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cooling water expansion tank, level - low",
+        "head_canonical_zh": "冷却水膨胀柜液位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "F4 Cooling water expansion tank, level - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0947:t00:r012:c02",
+          "MP003:p0947:t00:r012:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

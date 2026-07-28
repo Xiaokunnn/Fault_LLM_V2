@@ -1,0 +1,228 @@
+{
+  "page_key": "MP019:p0047",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-43d0be0d-aeb7-9dcc-b6c5-64a15a9facab",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2646,
+    "prompt_tokens": 5343,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7989
+  },
+  "latency_ms": 28055,
+  "attempt": 1,
+  "prompt_sha256": "898024bc4a7cd0247ad6cf1615daa0b98bac533bb9221c4c5ff81d79a9edc7e9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Moteurs basse tension à vitesse variable",
+        "head_canonical_zh": "低压变速电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "alimentation par convertisseur de fréquence",
+        "tail_canonical_zh": "变频器供电",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Cette partie du manuel fournit des instructions supplémentaires pour les moteurs utilisés avec une alimentation par convertisseur de fréquence.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bobinages du moteur",
+        "head_canonical_zh": "电机绕组",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "niveaux de tension supérieurs à ceux délivrés par un réseau d'alimentation sinusoïdal",
+        "tail_canonical_zh": "高于正弦电网的电压水平",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Les variateurs de vitesse peuvent imposer aux bobinages du moteur des niveaux de tension supérieurs à ceux délivrés par un réseau d'alimentation sinusoïdal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "isolation du bobinage du moteur",
+        "head_canonical_zh": "电机绕组绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "instructions suivantes",
+        "tail_canonical_zh": "以下说明",
+        "tail_type": "Standard",
+        "evidence_text": "C'est pourquoi il faut dimensionner l'isolation du bobinage du moteur et le filtre de sortie du convertisseur en suivant les instructions suivantes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "filtre de sortie du convertisseur",
+        "head_canonical_zh": "变频器输出滤波器",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "instructions suivantes",
+        "tail_canonical_zh": "以下说明",
+        "tail_type": "Standard",
+        "evidence_text": "C'est pourquoi il faut dimensionner l'isolation du bobinage du moteur et le filtre de sortie du convertisseur en suivant les instructions suivantes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "额定电压≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolation standard ABB",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N Isolation standard ABB",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0047:t00:r001:c00",
+          "MP019:p0047:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "额定电压≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolation standard ABB + Filtres dU/dt OU Isolation spéciale ABB (code option 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(选项405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N Isolation standard ABB Isolation standard ABB + Filtres dU/dt OU Isolation spéciale ABB (code option 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0047:t00:r002:c00",
+          "MP019:p0047:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "额定电压≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolation spéciale ABB (code option 405) ET filtres dU/dt à la sortie du convertisseur",
+        "tail_canonical_zh": "ABB特殊绝缘(选项405)及变频器输出dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N Isolation spéciale ABB (code option 405) ET filtres dU/dt à la sortie du convertisseur",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0047:t00:r003:c00",
+          "MP019:p0047:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N ET longueur de câble > 150 m",
+        "head_canonical_zh": "额定电压≤690V且电缆长度>150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolation spéciale ABB (code option 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(选项405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N ET longueur de câble > 150 m Isolation spéciale ABB (code option 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0047:t00:r004:c00",
+          "MP019:p0047:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "thermistances PTC dans les bobinages du stator",
+        "head_canonical_zh": "定子绕组PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "connecter au convertisseur de fréquence par les moyens adaptés",
+        "tail_canonical_zh": "通过适当方式连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Il est recommandé de les connecter au convertisseur de fréquence par les moyens adaptés.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Courants de paliers",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "utiliser des roulements et structures de roulement isolées, des filtres en mode courant et un câblage approprié, ainsi que des méthodes de mise à la terre adéquates",
+        "tail_canonical_zh": "使用绝缘轴承和轴承结构、共模滤波器、适当布线及 adequate 接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il faut utiliser des roulements et structures de roulement isolées, des filtres en mode courant et un câblage approprié, ainsi que des méthodes de mise à la terre adéquates, conformément aux instructions suivantes :",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

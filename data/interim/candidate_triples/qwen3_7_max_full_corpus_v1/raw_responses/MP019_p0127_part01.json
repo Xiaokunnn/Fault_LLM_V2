@@ -1,0 +1,679 @@
+{
+  "page_key": "MP019:p0127",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-30d46ed2-7d73-9e00-ac69-f4e09c4bd1e2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8160,
+    "prompt_tokens": 19112,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 27272
+  },
+  "latency_ms": 97424,
+  "attempt": 1,
+  "prompt_sha256": "2500c83596dec9868ac4c5908b08cfd8be0297f6f756709bbce197f53ce7e80e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Moottori ei käynnisty",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Sulake palanut",
+        "tail_canonical_zh": "熔断器烧毁",
+        "tail_type": "Cause",
+        "evidence_text": "Moottori ei\nkäynnisty",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r001:c00",
+          "MP019:p0127:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Sulake palanut",
+        "head_canonical_zh": "熔断器烧毁",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vaihda oikeantyyppinen ja -nimellisarvoinen sulake.",
+        "tail_canonical_zh": "更换正确类型和额定值的熔断器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Sulake palanut",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r001:c01",
+          "MP019:p0127:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ylikuormalaukaisu",
+        "head_canonical_zh": "过载跳闸",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista ja kuittaa ylikuormalaukaisu käynnistimeltä.",
+        "tail_canonical_zh": "检查并复位启动器上的过载跳闸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ylikuormalaukaisu",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r002:c01",
+          "MP019:p0127:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Väärä syöttöjännite",
+        "head_canonical_zh": "电源电压错误",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista, että syöttöjännite on arvokilven mukainen.",
+        "tail_canonical_zh": "检查电源电压是否符合铭牌规定",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Väärä syöttöjännite",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r003:c01",
+          "MP019:p0127:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Virheellinen kytkentä",
+        "head_canonical_zh": "接线错误",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista kytkennät moottorin mukana toimitetuista kytkentäkaavioista\n                                       ja arvokilvestä.",
+        "tail_canonical_zh": "根据电机随附的接线图和铭牌检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Virheellinen kytkentä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r004:c01",
+          "MP019:p0127:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Katkos käämissä tai ohjauspiirissä",
+        "head_canonical_zh": "绕组或控制回路断路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "surisevasta äänestä",
+        "tail_canonical_zh": "嗡嗡声",
+        "tail_type": "Symptom",
+        "evidence_text": "Vian voi tunnistaa surisevasta äänestä, kun kytkin on suljettuna.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Katkos käämissä tai ohjauspiirissä",
+        "head_canonical_zh": "绕组或控制回路断路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista löysät johtokytkennät.",
+        "tail_canonical_zh": "检查导线连接是否松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tarkista löysät johtokytkennät.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mekaaninen vika",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista, että moottori ja käyttö pyörivät vapaasti. Tarkista laakerointi\n                                       ja voitelu.",
+        "tail_canonical_zh": "检查电机和负载是否转动灵活；检查轴承和润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mekaaninen vika",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r006:c01",
+          "MP019:p0127:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Käämin oikosulku",
+        "head_canonical_zh": "绕组短路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Moottori täytyy käämiä\n                                       uudelleen. Irrota laakerikilvet ja etsi vika.",
+        "tail_canonical_zh": "电机必须重绕；拆卸端盖并查找故障",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Käämin oikosulku",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r007:c01",
+          "MP019:p0127:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Viallinen roottori",
+        "head_canonical_zh": "转子故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista roottoritankojen ja oikosulkurenkaiden kunto.",
+        "tail_canonical_zh": "检查转子导条和端环状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Viallinen roottori",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r008:c01",
+          "MP019:p0127:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moottori voi olla ylikuormitettu",
+        "head_canonical_zh": "电机可能过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vähennä kuormitusta.",
+        "tail_canonical_zh": "减少负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Moottori voi olla ylikuormitettu",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r009:c01",
+          "MP019:p0127:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moottori\npysähtynyt",
+        "head_canonical_zh": "电机停转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Yhdessä vaiheessa voi olla\njännitekatkos",
+        "tail_canonical_zh": "某一相可能存在电压中断",
+        "tail_type": "Cause",
+        "evidence_text": "Moottori\npysähtynyt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r010:c00",
+          "MP019:p0127:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Yhdessä vaiheessa voi olla\njännitekatkos",
+        "head_canonical_zh": "某一相可能存在电压中断",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista kytkennät katkosten varalta.",
+        "tail_canonical_zh": "检查接线是否有断路",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Yhdessä vaiheessa voi olla\njännitekatkos",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r010:c01",
+          "MP019:p0127:t00:r010:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Vääränlainen moottori sovellukseen",
+        "head_canonical_zh": "电机选型不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vaihda moottorityyppi tai -koko. Ota yhteys laitetoimittajaan.",
+        "tail_canonical_zh": "更换电机类型或尺寸；联系设备供应商",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Vääränlainen moottori sovellukseen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r011:c01",
+          "MP019:p0127:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ylikuormitus",
+        "head_canonical_zh": "过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vähennä kuormitusta.",
+        "tail_canonical_zh": "减少负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ylikuormitus",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r012:c01",
+          "MP019:p0127:t00:r012:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Alhainen jännite",
+        "head_canonical_zh": "低电压",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Varmista, että arvokilvessä ilmoitettua jännitettä on noudatettu.\n                                       Tarkista kytkennät.",
+        "tail_canonical_zh": "确认已遵守铭牌标示电压；检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Alhainen jännite",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r013:c01",
+          "MP019:p0127:t00:r013:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Jännitekatkos",
+        "head_canonical_zh": "电压中断",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Sulakkeet palaneet, tarkista ylikuormitusrele, staattori ja painikkeet.",
+        "tail_canonical_zh": "熔断器烧毁，检查过载继电器、定子和按钮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Jännitekatkos",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r014:c01",
+          "MP019:p0127:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moottori\nkäynnistyy, mutta\npysähtyy heti",
+        "head_canonical_zh": "电机启动后立即停止",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Syöttöjännitevika",
+        "tail_canonical_zh": "电源电压故障",
+        "tail_type": "Cause",
+        "evidence_text": "Moottori\nkäynnistyy, mutta\npysähtyy heti",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r015:c00",
+          "MP019:p0127:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Syöttöjännitevika",
+        "head_canonical_zh": "电源电压故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista, että vaihejohtimen, sulakkeiden ja ohjauspiirin kytkennät\neivät ole löysiä.",
+        "tail_canonical_zh": "检查相线、熔断器和控制回路的接线是否松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Syöttöjännitevika",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r015:c01",
+          "MP019:p0127:t00:r015:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moottori ei saavuta\nnimellisnopeuttaan",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Vääränlainen moottori sovellukseen",
+        "tail_canonical_zh": "电机选型不当",
+        "tail_type": "Cause",
+        "evidence_text": "Moottori ei saavuta\nnimellisnopeuttaan",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r016:c00",
+          "MP019:p0127:t00:r016:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Jännite moottorin liittimissä liian\nalhainen jännitehäviöiden vuoksi",
+        "head_canonical_zh": "因压降导致电机端子电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Käytä suurempaa jännitettä tai käynnistysmuuntajaa. Vähennä\nkuormitusta. Tarkista kytkennät. Tarkista kaapelien oikea koko.",
+        "tail_canonical_zh": "使用更高电压或启动变压器；减少负载；检查接线；检查电缆截面是否正确",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Jännite moottorin liittimissä liian\nalhainen jännitehäviöiden vuoksi",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r017:c01",
+          "MP019:p0127:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Liian suuri kuorma käynnistettäessä",
+        "head_canonical_zh": "启动时负载过大",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista moottorin maksimikuorma käynnistettäessä.",
+        "tail_canonical_zh": "检查电机启动时的最大负载",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Liian suuri kuorma käynnistettäessä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r018:c01",
+          "MP019:p0127:t00:r018:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Roottori on rikki",
+        "head_canonical_zh": "转子损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista oikosulkurenkaiden mahdolliset murtumat. Tarvitaan\n                                       luultavasti uusi roottori, koska korjaus on yleensä tilapäinen.",
+        "tail_canonical_zh": "检查端环是否有裂纹；可能需要新转子，因为修复通常是临时的",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Roottori on rikki",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r019:c01",
+          "MP019:p0127:t00:r019:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Katkos päävirtapiirissä",
+        "head_canonical_zh": "主电路断路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Etsi vika testauslaitteella ja korjaa se.",
+        "tail_canonical_zh": "使用测试设备查找故障并修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Katkos päävirtapiirissä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r020:c01",
+          "MP019:p0127:t00:r020:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moottorin\nkiihdytysaika on\nliian pitkä, ja/tai\nvirrankulutus on\nliian suuri",
+        "head_canonical_zh": "电机加速时间过长和/或电流消耗过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Ylikuormitus",
+        "tail_canonical_zh": "过载",
+        "tail_type": "Cause",
+        "evidence_text": "Moottorin\nkiihdytysaika on\nliian pitkä, ja/tai\nvirrankulutus on\nliian suuri",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r021:c00",
+          "MP019:p0127:t00:r021:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Liian pieni jännite käynnistettäessä",
+        "head_canonical_zh": "启动时电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Tarkista mahdollinen suuri vastus. Varmista, että kaapelin koko on\nriittävä.",
+        "tail_canonical_zh": "检查是否存在高电阻；确保电缆截面足够",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Liian pieni jännite käynnistettäessä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r022:c01",
+          "MP019:p0127:t00:r022:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Viallinen oikosulkuroottori",
+        "head_canonical_zh": "鼠笼转子故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vaihda roottori.",
+        "tail_canonical_zh": "更换转子",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Viallinen oikosulkuroottori",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r023:c01",
+          "MP019:p0127:t00:r023:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Liian alhainen syöttöjännite",
+        "head_canonical_zh": "电源电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Korjaa syöttöjännite.",
+        "tail_canonical_zh": "修正电源电压",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Liian alhainen syöttöjännite",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r024:c01",
+          "MP019:p0127:t00:r024:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Väärä pyörimis-\nsuunta",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Väärä vaihejärjestys",
+        "tail_canonical_zh": "相序错误",
+        "tail_type": "Cause",
+        "evidence_text": "Väärä pyörimis-\nsuunta",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r025:c00",
+          "MP019:p0127:t00:r025:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Väärä vaihejärjestys",
+        "head_canonical_zh": "相序错误",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Vaihda kytkentä moottorin liittimissä tai kytkintaulussa.",
+        "tail_canonical_zh": "在电机接线盒或开关板上调换接线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Väärä vaihejärjestys",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0127:t00:r025:c01",
+          "MP019:p0127:t00:r025:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

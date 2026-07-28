@@ -1,0 +1,207 @@
+{
+  "page_key": "MP001:p0075",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-409241cd-3531-9aef-b85e-85bf30ffe3f5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2345,
+    "prompt_tokens": 9680,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12025
+  },
+  "latency_ms": 32937,
+  "attempt": 1,
+  "prompt_sha256": "f4e3d024d00b1c0991f22b2fa48c6af1b0b70017e509931da93f63019ef4f60a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insulating oil contamination",
+        "head_canonical_zh": "绝缘油污染",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Dielectric Strength (ASTM D117)",
+        "tail_canonical_zh": "介电强度测试(ASTM D117)",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Insulating oil contamination Dielectric Strength (ASTM D117)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r008:c01",
+          "MP001:p0075:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Biological activity in fluid",
+        "head_canonical_zh": "流体中的生物活性",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Determine quantity of micro-organisms (ASTM D6469)",
+        "tail_canonical_zh": "微生物数量测定(ASTM D6469)",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Biological activity in fluid Determine quantity of micro-organisms (ASTM D6469)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r008:c02",
+          "MP001:p0075:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water or humidity from cooling system collects in tank",
+        "head_canonical_zh": "冷却系统中的水或湿气在油箱中积聚",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Insulating oil contamination",
+        "tail_canonical_zh": "绝缘油污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Water or humidity from cooling system collects in tank prior to filling equipment with oil Insulating oil contamination",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r004:c01",
+          "MP001:p0075:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Micro-organisms",
+        "head_canonical_zh": "微生物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "degrade the fuel/lubricant, block filters, and increase corrosion",
+        "tail_canonical_zh": "降解燃油/润滑剂、堵塞滤器并增加腐蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "These micro-organisms can degrade the fuel/lubricant, block filters, and increase corrosion",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Insulating oil contamination",
+        "head_canonical_zh": "绝缘油污染",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Install centrifuge, filter or heat oil to evaporate water",
+        "tail_canonical_zh": "安装离心机、滤器或加热油以蒸发水分",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Insulating oil contamination Install centrifuge, filter or heat oil to evaporate water",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r008:c01",
+          "MP001:p0075:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Biological activity in fluid",
+        "head_canonical_zh": "流体中的生物活性",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Treat with biocides",
+        "tail_canonical_zh": "使用杀菌剂处理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Biological activity in fluid Treat with biocides",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r008:c02",
+          "MP001:p0075:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "future infestations",
+        "head_canonical_zh": "未来虫害/微生物滋生",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Consider other preventive actions to minimize future infestations",
+        "tail_canonical_zh": "考虑其他预防措施以最大限度减少未来的滋生",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Consider other preventive actions to minimize future infestations",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Electrical contaminants in oil",
+        "head_canonical_zh": "油中的电气污染物",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Insulating oil contamination",
+        "tail_canonical_zh": "绝缘油污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Electrical contaminants in oil prior to filling equipment with oil Insulating oil contamination",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r004:c01",
+          "MP001:p0075:t00:r008:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Check for oil/water contamination",
+        "head_canonical_zh": "检查油水污染",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Dielectric Strength (ASTM D117)",
+        "tail_canonical_zh": "介电强度测试(ASTM D117)",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check for oil/water contamination Dielectric Strength (ASTM D117)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0075:t00:r003:c02",
+          "MP001:p0075:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": [
+      "Table text appears reversed/mirrored in OCR output; entities were reconstructed by reading cell content backwards to form valid English technical terms.",
+      "Row alignment for Cause/Remedy rows is inferred based on semantic matching of reversed text segments as explicit row grouping for these relations was not structurally distinct in the parsed table."
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "page_key": "MP016:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2e862859-c28c-99d0-8e46-2ef39f17ad80",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2208,
+    "prompt_tokens": 2459,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4667
+  },
+  "latency_ms": 27358,
+  "attempt": 1,
+  "prompt_sha256": "3756f5073fc2f010cb3c78db228511d963de7106a6e3fc9b3c28e89742443d88",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Keep pipe runs short and pipe diameters large; pipes may need to be larger diameter than pump ports especially when pumping viscous liquids",
+        "tail_canonical_zh": "保持管路短且管径大，输送粘性液体时管径可能需大于泵口",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Keep pipe runs short and pipe diameters large; pipes may need to be larger diameter than pump ports especially when pumping viscous liquids to prevent cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "A clogged filter",
+        "tail_canonical_zh": "过滤器堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "A clogged filter will cause cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "excessive heating of the seal faces and Impeller damage",
+        "head_canonical_zh": "密封面过热及叶轮损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "run dry for more than 30 seconds",
+        "tail_canonical_zh": "干转超过30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Pumps must never be run dry for more than 30 seconds, as this will cause excessive heating of the seal faces and Impeller damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump and motor shafts",
+        "head_canonical_zh": "泵和电机轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check pump to drive alignment after installation and before starting pump",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置的对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check pump to drive alignment after installation and before starting pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure conditions",
+        "head_canonical_zh": "压力状况",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Fit vacuum/pressure gauges each side of pump",
+        "tail_canonical_zh": "在泵两侧安装真空/压力表",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Fit vacuum/pressure gauges each side of pump to monitor pressure conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bronze Flexible Impeller Pump",
+        "head_canonical_zh": "青铜柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "standard Lip Seal and Mechanical Seal",
+        "tail_canonical_zh": "标准唇形密封和机械密封",
+        "tail_type": "Component",
+        "evidence_text": "There are 2 basic types of shaft seals available on the Bronze Flexible Impeller Pump. These are standard Lip Seal and Mechanical Seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal fitted is suitable for the application",
+        "head_canonical_zh": "所装密封适用于该应用",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "establish that the seal fitted is suitable for the application before starting pump",
+        "tail_canonical_zh": "启动泵前确认所装密封适用于该应用",
+        "tail_type": "InspectionAction",
+        "evidence_text": "you must establish that the seal fitted is suitable for the application before starting pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump and pipes",
+        "head_canonical_zh": "泵和管路",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pump and pipes are clear of welding flash or other debris",
+        "tail_canonical_zh": "检查泵和管路内无焊渣或其他杂物",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Pump and pipes are clear of welding flash or other debris.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "All pump head and mounting bolts",
+        "head_canonical_zh": "所有泵头及安装螺栓",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "All pump head and mounting bolts are tight",
+        "tail_canonical_zh": "检查所有泵头及安装螺栓已紧固",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All pump head and mounting bolts are tight.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check motor is wired for correct direction of rotation",
+        "tail_canonical_zh": "检查电机接线旋转方向正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check motor is wired for correct direction of rotation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

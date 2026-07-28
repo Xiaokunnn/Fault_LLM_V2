@@ -1,0 +1,138 @@
+{
+  "page_key": "MP022:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1e401483-70e2-93be-bea3-1f3fbc9ea468",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1278,
+    "prompt_tokens": 1854,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3132
+  },
+  "latency_ms": 16971,
+  "attempt": 1,
+  "prompt_sha256": "f0d9b20f11925c4a47133e6bc47437cdf8ec6c11d6616916959bc159dde1523a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "connections",
+        "head_canonical_zh": "连接",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure that the connections are tight",
+        "tail_canonical_zh": "确保连接紧固",
+        "tail_type": "InspectionAction",
+        "evidence_text": "2. Ensure that the connections are tight.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal rings",
+        "head_canonical_zh": "密封圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Remember seal rings",
+        "tail_canonical_zh": "检查密封圈",
+        "tail_type": "InspectionAction",
+        "evidence_text": "3. Remember seal rings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Piping system must be self-supported",
+        "tail_canonical_zh": "管路系统必须自支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid stresses on the pump...\n       Piping system must be self-supported...\n       Pay special attention to:\n       - Vibrations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermal expansion of the tubes",
+        "head_canonical_zh": "管道热膨胀",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Piping system must be self-supported",
+        "tail_canonical_zh": "管路系统必须自支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid stresses on the pump...\n       Piping system must be self-supported...\n       Pay special attention to:\n       - Thermal expansion of the tubes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Overloading of the pipelines",
+        "head_canonical_zh": "管路过载",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Piping system must be self-supported",
+        "tail_canonical_zh": "管路系统必须自支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid stresses on the pump...\n       Piping system must be self-supported...\n       Pay special attention to:\n       - Overloading of the pipelines",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

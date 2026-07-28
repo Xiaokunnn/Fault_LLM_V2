@@ -1,0 +1,201 @@
+{
+  "page_key": "MP005:p0056",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0cb5450a-adbb-9732-87dc-22ab91724199",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2259,
+    "prompt_tokens": 10712,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12971
+  },
+  "latency_ms": 28613,
+  "attempt": 1,
+  "prompt_sha256": "506916765fb0748f822befb9a898e384fe1bc3be5cce3ae30caeca8e00f358df",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Liquids may freeze during long-term shutdown periods",
+        "head_canonical_zh": "长期停机期间液体冻结",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Liquids may freeze during long-term shutdown periods, which could damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Liquids may freeze during long-term shutdown periods",
+        "head_canonical_zh": "长期停机期间液体冻结",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Drain the pump and the cooling / heating chambers (if any), or take other actions to prevent them from freezing",
+        "tail_canonical_zh": "排空泵及冷却/加热腔或采取其他防冻措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Liquids may freeze during long-term shutdown periods, which could damage the pump.\n                      Drain the pump and the cooling / heating chambers (if any), or take other actions to\n                      prevent them from freezing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect pressure, temperature, fluid handled and speed",
+        "head_canonical_zh": "不正确的压力、温度、介质和转速",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED",
+        "tail_canonical_zh": "高温或有毒介质泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED!\n                      When you operate the pump, incorrect pressure, temperature, fluid handled and speed\n                      will cause damage to property, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED",
+        "head_canonical_zh": "高温或有毒介质泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Observe the operating data in the order documentation",
+        "tail_canonical_zh": "遵守订单文件中的运行数据",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED!\n                      When you operate the pump, incorrect pressure, temperature, fluid handled and speed\n                      will cause damage to property, death or serious injury.\n                      Observe the operating data in the order documentation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED",
+        "head_canonical_zh": "高温或有毒介质泄漏",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Do not use the pump to handle unauthorized fluids",
+        "tail_canonical_zh": "禁止使用泵输送未经许可的介质",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "LEAKAGE OF HOT OR TOXIC FLUID HANDLED!\n... Do not use the pump to handle unauthorized fluids.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate the pump against a closed shut-off element for long periods",
+        "head_canonical_zh": "长时间关闭出口阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "EXPLOSION HAZARD",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "EXPLOSION HAZARD!\n... Do not operate the pump against a closed shut-off element for long periods",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "cavitation",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect condition (for example, temperature, pressures or speeds exceeding those specified in the order documentation or on the name plate)",
+        "head_canonical_zh": "超出订单文件或铭牌规定的不正确工况（如温度、压力或转速）",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "EXPLOSION HAZARD",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "EXPLOSION HAZARD!\n... Without getting written approval from DESMI, do not operate the pump in incorrect\n                      condition (for example, temperature, pressures or speeds exceeding those specified in\n                      the order documentation or on the name plate).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect ambient temperature",
+        "head_canonical_zh": "不正确的环境温度",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the pump (set)",
+        "tail_canonical_zh": "泵（组）损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "When you operate the pump, incorrect ambient temperature could damage the pump\n                      (set).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect ambient temperature",
+        "head_canonical_zh": "不正确的环境温度",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Observe the specified limits for permitted ambient temperatures",
+        "tail_canonical_zh": "遵守规定的环境温度限值",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When you operate the pump, incorrect ambient temperature could damage the pump\n                      (set).\n                      Observe the specified limits for permitted ambient temperatures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

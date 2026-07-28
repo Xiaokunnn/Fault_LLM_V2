@@ -1,0 +1,275 @@
+{
+  "page_key": "MP020:p0007",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-eece66ad-a0d4-9b32-8f5e-972d05a80088",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2809,
+    "prompt_tokens": 2322,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5131
+  },
+  "latency_ms": 34259,
+  "attempt": 1,
+  "prompt_sha256": "14ae26f4294f6041faf98488e45a60ea8d28984194076677a37fa20d295bc284",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "concentric reducer",
+        "head_canonical_zh": "同心异径管",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "TRAPPED AIR",
+        "tail_canonical_zh": "滞留空气",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use a concentric reducer. Air remains in pipe, and the pump may cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "TRAPPED AIR",
+        "head_canonical_zh": "滞留空气",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use a concentric reducer. Air remains in pipe, and the pump may cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "TRAPPED AIR",
+        "head_canonical_zh": "滞留空气",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use a concentric reducer. Air remains in pipe, and the pump may cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "restrict the flow",
+        "head_canonical_zh": "限制流量",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not restrict the flow. This may cause cavitation, reduce performance, and add friction losses.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "slope piping down toward the pump",
+        "head_canonical_zh": "吸入管路向泵方向下倾",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Trapped air",
+        "tail_canonical_zh": "滞留空气",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not slope piping down toward the pump. Trapped air may cause the pump to cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Trapped air",
+        "head_canonical_zh": "滞留空气",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "cavitate",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Trapped air may cause the pump to cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Trapped air",
+        "head_canonical_zh": "滞留空气",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Trapped air may cause the pump to cavitate or lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "many fittings",
+        "head_canonical_zh": "过多管件",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use many fittings. This creates high friction losses and may cause cavitation, trapped air and reduced performance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "many fittings",
+        "head_canonical_zh": "过多管件",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "trapped air",
+        "tail_canonical_zh": "滞留空气",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not use many fittings. This creates high friction losses and may cause cavitation, trapped air and reduced performance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hang an unsupported pump on piping",
+        "head_canonical_zh": "将无支撑泵悬挂在管路上",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "bearing problems",
+        "tail_canonical_zh": "轴承故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not hang an unsupported pump on piping. This is a source of bearing problems, accelerated wear, motor overloads, and leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hang an unsupported pump on piping",
+        "head_canonical_zh": "将无支撑泵悬挂在管路上",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "accelerated wear",
+        "tail_canonical_zh": "加速磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not hang an unsupported pump on piping. This is a source of bearing problems, accelerated wear, motor overloads, and leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hang an unsupported pump on piping",
+        "head_canonical_zh": "将无支撑泵悬挂在管路上",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "motor overloads",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not hang an unsupported pump on piping. This is a source of bearing problems, accelerated wear, motor overloads, and leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hang an unsupported pump on piping",
+        "head_canonical_zh": "将无支撑泵悬挂在管路上",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "leaks",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not hang an unsupported pump on piping. This is a source of bearing problems, accelerated wear, motor overloads, and leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

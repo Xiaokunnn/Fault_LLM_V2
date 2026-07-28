@@ -1,0 +1,157 @@
+{
+  "page_key": "MP003:p0633",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1f60e2e9-71f8-96cb-9c4f-93a97538b521",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1773,
+    "prompt_tokens": 6518,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8291
+  },
+  "latency_ms": 22790,
+  "attempt": 1,
+  "prompt_sha256": "c71601254177e56ed50b6020ba43a8a65b8f51c23b6f2588a7486e750b98bc94",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Overflow tank",
+        "head_canonical_zh": "溢流柜",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "High-level alarm",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Overflow tank             High-level alarm      4-6-4/13.5.4",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0633:t00:r001:c00",
+          "MP003:p0633:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil tank",
+        "head_canonical_zh": "燃油舱",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "High-level alarm, unless overflow is\nfitted",
+        "tail_canonical_zh": "高液位报警（除非装有溢流管）",
+        "tail_type": "Symptom",
+        "evidence_text": "Fuel oil tank        High-level alarm, unless overflow is 4-6-4/13.5.6(e)\n                                          fitted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0633:t00:r002:c00",
+          "MP003:p0633:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil heaters",
+        "head_canonical_zh": "燃油加热器",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "High-temperature alarm unless heating\nmedium precludes overheating",
+        "tail_canonical_zh": "高温报警（除非加热介质可防止过热）",
+        "tail_type": "Symptom",
+        "evidence_text": "Fuel oil heaters     High-temperature alarm unless heating 4-6-4/13.5.7(b) and 4-6-4/13.7.4(b)\n                                    medium precludes overheating",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0633:t00:r003:c00",
+          "MP003:p0633:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil pumps",
+        "head_canonical_zh": "燃油泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Remote manual shutdown",
+        "tail_canonical_zh": "远程手动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil pumps          Remote manual shutdown  4-6-6/7.3.1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0633:t00:r004:c00",
+          "MP003:p0633:t00:r004:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil supply to burners",
+        "head_canonical_zh": "燃烧器燃油供应",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Automatic shutoff and alarms for\nspecified conditions",
+        "tail_canonical_zh": "特定工况下的自动切断和报警",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil supply to burners Automatic shutoff and alarms for 4-6-6/7.3.4(d)\n                                      specified conditions",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0633:t00:r005:c00",
+          "MP003:p0633:t00:r005:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lubricating oil systems of steam turbines and associated reduction gears",
+        "head_canonical_zh": "蒸汽轮机及减速齿轮润滑系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Hydrostatic tests",
+        "tail_canonical_zh": "液压试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Hydrostatic tests are to be in accordance with 4-6-2/7.3.1 and 4-6-2/7.3.3. The system is to be tried under\n            working condition in the presence of a Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubricating oil systems of steam turbines and associated reduction gears",
+        "head_canonical_zh": "蒸汽轮机及减速齿轮润滑系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "tried under working condition in the presence of a Surveyor",
+        "tail_canonical_zh": "在验船师在场下进行工作条件试车",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The system is to be tried under\n            working condition in the presence of a Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

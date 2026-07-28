@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0990",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c50345b7-3333-98d9-8f8b-ad876380f9b3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 876,
+    "prompt_tokens": 2350,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3226
+  },
+  "latency_ms": 10489,
+  "attempt": 1,
+  "prompt_sha256": "e41d951e2153996578c4d1093b8ed32e425d9c179d5963a4eef5c5dd4f782b1f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "loss of lubricating oil",
+        "head_canonical_zh": "润滑油丧失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatically shut down",
+        "tail_canonical_zh": "自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the propulsion machinery is to automatically shut down upon a loss of lubricating oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "loss of lubricating oil",
+        "head_canonical_zh": "润滑油丧失",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "such conditions are to be alarmed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leakages from such piping",
+        "head_canonical_zh": "高压燃油管路泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "high level alarm audible at the navigation bridge",
+        "tail_canonical_zh": "驾驶台可听高位报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Leakages from such piping are to be collected in a suitable drain tank provided with high level alarm audible at the navigation bridge",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leakages from such piping",
+        "head_canonical_zh": "高压燃油管路泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "effectively shielded and secured",
+        "tail_canonical_zh": "有效遮蔽和固定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping for high pressure fuel injection and return piping on main and auxiliary engines is to be effectively shielded and secured to prevent fuel or fuel mist from reaching a source of ignition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

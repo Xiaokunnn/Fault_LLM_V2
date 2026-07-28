@@ -1,0 +1,95 @@
+{
+  "page_key": "MP003:p0498",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9dfcc500-beb1-9df4-a71e-0709373612b8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 851,
+    "prompt_tokens": 4416,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5267
+  },
+  "latency_ms": 11697,
+  "attempt": 1,
+  "prompt_sha256": "f7bc4a672ac7f260cb4ff22fd1355bcfddd4493cd80e457047cb1a12e476a644",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Safeguards",
+        "head_canonical_zh": "安全防护措施",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "double wall piping or equivalent, or protective location of piping etc.",
+        "tail_canonical_zh": "双层管壁或等效措施或管道防护布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Safeguards are measures undertaken to reduce leakage possibility and limiting its consequences, (e.g. double wall piping or equivalent, or protective location of piping etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Safeguards",
+        "tail_canonical_zh": "安全防护措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Safeguards are measures undertaken to reduce leakage possibility and limiting its consequences",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Piping components",
+        "head_canonical_zh": "管路部件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "type inspection and testing",
+        "tail_canonical_zh": "型式检查和试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "type inspection and testing are to be conducted as part of the design evaluation process",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "piping component",
+        "head_canonical_zh": "管路部件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "testing in accordance with the standard of compliance at the manufacturer's plant",
+        "tail_canonical_zh": "按合规标准在制造厂进行的试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "testing in accordance with the standard of compliance at the manufacturer's plant",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

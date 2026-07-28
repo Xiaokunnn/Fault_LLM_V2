@@ -1,0 +1,92 @@
+{
+  "page_key": "MP001:p0054",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-011e93e3-df5b-912e-a588-657f7802941b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 894,
+    "prompt_tokens": 7422,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8316
+  },
+  "latency_ms": 11541,
+  "attempt": 1,
+  "prompt_sha256": "f21fb20aa265c47e83f22abbb15b945845027a87fdbefe2244af9ebeb01cf6db",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Acoustic Emission",
+        "head_canonical_zh": "声发射监测",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Plastic deformation and crack deformation caused by fatigue, stress and wear",
+        "tail_canonical_zh": "疲劳、应力和磨损引起的塑性变形及裂纹变形",
+        "tail_type": "FaultMode",
+        "evidence_text": "Acoustic Emission | Plastic deformation and crack deformation caused by fatigue, stress and wear",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0054:t00:r001:c00",
+          "MP001:p0054:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Amplitude Demodulation",
+        "head_canonical_zh": "幅值解调分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Bearing tones masked by noise, cracks in bearing races, eccentric or damaged gears, mechanical looseness",
+        "tail_canonical_zh": "被噪声掩盖的轴承特征频率、轴承滚道裂纹、齿轮偏心或损坏、机械松动",
+        "tail_type": "FaultMode",
+        "evidence_text": "Amplitude Demodulation | Bearing tones masked by noise, cracks in bearing races, eccentric or damaged gears, mechanical looseness",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0054:t00:r002:c00",
+          "MP001:p0054:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cepstrum",
+        "head_canonical_zh": "倒频谱分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Wear causing harmonics and sidebands in vibration spectra",
+        "tail_canonical_zh": "引起振动谱谐波和边带的磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Cepstrum | Wear causing harmonics and sidebands in vibration spectra",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0054:t00:r003:c00",
+          "MP001:p0054:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

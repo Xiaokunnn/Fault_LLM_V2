@@ -1,0 +1,297 @@
+{
+  "page_key": "MP003:p0427",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0261e8cf-2b26-9280-a36f-95fbe6958c14",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3399,
+    "prompt_tokens": 14088,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 17487
+  },
+  "latency_ms": 40195,
+  "attempt": 1,
+  "prompt_sha256": "c5a276ff0642224ccc9fa76522b70afa4fb8f2079fa54e8a6964803f82a04bd6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Heater water level -low",
+        "head_canonical_zh": "加热器水位低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "A1 Heater water level -low    x                     4-4-1/11.5.1(b)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r001:c01",
+          "MP003:p0427:t00:r001:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Heater water level -low-low",
+        "head_canonical_zh": "加热器水位极低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "自动停机并报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "A2 Heater water level -low-low             x         4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r002:c01",
+          "MP003:p0427:t00:r002:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Heater water level -high",
+        "head_canonical_zh": "加热器水位高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "A3 Heater water level -high   x                     4-4-1/11.5.1(b)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r003:c01",
+          "MP003:p0427:t00:r003:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Forced draft fan -failure",
+        "head_canonical_zh": "强制通风机故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "自动停机并报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "B1 Forced draft fan -failure               x         4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r004:c01",
+          "MP003:p0427:t00:r004:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air supply casing -fire",
+        "head_canonical_zh": "供气箱火灾",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "B2 Air supply casing -fire    x                     4-4-1/11.5.2(b)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r005:c01",
+          "MP003:p0427:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Burner flame -failure",
+        "head_canonical_zh": "燃烧器火焰熄灭",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "自动停机并报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "C1 Burner flame -failure                   x         4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r006:c01",
+          "MP003:p0427:t00:r006:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flame scanner -failure",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "自动停机并报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "C2 Flame scanner -failure                  x         4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r007:c01",
+          "MP003:p0427:t00:r007:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Atomizing medium -off limit condition",
+        "head_canonical_zh": "雾化介质超限工况",
+        "head_type": "OperatingCondition",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "D1 Atomizing medium -off limit condition x           4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r008:c01",
+          "MP003:p0427:t00:r008:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Uptake gas temperature -high",
+        "head_canonical_zh": "烟道气温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "E1 Uptake gas temperature -high x                   4-4-1/11.5.2(b)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r009:c01",
+          "MP003:p0427:t00:r009:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control power supply -loss",
+        "head_canonical_zh": "控制电源丧失",
+        "head_type": "FaultMode",
+        "relation": "specified_by",
+        "tail_surface": "4-4-1/11.9",
+        "tail_canonical_zh": "ABS规范4-4-1/11.9",
+        "tail_type": "Standard",
+        "evidence_text": "F1 Control power supply -loss                        4-4-1/11.9",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0427:t00:r010:c01",
+          "MP003:p0427:t00:r010:c04"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fired or exhaust gas heater for thermal oil",
+        "head_canonical_zh": "热油燃烧或废气加热器",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "liquid relief valve",
+        "tail_canonical_zh": "液体安全阀",
+        "tail_type": "Component",
+        "evidence_text": "Each fired or exhaust gas heater for thermal oil is to be fitted with a suitable liquid relief valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "thermal oil",
+        "head_canonical_zh": "热油",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "samples of thermal oil to be taken periodically for testing",
+        "tail_canonical_zh": "定期取样测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Means are to be fitted to allow samples of thermal oil to be taken periodically for testing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "thermal oil expansion tank",
+        "head_canonical_zh": "热油膨胀柜",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "valve at the tank capable of local manual operation and remote shutdown",
+        "tail_canonical_zh": "具备本地手动操作和远程切断功能的阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pipe connection between the heater and the expansion tank is to be fitted with a valve at the tank capable of local manual operation and remote shutdown from outside the space where the tank is located.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "oil fired thermal oil heaters",
+        "head_canonical_zh": "燃油热油加热器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "conventional instruments, gauges, lights or other devices",
+        "tail_canonical_zh": "常规仪表、压力表、指示灯或其他装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Their operational status is to be indicated by conventional instruments, gauges, lights or other devices to show the functional condition of fuel system, thermal oil circulation system, forced-draft system and flue gas system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

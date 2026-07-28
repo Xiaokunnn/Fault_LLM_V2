@@ -1,0 +1,624 @@
+{
+  "page_key": "MP022:p0022",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-e59e9230-add2-9ce8-b705-c15c8cc43125",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 73662,
+  "attempt": 1,
+  "prompt_sha256": "850664a2c6e09ddd15dfca6db7c794431a548291afafa4bbdf29847f3f4a8dd8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pumping of viscous liquids",
+        "tail_canonical_zh": "输送高粘度液体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Motor overloaded       - Pumping of viscous liquids",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c00",
+          "MP022:p0022:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Larger motor or smaller impeller",
+        "tail_canonical_zh": "更换更大电机或更小叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor overloaded       - Pumping of viscous liquids - Larger motor or smaller impeller",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c00",
+          "MP022:p0022:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pumping of high density liquids",
+        "tail_canonical_zh": "输送高密度液体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "- Pumping of high density liquids",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Low outlet pressure (counter pressure)",
+        "tail_canonical_zh": "出口压力低（背压低）",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "- Low outlet pressure (counter pressure)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Higher counter pressure (throttling)",
+        "tail_canonical_zh": "提高背压（节流）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Low outlet pressure (counter pressure) - Higher counter pressure (throttling)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c01",
+          "MP022:p0022:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Lamination of precipitates from the liquid",
+        "tail_canonical_zh": "液体中沉淀物层积",
+        "tail_type": "Cause",
+        "evidence_text": "- Lamination of precipitates from the liquid",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Motor overloaded",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Frequent cleaning",
+        "tail_canonical_zh": "频繁清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Lamination of precipitates from the - Frequent cleaning\n                                liquid",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r003:c01",
+          "MP022:p0022:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Damage",
+        "tail_canonical_zh": "损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "Cavitation:\n- Damage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r005:c00",
+          "MP022:p0022:t00:r006:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Pressure reduction (sometimes to zero)",
+        "tail_canonical_zh": "压力降低（有时降至零）",
+        "tail_type": "Symptom",
+        "evidence_text": "- Pressure reduction (sometimes to\nzero)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r007:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Increase in the noise level",
+        "tail_canonical_zh": "噪声水平增加",
+        "tail_type": "Symptom",
+        "evidence_text": "- zInecrroe)ase in the noise level",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r008:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Low inlet pressure",
+        "tail_canonical_zh": "进口压力低",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "- Low inlet pressure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase the inlet pressure",
+        "tail_canonical_zh": "提高进口压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Low inlet pressure   - Increase the inlet pressure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r006:c01",
+          "MP022:p0022:t00:r006:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "High liquid temperature",
+        "tail_canonical_zh": "液体温度高",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "- High liquid temperature",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce the liquid temperature",
+        "tail_canonical_zh": "降低液体温度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- High liquid temperature - Reduce the liquid temperature",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r007:c01",
+          "MP022:p0022:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce the pressure drop before pumping",
+        "tail_canonical_zh": "减少泵送前的压降",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Reduce the pressure drop before\n                                                      pumping",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r008:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce speed",
+        "tail_canonical_zh": "降低转速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Reduce speed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Running dry",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "Cause",
+        "evidence_text": "Leaking shaft seal     - Running dry",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c00",
+          "MP022:p0022:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace: All wearing parts",
+        "tail_canonical_zh": "更换所有易损件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Leaking shaft seal     - Running dry          Replace:                     \n                                                     All wearing parts",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c00",
+          "MP022:p0022:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Incorrect rubber grade",
+        "tail_canonical_zh": "橡胶牌号不正确",
+        "tail_type": "Cause",
+        "evidence_text": "- Incorrect rubber grade",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change rubber grade",
+        "tail_canonical_zh": "更换橡胶牌号",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Incorrect rubber grade If necessary:              \n                                                     - Change rubber grade",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01",
+          "MP022:p0022:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Abrasive particles in the liquid",
+        "tail_canonical_zh": "液体中含有磨粒",
+        "tail_type": "Cause",
+        "evidence_text": "- Abrasive particles in the liquid",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Select stationary and rotating seal ring in silicon carbide/silicon carbide",
+        "tail_canonical_zh": "选用碳化硅/碳化硅动静环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Abrasive particles in the liquid - Select stationary and rotating seal ring\n                                                      in silicon carbide/silicon carbide",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01",
+          "MP022:p0022:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Incorrect SiC/SiC single seal used",
+        "tail_canonical_zh": "使用了不正确的SiC/SiC单端面密封",
+        "tail_type": "Cause",
+        "evidence_text": "- Incorrect SiC/SiC single seal used",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking shaft seal",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change to SiC/SiC seal marked “LKH Prime”",
+        "tail_canonical_zh": "更换为标有“LKH Prime”的SiC/SiC密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Incorrect SiC/SiC single seal used - Change to SiC/SiC seal marked “LKH\n                                                      Prime”",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r011:c01",
+          "MP022:p0022:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking O-ring seals",
+        "head_canonical_zh": "O形圈密封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Incorrect rubber grade",
+        "tail_canonical_zh": "橡胶牌号不正确",
+        "tail_type": "Cause",
+        "evidence_text": "Leaking O-ring seals   Incorrect rubber grade",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r013:c00",
+          "MP022:p0022:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leaking O-ring seals",
+        "head_canonical_zh": "O形圈密封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change rubber grade",
+        "tail_canonical_zh": "更换橡胶牌号",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Incorrect rubber grade Change rubber grade",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r013:c01",
+          "MP022:p0022:t00:r013:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "No/little air release",
+        "head_canonical_zh": "无/少量排气",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "see possible causes in the Installation guide lines chapter 3, Installation",
+        "tail_canonical_zh": "参见安装指南第3章中的可能原因",
+        "tail_type": "InspectionAction",
+        "evidence_text": "No/little air release  - see possible causes in the Installation\n                                guide lines chapter 3, Installation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r015:c00",
+          "MP022:p0022:t00:r015:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "No/little air release",
+        "head_canonical_zh": "无/少量排气",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "follow recommendations in the Installation guide lines chapter 3, Installation",
+        "tail_canonical_zh": "遵循安装指南第3章中的建议",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- follow recommendations in the\n                                guide lines chapter 3, Installation Installation guide lines chapter 3,\n                                                      Installation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0022:t00:r015:c01",
+          "MP022:p0022:t00:r015:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

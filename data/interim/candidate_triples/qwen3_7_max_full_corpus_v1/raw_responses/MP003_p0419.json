@@ -1,0 +1,118 @@
+{
+  "page_key": "MP003:p0419",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-926df627-6a0c-9204-8391-7544834291a7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1110,
+    "prompt_tokens": 2463,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3573
+  },
+  "latency_ms": 13147,
+  "attempt": 1,
+  "prompt_sha256": "a278c5cde0b1f31cf2d488201463d0eda75f4f91b433a524c41d7f88e91f1595",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "escape pipe",
+        "head_canonical_zh": "安全阀排放管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "routed as to prevent the accumulation of condensate",
+        "tail_canonical_zh": "布置以防止冷凝水积聚",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pipe is to be so routed as to prevent the accumulation of condensate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "safety valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "pressure accumulation tests",
+        "tail_canonical_zh": "压力积聚试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Safety valves are to be set under steam and tested with pressure accumulation tests in the presence of the Surveyor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "boiler pressure",
+        "head_canonical_zh": "锅炉压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "pressure accumulation tests",
+        "tail_canonical_zh": "压力积聚试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The boiler pressure is not to rise more than 6% above the maximum allowable working pressure when the steam stop valve is closed under full firing condition for a duration of 15 minutes for firetube boilers and 7 minutes for watertube boilers",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "popping point",
+        "head_canonical_zh": "起跳压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "pressure accumulation tests",
+        "tail_canonical_zh": "压力积聚试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The popping point of each safety valve is not to be more than 3% above its set pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "relieving capacity of the valves",
+        "head_canonical_zh": "阀门排放能力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "checked against the evaporating capacity of the boiler",
+        "tail_canonical_zh": "与锅炉蒸发量核对",
+        "tail_type": "InspectionAction",
+        "evidence_text": "the relieving capacity of the valves under lower pressure is to be checked against the evaporating capacity of the boiler",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

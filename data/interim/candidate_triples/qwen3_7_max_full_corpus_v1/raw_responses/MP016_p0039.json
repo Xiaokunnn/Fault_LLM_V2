@@ -1,0 +1,215 @@
+{
+  "page_key": "MP016:p0039",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a9f7ba26-6795-9936-99aa-a4ba6aa2a0ab",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2341,
+    "prompt_tokens": 2821,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5162
+  },
+  "latency_ms": 26527,
+  "attempt": 1,
+  "prompt_sha256": "f8aca1719b23d5a563664fdabc7d57a72eda9e2725981ab86999354bb52ef7ff",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "torrkör inte längre än så",
+        "head_canonical_zh": "干运行限制",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Flexibla impellerpumpar behöver upp till 30 sekunder för att primas",
+        "tail_canonical_zh": "柔性叶轮泵自吸时间上限30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Flexibla impellerpumpar behöver upp till 30 sekunder för att primas – torrkör inte längre än så, eftersom bristen på vätska kommer skada impellern.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bristen på vätska",
+        "head_canonical_zh": "缺液",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "skada impellern",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "eftersom bristen på vätska kommer skada impellern",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sugröret är lufttätt",
+        "head_canonical_zh": "吸入管路气密性",
+        "head_type": "InspectionAction",
+        "relation": "prevented_by",
+        "tail_surface": "pumpen inte att primas",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "Se till att sugröret är lufttätt, annars kommer pumpen inte att primas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kontrollera pumpen för att upptäcka eventuella fysiska skador",
+        "head_canonical_zh": "检查泵体物理损伤",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "fysiska skador",
+        "tail_canonical_zh": "物理损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Kontrollera pumpen för att upptäcka eventuella fysiska skador, som uppkommit under transporten.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kör inte pumpen över det maximala differenstryck",
+        "head_canonical_zh": "禁止超过最大压差运行",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "pumphjulet då kan skadas",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Kör inte pumpen över det maximala differenstryck som anges på databladet, inte ens under några sekunder, eftersom pumphjulet då kan skadas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Kör aldrig pumpen mot en stängd ventil",
+        "head_canonical_zh": "禁止关阀运行",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "pumphjulet då kan skadas",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Kör aldrig pumpen mot en stängd ventil. ... Kör inte pumpen över det maximala differenstryck som anges på databladet, inte ens under några sekunder, eftersom pumphjulet då kan skadas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Otillräckligt inloppstryck",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "kavitera",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Otillräckligt inloppstryck kommer att få pumpen att kavitera",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "kavitera",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "låg prestanda",
+        "tail_canonical_zh": "性能低下",
+        "tail_type": "Symptom",
+        "evidence_text": "Otillräckligt inloppstryck kommer att få pumpen att kavitera, vilket leder till låg prestanda, buller och kort livslängd för pumpen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "kavitera",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "buller",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Otillräckligt inloppstryck kommer att få pumpen att kavitera, vilket leder till låg prestanda, buller och kort livslängd för pumpen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "inloppsrören är korta, har stora hål och inte kollapsar under vakuum",
+        "head_canonical_zh": "确保吸入管路短、大口径且不塌陷",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "kavitera",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Se till att inloppsrören är korta, har stora hål och inte kollapsar under vakuum.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

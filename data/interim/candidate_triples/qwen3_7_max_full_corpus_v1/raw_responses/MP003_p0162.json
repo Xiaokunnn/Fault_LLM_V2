@@ -1,0 +1,149 @@
+{
+  "page_key": "MP003:p0162",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e2340f56-84f3-9137-b3c7-0b0a881bc4f4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1625,
+    "prompt_tokens": 8343,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9968
+  },
+  "latency_ms": 22957,
+  "attempt": 1,
+  "prompt_sha256": "027ee93bc7142eb6d3ec280b1da905a47877b097a339bb7fcabd701005596a0e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Speed",
+        "head_canonical_zh": "转速",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm (High)",
+        "tail_canonical_zh": "高报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Speed          Alarm (High) Indication (5) Alarm (High) Indication (5)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r001:c00",
+          "MP003:p0162:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Exhaust gas at each\nturbocharger inlet,\ntemperature",
+        "head_canonical_zh": "各涡轮增压器进口排气温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm (High)",
+        "tail_canonical_zh": "高报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Exhaust gas at each\nturbocharger inlet,\ntemperature Alarm (High) Indication (1) Alarm (High) Indication",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r002:c00",
+          "MP003:p0162:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lube oil at turbocharger\noutlet, temperature",
+        "head_canonical_zh": "涡轮增压器出口滑油温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm (High)",
+        "tail_canonical_zh": "高报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Lube oil at turbocharger\noutlet, temperature       Alarm (High) Indication",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r003:c00",
+          "MP003:p0162:t00:r003:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lube oil at turbocharger\ninlet, pressure",
+        "head_canonical_zh": "涡轮增压器进口滑油压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm (Low)",
+        "tail_canonical_zh": "低报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Lube oil at turbocharger\ninlet, pressure Alarm (Low) Indication Alarm (Low) Indication",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r004:c00",
+          "MP003:p0162:t00:r004:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lube oil at turbocharger\ninlet, pressure",
+        "head_canonical_zh": "涡轮增压器进口滑油压力",
+        "head_type": "SignalFeature",
+        "relation": "operates_under",
+        "tail_surface": "Only for forced lubrication\nsystems",
+        "tail_canonical_zh": "仅适用于强制润滑系统",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Lube oil at turbocharger\ninlet, pressure Alarm (Low) Indication Alarm (Low) Indication Only for forced lubrication\nsystems",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r004:c00",
+          "MP003:p0162:t00:r004:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lube oil at turbocharger\noutlet, temperature",
+        "head_canonical_zh": "涡轮增压器出口滑油温度",
+        "head_type": "SignalFeature",
+        "relation": "operates_under",
+        "tail_surface": "If not forced system, oil\ntemperature near bearings",
+        "tail_canonical_zh": "若非强制系统则监测轴承附近油温",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Lube oil at turbocharger\noutlet, temperature       Alarm (High) Indication If not forced system, oil\ntemperature near bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0162:t00:r003:c00",
+          "MP003:p0162:t00:r003:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "page_key": "MP016:p0021",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-49836794-4e46-907c-8369-acd393cb02b9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2020,
+    "prompt_tokens": 2803,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4823
+  },
+  "latency_ms": 24252,
+  "attempt": 1,
+  "prompt_sha256": "e41ad8372cc3c1a0907e79cc9c36b3815bc0a71499ac0cce2abdf710be9c0af3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Kavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Sorgen Sie für kurze Rohrlängen und große Rohrdurchmesser; die Rohre müssen u. U.einen größeren Durchmesser haben als die Pumpenanschlüsse – insbesondere zum Fördern viskoser Flüssigkeiten, um Kavitation zu vermeiden.",
+        "tail_canonical_zh": "采用短管路和大管径（尤其是输送粘性液体时管径大于泵接口）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Sorgen Sie für kurze Rohrlängen und große Rohrdurchmesser; die Rohre müssen u. U.einen größeren Durchmesser haben als die Pumpenanschlüsse – insbesondere zum Fördern viskoser Flüssigkeiten, um Kavitation zu vermeiden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Ein verstopfter Filter führt zur Kavitation.",
+        "tail_canonical_zh": "过滤器堵塞导致汽蚀",
+        "tail_type": "Cause",
+        "evidence_text": "Ein verstopfter Filter führt zur Kavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Kavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Vermeiden Sie nach Möglichkeit Filter auf der Saugseite der Pumpe.",
+        "tail_canonical_zh": "尽可能避免在泵吸入侧安装过滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Vermeiden Sie nach Möglichkeit Filter auf der Saugseite der Pumpe. Ein verstopfter Filter führt zur Kavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ausrichtung der Kupplung",
+        "head_canonical_zh": "联轴器对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Überprüfen Sie immer die Ausrichtung von Pumpe und Antrieb nach der Installation und vor dem Starten der Pumpe.",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置的对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Überprüfen Sie immer die Ausrichtung von Pumpe und Antrieb nach der Installation und vor dem Starten der Pumpe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Druckverhältnisse",
+        "head_canonical_zh": "压力状况",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Bringen Sie auf jeder Seite der Pumpe ein Unterdruck-/ Druckmessgerät an, um die Druckverhältnisse zu überwachen.",
+        "tail_canonical_zh": "在泵两侧安装真空/压力表以监测压力状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Bringen Sie auf jeder Seite der Pumpe ein Unterdruck-/ Druckmessgerät an, um die Druckverhältnisse zu überwachen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lufteintritt unter Vakuum",
+        "head_canonical_zh": "真空下空气进入",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Achten Sie bei allen Rohrverbindungen auf Folgendes: Kein Lufteintritt unter Vakuum",
+        "tail_canonical_zh": "确保所有管路连接在真空下无空气进入",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Achten Sie bei allen Rohrverbindungen auf Folgendes: • Kein Lufteintritt unter Vakuum",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Flüssigkeitsaustritt unter Druck",
+        "head_canonical_zh": "压力下液体泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Achten Sie bei allen Rohrverbindungen auf Folgendes: Kein Flüssigkeitsaustritt unter Druck",
+        "tail_canonical_zh": "确保所有管路连接在压力下无液体泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Achten Sie bei allen Rohrverbindungen auf Folgendes: • Kein Flüssigkeitsaustritt unter Druck",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumpe",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Es muss die Möglichkeit bestehen, den Motor für die Dauer der Wartung, Instandhaltung und Reinigung auf der Pumpe zu isolieren.",
+        "tail_canonical_zh": "维护、保养和清洁期间必须能隔离泵上的电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Es muss die Möglichkeit bestehen, den Motor für die Dauer der Wartung, Instandhaltung und Reinigung auf der Pumpe zu isolieren.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

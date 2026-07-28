@@ -1,0 +1,328 @@
+{
+  "page_key": "MP016:p0047",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-394e2d77-27f5-9558-a203-9d9c52ff32b0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3540,
+    "prompt_tokens": 2790,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6330
+  },
+  "latency_ms": 41443,
+  "attempt": 1,
+  "prompt_sha256": "95e676275affb6d8aec7a8b94926d37df24925ce6db70e5875f0e15a4a9f1f09",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "tuberías deban tener un diámetro mayor que los puertos de la bomba",
+        "head_canonical_zh": "吸入管径大于泵口",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "cavitación",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "es posible que las tuberías deban tener un diámetro mayor que los puertos de la bomba, especialmente cuando se bombean líquidos viscosos para evitar la cavitación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "filtro está obstruido",
+        "head_canonical_zh": "滤器堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitación",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Si el filtro está obstruido provocará cavitación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "evite los filtros en el lado de entrada de la bomba",
+        "head_canonical_zh": "避免泵入口安装滤器",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "cavitación",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Si es posible, evite los filtros en el lado de entrada de la bomba. Si el filtro está obstruido provocará cavitación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "funcionamiento en seco",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "dañar los sellos y el impulsor",
+        "tail_canonical_zh": "损坏密封和叶轮",
+        "tail_type": "FaultMode",
+        "evidence_text": "No continúe haciendo funcionar la bomba si no fluye líquido; el funcionamiento en seco puede dañar los sellos y el impulsor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "No continúe haciendo funcionar la bomba si no fluye líquido",
+        "head_canonical_zh": "无液流时停止运行",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "funcionamiento en seco",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "No continúe haciendo funcionar la bomba si no fluye líquido; el funcionamiento en seco puede dañar los sellos y el impulsor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Las bombas nunca deben funcionar en seco durante más de 30 segundos",
+        "head_canonical_zh": "干运转不超过30秒",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "calentamiento excesivo de las caras del sello y daños al impulsor",
+        "tail_canonical_zh": "密封面过热及叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Las bombas nunca deben funcionar en seco durante más de 30 segundos, ya que esto provocará un calentamiento excesivo de las caras del sello y daños al impulsor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ruidos inesperados",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Preste atención para detectar ruidos inesperados",
+        "tail_canonical_zh": "注意监听异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Preste atención para detectar ruidos inesperados.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fugas",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Verifique si hay fugas",
+        "tail_canonical_zh": "检查泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verifique si hay fugas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ruidos inusuales",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Preste atención para detectar ruidos inusuales",
+        "tail_canonical_zh": "注意监听异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Preste atención para detectar ruidos inusuales",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibraciones inusuales",
+        "head_canonical_zh": "异常振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Compruebe si hay vibraciones inusuales",
+        "tail_canonical_zh": "检查异常振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe si hay vibraciones inusuales o cambios de temperatura.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cambios de temperatura",
+        "head_canonical_zh": "温度变化",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Compruebe ... cambios de temperatura",
+        "tail_canonical_zh": "检查温度变化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe si hay vibraciones inusuales o cambios de temperatura.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "signos de daño o desgaste",
+        "head_canonical_zh": "损伤或磨损迹象",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "inspeccione el impulsor en busca de signos de daño o desgaste",
+        "tail_canonical_zh": "检查叶轮损伤或磨损迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Retire la tapa de extremo de la bomba e inspeccione el impulsor en busca de signos de daño o desgaste.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impulsor",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Reparar o reemplazar según sea necesario",
+        "tail_canonical_zh": "按需修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Reparar o reemplazar según sea necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "junta tórica o la junta de la tapa de extremo",
+        "head_canonical_zh": "端盖O型圈或垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Cambie la junta tórica o la junta de la tapa de extremo",
+        "tail_canonical_zh": "更换端盖O型圈或垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Cambie la junta tórica o la junta de la tapa de extremo.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impulsor",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "si está desgastado, reemplácelo",
+        "tail_canonical_zh": "磨损则更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Extraiga el impulsor para realizarle una inspección visual y detectar signos de desgaste, si está desgastado, reemplácelo.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "eje",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "límpielo si es necesario",
+        "tail_canonical_zh": "必要时清洁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Inspección visual del eje, límpielo si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

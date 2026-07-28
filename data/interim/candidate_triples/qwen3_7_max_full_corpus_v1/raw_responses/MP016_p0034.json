@@ -1,0 +1,155 @@
+{
+  "page_key": "MP016:p0034",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-acbcca97-cdba-9c40-b67e-a932c559ff32",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1586,
+    "prompt_tokens": 2815,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4401
+  },
+  "latency_ms": 18223,
+  "attempt": 1,
+  "prompt_sha256": "354edfcecd00c30fb0413fadf44c86f8f69d21e5a180a2c64b00ca0a465b66ab",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Vervorming",
+        "head_canonical_zh": "底座变形",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "uitlijning van de koppeling beïnvloeden",
+        "tail_canonical_zh": "联轴器对中不良",
+        "tail_type": "FaultMode",
+        "evidence_text": "Vervorming kan de uitlijning van de koppeling beïnvloeden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "uitlijning van de pomp",
+        "head_canonical_zh": "泵对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer altijd de uitlijning van de pomp na installatie en voordat u de pomp start",
+        "tail_canonical_zh": "安装后及启动前检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controleer altijd de uitlijning van de pomp na installatie en voordat u de pomp start.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitatie",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "leidingen een grotere diameter hebben dan de poorten van de pomp",
+        "tail_canonical_zh": "管路直径大于泵口直径",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "vooral bij het verpompen van viskeuze vloeistoffen kan het nodig zijn dat de leidingen een grotere diameter hebben dan de poorten van de pomp om cavitatie te voorkomen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "verstopt filter",
+        "head_canonical_zh": "滤器堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitatie",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Een verstopt filter veroorzaakt cavitatie.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "thermische uitzettingskrachten op de pomp worden overgebracht",
+        "head_canonical_zh": "热膨胀力传递至泵体",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Breng indien nodig compensatoren aan",
+        "tail_canonical_zh": "安装补偿器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Breng indien nodig compensatoren aan om te voorkomen dat thermische uitzettingskrachten op de pomp worden overgebracht.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "druk",
+        "head_canonical_zh": "压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Monteer vacuüm-/drukmeters aan elke kant van de pomp",
+        "tail_canonical_zh": "在泵两侧安装真空/压力表",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Monteer vacuüm-/drukmeters aan elke kant van de pomp om de druk te controleren.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "asafdichtingen",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "vaststellen dat de aangebrachte afdichting geschikt is voor de toepassing voordat u de pomp start",
+        "tail_canonical_zh": "启动前确认密封适用性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "u moet vaststellen dat de aangebrachte afdichting geschikt is voor de toepassing voordat u de pomp start.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

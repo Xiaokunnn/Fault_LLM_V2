@@ -1,0 +1,150 @@
+{
+  "page_key": "MP019:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d9fb13c6-9747-9d2a-b96a-447e98b5250e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1587,
+    "prompt_tokens": 2166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3753
+  },
+  "latency_ms": 18670,
+  "attempt": 1,
+  "prompt_sha256": "f77c31b3af83f80cefc1c4b7e0efb67b1b64e77da8403392d1d448195760f858",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Ensure that the motor protection corresponds to the environment and weather conditions",
+        "tail_canonical_zh": "确保电机防护与环境及天气条件相适应",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure that the motor protection corresponds to the environment and weather conditions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water cannot enter the motor or the terminal boxes",
+        "head_canonical_zh": "水进入电机或接线盒",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "make sure that water cannot enter the motor or the terminal boxes",
+        "tail_canonical_zh": "确保水不能进入电机或接线盒",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "make sure that water cannot enter the motor or the terminal boxes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seals of terminal boxes",
+        "head_canonical_zh": "接线盒密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "The seals of terminal boxes must be placed correctly in the slots provided",
+        "tail_canonical_zh": "接线盒密封件必须正确放置在提供的槽中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The seals of terminal boxes must be placed correctly in the slots provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "thermistors or other RTDs (Pt100, thermal relays, etc.)",
+        "head_canonical_zh": "热敏电阻或其他RTD（Pt100、热继电器等）",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "connected by appropriate means",
+        "tail_canonical_zh": "通过适当方式连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If a motor is equipped with thermistors or other RTDs (Pt100, thermal relays, etc.) and auxiliary devices, it is recommended they be used and connected by appropriate means",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "errors in readings or damage the system",
+        "head_canonical_zh": "读数错误或系统损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Using a higher measuring voltage or current",
+        "tail_canonical_zh": "使用过高的测量电压或电流",
+        "tail_type": "Cause",
+        "evidence_text": "Using a higher measuring voltage or current may cause errors in readings or damage the system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "thermistor circuit",
+        "head_canonical_zh": "热敏电阻电路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure the insulation level or isolation of thermistor circuit, see IEC 60664",
+        "tail_canonical_zh": "确保热敏电阻电路的绝缘水平或隔离符合IEC 60664",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ensure the insulation level or isolation of thermistor circuit, see IEC 60664",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unidirectional fan",
+        "head_canonical_zh": "单向风扇",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "ensure that it rotates in the same direction as the arrow marked on the motor",
+        "tail_canonical_zh": "确保其旋转方向与电机上标记的箭头方向一致",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If the motor has a unidirectional fan, ensure that it rotates in the same direction as the arrow marked on the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

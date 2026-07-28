@@ -1,0 +1,173 @@
+{
+  "page_key": "MP019:p0080",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-e4ed08d3-3f12-9430-8433-9da1ba77ad05",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 24146,
+  "attempt": 1,
+  "prompt_sha256": "f08b996d28880f2de081f671e77fbe6e4db36053398710275d9d40ec1544459c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Un corretto allineamento",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "guasti ai cuscinetti, vibrazioni e possibili rotture dell'albero",
+        "tail_canonical_zh": "轴承故障、振动及可能的轴断裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Un corretto allineamento è indispensabile per prevenire guasti ai cuscinetti, vibrazioni e possibili rotture dell'albero.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Un'eccessiva tensione delle cinghie",
+        "head_canonical_zh": "皮带张力过大",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "danneggia i cuscinetti e può causare una rottura dell'albero",
+        "tail_canonical_zh": "损坏轴承并可能导致轴断裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Un'eccessiva tensione delle cinghie danneggia i cuscinetti e può causare una rottura dell'albero.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Semigiunti e pulegge",
+        "head_canonical_zh": "半联轴器和皮带轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "utilizzando esclusivamente attrezzature e utensili che non danneggino i cuscinetti e le tenute",
+        "tail_canonical_zh": "仅使用不损坏轴承和密封件的设备和工具",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Semigiunti o pulegge devono essere montati sull'albero utilizzando esclusivamente attrezzature e utensili che non danneggino i cuscinetti e le tenute.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Non montare mai semigiunti o pulegge utilizzando un martello",
+        "head_canonical_zh": "严禁使用锤子安装半联轴器或皮带轮",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "danneggino i cuscinetti e le tenute",
+        "tail_canonical_zh": "损坏轴承和密封件",
+        "tail_type": "FaultMode",
+        "evidence_text": "Semigiunti o pulegge devono essere montati sull'albero utilizzando esclusivamente attrezzature e utensili che non danneggino i cuscinetti e le tenute. Non montare mai semigiunti o pulegge utilizzando un martello",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gioco b",
+        "head_canonical_zh": "间隙b",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "controllare che il gioco b sia minore di 0,05 mm",
+        "tail_canonical_zh": "检查间隙b是否小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Precisione di montaggio di un semigiunto: controllare che il gioco b sia minore di 0,05 mm",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "differenza tra a1 e a2",
+        "head_canonical_zh": "a1与a2之差",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "controllare ... che la differenza tra a1 e a2 sia anch'essa minore di 0,05 mm",
+        "tail_canonical_zh": "检查a1与a2之差是否也小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "controllare che il gioco b sia minore di 0,05 mm e che la differenza tra a1 e a2 sia anch'essa minore di 0,05 mm",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "allineamento",
+        "head_canonical_zh": "对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Ricontrollare l'allineamento dopo il serraggio finale dei bulloni o delle viti prigioniere",
+        "tail_canonical_zh": "在最终拧紧螺栓或双头螺柱后重新检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ricontrollare l'allineamento dopo il serraggio finale dei bulloni o delle viti prigioniere.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "l'albero motore sia parallelo all'albero di comando",
+        "head_canonical_zh": "电机轴与驱动轴平行",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che l'albero motore sia parallelo all'albero di comando",
+        "tail_canonical_zh": "检查电机轴是否与驱动轴平行",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare che l'albero motore sia parallelo all'albero di comando.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "page_key": "MP017:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9a0d1d11-1823-9c6b-8000-59cc0ad0f1ac",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2976,
+    "prompt_tokens": 2307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5283
+  },
+  "latency_ms": 38901,
+  "attempt": 1,
+  "prompt_sha256": "b0b9f34d21b3fc6559b779b09db5e26dc18236042e5116334f1aa88f7ddc36dc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "air pockets",
+        "head_canonical_zh": "气穴",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "suction run slopes down to the pump at any point",
+        "tail_canonical_zh": "吸入管路向泵方向下倾",
+        "tail_type": "Cause",
+        "evidence_text": "slopes down to the pump at any point along the suction run, air pockets will be created.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "eccentric type reducers installed with the flat part uppermost",
+        "head_canonical_zh": "偏心异径管平面向上安装",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "air pockets",
+        "tail_canonical_zh": "气穴",
+        "tail_type": "FaultMode",
+        "evidence_text": "If reducers are used in suction lines, they should be the eccentric type, and should be installed with the flat part of the reducers uppermost to avoid creating air pockets.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valve stem horizontal",
+        "head_canonical_zh": "阀门阀杆水平安装",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "air pockets",
+        "tail_canonical_zh": "气穴",
+        "tail_type": "FaultMode",
+        "evidence_text": "if a valve is used, install it with the stem horizontal to avoid air pockets.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "spherical solids passing through strainer",
+        "head_canonical_zh": "球形固体通过滤网",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pass through the pump itself",
+        "tail_canonical_zh": "固体进入泵体",
+        "tail_type": "FaultMode",
+        "evidence_text": "any spherical solids which pass through a strainer furnished with the pump will also pass through the pump itself.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "strainer openings area at least three or four times suction line cross section",
+        "head_canonical_zh": "滤网开口面积至少为吸入管路截面积的三至四倍",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "passage of solids larger than solids handling capability",
+        "tail_canonical_zh": "大于泵固体处理能力的固体通过",
+        "tail_type": "FaultMode",
+        "evidence_text": "make certain that the total area of the openings in the strainer is at least three or four times the cross section of the suction line, and that the openings will not permit passage of solids larger than the solids handling capability of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "slight leak",
+        "head_canonical_zh": "轻微泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "affect priming, head, and capacity",
+        "tail_canonical_zh": "影响自吸、扬程和流量",
+        "tail_type": "Symptom",
+        "evidence_text": "Since even a slight leak will affect priming, head, and capacity, especially when operating with a high suction lift",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal all connections in the suction line with pipe dope",
+        "head_canonical_zh": "用管道密封膏密封吸入管路所有连接处",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "slight leak",
+        "tail_canonical_zh": "轻微泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "all connections in the suction line should be sealed with pipe dope to ensure an air-tight seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air entering the suction line",
+        "head_canonical_zh": "空气进入吸入管路",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "reduce pump efficiency",
+        "tail_canonical_zh": "泵效率降低",
+        "tail_type": "Symptom",
+        "evidence_text": "air entering the suction line will reduce pump efficiency.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "install a baffle between the inflow and the suction inlet",
+        "head_canonical_zh": "在进水口与吸入口之间安装挡板",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "air entering the suction line",
+        "tail_canonical_zh": "空气进入吸入管路",
+        "tail_type": "FaultMode",
+        "evidence_text": "install a baffle between the inflow and the suction inlet at a distance 1-1/2 times the diameter of the suction pipe. The baffle will allow entrained air to escape from the liquid before it is drawn into the suction inlet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flow paths interact",
+        "head_canonical_zh": "流道相互干扰",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "reducing the efficiency of one or both pumps",
+        "tail_canonical_zh": "一台或两台泵效率降低",
+        "tail_type": "Symptom",
+        "evidence_text": "the flow paths may interact, reducing the efficiency of one or both pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "position suction inlets separated by at least 3 times suction pipe diameter",
+        "head_canonical_zh": "吸入口间距至少为吸入管径的3倍",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "flow paths interact",
+        "tail_canonical_zh": "流道相互干扰",
+        "tail_type": "Cause",
+        "evidence_text": "To avoid this, position the suction inlets so that they are separated by a distance equal to at least 3 times the diameter of the suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "depth of submergence of the suction line",
+        "head_canonical_zh": "吸入管路浸没深度",
+        "head_type": "OperatingCondition",
+        "relation": "indicates",
+        "tail_surface": "efficient pump operation",
+        "tail_canonical_zh": "泵高效运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The depth of submergence of the suction line is critical to efficient pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "installing a standard pipe increaser fitting at the end of the suction line",
+        "head_canonical_zh": "在吸入管路末端安装标准扩管接头",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "pipe submergence required may be reduced",
+        "tail_canonical_zh": "所需管路浸没深度可降低",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The pipe submergence required may be reduced by installing a standard pipe increaser fitting at the end of the suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

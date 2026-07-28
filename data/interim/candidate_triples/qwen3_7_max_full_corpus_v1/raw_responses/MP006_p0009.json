@@ -1,0 +1,99 @@
+{
+  "page_key": "MP006:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3be4dd15-aab9-9792-b42d-6f431e7f409f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 902,
+    "prompt_tokens": 2318,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3220
+  },
+  "latency_ms": 12088,
+  "attempt": 1,
+  "prompt_sha256": "2ade1f813eb56beb123cc4d8718f19e552eabfe697fde739e2ef1a4066ebb7d4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "ball bearings and/or coils in the motor",
+        "head_canonical_zh": "电机球轴承和/或线圈",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "overheat",
+        "tail_canonical_zh": "过热",
+        "tail_type": "FaultMode",
+        "evidence_text": "The ball bearings and/or coils in the motor can overheat if a pump is insulated all the way up to the motor flange.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "a pump is insulated all the way up to the motor flange",
+        "head_canonical_zh": "泵体保温层延伸至电机法兰",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "overheat",
+        "tail_canonical_zh": "过热",
+        "tail_type": "FaultMode",
+        "evidence_text": "The ball bearings and/or coils in the motor can overheat if a pump is insulated all the way up to the motor flange.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheat",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Unrestricted ventilation of the motor bracket",
+        "tail_canonical_zh": "电机支架无阻碍通风",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unrestricted ventilation of the motor bracket is therefore necessary to provide sufficient cooling of pump and motor bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump and motor bearings",
+        "head_canonical_zh": "泵和电机轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Unrestricted ventilation of the motor bracket",
+        "tail_canonical_zh": "电机支架无阻碍通风",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unrestricted ventilation of the motor bracket is therefore necessary to provide sufficient cooling of pump and motor bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "page_key": "MP019:p0126",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c183cdaa-3b69-9f3d-bf60-14e5c3454c21",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 496,
+    "prompt_tokens": 2134,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2630
+  },
+  "latency_ms": 6837,
+  "attempt": 1,
+  "prompt_sha256": "565c4eb8ca7b96947b960c11a763548ce510cd82039b4165ebf5a2878ccb1870",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Laakerit",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Laakerit on poistettava käyttäen ulosvetäjää ja asennettava lämmitettyinä tai tarkoitukseen sopivilla erityistyökaluilla",
+        "tail_canonical_zh": "使用拉拔器拆卸并加热或使用专用工具安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Laakerit on poistettava käyttäen ulosvetäjää ja asennettava lämmitettyinä tai tarkoitukseen sopivilla erityistyökaluilla.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Uudelleenkäämintä",
+        "head_canonical_zh": "重绕",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "pätevä korjaamo",
+        "tail_canonical_zh": "合格维修车间",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Uudelleenkääminnän saa suorittaa vain pätevä korjaamo.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.96,
+        "tail_translation_confidence": 0.94
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "page_key": "MP003:p0977",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-936237a9-396d-9139-a4a6-d10df75fee56",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 969,
+    "prompt_tokens": 4782,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5751
+  },
+  "latency_ms": 11564,
+  "attempt": 1,
+  "prompt_sha256": "428ade864d3d82f69c433c759926997111e53c578f4e790320ba67aaee65f2f1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "IEC 60068-2-6, Test Fc",
+        "tail_canonical_zh": "IEC 60068-2-6 Test Fc振动试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Vibration IEC 60068-2-6, Test Fc",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0977:t00:r001:c01",
+          "MP003:p0977:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "functional tests",
+        "tail_canonical_zh": "功能测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "During the vibration test, functional tests are to be carried out",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0977:t00:r001:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "malfunction and/or performance deterioration",
+        "head_canonical_zh": "故障和/或性能下降",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Critical frequency",
+        "tail_canonical_zh": "临界频率",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Critical frequency is a frequency at which the equipment being tested may exhibit: ● malfunction and/or performance deterioration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0977:t00:r001:c04"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical resonances and/or other response effects occur, for example, chatter",
+        "head_canonical_zh": "机械共振和/或其他响应效应（如颤振）",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Critical frequency",
+        "tail_canonical_zh": "临界频率",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Critical frequency is a frequency at which the equipment being tested may exhibit: ... ● mechanical resonances and/or other response effects occur, for example, chatter",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0977:t00:r001:c04"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

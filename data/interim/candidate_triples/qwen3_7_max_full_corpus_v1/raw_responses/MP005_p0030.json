@@ -1,0 +1,59 @@
+{
+  "page_key": "MP005:p0030",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9b2deaf3-573e-9b52-862d-7b3f2b5d63cd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 446,
+    "prompt_tokens": 1944,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2390
+  },
+  "latency_ms": 6173,
+  "attempt": 1,
+  "prompt_sha256": "f484b0c41f48d21565d58ffb6a1a4a9ea3be6f1cfd99fdee959d759042048bfc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "M3/HOUR & TOTAL HEAD M",
+        "head_canonical_zh": "额定流量与总扬程",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ISO9906 Grade 2B",
+        "tail_canonical_zh": "ISO9906 2B级标准",
+        "tail_type": "Standard",
+        "evidence_text": "If test is performed, ISO9906 Grade 2B\nis applied as DESMI standard",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "KW",
+        "head_canonical_zh": "电机额定功率",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "greater than pump power consumption",
+        "tail_canonical_zh": "大于泵消耗功率",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "KW is the required nominal motor power output, which is greater than pump power consumption to\navoid motor overloading",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "page_key": "MP005:p0152",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-aef8a027-1c2a-9429-979a-5f06fac9c9a4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 674,
+    "prompt_tokens": 4519,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5193
+  },
+  "latency_ms": 8590,
+  "attempt": 1,
+  "prompt_sha256": "1d8aa84b2ba95189e779ed72c9d6bb2c56f3f9d9a18699d38106cb4528005d40",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lip seal kit",
+        "head_canonical_zh": "唇形密封套件",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "cover under bearing",
+        "tail_canonical_zh": "轴承下盖",
+        "tail_type": "Component",
+        "evidence_text": "Assembly drawing of Lip seal kit in cover under bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cover under bearing",
+        "head_canonical_zh": "轴承下盖",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "Lip Seal",
+        "tail_canonical_zh": "唇形密封",
+        "tail_type": "Component",
+        "evidence_text": "26    Cover under bearing                                            \n              210   Lip Seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0152:t00:r001:c03",
+          "MP005:p0152:t00:r002:c03"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cover under bearing",
+        "head_canonical_zh": "轴承下盖",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "O-ring",
+        "tail_canonical_zh": "O型圈",
+        "tail_type": "Component",
+        "evidence_text": "26    Cover under bearing                                            \n              211   O-ring",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0152:t00:r001:c03",
+          "MP005:p0152:t00:r003:c03"
+        ],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

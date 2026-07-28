@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0812",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9c151740-46b9-9620-89ec-d76346a27744",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 930,
+    "prompt_tokens": 12290,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13220
+  },
+  "latency_ms": 16268,
+  "attempt": 1,
+  "prompt_sha256": "1a026baa711945ccf8df4e524572dba408b790f06b814e34018ff305eea9e500",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insulation Monitor and Alarm",
+        "head_canonical_zh": "绝缘监测与报警装置",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "audible or visual alarm for abnormally low insulation values",
+        "tail_canonical_zh": "绝缘过低声光报警",
+        "tail_type": "Component",
+        "evidence_text": "A means for continuously monitoring the electrical insulation level to earth, and an audible or visual alarm for abnormally low insulation values.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "abnormally low insulation values",
+        "head_canonical_zh": "绝缘电阻异常偏低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "electrical insulation level to earth",
+        "tail_canonical_zh": "对地电气绝缘水平",
+        "tail_type": "SignalFeature",
+        "evidence_text": "A means for continuously monitoring the electrical insulation level to earth, and an audible or visual alarm for abnormally low insulation values.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Generator Disconnect",
+        "head_canonical_zh": "发电机隔离开关",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "disconnect completely all leads of the generator and the circuit breaker from the buses, except the earth lead",
+        "tail_canonical_zh": "完全断开发电机及断路器与汇流排的连接（接地线除外）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A generator switch or disconnecting links in series with the generator circuit breaker which is to disconnect completely all leads of the generator and the circuit breaker from the buses, except the earth lead.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "circuit breakers",
+        "head_canonical_zh": "断路器",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "protect against a short circuit on the equalizer buses",
+        "tail_canonical_zh": "防止均衡母线短路",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For 3-wire generators, the circuit breakers are to protect against a short circuit on the equalizer buses.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

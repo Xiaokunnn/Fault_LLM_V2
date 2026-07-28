@@ -1,0 +1,138 @@
+{
+  "page_key": "MP003:p0683",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1f71e4c2-2805-9fb4-b8f3-4c39650bde57",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1469,
+    "prompt_tokens": 2615,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4084
+  },
+  "latency_ms": 18993,
+  "attempt": 1,
+  "prompt_sha256": "cb23db85fabe6f84a2214e6babe4a16a7bffab1e499f964d13f8d1d0dc4411e9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "emergency fire pump",
+        "head_canonical_zh": "应急消防泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "self-priming",
+        "tail_canonical_zh": "自吸式",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The pump is to be self-priming.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "diesel driven power source",
+        "head_canonical_zh": "柴油驱动动力源",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "heating arrangements are to be provided",
+        "tail_canonical_zh": "提供加热装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If this is impracticable, or if lower temperatures are likely to be encountered, heating arrangements are to be providedso that ready starting will be assured.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Diesel engines exceeding 15 kW",
+        "head_canonical_zh": "超过15kW的柴油机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "equipped with an approved auxiliary starting device",
+        "tail_canonical_zh": "配备认可的辅助启动装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Diesel engines exceeding 15 kW are to be equipped with an approved auxiliary starting device, e.g. starting battery, independent hydraulic starting system or independent starting air system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "emergency fire pump",
+        "head_canonical_zh": "应急消防泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "minimum available net positive suction head is to provide a safety margin of at least the 1 meter (3.3 feet) or 30% of required net positive suction head of the pump",
+        "tail_canonical_zh": "最小可用净正吸入压头需提供至少1米或泵所需净正吸入压头30%的安全裕量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In selecting the emergency fire pump, the minimum available net positive suction head is to provide a safety margin of at least the 1 meter (3.3 feet) or 30% of required net positive suction head of the pump, whichever is less.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Short lengths of suction or discharge piping",
+        "head_canonical_zh": "短段吸入或排出管路",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "enclosed in a substantial steel casing",
+        "tail_canonical_zh": "封装在坚固钢质套管内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Short lengths of suction or discharge piping may penetrate the machinery space containing the main fire pump or pumps, provided they are enclosed in a substantial steel casing, or are insulated to A-60 class standard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Short lengths of suction or discharge piping",
+        "head_canonical_zh": "短段吸入或排出管路",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "insulated to A-60 class standard",
+        "tail_canonical_zh": "隔热至A-60级标准",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Short lengths of suction or discharge piping may penetrate the machinery space containing the main fire pump or pumps, provided they are enclosed in a substantial steel casing, or are insulated to A-60 class standard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

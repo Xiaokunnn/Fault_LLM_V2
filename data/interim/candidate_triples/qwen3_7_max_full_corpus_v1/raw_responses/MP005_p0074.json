@@ -1,0 +1,229 @@
+{
+  "page_key": "MP005:p0074",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ee43d456-a42a-974b-8179-c8b9a4bf2bf6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2420,
+    "prompt_tokens": 9947,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12367
+  },
+  "latency_ms": 30436,
+  "attempt": 1,
+  "prompt_sha256": "205b342a02360c91acf762039feddbc933c4e55ef9dab168581211c59c58d1e7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "friction, impact or frictional sparks",
+        "head_canonical_zh": "摩擦、冲击或摩擦火花",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Too high temperature",
+        "tail_canonical_zh": "过高温度",
+        "tail_type": "Symptom",
+        "evidence_text": "Too high temperature caused by friction, impact or frictional sparks can cause fire",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Too high temperature",
+        "head_canonical_zh": "过高温度",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "fire",
+        "tail_canonical_zh": "火灾",
+        "tail_type": "Risk",
+        "evidence_text": "Too high temperature caused by friction, impact or frictional sparks can cause fire",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fire",
+        "head_canonical_zh": "火灾",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Regularly check the coupling guard regarding screws being tightened and/or regarding deformation for ensuring sufficient distance from rotating parts",
+        "tail_canonical_zh": "定期检查联轴器护罩螺钉紧固及变形情况以确保与旋转部件有足够距离",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Too high temperature caused by friction, impact or frictional sparks can cause fire, and if not avoided, will lead to death or serious injury. Regularly check the coupling guard regarding screws being tightened and/or regarding deformation for ensuring sufficient distance from rotating parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "clogged filter in the suction line",
+        "head_canonical_zh": "吸入管路滤器堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Incorrect inlet pressure",
+        "tail_canonical_zh": "进口压力异常",
+        "tail_type": "Symptom",
+        "evidence_text": "Incorrect inlet pressure due to clogged filter in the suction line could damage the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Incorrect inlet pressure",
+        "head_canonical_zh": "进口压力异常",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Incorrect inlet pressure due to clogged filter in the suction line could damage the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "contamination of filter",
+        "head_canonical_zh": "滤器污染",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor contamination of filter with suitable instruments (for example, using differential pressure gauge)",
+        "tail_canonical_zh": "使用合适仪器（如压差表）监测滤器污染",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Monitor contamination of filter with suitable instruments (for example, using differential pressure gauge)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "filter",
+        "head_canonical_zh": "滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Clean the filter at appropriate intervals",
+        "tail_canonical_zh": "按适当间隔清洗滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Clean the filter at appropriate intervals",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Hot fluids, consumables and supplies",
+        "head_canonical_zh": "高温流体、消耗品和物资",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "ENVIRONMENTAL HAZARD",
+        "tail_canonical_zh": "环境危害",
+        "tail_type": "Risk",
+        "evidence_text": "Hot fluids, consumables and supplies are hazardous to health and to the environment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flushing fluid and any residues of the fluid handled",
+        "head_canonical_zh": "冲洗液及所处理流体残留物",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Collect and properly dispose of flushing fluid and any residues of the fluid handled",
+        "tail_canonical_zh": "收集并妥善处置冲洗液及所处理流体残留物",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Collect and properly dispose of flushing fluid and any residues of the fluid handled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Drain the fluid handled",
+        "head_canonical_zh": "排放所处理流体",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "dismantling the pipe plug (3) at the bottom of the pump",
+        "tail_canonical_zh": "拆卸泵底部管塞(3)",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Drain the fluid handled by dismantling the pipe plug (3) at the bottom of the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "system",
+        "head_canonical_zh": "系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Always flush the system if it has been used for handling noxious, explosive, hot or other",
+        "tail_canonical_zh": "若系统曾用于处理有毒、易爆、高温或其他流体则始终进行冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Always flush the system if it has been used for handling noxious, explosive, hot or other",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

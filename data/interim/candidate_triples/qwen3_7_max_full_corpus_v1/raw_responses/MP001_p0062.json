@@ -1,0 +1,118 @@
+{
+  "page_key": "MP001:p0062",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0da97ecd-888a-95b6-b3a3-1ec116711cb6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1099,
+    "prompt_tokens": 2282,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3381
+  },
+  "latency_ms": 13261,
+  "attempt": 1,
+  "prompt_sha256": "d61f24a655ac80129977bf72f17548020d23a04d07e01f171db88648381c0aff",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Atomic emissions spectroscopy",
+        "head_canonical_zh": "原子发射光谱法",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "contaminants and additives",
+        "tail_canonical_zh": "污染物和添加剂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Atomic emissions spectroscopy identifies problems with contaminants and additives, and to a limited extent, corrosion and wear metals in lubrication and hydraulic oil samples",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Atomic emissions spectroscopy",
+        "head_canonical_zh": "原子发射光谱法",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "corrosion and wear metals",
+        "tail_canonical_zh": "腐蚀和磨损金属",
+        "tail_type": "FaultMode",
+        "evidence_text": "Atomic emissions spectroscopy identifies problems with contaminants and additives, and to a limited extent, corrosion and wear metals in lubrication and hydraulic oil samples",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Dielectric strength tests",
+        "head_canonical_zh": "介电强度测试",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "insulating quality of electrical insulating oils",
+        "tail_canonical_zh": "电气绝缘油的绝缘质量",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Dielectric strength tests are used to measure the insulating quality of electrical insulating oils",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "contamination or oil breakdown",
+        "head_canonical_zh": "污染或油品劣化",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Potential quality deterioration",
+        "tail_canonical_zh": "潜在质量恶化",
+        "tail_type": "FaultMode",
+        "evidence_text": "Potential quality deterioration is often caused by contamination or oil breakdown",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "analysis reports",
+        "head_canonical_zh": "分析报告",
+        "head_type": "InspectionAction",
+        "relation": "maintained_by",
+        "tail_surface": "maintenance actions",
+        "tail_canonical_zh": "维护措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the vessel’s Chief Engineer or designee should review the analysis reports and decide whether maintenance actions are necessary",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

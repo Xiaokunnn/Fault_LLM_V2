@@ -1,0 +1,127 @@
+{
+  "page_key": "MP003:p0750",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0c9d2f07-8ba8-9398-ad06-020846eb6b69",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1193,
+    "prompt_tokens": 2446,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3639
+  },
+  "latency_ms": 16567,
+  "attempt": 1,
+  "prompt_sha256": "13c2117f6b84e2e1dbc7970113691717aef04d8bde9b323d03e7a0884fbda8c5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "prime mover",
+        "head_canonical_zh": "原动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "alarms, displays and automatic shutdown arrangements",
+        "tail_canonical_zh": "报警、显示及自动停机装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The prime mover is to be fitted with alarms, displays and automatic shutdown arrangements as required in 4-9-6/23 TABLE 6",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "emergency generator room",
+        "head_canonical_zh": "应急发电机室",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "fire detectors",
+        "tail_canonical_zh": "火灾探测器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The emergency generator room is to be fitted with fire detectors.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "generator",
+        "head_canonical_zh": "发电机",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "automatically shedding such other loads",
+        "tail_canonical_zh": "自动卸载其他负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The generator is to be safeguarded against overload by automatically shedding such other loads that the supply to the required emergency loads is always available.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "alarm and safety systems",
+        "head_canonical_zh": "报警和安全系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "instructions to test the alarm and safety systems",
+        "tail_canonical_zh": "报警和安全系统测试说明",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The information is to include instructions to test the alarm and safety systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "safety and alarm systems",
+        "head_canonical_zh": "安全和报警系统",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "fail safe",
+        "tail_canonical_zh": "故障安全",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The safety and alarm systems are to be designed to ‘fail safe’.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "engine",
+        "head_canonical_zh": "发动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "local means of engine shutdown",
+        "tail_canonical_zh": "就地停机装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a local means of engine shutdown is to be provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

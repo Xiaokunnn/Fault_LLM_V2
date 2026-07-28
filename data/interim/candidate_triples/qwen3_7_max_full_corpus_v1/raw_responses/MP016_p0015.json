@@ -1,0 +1,175 @@
+{
+  "page_key": "MP016:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e03a77d4-aa27-9433-ab37-9a4bb9317d54",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1782,
+    "prompt_tokens": 2708,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4490
+  },
+  "latency_ms": 20316,
+  "attempt": 1,
+  "prompt_sha256": "149c5696bf9452e29dc3c6f33d922dad5097ec7ed8114565feec68c1cbff0138",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fonctionner à sec",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "échauffement excessif des faces du joint et des dommages à la turbine",
+        "tail_canonical_zh": "密封面过热及叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Les pompes ne doivent jamais fonctionner à sec pendant plus de 30 secondes, car cela entraînerait un échauffement excessif des faces du joint et des dommages à la turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Gardez les tuyaux courts et les diamètres de tuyaux grands",
+        "tail_canonical_zh": "保持管路短且管径大",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Gardez les tuyaux courts et les diamètres de tuyaux grands ; les tuyaux peuvent devoir avoir un diamètre plus grand que les orifices de la pompe, en particulier lors du pompage de liquides visqueux, afin d’éviter la cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "caused_by",
+        "tail_surface": "Un filtre bouché",
+        "tail_canonical_zh": "过滤器堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "Un filtre bouché provoquera de la cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bruits inattendus",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Écoutez",
+        "tail_canonical_zh": "听诊",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Écoutez les bruits inattendus.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fuites",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez les fuites.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "débit souhaité",
+        "head_canonical_zh": "预期流量",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez que la pompe donne le débit souhaité",
+        "tail_canonical_zh": "核查泵输出预期流量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez que la pompe donne le débit souhaité, en utilisant le fluide pompé à vitesse de fonctionnement normale.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fonctionnement à sec",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "endommager les joints et la turbine",
+        "tail_canonical_zh": "损坏密封和叶轮",
+        "tail_type": "FaultMode",
+        "evidence_text": "un fonctionnement à sec peut endommager les joints et la turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "conditions de pression",
+        "head_canonical_zh": "压力工况",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "manomètres à vide/pression",
+        "tail_canonical_zh": "真空/压力表",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Installez des manomètres à vide/pression de chaque côté de la pompe pour surveiller les conditions de pression.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

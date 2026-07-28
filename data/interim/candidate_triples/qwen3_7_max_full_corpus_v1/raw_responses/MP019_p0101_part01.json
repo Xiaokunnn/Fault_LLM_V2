@@ -1,0 +1,171 @@
+{
+  "page_key": "MP019:p0101",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-db5a2f6e-e694-90ce-b085-dd0832c47de5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1996,
+    "prompt_tokens": 5204,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7200
+  },
+  "latency_ms": 23863,
+  "attempt": 1,
+  "prompt_sha256": "b5cb4c6949af789aa1b4e54ae9af3bae7a1e30230ef32b85bc58dba6892d2b6f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Omriktarmatning",
+        "head_canonical_zh": "变频器供电",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "högre fältstyrka i motorlindningen",
+        "tail_canonical_zh": "电机绕组中更高的电场强度",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Omriktarmatning orsakar högre fältstyrka i motorlindningen än sinusmatning",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "额定电网电压UN≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB standardisolering",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N ABB standardisolering",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0101:t00:r001:c00",
+          "MP019:p0101:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "额定电网电压UN≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB standardisolering + dU/dt-filter ELLER ABB specialisolering (variantkod 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N ABB standardisolering ABB standardisolering + dU/dt-filter ELLER ABB specialisolering (variantkod 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0101:t00:r002:c00",
+          "MP019:p0101:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "额定电网电压UN≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB specialisolering (variantkod 405) OCH dU/dt-filter vid omriktarens utgång",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)及变频器输出端dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (variantkod 405) ABB specialisolering (variantkod 405) OCH dU/dt-filter vid omriktarens utgång",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0101:t00:r003:c00",
+          "MP019:p0101:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N OCH kabellängd > 150 m",
+        "head_canonical_zh": "额定电网电压UN≤690V且电缆长度大于150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB specialisolering (variantkod 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N OCH kabellängd > 150 m utgång ABB specialisolering (variantkod 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0101:t00:r004:c00",
+          "MP019:p0101:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "PTC-termistorer i statorlindningarna",
+        "head_canonical_zh": "定子绕组中的PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "ansluts till frekvensomriktaren på lämpligt sätt",
+        "tail_canonical_zh": "正确连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vi rekommenderar att dessa ansluts till frekvensomriktaren på lämpligt sätt",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagerström",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Isolerade lager eller lagerkonstruktioner, CM-filter (common mode) och lämpliga kabel- och jordningsmetoder",
+        "tail_canonical_zh": "绝缘轴承或轴承结构、共模滤波器及适当的电缆与接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Isolerade lager eller lagerkonstruktioner, CM-filter (common mode) och lämpliga kabel- och jordningsmetoder måste användas enligt nedanstående anvisningar",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

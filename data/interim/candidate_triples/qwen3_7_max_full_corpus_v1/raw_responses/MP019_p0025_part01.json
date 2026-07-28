@@ -1,0 +1,216 @@
+{
+  "page_key": "MP019:p0025",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a4aa08b3-7627-92dd-9b89-6eb070ce0028",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2245,
+    "prompt_tokens": 2425,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4670
+  },
+  "latency_ms": 23058,
+  "attempt": 1,
+  "prompt_sha256": "d497e88e8e52db9a50c6714d182aa41a4763116287ae278ba650dcaab7520a94",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Isolationswiderstand",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Prüfung des Isolationswiderstandes",
+        "tail_canonical_zh": "绝缘电阻检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vor der Inbetriebnahme oder bei Verdacht auf erhöhte Feuchtigkeit vorliegen ist der Isolationswiderstand zu prüfen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "erhöhte Feuchtigkeit",
+        "head_canonical_zh": "湿度过高",
+        "head_type": "Cause",
+        "relation": "indicates",
+        "tail_surface": "Isolationswiderstand",
+        "tail_canonical_zh": "绝缘电阻",
+        "tail_type": "SignalFeature",
+        "evidence_text": "bei Verdacht auf erhöhte Feuchtigkeit vorliegen ist der Isolationswiderstand zu prüfen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Zylinderrollenlager",
+        "head_canonical_zh": "圆柱滚子轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Welle mit der Hand drehen und auf freies Rotieren hin überprüfen",
+        "tail_canonical_zh": "手动盘车检查转动灵活性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Welle mit der Hand drehen und auf freies Rotieren hin überprüfen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Beschädigung des Zylinderrollenlagers",
+        "head_canonical_zh": "圆柱滚子轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Betrieb der Motoren ohne ausreichende Radialkraft auf die Welle",
+        "tail_canonical_zh": "电机轴径向力不足运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Der Betrieb der Motoren ohne ausreichende Radialkraft auf die Welle führt zur Beschädigung des Zylinderrollenlagers.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Beschädigung des Schrägkugellagers",
+        "head_canonical_zh": "角接触球轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Betrieb des Motors ohne ausreichende Axialkraft auf die Welle",
+        "tail_canonical_zh": "电机轴轴向力不足运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Der Betrieb des Motors ohne ausreichende Axialkraft auf die Welle führt zur Beschädigung des Schrägkugellagers.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fettmenge",
+        "head_canonical_zh": "润滑脂量",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "aufzufüllen",
+        "tail_canonical_zh": "补充润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bei Inbetriebnahme des Motors oder nach längerer Lagerung ist die angegebene Fettmenge aufzufüllen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Feuchte innerhalb der Wicklung",
+        "head_canonical_zh": "绕组内部潮湿",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Bezugswert nicht erreicht",
+        "tail_canonical_zh": "未达到基准值",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Wenn der Bezugswert nicht erreicht wird, ist die Feuchte innerhalb der Wicklung zu groß",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Feuchte innerhalb der Wicklung",
+        "head_canonical_zh": "绕组内部潮湿",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Ofentrocknung",
+        "tail_canonical_zh": "烘箱干燥",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ist die Feuchte innerhalb der Wicklung zu groß und eine Ofentrocknung wird erforderlich",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Salzwassergetränkte Wicklungen",
+        "head_canonical_zh": "海水浸泡绕组",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "erneuert werden",
+        "tail_canonical_zh": "更换绕组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Salzwassergetränkte Wicklungen müssen in der Regel erneuert werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorerschütterungen und Resonanzschwingungen",
+        "head_canonical_zh": "电机振动与共振",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Fundamente müssen eben ... und stabil genug sein ... so ausgelegt und bemessen sein",
+        "tail_canonical_zh": "基础平整稳固且设计尺寸合理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Sie müssen so ausgelegt und bemessen sein, dass Motorerschütterungen und Resonanzschwingungen vermieden werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "page_key": "MP020:p0020",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1c6f2ebd-135c-97c5-8095-2b0acb71aa06",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2212,
+    "prompt_tokens": 1977,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4189
+  },
+  "latency_ms": 24943,
+  "attempt": 1,
+  "prompt_sha256": "fdb83a5a6820081e470fdaeab874639050fd69e39b64ec4ee25d7ba7405b43ba",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check pump rotational direction",
+        "tail_canonical_zh": "检查泵旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "11. Check pump rotational direction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor the motor temperature",
+        "tail_canonical_zh": "监测电机温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "13. Monitor the motor temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "frame bearings",
+        "head_canonical_zh": "机架轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Note the operating temperature of frame bearings",
+        "tail_canonical_zh": "记录机架轴承运行温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "14. Note the operating temperature of frame bearings (if any).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "checked for shut-off pressure with the pump performance curve",
+        "tail_canonical_zh": "根据泵性能曲线检查关死点压力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "15. The pump may be checked for shut-off pressure with the pump performance curve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Prime the pump",
+        "tail_canonical_zh": "给泵灌液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "10. Prime the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the system slowly",
+        "tail_canonical_zh": "缓慢填充系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "16. Fill the system slowly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "operating without properly priming",
+        "head_canonical_zh": "未正确灌液运行",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Do not operate any pump without properly priming it",
+        "tail_canonical_zh": "禁止在未正确灌液的情况下运行泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "17. Do not operate any pump without properly priming it, unless it has been specifically designed for such operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "frequent starting and stopping",
+        "head_canonical_zh": "频繁启停",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "New pumps must not be started and stopped frequently",
+        "tail_canonical_zh": "新泵不得频繁启停",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "18. New pumps must not be started and stopped frequently. If possible, permit the unit to run until operating temperature is reached.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Large motors started and stopped more than five times per hour",
+        "head_canonical_zh": "大型电机每小时启停超过五次",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Large motors must not be started and stopped more than five times per hour",
+        "tail_canonical_zh": "大型电机每小时启停不得超过五次",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: Large motors must not be started and stopped more than five times per hour.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Failure to do so",
+        "head_canonical_zh": "未遵守启动检查清单",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "severe damage to equipment",
+        "tail_canonical_zh": "设备严重损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to do so may cause severe damage to equipment and/or personal injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure",
+          "pipe_or_valve_integrity_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

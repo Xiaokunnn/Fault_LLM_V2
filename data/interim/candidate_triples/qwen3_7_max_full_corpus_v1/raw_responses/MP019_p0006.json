@@ -1,0 +1,133 @@
+{
+  "page_key": "MP019:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a6a5aaa2-a661-9140-947b-fae3a1583c9b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1309,
+    "prompt_tokens": 23076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24385
+  },
+  "latency_ms": 16579,
+  "attempt": 1,
+  "prompt_sha256": "960ee3cc60f8fed40240b3880592355a98231b847baa4c8fa74d29b412cfeae0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "external damage",
+        "head_canonical_zh": "外部损伤",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check the motor for external damage",
+        "tail_canonical_zh": "检查电机外部损伤",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Immediately upon receipt check the motor for external damage (e.g. shaft-ends and flanges and painted surfaces)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Damaged lifting lugs",
+        "head_canonical_zh": "吊耳损坏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check that eyebolts or integrated lifting lugs are undamaged",
+        "tail_canonical_zh": "检查吊环螺栓或整体吊耳完好",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Damaged lifting lugs must not be used. Check that eyebolts or integrated lifting lugs are undamaged before lifting.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "grease migration",
+        "head_canonical_zh": "润滑脂迁移",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "shafts are rotated periodically by hand",
+        "tail_canonical_zh": "定期手动盘车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is recommended that shafts are rotated periodically by hand to prevent grease migration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water condensing in the motor",
+        "head_canonical_zh": "电机内部凝露",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Anti-condensation heaters... are recommended to be used",
+        "tail_canonical_zh": "使用防冷凝加热器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Anti-condensation heaters, if fitted, are recommended to be used to avoid water condensing in the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "damage to the bearings",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "external vibrations at standstill",
+        "tail_canonical_zh": "静止时外部振动",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The motor must not be subject to any external vibrations at standstill so as to avoid causing damage to the bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "damage to the bearings",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "must not be subject to any external vibrations at standstill",
+        "tail_canonical_zh": "避免静止时承受外部振动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The motor must not be subject to any external vibrations at standstill so as to avoid causing damage to the bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

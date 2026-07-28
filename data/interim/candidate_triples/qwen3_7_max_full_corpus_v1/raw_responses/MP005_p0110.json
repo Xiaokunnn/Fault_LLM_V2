@@ -1,0 +1,132 @@
+{
+  "page_key": "MP005:p0110",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-70565656-eccb-9971-bdc8-41efa3124fed",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1291,
+    "prompt_tokens": 4344,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5635
+  },
+  "latency_ms": 15584,
+  "attempt": 1,
+  "prompt_sha256": "7ddccf9e36103ac3f8fb937a7f6f1fbcf2e189d4ba36cdb6462f78c78c8790a0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pointed screws (86)",
+        "head_canonical_zh": "尖头螺钉",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Screw the pointed screws (86) back into the rear cover",
+        "tail_canonical_zh": "将尖头螺钉旋回后盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Screw the pointed screws (86) back into the rear\ncover.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing housing and rear cover",
+        "head_canonical_zh": "轴承箱和后盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit and fasten bearing housing and rear cover in the pump casing",
+        "tail_canonical_zh": "安装并紧固轴承箱和后盖至泵壳",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "3. Fit and fasten bearing housing and rear cover in\nthe pump casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "O-ring",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the material of the O-ring first",
+        "tail_canonical_zh": "首先检查O型圈材料",
+        "tail_type": "InspectionAction",
+        "evidence_text": "NOTE: When placing the O-ring, check the material of the O-ring first.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mineral grease",
+        "head_canonical_zh": "矿物润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "EPDM which will be damaged by mineral grease",
+        "tail_canonical_zh": "EPDM被矿物润滑脂损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "it might be EPDM which will be damaged by mineral grease",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "EPDM which will be damaged by mineral grease",
+        "head_canonical_zh": "EPDM被矿物润滑脂损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use soft soap or silicone grease for EPDM",
+        "tail_canonical_zh": "对EPDM使用软皂或硅脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "it might be EPDM which will be damaged by mineral grease. Use soft soap or\nsilicone grease for EPDM.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the shaft rotates freely",
+        "tail_canonical_zh": "检查轴是否转动自如",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When the pump has been assembled, check that the shaft rotates freely.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

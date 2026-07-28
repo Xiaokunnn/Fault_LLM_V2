@@ -1,0 +1,262 @@
+{
+  "page_key": "MP002:p0072",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dbd3f3e4-28f8-9028-979a-f20cca6cc6ef",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2780,
+    "prompt_tokens": 14728,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 17508
+  },
+  "latency_ms": 36626,
+  "attempt": 1,
+  "prompt_sha256": "d9adfda084905581a625f47704824c3621770027efa8b602f3508d0f19708f80",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pmup ybdnats",
+        "head_canonical_zh": "备用泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "revoegnahc rellortnoc citamotua",
+        "tail_canonical_zh": "自动切换控制器",
+        "tail_type": "Component",
+        "evidence_text": "rosnes ot pmup langis revoegnahc strats wol ,erusserp citamotua rellortnoc ybdnats nopU sdnes hcihw",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.6,
+        "tail_translation_confidence": 0.5
+      },
+      {
+        "head_surface": "Functional Failures",
+        "head_canonical_zh": "功能故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "No flow of lubricant to camshaft",
+        "tail_canonical_zh": "凸轮轴无润滑油流",
+        "tail_type": "Symptom",
+        "evidence_text": "fo wolf oN eht ot tnacirbul tfahsmac",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r006:c00",
+          "MP002:p0072:t00:r006:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Local Effects",
+        "head_canonical_zh": "局部影响",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "Interruption of lubrication to camshaft",
+        "tail_canonical_zh": "凸轮轴润滑中断",
+        "tail_type": "Symptom",
+        "evidence_text": "fo noitpurretnI ot noitacirbul ,tfahsmac",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r007:c00",
+          "MP002:p0072:t00:r007:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Local Effects",
+        "head_canonical_zh": "局部影响",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "low pressure alarm",
+        "tail_canonical_zh": "低压报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "gnitluser erusserp wol dna mrala gniriuqer pmup ybdnats ot",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r007:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Causes",
+        "head_canonical_zh": "原因",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump motor failure",
+        "tail_canonical_zh": "泵电机故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "pmuP rotom eruliaf",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r009:c00",
+          "MP002:p0072:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Causes",
+        "head_canonical_zh": "原因",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump seizer",
+        "tail_canonical_zh": "泵卡死",
+        "tail_type": "FaultMode",
+        "evidence_text": "pmuP eruzies",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Causes",
+        "head_canonical_zh": "原因",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump control failure",
+        "tail_canonical_zh": "泵控制故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "pmuP rotom lortnoc eruliaf",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Causes",
+        "head_canonical_zh": "原因",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "coupling failure",
+        "tail_canonical_zh": "联轴器故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "gnilpuoc ruliaf",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Failure Mode",
+        "head_canonical_zh": "故障模式",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Fails off while running on-line (pump)",
+        "tail_canonical_zh": "在线运行时停机（泵）",
+        "tail_type": "Symptom",
+        "evidence_text": "ffo sliaF elihw gninnur enil-no( )pmup",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r010:c00",
+          "MP002:p0072:t00:r010:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Failure Mode",
+        "head_canonical_zh": "故障模式",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Starts prematurely / operates too long (standby pump)",
+        "tail_canonical_zh": "过早启动/运行时间过长（备用泵）",
+        "tail_type": "Symptom",
+        "evidence_text": "stratS ylerutamerp setarepo / gnol oot ybdnats( )pmup",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r010:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.75
+      },
+      {
+        "head_surface": "Failure Mode",
+        "head_canonical_zh": "故障模式",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Operates at degraded head/flow performance on-line (pump)",
+        "tail_canonical_zh": "在线运行时扬程/流量性能下降（泵）",
+        "tail_type": "Symptom",
+        "evidence_text": "ta setarepO dedegraded wolf/daeh cnamrofrep enil-no( e )pmup",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0072:t00:r010:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "Table text appears reversed or corrupted in parsed cells; entities and evidence extracted by reversing character sequences where recognizable English technical terms were identified.",
+      "Column headers are garbled; row relationships inferred from standard FMECA table structure and recognizable keywords in cells.",
+      "Some cell texts contain spacing artifacts due to OCR/parsing issues; confidence scores adjusted accordingly."
+    ]
+  }
+}

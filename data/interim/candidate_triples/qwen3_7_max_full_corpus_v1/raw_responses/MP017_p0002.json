@@ -1,0 +1,131 @@
+{
+  "page_key": "MP017:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b8c2d19c-d9b9-9ab4-bf00-6fb9d761fb31",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1191,
+    "prompt_tokens": 2898,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4089
+  },
+  "latency_ms": 15441,
+  "attempt": 1,
+  "prompt_sha256": "02898fd3001635d0ebc4ba919f184f2043dd9be4d36dc800d4e0e70ca44c1d72",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "operational problems",
+        "head_canonical_zh": "运行故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Maintenance and Repair Manual",
+        "tail_canonical_zh": "维护与修理手册",
+        "tail_type": "Standard",
+        "evidence_text": "The Maintenance and Repair Manual provides troubleshooting and maintenance instructions required to properly diagnose operational problems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump components",
+        "head_canonical_zh": "泵组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Maintenance and Repair Manual",
+        "tail_canonical_zh": "维护与修理手册",
+        "tail_type": "Standard",
+        "evidence_text": "The Maintenance and Repair Manual provides troubleshooting and maintenance instructions required ... to service the pump components",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "BEARING TEMPERATURE CHECK",
+        "head_canonical_zh": "轴承温度检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "OPERATION -- SECTION C",
+        "tail_canonical_zh": "操作章节C",
+        "tail_type": "Standard",
+        "evidence_text": "OPERATION -- SECTION C ... BEARING TEMPERATURE CHECK",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "LUBRICATION",
+        "head_canonical_zh": "润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "OPERATION -- SECTION C",
+        "tail_canonical_zh": "操作章节C",
+        "tail_type": "Standard",
+        "evidence_text": "OPERATION -- SECTION C ... LUBRICATION",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ALIGNMENT",
+        "head_canonical_zh": "对中",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "INSTALLATION -- SECTION B",
+        "tail_canonical_zh": "安装章节B",
+        "tail_type": "Standard",
+        "evidence_text": "INSTALLATION -- SECTION B ... ALIGNMENT",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "PREINSTALLATION INSPECTION",
+        "head_canonical_zh": "安装前检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "INSTALLATION -- SECTION B",
+        "tail_canonical_zh": "安装章节B",
+        "tail_type": "Standard",
+        "evidence_text": "INSTALLATION -- SECTION B ... PREINSTALLATION INSPECTION",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

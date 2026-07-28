@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0189",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0f064280-3d3f-989b-a9ca-ce3363c385df",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 975,
+    "prompt_tokens": 2369,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3344
+  },
+  "latency_ms": 12195,
+  "attempt": 1,
+  "prompt_sha256": "de90250f55963838d6e78a0356d59f8fd7898c34cc91b6c849a0e7f31abf6f07",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "failure of the lubricating oil system",
+        "head_canonical_zh": "润滑油系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic means of shutting off the steam supply",
+        "tail_canonical_zh": "自动切断蒸汽供应装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Automatic means of shutting off the steam supply (including exhaust steam supply) through a quick acting device is also to be fitted for all steam turbines upon overspeed (see 4-2-4/7.1) and upon failure of the lubricating oil system (see 4-6-6/9).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overspeed",
+        "head_canonical_zh": "超速",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic means of shutting off the steam supply",
+        "tail_canonical_zh": "自动切断蒸汽供应装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Automatic means of shutting off the steam supply (including exhaust steam supply) through a quick acting device is also to be fitted for all steam turbines upon overspeed (see 4-2-4/7.1) and upon failure of the lubricating oil system (see 4-6-6/9).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive pressure",
+        "head_canonical_zh": "过高压力",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Sentinel valves or equivalent",
+        "tail_canonical_zh": "哨阀或等效装置",
+        "tail_type": "Equipment",
+        "evidence_text": "Sentinel valves or equivalent are to be fitted to all main and auxiliary steam turbine exhausts to provide a warning of excessive pressure to personnel in the vicinity of the exhaust end of steam turbines.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "water entering the turbine",
+        "head_canonical_zh": "水进入汽轮机",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "means are to be provided to prevent water entering the turbine",
+        "tail_canonical_zh": "防止水进入汽轮机的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If exhaust steam is admitted to a turbine, means are to be provided to prevent water entering the turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

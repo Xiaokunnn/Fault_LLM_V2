@@ -1,0 +1,101 @@
+{
+  "page_key": "MP022:p0017",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f62810f6-26ed-9732-983a-774f64088954",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 925,
+    "prompt_tokens": 1957,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2882
+  },
+  "latency_ms": 12088,
+  "attempt": 1,
+  "prompt_sha256": "de8db57d360ad3c9569ced7714d1badd36c023e293eb99bb0c0fa23a30e3683a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the direction of rotation of the impeller before operation",
+        "tail_canonical_zh": "运行前检查叶轮旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the direction of rotation of the impeller before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "direction of rotation of the stub shaft",
+        "head_canonical_zh": "短轴旋转方向",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure that the direction of rotation of the stub shaft (7) is anticlockwise as viewed from the inlet side",
+        "tail_canonical_zh": "确认从进口侧观察短轴旋转方向为逆时针",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ensure that the direction of rotation of the stub shaft (7) is anticlockwise as viewed from the inlet side",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air screw and impeller",
+        "head_canonical_zh": "放气螺钉和叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Always remove air screw and impeller before checking the direction of rotation",
+        "tail_canonical_zh": "检查旋转方向前务必拆下放气螺钉和叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Always remove air screw and impeller before checking the direction of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump casing is removed",
+        "head_canonical_zh": "泵壳已拆除",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Never start the pump if the impeller is fitted and the pump casing is removed",
+        "tail_canonical_zh": "叶轮已安装且泵壳已拆除时严禁启动泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never start the pump if the impeller is fitted and the pump casing is removed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

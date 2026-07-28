@@ -1,0 +1,228 @@
+{
+  "page_key": "MP019:p0083",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a2347c98-ff4b-93de-88ba-0fd6c34070fc",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2637,
+    "prompt_tokens": 5211,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7848
+  },
+  "latency_ms": 30509,
+  "attempt": 1,
+  "prompt_sha256": "ff1a1ee68c31a46c0cfe27d9ac3038273e90eca5baa837aae4f903240f389026",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motori a bassa tensione",
+        "head_canonical_zh": "低压电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "funzionamento a velocità variabile",
+        "tail_canonical_zh": "变速运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "5. Motori a bassa tensione in funzionamento a velocità variabile",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "azionamenti a velocità variabile",
+        "head_canonical_zh": "变速驱动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "maggiori sollecitazioni di tensione rispetto all'alimentazione sinusoidale sull'avvolgimento del motore",
+        "tail_canonical_zh": "电机绕组承受比正弦电源更高的电压应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Gli azionamenti a velocità variabile provocano maggiori sollecitazioni di tensione rispetto all'alimentazione sinusoidale sull'avvolgimento del motore",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isolamento standard",
+        "head_canonical_zh": "标准绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "picco di 1300 V",
+        "tail_canonical_zh": "峰值1300V",
+        "tail_type": "Standard",
+        "evidence_text": "Isolamento standard: picco di 1300 V",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Isolamento speciale",
+        "head_canonical_zh": "特殊绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "picco di 1800 V",
+        "tail_canonical_zh": "峰值1800V",
+        "tail_type": "Standard",
+        "evidence_text": "Isolamento speciale: picco di 1800 V",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "额定电压≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolamento standard ABB",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N Isolamento standard ABB",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0083:t00:r001:c00",
+          "MP019:p0083:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "额定电压≤500V且实际电压≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolamento standard ABB + filtri dU/dt OPPURE Isolamento speciale ABB (codice variante 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N Isolamento standard ABB Isolamento standard ABB + filtri dU/dt OPPURE Isolamento speciale ABB (codice variante 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0083:t00:r002:c00",
+          "MP019:p0083:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "额定电压≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolamento speciale ABB (codice variante 405) E filtri dU/dt sull'uscita del convertitore",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)及变频器输出端dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (codice variante 405) Isolamento speciale ABB (codice variante 405) E filtri dU/dt sull'uscita del convertitore",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0083:t00:r003:c00",
+          "MP019:p0083:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "U ≤ 690 V N E lunghezza cavo > 150 m",
+        "head_canonical_zh": "额定电压≤690V且电缆长度>150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Isolamento speciale ABB (codice variante 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N E lunghezza cavo > 150 m convertitore Isolamento speciale ABB (codice variante 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0083:t00:r004:c00",
+          "MP019:p0083:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "termistori PTC negli avvolgimenti dello statore",
+        "head_canonical_zh": "定子绕组PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "collegarli al convertitore di frequenza con mezzi idonei",
+        "tail_canonical_zh": "通过适当方式连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Si consiglia di collegarli al convertitore di frequenza con mezzi idonei",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Correnti nei cuscinetti",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Utilizzare cuscinetti isolati o strutture di cuscinetti, filtri CMF e cablaggi e metodi di messa a terra idonei",
+        "tail_canonical_zh": "使用绝缘轴承或轴承结构、CMF滤波器以及合适的布线和接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Utilizzare cuscinetti isolati o strutture di cuscinetti, filtri CMF e cablaggi e metodi di messa a terra idonei in base alle istruzioni fornite di seguito",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "page_key": "MP016:p0049",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f39d87d2-ee81-9b17-b4de-540f43ba02c2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1835,
+    "prompt_tokens": 2869,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4704
+  },
+  "latency_ms": 22230,
+  "attempt": 1,
+  "prompt_sha256": "a6927b44f8fc8943aa7e2e46f341a9bb661543149b1d4d9155fd933bea77dc58",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sello dinámico",
+        "head_canonical_zh": "动密封环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspeccione los componentes en busca de desgaste",
+        "tail_canonical_zh": "检查部件磨损情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Deslice la cara del sello dinámico desde el eje. Inspeccione los componentes en busca de desgaste y reemplácelos si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sello",
+        "head_canonical_zh": "密封件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspeccione el sello en busca de desgaste",
+        "tail_canonical_zh": "检查密封件磨损情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Las juntas se pueden sacar con cuidado del hueco de la carrocería. Inspeccione el sello en busca de desgaste y reemplácelo si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "retenes labiales",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Compruebe si los retenes labiales están dañados",
+        "tail_canonical_zh": "检查唇形密封是否损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe si los retenes labiales están dañados y sustitúyalos si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sellos de labio",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Compruebe los sellos de labio para detectar daños",
+        "tail_canonical_zh": "检查唇形密封损坏情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe los sellos de labio para detectar daños y reemplácelos según sea necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cojinetes",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Presione los cojinetes sobre el eje hasta que estén completamente asentados contra el muñón del eje",
+        "tail_canonical_zh": "将轴承压装至轴颈完全就位",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Presione los cojinetes sobre el eje hasta que estén completamente asentados contra el muñón del eje. Solo presione contra la pista interior del cojinete y utilice herramientas para evitar daños en el eje.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "daños en el eje",
+        "head_canonical_zh": "轴损伤",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Solo presione contra la pista interior del cojinete y utilice herramientas",
+        "tail_canonical_zh": "仅按压轴承内圈并使用专用工具",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Solo presione contra la pista interior del cojinete y utilice herramientas para evitar daños en el eje.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "todas las piezas",
+        "head_canonical_zh": "所有零件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspeccione todas las piezas",
+        "tail_canonical_zh": "检查所有零件",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspeccione todas las piezas y reemplácelas según sea necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sello",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Asegúrese de que el sello esté limpio y sin daños",
+        "tail_canonical_zh": "确认密封清洁且无损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Asegúrese de que el sello esté limpio y sin daños.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

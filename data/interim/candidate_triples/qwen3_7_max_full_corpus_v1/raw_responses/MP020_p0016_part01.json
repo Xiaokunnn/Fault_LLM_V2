@@ -1,0 +1,102 @@
+{
+  "page_key": "MP020:p0016",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3cfe2e19-2c71-920f-adae-94e919bdaa49",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 922,
+    "prompt_tokens": 2701,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3623
+  },
+  "latency_ms": 11359,
+  "attempt": 1,
+  "prompt_sha256": "a59038dde1eafe646d29a7d6f326f8b6803c07c66882518ebc47016fb138022a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "Protect the pump from moisture, piping movement, dust, standing water, sun, heat, freezing, high humidity, electrical problems, and flooding",
+        "tail_canonical_zh": "保护泵免受潮湿、管道移动、灰尘、积水、阳光、高温、冰冻、高湿度、电气问题和洪水的影响",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Protect the pump from moisture, piping movement, dust, standing water, sun, heat, freezing, high humidity, electrical problems, and flooding.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "temporarily unused piping",
+        "head_canonical_zh": "暂时未使用的管道",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check for rodents and nests",
+        "tail_canonical_zh": "检查啮齿动物和巢穴",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check for rodents and nests in temporarily unused piping",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "MOTOR",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "PLACED AT LEAST 4 INCHES ABOVE FLOOR LEVEL",
+        "tail_canonical_zh": "放置在距地面至少4英寸处",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "MOTOR PLACED AT LEAST 4 INCHES ABOVE FLOOR LEVEL",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ELECTRICAL SYSTEM",
+        "head_canonical_zh": "电气系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "PROFESSIONALLY INSTALLED, WEATHER PROTECTED",
+        "tail_canonical_zh": "专业安装且防风雨保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "PROFESSIONALLY INSTALLED, WEATHER PROTECTED, ELECTRICAL SYSTEM",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

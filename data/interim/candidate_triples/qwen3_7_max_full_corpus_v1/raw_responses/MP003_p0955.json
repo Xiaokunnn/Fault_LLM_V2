@@ -1,0 +1,241 @@
+{
+  "page_key": "MP003:p0955",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-37587873-a58f-91e2-b6c8-a3e26d6f3a28",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2483,
+    "prompt_tokens": 19800,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 22283
+  },
+  "latency_ms": 29064,
+  "attempt": 1,
+  "prompt_sha256": "9acef22f73db544835b8e11982509ab84db2a30cdcd919ac63e589d83f22a9b8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing lub oil inlet pressure - low",
+        "head_canonical_zh": "轴承润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Failure of on-line generator",
+        "tail_canonical_zh": "在线发电机故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Bearing lub oil inlet pressure - low x x x Prime mover automatic shutdown",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing lub oil inlet pressure - low",
+        "head_canonical_zh": "轴承润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bearing lub oil inlet pressure - low x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r001:c02",
+          "MP003:p0955:t00:r001:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Bearing lub oil inlet pressure - low",
+        "head_canonical_zh": "轴承润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Prime mover automatic shutdown",
+        "tail_canonical_zh": "原动机自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bearing lub oil inlet pressure - low x x x Prime mover automatic shutdown",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r001:c02",
+          "MP003:p0955:t00:r001:c05",
+          "MP003:p0955:t00:r001:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Voltage - off-limits",
+        "head_canonical_zh": "电压超限",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Voltage - off-limits x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r002:c02",
+          "MP003:p0955:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Frequency - off-limits",
+        "head_canonical_zh": "频率超限",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Frequency - off-limits x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r003:c02",
+          "MP003:p0955:t00:r003:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Stationary windings temperature - high",
+        "head_canonical_zh": "定子绕组温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Stationary windings temperature - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r005:c02",
+          "MP003:p0955:t00:r005:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Failure of on-line generator",
+        "head_canonical_zh": "在线发电机故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Failure of on-line generator x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r008:c02",
+          "MP003:p0955:t00:r008:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Generator cooling medium temperature - high",
+        "head_canonical_zh": "发电机冷却介质温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Generator cooling medium temperature - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r010:c02",
+          "MP003:p0955:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Failure of generator cooling pump or fan motor",
+        "head_canonical_zh": "发电机冷却泵或风机电机故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Failure of generator cooling pump or fan motor x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r011:c02",
+          "MP003:p0955:t00:r011:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Inter-pole winding temperature - high",
+        "head_canonical_zh": "换向极绕组温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Inter-pole winding temperature - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0955:t00:r013:c02",
+          "MP003:p0955:t00:r013:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

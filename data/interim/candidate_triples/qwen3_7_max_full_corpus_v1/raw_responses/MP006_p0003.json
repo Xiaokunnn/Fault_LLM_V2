@@ -1,0 +1,174 @@
+{
+  "page_key": "MP006:p0003",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2fc23641-75c8-9224-b6c5-3b3770c97611",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1850,
+    "prompt_tokens": 1985,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3835
+  },
+  "latency_ms": 21401,
+  "attempt": 1,
+  "prompt_sha256": "31c9a415a483c1e445f80b8deaf8edcd1a6eea4c099f83e0efd2ef6eb087a0db",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "DS/CEN/TR 13930",
+        "tail_canonical_zh": "DS/CEN/TR 13930标准",
+        "tail_type": "Standard",
+        "evidence_text": "For final design and installation of pumps supplied by DESMI, use DS information DS/CEN/TR 13930 (recommendations\nof contents                                                                        \n    for installing pipe systems) and 13932 (recommendations for installing pumps) as guidelines.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pumps",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "13932",
+        "tail_canonical_zh": "DS/CEN/TR 13932标准",
+        "tail_type": "Standard",
+        "evidence_text": "For final design and installation of pumps supplied by DESMI, use DS information DS/CEN/TR 13930 (recommendations\nof contents                                                                        \n    for installing pipe systems) and 13932 (recommendations for installing pumps) as guidelines.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "A solid base plate",
+        "tail_canonical_zh": "坚固底座",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A solid base plate will minimise vibrations                               \n                                and extend service intervals",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tension in the\n                   pump foot",
+        "head_canonical_zh": "泵脚张力",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use shims between pump foot and concrete\n                   plinth or base plate",
+        "tail_canonical_zh": "在泵脚与混凝土基座或底板间使用垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Use shims between pump foot and concrete\n                   plinth or base plate to avoid tension in the\n                   pump foot",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impede flow",
+        "head_canonical_zh": "阻碍流动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "90-degree bends, T-pieces or other components",
+        "tail_canonical_zh": "90度弯头、三通或其他部件",
+        "tail_type": "Component",
+        "evidence_text": "Avoid 90-degree bends, T-pieces or other components that\n                                                 can impede flow on the pump pressure side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "optimum operating\n                           conditions",
+        "head_canonical_zh": "最佳运行工况",
+        "head_type": "OperatingCondition",
+        "relation": "operates_under",
+        "tail_surface": "laminar flow before\n                            and after the pump",
+        "tail_canonical_zh": "泵前后层流",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "This rule of thumb ensures laminar flow before                            \n                                                      and after the pump that will give optimum operating                           \n                                                      conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction pipe",
+        "head_canonical_zh": "吸入管",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "DS13930/13932",
+        "tail_canonical_zh": "DS13930/13932标准",
+        "tail_type": "Standard",
+        "evidence_text": "DS13930/13932 recommends length of suction pipe                               \n    ”X” before the pump is around 5 x pipe diameter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "bearing currents",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Using Common Mode filter",
+        "tail_canonical_zh": "使用共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Using Common Mode filter for minimising\n                                           bearing currents",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

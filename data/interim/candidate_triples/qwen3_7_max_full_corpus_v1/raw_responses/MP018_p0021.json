@@ -1,0 +1,118 @@
+{
+  "page_key": "MP018:p0021",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-10d1c879-f040-97bc-ab2a-d0fe430083f5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1134,
+    "prompt_tokens": 2233,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3367
+  },
+  "latency_ms": 13280,
+  "attempt": 1,
+  "prompt_sha256": "993599e72a688af260d5eceb6db15ec4667bd93fb0f15a4ea57d728c63b958fe",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Impeller (2)",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remove Impeller (2) take care not to damage the wear rings (if so equipped).",
+        "tail_canonical_zh": "拆卸叶轮时注意不要损坏耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remove Impeller (2) take care not to damage the wear rings (if so equipped).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear rings",
+        "head_canonical_zh": "耐磨环",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "take care not to damage the wear rings (if so equipped)",
+        "tail_canonical_zh": "注意不要损坏耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remove Impeller (2) take care not to damage the wear rings (if so equipped).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "radial bearing (16)",
+        "head_canonical_zh": "径向轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Press radial bearing (16) from shaft WORKING AGAINST THE INNER RACE OF THE BEARING.",
+        "tail_canonical_zh": "顶压径向轴承内圈将其从轴上拆下",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Press radial bearing (16) from shaft WORKING AGAINST THE INNER RACE OF THE BEARING.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "WORKING AGAINST THE INNER RACE OF THE BEARING",
+        "tail_canonical_zh": "作用于轴承内圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Press radial bearing (16) from shaft WORKING AGAINST THE INNER RACE OF THE BEARING. (Refer to Figure6) WARNING ! ! Failure to use this procedure can damage the bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Failure to use this procedure",
+        "head_canonical_zh": "未使用该程序",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the bearing",
+        "tail_canonical_zh": "损坏轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to use this procedure can damage the bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

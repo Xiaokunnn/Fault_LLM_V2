@@ -1,0 +1,74 @@
+{
+  "page_key": "MP002:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-40bec4f4-36df-9b9b-aa32-92f0380d8845",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 666,
+    "prompt_tokens": 2329,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2995
+  },
+  "latency_ms": 9028,
+  "attempt": 1,
+  "prompt_sha256": "3f4022d5a952972f7948c571769f67a23e548b2e038fcfd39a1fe402fd8c9b41",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pumps",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "repair, overhaul, or replacement",
+        "tail_canonical_zh": "修理、大修或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Maintained Machinery: Machines or equipment are maintained where lifecycle decisions involve the repair, overhaul, or replacement of the machinery or its sub-components. These activities restore system function. Pumps, electrical motors, switchgears, gears, generators, compressors, internal combustion engines, turbines, hydraulic cylinders, winches, windlasses, and control and alarm systems are examples of maintained machinery.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Indications (Failure Detection)",
+        "head_canonical_zh": "故障指示（故障检测）",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "failure mode",
+        "tail_canonical_zh": "故障模式",
+        "tail_type": "FaultMode",
+        "evidence_text": "Indications (Failure Detection): Alarms or conditions that the operator would sense to detect the failure mode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "Potential Failure",
+        "head_canonical_zh": "潜在故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "identifiable condition",
+        "tail_canonical_zh": "可识别状态",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Potential Failure: An identifiable condition that indicates that a functional failure is either about to occur or is in the process of occurring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

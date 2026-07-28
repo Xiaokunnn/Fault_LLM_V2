@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0603",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9ab66015-ce8d-9c6b-9844-23bd146a905d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 476,
+    "prompt_tokens": 2440,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2916
+  },
+  "latency_ms": 8115,
+  "attempt": 1,
+  "prompt_sha256": "d70eca665c6f90827bc5f59cacb247aaec08114ce2a1ee28c546252980ed987a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "spillage",
+        "head_canonical_zh": "溢油",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "a self-closing valve is to be provided at the end of the filling hose",
+        "tail_canonical_zh": "在注油软管末端设置自闭阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a self-closing valve is to be provided at the end of the filling hose to prevent spillage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Hoses",
+        "head_canonical_zh": "软管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Suitable arrangements are to be provided to properly drain and store the hose and reel when not in use",
+        "tail_canonical_zh": "提供适当布置以在不使用时正确排空和存放软管及卷盘",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Suitable arrangements are to be provided to properly drain and store the hose and reel when not in use",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

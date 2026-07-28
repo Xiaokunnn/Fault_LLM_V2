@@ -1,0 +1,91 @@
+{
+  "page_key": "MP003:p0620",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d322e3bd-ce67-925e-9352-303cb6e9cce5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 949,
+    "prompt_tokens": 2425,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3374
+  },
+  "latency_ms": 11840,
+  "attempt": 1,
+  "prompt_sha256": "f9eed30edd161193c5706dacbfb93da77520878778c38414634c4dd1f6038c4e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "high exhaust gas temperature",
+        "head_canonical_zh": "排气温度过高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "alarms for high exhaust gas temperature in the centralized control station",
+        "tail_canonical_zh": "集中控制站排气高温报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Propulsion machinery spaces intended for centralized or unattended operations (ACC, ACCU or ABCU notation) are to be provided with alarms for high exhaust gas temperature in the centralized control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "exhaust gas temperature",
+        "head_canonical_zh": "排气温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "means to display the exhaust gas temperature at the outlet of each cylinder",
+        "tail_canonical_zh": "各缸出口排气温度显示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Propulsion diesel engines with bore exceeding 200 mm (7.87 in.) are to be fitted with a means to display the exhaust gas temperature at the outlet of each cylinder.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inrush of air after a crankcase explosion",
+        "head_canonical_zh": "曲轴箱爆炸后空气涌入",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "Vent pipes, where provided, are to be as small as practicable",
+        "tail_canonical_zh": "通风管尽可能小",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Vent pipes, where provided, are to be as small as practicable to minimize the inrush of air after a crankcase explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "oil mist atmosphere in the crankcase",
+        "head_canonical_zh": "曲轴箱油雾气氛",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "forced extraction of the oil mist atmosphere in the crankcase",
+        "tail_canonical_zh": "曲轴箱油雾强制抽吸",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "If a forced extraction of the oil mist atmosphere in the crankcase is provided (for oil mist detection purposes, for example), the vacuum in the crankcase is not to exceed 2.5 mbar (2.55 mkgf/cm2, 36.26 mpsi).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

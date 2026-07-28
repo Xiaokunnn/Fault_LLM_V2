@@ -1,0 +1,59 @@
+{
+  "page_key": "MP003:p0639",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-85db0b18-ee1c-965d-9e02-174072ed840b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 487,
+    "prompt_tokens": 12658,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13145
+  },
+  "latency_ms": 6726,
+  "attempt": 1,
+  "prompt_sha256": "c248885191097c850aa748d271f67539660fbf7628b0f48738dddef24c41496c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Straight thread O-ring type fittings",
+        "head_canonical_zh": "直螺纹O型圈接头",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pumps",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Straight thread O-ring type fittings may be used for pipe connection to equipment\nsuch as pumps, valves, cylinders, accumulators, gauges and hoses, without size and\npressure limitations.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "Split flanges",
+        "head_canonical_zh": "分体法兰",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "not permitted in steering gear system, certified thruster systems, nor in systems\nwhich are vital to the propulsion or safety of the vessel",
+        "tail_canonical_zh": "禁止用于舵机系统、认证推进器系统及对船舶推进或安全至关重要的系统",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Split flanges are not permitted in steering gear system, certified thruster systems, nor in systems\nwhich are vital to the propulsion or safety of the vessel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

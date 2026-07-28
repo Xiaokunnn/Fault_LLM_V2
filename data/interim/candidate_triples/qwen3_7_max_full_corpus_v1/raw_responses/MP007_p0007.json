@@ -1,0 +1,99 @@
+{
+  "page_key": "MP007:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ffd8d3de-198a-9ad5-80a4-043039a77cc8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 2128,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3021
+  },
+  "latency_ms": 11270,
+  "attempt": 1,
+  "prompt_sha256": "b383c5bc5aff34e1b368e5ba54cefa21fc354feab610f1bf2eb661015cc10bf0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "working scope",
+        "tail_canonical_zh": "工作范围",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Make sure that the product is running within its working scope. Only in this way can the product performances be guaranteed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "coupling protection cover",
+        "head_canonical_zh": "联轴器防护罩",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "protective plate of coupling will not touch the rotating coupling",
+        "tail_canonical_zh": "联轴器护板不接触旋转联轴器",
+        "tail_type": "FaultMode",
+        "evidence_text": "Before the pump is put into use, an undeformed coupling protection cover shall be always used to protect the coupling, so that the protective plate of coupling will not touch the rotating coupling.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump surface",
+        "head_canonical_zh": "泵表面",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "hot after continuous running",
+        "tail_canonical_zh": "连续运行后发热",
+        "tail_type": "Symptom",
+        "evidence_text": "The pump surface may be hot after continuous running.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "water leakage",
+        "head_canonical_zh": "漏水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "air leakage pan shall be placed under the pump",
+        "tail_canonical_zh": "在泵下方放置接漏盘",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid any danger to persons or the environment when repairing water leakage, draining water and discharging air. It is strongly suggested that an air leakage pan shall be placed under the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

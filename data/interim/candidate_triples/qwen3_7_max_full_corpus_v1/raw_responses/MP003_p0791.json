@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0791",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4a2262f6-aa8e-9935-a8f5-d928a695e680",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 689,
+    "prompt_tokens": 6327,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7016
+  },
+  "latency_ms": 9575,
+  "attempt": 1,
+  "prompt_sha256": "b5f92c818c4d03cc6283287cf87ccf505ca89a6785a858c80abe1b48c43aa807",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "high temperature condition",
+        "head_canonical_zh": "高温工况",
+        "head_type": "OperatingCondition",
+        "relation": "indicates",
+        "tail_surface": "alarmed",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Where forced circulation of cooling medium is employed, high temperature condition is to be alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "measurement of bus bar temperature rise",
+        "head_canonical_zh": "母线温升测量",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Operational tests",
+        "tail_canonical_zh": "运行试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Operational tests are to be carried out including but not limited to the testing of protective devices (over current, under-voltage, and preferential trippings, etc.), electrical interlocks, synchronization of generators, earth detection, alarms, and measurement of bus bar temperature rise",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "testing of protective devices",
+        "head_canonical_zh": "保护装置测试",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Operational tests",
+        "tail_canonical_zh": "运行试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Operational tests are to be carried out including but not limited to the testing of protective devices (over current, under-voltage, and preferential trippings, etc.)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

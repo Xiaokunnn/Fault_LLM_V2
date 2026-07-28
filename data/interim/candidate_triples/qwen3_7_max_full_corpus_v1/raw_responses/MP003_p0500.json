@@ -1,0 +1,91 @@
+{
+  "page_key": "MP003:p0500",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7424caf0-3906-9b69-9f74-7aa476f054cd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 867,
+    "prompt_tokens": 2342,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3209
+  },
+  "latency_ms": 11139,
+  "attempt": 1,
+  "prompt_sha256": "29d43aad218e676e7db2a7f2ddf40bffa0002ab106047154ad2162bf97137556",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pumps",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Hydrostatic tests",
+        "tail_canonical_zh": "液压试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "7.3.2(a) Hydrostatic tests. The pumps are to be hydrostatically tested to a pressure of at least 1.5P",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump capacities",
+        "head_canonical_zh": "泵容量",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Capacity tests",
+        "tail_canonical_zh": "容量试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "7.3.2(b) Capacity tests. Pump capacities are to be checked with the pump operating at design conditions (rated speed and pressure head).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump characteristic (head-capacity) design curve",
+        "head_canonical_zh": "泵特性(扬程-流量)设计曲线",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Capacity tests",
+        "tail_canonical_zh": "容量试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "For centrifugal pumps, the pump characteristic (head-capacity) design curve is to be verified to the satisfaction of the Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "valve’s setting and full flow capacity",
+        "head_canonical_zh": "阀设定及全流量能力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Relief valve capacity test",
+        "tail_canonical_zh": "安全阀容量试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "7.3.2(c) Relief valve capacity test. For positive displacement pumps with an integrated relief valve, the valve’s setting and full flow capacity corresponding to the pump maximum rating is to be verified.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

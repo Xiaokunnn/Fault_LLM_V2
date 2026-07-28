@@ -1,0 +1,147 @@
+{
+  "page_key": "MP019:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-91c2bf90-c756-938d-b987-efa214cadc2e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1623,
+    "prompt_tokens": 4711,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6334
+  },
+  "latency_ms": 19909,
+  "attempt": 1,
+  "prompt_sha256": "28d3b5a9b5034d8bc16df760f3c45d9c4176780b613de044d07fe42a7ecbc8fe",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "harmful bearing currents",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Insulated non-drive end bearing",
+        "tail_canonical_zh": "绝缘非驱动端轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW\nOR\nIEC 315 ≤ Frame size\n≤ IEC 355        Insulated non-drive end\nbearing",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0012:t00:r002:c00",
+          "MP019:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "harmful bearing currents",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Insulated non-drive end bearing",
+        "tail_canonical_zh": "绝缘非驱动端轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nOR\nIEC 400 ≤ Frame size\n≤ IEC 450        Insulated non-drive end\nbearing\nAND\nCommon mode filter at\nthe converter",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0012:t00:r003:c00",
+          "MP019:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "harmful bearing currents",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Common mode filter at the converter",
+        "tail_canonical_zh": "变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nOR\nIEC 400 ≤ Frame size\n≤ IEC 450        Insulated non-drive end\nbearing\nAND\nCommon mode filter at\nthe converter",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0012:t00:r003:c00",
+          "MP019:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high frequency conductivity of the connection provided by the steel base",
+        "head_canonical_zh": "钢制底座连接的高频导电性",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "measuring the potential difference between the components",
+        "tail_canonical_zh": "测量部件间电位差",
+        "tail_type": "InspectionAction",
+        "evidence_text": "the high frequency conductivity of the connection provided by the steel base should be checked by, for example, measuring the potential difference between the components",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dirt and humidity penetrating into the porous coating",
+        "head_canonical_zh": "污垢和湿气渗入多孔涂层",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "treated with a sealant",
+        "tail_canonical_zh": "使用密封剂处理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Aluminum oxide coatings shall also be treated with a sealant to prevent dirt and humidity penetrating into the porous coating",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "exceeding the highest permissible rotational speed or critical speed",
+        "head_canonical_zh": "超过最高允许转速或临界转速",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "ensure that either the highest permissible rotational speed of the motor or the critical speed of the whole application is not exceeded",
+        "tail_canonical_zh": "确保不超过电机最高允许转速或整个应用的临界转速",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "For speeds higher than the nominal speed stated on the motor’s rating plate or in the respective product catalogue, ensure that either the highest permissible rotational speed of the motor or the critical speed of the whole application is not exceeded",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

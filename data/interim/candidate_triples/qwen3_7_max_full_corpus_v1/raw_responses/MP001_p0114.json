@@ -1,0 +1,95 @@
+{
+  "page_key": "MP001:p0114",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-345f4ee7-2c89-932c-8b94-8012643ecb36",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 869,
+    "prompt_tokens": 2112,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2981
+  },
+  "latency_ms": 10284,
+  "attempt": 1,
+  "prompt_sha256": "7b2bc143c071c52c4503c48d5eee0b9e0ce947994577ed694bdb7e44bc295ec2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "increasing bearing temperatures",
+        "head_canonical_zh": "轴承温度升高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "premature component failure is in progress",
+        "tail_canonical_zh": "部件早期失效进行中",
+        "tail_type": "FaultMode",
+        "evidence_text": "Early warning signs identification, such as increasing bearing temperatures indicating premature component failure is in progress, to alert the operator to take corrective actions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "premature component failure is in progress",
+        "head_canonical_zh": "部件早期失效进行中",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "corrective actions",
+        "tail_canonical_zh": "纠正措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Early warning signs identification, such as increasing bearing temperatures indicating premature component failure is in progress, to alert the operator to take corrective actions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "premature component/equipment failure",
+        "head_canonical_zh": "部件/设备早期失效",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "proactive maintenance tasks",
+        "tail_canonical_zh": "主动维护任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Alerts can be issued to the vessel personnel advising proactive maintenance tasks to be performed to avoid premature component/equipment failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "imminent component or equipment failure",
+        "head_canonical_zh": "即将发生的部件或设备故障",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "corrective action",
+        "tail_canonical_zh": "纠正措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "By continuous monitoring and archiving of this data, performance degradation trends can be detected and corrective action taken to prevent imminent component or equipment failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

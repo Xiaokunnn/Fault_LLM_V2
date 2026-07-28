@@ -1,0 +1,176 @@
+{
+  "page_key": "MP018:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b328b934-564f-9b47-b8a4-12463c0063d9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1783,
+    "prompt_tokens": 3225,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5008
+  },
+  "latency_ms": 22146,
+  "attempt": 1,
+  "prompt_sha256": "9217157b93c08769ec0e39a3ca2e068993ca2cb384a131d17576239472c40b10",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "grease lubricated bearings",
+        "head_canonical_zh": "脂润滑轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "All old grease must be flushed out from the bearing chambers before lubricating, if another type of grease has been used",
+        "tail_canonical_zh": "更换油脂前冲洗旧脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All old grease must be flushed out from the bearing chambers before lubricating, if another type of grease has been used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "grease lubricated antifriction bearing",
+        "head_canonical_zh": "脂润滑减摩轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "substitution of the other greases for Fina Lithium 2R grease is not recommended",
+        "tail_canonical_zh": "不建议替换Fina Lithium 2R润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "substitution of the other greases for Fina Lithium 2R grease is not recommended due to some mixing of grease with the oil in the oil lubricated thrust bearing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "premature bearing failure",
+        "head_canonical_zh": "轴承过早失效",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Failure to observe this may cause premature bearing failure",
+        "tail_canonical_zh": "遵守润滑脂使用规定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "WARNING!! Failure to observe this may cause premature bearing failure and subsequent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.7
+      },
+      {
+        "head_surface": "oil lubricated spherical roller thrust bearing",
+        "head_canonical_zh": "油润滑球面滚子推力轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check oil for presence of moisture",
+        "tail_canonical_zh": "检查油中水分",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before placing pump into operation, check oil for presence of moisture.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "presence of moisture",
+        "head_canonical_zh": "油中存在水分",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "clean the bearing and replace oil",
+        "tail_canonical_zh": "清洁轴承并换油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If present, clean the bearing and replace oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil lubricated bearings",
+        "head_canonical_zh": "油润滑轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Oil must be added prior to initial startup",
+        "tail_canonical_zh": "初次启动前加油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Oil must be added prior to initial startup.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "premature bearing failure",
+        "head_canonical_zh": "轴承过早失效",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Use of improper oil",
+        "tail_canonical_zh": "使用不当润滑油",
+        "tail_type": "Cause",
+        "evidence_text": "Use of improper oil can cause premature bearing failure and subsequent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Trico Optomatic Oiler",
+        "head_canonical_zh": "Trico自动注油器",
+        "head_type": "Component",
+        "relation": "indicates",
+        "tail_surface": "loss of oil",
+        "tail_canonical_zh": "失油",
+        "tail_type": "Symptom",
+        "evidence_text": "Trico Optomatic Oiler which will add make-up oil if the oil level is the thrust bearing should drop, and also give an indication of any loss of oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

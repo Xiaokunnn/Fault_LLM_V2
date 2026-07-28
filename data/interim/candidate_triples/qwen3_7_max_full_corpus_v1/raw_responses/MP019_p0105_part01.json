@@ -1,0 +1,178 @@
+{
+  "page_key": "MP019:p0105",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-618e69f1-4696-9e0f-a6f4-11f27bb1bf5a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2094,
+    "prompt_tokens": 2753,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4847
+  },
+  "latency_ms": 25214,
+  "attempt": 1,
+  "prompt_sha256": "f5bc4fac0ee5b02281c20948c4e0c18653095e7bd0d7f3a472a6966fc1d84a2b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "tillfällig temperaturhöjning",
+        "head_canonical_zh": "临时温升",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Vid första start eller efter en lagersmörjning",
+        "tail_canonical_zh": "首次启动或轴承润滑后",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Vid första start eller efter en lagersmörjning kan en tillfällig temperaturhöjning uppstå under cirka 10 till 20 timmar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Smörjning medan motorn är igång",
+        "tail_canonical_zh": "电机运行时润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Smörjning medan motorn är igång – Ta bort fettutloppspluggen eller öppna stängningsventilen om sådan finns. – Se till att smörjkanalen är öppen. – Pressa in angiven mängd fett i lagret. – Låt motorn gå 1-2 timmar så att allt överskottsfett tränger ut ur lagret. Stäng fettutloppspluggen eller stängningsventilen om sådan finns.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Smörjning när motorn står stilla",
+        "tail_canonical_zh": "电机停机时润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Smörjning när motorn står stilla Om det inte är möjligt att smörja lagren medan motorn är igång kan de istället smörjas under stillestånd. – Använd i så fall endast halva fettmängden och låt därefter motorn gå några minuter med högsta hastighet. – Tryck in resten av angiven mängd fett i lagret när motorn har stannat. - Stäng fettutloppspluggen eller stängningsventilen, om sådan finns, efter 1-2 timmars körning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fettutloppspluggen",
+        "head_canonical_zh": "排脂塞",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Ta bort fettutloppspluggen eller öppna stängningsventilen",
+        "tail_canonical_zh": "拆除排脂塞或打开关闭阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "– Ta bort fettutloppspluggen eller öppna stängningsventilen om sådan finns.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "automatisk smörjning",
+        "head_canonical_zh": "自动润滑",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "fettutloppspluggen avlägsnas permanent och en ev. stängningsventil ska vara öppen",
+        "tail_canonical_zh": "永久拆除排脂塞并保持阀门开启",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Vid automatisk smörjning ska fettutloppspluggen avlägsnas permanent och en ev. stängningsventil ska vara öppen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lagertemperaturen",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "lagertemperaturen för hela driftsområdet mätas",
+        "tail_canonical_zh": "测量全运行范围轴承温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vid omriktarmatning (dvs. frekvensomriktardrift) måste lagertemperaturen för hela driftsområdet mätas",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "smörjintervallen",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "smörjintervallen halveras om lagertemperaturen ökar med 15 °C",
+        "tail_canonical_zh": "轴承温度每升高15°C润滑间隔减半",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "om den överskrider 80 °C ska smörjintervallen halveras om lagertemperaturen ökar med 15 °C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Den maximala arbetstemperaturen för fett och lager, +110 °C",
+        "head_canonical_zh": "油脂和轴承最高工作温度+110°C",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "får inte överskridas",
+        "tail_canonical_zh": "不得超过",
+        "tail_type": "Risk",
+        "evidence_text": "Den maximala arbetstemperaturen för fett och lager, +110 °C, får inte överskridas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "page_key": "MP019:p0121",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-cbedd25e-1c8c-910e-bc6e-e1ad46b49274",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 9345,
+  "attempt": 1,
+  "prompt_sha256": "589c9f3e0992ba0bce3e78ecb5a4a98cd7999e99dd118075f9a98dd70bde2e82",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Moottorin suurinta sallittua nopeutta",
+        "head_canonical_zh": "电机最大允许转速",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "5.7.3 Moottorien mitoitus",
+        "tail_canonical_zh": "电机选型章节",
+        "tail_type": "Standard",
+        "evidence_text": "HUOMAUTUS! Moottorin suurinta sallittua nopeutta ei saa ylittää.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "taajuusmuuttajan suojausominaisuuksien",
+        "head_canonical_zh": "变频器保护功能",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "turvallisuuden parantamiseksi",
+        "tail_canonical_zh": "提高安全性",
+        "tail_type": "Risk",
+        "evidence_text": "ABB suosittelee kaikkien tilanteeseen soveltuvien taajuusmuuttajan suojausominaisuuksien käyttämistä turvallisuuden parantamiseksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.55,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "moottoria",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "oikeat asetukset on varmistettu laitteiden valmistajilta",
+        "tail_canonical_zh": "向设备制造商确认正确设置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Jos tietoja puuttuu tai ne ovat epätäsmällisiä, moottoria ei saa käyttää, ennen kuin oikeat asetukset on varmistettu laitteiden valmistajilta.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

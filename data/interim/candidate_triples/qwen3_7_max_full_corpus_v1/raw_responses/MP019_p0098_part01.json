@@ -1,0 +1,215 @@
+{
+  "page_key": "MP019:p0098",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1d39dd7e-091c-9db7-9bc8-3e2b3541af81",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2323,
+    "prompt_tokens": 2894,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5217
+  },
+  "latency_ms": 25778,
+  "attempt": 1,
+  "prompt_sha256": "696ec0b46969ab3e940b40e91814b587306c7c2c131310719f88fbf19ce35f47",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "För hög remspänning",
+        "head_canonical_zh": "皮带张力过高",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "skadar lagren",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "För hög remspänning skadar lagren och kan orsaka axelskador.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "För hög remspänning",
+        "head_canonical_zh": "皮带张力过高",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "axelskador",
+        "tail_canonical_zh": "轴损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "För hög remspänning skadar lagren och kan orsaka axelskador.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Korrekt uppriktning",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "lagerhaverier",
+        "tail_canonical_zh": "轴承故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Korrekt uppriktning krävs så att lagerhaverier, vibrationer och axeltappsbrott undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Korrekt uppriktning",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "vibrationer",
+        "tail_canonical_zh": "振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Korrekt uppriktning krävs så att lagerhaverier, vibrationer och axeltappsbrott undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Korrekt uppriktning",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "axeltappsbrott",
+        "tail_canonical_zh": "轴断裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Korrekt uppriktning krävs så att lagerhaverier, vibrationer och axeltappsbrott undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "frigången b",
+        "head_canonical_zh": "间隙b",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera att frigången b är mindre än 0,05 mm",
+        "tail_canonical_zh": "检查间隙b小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera att frigången b är mindre än 0,05 mm och att skillnaden mellan a1 och a2 också är mindre än 0,05 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "skillnaden mellan a1 och a2",
+        "head_canonical_zh": "a1与a2之差",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "skillnaden mellan a1 och a2 också är mindre än 0,05 mm",
+        "tail_canonical_zh": "a1与a2之差小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera att frigången b är mindre än 0,05 mm och att skillnaden mellan a1 och a2 också är mindre än 0,05 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "uppriktningen",
+        "head_canonical_zh": "对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera uppriktningen på nytt efter en sista åtdragning av bultar eller klotsar",
+        "tail_canonical_zh": "最终紧固螺栓或垫块后重新检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera uppriktningen på nytt efter en sista åtdragning av bultar eller klotsar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dräneringshål och pluggar",
+        "head_canonical_zh": "排水孔和堵头",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera att dräneringshål och pluggar är riktade nedåt",
+        "tail_canonical_zh": "检查排水孔和堵头朝下",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera att dräneringshål och pluggar är riktade nedåt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motorns axel",
+        "head_canonical_zh": "电机轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera att motorns axel är parallell med drivaxeln",
+        "tail_canonical_zh": "检查电机轴与驱动轴平行",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera att motorns axel är parallell med drivaxeln.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

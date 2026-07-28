@@ -1,0 +1,379 @@
+{
+  "page_key": "MP016:p0041",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2b3372f8-7265-915d-a0ad-e6fad647a875",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4148,
+    "prompt_tokens": 2942,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7090
+  },
+  "latency_ms": 48748,
+  "attempt": 1,
+  "prompt_sha256": "d2d3abf60f708bce111886e633a64d92c10a9752c101c8e75c077bf838db19d9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "igensatt filter",
+        "head_canonical_zh": "过滤器堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "kavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ett igensatt filter kommer att leda till kavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "torrkörning",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "skada tätningar och impeller",
+        "tail_canonical_zh": "密封和叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Fortsätt inte att köra pumpen om vätskan inte flödar; torrkörning kan skada tätningar och impeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumpar får aldrig köras torra i mer än 30 sekunder",
+        "head_canonical_zh": "禁止干运转超过30秒",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "överhettning av tätningsytorna och impellerskador",
+        "tail_canonical_zh": "密封面过热和叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumpar får aldrig köras torra i mer än 30 sekunder, eftersom detta kommer att orsaka överhettning av tätningsytorna och impellerskador.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "läckage av produkt eller spolvätska",
+        "head_canonical_zh": "介质或冲洗液泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Visuell kontroll av alla fogar",
+        "tail_canonical_zh": "所有接头目视检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visuell kontroll av alla fogar och för att upptäcka tecken på läckage av produkt eller spolvätska (om sådan används).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ovanliga ljud",
+        "head_canonical_zh": "异常声音",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Lyssna efter ovanliga ljud",
+        "tail_canonical_zh": "听诊异常声音",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lyssna efter ovanliga ljud",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ovanliga vibrationer",
+        "head_canonical_zh": "异常振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera om det förekommer ovanliga vibrationer",
+        "tail_canonical_zh": "检查异常振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera om det förekommer ovanliga vibrationer eller temperaturförändringar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "temperaturförändringar",
+        "head_canonical_zh": "温度变化",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera om det förekommer ... temperaturförändringar",
+        "tail_canonical_zh": "检查温度变化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera om det förekommer ovanliga vibrationer eller temperaturförändringar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tecken på skador eller slitage",
+        "head_canonical_zh": "损伤或磨损迹象",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "inspektera impellern",
+        "tail_canonical_zh": "检查叶轮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ta bort pumpens ändkåpa och inspektera impellern för att upptäcka tecken på skador eller slitage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impellern",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Reparera eller byt ut vid behov",
+        "tail_canonical_zh": "必要时修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Reparera eller byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tätningshuset",
+        "head_canonical_zh": "密封腔体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "upptäcka läckage",
+        "tail_canonical_zh": "检测泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "tätningshuset för att upptäcka läckage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "O-ring eller packning i ändkåpan",
+        "head_canonical_zh": "端盖O型圈或垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Byt O-ring eller packning i ändkåpan",
+        "tail_canonical_zh": "更换端盖O型圈或垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Byt O-ring eller packning i ändkåpan.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "axeln",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visuell inspektion av axeln",
+        "tail_canonical_zh": "泵轴目视检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visuell inspektion av axeln – rengör vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tätningsytorna",
+        "head_canonical_zh": "密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera tätningsytorna för att upptäcka slitage",
+        "tail_canonical_zh": "检查密封面磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera tätningsytorna för att upptäcka slitage och kontrollera elastomerernas skick.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "elastomererna",
+        "head_canonical_zh": "弹性体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "kontrollera elastomerernas skick",
+        "tail_canonical_zh": "检查弹性体状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "kontrollera elastomerernas skick.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mekaniska tätningar",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Byt ut mekaniska tätningar",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Byt ut mekaniska tätningar om sådana är monterade och vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumphuvudets O-ringar och/eller packningar",
+        "head_canonical_zh": "泵头O型圈和/或垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Byt pumphuvudets O-ringar och/eller packningar",
+        "tail_canonical_zh": "更换泵头O型圈和/或垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Byt pumphuvudets O-ringar och/eller packningar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lagerslitage",
+        "head_canonical_zh": "轴承磨损",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "kolla om det förekommer någon rörelse av axeln från sida till sida eller fram och bak",
+        "tail_canonical_zh": "检查泵轴侧向或轴向窜动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera lagerslitage på piedestalenheter genom att kolla om det förekommer någon rörelse av axeln från sida till sida eller fram och bak.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lager",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "demontera lager för att inspektera dessa och byt vid behov tillsammans med läpptätningar",
+        "tail_canonical_zh": "拆卸检查轴承并视情与唇封一同更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Om rörelse uppfattas, demontera lager för att inspektera dessa och byt vid behov tillsammans med läpptätningar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

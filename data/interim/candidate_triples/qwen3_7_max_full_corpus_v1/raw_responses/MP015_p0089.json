@@ -1,0 +1,209 @@
+{
+  "page_key": "MP015:p0089",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-27cdd827-6fe0-92e6-b411-2fce31621aa5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2026,
+    "prompt_tokens": 36188,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 38214
+  },
+  "latency_ms": 27214,
+  "attempt": 1,
+  "prompt_sha256": "e41373502c69ecde07cf55cb561f23188a9078375148f775b99b4df312a3187a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "0100",
+        "tail_canonical_zh": "零件号0100",
+        "tail_type": "Component",
+        "evidence_text": "0100   1   pump casing           cast iron stainless steel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "intermediate cover",
+        "head_canonical_zh": "中间盖",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "0110",
+        "tail_canonical_zh": "零件号0110",
+        "tail_type": "Component",
+        "evidence_text": "0110   1   intermediate cover    cast iron stainless steel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "0120*",
+        "tail_canonical_zh": "零件号0120",
+        "tail_type": "Component",
+        "evidence_text": "0120*  11) impeller          cast iron bronze stainless steel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear plate",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "0125*",
+        "tail_canonical_zh": "零件号0125",
+        "tail_type": "Component",
+        "evidence_text": "0125*  1   wear plate            steel   stainless steel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "non-return valve",
+        "head_canonical_zh": "止回阀",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "0170",
+        "tail_canonical_zh": "零件号0170",
+        "tail_type": "Component",
+        "evidence_text": "0170   12) non-return valve        synthetic material",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "1220*",
+        "tail_canonical_zh": "零件号1220",
+        "tail_type": "Component",
+        "evidence_text": "1220*  1   mechanical seal             - -",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil seal",
+        "head_canonical_zh": "油封",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "2180*",
+        "tail_canonical_zh": "零件号2180",
+        "tail_type": "Component",
+        "evidence_text": "2180*  1   oil seal                    --",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "2200*",
+        "tail_canonical_zh": "零件号2200",
+        "tail_type": "Component",
+        "evidence_text": "2200*  1   pump shaft          steel alloy stainless steel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "angular contact ball bearing",
+        "head_canonical_zh": "角接触球轴承",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "2250*",
+        "tail_canonical_zh": "零件号2250",
+        "tail_type": "Component",
+        "evidence_text": "2250*  1   angular contact ball bearing --",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ball bearing",
+        "head_canonical_zh": "球轴承",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "2260*",
+        "tail_canonical_zh": "零件号2260",
+        "tail_type": "Component",
+        "evidence_text": "2260*  1   ball bearing                --",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

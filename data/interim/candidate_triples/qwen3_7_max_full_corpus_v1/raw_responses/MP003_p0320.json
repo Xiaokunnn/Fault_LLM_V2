@@ -1,0 +1,222 @@
+{
+  "page_key": "MP003:p0320",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-87a99659-393c-978d-a936-8e005fde6a3f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2249,
+    "prompt_tokens": 2251,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4500
+  },
+  "latency_ms": 25987,
+  "attempt": 2,
+  "prompt_sha256": "c9943cf7aab92c62ad6be36229d771260218488ebbb6dc2484661a0b0cf81fb7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lubricant",
+        "head_canonical_zh": "润滑剂",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "sample test of lubricant",
+        "tail_canonical_zh": "润滑剂取样测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A sample test of lubricant should be carried out at the following intervals:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubricating fresh water",
+        "head_canonical_zh": "润滑淡水",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "analysis",
+        "tail_canonical_zh": "分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "samples are to be submitted for analysis to a recognized laboratory at least every six (6) months",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Corrosion inhibitors in fresh water",
+        "head_canonical_zh": "淡水中的缓蚀剂",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "pH or equivalent alkalinity indicators",
+        "tail_canonical_zh": "pH值或等效碱度指标",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Corrosion inhibitors in fresh water (pH or equivalent alkalinity indicators) indicating the degree of passivation of the system against corrosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Salinity",
+        "head_canonical_zh": "盐度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "total conductivity",
+        "tail_canonical_zh": "总电导率",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Salinity indicators or equivalent indicators (i.e., total conductivity).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing particles",
+        "head_canonical_zh": "轴承颗粒",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Contents of bearing particles",
+        "tail_canonical_zh": "轴承颗粒含量分析",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Contents of bearing particles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wear Down",
+        "head_canonical_zh": "磨损量",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "continuously monitored or measured using manual device",
+        "tail_canonical_zh": "连续监测或使用手动装置测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Wear down is to be continuously monitored or measured using manual device at least twice in five years",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stern tube bearing temperatures",
+        "head_canonical_zh": "尾管轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "continuously monitored and recorded",
+        "tail_canonical_zh": "连续监测并记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Stern tube bearing temperatures are to be continuously monitored and recorded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lubricant flow",
+        "head_canonical_zh": "润滑剂流量",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "continuously monitored and recorded",
+        "tail_canonical_zh": "连续监测并记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lubricant flow is to be continuously monitored and recorded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stern tube bearings",
+        "head_canonical_zh": "尾管轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "examined at installation",
+        "tail_canonical_zh": "安装时检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Stern tube bearings are to be examined at installation to the satisfaction of the attending Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft sleeve/liner",
+        "head_canonical_zh": "轴套/衬套",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "examined at installation",
+        "tail_canonical_zh": "安装时检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The shaft sleeve/liner is to be examined at installation to the satisfaction of the attending Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "system",
+        "head_canonical_zh": "系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "borescope inspection",
+        "tail_canonical_zh": "内窥镜检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "arrangements are to be made for borescope inspection of the system (e.g., bearing, shaft surface, et al.)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

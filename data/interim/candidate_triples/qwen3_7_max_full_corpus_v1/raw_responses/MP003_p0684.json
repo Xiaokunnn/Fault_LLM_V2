@@ -1,0 +1,91 @@
+{
+  "page_key": "MP003:p0684",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-50c0944e-04e3-9631-8b04-bf9017acf03a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1082,
+    "prompt_tokens": 2559,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3641
+  },
+  "latency_ms": 14647,
+  "attempt": 1,
+  "prompt_sha256": "c917b81df963ec11ef4848e625d09eb71609ba1766928b5c860ec0691a4c0ccf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sea inlet valve",
+        "head_canonical_zh": "海水进口阀",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "machinery space",
+        "tail_canonical_zh": "机舱",
+        "tail_type": "Equipment",
+        "evidence_text": "Where the sea inlet valve is in the machinery space, the valve should not be a fail-close type.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sea inlet valve",
+        "head_canonical_zh": "海水进口阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "control piping, actuating devices and/or electric cables with fire resistant protection equivalent to “A-60” class standards",
+        "tail_canonical_zh": "具有相当于“A-60”级标准防火保护的控制管路、驱动装置和/或电缆",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the sea inlet valve is in the machinery space and is not a fail-open type, measures should be taken so that the valve can be opened in the event of fire, e.g. control piping, actuating devices and/or electric cables with fire resistant protection equivalent to “A-60” class standards.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "smoke from a machinery space fire entering or being drawn into that space",
+        "head_canonical_zh": "机舱火灾烟气进入应急消防泵处所",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Ventilation arrangements to the space containing the independent source of power for the emergency fire pump are to be such as to preclude, as far as practicable, the possibility of smoke from a machinery space fire entering or being drawn into that space",
+        "tail_canonical_zh": "应急消防泵独立动力源处所的通风布置应尽可能防止机舱火灾烟气进入",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ventilation arrangements to the space containing the independent source of power for the emergency fire pump are to be such as to preclude, as far as practicable, the possibility of smoke from a machinery space fire entering or being drawn into that space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "fire in any one compartment will not render both main fire pumps inoperable",
+        "head_canonical_zh": "任一舱室火灾导致两台主消防泵均失效",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "two main fire pumps including their sources of power, fuel supply, electric cables, lighting and ventilation for the space in which they are located are in separate compartments",
+        "tail_canonical_zh": "两台主消防泵及其动力源、燃油供应、电缆、照明和通风分别位于独立舱室",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "An emergency fire pump is not required if the two main fire pumps including their sources of power, fuel supply, electric cables, lighting and ventilation for the space in which they are located are in separate compartments so that a fire in any one compartment will not render both main fire pumps inoperable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

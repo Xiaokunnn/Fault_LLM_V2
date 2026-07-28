@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0625",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e5badd7c-cd44-9824-a7f5-c6e23bf1700d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 889,
+    "prompt_tokens": 2224,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3113
+  },
+  "latency_ms": 12015,
+  "attempt": 1,
+  "prompt_sha256": "2e8ac38b69a7a25f187c530930abd6b54b098e059d92d76343739b27c4d808a3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water hammer",
+        "head_canonical_zh": "水锤",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Steam supply piping is to be installed such that it will prevent accumulation of water",
+        "tail_canonical_zh": "蒸汽供汽管路安装防止积水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Steam supply piping is to be installed such that it will prevent accumulation of water to avoid water hammer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "accumulation of water",
+        "head_canonical_zh": "积水",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "water hammer",
+        "tail_canonical_zh": "水锤",
+        "tail_type": "FaultMode",
+        "evidence_text": "prevent accumulation of water to avoid water hammer",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "steam lines",
+        "head_canonical_zh": "蒸汽管线",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "drains are to be provided to ensure adequate draining of the water from the steam lines",
+        "tail_canonical_zh": "设置疏水阀确保蒸汽管线充分排水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "drains are to be provided to ensure adequate draining of the water from the steam lines",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "steam entering the turbines by way of the bleeder connections",
+        "head_canonical_zh": "蒸汽经抽汽接口倒流入汽轮机",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "approved means are to be provided",
+        "tail_canonical_zh": "提供经认可的防倒流措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "approved means are to be provided to prevent steam entering the turbines by way of the bleeder connections",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

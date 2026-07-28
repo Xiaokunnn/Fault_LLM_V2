@@ -1,0 +1,171 @@
+{
+  "page_key": "MP019:p0115",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-28037276-8ec3-9709-a887-0addd00fe423",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 25975,
+  "attempt": 1,
+  "prompt_sha256": "4740da018e5e06ade1726c259ff20d769653b1403410523978b6402add7ab357",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Eristysvastus",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Mittaa eristysvastus",
+        "tail_canonical_zh": "测量绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mittaa eristysvastus ennen käyttöönottoa ja silloin, kun epäilet käämityksen olevan kostea.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "käämitys on liian kostea",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "eristysvastusmittauksessa",
+        "tail_canonical_zh": "绝缘电阻测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ellei eristysvastusmittauksessa saavuteta ohjearvoa, käämitys on liian kostea",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "käämitys on liian kostea",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "kuivattava uunissa",
+        "tail_canonical_zh": "烘箱干燥",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "käämitys on liian kostea ja se on kuivattava uunissa",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rullalaakereita",
+        "head_canonical_zh": "滚子轴承",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Moottorin käyttö ilman säteittäistä kuormitusta akselille",
+        "tail_canonical_zh": "避免电机轴无径向负载运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Moottorin käyttö ilman säteittäistä kuormitusta akselille saattaa vahingoittaa rullalaakereita",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "viistokuulalaakeria",
+        "head_canonical_zh": "角接触球轴承",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Moottorin käyttö ilman oikeansuuntaista ja -suuruista aksiaalivoimaa",
+        "tail_canonical_zh": "避免电机无正确方向和大小的轴向力运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Moottorin käyttö ilman oikeansuuntaista ja -suuruista aksiaalivoimaa saattaa vahingoittaa moottorin viistokuulalaakeria",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Jälkivoideltavilla laakereilla varustetut moottorit",
+        "head_canonical_zh": "可再润滑轴承电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "lisätään voiteluainetta ohjeen mukaan",
+        "tail_canonical_zh": "按说明添加润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Jälkivoideltavilla laakereilla varustetut moottorit: Moottoria käynnistettäessä ensimmäistä kertaa sekä moottorin pitkän varastoinnin jälkeen lisätään voiteluainetta ohjeen mukaan",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vapaata pyöriminen",
+        "head_canonical_zh": "自由转动",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "kääntämällä akselia käsin",
+        "tail_canonical_zh": "手动盘车",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tarkista mahdollisuuksien mukaan vapaa pyöriminen kääntämällä akselia käsin",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Meriveden kastelemat käämitykset",
+        "head_canonical_zh": "海水浸湿绕组",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "käämittävä uudelleen",
+        "tail_canonical_zh": "重绕绕组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Meriveden kastelemat käämitykset on useimmiten käämittävä uudelleen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.91,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0518",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0565ad54-feee-9272-a419-9b1148fb148a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 909,
+    "prompt_tokens": 5043,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5952
+  },
+  "latency_ms": 11532,
+  "attempt": 1,
+  "prompt_sha256": "41c20a294de734b20ce239e5b59469983e4202bc923de5bb74b340bc1737166f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "visual signs of leakage",
+        "tail_canonical_zh": "泄漏目视迹象",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "In the event of a drop in the pressure and visual signs of leakage the test is to be repeated",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "damage which may eventually cause leakage",
+        "head_canonical_zh": "可能导致泄漏的损伤",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Visual examination of the joint assembly",
+        "tail_canonical_zh": "接头组件目视检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Visual examination of the joint assembly is to be carried out for signs of damage which may eventually cause leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drop in the pressure",
+        "head_canonical_zh": "压力下降",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "leakage",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "In the event of a drop in the pressure and visual signs of leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "joint assembly",
+        "head_canonical_zh": "接头组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "the test is to be repeated as described in 4-6-2/5.9.2(e).iv",
+        "tail_canonical_zh": "按4-6-2/5.9.2(e).iv所述重复试验",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In the event of a drop in the pressure and visual signs of leakage the test is to be repeated as described in 4-6-2/5.9.2(e).iv",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

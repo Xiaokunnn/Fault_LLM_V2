@@ -1,0 +1,103 @@
+{
+  "page_key": "MP007:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8647adc8-5156-928a-818e-7226173267c2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 1782,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2675
+  },
+  "latency_ms": 10571,
+  "attempt": 1,
+  "prompt_sha256": "6b957bc871b24434070459d4306c74c8e02ab263cd5653ff977abbd42710df56",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water injection plug",
+        "head_canonical_zh": "注水螺塞",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Screw off the water injection plug and start filling water",
+        "tail_canonical_zh": "拧下注水螺塞并开始注水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Screw off the water injection plug and start filling water",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check rotating direction of the motor",
+        "tail_canonical_zh": "检查电机旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check rotating direction of the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "inlet valve",
+        "head_canonical_zh": "进口阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Open the inlet valve and close the outlet valve",
+        "tail_canonical_zh": "打开进口阀并关闭出口阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Open the inlet valve and close the outlet valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "outlet valve",
+        "head_canonical_zh": "出口阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Loosen the discharge valve and slowly open the outlet valve",
+        "tail_canonical_zh": "松开排出阀并缓慢打开出口阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Loosen the discharge valve and slowly open the outlet valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

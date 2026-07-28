@@ -1,0 +1,139 @@
+{
+  "page_key": "MP021:p0002",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f715781d-e557-9496-be3e-2b21420737fa",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1326,
+    "prompt_tokens": 2714,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4040
+  },
+  "latency_ms": 15019,
+  "attempt": 1,
+  "prompt_sha256": "436079690c066024d4fe6bf5f8e5d11b0086ecc338bf78e2357fa4d846c12e20",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pressure gauges/sensors",
+        "tail_canonical_zh": "压力表/传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "INSTALL pressure gauges/sensors next to the pump suction and discharge connections to monitor pressures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "routine maintenance",
+        "tail_canonical_zh": "例行维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "THE PUMP must be installed in a manner that allows safe access for routine maintenance and for inspection during operation to check for leakage and monitor pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "inspection during operation",
+        "tail_canonical_zh": "运行期间检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "THE PUMP must be installed in a manner that allows safe access for routine maintenance and for inspection during operation to check for leakage and monitor pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "high temperatures",
+        "head_canonical_zh": "高温",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "improper installation",
+        "tail_canonical_zh": "安装不当",
+        "tail_type": "Cause",
+        "evidence_text": "Certain operating conditions, temperature control devices (jackets, heat-tracing, etc.), improper installation, improper operation, and improper maintenance can all cause high temperatures on the pump and/or drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "high temperatures",
+        "head_canonical_zh": "高温",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "improper operation",
+        "tail_canonical_zh": "操作不当",
+        "tail_type": "Cause",
+        "evidence_text": "Certain operating conditions, temperature control devices (jackets, heat-tracing, etc.), improper installation, improper operation, and improper maintenance can all cause high temperatures on the pump and/or drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "high temperatures",
+        "head_canonical_zh": "高温",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "improper maintenance",
+        "tail_canonical_zh": "维护不当",
+        "tail_type": "Cause",
+        "evidence_text": "Certain operating conditions, temperature control devices (jackets, heat-tracing, etc.), improper installation, improper operation, and improper maintenance can all cause high temperatures on the pump and/or drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  }
+}

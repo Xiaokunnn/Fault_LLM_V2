@@ -1,0 +1,129 @@
+{
+  "page_key": "MP003:p0068",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-279418ca-1bd3-96e7-8e42-d6f0340a2f5b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1440,
+    "prompt_tokens": 13178,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 14618
+  },
+  "latency_ms": 19258,
+  "attempt": 1,
+  "prompt_sha256": "df0bd3b16dc0d55719e7704876ab0fa095b36133259cd097cc23c7be47abf7c2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Operation and service manuals",
+        "head_canonical_zh": "操作与维护手册",
+        "head_type": "Standard",
+        "relation": "contains",
+        "tail_surface": "maintenance requirements (servicing and repair)",
+        "tail_canonical_zh": "维护要求（保养与修理）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Operation and service manuals are to contain maintenance requirements (servicing and repair) including details of any special tools and gauges that are to be used with their fitting/settings together with any test requirements on completion of maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Operation and service manuals",
+        "head_canonical_zh": "操作与维护手册",
+        "head_type": "Standard",
+        "relation": "contains",
+        "tail_surface": "details of any special tools and gauges that are to be used with their fitting/settings",
+        "tail_canonical_zh": "专用工具与量具及其安装调整细节",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Operation and service manuals are to contain maintenance requirements (servicing and repair) including details of any special tools and gauges that are to be used with their fitting/settings together with any test requirements on completion of maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operation and service manuals",
+        "head_canonical_zh": "操作与维护手册",
+        "head_type": "Standard",
+        "relation": "contains",
+        "tail_surface": "test requirements on completion of maintenance",
+        "tail_canonical_zh": "维护完成后的试验要求",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Operation and service manuals are to contain maintenance requirements (servicing and repair) including details of any special tools and gauges that are to be used with their fitting/settings together with any test requirements on completion of maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of the control system",
+        "head_canonical_zh": "控制系统故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "failure mode and effects analysis (FMEA)",
+        "tail_canonical_zh": "故障模式与影响分析（FMEA）",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where engines rely on hydraulic, pneumatic or electronic control of fuel injection and/or valves, a failure mode and effects analysis (FMEA) is to be submitted to demonstrate that failure of the control system will not result in the operation of the engine being degraded beyond acceptable performance criteria for the engine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operation of the engine being degraded beyond acceptable performance criteria",
+        "head_canonical_zh": "发动机运行性能下降超出可接受标准",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "failure mode and effects analysis (FMEA)",
+        "tail_canonical_zh": "故障模式与影响分析（FMEA）",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where engines rely on hydraulic, pneumatic or electronic control of fuel injection and/or valves, a failure mode and effects analysis (FMEA) is to be submitted to demonstrate that failure of the control system will not result in the operation of the engine being degraded beyond acceptable performance criteria for the engine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "control, protection and safety equipment",
+        "head_canonical_zh": "控制、保护与安全设备",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Tests",
+        "tail_canonical_zh": "试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Tests are to demonstrate the ability of the control, protection and safety equipment to function as intended under the specified testing conditions per 4-9-9/Table 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

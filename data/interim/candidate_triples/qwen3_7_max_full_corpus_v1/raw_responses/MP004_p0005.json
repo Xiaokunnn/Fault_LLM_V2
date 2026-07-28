@@ -1,0 +1,74 @@
+{
+  "page_key": "MP004:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ae779252-e72d-91f6-bf13-aed6e17e51fd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 593,
+    "prompt_tokens": 2200,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2793
+  },
+  "latency_ms": 7305,
+  "attempt": 1,
+  "prompt_sha256": "e2fa83df1f1b4f913bbc928151bcae89dda238465346d0072baef591d2fd0d68",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "relief valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "All pumps from size SA35 (inclusive)",
+        "tail_canonical_zh": "SA35及以上规格泵",
+        "tail_type": "Equipment",
+        "evidence_text": "All pumps from size SA35 (inclusive) are equipped with a relief valve, see paragraph 8.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "noise level",
+        "head_canonical_zh": "噪声级",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "instruction manual for the motor",
+        "tail_canonical_zh": "电机说明书",
+        "tail_type": "Standard",
+        "evidence_text": "The noise level of the motor appears from the instruction manual for the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump capacity",
+        "head_canonical_zh": "泵容量",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "name plate of the pump",
+        "tail_canonical_zh": "泵铭牌",
+        "tail_type": "Component",
+        "evidence_text": "The pump capacity appears on the name plate of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

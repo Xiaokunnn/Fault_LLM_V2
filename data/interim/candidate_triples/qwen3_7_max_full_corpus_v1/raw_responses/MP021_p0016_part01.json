@@ -1,0 +1,443 @@
+{
+  "page_key": "MP021:p0016",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a0773af5-336d-9b4d-a01c-fae1e3b24605",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4987,
+    "prompt_tokens": 2795,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7782
+  },
+  "latency_ms": 60107,
+  "attempt": 1,
+  "prompt_sha256": "4cd70094b4341b25de71e24eba65561c8cc40fdfa304952f71b46a8c99bedff4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump still does not deliver flow",
+        "head_canonical_zh": "泵仍不排液",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Vacuum gauge reading",
+        "tail_canonical_zh": "真空表读数",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "If the pump still does not deliver flow, the cause may be one or more of the following: 1. Suction line air leaks. Vacuum gauge reading should help determine if this is the problem.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Suction line air leaks",
+        "head_canonical_zh": "吸入管路空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Vacuum gauge reading",
+        "tail_canonical_zh": "真空表读数",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "1. Suction line air leaks. Vacuum gauge reading should help determine if this is the problem.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "End of suction pipe not submerged deep enough in liquid",
+        "head_canonical_zh": "吸入管末端浸没深度不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pump still does not deliver flow",
+        "tail_canonical_zh": "泵仍不排液",
+        "tail_type": "Symptom",
+        "evidence_text": "If the pump still does not deliver flow, the cause may be one or more of the following: ... 2. End of suction pipe not submerged deep enough in liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Liquid is vaporizing in the suction line before it gets to the pump",
+        "head_canonical_zh": "液体在到达泵前于吸入管路中汽化",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "pump still does not deliver flow",
+        "tail_canonical_zh": "泵仍不排液",
+        "tail_type": "Symptom",
+        "evidence_text": "If the pump still does not deliver flow, the cause may be one or more of the following: ... 4. Liquid is vaporizing in the suction line before it gets to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "trouble",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "install a vacuum gauge in the suction port and a pressure gauge in the discharge port",
+        "tail_canonical_zh": "在吸入口安装真空表并在排出口安装压力表",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If trouble does develop, one of the first steps toward finding the difficulty is to install a vacuum gauge in the suction port and a pressure gauge in the discharge port.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High reading",
+        "head_canonical_zh": "真空表高读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Suction line is blocked by a stuck foot valve, stuck gate valve, or plugged strainer",
+        "tail_canonical_zh": "吸入管路因底阀卡死、闸阀卡死或过滤器堵塞而阻塞",
+        "tail_type": "FaultMode",
+        "evidence_text": "VACUUM GAUGE - SUCTION PORT 1. High reading would indicate: a. Suction line is blocked by a stuck foot valve, stuck gate valve, or plugged strainer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High reading",
+        "head_canonical_zh": "真空表高读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Liquid is too viscous to flow through the piping",
+        "tail_canonical_zh": "液体粘度过高无法流过管路",
+        "tail_type": "Cause",
+        "evidence_text": "VACUUM GAUGE - SUCTION PORT 1. High reading would indicate: ... b. Liquid is too viscous to flow through the piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High reading",
+        "head_canonical_zh": "真空表高读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Lift is too high",
+        "tail_canonical_zh": "吸上高度过高",
+        "tail_type": "Cause",
+        "evidence_text": "VACUUM GAUGE - SUCTION PORT 1. High reading would indicate: ... c. Lift is too high.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High reading",
+        "head_canonical_zh": "真空表高读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Line is too small",
+        "tail_canonical_zh": "管路尺寸过小",
+        "tail_type": "Cause",
+        "evidence_text": "VACUUM GAUGE - SUCTION PORT 1. High reading would indicate: ... d. Line is too small.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Low reading",
+        "head_canonical_zh": "真空表低读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Air leak in suction line",
+        "tail_canonical_zh": "吸入管路空气泄漏",
+        "tail_type": "FaultMode",
+        "evidence_text": "2. Low reading would indicate: a. Air leak in suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Low reading",
+        "head_canonical_zh": "真空表低读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "End of pipe is not in liquid",
+        "tail_canonical_zh": "管端未浸入液体",
+        "tail_type": "Cause",
+        "evidence_text": "2. Low reading would indicate: ... b. End of pipe is not in liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Low reading",
+        "head_canonical_zh": "真空表低读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Pump is worn",
+        "tail_canonical_zh": "泵磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "2. Low reading would indicate: ... c. Pump is worn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Low reading",
+        "head_canonical_zh": "真空表低读数",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Pump is dry - should be primed",
+        "tail_canonical_zh": "泵干转需灌泵",
+        "tail_type": "FaultMode",
+        "evidence_text": "2. Low reading would indicate: ... d. Pump is dry - should be primed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "真空表读数波动跳动或不稳",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Liquid is vaporizing",
+        "tail_canonical_zh": "液体汽化",
+        "tail_type": "FaultMode",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: a. Liquid is vaporizing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "真空表读数波动跳动或不稳",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Liquid is coming to pump in slugs, possibly an air leak, insufficient liquid above the end of the suction pipe",
+        "tail_canonical_zh": "液体以段塞形式进入泵可能因空气泄漏或吸入管端上方液位不足",
+        "tail_type": "FaultMode",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: ... b. Liquid is coming to pump in slugs, possibly an air leak, insufficient liquid above the end of the suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "真空表读数波动跳动或不稳",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Vibrating from cavitation, misalignment, or damaged parts",
+        "tail_canonical_zh": "因汽蚀不对中或零件损坏引起的振动",
+        "tail_type": "FaultMode",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: ... c. Vibrating from cavitation, misalignment, or damaged parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "pump_motor_misalignment",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Running the pump longer than one minute without liquid inside it",
+        "head_canonical_zh": "泵内无液体运行超过一分钟",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "损坏泵",
+        "tail_type": "FaultMode",
+        "evidence_text": "Running the pump longer than one minute without liquid inside it can damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "damage the pump",
+        "head_canonical_zh": "损坏泵",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "stop the pump",
+        "tail_canonical_zh": "停泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If liquid is not leaving the discharge port, stop the pump. Running the pump longer than one minute without liquid inside it can damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumping water, dirty or otherwise",
+        "head_canonical_zh": "泵送水或其他脏液",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage",
+        "tail_canonical_zh": "损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumping water, dirty or otherwise, can do more damage in a few minutes than months of normal service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "damage",
+        "head_canonical_zh": "损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Either remove the pump or run piping around it while flushing or testing",
+        "tail_canonical_zh": "冲洗或试压时拆除泵或设置旁通管路",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not use the Viking pump to flush, pressure test or prove the system with water. Either remove the pump or run piping around it while flushing or testing. Pumping water, dirty or otherwise, can do more damage in a few minutes than months of normal service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "packed pumps",
+        "head_canonical_zh": "填料密封泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "loosen packing gland nuts so gland can be moved slightly by hand",
+        "tail_canonical_zh": "松开填料压盖螺母使压盖可手动微移",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For packed pumps, loosen packing gland nuts so gland can be moved slightly by hand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "packing",
+        "head_canonical_zh": "填料",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Adjust gland to reduce leakage only after pump has run long enough to reach constant temperature",
+        "tail_canonical_zh": "泵运行至恒温后调整压盖以减少泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adjust gland to reduce leakage only after pump has run long enough to reach constant temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

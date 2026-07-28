@@ -1,0 +1,230 @@
+{
+  "page_key": "MP018:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-214f9e79-8064-985b-ad32-1f83afdb1214",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2367,
+    "prompt_tokens": 2128,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4495
+  },
+  "latency_ms": 34310,
+  "attempt": 1,
+  "prompt_sha256": "ec5c6d2bc87ccfb196790dcba1687494ad78393b97bdc3bb8c4c03bb58a5df02",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "packing gland",
+        "head_canonical_zh": "填料压盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Adjust the packing gland until there is a slight leakage from the stuffing box",
+        "tail_canonical_zh": "调整填料压盖至填料函微漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adjust the packing gland until there is a slight leakage from the stuffing box.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mechanical seals",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "need no adjustment",
+        "tail_canonical_zh": "无需调整",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Mechanical seals need no adjustment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump fail to build up pressure or discharge water when discharge valve is opened",
+        "head_canonical_zh": "打开排出阀时泵无法建立压力或排水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "stop pump and read section, Locating Operating Difficulties",
+        "tail_canonical_zh": "停泵并查阅故障定位章节",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Should pump fail to build up pressure or discharge water when discharge valve is opened, stop pump and read section, Locating Operating Difficulties.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "water hammer effects",
+        "head_canonical_zh": "水锤效应",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "the discharge valve should be closed first",
+        "tail_canonical_zh": "先关闭排出阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "However, in order to prevent water hammer effects, the discharge valve should be closed first.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Do not operate pump with the valve closed for more than a few minutes",
+        "tail_canonical_zh": "不得在阀门关闭状态下运行泵超过几分钟",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "CAUTION: - Do not operate pump with the valve closed for more than a few minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive temperature build up in the pump",
+        "head_canonical_zh": "泵内过度温升",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "absorption on the input power into the pumped fluid",
+        "tail_canonical_zh": "输入功率被泵送流体吸收",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "avoid excessive temperature build up in the pump because of absorption on the input power into the pumped fluid",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Increased radial reaction",
+        "head_canonical_zh": "径向反力增加",
+        "head_type": "FailureMechanism",
+        "relation": "occurs_at",
+        "tail_surface": "low flows in a single volute casing",
+        "tail_canonical_zh": "单蜗壳泵体低流量工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Increased radial reaction at low flows in a single volute casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Increased NPSHR",
+        "head_canonical_zh": "必需汽蚀余量增加",
+        "head_type": "SignalFeature",
+        "relation": "occurs_at",
+        "tail_surface": "low flows",
+        "tail_canonical_zh": "低流量工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Increased NPSHR at low flows.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Noisy, rough operation and possible physical damage",
+        "head_canonical_zh": "噪声、粗糙运行及可能的物理损坏",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "internal re-circulation",
+        "tail_canonical_zh": "内部回流",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Noisy, rough operation and possible physical damage due to internal re-circulation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Increased suction and discharge pulsation levels",
+        "head_canonical_zh": "吸入和排出脉动水平增加",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "low flows",
+        "tail_canonical_zh": "低流量工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Increased suction and discharge pulsation levels.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Couplings with rubber drive elements",
+        "head_canonical_zh": "橡胶驱动元件联轴器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "do not require lubrication",
+        "tail_canonical_zh": "无需润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Couplings with rubber drive elements do not require lubrication.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

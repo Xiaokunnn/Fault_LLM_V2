@@ -1,0 +1,155 @@
+{
+  "page_key": "MP005:p0057",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f6555853-0775-9e31-9f7f-1418596a6dfc",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1581,
+    "prompt_tokens": 9591,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11172
+  },
+  "latency_ms": 20642,
+  "attempt": 1,
+  "prompt_sha256": "83a8b89a804a25ccb7d26ad8b2a1df0d1962638477e82adea3a887301e285cf2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Too high temperature of the motor surface",
+        "head_canonical_zh": "电机表面温度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion",
+        "tail_canonical_zh": "爆炸",
+        "tail_type": "Risk",
+        "evidence_text": "Too high temperature of the motor surface may cause explosion, which will cause\ndamage to the motor, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "explosion",
+        "head_canonical_zh": "爆炸",
+        "head_type": "Risk",
+        "relation": "causes",
+        "tail_surface": "damage to the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high temperature of the motor surface may cause explosion, which will cause\ndamage to the motor, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "frequency of starts",
+        "head_canonical_zh": "启动频率",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "manufacturer’s documents",
+        "tail_canonical_zh": "制造商文件",
+        "tail_type": "Standard",
+        "evidence_text": "For explosion-proof motors, observe the frequency of starts in manufacturer’s\ndocuments.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Re-starting while motor is still running",
+        "head_canonical_zh": "电机仍在运行时重新启动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the pump (set)",
+        "tail_canonical_zh": "泵组损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Re-starting while motor is still running could damage the pump (set).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "damage the pump (set)",
+        "head_canonical_zh": "泵组损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Do not re-start the pump set before the pump motor is fully stopped",
+        "tail_canonical_zh": "泵电机完全停止前不要重新启动泵组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Re-starting while motor is still running could damage the pump (set).\n\nDo not re-start the pump set before the pump motor is fully stopped.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operation outside the range",
+        "head_canonical_zh": "超出范围运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "reduce the pump life (incl. shaft seal and pump bearings) significantly",
+        "tail_canonical_zh": "显著缩短泵寿命（包括轴封和泵轴承）",
+        "tail_type": "FaultMode",
+        "evidence_text": "Recommend operate pump at 70 to 120% of BEP flow for hihg efficiency, operation outside the\nrange reduce the pump life (incl. shaft seal and pump bearings) significantly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "70 to 120% of BEP flow",
+        "tail_canonical_zh": "70%至120%最佳效率点流量",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Recommend operate pump at 70 to 120% of BEP flow for hihg efficiency, operation outside the\nrange reduce the pump life (incl. shaft seal and pump bearings) significantly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

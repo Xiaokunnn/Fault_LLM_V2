@@ -1,0 +1,98 @@
+{
+  "page_key": "MP001:p0029",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-229fc47f-c777-91e2-bb73-98caa534756b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 975,
+    "prompt_tokens": 2295,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3270
+  },
+  "latency_ms": 13043,
+  "attempt": 1,
+  "prompt_sha256": "daaa71d874a4354bd8aad9aebbbf27e48ede4095385e7408a4be0d5fa3ae1038",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "main engine bearing damage",
+        "head_canonical_zh": "主发动机轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "no or low lube oil flow",
+        "tail_canonical_zh": "无或低润滑油流量",
+        "tail_type": "Cause",
+        "evidence_text": "mitigating main engine bearing damage caused by no or low lube oil flow",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "main engine bearing damage",
+        "head_canonical_zh": "主发动机轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings",
+        "tail_canonical_zh": "在润滑油泵出口加装低压传感器以启动备用泵维持主发动机轴承供油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "mitigating main engine bearing damage caused by no or low lube oil flow by adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Servicing and Routine Inspection",
+        "head_canonical_zh": "保养与例行检查",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "routine servicing (i.e., lubrication, filter changing, other replenishment tasks)",
+        "tail_canonical_zh": "例行保养（润滑、更换滤器及其他补给任务）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "maintain the failure rate and failure pattern as predicted by performing routine servicing (i.e., lubrication, filter changing, other replenishment tasks)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "minor leaks, drips",
+        "head_canonical_zh": "轻微泄漏与滴漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Servicing and Routine Inspection",
+        "tail_canonical_zh": "保养与例行检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Servicing and routine inspection may also be applied to items that have relatively insignificant failure consequences, yet should not be ignored (minor leaks, drips, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

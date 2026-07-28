@@ -1,0 +1,93 @@
+{
+  "page_key": "MP002:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-36b91b8c-df35-9392-96ce-2985a741a3e3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 886,
+    "prompt_tokens": 2388,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3274
+  },
+  "latency_ms": 15463,
+  "attempt": 1,
+  "prompt_sha256": "b92c3f9d02177c0cec25a6cc534cd570958a1dfb3d01bc5c6b1065cbd2e80024",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failure-finding Task",
+        "head_canonical_zh": "故障查找任务",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "scheduled function check",
+        "tail_canonical_zh": "定期功能检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Failure-finding Task: A scheduled task used to detect hidden failures when no condition-monitoring or planned-maintenance task is applicable. It is a scheduled function check to determine whether an item will perform its required function if called upon.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Failure-finding Task",
+        "head_canonical_zh": "故障查找任务",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "detect hidden failures",
+        "tail_canonical_zh": "检测隐蔽故障",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Failure-finding Task: A scheduled task used to detect hidden failures when no condition-monitoring or planned-maintenance task is applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Hidden Failure Mode",
+        "head_canonical_zh": "隐蔽故障模式",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Failure-finding Task",
+        "tail_canonical_zh": "故障查找任务",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Failure-finding Task: A scheduled task used to detect hidden failures when no condition-monitoring or planned-maintenance task is applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump bearing seizes",
+        "head_canonical_zh": "泵轴承抱死",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "pump fails off",
+        "tail_canonical_zh": "泵停机失效",
+        "tail_type": "Symptom",
+        "evidence_text": "Failure mode can be described in terms of an equipment failure cause (e.g., pump bearing seizes), but is typically described in terms of an observed effect of the equipment failure (e.g., pump fails off).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

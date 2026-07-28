@@ -1,0 +1,315 @@
+{
+  "page_key": "MP019:p0104",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-0ed4fdcc-177c-9c37-b96a-012f6bf4c20c",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 43076,
+  "attempt": 1,
+  "prompt_sha256": "331fbcb6af7a48a7392fc8213243690e57ff3b4f57a8c4298d6301d32a0a3df1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motorn",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Inspektera motorn regelbundet, minst en gång om året",
+        "tail_canonical_zh": "定期检查电机（至少每年一次）",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspektera motorn regelbundet, minst en gång om året.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ventilationsluften",
+        "head_canonical_zh": "通风气流",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Håll motorn ren och se till att ventilationsluften kan strömma fritt",
+        "tail_canonical_zh": "保持电机清洁并确保通风气流畅通",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Håll motorn ren och se till att ventilationsluften kan strömma fritt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ventilationssystemet",
+        "head_canonical_zh": "通风系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "ventilationssystemet regelbundet kontrolleras och rengöras",
+        "tail_canonical_zh": "定期检查和清洁通风系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Om motorn används i dammig miljö skall ventilationssystemet regelbundet kontrolleras och rengöras.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "axeltätningarna",
+        "head_canonical_zh": "轴密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera skicket på axeltätningarna",
+        "tail_canonical_zh": "检查轴密封状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera skicket på axeltätningarna (t.ex. V-ring eller radialtätning) och byt dem om det behövs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "axeltätningarna",
+        "head_canonical_zh": "轴密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt dem om det behövs",
+        "tail_canonical_zh": "必要时更换轴密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kontrollera skicket på axeltätningarna (t.ex. V-ring eller radialtätning) och byt dem om det behövs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "lyssna efter ovanliga ljud",
+        "tail_canonical_zh": "听异常声音",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera skicket på lagren genom att lyssna efter ovanliga ljud, mäta vibrationer och lagertemperaturer, kontrollera mängden fett eller använda SPM-lagerövervakning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "mäta vibrationer",
+        "tail_canonical_zh": "测量振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera skicket på lagren genom att lyssna efter ovanliga ljud, mäta vibrationer och lagertemperaturer, kontrollera mängden fett eller använda SPM-lagerövervakning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "mäta ... lagertemperaturer",
+        "tail_canonical_zh": "测量轴承温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera skicket på lagren genom att lyssna efter ovanliga ljud, mäta vibrationer och lagertemperaturer, kontrollera mängden fett eller använda SPM-lagerövervakning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "kontrollera mängden fett",
+        "tail_canonical_zh": "检查润滑脂量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera skicket på lagren genom att lyssna efter ovanliga ljud, mäta vibrationer och lagertemperaturer, kontrollera mängden fett eller använda SPM-lagerövervakning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "använda SPM-lagerövervakning",
+        "tail_canonical_zh": "使用SPM轴承监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Kontrollera skicket på lagren genom att lyssna efter ovanliga ljud, mäta vibrationer och lagertemperaturer, kontrollera mängden fett eller använda SPM-lagerövervakning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "förslitningsskador",
+        "head_canonical_zh": "磨损损伤",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "motorn demonteras och alla delar kontrolleras och ersättas vid behov",
+        "tail_canonical_zh": "拆卸电机并检查所有部件，必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Om förslitningsskador upptäcks ska motorn demonteras och alla delar kontrolleras och ersättas vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lagren",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "När lagren byts måste ersättningslagren vara av samma typ som originallagren",
+        "tail_canonical_zh": "更换轴承时必须使用与原轴承相同类型的替换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "När lagren byts måste ersättningslagren vara av samma typ som originallagren.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "axeltätningar",
+        "head_canonical_zh": "轴密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "När axeltätningar byts måste de nya tätningarna ha samma kvalitet och egenskaper som originalen",
+        "tail_canonical_zh": "更换轴密封时新密封必须具有与原件相同的质量和特性",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "När axeltätningar byts måste de nya tätningarna ha samma kvalitet och egenskaper som originalen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dräneringsplugg",
+        "head_canonical_zh": "排水塞",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "pluggen öppnas regelbundet så att kondensvatten kan rinna ut ur motorn",
+        "tail_canonical_zh": "定期打开排水塞使冷凝水排出电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "På en IP 55-motor som har levererats med stängd dräneringsplugg bör pluggen öppnas regelbundet så att kondensvatten kan rinna ut ur motorn och inte bli kvar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "permanentsmorda lager",
+        "head_canonical_zh": "永久润滑轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Driftstimmar vid 25 °C",
+        "tail_canonical_zh": "25°C运行小时数",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Här följer driftstimmar för permanentsmorda lager vid omgivningstemperaturerna 25 och 40 °C:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "permanentsmorda lager",
+        "head_canonical_zh": "永久润滑轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Driftstimmar vid 40 °C",
+        "tail_canonical_zh": "40°C运行小时数",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Här följer driftstimmar för permanentsmorda lager vid omgivningstemperaturerna 25 och 40 °C:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

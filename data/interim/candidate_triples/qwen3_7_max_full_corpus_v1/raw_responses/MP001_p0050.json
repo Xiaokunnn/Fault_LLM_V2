@@ -1,0 +1,194 @@
+{
+  "page_key": "MP001:p0050",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2cead2db-3eff-9d6a-8a05-50c198a58aab",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2563,
+    "prompt_tokens": 23969,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 26532
+  },
+  "latency_ms": 33582,
+  "attempt": 1,
+  "prompt_sha256": "84d549943d105935a144b132abd7340f72c6f71f9601e5664fe95d96391ccc41",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Centrifugal Pumps",
+        "head_canonical_zh": "离心泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Measurements obtained through accelerometer or velocity pickup as close to bearing housing as practicable",
+        "tail_canonical_zh": "轴承座处加速度计或速度传感器测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Centrifugal Pumps\n                  Vertical Pump (12' - 20' Height) < 6.7 6.7–10.7 10.7 16.2\n\n                  Vertical Pump (8' - 12' Height) < 5.9 5.9–9.0 9.0  13.5\n                  Vertical Pump (5' - 8' Height) < 4.5 4.5–7.2 7.2   10.7\n                  Vertical Pump (0' - 5' Height) < 3.6 3.6–5.4 5.4    8.1\n\n                  General Purpose Horizontal Pump Direct < 3.6 3.6–5.4 5.4 8.1\n                  Coupled\n                  Boiler Feed Pump         < 3.6   3.6–5.4   5.4      8.1\n\n                  Hydraulic Pump           < 2.3   2.3–3.6   3.6      5.4\n                  Notes:\n\n                  1    Applicable for equipment speeds 600 to 60,000 RPM\n                  2    Measurements obtained through accelerometer or velocity pickup as close to bearing housing as\n                       practicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Vertical Pump (12' - 20' Height)",
+        "head_canonical_zh": "立式泵(12-20英尺高)",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "< 6.7",
+        "tail_canonical_zh": "振动良好阈值<6.7",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Vertical Pump (12' - 20' Height) < 6.7 6.7–10.7 10.7 16.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r013:c00",
+          "MP001:p0050:t00:r013:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Vertical Pump (12' - 20' Height)",
+        "head_canonical_zh": "立式泵(12-20英尺高)",
+        "head_type": "Equipment",
+        "relation": "indicates",
+        "tail_surface": "Low Alarm\n(4,5,7)",
+        "tail_canonical_zh": "低报警(需维护)",
+        "tail_type": "Symptom",
+        "evidence_text": "Vertical Pump (12' - 20' Height) < 6.7 6.7–10.7 10.7 16.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r013:c00",
+          "MP001:p0050:t00:r013:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Vertical Pump (12' - 20' Height)",
+        "head_canonical_zh": "立式泵(12-20英尺高)",
+        "head_type": "Equipment",
+        "relation": "indicates",
+        "tail_surface": "High Alarm\n(4,5,8)",
+        "tail_canonical_zh": "高报警( imminent failure)",
+        "tail_type": "Symptom",
+        "evidence_text": "Vertical Pump (12' - 20' Height) < 6.7 6.7–10.7 10.7 16.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r013:c00",
+          "MP001:p0050:t00:r013:c04"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "General Purpose Horizontal Pump Direct\nCoupled",
+        "head_canonical_zh": "通用卧式直联泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "< 3.6",
+        "tail_canonical_zh": "振动良好阈值<3.6",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "General Purpose Horizontal Pump Direct < 3.6 3.6–5.4 5.4 8.1\n                  Coupled",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r017:c00",
+          "MP001:p0050:t00:r017:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Boiler Feed Pump",
+        "head_canonical_zh": "锅炉给水泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "< 3.6",
+        "tail_canonical_zh": "振动良好阈值<3.6",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Boiler Feed Pump         < 3.6   3.6–5.4   5.4      8.1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r018:c00",
+          "MP001:p0050:t00:r018:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Hydraulic Pump",
+        "head_canonical_zh": "液压泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "< 2.3",
+        "tail_canonical_zh": "振动良好阈值<2.3",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Hydraulic Pump           < 2.3   2.3–3.6   3.6      5.4",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0050:t00:r019:c00",
+          "MP001:p0050:t00:r019:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Low Alarm\n(4,5,7)",
+        "head_canonical_zh": "低报警",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Equipment requires maintenance to determine cause of high vibration and to repair",
+        "tail_canonical_zh": "维护以确定高振原因并修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7    Equipment requires maintenance to determine cause of high vibration and to repair.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High Alarm\n(4,5,8)",
+        "head_canonical_zh": "高报警",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Equipment failure is imminent and should be shut down so as to determine cause of high vibration and to repair",
+        "tail_canonical_zh": "停机检查并修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "8    Equipment failure is imminent and should be shut down so as to determine cause of high vibration and\n                       to repair.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

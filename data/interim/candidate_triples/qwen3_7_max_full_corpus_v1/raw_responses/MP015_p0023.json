@@ -1,0 +1,97 @@
+{
+  "page_key": "MP015:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6ccdc6d8-0665-9806-9a80-76144cabc28f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 886,
+    "prompt_tokens": 12128,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13014
+  },
+  "latency_ms": 12673,
+  "attempt": 1,
+  "prompt_sha256": "382c6b63434d29ad4641f87388645add82f39bb2ce8098f77a3bd32fbfba4ea2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "coupling",
+        "head_canonical_zh": "联轴器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Tolerances for aligning the coupling",
+        "tail_canonical_zh": "联轴器对中公差检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "3.4.4 Tolerances for aligning the coupling\n\n                       The maximum allowable tolerances for the alignment of the coupling halves are shown in\n                       Table 2.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "coupling",
+        "head_canonical_zh": "联轴器",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "Table 2: Alignment tolerances",
+        "tail_canonical_zh": "联轴器对中公差表",
+        "tail_type": "Standard",
+        "evidence_text": "The maximum allowable tolerances for the alignment of the coupling halves are shown in\n                       Table 2. See also figure 5.\n                       Table 2: Alignment tolerances",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumps with flanged-on motors",
+        "head_canonical_zh": "法兰连接电机泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "realignment of pump and motor shaft is not necessary",
+        "tail_canonical_zh": "无需重新对中泵和电机轴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumps with flanged-on motors (FRES with B5 motor, FREF, FREM) can be mounted\n                       directly on a foundation, realignment of pump and motor shaft is not necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "guard",
+        "head_canonical_zh": "防护罩",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit the guard",
+        "tail_canonical_zh": "安装防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "4 Fit the guard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

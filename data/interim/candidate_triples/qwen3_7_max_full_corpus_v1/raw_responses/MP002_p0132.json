@@ -1,0 +1,69 @@
+{
+  "page_key": "MP002:p0132",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-48140c99-c534-91d7-8c66-e658f235a02d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 601,
+    "prompt_tokens": 5577,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6178
+  },
+  "latency_ms": 8341,
+  "attempt": 1,
+  "prompt_sha256": "b24cfeab72e2b3062c1c4740e389e9f3f97f3d8bc1efbaec63398ca0ab22efb4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Wear\nFatigue\nCorrosion\nparticles\nParticles in\nlubricating oil",
+        "head_canonical_zh": "润滑油中的磨损、疲劳及腐蚀颗粒",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Ferrography",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Wear\nFatigue\nCorrosion\nparticles\nParticles in\nlubricating oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0132:t00:r001:c00",
+          "MP002:p0132:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wear\nFatigue\nCorrosion\nLubricating oil\ncontamination\nParticles in\nhydraulic oil",
+        "head_canonical_zh": "液压油污染及颗粒",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Particle Counting",
+        "tail_canonical_zh": "颗粒计数",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Wear\nFatigue\nCorrosion\nLubricating oil\ncontamination\nParticles in\nhydraulic oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0132:t00:r002:c00",
+          "MP002:p0132:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

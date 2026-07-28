@@ -1,0 +1,112 @@
+{
+  "page_key": "MP003:p0609",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bb8cef57-21be-906b-8d56-3f8eba8c3781",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1207,
+    "prompt_tokens": 2477,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3684
+  },
+  "latency_ms": 19544,
+  "attempt": 1,
+  "prompt_sha256": "701ea5979ae3f6bd03f46bd1c4540d6bb7663e38266d43508f2c8e64297f8288",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fuel oil service pump",
+        "head_canonical_zh": "燃油供给泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "standby pump capable of serving all engines is to be installed",
+        "tail_canonical_zh": "安装能服务所有发动机的备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where auxiliary diesel engines are provided with a common fuel oil service pump or similar, a standby pump capable of serving all engines is to be installed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumps ... for fuel injector cooling",
+        "head_canonical_zh": "燃油喷油器冷却泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "provision for a standby pump is to be in accordance with 4-6-5/3.5.1",
+        "tail_canonical_zh": "按4-6-5/3.5.1配置备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where pumps are provided for fuel injector cooling, the provision for a standby pump is to be in accordance with 4-6-5/3.5.1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "common filters or strainers",
+        "head_canonical_zh": "公用滤器或粗滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "arranged such that they can be cleaned without interrupting the power supply",
+        "tail_canonical_zh": "布置成可在不中断供电的情况下进行清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where common filters or strainers are provided to serve the fuel oil injection-pump suction lines of all the generator engines, they are to be arranged such that they can be cleaned without interrupting the power supply specified in 4-8-2/3.1.1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Piping between the service pump and the combustors",
+        "head_canonical_zh": "供给泵与燃烧器之间的管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "effectively jacketed or shielded",
+        "tail_canonical_zh": "有效加装护套或屏蔽",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping between the service pump and the combustors are to be effectively jacketed or shielded as in 4-6-5/3.3.6 or 4-6-5/3.3.7, respectively.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "malfunction in its operation",
+        "head_canonical_zh": "运行故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "quick closing device which will automatically shut off fuel supply",
+        "tail_canonical_zh": "自动切断燃油供应的快速关闭装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Each gas turbine is to be fitted with a quick closing device which will automatically shut off fuel supply upon sensing malfunction in its operation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

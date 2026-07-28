@@ -1,0 +1,241 @@
+{
+  "page_key": "MP003:p0428",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-17b49545-8f06-9704-a258-334b471973ad",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2748,
+    "prompt_tokens": 10171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12919
+  },
+  "latency_ms": 32793,
+  "attempt": 1,
+  "prompt_sha256": "03ac052bfc56a361399e4a4dac99b71a6209ab93706bab6c51c34e1f6f29ad5e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Burner flame -failure",
+        "head_canonical_zh": "燃烧器熄火故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Burner flame -failure           x          4-4-1/13.3.3",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r001:c01",
+          "MP003:p0428:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flame scanner -failure",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Flame scanner -failure          x          4-4-1/13.3.3",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r002:c01",
+          "MP003:p0428:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Forced draft system -failure",
+        "head_canonical_zh": "强制通风系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Forced draft system -failure    x         [4-4-1/11.5.1(c)]",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r003:c01",
+          "MP003:p0428:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control power supply -loss",
+        "head_canonical_zh": "控制电源丧失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Control power supply -loss      x         [4-4-1/11.5.1(d)]",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r004:c01",
+          "MP003:p0428:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermal oil expansion tank level -low",
+        "head_canonical_zh": "热油膨胀柜液位低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thermal oil expansion tank level -low x    4-4-1/13.3.3",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r005:c01",
+          "MP003:p0428:t00:r005:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermal oil temperature at oil outlet -high",
+        "head_canonical_zh": "热油出口温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thermal oil temperature at oil outlet -high x 4-4-1/13.3.3",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r006:c01",
+          "MP003:p0428:t00:r006:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermal oil pressure or flow in circulation system\n-low",
+        "head_canonical_zh": "循环系统热油压力或流量低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thermal oil pressure or flow in circulation system\n-low                                                          x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r007:c01",
+          "MP003:p0428:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flue gas temperature -high",
+        "head_canonical_zh": "烟气温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Flue gas temperature -high      x          4-4-1/13.3.3",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0428:t00:r008:c01",
+          "MP003:p0428:t00:r008:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermal oil circulating pumps",
+        "head_canonical_zh": "热油循环泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "remote means of stopping from outside the space",
+        "tail_canonical_zh": "处所外远程停止装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thermal oil circulating pumps, fuel oil service pumps and forced-draft fans are to be fitted with\nlocal means of operation and remote means of stopping from outside the space in which these\nequipment are located.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fuel oil service pumps",
+        "head_canonical_zh": "燃油供给泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "remote means of stopping from outside the space",
+        "tail_canonical_zh": "处所外远程停止装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Thermal oil circulating pumps, fuel oil service pumps and forced-draft fans are to be fitted with\nlocal means of operation and remote means of stopping from outside the space in which these\nequipment are located.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tubes",
+        "head_canonical_zh": "管束",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "examined for\nsigns of corrosion and leakage",
+        "tail_canonical_zh": "检查腐蚀和泄漏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The heater is to be so designed and installed that the tubes may be easily and readily examined for\nsigns of corrosion and leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

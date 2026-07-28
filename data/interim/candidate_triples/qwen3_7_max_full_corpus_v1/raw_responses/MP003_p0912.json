@@ -1,0 +1,194 @@
+{
+  "page_key": "MP003:p0912",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b8ed1118-cbe1-9528-9078-d38cc2a1ceb9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2056,
+    "prompt_tokens": 7996,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10052
+  },
+  "latency_ms": 29136,
+  "attempt": 1,
+  "prompt_sha256": "a88c638a6613f94e4030d681c66cb5c0f088d1920104e7c547c69cf7d81fdf8c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Inspection of components (only Hardware) from sub-suppliers",
+        "head_canonical_zh": "分包商硬件部件检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "components (only Hardware) from sub-suppliers",
+        "tail_canonical_zh": "分包商硬件部件",
+        "tail_type": "Component",
+        "evidence_text": "Inspection of components (only Hardware) from sub-suppliers",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0912:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Type tests according to 4-9-9/15.7 TABLE 1",
+        "head_canonical_zh": "按4-9-9/15.7表1进行的型式试验",
+        "head_type": "InspectionMethod",
+        "relation": "specified_by",
+        "tail_surface": "4-9-9/15.7 TABLE 1",
+        "tail_canonical_zh": "4-9-9/15.7表1",
+        "tail_type": "Standard",
+        "evidence_text": "Type tests according to 4-9-9/15.7 TABLE 1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0912:t00:r004:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wireless Data Communication Test",
+        "head_canonical_zh": "无线数据通信测试",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Wireless Data Communication",
+        "tail_canonical_zh": "无线数据通信",
+        "tail_type": "Equipment",
+        "evidence_text": "Wireless Data Communication Test",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0912:t00:r005:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failures on the communication network itself and data communication failure on nodes connected to the network",
+        "head_canonical_zh": "通信网络本身故障及网络连接节点的数据通信故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "continuously monitored",
+        "tail_canonical_zh": "连续监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The data communication network is to be continuously monitored to detect failures on the communication network itself and data communication failure on nodes connected to the network.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "abnormal condition",
+        "head_canonical_zh": "异常工况",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed at the centralized control station and on the navigation bridge",
+        "tail_canonical_zh": "在集中控制站和驾驶台报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Any detected abnormal condition is to be alarmed at the centralized control station and on the navigation bridge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unacceptable data transmission delays (overloading of network)",
+        "head_canonical_zh": "不可接受的数据传输延迟（网络过载）",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Safeguards are to be provided",
+        "tail_canonical_zh": "设置保护措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Safeguards are to be provided to prevent unacceptable data transmission delays (overloading of network).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "critical data overload condition",
+        "head_canonical_zh": "临界数据过载工况",
+        "head_type": "OperatingCondition",
+        "relation": "manifests_as",
+        "tail_surface": "Alarm is to be activated prior to a critical data overload condition",
+        "tail_canonical_zh": "临界数据过载前触发报警",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Alarm is to be activated prior to a critical data overload condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "corrupted or invalid data",
+        "head_canonical_zh": "损坏或无效数据",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "timely recovery of corrupted or invalid data",
+        "tail_canonical_zh": "及时恢复损坏或无效数据",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided to ensure the integrity of data and provide timely recovery of corrupted or invalid data.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the online network",
+        "head_canonical_zh": "在线网络故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "standby network is automatically connected to the system",
+        "tail_canonical_zh": "备用网络自动接入系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Duplicated data communication network is to be arranged so that upon the failure of the online network, the standby network is automatically connected to the system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

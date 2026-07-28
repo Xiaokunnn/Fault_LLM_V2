@@ -1,0 +1,80 @@
+{
+  "page_key": "MP005:p0100",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-19cfe5e5-721e-9194-9aa6-239508bbd626",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 771,
+    "prompt_tokens": 3953,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4724
+  },
+  "latency_ms": 9447,
+  "attempt": 1,
+  "prompt_sha256": "4d43f7475e35725eb19139dbd5b17f4ea033c04c551b9ddab210a01f82494328",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal (10)",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Assembly the shaft seal (10)",
+        "tail_canonical_zh": "装配轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Assembly the shaft seal (10) .",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit the sunk key in the shaft and lead the impeller towards the shoulder of the shaft. Secure the impeller with washers (7 and 8) and a nut (Ø215/265/418) or a set screw (Ø330/415/465/525).",
+        "tail_canonical_zh": "安装叶轮键并固定叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit the sunk key in the shaft and lead the\nimpeller towards the shoulder of the shaft.\nSecure the impeller with washers (7 and 8) and\na nut (Ø215/265/418) or a set screw\n(Ø330/415/465/525).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ring at the end of the shaft seal spring",
+        "head_canonical_zh": "轴封弹簧端部环",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "recess of the impeller",
+        "tail_canonical_zh": "叶轮凹槽",
+        "tail_type": "Component",
+        "evidence_text": "NOTE: Take care that the ring at the end of the shaft seal spring locates in the recess of the\nimpeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

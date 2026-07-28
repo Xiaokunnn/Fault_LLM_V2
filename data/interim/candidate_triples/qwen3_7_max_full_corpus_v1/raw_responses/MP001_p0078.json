@@ -1,0 +1,215 @@
+{
+  "page_key": "MP001:p0078",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-01127931-21fb-91cd-a7ae-7bb35c35c66d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2381,
+    "prompt_tokens": 9869,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12250
+  },
+  "latency_ms": 32175,
+  "attempt": 1,
+  "prompt_sha256": "670be49b5bd4aed69cf9939b3d6117a441cb55da6bfa786c83f7150c85cd8993",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Oil Analysis",
+        "head_canonical_zh": "油液分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Color Indicator Titration",
+        "tail_canonical_zh": "颜色指示剂滴定法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Oil Analysis ... Color Indicator Titration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r007:c00",
+          "MP001:p0078:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oil Analysis",
+        "head_canonical_zh": "油液分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "All-Metal Debris Sensors",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Oil Analysis ... All-Metal Debris Sensors",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r007:c00",
+          "MP001:p0078:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Base and Acid Number",
+        "head_canonical_zh": "碱值和酸值",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Color Indicator Titration",
+        "tail_canonical_zh": "颜色指示剂滴定法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Base and Acid Number ... Color Indicator Titration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r006:c01",
+          "MP001:p0078:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ferrous and non-ferrous wear particles",
+        "head_canonical_zh": "铁磁性和非铁磁性磨损颗粒",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "All-Metal Debris Sensors",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ferrous and non-ferrous wear particles ... All-Metal Debris Sensors",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r006:c02",
+          "MP001:p0078:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear caused by fatigue",
+        "head_canonical_zh": "疲劳引起的磨损",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "Ferrous and non-ferrous wear particles",
+        "tail_canonical_zh": "铁磁性和非铁磁性磨损颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Ferrous and non-ferrous wear particles caused by fatigue",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r006:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Gas turbine bearings",
+        "head_canonical_zh": "燃气轮机轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "All-Metal Debris Sensors",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Gas turbine bearings ... All-Metal Debris Sensors",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r005:c02",
+          "MP001:p0078:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oils used in diesel, gasoline engines, gas turbines",
+        "head_canonical_zh": "柴油机、汽油机及燃气轮机用油",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Color Indicator Titration",
+        "tail_canonical_zh": "颜色指示剂滴定法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Oils used in diesel, gasoline engines, gas turbines ... Color Indicator Titration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r005:c01",
+          "MP001:p0078:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Low chance of false indications",
+        "head_canonical_zh": "误报几率低",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "All-Metal Debris Sensors",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Low chance of false indications ... All-Metal Debris Sensors",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r001:c02",
+          "MP001:p0078:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "On-board sensors can store various time domain plots for identification of damage modes and wear sources in near real time",
+        "head_canonical_zh": "机载传感器可存储多种时域图以近实时识别损伤模式和磨损源",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "All-Metal Debris Sensors",
+        "tail_canonical_zh": "全金属碎屑传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "On-board sensors can store various time domain plots for identification of damage modes and wear sources in near real time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0078:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": [
+      "Table MP001:p0078:t00 appears to be OCR-garbled with reversed text segments; triples were extracted based on recoverable keywords matching target fault classes and evidence roles.",
+      "Specific pump components are not explicitly mentioned in this page; extracted entities relate to general rotating machinery (gas turbines, engines) and lubrication systems applicable to pumps per scope note."
+    ]
+  }
+}

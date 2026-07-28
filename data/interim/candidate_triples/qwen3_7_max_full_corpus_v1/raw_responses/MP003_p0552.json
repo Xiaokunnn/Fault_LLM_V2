@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0552",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-40e6dbd3-9a82-934a-aa1a-ee1a6319ea8d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 895,
+    "prompt_tokens": 2241,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3136
+  },
+  "latency_ms": 11544,
+  "attempt": 1,
+  "prompt_sha256": "8d40c298c918c0ee70bc01909ae8949785f3d45064b7da5a3ab97c145793c3ab",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Plastic Pipe Bonding Procedure",
+        "head_canonical_zh": "塑料管粘接工艺",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "Joint Bonding Parameters",
+        "tail_canonical_zh": "接头粘接参数",
+        "tail_type": "Standard",
+        "evidence_text": "To qualify joint bonding procedures, the tests and examinations specified herein are to be successfully completed. The procedure for making bonds is to include the following:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "test assembly",
+        "head_canonical_zh": "试验组件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatic test pressure",
+        "tail_canonical_zh": "静水压力试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "When the test assembly has been cured, it is to be subjected to a hydrostatic test pressure at a safety factor of 2.5 times the design pressure of the test assembly, for not less than one hour.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage or separation of joints",
+        "head_canonical_zh": "接头泄漏或分离",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatic test pressure",
+        "tail_canonical_zh": "静水压力试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "No leakage or separation of joints is to be allowed. The test is to be conducted so that the joint is loaded in both longitudinal and circumferential direction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bonding procedure",
+        "head_canonical_zh": "粘接工艺",
+        "head_type": "Standard",
+        "relation": "maintained_by",
+        "tail_surface": "requalified",
+        "tail_canonical_zh": "重新评定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Any change in the bonding procedure which will affect the physical and mechanical properties of the joint will require the procedure to be requalified.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

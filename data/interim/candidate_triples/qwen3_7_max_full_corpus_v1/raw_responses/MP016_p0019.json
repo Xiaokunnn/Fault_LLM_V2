@@ -1,0 +1,138 @@
+{
+  "page_key": "MP016:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-71f4e06f-b7b3-951a-942d-0b7c444182f4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1376,
+    "prompt_tokens": 2598,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3974
+  },
+  "latency_ms": 15624,
+  "attempt": 1,
+  "prompt_sha256": "cfd95363384f5ddb1284f5977312acb38c3fc058b1d7bca603c93634f1976fda",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pumpen mit flexiblem Laufrad",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "bis zu 30 Sekunden",
+        "tail_canonical_zh": "最长干转时间30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Pumpen mit flexiblem Laufrad benötigen zum Ansaugen bis zu 30 Sekunden – Lassen Sie sie nicht länger trockenlaufen, da das Laufrad bei Flüssigkeitsmangel Schaden nehmen kann.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "trockenlaufen",
+        "head_canonical_zh": "干转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Laufrad ... Schaden nehmen",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Lassen Sie sie nicht länger trockenlaufen, da das Laufrad bei Flüssigkeitsmangel Schaden nehmen kann.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "trockenlaufen",
+        "head_canonical_zh": "干转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Lassen Sie sie nicht länger trockenlaufen",
+        "tail_canonical_zh": "禁止超时干转",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lassen Sie sie nicht länger trockenlaufen, da das Laufrad bei Flüssigkeitsmangel Schaden nehmen kann.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ansaugleitungen",
+        "head_canonical_zh": "吸入管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "luftdicht sein",
+        "tail_canonical_zh": "保持气密",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die Ansaugleitungen müssen luftdicht sein, ansonsten kann die Pumpe nicht ansaugen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "nicht ansaugen",
+        "head_canonical_zh": "无法吸入/失去自吸",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Ansaugleitungen ... nicht ... luftdicht",
+        "tail_canonical_zh": "吸入管路不气密",
+        "tail_type": "Cause",
+        "evidence_text": "Die Ansaugleitungen müssen luftdicht sein, ansonsten kann die Pumpe nicht ansaugen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "nicht ansaugen",
+        "head_canonical_zh": "无法吸入/失去自吸",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Ansaugleitungen müssen luftdicht sein",
+        "tail_canonical_zh": "确保吸入管路气密",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die Ansaugleitungen müssen luftdicht sein, ansonsten kann die Pumpe nicht ansaugen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

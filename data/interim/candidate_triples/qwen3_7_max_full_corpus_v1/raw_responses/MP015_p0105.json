@@ -1,0 +1,156 @@
+{
+  "page_key": "MP015:p0105",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7322917f-ae48-968c-8ccf-fa053a3c8a43",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1534,
+    "prompt_tokens": 2080,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3614
+  },
+  "latency_ms": 18393,
+  "attempt": 1,
+  "prompt_sha256": "548502d1d2bb931dfad8b4afb08592ac60875c9890390620901ecc620ce1a34e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "forces and torques acting on the flanges",
+        "head_canonical_zh": "法兰作用力与扭矩",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "deformations in the pump unit",
+        "tail_canonical_zh": "泵机组变形",
+        "tail_type": "FaultMode",
+        "evidence_text": "The forces and torques acting on the flanges cause deformations in the pump unit.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "deformations in the pump unit",
+        "head_canonical_zh": "泵机组变形",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "displacement of the shaft journal of the pump in relation to the shaft journal of the motor",
+        "tail_canonical_zh": "泵轴颈相对于电机轴颈的位移",
+        "tail_type": "Symptom",
+        "evidence_text": "These are manifested in a displacement of the shaft journal of the pump in relation to the shaft journal of the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "radial displacement of the shaft journal of the pump",
+        "head_canonical_zh": "泵轴颈径向位移",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "forces and torques acting on the flanges",
+        "tail_canonical_zh": "法兰作用力与扭矩",
+        "tail_type": "Cause",
+        "evidence_text": "The permissible forces and moments on the flanges should be based on the following maximum values for the radial displacement of the shaft journal of the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumps of bracket group 1",
+        "head_canonical_zh": "支架组1泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "0,15 mm",
+        "tail_canonical_zh": "0.15毫米",
+        "tail_type": "Standard",
+        "evidence_text": "pumps of bracket group 1: 0,15 mm,",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumps of bracket group 2",
+        "head_canonical_zh": "支架组2泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "0,20 mm",
+        "tail_canonical_zh": "0.20毫米",
+        "tail_type": "Standard",
+        "evidence_text": "pumps of bracket group 2: 0,20 mm,",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumps of bracket group 3",
+        "head_canonical_zh": "支架组3泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "0,25 mm",
+        "tail_canonical_zh": "0.25毫米",
+        "tail_type": "Standard",
+        "evidence_text": "pumps of bracket group 3: 0,25 mm,",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumps of bracket group 4",
+        "head_canonical_zh": "支架组4泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "0,25 mm",
+        "tail_canonical_zh": "0.25毫米",
+        "tail_type": "Standard",
+        "evidence_text": "pumps of bracket group 4: 0,25 mm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

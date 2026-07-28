@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9084af30-2dcd-9711-8802-2a2b4f277429",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 491,
+    "prompt_tokens": 1872,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2363
+  },
+  "latency_ms": 6398,
+  "attempt": 1,
+  "prompt_sha256": "d74c60573e79d3c564868efe412f18dea63fd18ac7a9b3d981960cd5681afef6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearings in gearboxes, pumps, motors, etc.",
+        "head_canonical_zh": "齿轮箱、泵、电机等中的轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "This technique",
+        "tail_canonical_zh": "该技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "This technique is reported to work well on bearings by themselves but has some serious limitation on bearings in gearboxes, pumps, motors, etc., because of the other “normal” frequencies that are in most common machines, such as blade pass frequency, gear mesh frequency, and slot pass frequency, for example.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.5
+      },
+      {
+        "head_surface": "hydraulic pipes and tubes",
+        "head_canonical_zh": "液压管路和管子",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Reported to be suitable for hydraulic pipes and tubes.",
+        "tail_canonical_zh": "据报道适用于液压管路和管子的技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Reported to be suitable for hydraulic pipes and tubes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.55,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.4
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0611",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-abea03d4-0b78-922f-a638-fe3f447ab05b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 995,
+    "prompt_tokens": 2397,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3392
+  },
+  "latency_ms": 12913,
+  "attempt": 1,
+  "prompt_sha256": "65b28846f582ec1e00f7663e06ca0c000ac8bb86163134637f6a05003db7532c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "lubricating oil system",
+        "head_canonical_zh": "润滑油系统",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "vessel is inclined at the angles indicated in 4-1-1/7.9",
+        "tail_canonical_zh": "船舶倾斜角度(4-1-1/7.9)",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The lubricating oil systems and the associated equipment are to have the capability of satisfactory operation when the vessel is inclined at the angles indicated in 4-1-1/7.9.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the lubricating oil system",
+        "head_canonical_zh": "润滑油系统故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Audible and visual alarms",
+        "tail_canonical_zh": "声光报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Audible and visual alarms are to be fitted for each lubricating oil system of engine, turbine or gear to warn of the failure of the lubricating oil system where engines are having a rated power greater than 37 kW (50 hp).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of the lubricating oil supply to the gas turbine or the associated gear",
+        "head_canonical_zh": "燃气轮机或关联齿轮润滑油供应故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatic quick acting device to shut off the fuel supply",
+        "tail_canonical_zh": "自动快速切断燃油装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Propulsion gas turbines are to be fitted with an automatic quick acting device to shut off the fuel supply upon failure of the lubricating oil supply to the gas turbine or the associated gear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the lubricating oil supply to the reduction gear",
+        "head_canonical_zh": "减速齿轮润滑油供应故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatic means is to be fitted to stop the engines",
+        "tail_canonical_zh": "自动停机装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where reduction gears are driven diesel engines, an automatic means is to be fitted to stop the engines in the event of failure of the lubricating oil supply to the reduction gear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

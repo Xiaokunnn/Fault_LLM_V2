@@ -1,0 +1,147 @@
+{
+  "page_key": "MP016:p0044",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3656d80a-dc1b-9c21-b10b-cf82631cbff8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1526,
+    "prompt_tokens": 3981,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5507
+  },
+  "latency_ms": 18423,
+  "attempt": 1,
+  "prompt_sha256": "48195971db99e829c04913e266717c3b69c13c35d50f61ecb7db48ab634e82cf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bombas de impulsor flexible de bronce",
+        "head_canonical_zh": "青铜柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "fluidos delicados, viscosos y cargados de partículas, así como líquidos finos",
+        "tail_canonical_zh": "精细、粘稠及含颗粒流体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Las bombas de impulsor flexible de bronce son bombas de desplazamiento semipositivo diseñadas para bombear fluidos delicados, viscosos y cargados de partículas, así como líquidos finos.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tapa de extremo",
+        "head_canonical_zh": "端盖",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "No utilice este equipo",
+        "tail_canonical_zh": "禁止使用设备",
+        "tail_type": "Risk",
+        "evidence_text": "No utilice este equipo si se retira la tapa de extremo, faltan las protecciones o si las tuberías de entrada y salida no están conectadas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "protecciones",
+        "head_canonical_zh": "防护装置",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "No utilice este equipo",
+        "tail_canonical_zh": "禁止使用设备",
+        "tail_type": "Risk",
+        "evidence_text": "No utilice este equipo si se retira la tapa de extremo, faltan las protecciones o si las tuberías de entrada y salida no están conectadas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "tuberías de entrada y salida",
+        "head_canonical_zh": "进出口管路",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "No utilice este equipo",
+        "tail_canonical_zh": "禁止使用设备",
+        "tail_type": "Risk",
+        "evidence_text": "No utilice este equipo si se retira la tapa de extremo, faltan las protecciones o si las tuberías de entrada y salida no están conectadas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motor de accionamiento de la bomba",
+        "head_canonical_zh": "泵驱动电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "aísle y bloquee",
+        "tail_canonical_zh": "隔离并锁定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Siempre aísle y bloquee el motor de accionamiento de la bomba antes de una inspección o mantenimiento de la bomba.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bombas con impulsor flexible",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "leva excéntrica",
+        "tail_canonical_zh": "偏心凸轮",
+        "tail_type": "Component",
+        "evidence_text": "una reducción de volumen provocada por la leva excéntrica que está ubicada en la carcasa",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "carcasa",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "leva excéntrica",
+        "tail_canonical_zh": "偏心凸轮",
+        "tail_type": "Component",
+        "evidence_text": "la leva excéntrica que está ubicada en la carcasa",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

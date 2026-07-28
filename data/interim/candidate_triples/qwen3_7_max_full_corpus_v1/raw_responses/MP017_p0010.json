@@ -1,0 +1,119 @@
+{
+  "page_key": "MP017:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cfadb554-83fb-9135-8fae-9146c55f3e6a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1297,
+    "prompt_tokens": 23595,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24892
+  },
+  "latency_ms": 20427,
+  "attempt": 1,
+  "prompt_sha256": "21e51bf265aee26b4198af2dfc5f552c304ccf37a85f907bceb164d86082f563",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "siphoning action causing damage to the pump",
+        "head_canonical_zh": "虹吸作用导致泵损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "siphon breaker is used in the line",
+        "tail_canonical_zh": "管路中使用虹吸破坏器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not terminate the discharge line at a level lower than that of the liquid being pumped unless a siphon breaker is used in the line. Otherwise, a siphoning action causing damage to the pump could result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive shock pressure and reverse rotation",
+        "head_canonical_zh": "过大冲击压力和反转",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "throttling valve and a system check valve be installed in the discharge line",
+        "tail_canonical_zh": "在排出管路安装节流阀和系统止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "With high discharge heads, it is recommended that a throttling valve and a system check valve be installed in the discharge line to protect the pump from excessive shock pressure and reverse rotation when it is stopped.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "self-priming centrifugal pump will not prime",
+        "head_canonical_zh": "自吸离心泵无法自吸",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "sufficient static liquid head to hold the discharge check valve closed",
+        "tail_canonical_zh": "静液头足以使排出止回阀保持关闭",
+        "tail_type": "Cause",
+        "evidence_text": "A self-priming centrifugal pump will not prime if there is sufficient static liquid head to hold the discharge check valve closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "self-priming centrifugal pump will not prime",
+        "head_canonical_zh": "自吸离心泵无法自吸",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "discharge side of the pump must be opened to atmospheric pressure through a bypass line installed between the pump discharge and the check valve",
+        "tail_canonical_zh": "通过安装在泵排出口与止回阀之间的旁通管将泵排出口通大气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "However, if a check valve has been installed in the discharge line, the discharge side of the pump must be opened to atmospheric pressure through a bypass line installed between the pump discharge and the check valve. A self-priming centrifugal pump will not prime if there is sufficient static liquid head to hold the discharge check valve closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "friction losses",
+        "head_canonical_zh": "摩擦损失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "use a valve as large as the largest pipe",
+        "tail_canonical_zh": "使用与最大管径等大的阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If a throttling valve is desired in the discharge line, use a valve as large as the largest pipe to minimize friction losses.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

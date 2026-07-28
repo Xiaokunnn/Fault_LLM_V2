@@ -1,0 +1,74 @@
+{
+  "page_key": "MP005:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-42b8fc56-66fe-9acf-ba90-feb27379e244",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 687,
+    "prompt_tokens": 3660,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4347
+  },
+  "latency_ms": 8893,
+  "attempt": 1,
+  "prompt_sha256": "2e91e1584c96ad7ae0892960fdcaf0023f3af224baa940ab9d352b5173d6fa4b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump housing",
+        "head_canonical_zh": "泵壳体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "temperature sensor",
+        "tail_canonical_zh": "温度传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The pump housing can be fitted with a temperature sensor to be connected to the electrical control system on site and then set this to trip the drive power 10°C above normal operating temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Max. allowed liquid temperature is 80°C for fresh water",
+        "head_canonical_zh": "淡水最高允许液温80°C",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "NOTE: Max. allowed liquid temperature is 80°C for fresh water and most likely less for other liquids.",
+        "tail_canonical_zh": "液体温度限制说明",
+        "tail_type": "Standard",
+        "evidence_text": "NOTE: Max. allowed liquid temperature is 80°C for fresh water and most likely less for other liquids.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "trip the drive power 10°C above normal operating temperature",
+        "head_canonical_zh": "高于正常运行温度10°C时切断驱动电源",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "temperature sensor",
+        "tail_canonical_zh": "温度传感器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The pump housing can be fitted with a temperature sensor to be connected to the electrical control system on site and then set this to trip the drive power 10°C above normal operating temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

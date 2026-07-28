@@ -1,0 +1,265 @@
+{
+  "page_key": "MP003:p0425",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-64187407-3a1b-9109-82ae-c10a7cbcd66d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2919,
+    "prompt_tokens": 14057,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 16976
+  },
+  "latency_ms": 33163,
+  "attempt": 1,
+  "prompt_sha256": "de5277ba2a96193dbbe0747a4d040254e061d16d2eb4dac8b12bcf2f722cb645",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Boiler drum water level - low",
+        "head_canonical_zh": "锅炉汽包水位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Boiler drum water level - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r001:c01",
+          "MP003:p0425:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Boiler drum water level - low-low",
+        "head_canonical_zh": "锅炉汽包水位极低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Boiler drum water level - low-low   x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r002:c01",
+          "MP003:p0425:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Boiler drum water level - high",
+        "head_canonical_zh": "锅炉汽包水位高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Boiler drum water level - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r003:c01",
+          "MP003:p0425:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Forced draft fan - failure",
+        "head_canonical_zh": "强制通风机故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Forced draft fan - failure          x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r004:c01",
+          "MP003:p0425:t00:r004:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air Supply Casing - fire",
+        "head_canonical_zh": "供气箱火灾",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Air Supply Casing - fire x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r005:c01",
+          "MP003:p0425:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Burner flame - failure",
+        "head_canonical_zh": "燃烧器火焰熄灭",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Burner flame - failure              x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r006:c01",
+          "MP003:p0425:t00:r006:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flame scanner - failure",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Flame scanner - failure             x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r007:c01",
+          "MP003:p0425:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Atomizing medium - off-limit condition",
+        "head_canonical_zh": "雾化介质超限工况",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Atomizing medium - off-limit x              4-4-1/11.5.3(e)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r008:c01",
+          "MP003:p0425:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Uptake gas temperature - high",
+        "head_canonical_zh": "烟道排气温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Uptake gas temperature - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r009:c01",
+          "MP003:p0425:t00:r009:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control power supply - loss",
+        "head_canonical_zh": "控制电源丧失",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Automatic Shutdown with Alarm",
+        "tail_canonical_zh": "带报警的自动停机",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Control power supply - loss         x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0425:t00:r010:c01",
+          "MP003:p0425:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "automatic ignition system",
+        "head_canonical_zh": "自动点火系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "timed boiler purge with all air registers open",
+        "tail_canonical_zh": "全开风门的定时锅炉吹扫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where boilers are fitted with an automatic ignition system, a timed boiler purge with all air registers open is required prior to ignition of the initial burner.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "false indication due to the failure of the flame scanner in the “flame-on” mode",
+        "head_canonical_zh": "火焰扫描器在“有火”模式下故障导致的误指示",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "fitted with dual scanners or a scanner of the self-checking type",
+        "tail_canonical_zh": "装设双扫描器或自检型扫描器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To avoid the possibility of a false indication due to the failure of the flame scanner in the “flame-on” mode, the initial light-off burner is to be fitted with dual scanners or a scanner of the self-checking type.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

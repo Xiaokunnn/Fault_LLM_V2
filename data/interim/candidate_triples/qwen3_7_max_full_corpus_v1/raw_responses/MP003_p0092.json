@@ -1,0 +1,148 @@
+{
+  "page_key": "MP003:p0092",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5c282f00-419d-9661-b81e-b1d9269f7b63",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1661,
+    "prompt_tokens": 2434,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4095
+  },
+  "latency_ms": 22949,
+  "attempt": 1,
+  "prompt_sha256": "c2ada78306532b9b0c67cf9ad6f8a93165bc975ef952c2526b231ff1db6d6f44",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "explosion relief valve",
+        "head_canonical_zh": "防爆泄压阀",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "recorded with indication of the pressure variation showing the maximum overpressure and steady under pressure",
+        "tail_canonical_zh": "记录压力变化指示最大超压和稳定负压",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The pressure rise and decay during an explosion is to be recorded with indication of the pressure variation showing the maximum overpressure and steady under pressure in the test vessel during testing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valve tightness",
+        "head_canonical_zh": "阀门密封性",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "verifying from records at the time of testing that an underpressure of at least 0.3 bar (3.06 kgf/cm2, 43.5 psi) is held by the test vessel for at least 10 seconds following an explosion",
+        "tail_canonical_zh": "验证测试容器在爆炸后保持至少0.3巴负压至少10秒的记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The valve tightness is to be ascertained by verifying from records at the time of testing that an underpressure of at least 0.3 bar (3.06 kgf/cm2, 43.5 psi) is held by the test vessel for at least 10 seconds following an explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flame arrester",
+        "head_canonical_zh": "阻火器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "examined for signs of serious damage and/or deformation",
+        "tail_canonical_zh": "检查严重损坏和/或变形迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "After each explosion test in Stage 2, (see 4-2-1-A2/13.3.2), the external condition of the flame arrester is to be examined for signs of serious damage and/or deformation that may affect the operation of the valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "serious damage and/or deformation",
+        "head_canonical_zh": "严重损坏和/或变形",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "signs of serious damage and/or deformation",
+        "tail_canonical_zh": "严重损坏和/或变形迹象",
+        "tail_type": "Symptom",
+        "evidence_text": "the external condition of the flame arrester is to be examined for signs of serious damage and/or deformation that may affect the operation of the valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "valves",
+        "head_canonical_zh": "阀门",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "dismantled and the condition of all components ascertained and documented",
+        "tail_canonical_zh": "拆卸并确认及记录所有部件状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "After completing the explosion tests, the valves are to be dismantled and the condition of all components ascertained and documented.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valve sticking",
+        "head_canonical_zh": "阀门卡滞",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "noted",
+        "tail_canonical_zh": "记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In particular, any indication of valve sticking or uneven opening that may affect operation of the valve is to be noted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "uneven opening",
+        "head_canonical_zh": "开启不均",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "noted",
+        "tail_canonical_zh": "记录",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In particular, any indication of valve sticking or uneven opening that may affect operation of the valve is to be noted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

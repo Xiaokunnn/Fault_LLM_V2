@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0337",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f2a98f4e-75a7-9b59-93ac-1a8c8203fee3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 450,
+    "prompt_tokens": 2331,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2781
+  },
+  "latency_ms": 6333,
+  "attempt": 1,
+  "prompt_sha256": "be1b294f7fdc3b43b2973600412cde2baf1143207ab253bb216c5587b94ffe2a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "loss of system pressure",
+        "head_canonical_zh": "系统压力丧失",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "simulate system behavior",
+        "tail_canonical_zh": "模拟系统行为",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Means are to be provided in the pitch actuating system to simulate system behavior in the event of loss of system pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Hydraulic pump units driven by main propulsion machinery",
+        "head_canonical_zh": "主推进机械驱动的液压泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "fitted with a suitable by-pass",
+        "tail_canonical_zh": "装设合适的旁通",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Hydraulic pump units driven by main propulsion machinery are to be fitted with a suitable by-pass for this purpose.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

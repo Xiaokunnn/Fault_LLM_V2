@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-9a522ad9-9209-9e31-ada3-aa5616147014",
+  "latency_ms": 8642,
+  "prompt_sha256": "9d0aed95c519aa2c8284756491620b323525c7393e40d5f2e47f218c619fe2ea",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-0f43bf8c57aa7af563c5",
+        "verdict": "entailed",
+        "confidence": 1.0,
+        "supporting_quote": "Pump has insufficient head\n--- CELL ---\n1, 5, 8, 9, 11, 17, 31",
+        "reason_code": "table_row_direct_mapping"
+      },
+      {
+        "id": "MPT-0f670b339db8043c0f60",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Glöm inte riskerna med rörliga delar, högt vätsketryck,",
+        "reason_code": "relation_mismatch"
+      },
+      {
+        "id": "MPT-0f99871a35e542b3cc44",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "simulation of single failure in the hydraulic system",
+        "reason_code": "action_target_match"
+      },
+      {
+        "id": "MPT-0fa3d8ca4128aa1bfa72",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Broken rotor bars or loose rotor\n--- CELL ---\n... A new rotor may be required",
+        "reason_code": "table_row_remedy"
+      },
+      {
+        "id": "MPT-100908c888b1ccaab189",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Air gap not uniform\n--- CELL ---\nCheck and correct end shield fits or bearing fits.",
+        "reason_code": "table_row_remedy"
+      },
+      {
+        "id": "MPT-10352e74c490c1046cbb",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Casings of vent outlet closing devices are to be of approved metallic materials adequately protected against corrosion.",
+        "reason_code": "requirement_vs_maintenance_action"
+      },
+      {
+        "id": "MPT-103c65e89a5aab3358cc",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Fit the wear plate ... in the pump casing",
+        "reason_code": "instruction_component_link"
+      },
+      {
+        "id": "MPT-1084e75c142a0a23d723",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "if there’s a risk of too high liquid temperatures, then a PT100 sensor should be mounted",
+        "reason_code": "conditional_prevention"
+      }
+    ]
+  }
+}

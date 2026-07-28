@@ -1,0 +1,101 @@
+{
+  "page_key": "MP003:p0317",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ffaac641-c385-9423-a134-5fd99f02a1f9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 907,
+    "prompt_tokens": 2321,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3228
+  },
+  "latency_ms": 11263,
+  "attempt": 1,
+  "prompt_sha256": "caf9cbbd9de8ebf70f9558a2cf91eadd66c6df16d81e0312318e64a76e0de213",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "primary lubricating system",
+        "head_canonical_zh": "主润滑系统",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "emergency supply of lubricating water",
+        "tail_canonical_zh": "应急润滑水供应",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "an emergency supply of lubricating water is to be provided in case of failure of the primary lubricating system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failures",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "alarmed as indicated in 4-3-2/15.3.1(d) TABLE 5",
+        "tail_canonical_zh": "按4-3-2/15.3.1(d)表5指示报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "any failures are to be alarmed as indicated in 4-3-2/15.3.1(d) TABLE 5",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Water Filtration System",
+        "head_canonical_zh": "水过滤系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "auto change-over system",
+        "tail_canonical_zh": "自动切换系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "An auto change-over system is to be provided in case of failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valves",
+        "head_canonical_zh": "阀门",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "manual operation",
+        "tail_canonical_zh": "手动操作",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the valves are to allow for manual operation in the event of a failure of the power supply",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

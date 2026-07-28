@@ -1,0 +1,205 @@
+{
+  "page_key": "MP003:p0694",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-48b42692-4cac-9225-8aa4-bf9bd0d3634b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2148,
+    "prompt_tokens": 2529,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4677
+  },
+  "latency_ms": 26834,
+  "attempt": 2,
+  "prompt_sha256": "c60e68e5a710c2c38b60dbeafa0234e060f25751d532a3128f3620d7910ac40c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "CO2 containers",
+        "head_canonical_zh": "二氧化碳容器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pressure gauge",
+        "tail_canonical_zh": "压力表",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Each container is to be fitted with the following instruments and alarms at the storage location: ● Pressure gauge",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High pressure",
+        "head_canonical_zh": "高压",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "High pressure alarm set at not more than the relief valve setting",
+        "tail_canonical_zh": "高压报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "● High pressure alarm set at not more than the relief valve setting",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Low pressure",
+        "head_canonical_zh": "低压",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Low pressure alarm set at not less than 18 bar (260 lb/in2)",
+        "tail_canonical_zh": "低压报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "● Low pressure alarm set at not less than 18 bar (260 lb/in2)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lowest permissible level of the liquid",
+        "head_canonical_zh": "最低允许液位",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Level indicator fitted on the container(s)",
+        "tail_canonical_zh": "液位指示器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "● Level indicator fitted on the container(s) ... ● The lowest permissible level of the liquid in the container(s) is reached.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "refrigerating units fails to operate",
+        "head_canonical_zh": "制冷机组运行故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Any one of the refrigerating units fails to operate",
+        "tail_canonical_zh": "制冷机组故障报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "● Any one of the refrigerating units fails to operate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "safety valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "thermal insulation preventing the operation of the safety valve in 24 h after de-energizing the plant",
+        "tail_canonical_zh": "隔热层防止安全阀动作",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The container(s) and outgoing pipes permanently filled with carbon dioxide are to have thermal insulation preventing the operation of the safety valve in 24 h after de-energizing the plant",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "porous or fibrous insulation materials",
+        "head_canonical_zh": "多孔或纤维绝缘材料",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "protected by impervious sheaths from deterioration by moisture",
+        "tail_canonical_zh": "防潮护套保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where porous or fibrous insulation materials are used, they are to be protected by impervious sheaths from deterioration by moisture.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "container main shutoff valve",
+        "head_canonical_zh": "容器主截止阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "kept locked open (LO) at all times",
+        "tail_canonical_zh": "保持锁定开启",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The container main shutoff valve is to be kept locked open (LO) at all times.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "container main shutoff valve",
+        "head_canonical_zh": "容器主截止阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "means to indicate whether the valve is open or closed",
+        "tail_canonical_zh": "阀门开关状态指示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The valve is to be provided with a means to indicate whether the valve is open or closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unit in operation",
+        "head_canonical_zh": "运行中的制冷机组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Upon failure or stoppage of the unit in operation, the other unit is to be put into operation automatically",
+        "tail_canonical_zh": "自动切换备用机组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Upon failure or stoppage of the unit in operation, the other unit is to be put into operation automatically.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

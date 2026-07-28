@@ -1,0 +1,182 @@
+{
+  "page_key": "MP017:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-19ad89cd-6410-9bb3-a236-f37752bdc81d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1817,
+    "prompt_tokens": 2167,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3984
+  },
+  "latency_ms": 22691,
+  "attempt": 1,
+  "prompt_sha256": "122b20af4b6828928218ed5675bbb38190ade68839259793027da54d41c1fc9d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Add liquid to the pump casing",
+        "tail_canonical_zh": "向泵壳加注液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Add liquid to the pump casing when:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Do not attempt to pump any liquids the pump has not been designed for",
+        "tail_canonical_zh": "禁止输送非设计液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the pump is properly lubricated",
+        "tail_canonical_zh": "检查泵润滑状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the pump is properly lubricated (see LUBRICATION in the MAINTENANCE AND REPAIR manual).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seal assembly",
+        "head_canonical_zh": "密封组件",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "Extended operation of a dry pump",
+        "tail_canonical_zh": "干转运行时间过长",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Extended operation of a dry pump will destroy the seal assembly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "seal assembly",
+        "head_canonical_zh": "密封组件",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Never operate the pump unless there is liquid in the pump casing",
+        "tail_canonical_zh": "严禁在泵壳无液时运行泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never operate the pump unless there is liquid in the pump casing. The pump will not prime when dry. Extended operation of a dry pump will destroy the seal assembly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.97,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "operated in the wrong direction",
+        "tail_canonical_zh": "反向运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "If the pump is operated in the wrong direction, the impeller could become loosened from the shaft and seriously damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.94
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "arrow on the pump body or accompanying decals",
+        "tail_canonical_zh": "泵体或标签上的旋转方向箭头",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The correct direction of pump rotation is indicated by an arrow on the pump body or accompanying decals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fill plug",
+        "head_canonical_zh": "注液塞",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reinstall and tighten the fill plug",
+        "tail_canonical_zh": "重新安装并拧紧注液塞",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "After filling the pump casing, reinstall and tighten the fill plug.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.92,
+        "tail_translation_confidence": 0.93
+      }
+    ],
+    "warnings": []
+  }
+}

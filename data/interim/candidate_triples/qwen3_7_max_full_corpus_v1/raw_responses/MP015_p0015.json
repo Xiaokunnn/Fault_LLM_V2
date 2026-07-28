@@ -1,0 +1,95 @@
+{
+  "page_key": "MP015:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4a120eba-597f-98fc-af40-2d6b9e4c7945",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 836,
+    "prompt_tokens": 9361,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10197
+  },
+  "latency_ms": 11304,
+  "attempt": 1,
+  "prompt_sha256": "d3e7f2491e5a4c7b656258e2fbefd96b1c11c0344588476cc75f2f9a07b4f5b1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "FreFlow pumps",
+        "head_canonical_zh": "FreFlow泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "mechanical seal",
+        "tail_canonical_zh": "机械密封",
+        "tail_type": "Component",
+        "evidence_text": "FreFlow pumps are self-priming centrifugal pumps with a half open or closed impeller and a mechanical seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "FreFlow pumps",
+        "head_canonical_zh": "FreFlow泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "half open or closed impeller",
+        "tail_canonical_zh": "半开式或闭式叶轮",
+        "tail_type": "Component",
+        "evidence_text": "FreFlow pumps are self-priming centrifugal pumps with a half open or closed impeller and a mechanical seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "MQ1",
+        "head_canonical_zh": "MQ1机械密封",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "EN 12756",
+        "tail_canonical_zh": "EN 12756标准",
+        "tail_type": "Standard",
+        "evidence_text": "MQ1 mechanical seal unbalanced EN 12756, with (oil) quench",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "MD1",
+        "head_canonical_zh": "MD1双端面机械密封",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "EN 12756",
+        "tail_canonical_zh": "EN 12756标准",
+        "tail_type": "Standard",
+        "evidence_text": "MD1 mechanical seal double unbalanced EN 12756",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "page_key": "MP002:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4468f45d-106b-9f83-88e7-fae7be237d13",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1132,
+    "prompt_tokens": 2323,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3455
+  },
+  "latency_ms": 14274,
+  "attempt": 1,
+  "prompt_sha256": "b45e704e0a3f91cc103b1462b58b4ee25f9e7bcdfe47365a8fad00620421fc9b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Proactive Maintenance Task",
+        "head_canonical_zh": "主动维护任务",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "failures",
+        "tail_canonical_zh": "故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Proactive Maintenance Task: Implemented to prevent failures before they occur, detect the onset of failures or discover failures before they impact system performance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Servicing and Routine Inspection",
+        "head_canonical_zh": "保养与例行检查",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "routine servicing",
+        "tail_canonical_zh": "例行保养",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Servicing and Routine Inspection: These are simple tasks intended to (1) assess the failure rate and failure pattern by performing routine servicing (e.g., lubrication) and (2) spot accidental damage and/or problems resulting from ignorance or negligence.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "accidental damage",
+        "head_canonical_zh": "意外损伤",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Servicing and Routine Inspection",
+        "tail_canonical_zh": "保养与例行检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Servicing and Routine Inspection: These are simple tasks intended to (1) assess the failure rate and failure pattern by performing routine servicing (e.g., lubrication) and (2) spot accidental damage and/or problems resulting from ignorance or negligence.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "minor leaks",
+        "head_canonical_zh": "轻微泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Servicing and routine inspection",
+        "tail_canonical_zh": "保养与例行检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Servicing and routine inspection may also be applied to items that have relatively insignificant failure consequences, yet should not be ignored (minor leaks, drips, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drips",
+        "head_canonical_zh": "滴漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Servicing and routine inspection",
+        "tail_canonical_zh": "保养与例行检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Servicing and routine inspection may also be applied to items that have relatively insignificant failure consequences, yet should not be ignored (minor leaks, drips, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

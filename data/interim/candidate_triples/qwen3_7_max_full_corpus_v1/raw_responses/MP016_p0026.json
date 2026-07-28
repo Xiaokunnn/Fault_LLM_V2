@@ -1,0 +1,115 @@
+{
+  "page_key": "MP016:p0026",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2ee95335-407a-99ce-9fd4-4274dd5bbe45",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1207,
+    "prompt_tokens": 2570,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3777
+  },
+  "latency_ms": 18456,
+  "attempt": 1,
+  "prompt_sha256": "d9e6a74b4982442a086f84f759e5a11de1c068f8729df7392d7434ccce0a78b0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Non azionare la pompa a secco oltre questo intervallo di tempo",
+        "head_canonical_zh": "禁止干运行超时",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "danneggiare la girante",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Non azionare la pompa a secco oltre questo intervallo di tempo per non danneggiare la girante.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Verificare che le tubazioni di alimentazione siano a tenuta d’aria",
+        "head_canonical_zh": "检查吸入管路气密性",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "non sarà possibile adescare la pompa",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "Verificare che le tubazioni di alimentazione siano a tenuta d’aria, altrimenti non sarà possibile adescare la pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tubazioni di alimentazione ... a tenuta d’aria",
+        "head_canonical_zh": "吸入管路漏气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "non sarà possibile adescare la pompa",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "Verificare che le tubazioni di alimentazione siano a tenuta d’aria, altrimenti non sarà possibile adescare la pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Controllare che la pompa non abbia subito danni fisici durante il trasporto",
+        "head_canonical_zh": "检查运输物理损伤",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "danni fisici",
+        "tail_canonical_zh": "物理损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Controllare che la pompa non abbia subito danni fisici durante il trasporto.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isolare sempre il motore di azionamento della pompa ed escluderlo prima di ispezionare la pompa o eseguire interventi di manutenzione",
+        "head_canonical_zh": "维护前隔离驱动电机",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "rischi legati a parti in movimento, alla pressione alta dei fluidi, temperature estreme, liquidi pericolosi ed elettricità",
+        "tail_canonical_zh": "运动部件及高压高温危险流体电气风险",
+        "tail_type": "Risk",
+        "evidence_text": "Isolare sempre il motore di azionamento della pompa ed escluderlo prima di ispezionare la pompa o eseguire interventi di manutenzione. Non dimenticare i rischi legati a parti in movimento, alla pressione alta dei fluidi, temperature estreme, liquidi pericolosi ed elettricità.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

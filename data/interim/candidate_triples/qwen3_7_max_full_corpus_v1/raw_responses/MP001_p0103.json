@@ -1,0 +1,99 @@
+{
+  "page_key": "MP001:p0103",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f3d1b98d-e6fe-9894-a483-a0da4fd51b0b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 909,
+    "prompt_tokens": 1994,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2903
+  },
+  "latency_ms": 11853,
+  "attempt": 1,
+  "prompt_sha256": "d1953b94a534e55c3a07a57f89284d8a8c1f4c71fb2834e853c19a40e66a17bf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "electric motors",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "This technique",
+        "tail_canonical_zh": "电气测试技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "This technique can be used to analyze electric motors (i.e., DC, AC induction, synchronous, and wound\nrotor).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "porosity and eccentricity, stator turn, coil and phase shorting; and winding cleanliness/resistance to ground",
+        "head_canonical_zh": "孔隙率与偏心、定子匝间及线圈相间短路、绕组清洁度及对地绝缘电阻",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "This technique",
+        "tail_canonical_zh": "电气测试技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "porosity and eccentricity, stator turn, coil and phase shorting; and winding cleanliness/resistance to ground.\n            This technique can be used to analyze electric motors",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "battery cell deterioration",
+        "head_canonical_zh": "电池单元劣化",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Battery impedance testing",
+        "tail_canonical_zh": "电池阻抗测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Battery impedance testing helps detect battery cell deterioration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cell problem or capacity loss",
+        "head_canonical_zh": "电池单元故障或容量损失",
+        "head_type": "FaultMode",
+        "relation": "indicated_by",
+        "tail_surface": "comparison results are outside a certain percentage",
+        "tail_canonical_zh": "比较结果超出特定百分比",
+        "tail_type": "SignalFeature",
+        "evidence_text": "If the\ncomparison results are outside a certain percentage, then this could indicate a cell problem or capacity loss.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

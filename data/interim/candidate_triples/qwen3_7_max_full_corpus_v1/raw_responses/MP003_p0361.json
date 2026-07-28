@@ -1,0 +1,207 @@
+{
+  "page_key": "MP003:p0361",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-86f71048-8c16-91dd-9164-0344926b394b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2319,
+    "prompt_tokens": 2388,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4707
+  },
+  "latency_ms": 27092,
+  "attempt": 1,
+  "prompt_sha256": "eae4622f02e4705284d19386fef9ebe18b5e5167d8cfa99d7e364b1787bbc4f9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "variable displacement pump control system",
+        "head_canonical_zh": "变量泵控制系统",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "alarm is to be activated when position of the variable displacement pump control system does not correspond to the given order",
+        "tail_canonical_zh": "变量泵控制位置与指令不符报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The alarm is to be activated when position of the variable displacement pump control system does not correspond to the given order",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "3-way full flow valve or similar in constant delivery pump system",
+        "head_canonical_zh": "定量泵系统三通全通阀或类似装置",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "incorrect position of 3-way full flow valve or similar in constant delivery pump system is detected",
+        "tail_canonical_zh": "定量泵系统阀门位置错误检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "when incorrect position of 3-way full flow valve or similar in constant delivery pump system is detected",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "hydraulic lock",
+        "head_canonical_zh": "液压锁死",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Monitoring for hydraulic lock is not required, when a steering failure alarm system is provided",
+        "tail_canonical_zh": "设有操舵故障报警系统时免检液压锁死",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Monitoring for hydraulic lock is not required, when a steering failure alarm system is provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "short circuit, broken connections and earth faults for command and feedback loops",
+        "head_canonical_zh": "指令和反馈回路短路、断路及接地故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Monitoring is to be provided for short circuit, broken connections and earth faults for command and feedback loops",
+        "tail_canonical_zh": "指令反馈回路电气故障监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Monitoring is to be provided for short circuit, broken connections and earth faults for command and feedback loops",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "data communication errors, computer hardware failures and software failure",
+        "head_canonical_zh": "数据通信错误、计算机硬件故障及软件故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "monitoring is to be provided for data communication errors, computer hardware failures and software failure",
+        "tail_canonical_zh": "计算机系统故障监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "For steering control systems that are computer-based systems, monitoring is to be provided for data communication errors, computer hardware failures and software failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Steering gear components",
+        "head_canonical_zh": "操舵装置部件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspected, tested and certified by a Surveyor at the plant of manufacture",
+        "tail_canonical_zh": "制造厂验船师检验试验及发证",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Steering gear components are to be inspected, tested and certified by a Surveyor at the plant of manufacture",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Hydraulic oil pumps",
+        "head_canonical_zh": "液压油泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "certified, see 4-6-1/7.3.1.i",
+        "tail_canonical_zh": "液压油泵认证",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Hydraulic oil pumps are to be certified, see 4-6-1/7.3.1.i",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power unit pump",
+        "head_canonical_zh": "动力单元泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "shop tested for a duration of not less than 100 hours",
+        "tail_canonical_zh": "车间试验不少于100小时",
+        "tail_type": "InspectionAction",
+        "evidence_text": "A prototype of each new design power unit pump is to be shop tested for a duration of not less than 100 hours",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "abnormal heating, excessive vibration, or other irregularities",
+        "head_canonical_zh": "异常发热、过度振动或其他不规则现象",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "The power unit is to be checked for abnormal heating, excessive vibration, or other irregularities",
+        "tail_canonical_zh": "动力单元异常发热振动检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The power unit is to be checked for abnormal heating, excessive vibration, or other irregularities",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment",
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power unit pump",
+        "head_canonical_zh": "动力单元泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "disassembled and inspected in the presence of a Surveyor",
+        "tail_canonical_zh": "验船师在场拆检",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Following the test, the power unit pump is to be disassembled and inspected in the presence of a Surveyor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "page_key": "MP022:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-29674fa9-482d-912f-b0ff-834312e9ab08",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 10607,
+  "attempt": 1,
+  "prompt_sha256": "e12ccdc5f923564dc6b90720591840f02eed0d6e058cfea45d6db3d2028243cf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal leakage",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "the media will drip from the slot in the bottom of the adaptor",
+        "tail_canonical_zh": "介质从适配器底部槽口滴落",
+        "tail_type": "Symptom",
+        "evidence_text": "In case of shaft seal leakage, the media will drip from the slot in the bottom of the adaptor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal leakage",
+        "head_canonical_zh": "轴封泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "putting a drip tray underneath the slot to collect the leakage",
+        "tail_canonical_zh": "在槽口下方放置接液盘收集泄漏液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In case of shaft seal leakage, Alfa Laval recommends putting a drip tray underneath the slot to collect the leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation. - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump casing and pump backplate",
+        "head_canonical_zh": "泵壳与泵后盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "adjusting the pmp legs",
+        "tail_canonical_zh": "调整泵支脚",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure correct aligment of pump casing and pump backplate. Angle not allowed. Alignment can be done by adjusting the pmp legs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

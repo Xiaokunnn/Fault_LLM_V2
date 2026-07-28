@@ -1,0 +1,251 @@
+{
+  "page_key": "MP018:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5e2414b1-5447-99a5-bc55-6513944bce84",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2746,
+    "prompt_tokens": 2057,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4803
+  },
+  "latency_ms": 42097,
+  "attempt": 1,
+  "prompt_sha256": "8d74fe791d60b733549a946773df6975942f42e33ecb4e87345cb0d6a9cd3075",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "check valve",
+        "head_canonical_zh": "止回阀",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "reverse flow",
+        "tail_canonical_zh": "倒流",
+        "tail_type": "FaultMode",
+        "evidence_text": "The check valve prevents reverse flow and protects the pump from excessive back pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "check valve",
+        "head_canonical_zh": "止回阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "excessive back pressure",
+        "tail_canonical_zh": "过高背压",
+        "tail_type": "Risk",
+        "evidence_text": "The check valve prevents reverse flow and protects the pump from excessive back pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "gate valve",
+        "head_canonical_zh": "闸阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "isolate the pump for maintenance, priming and starting",
+        "tail_canonical_zh": "隔离泵以便维护、灌泵和启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The gate valve is used to isolate the pump for maintenance, priming and starting.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "grease fitting",
+        "head_canonical_zh": "注油嘴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check to see that this grease fitting is present and that the stuffing box is properly lubricated with grease",
+        "tail_canonical_zh": "检查注油嘴是否存在且填料箱已用润滑脂正确润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check to see that this grease fitting is present and that the stuffing box is properly lubricated with grease.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stuffing box",
+        "head_canonical_zh": "填料箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "properly lubricated with grease",
+        "tail_canonical_zh": "用润滑脂正确润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check to see that this grease fitting is present and that the stuffing box is properly lubricated with grease.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "air leakage into the pump",
+        "tail_canonical_zh": "空气漏入泵内",
+        "tail_type": "Symptom",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "excessive seepage out of the pump",
+        "tail_canonical_zh": "泵过度泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "overheating of packing",
+        "tail_canonical_zh": "填料过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature failure of packing",
+        "tail_canonical_zh": "填料过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "scoring of shaft sleeve",
+        "tail_canonical_zh": "轴套拉伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bushing",
+        "head_canonical_zh": "衬套",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "3 to 4 GPM (10 to 15 lpm) of fresh cool water at a pressure approximately one atmosphere above maximum discharge pressure",
+        "tail_canonical_zh": "3至4 GPM（10至15 lpm）新鲜冷却水，压力约高于最大排出压力一个大气压",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The bushing requires 3 to 4 GPM (10 to 15 lpm) of fresh cool water at a pressure approximately one atmosphere above maximum discharge pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Failure to observe these instructions",
+        "head_canonical_zh": "未遵守这些说明",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage to the pump due to seizure of the rotating element",
+        "tail_canonical_zh": "因转动部件咬死导致泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to observe these instructions may result in damage to the pump due to seizure of the rotating element.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

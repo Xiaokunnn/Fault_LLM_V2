@@ -1,0 +1,112 @@
+{
+  "page_key": "MP003:p0376",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9f4fcd26-8a36-97c5-9401-ac49dac17ba2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1146,
+    "prompt_tokens": 2311,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3457
+  },
+  "latency_ms": 14457,
+  "attempt": 1,
+  "prompt_sha256": "61a10c4e8c4b8c3d51348631b6464dd122c5fc1522ad6f15ac6d1ef0fbf5ab89",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water leaking into the motor space resulting in motor failure",
+        "head_canonical_zh": "水泄漏入电机空间导致电机故障",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The interface between the stator and rotor must maintain a water seal",
+        "tail_canonical_zh": "定子与转子界面保持水密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "damage/interruption of service lubricating carried in the water",
+        "head_canonical_zh": "水中润滑损坏或中断",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Means are to be provided for preventing any damage/interruption of service lubricating carried in the water",
+        "tail_canonical_zh": "提供防止水中润滑损坏或中断的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided for preventing any damage/interruption of service lubricating carried in the water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "risk of fires",
+        "head_canonical_zh": "火灾风险",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "arrangements for stopping the rotor",
+        "tail_canonical_zh": "转子停止装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The permanent magnet thruster is to be fitted with arrangements for stopping the rotor for safety, and to limit the risk of fires.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Alarms and instrumentation",
+        "head_canonical_zh": "报警和仪表",
+        "head_type": "InspectionMethod",
+        "relation": "specified_by",
+        "tail_surface": "4-3-5/7.3 TABLE 1",
+        "tail_canonical_zh": "4-3-5/7.3 表1",
+        "tail_type": "Standard",
+        "evidence_text": "Alarms and instrumentation are to be provided in accordance with 4-3-5/7.3 TABLE 1, as applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "permanent magnet motor",
+        "head_canonical_zh": "永磁电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "surveyed during manufacturing and testing in accordance with 4-8-3/3",
+        "tail_canonical_zh": "按4-8-3/3在制造和测试期间检验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The permanent magnet motor is to be surveyed during manufacturing and testing in accordance with 4-8-3/3, as applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

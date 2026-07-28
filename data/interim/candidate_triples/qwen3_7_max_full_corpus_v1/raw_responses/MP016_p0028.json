@@ -1,0 +1,219 @@
+{
+  "page_key": "MP016:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b9bec72b-c2e6-9966-bfd3-87caadcbf291",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2310,
+    "prompt_tokens": 2733,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5043
+  },
+  "latency_ms": 26848,
+  "attempt": 1,
+  "prompt_sha256": "6b6c245fdd328842616d4a0aebc0af337e1c025bf2d87b22af6b6d69b5dd5f44",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "problemi di cavitazione",
+        "head_canonical_zh": "气蚀问题",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Un filtro otturato",
+        "tail_canonical_zh": "过滤器堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "Un filtro otturato può causare problemi di cavitazione.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "problemi di cavitazione",
+        "head_canonical_zh": "气蚀问题",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Il diametro delle tubazioni deve essere talvolta superiore a quello delle porte della pompa se si pompano liquidi viscosi",
+        "tail_canonical_zh": "泵送粘性液体时管道直径应大于泵口直径",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il diametro delle tubazioni deve essere talvolta superiore a quello delle porte della pompa se si pompano liquidi viscosi per evitare problemi di cavitazione.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "riscaldamento eccessivo delle superfici della tenuta e danni alla girante",
+        "head_canonical_zh": "密封面过热及叶轮损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "funzionare a secco per più di 30 secondi",
+        "tail_canonical_zh": "干运转超过30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Le pompe non devono mai funzionare a secco per più di 30 secondi, poiché ciò causerebbe un riscaldamento eccessivo delle superfici della tenuta e danni alla girante.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "danneggiare le guarnizioni e la girante",
+        "head_canonical_zh": "损坏密封和叶轮",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "funzionamento a secco",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "il funzionamento a secco può danneggiare le guarnizioni e la girante.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rumori inaspettati",
+        "head_canonical_zh": "异常噪音",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Ascolta",
+        "tail_canonical_zh": "听诊",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ascolta i rumori inaspettati.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "perdite",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare la presenza di perdite",
+        "tail_canonical_zh": "检查是否存在泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verificare la presenza di perdite.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "giunti delle tubazioni",
+        "head_canonical_zh": "管道接头",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare che tutti i giunti delle tubazioni siano: Ermetici in condizioni di vuoto",
+        "tail_canonical_zh": "验证所有管道接头在真空条件下是否密封",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verificare che tutti i giunti delle tubazioni siano: • Ermetici in condizioni di vuoto",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "giunti delle tubazioni",
+        "head_canonical_zh": "管道接头",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare che tutti i giunti delle tubazioni siano: ... A tenuta stagna in condizioni di pressione",
+        "tail_canonical_zh": "验证所有管道接头在压力条件下是否水密",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verificare che tutti i giunti delle tubazioni siano: ... • A tenuta stagna in condizioni di pressione",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motore",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che il motore sia cablato per il corretto senso di rotazione",
+        "tail_canonical_zh": "检查电机接线是否正确旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare che il motore sia cablato per il corretto senso di rotazione",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pompa",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che la pompa fornisca la portata desiderata",
+        "tail_canonical_zh": "检查泵是否提供所需流量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare che la pompa fornisca la portata desiderata, utilizzando il fluido pompato alla normale velocità operativa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

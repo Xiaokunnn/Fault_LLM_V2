@@ -1,0 +1,397 @@
+{
+  "page_key": "MP003:p0902",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-19e26131-c3ed-95a0-ba90-245a47119f49",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4766,
+    "prompt_tokens": 22575,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 27341
+  },
+  "latency_ms": 55807,
+  "attempt": 1,
+  "prompt_sha256": "3e26d479750415fee3bd88cae4289ff71197ad87775b6957eece0b881bc03059",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Control station transfer",
+        "head_canonical_zh": "控制站转换",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Display: to indicate the station in control",
+        "tail_canonical_zh": "显示当前控制站",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Control station transfer    x  x Display: to indicate the station in\n                                                        control.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r001:c02",
+          "MP003:p0902:t00:r001:c04",
+          "MP003:p0902:t00:r001:c06"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control station transfer",
+        "head_canonical_zh": "控制站转换",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "Control: to provide 1) transfer switch & 2) acknowledgment switch",
+        "tail_canonical_zh": "提供转换开关和确认开关",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Control station transfer    x  x Display: to indicate the station in\n                                                        control.                  \n                                                        Control: to provide 1) transfer\n                                                        switch & 2) acknowledgment\n                                                        switch.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r001:c02",
+          "MP003:p0902:t00:r001:c05",
+          "MP003:p0902:t00:r001:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Air conditioning system -fails",
+        "head_canonical_zh": "空调系统故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Air conditioning system -fails x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r002:c02",
+          "MP003:p0902:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High voltage rotating machine -Stationary windings temperature -high",
+        "head_canonical_zh": "高压旋转电机定子绕组温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "High voltage rotating machine -Stationary x 4-8-5/3.7.3(c) \n                       windings temperature -high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r005:c02",
+          "MP003:p0902:t00:r005:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Controllable pitch propeller hydraulic power unit run/start/stop",
+        "head_canonical_zh": "可调螺距螺旋桨液压动力单元运行/启动/停止",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "D",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Controllable pitch propeller hydraulic power x x If standby unit is provided with\n                       unit run/start/stop              automatic starting, such starting is\n                                                        to be alarmed.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r006:c02",
+          "MP003:p0902:t00:r006:c04",
+          "MP003:p0902:t00:r006:c06"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Controllable pitch propeller hydraulic power unit run/start/stop",
+        "head_canonical_zh": "可调螺距螺旋桨液压动力单元运行/启动/停止",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "C",
+        "tail_canonical_zh": "控制/执行器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Controllable pitch propeller hydraulic power x x If standby unit is provided with\n                       unit run/start/stop              automatic starting, such starting is\n                                                        to be alarmed.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r006:c02",
+          "MP003:p0902:t00:r006:c05",
+          "MP003:p0902:t00:r006:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Steam turbine automatic shaft rollover - activated",
+        "head_canonical_zh": "汽轮机自动盘车激活",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "D",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Steam turbine automatic shaft rollover - x x Control: to deactivate automatic\n                       activated                        shaft rollover.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r007:c02",
+          "MP003:p0902:t00:r007:c04",
+          "MP003:p0902:t00:r007:c06"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Steam turbine automatic shaft rollover - activated",
+        "head_canonical_zh": "汽轮机自动盘车激活",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "Control: to deactivate automatic shaft rollover",
+        "tail_canonical_zh": "控制停用自动盘车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Steam turbine automatic shaft rollover - x x Control: to deactivate automatic\n                       activated                        shaft rollover.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r007:c02",
+          "MP003:p0902:t00:r007:c05",
+          "MP003:p0902:t00:r007:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Steam turbine shaft stopped -in excess of set period",
+        "head_canonical_zh": "汽轮机轴停止超过设定时间",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Steam turbine shaft stopped -in excess of set x            \n                       period",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r008:c02",
+          "MP003:p0902:t00:r008:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Boiler steam pressure -low",
+        "head_canonical_zh": "锅炉蒸汽压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Boiler steam pressure -low x      For propulsion and associated\n                                                        electric power generating \n                                                        machinery",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r009:c02",
+          "MP003:p0902:t00:r009:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Boiler control power -failure",
+        "head_canonical_zh": "锅炉控制电源故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Boiler control power -failure x   For propulsion and associated\n                                                        electric power generating \n                                                        machinery",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r010:c02",
+          "MP003:p0902:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "System power source: main and emergency feeder -status and failure",
+        "head_canonical_zh": "系统电源主馈线和应急馈线状态及故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "System power source: main and emergency x x                \n                       feeder -status and failure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r011:c02",
+          "MP003:p0902:t00:r011:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "System power source: main and emergency feeder -status and failure",
+        "head_canonical_zh": "系统电源主馈线和应急馈线状态及故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "D",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "System power source: main and emergency x x                \n                       feeder -status and failure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r011:c02",
+          "MP003:p0902:t00:r011:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Propulsion machinery space -fire detected",
+        "head_canonical_zh": "推进机械处所探火",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Propulsion machinery space -fire detected x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r012:c02",
+          "MP003:p0902:t00:r012:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Start main fire pump and pressurize fire main",
+        "head_canonical_zh": "启动主消防泵并给消防总管加压",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "D",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Start main fire pump and pressurize fire main x x 4-7-3/1.5.5",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r013:c02",
+          "MP003:p0902:t00:r013:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Start main fire pump and pressurize fire main",
+        "head_canonical_zh": "启动主消防泵并给消防总管加压",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "C",
+        "tail_canonical_zh": "控制/执行器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start main fire pump and pressurize fire main x x 4-7-3/1.5.5",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r013:c02",
+          "MP003:p0902:t00:r013:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Propulsion machinery space -bilge level high",
+        "head_canonical_zh": "推进机械处所舱底水位高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Propulsion machinery space -bilge level high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r014:c02",
+          "MP003:p0902:t00:r014:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Start/stop and transfer switches",
+        "head_canonical_zh": "启停及转换开关",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "C",
+        "tail_canonical_zh": "控制/执行器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start/stop and transfer switches x For ABCU vessels having non-\n                                                        integrated propulsion machinery",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0902:t00:r015:c02",
+          "MP003:p0902:t00:r015:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "page_key": "MP003:p0868",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-334a7440-0366-9f96-8656-56f7e2ef5135",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2024,
+    "prompt_tokens": 2396,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4420
+  },
+  "latency_ms": 25074,
+  "attempt": 1,
+  "prompt_sha256": "5335a2ccdfa24de7e9f7e1aa36cccbd02bc9d8e0da5cb8d6da6d8a2f3a450681",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Electric-coupling control equipment",
+        "head_canonical_zh": "电耦合控制设备",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "two-pole disconnect switch",
+        "tail_canonical_zh": "双极隔离开关",
+        "tail_type": "Component",
+        "evidence_text": "Electric-coupling control equipment is to be combined with the prime mover speed and reversing control and is to include a two-pole disconnect switch, short-circuit protection only, ammeter for reading coupling current, discharge resistor and interlocking to prevent energizing the coupling when the prime mover control levers are in an inappropriate position.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Electric-coupling control equipment",
+        "head_canonical_zh": "电耦合控制设备",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "ammeter for reading coupling current",
+        "tail_canonical_zh": "耦合电流表",
+        "tail_type": "Component",
+        "evidence_text": "Electric-coupling control equipment is to be combined with the prime mover speed and reversing control and is to include a two-pole disconnect switch, short-circuit protection only, ammeter for reading coupling current, discharge resistor and interlocking to prevent energizing the coupling when the prime mover control levers are in an inappropriate position.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "energizing the coupling when the prime mover control levers are in an inappropriate position",
+        "head_canonical_zh": "原动机控制杆位置不当时给耦合器通电",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "interlocking",
+        "tail_canonical_zh": "联锁装置",
+        "tail_type": "Component",
+        "evidence_text": "interlocking to prevent energizing the coupling when the prime mover control levers are in an inappropriate position",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "transformer output voltage",
+        "head_canonical_zh": "变压器输出电压",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Means to regulate transformer output voltage",
+        "tail_canonical_zh": "变压器输出电压调节装置",
+        "tail_type": "Component",
+        "evidence_text": "Means to regulate transformer output voltage are to be provided to take care of increase in converter forward resistance and in addition to obtain the necessary performance characteristics of the converter unit in which the transformer is used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "increase in converter forward resistance",
+        "head_canonical_zh": "变流器正向电阻增加",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Means to regulate transformer output voltage",
+        "tail_canonical_zh": "变压器输出电压调节装置",
+        "tail_type": "Component",
+        "evidence_text": "Means to regulate transformer output voltage are to be provided to take care of increase in converter forward resistance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "High Temperature Alarm",
+        "head_canonical_zh": "高温报警",
+        "head_type": "Symptom",
+        "relation": "specified_by",
+        "tail_surface": "4-8-3/8.9.2(b)",
+        "tail_canonical_zh": "ABS规范4-8-3/8.9.2(b)条款",
+        "tail_type": "Standard",
+        "evidence_text": "5.17.9(c) High Temperature Alarm. See 4-8-3/8.9.2(b).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "switches",
+        "head_canonical_zh": "开关",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "ordinary shock or vibration",
+        "tail_canonical_zh": "普通冲击或振动",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "All switches are to be arranged for manual operation and so designed that they will not open under ordinary shock or vibration",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "switches",
+        "head_canonical_zh": "开关",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "manual operation",
+        "tail_canonical_zh": "手动操作",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All switches are to be arranged for manual operation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excitation circuits",
+        "head_canonical_zh": "励磁电路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "de-energizing the excitation circuits by the unbalance relay and earth relay",
+        "tail_canonical_zh": "通过不平衡继电器和接地继电器断开励磁电路",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "means are to be provided for de-energizing the excitation circuits by the unbalance relay and earth relay",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

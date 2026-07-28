@@ -1,0 +1,281 @@
+{
+  "page_key": "MP019:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bf240ba7-b8a3-95ac-9299-b35a071ad15c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2990,
+    "prompt_tokens": 20641,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 23631
+  },
+  "latency_ms": 35121,
+  "attempt": 1,
+  "prompt_sha256": "35603090ad2b75ff6b378ec456a102e1317410c026e81ce7a65282870f354d93",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the motor at regular intervals, at least once a year",
+        "tail_canonical_zh": "定期检查电机（至少每年一次）",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the motor at regular intervals, at least once a year.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Keep the motor clean and ensure free ventilation airflow",
+        "tail_canonical_zh": "保持电机清洁并确保通风气流畅通",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Keep the motor clean and ensure free ventilation airflow.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ventilation system",
+        "head_canonical_zh": "通风系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "regularly checked and cleaned",
+        "tail_canonical_zh": "定期检查和清洁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the motor is used in a dusty environment, the ventilation system must be regularly checked and cleaned.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seals",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the condition of shaft seals",
+        "tail_canonical_zh": "检查轴封状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the condition of shaft seals (e.g. V-ring or radial seal) and replace if necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "connections and mounting and assembly bolts",
+        "head_canonical_zh": "连接件及安装装配螺栓",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the condition of connections and mounting and assembly bolts",
+        "tail_canonical_zh": "检查连接件及安装装配螺栓状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the condition of connections and mounting and assembly bolts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing condition",
+        "head_canonical_zh": "轴承状况",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "listening for any unusual noise",
+        "tail_canonical_zh": "监听异常噪声",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check the bearing condition by listening for any unusual noise, vibration measurement, bearing temperature, inspection of spent grease or SPM bearing monitoring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing condition",
+        "head_canonical_zh": "轴承状况",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "vibration measurement",
+        "tail_canonical_zh": "振动测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check the bearing condition by listening for any unusual noise, vibration measurement, bearing temperature, inspection of spent grease or SPM bearing monitoring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "bearing condition",
+        "head_canonical_zh": "轴承状况",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "bearing temperature",
+        "tail_canonical_zh": "轴承温度监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check the bearing condition by listening for any unusual noise, vibration measurement, bearing temperature, inspection of spent grease or SPM bearing monitoring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "bearing condition",
+        "head_canonical_zh": "轴承状况",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspection of spent grease",
+        "tail_canonical_zh": "废脂检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check the bearing condition by listening for any unusual noise, vibration measurement, bearing temperature, inspection of spent grease or SPM bearing monitoring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing condition",
+        "head_canonical_zh": "轴承状况",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "SPM bearing monitoring",
+        "tail_canonical_zh": "SPM轴承监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Check the bearing condition by listening for any unusual noise, vibration measurement, bearing temperature, inspection of spent grease or SPM bearing monitoring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "signs of wear",
+        "head_canonical_zh": "磨损迹象",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "dismantle the motor, check the parts and replace if necessary",
+        "tail_canonical_zh": "拆卸电机、检查部件并必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When signs of wear are noticed, dismantle the motor, check the parts and replace if necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replacement bearings must be of the same type as those originally fitted",
+        "tail_canonical_zh": "更换轴承必须与原配型号相同",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When bearings are changed, replacement bearings must be of the same type as those originally fitted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seals",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced with seals of the same quality and characteristics as the originals when changing bearings",
+        "tail_canonical_zh": "更换轴承时以同等质量和特性的密封件更换轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The shaft seals have to be replaced with seals of the same quality and characteristics as the originals when changing bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "condensation",
+        "head_canonical_zh": "冷凝水",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "periodically open the drain plugs",
+        "tail_canonical_zh": "定期打开排水塞",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "it is advisable to periodically open the drain plugs in order to ensure that the way out for condensation is not blocked and allows condensation to escape from the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

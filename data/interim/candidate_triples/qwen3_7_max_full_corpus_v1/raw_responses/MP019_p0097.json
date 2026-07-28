@@ -1,0 +1,172 @@
+{
+  "page_key": "MP019:p0097",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-1da466fa-2154-919f-8f9b-7e5e6b4c58f3",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 23167,
+  "attempt": 1,
+  "prompt_sha256": "defed623267c824be6bd7729ad8ecf83e77f21bf182a2cf4b1e06b2513ea1299",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Isolationsresistansen",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "mätt med 500 eller 1000 V DC",
+        "tail_canonical_zh": "使用500或1000V直流电测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Isolationsresistansen, korrigerad till 25°C, måste överstiga referensvärdet, dvs. 100 MΩ (mätt med 500 eller 1000 V DC).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lindningen fuktig",
+        "head_canonical_zh": "绕组受潮",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "referensresistansen inte kan uppnås",
+        "tail_canonical_zh": "无法达到参考电阻值",
+        "tail_type": "Symptom",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lindningen fuktig",
+        "head_canonical_zh": "绕组受潮",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "torkas i ugn",
+        "tail_canonical_zh": "烘箱干燥",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lindningar som dränkts in med havsvatten",
+        "head_canonical_zh": "海水浸泡绕组",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "omlindas",
+        "tail_canonical_zh": "重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lindningar som dränkts in med havsvatten måste normalt omlindas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rullagret",
+        "head_canonical_zh": "滚动轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Pressa in angiven minsta mängd fett",
+        "tail_canonical_zh": "注入规定最小量润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motorer utrustade med smörjnipplar: Pressa in angiven minsta mängd fett när motorn startas första gången eller efter lång tids förvaring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fri rotation",
+        "head_canonical_zh": "自由旋转",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Vrid om möjligt axeln för hand",
+        "tail_canonical_zh": "手动盘车",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vrid om möjligt axeln för hand för att kontrollera fri rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Isolationsresistansen",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Mät isolationsresistansen före driftsättning",
+        "tail_canonical_zh": "调试前测量绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mät isolationsresistansen före driftsättning och då lindningarna kan misstänkas ha blivit fuktiga.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibrationer",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Fundamenten ska vara plana och tillräckligt stabila",
+        "tail_canonical_zh": "基础平整且足够稳固",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Fundamenten ska vara plana och tillräckligt stabila för att motstå kortslutningskrafterna. De ska vara utformade och dimensionerade så att vibrationer inte överförs till motorn och så att vibrationer inte uppstår på grund av egenresonans.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

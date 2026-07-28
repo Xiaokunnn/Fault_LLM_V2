@@ -1,0 +1,173 @@
+{
+  "page_key": "MP003:p0602",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8ff8592e-9723-9881-b59e-08fa9c4d581f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1876,
+    "prompt_tokens": 2517,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4393
+  },
+  "latency_ms": 22359,
+  "attempt": 1,
+  "prompt_sha256": "85d4f0df30046f3366e42413a2e7e7be8073ca467ac3c580da5859753c2db489",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "lubricating oil tank valve",
+        "head_canonical_zh": "滑油舱阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "remote means of closing the lubricating oil tank valve may be omitted",
+        "tail_canonical_zh": "可省略滑油舱阀遥控关闭装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To protect propulsion and essential auxiliary machinery not fitted with automatic shutdown upon loss of lubricating oil, the remote means of closing the lubricating oil tank valve may be omitted if its inadvertent activation from the remote location could result in damage to such machinery.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "loss of lubricating oil",
+        "head_canonical_zh": "滑油丧失",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "automatic shutdown",
+        "tail_canonical_zh": "自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "propulsion and essential auxiliary machinery not fitted with automatic shutdown upon loss of lubricating oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overflowing on electric equipment, engines or heated surfaces",
+        "head_canonical_zh": "溢流至电气设备、发动机或加热表面",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "open ends are situated to prevent the possibility of overflowing",
+        "tail_canonical_zh": "开口端布置以防止溢流",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unheated lubricating oil tank vents may terminate within the machinery space provided that the open ends are situated to prevent the possibility of overflowing on electric equipment, engines or heated surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "release of lubricating oil",
+        "head_canonical_zh": "滑油泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "failure of, or the damage to, the level gauge will not result in the release of lubricating oil",
+        "tail_canonical_zh": "液位计故障或损坏不导致滑油泄漏",
+        "tail_type": "Standard",
+        "evidence_text": "Level gauges may be fitted in lieu of sounding pipes, provided that the failure of, or the damage to, the level gauge will not result in the release of lubricating oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "level gauge",
+        "head_canonical_zh": "液位计",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "valve is to be fitted to allow for its removal",
+        "tail_canonical_zh": "安装阀门以便拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the device is located such that it is subjected to a head of oil, a valve is to be fitted to allow for its removal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "release of lubricating oil",
+        "head_canonical_zh": "滑油泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "encased in steel, or equivalent, such that no release of lubricating oil is possible in the event of their damage due to fire",
+        "tail_canonical_zh": "钢质或等效外壳防止火灾损坏时泄漏",
+        "tail_type": "Standard",
+        "evidence_text": "Where fitted, they are to be encased in steel, or equivalent, such that no release of lubricating oil is possible in the event of their damage due to fire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Level switches",
+        "head_canonical_zh": "液位开关",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "valve is to be fitted to allow for its removal",
+        "tail_canonical_zh": "安装阀门以便拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the device is located such that it is subjected to a head of oil, a valve is to be fitted to allow for its removal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lubricating oil tank low-level alarms",
+        "head_canonical_zh": "滑油舱低液位报警",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "low-level",
+        "tail_canonical_zh": "低液位",
+        "tail_type": "Symptom",
+        "evidence_text": "lubricating oil tank low-level alarms are to be provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

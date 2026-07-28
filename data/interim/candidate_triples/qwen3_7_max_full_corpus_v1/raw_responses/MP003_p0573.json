@@ -1,0 +1,78 @@
+{
+  "page_key": "MP003:p0573",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ef05276c-bf57-96dc-ad81-05ab1ac0e51c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 723,
+    "prompt_tokens": 2600,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3323
+  },
+  "latency_ms": 8954,
+  "attempt": 1,
+  "prompt_sha256": "096628cdd567bfe1d7be5dbe87792e8bffaa9312a9c2b20bcd8e3d8c8163addc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "control valves",
+        "head_canonical_zh": "控制阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "accessible at all times for maintenance",
+        "tail_canonical_zh": "随时可接近进行维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For single common-main bilge systems, the control valves required in the branches from the bilge main are to be accessible at all times for maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "single control valve failure",
+        "head_canonical_zh": "单个控制阀故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "multiple common-main bilge systems arranged such that any single control valve failure will not disable the bilge pumping capability from any one space",
+        "tail_canonical_zh": "多总管舱底系统布置使任一单阀故障不致丧失排水能力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This accessibility is not required for multiple common-main bilge systems arranged such that any single control valve failure will not disable the bilge pumping capability from any one space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "build-up of free surfaces",
+        "head_canonical_zh": "自由液面积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "drainage arrangements are to be such as to prevent the build-up of free surfaces",
+        "tail_canonical_zh": "排水布置应防止自由液面积聚",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the cargo space is fitted with a fixed water-spray fire extinguishing system, the drainage arrangements are to be such as to prevent the build-up of free surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

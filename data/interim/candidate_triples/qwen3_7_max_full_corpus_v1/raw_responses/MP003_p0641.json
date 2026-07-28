@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0641",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-aab817e5-cab3-9f96-96c4-9191945fedee",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 930,
+    "prompt_tokens": 2402,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3332
+  },
+  "latency_ms": 10945,
+  "attempt": 1,
+  "prompt_sha256": "d017ffb9d3ceb53f900c109f445c881043d07d1ee103d59556b3f38b5ce683d4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Hydraulic power units, including pumps and other pressurized components",
+        "head_canonical_zh": "液压动力单元（含泵及加压部件）",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "working pressure above 15 bar (225 psi)",
+        "tail_canonical_zh": "工作压力高于15 bar (225 psi)",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Hydraulic power units, including pumps and other pressurized components, with working pressure above 15 bar (225 psi) installed within machinery spaces",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "oil or oil mist that may escape under pressure",
+        "head_canonical_zh": "压力下泄漏的油或油雾",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "placed in separate room or rooms or shielded as necessary",
+        "tail_canonical_zh": "置于独立房间或采取必要屏蔽",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "placed in separate room or rooms or shielded as necessary to prevent any oil or oil mist that may escape under pressure from coming into contact with surfaces with temperatures in excess of 220°C (428°F), electrical equipment, or other sources of ignition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Piping and other components",
+        "head_canonical_zh": "管路及其他部件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "have as few joints as practicable",
+        "tail_canonical_zh": "尽可能减少接头数量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping and other components are to have as few joints as practicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "over-pressure",
+        "head_canonical_zh": "超压",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Relief valves",
+        "tail_canonical_zh": "安全阀",
+        "tail_type": "Component",
+        "evidence_text": "Relief valves are to be fitted to protect the system from over-pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

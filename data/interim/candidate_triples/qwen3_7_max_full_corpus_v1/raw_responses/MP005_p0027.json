@@ -1,0 +1,108 @@
+{
+  "page_key": "MP005:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0ccdbfd2-9793-977b-8386-b391e68bcc45",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1021,
+    "prompt_tokens": 6717,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7738
+  },
+  "latency_ms": 12648,
+  "attempt": 1,
+  "prompt_sha256": "df1635043c272b7f603ea66bf7b5c815669a04f6a453deb88be1fd708b37d1b7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "rated work condition",
+        "tail_canonical_zh": "额定工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The pump vibration at rated work condition is less than 2.8 mm/s which are measured on designated position.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Generated vibration",
+        "head_canonical_zh": "产生的振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "measured on designated position",
+        "tail_canonical_zh": "在指定位置测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The pump vibration at rated work condition is less than 2.8 mm/s which are measured on designated position.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotation speed",
+        "head_canonical_zh": "转速",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "vibration can change",
+        "tail_canonical_zh": "振动变化",
+        "tail_type": "Symptom",
+        "evidence_text": "The vibration can change when work condition changes, e.g. rotation speed, duty point shift by external force, liquid type, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "duty point shift by external force",
+        "head_canonical_zh": "外力引起的工况点偏移",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "vibration can change",
+        "tail_canonical_zh": "振动变化",
+        "tail_type": "Symptom",
+        "evidence_text": "The vibration can change when work condition changes, e.g. rotation speed, duty point shift by external force, liquid type, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "liquid type",
+        "head_canonical_zh": "液体类型",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "vibration can change",
+        "tail_canonical_zh": "振动变化",
+        "tail_type": "Symptom",
+        "evidence_text": "The vibration can change when work condition changes, e.g. rotation speed, duty point shift by external force, liquid type, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

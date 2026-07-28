@@ -1,0 +1,118 @@
+{
+  "page_key": "MP003:p0394",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-245fb416-5f05-97ab-afea-66e2b1800600",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1223,
+    "prompt_tokens": 2383,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3606
+  },
+  "latency_ms": 14339,
+  "attempt": 1,
+  "prompt_sha256": "9bd543ce9a8a9be88aa88f96d4acebc7c7801c12de24076845487f3d12bf265f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearing failure",
+        "head_canonical_zh": "轴承故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "lube oil samples can be taken for the purpose of detecting particle contamination and possible signs of bearing failure",
+        "tail_canonical_zh": "润滑油取样检测颗粒污染及轴承故障迹象",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Arrangements are to be provided so that lube oil samples can be taken for the purpose of detecting particle contamination and possible signs of bearing failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "particle contamination",
+        "head_canonical_zh": "颗粒污染",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "lube oil samples can be taken for the purpose of detecting particle contamination and possible signs of bearing failure",
+        "tail_canonical_zh": "润滑油取样检测颗粒污染及轴承故障迹象",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Arrangements are to be provided so that lube oil samples can be taken for the purpose of detecting particle contamination and possible signs of bearing failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lube oil filters",
+        "head_canonical_zh": "润滑油滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "serviced without interrupting the pod operation",
+        "tail_canonical_zh": "在不中断吊舱运行的情况下进行维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lube oil filters are to be of magnetic type and so arranged that they can be serviced without interrupting the pod operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "entry of water into the machine",
+        "head_canonical_zh": "水进入机器内部",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "cooler is to be so arranged to avoid entry of water into the machine, whether through leakage or condensation in the heat exchanger",
+        "tail_canonical_zh": "冷却器布置应避免水通过泄漏或热交换器冷凝进入机器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where water cooling is used, the cooler is to be so arranged to avoid entry of water into the machine, whether through leakage or condensation in the heat exchanger.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "steering system failure",
+        "head_canonical_zh": "转向系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "lock each pod unit’s slewing mechanism in its center (neutral) position",
+        "tail_canonical_zh": "将每个吊舱单元的旋转机构锁定在中心（中立）位置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "means are to be provided to lock each pod unit’s slewing mechanism in its center (neutral) position in the event of a steering system failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

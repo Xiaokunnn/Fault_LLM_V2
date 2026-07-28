@@ -1,0 +1,532 @@
+{
+  "page_key": "MP019:p0091",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-59347281-af09-9144-848f-f0a1f9d464eb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 6835,
+    "prompt_tokens": 14971,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 21806
+  },
+  "latency_ms": 79848,
+  "attempt": 1,
+  "prompt_sha256": "49c40601bbef2b257e7b6ac5e87c4802af348ea94119bdd35b12c8dbd156eb8a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Il motore non si avvia",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Sostituire con fusibili adeguati per tipo e capacità.",
+        "tail_canonical_zh": "更换为类型和容量合适的熔断器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il motore non si\navvia\tFusibili bruciati\tSostituire con fusibili adeguati per tipo e capacità.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r001:c00",
+          "MP019:p0091:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Il motore non si avvia",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Controllare e ripristinare il sovraccarico nello starter.",
+        "tail_canonical_zh": "检查并复位启动器中的过载保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il motore non si\navvia\tIl sovraccarico scatta\tControllare e ripristinare il sovraccarico nello starter.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r001:c00",
+          "MP019:p0091:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Il motore non si avvia",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che l'alimentazione corrisponda a quanto indicato sulla\ntarghetta del motore e al fattore di carico.",
+        "tail_canonical_zh": "检查电源是否符合电机铭牌及负载系数要求",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Il motore non si\navvia\tAlimentazione non corretta\tControllare che l'alimentazione corrisponda a quanto indicato sulla\ntarghetta del motore e al fattore di carico.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r001:c00",
+          "MP019:p0091:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Il motore non si avvia",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare i collegamenti in base allo schema fornito con il motore.",
+        "tail_canonical_zh": "根据电机提供的接线图检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Il motore non si\navvia\tCollegamenti della linea non corretti\tControllare i collegamenti in base allo schema fornito con il motore.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r001:c00",
+          "MP019:p0091:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Circuito aperto nell'avvolgimento o\nnell'interruttore di controllo",
+        "head_canonical_zh": "绕组或控制开关开路",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "ronzio quando l'interruttore viene chiuso",
+        "tail_canonical_zh": "开关闭合时发出嗡嗡声",
+        "tail_type": "Symptom",
+        "evidence_text": "Circuito aperto nell'avvolgimento o\nnell'interruttore di controllo\tIndicato da un ronzio quando l'interruttore viene chiuso.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r005:c01",
+          "MP019:p0091:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Circuito aperto nell'avvolgimento o\nnell'interruttore di controllo",
+        "head_canonical_zh": "绕组或控制开关开路",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare\nche non vi siano collegamenti allentati.\nAssicurarsi inoltre che tutti i contatti di controllo si chiudano.",
+        "tail_canonical_zh": "检查无松动连接并确保所有控制触点闭合",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Circuito aperto nell'avvolgimento o\nnell'interruttore di controllo\tIndicato da un ronzio quando l'interruttore viene chiuso. Controllare\nche non vi siano collegamenti allentati.\nAssicurarsi inoltre che tutti i contatti di controllo si chiudano.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r005:c01",
+          "MP019:p0091:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Guasto meccanico",
+        "head_canonical_zh": "机械故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare se il motore e l'azionamento ruotano liberamente.\nControllare cuscinetti e lubrificazione.",
+        "tail_canonical_zh": "验证电机和驱动装置是否自由旋转并检查轴承及润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Guasto meccanico\tVerificare se il motore e l'azionamento ruotano liberamente.\n                                       Controllare cuscinetti e lubrificazione.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r006:c01",
+          "MP019:p0091:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Statore in corto circuito\nCollegamento dell'avvolgimento\nstatore inefficiente",
+        "head_canonical_zh": "定子短路或定子绕组连接不良",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "fusibili bruciati",
+        "tail_canonical_zh": "熔断器烧毁",
+        "tail_type": "Symptom",
+        "evidence_text": "Statore in corto circuito\nCollegamento dell'avvolgimento\nstatore inefficiente\tIndicato da fusibili bruciati.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r007:c01",
+          "MP019:p0091:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Statore in corto circuito\nCollegamento dell'avvolgimento\nstatore inefficiente",
+        "head_canonical_zh": "定子短路或定子绕组连接不良",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "È necessario riavvolgere il motore.\nRimuovere gli scudi e individuare il guasto.",
+        "tail_canonical_zh": "需重绕电机并拆卸端盖定位故障",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Statore in corto circuito\nCollegamento dell'avvolgimento\nstatore inefficiente\tIndicato da fusibili bruciati. È necessario riavvolgere il motore.\nRimuovere gli scudi e individuare il guasto.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r007:c01",
+          "MP019:p0091:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Rotore difettoso",
+        "head_canonical_zh": "转子缺陷",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare che non vi siano barre o anelli di testa rotti.",
+        "tail_canonical_zh": "检查是否有断条或端环断裂",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Rotore difettoso\tVerificare che non vi siano barre o anelli di testa rotti.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r008:c01",
+          "MP019:p0091:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motore sovraccarico",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Ridurre il carico.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motore sovraccarico\tRidurre il carico.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r009:c01",
+          "MP019:p0091:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motore in stallo",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare la presenza di una fase aperta nelle linee.",
+        "tail_canonical_zh": "检查线路是否存在缺相",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motore in stallo\tUna fase aperta\tControllare la presenza di una fase aperta nelle linee.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r010:c00",
+          "MP019:p0091:t00:r010:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motore in stallo",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Cambiare tipo o grandezza. Consultare il fornitore\ndell'apparecchiatura.",
+        "tail_canonical_zh": "更改型号或规格并咨询设备供应商",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motore in stallo\tApplicazione non corretta\tCambiare tipo o grandezza. Consultare il fornitore\n                                       dell'apparecchiatura.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r010:c00",
+          "MP019:p0091:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motore in stallo",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Ridurre il carico.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motore in stallo\tSovraccarico\tRidurre il carico.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r010:c00",
+          "MP019:p0091:t00:r012:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motore in stallo",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Assicurarsi che sia mantenuta la tensione nominale. Verificare il\ncollegamento.",
+        "tail_canonical_zh": "确保维持额定电压并检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motore in stallo\tBassa tensione\tAssicurarsi che sia mantenuta la tensione nominale. Verificare il\n                                       collegamento.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r010:c00",
+          "MP019:p0091:t00:r013:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motore in stallo",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Fusibili bruciati, controllare il relè di sovraccarico, lo statore e i\npulsanti.",
+        "tail_canonical_zh": "检查熔断器、过载继电器、定子及按钮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motore in stallo\tCircuito aperto\tFusibili bruciati, controllare il relè di sovraccarico, lo statore e i\n                                       pulsanti.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r010:c00",
+          "MP019:p0091:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Il motore funziona,\nquindi si spegne",
+        "head_canonical_zh": "电机运行后停机",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che non vi siano collegamenti interrotti alla linea, ai\nfusibili e al controllo.",
+        "tail_canonical_zh": "检查线路、熔断器及控制回路有无断路",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Il motore funziona,\nquindi si spegne\tAlimentazione interrotta\tControllare che non vi siano collegamenti interrotti alla linea, ai\nfusibili e al controllo.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r015:c00",
+          "MP019:p0091:t00:r015:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Il motore non\nraggiunge la\nvelocità nominale",
+        "head_canonical_zh": "电机未达额定转速",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Consultare il fornitore dell'apparecchiatura in merito al tipo corretto.",
+        "tail_canonical_zh": "咨询设备供应商确认正确型号",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il motore non\nraggiunge la\nvelocità nominale\tApplicato non correttamente\tConsultare il fornitore dell'apparecchiatura in merito al tipo corretto.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r016:c00",
+          "MP019:p0091:t00:r016:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Il motore non\nraggiunge la\nvelocità nominale",
+        "head_canonical_zh": "电机未达额定转速",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Utilizzare una tensione più elevata, i terminali trasformatore o ridurre\nil carico Verificare i collegamenti. Verificare la sezione dei cavi.",
+        "tail_canonical_zh": "提高电压或使用变压器抽头或减载并检查接线及电缆截面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il motore non\nraggiunge la\nvelocità nominale\tTensione troppo bassa ai terminali del\nmotore a causa di caduta di linea\tUtilizzare una tensione più elevata, i terminali trasformatore o ridurre\nil carico Verificare i collegamenti. Verificare la sezione dei cavi.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r016:c00",
+          "MP019:p0091:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Il motore non\nraggiunge la\nvelocità nominale",
+        "head_canonical_zh": "电机未达额定转速",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare il carico del motore all'avviamento.",
+        "tail_canonical_zh": "检查电机启动负载",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Il motore non\nraggiunge la\nvelocità nominale\tCarico eccessivo all'avviamento\tControllare il carico del motore all'avviamento.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r016:c00",
+          "MP019:p0091:t00:r018:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Barre del rotore rotte o rotore allentato",
+        "head_canonical_zh": "转子断条或转子松动",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare che non vi siano rotture vicino agli anelli.",
+        "tail_canonical_zh": "检查端环附近是否有断裂",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Barre del rotore rotte o rotore allentato\tVerificare che non vi siano rotture vicino agli anelli.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r019:c01",
+          "MP019:p0091:t00:r019:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Barre del rotore rotte o rotore allentato",
+        "head_canonical_zh": "转子断条或转子松动",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Potrebbe essere\n                                       necessario un nuovo rotore in quanto le riparazioni sono in genere\n                                       provvisorie.",
+        "tail_canonical_zh": "可能需要更换新转子因为修复通常是临时的",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Barre del rotore rotte o rotore allentato\tVerificare che non vi siano rotture vicino agli anelli. Potrebbe essere\n                                       necessario un nuovo rotore in quanto le riparazioni sono in genere\n                                       provvisorie.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r019:c01",
+          "MP019:p0091:t00:r019:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Circuito aperto primario",
+        "head_canonical_zh": "初级电路开路",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Individuare il guasto con il tester e riparare.",
+        "tail_canonical_zh": "使用测试仪定位故障并修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Circuito aperto primario\tIndividuare il guasto con il tester e riparare.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0091:t00:r020:c01",
+          "MP019:p0091:t00:r020:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

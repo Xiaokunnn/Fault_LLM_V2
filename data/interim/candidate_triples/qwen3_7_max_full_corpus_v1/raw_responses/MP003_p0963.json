@@ -1,0 +1,708 @@
+{
+  "page_key": "MP003:p0963",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5b1d7937-7ee2-92d3-84c6-14005526eae3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8279,
+    "prompt_tokens": 23968,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 32247
+  },
+  "latency_ms": 98339,
+  "attempt": 1,
+  "prompt_sha256": "7b208596132207bf34d49c304ba3a5f4cda32a05e68021b624a2ba0a8234902f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing oil inlet pressure - low",
+        "head_canonical_zh": "轴承进油压力低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Diesel Engine Lubricating oil",
+        "tail_canonical_zh": "柴油机润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Diesel\nEngine Lubricating\noil A1 Bearing oil inlet\npressure - low x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c00",
+          "MP003:p0963:t00:r001:c01",
+          "MP003:p0963:t00:r001:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearing oil inlet pressure - low",
+        "head_canonical_zh": "轴承进油压力低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bearing oil inlet\npressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c03",
+          "MP003:p0963:t00:r001:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing oil inlet pressure - low",
+        "head_canonical_zh": "轴承进油压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bearing oil inlet\npressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c03",
+          "MP003:p0963:t00:r001:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearing inlet oil temperature - high",
+        "head_canonical_zh": "轴承进油温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Diesel Engine Lubricating oil",
+        "tail_canonical_zh": "柴油机润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Lubricating\noil A2 Bearing inlet oil\ntemperature - high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c01",
+          "MP003:p0963:t00:r002:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearing inlet oil temperature - high",
+        "head_canonical_zh": "轴承进油温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bearing inlet oil\ntemperature - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r002:c03",
+          "MP003:p0963:t00:r002:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oil mist in crankcase, mist concentration – high; or engine main and crank bearing temperature – high; or alternative arrangements (engine main and crank bearing oil outlet temperature – high)",
+        "head_canonical_zh": "曲轴箱油雾浓度高或主轴承/曲柄轴承温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Diesel Engine Lubricating oil",
+        "tail_canonical_zh": "柴油机润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Lubricating\noil A3 Oil mist in crankcase,\nmist concentration –\nhigh; or engine main\nand crank bearing\ntemperature – high; or\nalternative\narrangements (engine\nmain and crank\nbearing oil outlet\ntemperature – high)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c01",
+          "MP003:p0963:t00:r003:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oil mist in crankcase, mist concentration – high; or engine main and crank bearing temperature – high; or alternative arrangements (engine main and crank bearing oil outlet temperature – high)",
+        "head_canonical_zh": "曲轴箱油雾浓度高或主轴承/曲柄轴承温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Oil mist in crankcase,\nmist concentration –\nhigh; or engine main\nand crank bearing\ntemperature – high; or\nalternative\narrangements (engine\nmain and crank\nbearing oil outlet\ntemperature – high) x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r003:c03",
+          "MP003:p0963:t00:r003:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oil mist in crankcase, mist concentration – high; or engine main and crank bearing temperature – high; or alternative arrangements (engine main and crank bearing oil outlet temperature – high)",
+        "head_canonical_zh": "曲轴箱油雾浓度高或主轴承/曲柄轴承温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Oil mist in crankcase,\nmist concentration –\nhigh; or engine main\nand crank bearing\ntemperature – high; or\nalternative\narrangements (engine\nmain and crank\nbearing oil outlet\ntemperature – high) x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r003:c03",
+          "MP003:p0963:t00:r003:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Common rail servo oil pressure - low",
+        "head_canonical_zh": "共轨伺服油压低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Diesel Engine Lubricating oil",
+        "tail_canonical_zh": "柴油机润滑油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Lubricating\noil A4 Common rail servo oil\npressure - low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r001:c01",
+          "MP003:p0963:t00:r004:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Common rail servo oil pressure - low",
+        "head_canonical_zh": "共轨伺服油压低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Common rail servo oil\npressure - low X",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r004:c03",
+          "MP003:p0963:t00:r004:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pressure or flow - low",
+        "head_canonical_zh": "冷却介质压力或流量低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Cooling medium",
+        "tail_canonical_zh": "冷却介质系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Cooling\nmedium A5 Pressure or flow - low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r005:c01",
+          "MP003:p0963:t00:r005:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pressure or flow - low",
+        "head_canonical_zh": "冷却介质压力或流量低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pressure or flow - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r005:c03",
+          "MP003:p0963:t00:r005:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature at outlet - high",
+        "head_canonical_zh": "冷却介质出口温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Cooling medium",
+        "tail_canonical_zh": "冷却介质系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Cooling\nmedium A6 Temperature at outlet -\nhigh",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r005:c01",
+          "MP003:p0963:t00:r006:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature at outlet - high",
+        "head_canonical_zh": "冷却介质出口温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Temperature at outlet -\nhigh x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r006:c03",
+          "MP003:p0963:t00:r006:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Expansion tank level - low",
+        "head_canonical_zh": "膨胀水箱液位低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Cooling medium",
+        "tail_canonical_zh": "冷却介质系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Cooling\nmedium A7 Expansion tank level -\nlow",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r005:c01",
+          "MP003:p0963:t00:r007:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Expansion tank level - low",
+        "head_canonical_zh": "膨胀水箱液位低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Expansion tank level -\nlow x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r007:c03",
+          "MP003:p0963:t00:r007:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil leakage from injection pipe",
+        "head_canonical_zh": "喷油管燃油泄漏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Fuel oil",
+        "tail_canonical_zh": "燃油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Fuel oil A8 Fuel oil leakage from\ninjection pipe",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r008:c01",
+          "MP003:p0963:t00:r008:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil leakage from injection pipe",
+        "head_canonical_zh": "喷油管燃油泄漏",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil leakage from\ninjection pipe x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r008:c03",
+          "MP003:p0963:t00:r008:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil temp. – high and low (or viscosity – low and high)",
+        "head_canonical_zh": "燃油温度过高或过低（或粘度异常）",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Fuel oil",
+        "tail_canonical_zh": "燃油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Fuel oil A9 Fuel oil temp. – high\nand low (or viscosity –\nlow and high)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r008:c01",
+          "MP003:p0963:t00:r009:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil temp. – high and low (or viscosity – low and high)",
+        "head_canonical_zh": "燃油温度过高或过低（或粘度异常）",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil temp. – high\nand low (or viscosity –\nlow and high) x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r009:c03",
+          "MP003:p0963:t00:r009:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Service tank level - low",
+        "head_canonical_zh": "日用柜液位低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Fuel oil",
+        "tail_canonical_zh": "燃油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Fuel oil A10 Service tank level -\nlow",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r008:c01",
+          "MP003:p0963:t00:r010:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Service tank level - low",
+        "head_canonical_zh": "日用柜液位低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Service tank level -\nlow x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r010:c03",
+          "MP003:p0963:t00:r010:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Common rail fuel oil pressure - low",
+        "head_canonical_zh": "共轨燃油压力低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Fuel oil",
+        "tail_canonical_zh": "燃油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Fuel oil A11 Common rail fuel oil\npressure - low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r008:c01",
+          "MP003:p0963:t00:r011:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Common rail fuel oil pressure - low",
+        "head_canonical_zh": "共轨燃油压力低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Common rail fuel oil\npressure - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r011:c03",
+          "MP003:p0963:t00:r011:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Energy level - low",
+        "head_canonical_zh": "启动介质能量水平低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Starting medium",
+        "tail_canonical_zh": "启动介质系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Starting\nmedium A12 Energy level - low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r012:c01",
+          "MP003:p0963:t00:r012:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Energy level - low",
+        "head_canonical_zh": "启动介质能量水平低",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Energy level - low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r012:c03",
+          "MP003:p0963:t00:r012:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Exhaust gas temperature after each cylinder - high",
+        "head_canonical_zh": "各缸排气温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Exhaust",
+        "tail_canonical_zh": "排气系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Exhaust A13 Exhaust gas\ntemperature after each\ncylinder - high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r013:c01",
+          "MP003:p0963:t00:r013:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Exhaust gas temperature after each cylinder - high",
+        "head_canonical_zh": "各缸排气温度高",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Exhaust gas\ntemperature after each\ncylinder - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r013:c03",
+          "MP003:p0963:t00:r013:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overspeed",
+        "head_canonical_zh": "超速",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Speed",
+        "tail_canonical_zh": "转速系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Speed A14 Overspeed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r014:c01",
+          "MP003:p0963:t00:r014:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overspeed",
+        "head_canonical_zh": "超速",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Overspeed x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r014:c03",
+          "MP003:p0963:t00:r014:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overspeed",
+        "head_canonical_zh": "超速",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Overspeed x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r014:c03",
+          "MP003:p0963:t00:r014:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High speed",
+        "head_canonical_zh": "涡轮增压器高速",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Turbocharger",
+        "tail_canonical_zh": "涡轮增压器",
+        "tail_type": "Equipment",
+        "evidence_text": "Turbocharger A15 High speed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r015:c01",
+          "MP003:p0963:t00:r015:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High speed",
+        "head_canonical_zh": "涡轮增压器高速",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "High speed x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0963:t00:r015:c03",
+          "MP003:p0963:t00:r015:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

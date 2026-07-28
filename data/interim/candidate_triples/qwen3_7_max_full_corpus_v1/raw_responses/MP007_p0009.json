@@ -1,0 +1,175 @@
+{
+  "page_key": "MP007:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-11c196df-7ade-99eb-aa22-0b31c3f7a519",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1918,
+    "prompt_tokens": 2082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4000
+  },
+  "latency_ms": 25557,
+  "attempt": 1,
+  "prompt_sha256": "c18ec7f1357398d614e23d7a86c97808648cff145cd8ecca6ff5de48a1576658",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motor rated output power (P2)",
+        "head_canonical_zh": "电机额定输出功率",
+        "head_type": "SignalFeature",
+        "relation": "operates_under",
+        "tail_surface": "ambient temperature exceeds +40°C",
+        "tail_canonical_zh": "环境温度超过+40°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor rated output power (P2)",
+        "head_canonical_zh": "电机额定输出功率",
+        "head_type": "SignalFeature",
+        "relation": "operates_under",
+        "tail_surface": "motor is installed above 1,000m altitude",
+        "tail_canonical_zh": "电机安装在海拔1000米以上",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "poor motor cooling effect",
+        "head_canonical_zh": "电机冷却效果差",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率下降",
+        "tail_type": "Symptom",
+        "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "low air density",
+        "head_canonical_zh": "低空气密度",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "poor motor cooling effect",
+        "tail_canonical_zh": "电机冷却效果差",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "poor motor cooling effect caused by low air density",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor rated output power (P2) will decrease",
+        "head_canonical_zh": "电机额定输出功率下降",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "a motor with higher output power shall be used",
+        "tail_canonical_zh": "使用更高输出功率的电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1. In this case, a motor with higher output power shall be used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "maximum allowable working pressure",
+        "head_canonical_zh": "最大允许工作压力",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "pump’s own bearing capacity",
+        "tail_canonical_zh": "泵自身承载能力",
+        "tail_type": "Standard",
+        "evidence_text": "The maximum allowable working pressure and liquid temperature range are based on the pump’s own bearing capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "liquid temperature range",
+        "head_canonical_zh": "液体温度范围",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "pump’s own bearing capacity",
+        "tail_canonical_zh": "泵自身承载能力",
+        "tail_type": "Standard",
+        "evidence_text": "The maximum allowable working pressure and liquid temperature range are based on the pump’s own bearing capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Minimum inlet pressure “H”",
+        "head_canonical_zh": "最小入口压力H",
+        "head_type": "SignalFeature",
+        "relation": "prevented_by",
+        "tail_surface": "at least positive Hm pressure is required at the inlet",
+        "tail_canonical_zh": "入口至少需要正Hm压力",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "If the result is negative, at least positive Hm pressure is required at the inlet to avoid",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": [
+      "Evidence text for the last triple ends abruptly with 'to avoid' as the page text cuts off; the specific fault being avoided is not explicitly stated in the available span, but the preventive condition is clear.",
+      "No explicit fault-symptom-inspection-maintenance triples found for mechanical seal, bearing, impeller, pipe/valve, or dry running faults on this page; content focuses on technical parameters and motor derating."
+    ]
+  }
+}

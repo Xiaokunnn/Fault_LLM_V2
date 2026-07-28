@@ -1,0 +1,260 @@
+{
+  "page_key": "MP006:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-60e4ba04-770e-9d70-9850-bf852a012a43",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2682,
+    "prompt_tokens": 2507,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5189
+  },
+  "latency_ms": 30970,
+  "attempt": 1,
+  "prompt_sha256": "2d463fd491bd377b0f918c988a6fe21989276028a43421c0bf60186daa0b4ff6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the pump can rotate by turning it by hand",
+        "tail_canonical_zh": "手动盘车检查泵转动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1. Check that the pump can rotate by turning it by hand",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pipe system",
+        "head_canonical_zh": "管路系统",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check alignment of pipe system",
+        "tail_canonical_zh": "检查管路系统对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "2. Check alignment of pipe system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check bearings are lubricated before startup or no later than immediately afterwards",
+        "tail_canonical_zh": "检查轴承润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "3. Check bearings are lubricated before startup or no later than immediately afterwards",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the pump is filled with the correct medium and bled",
+        "tail_canonical_zh": "检查泵内介质充注及排气",
+        "tail_type": "InspectionAction",
+        "evidence_text": "4. Check that the pump is filled with the correct medium and bled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "abnormal noises or vibrations",
+        "head_canonical_zh": "异常噪声或振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the pump rotates in the correct direction and has no abnormal noises or vibrations",
+        "tail_canonical_zh": "检查转向及异常噪声振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "5. Check that the pump rotates in the correct direction and has no abnormal noises or vibrations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "differential pressure",
+        "head_canonical_zh": "压差",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Check differential pressure (discharge pressure - suction pressure) and compare with calculated operating point for the installation",
+        "tail_canonical_zh": "检查压差并与计算工况点对比",
+        "tail_type": "InspectionAction",
+        "evidence_text": "6. Check differential pressure (discharge pressure - suction pressure) and compare with calculated operating point for\n       the installation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "differential pressure is too high or too low",
+        "head_canonical_zh": "压差过高或过低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "the pump may be damaged or have impeded efficiency",
+        "tail_canonical_zh": "泵损坏或效率受阻",
+        "tail_type": "FaultMode",
+        "evidence_text": "If differential pressure is too high or too low, the pump may be damaged or have impeded efficiency.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High flow",
+        "head_canonical_zh": "高流量",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "reducing RPM",
+        "tail_canonical_zh": "降低转速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "High flow must be reduced either by reducing RPM",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High flow",
+        "head_canonical_zh": "高流量",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "constricting the discharge valve",
+        "tail_canonical_zh": "关小排出阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "or constricting the discharge valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "High flow",
+        "head_canonical_zh": "高流量",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "installing an orifice plate on the discharge side",
+        "tail_canonical_zh": "在排出侧安装孔板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "or installing an orifice plate on the discharge side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "A solid base plate",
+        "tail_canonical_zh": "坚固底座",
+        "tail_type": "Component",
+        "evidence_text": "A solid base plate will minimise vibrations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tension in the pump foot",
+        "head_canonical_zh": "泵脚应力",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "Use shims between pump base plate and concrete plinth or base plate and avoid tension in the pump foot when the installation is secured",
+        "tail_canonical_zh": "使用垫片并避免紧固时泵脚受力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Use shims between pump base plate and\n                                                     concrete plinth or base plate and avoid tension\n                                                     in the pump foot when the installation is secured.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d33" for="edge" attr.name="triple_id" attr.type="string" />
+  <key id="d32" for="edge" attr.name="inferred_edge" attr.type="boolean" />
+  <key id="d31" for="edge" attr.name="eligible_for_chinese_graph" attr.type="boolean" />
+  <key id="d30" for="edge" attr.name="relation_entailment_valid" attr.type="boolean" />
+  <key id="d29" for="edge" attr.name="final_confidence" attr.type="double" />
+  <key id="d28" for="edge" attr.name="decision" attr.type="string" />
+  <key id="d27" for="edge" attr.name="evidence_id" attr.type="string" />
+  <key id="d26" for="edge" attr.name="claim_id" attr.type="string" />
+  <key id="d25" for="edge" attr.name="assertion_id" attr.type="string" />
+  <key id="d24" for="edge" attr.name="role" attr.type="string" />
+  <key id="d23" for="node" attr.name="applicability_scope" attr.type="string" />
+  <key id="d22" for="node" attr.name="page_text_sha256" attr.type="string" />
+  <key id="d21" for="node" attr.name="document_sha256" attr.type="string" />
+  <key id="d20" for="node" attr.name="evidence_level" attr.type="string" />
+  <key id="d19" for="node" attr.name="evidence_text" attr.type="string" />
+  <key id="d18" for="node" attr.name="source_family_id" attr.type="string" />
+  <key id="d17" for="node" attr.name="source_url" attr.type="string" />
+  <key id="d16" for="node" attr.name="pdf_page_number" attr.type="long" />
+  <key id="d15" for="node" attr.name="doc_id" attr.type="string" />
+  <key id="d14" for="node" attr.name="evidence_id" attr.type="string" />
+  <key id="d13" for="node" attr.name="fault_class_ids" attr.type="string" />
+  <key id="d12" for="node" attr.name="tail_entity_id" attr.type="string" />
+  <key id="d11" for="node" attr.name="relation_label_zh" attr.type="string" />
+  <key id="d10" for="node" attr.name="relation" attr.type="string" />
+  <key id="d9" for="node" attr.name="head_entity_id" attr.type="string" />
+  <key id="d8" for="node" attr.name="claim_id" attr.type="string" />
+  <key id="d7" for="node" attr.name="normalized_identity" attr.type="string" />
+  <key id="d6" for="node" attr.name="source_surfaces" attr.type="string" />
+  <key id="d5" for="node" attr.name="graph_display_language" attr.type="string" />
+  <key id="d4" for="node" attr.name="terminology_id" attr.type="string" />
+  <key id="d3" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d2" for="node" attr.name="canonical_label_zh" attr.type="string" />
+  <key id="d1" for="node" attr.name="entity_id" attr.type="string" />
+  <key id="d0" for="node" attr.name="layer" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="MPE-4ce76feff0a205a72721">
+      <data key="d0">entity</data>
+      <data key="d1">MPE-4ce76feff0a205a72721</data>
+      <data key="d2">实际输送扬程显著低于预期</data>
+      <data key="d3">OperatingCondition</data>
+      <data key="d4">MPTERM-CONDITION-LOWER-DELIVERY-HEAD</data>
+      <data key="d5">zh-CN</data>
+      <data key="d6">["considerably smaller delivery head than expected"]</data>
+      <data key="d7">实际输送扬程显著低于预期</data>
+    </node>
+    <node id="MPE-d9243a6f02caf949535c">
+      <data key="d0">entity</data>
+      <data key="d1">MPE-d9243a6f02caf949535c</data>
+      <data key="d2">汽蚀</data>
+      <data key="d3">FaultMode</data>
+      <data key="d4">MPTERM-FAULT-CAVITATION</data>
+      <data key="d5">zh-CN</data>
+      <data key="d6">["cavitation"]</data>
+      <data key="d7">汽蚀</data>
+    </node>
+    <node id="MPC-63c832186e72ecd25859">
+      <data key="d0">claim</data>
+      <data key="d8">MPC-63c832186e72ecd25859</data>
+      <data key="d9">MPE-4ce76feff0a205a72721</data>
+      <data key="d10">causes</data>
+      <data key="d11">导致</data>
+      <data key="d12">MPE-d9243a6f02caf949535c</data>
+      <data key="d13">["cavitation"]</data>
+    </node>
+    <node id="MPA-d81497235d4fb3ce2363">
+      <data key="d0">evidence</data>
+      <data key="d14">MPA-d81497235d4fb3ce2363</data>
+      <data key="d15">MP004</data>
+      <data key="d16">10</data>
+      <data key="d17">https://www.desmi.com/media/4num3fbn/t1345uk.pdf</data>
+      <data key="d18">DESMI</data>
+      <data key="d19">A considerably smaller delivery head than expected will increase the quantity of liquid delivered,
+        causing increased power consumption and perhaps cavitation in pump and piping.</data>
+      <data key="d20">E1</data>
+      <data key="d21">86AA8D090C314CDB6579C5F1EEC353F6F1EE45E8BD74F521FE29AD1F05AF1609</data>
+      <data key="d22">a85d825aa3e61e990136531b8fd78d4eba11404dca8104d34b7656b7cc1b3db2</data>
+      <data key="d23">优先适用于DESMI SA型自吸离心泵;跨泵型迁移必须保留泵型约束</data>
+    </node>
+    <edge source="MPE-4ce76feff0a205a72721" target="MPC-63c832186e72ecd25859" id="0">
+      <data key="d24">claim_head</data>
+    </edge>
+    <edge source="MPC-63c832186e72ecd25859" target="MPE-d9243a6f02caf949535c" id="0">
+      <data key="d24">claim_tail</data>
+    </edge>
+    <edge source="MPC-63c832186e72ecd25859" target="MPA-d81497235d4fb3ce2363" id="0">
+      <data key="d24">supported_by</data>
+      <data key="d25">MPA-d81497235d4fb3ce2363</data>
+      <data key="d26">MPC-63c832186e72ecd25859</data>
+      <data key="d27">MPA-d81497235d4fb3ce2363</data>
+      <data key="d28">silver_candidate</data>
+      <data key="d29">0.95</data>
+      <data key="d30">True</data>
+      <data key="d31">True</data>
+      <data key="d32">False</data>
+      <data key="d33">MPT-6cafda695257160d89d5</data>
+    </edge>
+  </graph>
+</graphml>

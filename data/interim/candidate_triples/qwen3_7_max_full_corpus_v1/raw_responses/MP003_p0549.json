@@ -1,0 +1,82 @@
+{
+  "page_key": "MP003:p0549",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5bd567fd-94b0-928e-aaeb-d7ec438c528b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 787,
+    "prompt_tokens": 2348,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3135
+  },
+  "latency_ms": 9617,
+  "attempt": 1,
+  "prompt_sha256": "5ebe9dfb6e88a7d891ff714e870e7b135f477b2b48558fd12c60052db6ee7085",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "spark damage to the pipe wall",
+        "head_canonical_zh": "管壁火花损伤",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "protected against the possibility of spark damage to the pipe wall",
+        "tail_canonical_zh": "防止管壁火花损伤的保护措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pipes and fittings with layers having different conductivity are to be protected against the possibility of spark damage to the pipe wall.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Selection and spacing of pipe supports",
+        "tail_canonical_zh": "管道支架的选择与间距确定",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The selection and spacing of pipe supports are to take into account pipe dimensions, length of the piping, mechanical and physical properties of the pipe material, mass of pipe and contained fluid, external pressure, operating temperature, thermal expansion effects, loads due to external forces, thrust forces, water hammer and vibrations to which the system may be subjected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water hammer",
+        "head_canonical_zh": "水锤",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Selection and spacing of pipe supports",
+        "tail_canonical_zh": "管道支架的选择与间距确定",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The selection and spacing of pipe supports are to take into account pipe dimensions, length of the piping, mechanical and physical properties of the pipe material, mass of pipe and contained fluid, external pressure, operating temperature, thermal expansion effects, loads due to external forces, thrust forces, water hammer and vibrations to which the system may be subjected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

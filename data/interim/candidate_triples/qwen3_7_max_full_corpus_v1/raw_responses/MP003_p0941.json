@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0941",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c6c9c4f5-d037-9f25-83d1-925bb13ea35e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1408,
+    "prompt_tokens": 2532,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3940
+  },
+  "latency_ms": 16879,
+  "attempt": 1,
+  "prompt_sha256": "1e859e26fa3765f5dabb2a99f90bcf4f63be7fea68a9c92dd9e1e3fe80aae347",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "loss of lubricating oil",
+        "head_canonical_zh": "润滑油丧失",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatic or manual means are to be provided to allow braking steam to be applied to the turbine",
+        "tail_canonical_zh": "提供自动或手动装置以允许向汽轮机施加制动蒸汽",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In addition to the safety system functions in 4-9-6/23 TABLE 2 and in the event of loss of lubricating oil, automatic or manual means are to be provided to allow braking steam to be applied to the turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of excessive propulsion boiler steam",
+        "head_canonical_zh": "主锅炉蒸汽过度积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Burner sequencing",
+        "tail_canonical_zh": "燃烧器顺序控制",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent a build-up of excessive propulsion boiler steam which might occur when all burners are in service and the burners are at the minimum firing rate, one of the following arrangements, or equivalent, is to be provided. i) Burner sequencing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of excessive propulsion boiler steam",
+        "head_canonical_zh": "主锅炉蒸汽过度积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "An automatic steam dump system",
+        "tail_canonical_zh": "自动蒸汽排放系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent a build-up of excessive propulsion boiler steam which might occur when all burners are in service and the burners are at the minimum firing rate, one of the following arrangements, or equivalent, is to be provided. ... ii) An automatic steam dump system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unsafe firing conditions",
+        "head_canonical_zh": "不安全燃烧工况",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Means are to be provided to prevent boiler start up",
+        "tail_canonical_zh": "提供防止锅炉启动的装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided to prevent boiler start up whenever unsafe firing conditions (e.g. forced draft failure, low water level) exist.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "forced draft failure",
+        "head_canonical_zh": "强制通风故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "unsafe firing conditions",
+        "tail_canonical_zh": "不安全燃烧工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "unsafe firing conditions (e.g. forced draft failure, low water level)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "low water level",
+        "head_canonical_zh": "低水位",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "unsafe firing conditions",
+        "tail_canonical_zh": "不安全燃烧工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "unsafe firing conditions (e.g. forced draft failure, low water level)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

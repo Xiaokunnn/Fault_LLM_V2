@@ -1,0 +1,151 @@
+{
+  "page_key": "MP019:p0089",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-a334aae0-dd88-9ced-9ffb-96243ea22530",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 18041,
+  "attempt": 1,
+  "prompt_sha256": "5d96abc99a3b2a7aef31a1618c26165ce5bc8f42f5e5cfe003f9cf1391edf2ea",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reingrassaggio",
+        "tail_canonical_zh": "重新润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Per il reingrassaggio utilizzare solo lubrificanti specifici per cuscinetti a sfere",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lubrificanti non compatibili",
+        "head_canonical_zh": "不相容润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "danneggiare i cuscinetti",
+        "tail_canonical_zh": "损坏轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Lubrificanti non compatibili possono danneggiare i cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "danneggiare i cuscinetti",
+        "head_canonical_zh": "损坏轴承",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Non mischiare grassi di tipo diverso",
+        "tail_canonical_zh": "不混合不同类型润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Non mischiare grassi di tipo diverso. Lubrificanti non compatibili possono danneggiare i cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubrificanti con additivi EP",
+        "head_canonical_zh": "含EP添加剂润滑脂",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "elevate temperature dei cuscinetti",
+        "tail_canonical_zh": "轴承高温",
+        "tail_type": "Symptom",
+        "evidence_text": "Si sconsiglia l'uso di lubrificanti con additivi EP in presenza di elevate temperature dei cuscinetti in carcasse di grandezza 280-450.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "L'utilizzo di altri tipi di grasso",
+        "head_canonical_zh": "使用其他类型润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "ridurre l'intervallo",
+        "tail_canonical_zh": "缩短润滑间隔",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "L'utilizzo di altri tipi di grasso può ridurre l'intervallo.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "compatibilità del lubrificante",
+        "head_canonical_zh": "润滑脂兼容性",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "contattare ABB",
+        "tail_canonical_zh": "联系ABB",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In caso di dubbi sulla compatibilità del lubrificante, contattare ABB.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "caratteristiche",
+        "head_canonical_zh": "润滑脂特性",
+        "head_type": "Standard",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare con il produttore",
+        "tail_canonical_zh": "向制造商核实",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare con il produttore che le caratteristiche corrispondano a quelle dei lubrificanti riportati sopra.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

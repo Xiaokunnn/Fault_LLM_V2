@@ -1,0 +1,96 @@
+{
+  "page_key": "MP003:p0601",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4a5b152b-415d-9439-ad17-ac3621a8c357",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1164,
+    "prompt_tokens": 2453,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3617
+  },
+  "latency_ms": 14253,
+  "attempt": 1,
+  "prompt_sha256": "24053c4bd7bbcc6477b734d59de5a44bda9bd56add5fda76c2bd22a56a620d7b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "ignition of lubricating oil",
+        "head_canonical_zh": "润滑油着火",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "insulated with non-combustible, and preferably non-oil-absorbent, materials",
+        "tail_canonical_zh": "采用不燃且优选不吸油材料隔热",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent the ignition of lubricating oil, all hot surfaces, e.g., steam and exhaust piping, turbochargers, exhaust gas boilers, etc. likely to reach a temperature above 220°C (428°F) during service are to be insulated with non-combustible, and preferably non-oil-absorbent, materials.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil spray or oil leakage into machinery air intakes or other sources of ignition",
+        "head_canonical_zh": "油雾或漏油进入机械进气口或其他点火源",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Spray shields are to be fitted around flanged joints, flanged bonnets and any other flanged or threaded connections",
+        "tail_canonical_zh": "在法兰接头等处安装防喷罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Spray shields are to be fitted around flanged joints, flanged bonnets and any other flanged or threaded connections in lubricating oil piping systems under pressure exceeding 1.8 bar (1.84 kgf/cm2, 26 psi) which are located above or near units of high temperature, including boilers, steam pipes, exhaust manifolds, silencers or other equipment required to be insulated in accordance with 4-6-4/15.1.4, and also to avoid oil spray or oil leakage into machinery air intakes or other sources of ignition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "provided with containment and drainage arrangements",
+        "tail_canonical_zh": "设置围堵和排放布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lubricating oil system components, such as pumps, strainers, purifiers, etc., which require occasional dismantling for examination, and where leakage may normally be expected, are to be provided with containment and drainage arrangements as in 4-6-4/13.3.4.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lubricating oil system components, such as pumps, strainers, purifiers, etc.",
+        "head_canonical_zh": "润滑油系统部件（泵、滤器、净化器等）",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "occasional dismantling for examination",
+        "tail_canonical_zh": "定期拆卸检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lubricating oil system components, such as pumps, strainers, purifiers, etc., which require occasional dismantling for examination, and where leakage may normally be expected, are to be provided with containment and drainage arrangements as in 4-6-4/13.3.4.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "page_key": "MP003:p0309",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b0195cdf-9be3-910c-aad0-480a0ad8cfed",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 984,
+    "prompt_tokens": 8652,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9636
+  },
+  "latency_ms": 13001,
+  "attempt": 1,
+  "prompt_sha256": "b95a4ec9d01aca5b30cac07f9abd72407feb232e923618d7b94092b30c9a9e3f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "torsional vibratory stresses exceed the foregoing limits",
+        "head_canonical_zh": "扭转振动应力超限",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "a barred range is to be provided",
+        "tail_canonical_zh": "设置转速禁区",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When torsional vibratory stresses exceed the foregoing limits, at an rpm within the operating range but less than 80% of rated speed, a barred range is to be provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "allowable vibratory stress within a barred range",
+        "head_canonical_zh": "禁区内许用振动应力",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "S2 = 1.7S / (Ck * Wh)",
+        "tail_canonical_zh": "禁区应力计算公式",
+        "tail_type": "Standard",
+        "evidence_text": "The allowable vibratory stress in a barred range due to the alternating torsional vibrations is not to exceed the values given by the following: S2 = 1.7S / (Ck * Wh)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vibratory stresses are to be calculated with any one cylinder not firing",
+        "head_canonical_zh": "单缸熄火工况下计算振动应力",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "calculations are to be submitted for information",
+        "tail_canonical_zh": "提交计算书备查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "For diesel engine installations, vibratory stresses are to be calculated with any one cylinder not firing and the calculations are to be submitted for information.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft material is to have a specified minimum ultimate tensile strength of not less than 500 N/mm2",
+        "head_canonical_zh": "轴材料最小抗拉强度不低于500N/mm²",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "shafts may experience vibratory stresses close to the permissible stresses for transient operation",
+        "tail_canonical_zh": "瞬态工况下轴承受接近许用值的振动应力",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Where shafts may experience vibratory stresses close to the permissible stresses for transient operation, the shaft material is to have a specified minimum ultimate tensile strength of not less than 500 N/mm2 (50.9 kgf/mm2, 72,500 psi).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

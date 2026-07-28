@@ -1,0 +1,228 @@
+{
+  "page_key": "MP019:p0119",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7f0cd564-3f27-9529-8ae8-fa7586d53336",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2811,
+    "prompt_tokens": 5450,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8261
+  },
+  "latency_ms": 34886,
+  "attempt": 1,
+  "prompt_sha256": "2cf84a251020b138fe24f8ddf7bb6b567838e3b1271168ea67b9ad2103fe9498",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Taajuusmuuttajat",
+        "head_canonical_zh": "变频器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "korkeampia jänniterasituksia",
+        "tail_canonical_zh": "较高的电压应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Taajuusmuuttajat aiheuttavat korkeampia jänniterasituksia kuin sinimuotoinen syöttö moottorin käämitykseen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "moottorin käämieristys",
+        "head_canonical_zh": "电机绕组绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "seuraavien ohjeiden mukaisesti",
+        "tail_canonical_zh": "以下说明",
+        "tail_type": "Standard",
+        "evidence_text": "Tämän vuoksi moottorin käämieristys ja taajuusmuuttajan lähtösuodatin tulee mitoittaa seuraavien ohjeiden mukaisesti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "taajuusmuuttajan lähtösuodatin",
+        "head_canonical_zh": "变频器输出滤波器",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "seuraavien ohjeiden mukaisesti",
+        "tail_canonical_zh": "以下说明",
+        "tail_type": "Standard",
+        "evidence_text": "Tämän vuoksi moottorin käämieristys ja taajuusmuuttajan lähtösuodatin tulee mitoittaa seuraavien ohjeiden mukaisesti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "U N ≤ 500 V",
+        "head_canonical_zh": "额定电压≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB:n vakioeristys",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U N ≤ 500 V ABB:n vakioeristys",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0119:t00:r001:c00",
+          "MP019:p0119:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "U N ≤ 600 V",
+        "head_canonical_zh": "额定电压≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB:n vakioeristys + dU/dt-suodattimet TAI ABB:n erikoiseristys (koodi 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N ABB:n vakioeristys ABB:n vakioeristys + dU/dt-suodattimet TAI ABB:n erikoiseristys (koodi 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0119:t00:r002:c00",
+          "MP019:p0119:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U N ≤ 690 V",
+        "head_canonical_zh": "额定电压≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB:n erikoiseristys (koodi 405) JA dU/dt-suodattimet taajuusmuuttajan lähdössä",
+        "tail_canonical_zh": "ABB特殊绝缘(代码405)及变频器输出端dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (koodi 405) ABB:n erikoiseristys (koodi 405) JA dU/dt-suodattimet taajuusmuuttajan lähdössä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0119:t00:r003:c00",
+          "MP019:p0119:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U N ≤ 690 V JA kaapelin pituus > 150 m",
+        "head_canonical_zh": "额定电压≤690V且电缆长度>150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB:n erikoiseristys (koodi 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V JA kaapelin N pituus > 150 m taajuusmuuttajan lähdössä ABB:n erikoiseristys (koodi 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0119:t00:r004:c00",
+          "MP019:p0119:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Jänniterasitukset",
+        "head_canonical_zh": "电压应力",
+        "head_type": "FailureMechanism",
+        "relation": "prevented_by",
+        "tail_surface": "Jänniterasitukset eivät saa ylittää sallittuja raja-arvoja",
+        "tail_canonical_zh": "电压应力不得超过允许限值",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Jänniterasitukset eivät saa ylittää sallittuja raja-arvoja.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "staattorikäämityksen PTC-termistoreilla",
+        "head_canonical_zh": "定子绕组PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Niiden kytkeminen taajuusmuuttajaan on suositeltavaa",
+        "tail_canonical_zh": "建议将其连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Useimmat tässä ohjeessa käsiteltävät moottorit on varustettu staattorikäämityksen PTC-termistoreilla. Niiden kytkeminen taajuusmuuttajaan on suositeltavaa",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "laakerivirtaongelmien",
+        "head_canonical_zh": "轴承电流问题",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Eristettyjä laakereita tai laakerirakenteita, yhteismuotoisia suodattimia sekä asianmukaisia kaapelointi- ja maadoitusmenetelmiä tulee käyttää",
+        "tail_canonical_zh": "使用绝缘轴承或轴承结构、共模滤波器以及适当的布线和接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Eristettyjä laakereita tai laakerirakenteita, yhteismuotoisia suodattimia sekä asianmukaisia kaapelointi- ja maadoitusmenetelmiä tulee käyttää seuraavien ohjeiden mukaisesti laakerivirtaongelmien välttämiseksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

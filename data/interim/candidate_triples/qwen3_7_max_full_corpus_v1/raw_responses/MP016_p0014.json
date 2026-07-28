@@ -1,0 +1,213 @@
+{
+  "page_key": "MP016:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f9f56f5f-df54-9539-8d9a-a2d492e18c80",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2289,
+    "prompt_tokens": 2786,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5075
+  },
+  "latency_ms": 34256,
+  "attempt": 1,
+  "prompt_sha256": "f4281c4656de517e828bf379cf011dd7dbc798ce08f8b3af942339be6845e6a7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pompes à turbine flexible",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "pression différentielle maximale indiquée sur la fiche technique",
+        "tail_canonical_zh": "技术数据表规定的最大压差",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Ne faites pas fonctionner la pompe au-dessus de la pression différentielle maximale indiquée sur la fiche technique, même pendant quelques secondes, car cela endommagerait la turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fonctionner la pompe contre une vanne fermée",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "pompes à turbine flexible",
+        "tail_canonical_zh": "柔性叶轮泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Ne faites jamais fonctionner la pompe contre une vanne fermée.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Une pression d’entrée insuffisante",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitation de la pompe",
+        "tail_canonical_zh": "泵汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Une pression d’entrée insuffisante entraînera une cavitation de la pompe, entraînant de faibles performances, du bruit et une courte durée de vie de la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation de la pompe",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "faibles performances",
+        "tail_canonical_zh": "性能低下",
+        "tail_type": "Symptom",
+        "evidence_text": "Une pression d’entrée insuffisante entraînera une cavitation de la pompe, entraînant de faibles performances, du bruit et une courte durée de vie de la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation de la pompe",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "bruit",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Une pression d’entrée insuffisante entraînera une cavitation de la pompe, entraînant de faibles performances, du bruit et une courte durée de vie de la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tuyaux d’entrée",
+        "head_canonical_zh": "吸入管路",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "courts, de gros diamètre et ne s’effondrent pas sous vide",
+        "tail_canonical_zh": "短、大口径且真空下不塌陷",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Assurez-vous que les tuyaux d’entrée sont courts, de gros diamètre et ne s’effondrent pas sous vide.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pompe",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "rincée avec de l’eau ou un agent neutralisant après chaque opération",
+        "tail_canonical_zh": "每次作业后用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "La durée de vie de la pompe sera prolongée si elle est rincée avec de l’eau ou un agent neutralisant après chaque opération.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignement de la pompe et de l’entraînement",
+        "head_canonical_zh": "泵与驱动装置对中",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez toujours l’alignement de la pompe et de l’entraînement après l’installation et avant de démarrer la pompe",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez toujours l’alignement de la pompe et de l’entraînement après l’installation et avant de démarrer la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "distorsion",
+        "head_canonical_zh": "底座变形",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "affecter l’alignement de l’accouplement",
+        "tail_canonical_zh": "影响联轴器对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "Une distorsion pourrait affecter l’alignement de l’accouplement.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pièces mobiles",
+        "head_canonical_zh": "运动部件",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "protégées",
+        "tail_canonical_zh": "加装防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Toutes les pièces mobiles doivent être protégées et, conformément à la directive applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

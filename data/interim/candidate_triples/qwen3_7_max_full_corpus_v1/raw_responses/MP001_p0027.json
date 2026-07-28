@@ -1,0 +1,95 @@
+{
+  "page_key": "MP001:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8a966528-e50e-9197-a49e-83474c1fe189",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 884,
+    "prompt_tokens": 2052,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2936
+  },
+  "latency_ms": 10853,
+  "attempt": 1,
+  "prompt_sha256": "787acd19cc9e0b88e104bd8f361a84d0589a40a04cb5bc682a76aa473e0d6e69",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "scheduled overhauls",
+        "head_canonical_zh": "定期大修",
+        "head_type": "MaintenanceAction",
+        "relation": "increases_risk_of",
+        "tail_surface": "infant mortality",
+        "tail_canonical_zh": "早期故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Sometimes, scheduled overhauls may increase overall failure rates by introducing infant mortality, human errors or both into otherwise stable systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "scheduled overhauls",
+        "head_canonical_zh": "定期大修",
+        "head_type": "MaintenanceAction",
+        "relation": "increases_risk_of",
+        "tail_surface": "human errors",
+        "tail_canonical_zh": "人为失误",
+        "tail_type": "Cause",
+        "evidence_text": "Sometimes, scheduled overhauls may increase overall failure rates by introducing infant mortality, human errors or both into otherwise stable systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "proactive maintenance tasks",
+        "head_canonical_zh": "主动维护任务",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "failures",
+        "tail_canonical_zh": "故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "The purpose of the proactive maintenance tasks in the failure management strategy is to (1) prevent failures before they occur or (2) detect the onset of failures in sufficient time so that the failure can be mitigated before it occurs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "onset of failures",
+        "head_canonical_zh": "故障初期",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "proactive maintenance tasks",
+        "tail_canonical_zh": "主动维护任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The purpose of the proactive maintenance tasks in the failure management strategy is to (1) prevent failures before they occur or (2) detect the onset of failures in sufficient time so that the failure can be mitigated before it occurs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "page_key": "MP001:p0091",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-101a3d07-caee-9baa-a63d-c752cc1fe006",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 511,
+    "prompt_tokens": 2193,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2704
+  },
+  "latency_ms": 8409,
+  "attempt": 1,
+  "prompt_sha256": "8b2b49a94d5e71912da316ad003f83ed7e1714d7cf0aaebaa600f687e36f9dd2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "X-ray radiography",
+        "head_canonical_zh": "X射线照相检测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "metallic wear components of engines, compressors, gearboxes, pumps, and shafts",
+        "tail_canonical_zh": "发动机、压缩机、齿轮箱、泵和轴的金属磨损部件",
+        "tail_type": "Component",
+        "evidence_text": "This technique can be used to analyze welds, steel structures, plastic structures, and metallic wear components of engines, compressors, gearboxes, pumps, and shafts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "surface and subsurface flaws",
+        "head_canonical_zh": "表面及亚表面缺陷",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "X-ray radiography",
+        "tail_canonical_zh": "X射线照相检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "X-ray radiography helps identify surface and subsurface flaws caused by problems such as stress, corrosion, inclusions, fatigue, poor or incomplete welds, and trapped gases.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

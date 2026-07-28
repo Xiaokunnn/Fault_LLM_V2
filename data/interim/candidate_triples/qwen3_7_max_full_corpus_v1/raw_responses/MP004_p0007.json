@@ -1,0 +1,171 @@
+{
+  "page_key": "MP004:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-876b0594-e1a9-984b-963c-f6afacc9a781",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1734,
+    "prompt_tokens": 8508,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10242
+  },
+  "latency_ms": 20428,
+  "attempt": 1,
+  "prompt_sha256": "56dde40111b87a19d078180a566af0f2ec40d7a4f7add863d5f8f23159c3a4cf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Check carefully that pump and motor are aligned accurately",
+        "tail_canonical_zh": "仔细检查泵和电机对中准确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check carefully that pump and motor are aligned accurately.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid distortion of the base plate",
+        "tail_canonical_zh": "避免底座变形",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid distortion of the base plate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid distortion of the piping system",
+        "tail_canonical_zh": "避免管路系统变形",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid distortion of the piping system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pipes",
+        "head_canonical_zh": "管道",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "arranged in such a way that stresses resulting from fluctuations in temperature will not have any effect on the pump",
+        "tail_canonical_zh": "布置方式使温度波动产生的应力不影响泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pipes are to be arranged in such a way that stresses resulting from fluctuations in temperature will not have any effect on the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure pipe",
+        "head_canonical_zh": "压力管",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "arranged so that water locks in the pipe are avoided",
+        "tail_canonical_zh": "布置以避免管内水锁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Because of the priming of the pump the pressure pipe is to be arranged so that water locks in the pipe are avoided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power transmission",
+        "head_canonical_zh": "动力传输装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "equipped with a guard in accordance with the provisions of the COUNCIL DIRECTIVE OF June 14, 1989, on the safety of machines",
+        "tail_canonical_zh": "按照1989年6月14日机械安全理事会指令配备防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When connecting the pump and a prime mover the power transmission is to be equipped with a guard in accordance with the provisions of the COUNCIL DIRECTIVE OF June 14, 1989, on the safety of machines.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wiring",
+        "head_canonical_zh": "接线",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "carried out by authorised skilled workmen according to the rules and regulations in force",
+        "tail_canonical_zh": "由授权熟练工人按现行规则进行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wiring to be carried out by authorised skilled workmen according to the rules and regulations in force.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "stored in a dry area",
+        "tail_canonical_zh": "存放在干燥区域",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump is to be stored in a dry area.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

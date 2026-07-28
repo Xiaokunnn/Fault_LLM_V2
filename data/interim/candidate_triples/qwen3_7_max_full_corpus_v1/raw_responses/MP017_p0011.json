@@ -1,0 +1,193 @@
+{
+  "page_key": "MP017:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b71d9e67-0c65-91e3-a205-4f74fc3c32ab",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1938,
+    "prompt_tokens": 2348,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4286
+  },
+  "latency_ms": 24618,
+  "attempt": 1,
+  "prompt_sha256": "f5a2c325e3c92ae581e1a8a7c955d092e2b21396b8b84df65293d50fa6440caa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "plugging",
+        "head_canonical_zh": "堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "full-opening ball type valve",
+        "tail_canonical_zh": "全通径球阀",
+        "tail_type": "Component",
+        "evidence_text": "it must be a full-opening ball type valve to prevent plugging by solids",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "clogging",
+        "head_canonical_zh": "堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "solids, grease, or other substances",
+        "tail_canonical_zh": "固体、油脂或其他物质",
+        "tail_type": "Cause",
+        "evidence_text": "solids, grease, or other substances likely to cause clogging",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "Symptom",
+        "relation": "caused_by",
+        "tail_surface": "A closed manual shut-off valve",
+        "tail_canonical_zh": "关闭的手动截止阀",
+        "tail_type": "Cause",
+        "evidence_text": "A closed manual shut-off valve may cause a pump which has lost prime to continue to operate without reaching prime, causing dangerous overheating",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "explosive rupture of the pump casing",
+        "head_canonical_zh": "泵壳爆炸性破裂",
+        "head_type": "FaultMode",
+        "relation": "caused_by",
+        "tail_surface": "overheating",
+        "tail_canonical_zh": "过热",
+        "tail_type": "Symptom",
+        "evidence_text": "causing dangerous overheating and possible explosive rupture of the pump casing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lost prime",
+        "head_canonical_zh": "失去自吸能力",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "continue to operate without reaching prime",
+        "tail_canonical_zh": "持续运行但无法建立自吸",
+        "tail_type": "Symptom",
+        "evidence_text": "a pump which has lost prime to continue to operate without reaching prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "over-heated pump",
+        "head_canonical_zh": "过热泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Allow an over-heated pump to cool before servicing",
+        "tail_canonical_zh": "维修前允许过热泵冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Allow an over-heated pump to cool before servicing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "parts being disengaged to be ejected with great force",
+        "head_canonical_zh": "零件受力弹出",
+        "head_type": "Risk",
+        "relation": "caused_by",
+        "tail_surface": "vapor pressure within the pump",
+        "tail_canonical_zh": "泵内蒸汽压力",
+        "tail_type": "Cause",
+        "evidence_text": "vapor pressure within the pump can cause parts being disengaged to be ejected with great force",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "drain the liquid from the pump by removing the casing drain plug",
+        "tail_canonical_zh": "通过拆卸泵壳排放塞排空泵内液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "drain the liquid from the pump by removing the casing drain plug",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "tail_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "correctly adjusted to the specific hydraulic operating conditions",
+        "tail_canonical_zh": "根据具体水力工况正确调整",
+        "evidence_text": "When properly installed and correctly adjusted to the specific hydraulic operating conditions of the application, the Gorman-Rupp Automatic Air Release Valve will permit air to escape",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "page_key": "MP001:p0041",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ab15a60f-26ff-95b0-a2bb-1fbe888b0b96",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1534,
+    "prompt_tokens": 1876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3410
+  },
+  "latency_ms": 18892,
+  "attempt": 1,
+  "prompt_sha256": "3a3d118fcd466a8faa2524ce10cdd90e9562cf108a5e7cafb582159bb1a3ec20",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "temperatures indicated exceeds the specified 40°C ambient for maximum heat rise",
+        "head_canonical_zh": "温度超过规定环境温度及最大温升限值",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "life expectancy of the motor is cut in half",
+        "tail_canonical_zh": "电机预期寿命减半",
+        "tail_type": "FaultMode",
+        "evidence_text": "temperatures indicated exceeds the specified 40°C ambient for maximum heat rise. Once a motor reaches that maximum for any length of time, the life expectancy of the motor is cut in half.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Overheating by 20°C",
+        "head_canonical_zh": "过热20°C",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "reduce it to 5 year service life",
+        "tail_canonical_zh": "使用寿命缩短至5年",
+        "tail_type": "FaultMode",
+        "evidence_text": "Overheating by 20°C can take a 20 year expected service life motor and reduce it to 5 year service life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overloaded",
+        "head_canonical_zh": "过载",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Electric motors exceeding their ambient ratings",
+        "tail_canonical_zh": "电机超过环境额定值",
+        "tail_type": "Symptom",
+        "evidence_text": "Electric motors exceeding their ambient ratings may be overloaded or over-greased.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "over-greased",
+        "head_canonical_zh": "润滑脂过多",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Electric motors exceeding their ambient ratings",
+        "tail_canonical_zh": "电机超过环境额定值",
+        "tail_type": "Symptom",
+        "evidence_text": "Electric motors exceeding their ambient ratings may be overloaded or over-greased.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Belts Slipping",
+        "head_canonical_zh": "皮带打滑",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Infrared Thermograph",
+        "tail_canonical_zh": "红外热像仪",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Infrared Thermograph – Belts Slipping*",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "belts... slipping",
+        "head_canonical_zh": "皮带打滑",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "pulley heating from the friction associated with slippage",
+        "tail_canonical_zh": "滑轮因打滑摩擦发热",
+        "tail_type": "Symptom",
+        "evidence_text": "The belts in this image are slipping a little, resulting in the pulley heating from the friction associated with slippage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "slip will increase",
+        "head_canonical_zh": "打滑加剧",
+        "head_type": "FaultMode",
+        "relation": "evolves_to",
+        "tail_surface": "belt failure",
+        "tail_canonical_zh": "皮带失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "If this condition is not corrected, the belts will become hotter and the slip will increase resulting in belt failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

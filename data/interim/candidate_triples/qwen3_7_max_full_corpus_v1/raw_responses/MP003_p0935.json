@@ -1,0 +1,100 @@
+{
+  "page_key": "MP003:p0935",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6af75c18-190a-9795-a62f-a8c4914e9b52",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1068,
+    "prompt_tokens": 2190,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3258
+  },
+  "latency_ms": 12284,
+  "attempt": 1,
+  "prompt_sha256": "88ff4f5a8f739ab9d26899ced9ce9ec9fb2b87c6493fe26ff56b71cebbc7af87",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bilge pumps",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time",
+        "tail_canonical_zh": "集中控制站异常运行频率或时长指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where the bilge pumps are arranged for automatic operation, means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "the pump is operating more frequently than would normally be expected",
+        "head_canonical_zh": "泵运行频率高于正常预期",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "means are to be provided to indicate, at the centralized control station",
+        "tail_canonical_zh": "集中控制站指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "the pump is operating for an excessive length of time",
+        "head_canonical_zh": "泵运行时间过长",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "means are to be provided to indicate, at the centralized control station",
+        "tail_canonical_zh": "集中控制站指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "means are to be provided to indicate, at the centralized control station, when the pump is operating more frequently than would normally be expected, or when the pump is operating for an excessive length of time",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vital auxiliary pumps",
+        "head_canonical_zh": "重要辅泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "provisions in Section 4-9-9",
+        "tail_canonical_zh": "第4-9-9节规定",
+        "tail_type": "Standard",
+        "evidence_text": "Components, equipment, subsystems, etc. used in control, monitoring and safety systems of propulsion machinery, propulsion boilers and vital auxiliary pumps are to be designed and tested in accordance with the provisions in Section 4-9-9.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

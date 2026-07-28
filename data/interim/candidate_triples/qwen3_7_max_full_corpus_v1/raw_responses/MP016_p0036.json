@@ -1,0 +1,207 @@
+{
+  "page_key": "MP016:p0036",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4471adc2-d70a-9b99-98b0-0fd78a902a8d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2244,
+    "prompt_tokens": 6395,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8639
+  },
+  "latency_ms": 26732,
+  "attempt": 1,
+  "prompt_sha256": "99073c4089ef171e8628e9ca179f5f701e010b3f252462a942c56fac78cc0509",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pompkop",
+        "head_canonical_zh": "泵头",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "regelmatig te inspecteren",
+        "tail_canonical_zh": "定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "de pompkop (met name afdichtingen en verbindingen) regelmatig te inspecteren, zodat ze gereinigd of vervangen kunnen worden voordat ze tijdens het gebruik defect raken.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "afdichtingen en verbindingen",
+        "head_canonical_zh": "密封件和连接件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "gereinigd of vervangen",
+        "tail_canonical_zh": "清洁或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "de pompkop (met name afdichtingen en verbindingen) regelmatig te inspecteren, zodat ze gereinigd of vervangen kunnen worden voordat ze tijdens het gebruik defect raken.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Alle primaire vloeistofcontactonderdelen van de pomp",
+        "head_canonical_zh": "泵的所有主要过流部件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "geïnspecteerd en onderhouden zonder de pomp of aandrijfeenheid van de bodemplaat te verwijderen",
+        "tail_canonical_zh": "无需从底板拆卸泵或驱动单元即可检查和维护",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Alle primaire vloeistofcontactonderdelen van de pomp kunnen als volgt worden geïnspecteerd en onderhouden zonder de pomp of aandrijfeenheid van de bodemplaat te verwijderen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "slijtplaat",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer de slijtplaat op slijtage of schade",
+        "tail_canonical_zh": "检查耐磨板的磨损或损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controleer de slijtplaat op slijtage of schade.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "slijtage of schade",
+        "head_canonical_zh": "磨损或损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "vervang deze indien nodig",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Controleer de slijtplaat op slijtage of schade. ... Zorg ervoor dat u voorzichtig bent tijdens het verwijderen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Dynamisch vlak",
+        "head_canonical_zh": "动环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer de onderdelen op slijtage",
+        "tail_canonical_zh": "检查零件磨损情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Schuif het dynamische afdichtingsvlak van de as. Controleer de onderdelen op slijtage en vervang ze indien nodig.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Statisch vlak",
+        "head_canonical_zh": "静环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer de afdichting op slijtage",
+        "tail_canonical_zh": "检查密封件磨损情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controleer de afdichting op slijtage en vervang deze indien nodig.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Joints à lèvres",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez les joints à lèvres pour déceler tout dommage",
+        "tail_canonical_zh": "检查唇形密封是否有损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez les joints à lèvres pour déceler tout dommage et remplacez-les si nécessaire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "waaier",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer de waaier op tekenen van slijtage of schade",
+        "tail_canonical_zh": "检查叶轮的磨损或损坏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controleer de waaier op tekenen van slijtage of schade, vervang deze indien nodig.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lipafdichtingen",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controleer de lipafdichtingen op beschadigingen",
+        "tail_canonical_zh": "检查唇形密封是否损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controleer de lipafdichtingen op beschadigingen en vervang ze indien nodig.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

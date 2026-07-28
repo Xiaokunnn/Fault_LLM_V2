@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0689",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-92437cf1-d714-93a2-ae3c-d8a1d572c175",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1384,
+    "prompt_tokens": 27030,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 28414
+  },
+  "latency_ms": 17655,
+  "attempt": 1,
+  "prompt_sha256": "8de88f5f82eed156a4ea3380e3d7c7c28f632aab3541d6db2cc3c7646a1dbcdf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "CO2 Medium Distribution Piping",
+        "head_canonical_zh": "CO2灭火介质分配管路",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "TABLE 2 Minimum Steel Pipe Wall Thickness for CO2 Medium Distribution Piping",
+        "tail_canonical_zh": "CO2介质分配钢管最小壁厚表",
+        "tail_type": "Standard",
+        "evidence_text": "TABLE 2\nMinimum Steel Pipe Wall Thickness for CO2 Medium Distribution Piping",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Threaded joints in CO2 systems",
+        "head_canonical_zh": "CO2系统螺纹接头",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "inside protected spaces and in CO2 cylinder rooms",
+        "tail_canonical_zh": "受保护处所及CO2气瓶间内",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Threaded joints in CO2 systems are to be allowed only inside protected spaces and in CO2 cylinder rooms.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "threaded pipes",
+        "head_canonical_zh": "螺纹管",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "thickness is to be measured to the bottom of the thread",
+        "tail_canonical_zh": "测量至螺纹底部的壁厚",
+        "tail_type": "InspectionAction",
+        "evidence_text": "For threaded pipes, where approved, the thickness is to be measured to the bottom of the thread.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "internal surface of pipes outside of the engine room",
+        "head_canonical_zh": "机舱外管路内表面",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "galvanized",
+        "tail_canonical_zh": "镀锌处理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The internal surface of pipes outside of the engine room is to be galvanized.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "openings which may admit air to, or allow gas to escape from a protected space",
+        "head_canonical_zh": "可能导致空气进入或气体逸出受保护处所的开口",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "capable of being closed from outside the protected space",
+        "tail_canonical_zh": "能从受保护处所外部关闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "openings which may admit air to, or allow gas to escape from a protected space, are to be capable of being closed from outside the protected space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power ventilation serving the protected space",
+        "head_canonical_zh": "服务于受保护处所的动力通风",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "automatically shut down... prior to the discharge of the agent",
+        "tail_canonical_zh": "在灭火剂释放前自动关停",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A pressure switch or other device is to be provided to automatically shut down power ventilation serving the protected space prior to the discharge of the agent into the space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

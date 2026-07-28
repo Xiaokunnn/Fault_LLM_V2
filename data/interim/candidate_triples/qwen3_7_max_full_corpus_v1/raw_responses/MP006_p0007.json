@@ -1,0 +1,233 @@
+{
+  "page_key": "MP006:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-856458cf-ca04-9788-b3e1-3649d06c6ca4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2665,
+    "prompt_tokens": 32176,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 34841
+  },
+  "latency_ms": 32589,
+  "attempt": 1,
+  "prompt_sha256": "ae1a0e0cb09ff5252cf2465af92d9b71085fd1b1b024b5efbd16c1df6ab3ea94",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "DESMI centrifugal pumps with electric motor",
+        "head_canonical_zh": "DESMI离心泵电机组",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "less than 2.8 mm/s vibration velocity",
+        "tail_canonical_zh": "振动速度小于2.8 mm/s",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "As standard DESMI centrifugal pumps with electric motor generate less than 2.8 mm/s vibration velocity (measured\n      in 3 directions at motor flange level on vertical pumps) during a factory test.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration levels above 7 mm/s",
+        "head_canonical_zh": "振动水平超过7 mm/s",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors)",
+        "tail_canonical_zh": "泵轴承或轴封及电机轴承寿命缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "vibration levels above 7 mm/s are damaging – i.e. this\n      will result in shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors) than normally\n      expected",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "external excited vibrations from main engine and/or auxiliary machinery",
+        "head_canonical_zh": "来自主机或辅机的外部激励振动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "much higher vibration velocities than 7 mm/s",
+        "tail_canonical_zh": "远高于7 mm/s的振动速度",
+        "tail_type": "Symptom",
+        "evidence_text": "in pump installations on ships external excited vibrations from main engine and/or auxiliary machinery are\n      transferred from ship hull to the pump often resulting in much higher vibration velocities than 7 mm/s",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration alarm level >7 mm/s",
+        "tail_canonical_zh": "振动报警值>7 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pump                    >7                     >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r001:c00",
+          "MP006:p0007:t00:r001:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration trip level >10 mm/s",
+        "tail_canonical_zh": "振动跳闸值>10 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pump                    >7                     >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r001:c00",
+          "MP006:p0007:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (drive end)",
+        "head_canonical_zh": "电机驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration alarm level >7 mm/s",
+        "tail_canonical_zh": "振动报警值>7 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (drive end)       >7                     >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r002:c00",
+          "MP006:p0007:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (drive end)",
+        "head_canonical_zh": "电机驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration trip level >10 mm/s",
+        "tail_canonical_zh": "振动跳闸值>10 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (drive end)       >7                     >10",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r002:c00",
+          "MP006:p0007:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (non drive end)",
+        "head_canonical_zh": "电机非驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration alarm level >10 mm/s",
+        "tail_canonical_zh": "振动报警值>10 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (non drive end)   >10                    >15",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r003:c00",
+          "MP006:p0007:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor (non drive end)",
+        "head_canonical_zh": "电机非驱动端",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vibration trip level >15 mm/s",
+        "tail_canonical_zh": "振动跳闸值>15 mm/s",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motor (non drive end)   >10                    >15",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t00:r003:c00",
+          "MP006:p0007:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "damage",
+        "tail_canonical_zh": "损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Vibration causes damage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP006:p0007:t01:r018:c07"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "DESMI centrifugal pumps",
+        "head_canonical_zh": "DESMI离心泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "ISO 10816-3",
+        "tail_canonical_zh": "ISO 10816-3标准",
+        "tail_type": "Standard",
+        "evidence_text": "This agrees with the recommendations in the international standard ISO 10816-3.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

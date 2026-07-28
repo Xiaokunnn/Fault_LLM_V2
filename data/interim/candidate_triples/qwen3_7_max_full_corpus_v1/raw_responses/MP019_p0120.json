@@ -1,0 +1,139 @@
+{
+  "page_key": "MP019:p0120",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-8b53ae68-6b15-9fe5-8e8d-35c3e90eb1fc",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 23542,
+  "attempt": 1,
+  "prompt_sha256": "9913836156e977252c2a41bb7096d5f47d5db7bd8fd4f9d57b7c9ea24e76b38e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "haitallisten laakerivirtojen",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Eristetty laakeri N-päässä",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW TAI IEC 315 ≤ runkokoko ≤ IEC 355 Eristetty laakeri N-päässä",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0120:t00:r002:c00",
+          "MP019:p0120:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "haitallisten laakerivirtojen",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Eristetty laakeri N-päässä JA Yhteismuotoinen suodatin taajuusmuuttajassa",
+        "tail_canonical_zh": "非驱动端绝缘轴承及变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW TAI IEC 400 ≤ runkokoko ≤ IEC 450 Eristetty laakeri N-päässä JA Yhteismuotoinen suodatin taajuus- muuttajassa",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0120:t00:r003:c00",
+          "MP019:p0120:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "laitteet maadoittuisivat asianmukaisesti ja voimassa olevat sähkömagneettista yhteensopivuutta (EMC) koskevat vaatimukset tulevat täytetyiksi",
+        "head_canonical_zh": "设备适当接地及满足EMC要求",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "kaapeloitava käyttäen suojattuja symmetrisiä kaapeleita ja EMC-holkkitiivisteitä, joissa on 360°:n liitos",
+        "tail_canonical_zh": "使用屏蔽对称电缆及360度连接EMC格兰头进行布线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Jotta laitteet maadoittuisivat asianmukaisesti ja voimassa olevat sähkömagneettista yhteensopivuutta (EMC) koskevat vaatimukset tulevat täytetyiksi, yli 30 kW:n moottorit on kaapeloitava käyttäen suojattuja symmetrisiä kaapeleita ja EMC-holkkitiivisteitä, joissa on 360°:n liitos.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sähkömagneettista yhteensopivuutta (EMC) koskevat vaatimukset",
+        "head_canonical_zh": "电磁兼容性(EMC)要求",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "EMC-holkkitiivisteitä, joissa on 360°:n liitos",
+        "tail_canonical_zh": "360度连接EMC格兰头",
+        "tail_type": "Component",
+        "evidence_text": "sähkömagneettista yhteensopivuutta (EMC) koskevat vaatimukset tulevat täytetyiksi, yli 30 kW:n moottorit on kaapeloitava käyttäen suojattuja symmetrisiä kaapeleita ja EMC-holkkitiivisteitä, joissa on 360°:n liitos",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "potentiaaliero",
+        "head_canonical_zh": "电位差",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "mittaamalla komponenttien välinen potentiaaliero",
+        "tail_canonical_zh": "测量组件间电位差",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "teräsalustan sähkönjohtavuus suurilla taajuuksilla on tarkistettava esimerkiksi mittaamalla komponenttien välinen potentiaaliero",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "nopeus ei kasva suuremmaksi kuin moottorin suurin sallittu pyörimisnopeus tai koko sovelluksen kriittinen nopeus",
+        "head_canonical_zh": "转速不超过电机最大允许转速或系统临界转速",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "varmistettava",
+        "tail_canonical_zh": "确认/验证",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Moottorin arvokilvessä tai tuoteoppaassa ilmoitettua nimellisnopeutta suuremmilla nopeuksilla on varmistettava, että nopeus ei kasva suuremmaksi kuin moottorin suurin sallittu pyörimisnopeus tai koko sovelluksen kriittinen nopeus.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

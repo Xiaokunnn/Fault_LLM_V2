@@ -1,0 +1,99 @@
+{
+  "page_key": "MP016:p0032",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d6fc641d-cb1a-958a-92db-74d94a60b8ea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 918,
+    "prompt_tokens": 2796,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3714
+  },
+  "latency_ms": 12114,
+  "attempt": 1,
+  "prompt_sha256": "dc0c06425839257bdbd1e3ff36ce357c4f6e2da99817a8abc9b9cf4798ecd277",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "drooglopen",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "waaier beschadigen",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "laat de motor niet langer drooglopen, want een tekort aan vloeistof zal de waaier beschadigen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tekort aan vloeistof",
+        "head_canonical_zh": "液体不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "waaier beschadigen",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "een tekort aan vloeistof zal de waaier beschadigen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "aanzuigleidingen luchtdicht zijn",
+        "head_canonical_zh": "吸入管路气密",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "pomp niet aanzuigen",
+        "tail_canonical_zh": "泵无法吸液",
+        "tail_type": "FaultMode",
+        "evidence_text": "Zorg ervoor dat de aanzuigleidingen luchtdicht zijn, anders kan de pomp niet aanzuigen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isoleer en blokkeer de aandrijfmotor van de pomp",
+        "head_canonical_zh": "隔离并锁定泵驱动电机",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "inspectie of onderhoud van de pomp",
+        "tail_canonical_zh": "泵的检查或维护",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Isoleer en blokkeer de aandrijfmotor van de pomp altijd voor inspectie of onderhoud van de pomp",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

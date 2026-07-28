@@ -1,0 +1,216 @@
+{
+  "page_key": "MP016:p0033",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0ce2abfa-10a8-9974-a1f0-2575bf60eaea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2325,
+    "prompt_tokens": 2767,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5092
+  },
+  "latency_ms": 27023,
+  "attempt": 1,
+  "prompt_sha256": "91e17a57328982a6ec81e04f8e5f161bdff02b05f4ce7f6a4452b36c0ef34bab",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Flexibele waaierpompen",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "boven de maximale differentiële druk die op het gegevensblad staat",
+        "tail_canonical_zh": "超过数据表规定的最大压差",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Laat de pomp niet werken boven de maximale differentiële druk die op het gegevensblad staat, zelfs niet gedurende enkele seconden, want dan kan de waaier beschadigd raken.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "waaier",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "beschadigd raken",
+        "tail_canonical_zh": "损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Laat de pomp niet werken boven de maximale differentiële druk die op het gegevensblad staat, zelfs niet gedurende enkele seconden, want dan kan de waaier beschadigd raken.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pomp",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Laat de pomp nooit tegen een gesloten klep draaien",
+        "tail_canonical_zh": "严禁在关闭阀门下运行泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "OPGELET Laat de pomp nooit tegen een gesloten klep draaien.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pomp",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "caviteert",
+        "tail_canonical_zh": "发生汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Bij onvoldoende inlaatdruk caviteert de pomp, wat leidt tot slechte prestaties, lawaai en een korte levensduur van de pomp.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "onvoldoende inlaatdruk",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "caviteert",
+        "tail_canonical_zh": "发生汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Bij onvoldoende inlaatdruk caviteert de pomp, wat leidt tot slechte prestaties, lawaai en een korte levensduur van de pomp.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "caviteert",
+        "head_canonical_zh": "发生汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "slechte prestaties",
+        "tail_canonical_zh": "性能下降",
+        "tail_type": "Symptom",
+        "evidence_text": "Bij onvoldoende inlaatdruk caviteert de pomp, wat leidt tot slechte prestaties, lawaai en een korte levensduur van de pomp.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "caviteert",
+        "head_canonical_zh": "发生汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "lawaai",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Bij onvoldoende inlaatdruk caviteert de pomp, wat leidt tot slechte prestaties, lawaai en een korte levensduur van de pomp.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inlaatpijpen",
+        "head_canonical_zh": "吸入管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Zorg ervoor dat de inlaatpijpen kort zijn, een grote boring hebben en niet bezwijken onder vacuüm",
+        "tail_canonical_zh": "确保吸入管短、大口径且耐真空",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Zorg ervoor dat de inlaatpijpen kort zijn, een grote boring hebben en niet bezwijken onder vacuüm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pomp",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "na elk gebruik met water of een neutralisatiemiddel wordt doorgespoeld",
+        "tail_canonical_zh": "每次使用后用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "De levensduur van de pomp wordt verlengd als deze na elk gebruik met water of een neutralisatiemiddel wordt doorgespoeld.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pomp",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "controleer de pomp op eventuele fysieke schade tijdens het transport",
+        "tail_canonical_zh": "检查泵在运输过程中是否有物理损伤",
+        "tail_type": "InspectionAction",
+        "evidence_text": "controleer de pomp op eventuele fysieke schade tijdens het transport.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

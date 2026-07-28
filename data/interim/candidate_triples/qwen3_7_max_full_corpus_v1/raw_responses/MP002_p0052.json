@@ -1,0 +1,99 @@
+{
+  "page_key": "MP002:p0052",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7a1144e0-81c8-9900-a2a2-7330d888a618",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 862,
+    "prompt_tokens": 2333,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3195
+  },
+  "latency_ms": 12603,
+  "attempt": 1,
+  "prompt_sha256": "387da5a0ce9aa336842dfee80a9ad88c73ac977fdb6fac2690f2bf75b1b8f259",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sealed bearings",
+        "head_canonical_zh": "密封轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "require no maintenance",
+        "tail_canonical_zh": "免维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "equipment or equipment components that require no maintenance (e.g., sealed bearings)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Self-checking Equipment",
+        "head_canonical_zh": "自检设备",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "self-checking and diagnostic features",
+        "tail_canonical_zh": "自检与诊断功能",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Equipment that possesses self-checking and diagnostic features that identify failures",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failures",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "self-checking and diagnostic features",
+        "tail_canonical_zh": "自检与诊断功能",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "self-checking and diagnostic features that identify failures",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "corrosion",
+        "head_canonical_zh": "腐蚀",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "inspection and tests",
+        "tail_canonical_zh": "检查与测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "if corrosion is a failure of ... inspection and tests are going to be performed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": [
+      "Evidence for 'corrosion' relation is split across a page break; confidence reduced due to non-contiguous context in source span.",
+      "Page content is primarily general reliability design principles; few specific pump system fault/maintenance facts available."
+    ]
+  }
+}

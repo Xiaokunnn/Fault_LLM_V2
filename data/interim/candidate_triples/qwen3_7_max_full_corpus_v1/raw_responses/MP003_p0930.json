@@ -1,0 +1,59 @@
+{
+  "page_key": "MP003:p0930",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e642e87f-4db1-9305-aee0-84f23b42d921",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 444,
+    "prompt_tokens": 2215,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2659
+  },
+  "latency_ms": 5288,
+  "attempt": 1,
+  "prompt_sha256": "bf3a9ff535c79558de60890bef0a8c952417f39c0ad43d011e662fc8067a03ff",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fault in the machinery plant",
+        "head_canonical_zh": "机械装置故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "starting of a standby pump",
+        "tail_canonical_zh": "启动备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Provided with means to effect, manually or automatically, corrective actions, such as starting of a standby pump, in the event of a fault in the machinery plant.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure",
+        "head_canonical_zh": "馈线故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed at the centralized control station",
+        "tail_canonical_zh": "集中控制站报警",
+        "tail_type": "Symptom",
+        "evidence_text": "The supply status of these feeders is to be displayed and their failure is to be alarmed at the centralized control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

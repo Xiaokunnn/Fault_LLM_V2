@@ -1,0 +1,246 @@
+{
+  "page_key": "MP022:p0026",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-acd82cc8-7b84-9440-939c-3631806d7bcd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2702,
+    "prompt_tokens": 10704,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13406
+  },
+  "latency_ms": 31531,
+  "attempt": 1,
+  "prompt_sha256": "0c40664879e43fb322b06d775864fb8b90a2398fe8aadc4d17f07e54fdfdff5d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "complete shaft seal",
+        "head_canonical_zh": "完整轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace after 12 months",
+        "tail_canonical_zh": "12个月后更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Preventive maintenance RRReeeppplllaaaccceee aaafffttteeerrr 111222 mmmooonnnttthhhsss::: Replace when replacing the\n                        (one-shift) complete shaft seal shaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r003:c00",
+          "MP022:p0026:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rubber seals",
+        "head_canonical_zh": "橡胶密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace when replacing the shaft seal",
+        "tail_canonical_zh": "更换轴封时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Preventive maintenance RRReeeppplllaaaccceee aaafffttteeerrr 111222 mmmooonnnttthhhsss::: Replace when replacing the\n                        (one-shift) complete shaft seal shaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r003:c00",
+          "MP022:p0026:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace at the end of the day: complete shaft seal",
+        "tail_canonical_zh": "当日结束时更换完整轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Maintenance after leakage RRReeeppplllaaaccceee aaattt ttthhheee eeennnddd ooofff ttthhheee Replace when replacing the\n       (leakage normally starts slowly) dddaaayyy::: complete shaft seal shaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r005:c00",
+          "MP022:p0026:t00:r005:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Regular inspection for leakage and smooth operation",
+        "tail_canonical_zh": "定期检查泄漏和平稳运行",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Planned maintenance - Regular inspection for Replace when replacing the Yearly inspection is\n                          leakage and smooth shaft seal   recommended             \n                          operation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r007:c00"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor bearings",
+        "head_canonical_zh": "电机轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Yearly inspection is recommended",
+        "tail_canonical_zh": "建议每年检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Planned maintenance - Regular inspection for Replace when replacing the Yearly inspection is\n                          leakage and smooth shaft seal   recommended             \n                          operation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r007:c00",
+          "MP022:p0026:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "complete bearing",
+        "head_canonical_zh": "完整轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace complete bearing if worn",
+        "tail_canonical_zh": "磨损时更换完整轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Replace complete bearing\n                        if worn",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r007:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Ensure that the bearing is axially locked",
+        "tail_canonical_zh": "确保轴承轴向锁定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Ensure that the bearing is\n                          axially locked (see motor\n                                                            instructions)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r007:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Complete shaft seal",
+        "head_canonical_zh": "完整轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace after leakage",
+        "tail_canonical_zh": "泄漏后更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "RRReeeppplllaaaccceee aaafffttteeerrr llleeeaaakkkaaagggeee:::\n                        Complete shaft seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r007:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "O-rings",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Lubricate the O-rings with silicone grease or silicone oil",
+        "tail_canonical_zh": "用硅脂或硅油润滑O型圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lubricate the O-rings with\n                        silicone grease or silicone oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0026:t00:r009:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check the pump for smooth operation after service",
+        "tail_canonical_zh": "维修后检查泵运行是否平稳",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the pump for smooth operation after service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure that the pump operates smoothly",
+        "tail_canonical_zh": "确保泵运行平稳",
+        "tail_type": "InspectionAction",
+        "evidence_text": "2. Ensure that the pump operates smoothly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

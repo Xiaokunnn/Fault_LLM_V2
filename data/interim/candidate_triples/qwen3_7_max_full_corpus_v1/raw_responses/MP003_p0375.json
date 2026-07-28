@@ -1,0 +1,78 @@
+{
+  "page_key": "MP003:p0375",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-55f4b694-a0a5-9b4d-9cfc-2af430a0d5fb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 642,
+    "prompt_tokens": 2334,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2976
+  },
+  "latency_ms": 8052,
+  "attempt": 1,
+  "prompt_sha256": "9fbf563753a477ff2491b8a5489043f5cb54fa686d0ce3186e2c046d211c282f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "gear train",
+        "head_canonical_zh": "齿轮系",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspection of gear train without disassembling thruster units",
+        "tail_canonical_zh": "不拆卸推进器单元的齿轮系检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Adequate access covers are to be provided to permit inspection of gear train without disassembling thruster units.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ingress of seawater or cooling water",
+        "head_canonical_zh": "海水或冷却水侵入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "motor damage",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Water sealing arrangements, (ingress of seawater or cooling water results in motor damage)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor damage",
+        "head_canonical_zh": "电机损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Water sealing arrangements",
+        "tail_canonical_zh": "水密封布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Water sealing arrangements, (ingress of seawater or cooling water results in motor damage)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

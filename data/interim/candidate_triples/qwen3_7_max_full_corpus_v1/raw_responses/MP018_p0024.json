@@ -1,0 +1,376 @@
+{
+  "page_key": "MP018:p0024",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8871321c-b80c-9467-b800-8dae0f988c92",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4312,
+    "prompt_tokens": 2265,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6577
+  },
+  "latency_ms": 52041,
+  "attempt": 1,
+  "prompt_sha256": "c906a2458d0d117f58f71afa0e30a1ee1cdd1e7bf88be2363ebdd8f08ff21e14",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller rings",
+        "head_canonical_zh": "叶轮口环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remove the locking set screws from the rings. The rings may now be pulled from the impeller, cut off with a chisel, or turned of if a suitable lathe is available",
+        "tail_canonical_zh": "拆卸锁紧螺钉并拉出、凿除或车削口环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remove the locking set screws from the rings. The rings may now be pulled from the impeller, cut off with a chisel, or turned of if a suitable lathe is available",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "parts",
+        "head_canonical_zh": "零部件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visually inspect the parts for damage affecting serviceability",
+        "tail_canonical_zh": "目视检查零件是否有影响使用的损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visually inspect the parts for damage affecting serviceability",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "o-rings and gaskets",
+        "head_canonical_zh": "O型圈和垫片",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check o-rings and gaskets for cracks, nicks, or tear",
+        "tail_canonical_zh": "检查O型圈和垫片是否有裂纹、缺口或撕裂",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check o-rings and gaskets for cracks, nicks, or tear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "packing the rings",
+        "head_canonical_zh": "填料环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "packing the rings for excessive compression, fraying or shredding, and embedded particles",
+        "tail_canonical_zh": "检查填料环是否过度压缩、磨损、碎裂及嵌入颗粒",
+        "tail_type": "InspectionAction",
+        "evidence_text": "packing the rings for excessive compression, fraying or shredding, and embedded particles",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Mount the shaft between the lathe centers and check eccentricity throughout the entire length",
+        "tail_canonical_zh": "在车床顶尖间安装泵轴并检查全长偏心度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mount the shaft between the lathe centers and check eccentricity throughout the entire length",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Eccentricity",
+        "head_canonical_zh": "偏心度",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "Eccentricity should not exceed .002 inches",
+        "tail_canonical_zh": "偏心度不应超过0.002英寸",
+        "tail_type": "Standard",
+        "evidence_text": "Eccentricity should not exceed .002 inches",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing surfaces and shoulders",
+        "head_canonical_zh": "轴承表面和轴肩",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "The bearing surfaces and shoulders should be smooth and free of nicks",
+        "tail_canonical_zh": "检查轴承表面和轴肩是否光滑且无缺口",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The bearing surfaces and shoulders should be smooth and free of nicks",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impeller hub or impeller wear rings and ID of casing wear rings",
+        "head_canonical_zh": "叶轮轮毂或叶轮口环及泵体口环内径",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Measure OD of impeller hub or impeller wear rings and ID of casing wear rings. Compute diametral clearance (ID minus OD) and compare with clearance given under Section entitled Wear Ring Clearance",
+        "tail_canonical_zh": "测量叶轮轮毂或叶轮口环外径及泵体口环内径，计算直径间隙并与标准对比",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Measure OD of impeller hub or impeller wear rings and ID of casing wear rings. Compute diametral clearance (ID minus OD) and compare with clearance given under Section entitled Wear Ring Clearance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impeller passages",
+        "head_canonical_zh": "叶轮流道",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Examine impeller passages for cracks, dents or embedded material",
+        "tail_canonical_zh": "检查叶轮流道是否有裂纹、凹痕或嵌入物",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Examine impeller passages for cracks, dents or embedded material",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft sleeve",
+        "head_canonical_zh": "轴套",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Examine shaft sleeve for wear",
+        "tail_canonical_zh": "检查轴套磨损情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Examine shaft sleeve for wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings, shaft sleeves or both",
+        "head_canonical_zh": "轴承、轴套或两者",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "Dirt and grit will find their way into, and damage bearings, shaft sleeves or both",
+        "tail_canonical_zh": "污垢和砂砾进入并损坏轴承、轴套或两者",
+        "tail_type": "FaultMode",
+        "evidence_text": "Dirt and grit will find their way into, and damage bearings, shaft sleeves or both",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "damage bearings, shaft sleeves or both",
+        "head_canonical_zh": "轴承或轴套损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "ALL PARTS INSIDE AND OUT MUST BE ABSOLUTELY CLEAN",
+        "tail_canonical_zh": "所有内外部件必须绝对清洁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ALL PARTS INSIDE AND OUT MUST BE ABSOLUTELY CLEAN! Dirt and grit will find their way into, and damage bearings, shaft sleeves or both",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "angular contact ball bearings",
+        "head_canonical_zh": "角接触球轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "bearings must be installed as indicated by the assembly section drawing in order to properly accommodate the axial thrust produced by the pump",
+        "tail_canonical_zh": "按装配剖面图指示安装轴承以承受轴向推力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "bearings must be installed as indicated by the assembly section drawing in order to properly accommodate the axial thrust produced by the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "each bearing to separate and the rotor to drop, thereby causing damage to the pump",
+        "head_canonical_zh": "轴承分离及转子掉落导致泵损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Improper assembly",
+        "tail_canonical_zh": "装配不当",
+        "tail_type": "Cause",
+        "evidence_text": "Improper assembly could cause each bearing to separate and the rotor to drop, thereby causing damage to the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water, dust, etc., from entering and damaging the bearings",
+        "head_canonical_zh": "水尘进入并损坏轴承",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "a sealing material such as caulk should be applied around the pipe where it enters into the bearing housing",
+        "tail_canonical_zh": "在排水管进入轴承箱处涂抹密封胶",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a sealing material such as caulk should be applied around the pipe where it enters into the bearing housing to prevent water, dust, etc., from entering and damaging the bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear rings",
+        "head_canonical_zh": "口环",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "take care not to allow the wear rings (if so equipped) to become damaged and/or pick up burrs",
+        "tail_canonical_zh": "小心防止口环损坏或产生毛刺",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "take care not to allow the wear rings (if so equipped) to become damaged and/or pick up burrs",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotor turns freely",
+        "head_canonical_zh": "转子转动自如",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "check that the rotor turns freely by hand",
+        "tail_canonical_zh": "手动检查转子是否转动自如",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check that the rotor turns freely by hand",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump seizure and damage to the pumping u",
+        "head_canonical_zh": "泵抱死及泵组损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "follow these precautions",
+        "tail_canonical_zh": "遵循这些预防措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Failure to follow these precautions could result in pump seizure and damage to the pumping u",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "page_key": "MP019:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-65c3af84-bc31-9ee1-b75f-7d0aa302f03f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2350,
+    "prompt_tokens": 4838,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7188
+  },
+  "latency_ms": 28336,
+  "attempt": 1,
+  "prompt_sha256": "0c0311825276a46fed3ea97cad96c83eeb39db97e082620b766a7a6160805338",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Variable speed drives",
+        "head_canonical_zh": "变速驱动器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "higher voltage stresses than the sinusoidal supply on the winding of the motor",
+        "tail_canonical_zh": "电机绕组承受比正弦电源更高的电压应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Variable speed drives cause higher voltage stresses than the sinusoidal supply on the winding of the motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "winding insulation of the motor",
+        "head_canonical_zh": "电机绕组绝缘",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "dimensioned according following instructions",
+        "tail_canonical_zh": "按照以下说明进行选型设计",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the winding insulation of the motor as well as the filter at the converter output must be dimensioned according following instructions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "filter at the converter output",
+        "head_canonical_zh": "变频器输出滤波器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "dimensioned according following instructions",
+        "tail_canonical_zh": "按照以下说明进行选型设计",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the winding insulation of the motor as well as the filter at the converter output must be dimensioned according following instructions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "PTC thermistors in the stator windings",
+        "head_canonical_zh": "定子绕组中的PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "connect those to the frequency converter by appropriate means",
+        "tail_canonical_zh": "通过适当方式连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is recommended to connect those to the frequency converter by appropriate means",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing currents",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Insulated bearings or bearing constructions, common mode filters and suitable cabling and grounding methods",
+        "tail_canonical_zh": "绝缘轴承或轴承结构、共模滤波器以及合适的布线和接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Insulated bearings or bearing constructions, common mode filters and suitable cabling and grounding methods must be used according to the following instructions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "额定供电电压UN≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standard insulation",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N ABB Standard insulation",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r001:c00",
+          "MP019:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "额定供电电压500V<UN≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standard insulation + dU/dt filters OR ABB Special insulation (variant code 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N ABB Standard insulation + dU/dt filters OR ABB Special insulation (variant code 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r002:c00",
+          "MP019:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "额定供电电压UN≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Special insulation (variant code 405) AND dU/dt-filters at converter output",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)且变频器输出端加装dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N ABB Special insulation (variant code 405) AND dU/dt-filters at converter output",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r003:c00",
+          "MP019:p0011:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N AND cable length > 150 m",
+        "head_canonical_zh": "额定供电电压UN≤690V且电缆长度大于150米",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Special insulation (variant code 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N AND cable length > 150 m ABB Special insulation (variant code 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0011:t00:r004:c00",
+          "MP019:p0011:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

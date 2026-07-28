@@ -1,0 +1,139 @@
+{
+  "page_key": "MP019:p0071",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-33f966ec-3ee7-9953-9f88-624ff88a467b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1339,
+    "prompt_tokens": 2503,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3842
+  },
+  "latency_ms": 18666,
+  "attempt": 1,
+  "prompt_sha256": "6aaf64825992dfba05af8e5120e138c32ae961b0ffe241b2278071ace7f130b7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "rodamientos",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reengrasar",
+        "tail_canonical_zh": "重新加脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Al reengrasar, utilice únicamente grasa especial para rodamientos de bolas",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "daños en los rodamientos",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "uso de lubricantes incompatibles",
+        "tail_canonical_zh": "使用不相容润滑剂",
+        "tail_type": "Cause",
+        "evidence_text": "El uso de lubricantes incompatibles puede causar a daños en los rodamientos",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "daños en los rodamientos",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "No mezcle grasas de tipos diferentes",
+        "tail_canonical_zh": "不要混合不同类型的润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ADVERTENCIA No mezcle grasas de tipos diferentes. El uso de lubricantes incompatibles puede causar a daños en los rodamientos",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rodamientos",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "temperatura del rodamiento está por debajo de los 110 °C",
+        "tail_canonical_zh": "轴承温度低于110°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "la temperatura del rodamiento está por debajo de los 110 °C",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motores de 2 polos a alta velocidad",
+        "head_canonical_zh": "高速2极电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "utilice siempre grasa de alta velocidad",
+        "tail_canonical_zh": "始终使用高速润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Utilice siempre grasa de alta velocidad para los motores de 2 polos a alta velocidad cuyo factor de velocidad sea superior a 480.000",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "intervalo de lubricación",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "grasas de alto rendimiento mencionadas arriba",
+        "tail_canonical_zh": "上述高性能润滑脂",
+        "tail_type": "Standard",
+        "evidence_text": "El intervalo de lubricación se basa en los de las grasas de alto rendimiento mencionadas arriba",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

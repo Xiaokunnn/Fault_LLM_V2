@@ -1,0 +1,277 @@
+{
+  "page_key": "MP001:p0073",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-539fdf1c-80be-943e-81eb-44567ef7cc9c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2966,
+    "prompt_tokens": 10636,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13602
+  },
+  "latency_ms": 41464,
+  "attempt": 1,
+  "prompt_sha256": "8ae83423a14ea4eda2bcb7e7e1321db2c86715b63355426633b01cf9a5d855e0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Salt Water Ingress",
+        "head_canonical_zh": "海水侵入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Coolant Contamination",
+        "tail_canonical_zh": "冷却液污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "retaw\ntlaS\nssergni\ntnalooc\nyrenihcam\nkceD\nsdraug\nevitceffeni",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ineffective Deck machinery guards",
+        "head_canonical_zh": "甲板机械防护罩失效",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Salt Water Ingress",
+        "tail_canonical_zh": "海水侵入",
+        "tail_type": "Cause",
+        "evidence_text": "retaw\ntlaS\nssergni\ntnalooc\nyrenihcam\nkceD\nsdraug\nevitceffeni",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Check coolant system for leaks",
+        "head_canonical_zh": "检查冷却系统泄漏",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Salt Water Ingress",
+        "tail_canonical_zh": "海水侵入",
+        "tail_type": "Cause",
+        "evidence_text": "tnalooc\nkcehC\nskael\nrof\nmetsys",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Install or repair shields to prevent water ingress",
+        "head_canonical_zh": "安装或修复防护罩以防止进水",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "water ingress",
+        "tail_canonical_zh": "水侵入",
+        "tail_type": "Cause",
+        "evidence_text": "/tnemecalpeR llatsni\nro\nriaper\ntneverp\not\nsdleihs\nssergni\nretaw",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Check seal and additives",
+        "head_canonical_zh": "检查密封和添加剂",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Coolant Contamination",
+        "tail_canonical_zh": "冷却液污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "tnalooc\nrof\nkcehC\nlaes\ndna sevitidda",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Karl Fischer Crack Test",
+        "head_canonical_zh": "卡尔费休微量水分测试",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Presence of water",
+        "tail_canonical_zh": "水的存在",
+        "tail_type": "Symptom",
+        "evidence_text": "tseT\nelkcarC\nrehcsiF\nlraK",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Titration Test ASTM D1744-92",
+        "head_canonical_zh": "滴定测试ASTM D1744-92",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Presence of water",
+        "tail_canonical_zh": "水的存在",
+        "tail_type": "Symptom",
+        "evidence_text": "tseT\nnoitartiT\n0002:6926\nOSI(\nMTSA(\n29-4471D",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Moisture ISO 12937-00",
+        "head_canonical_zh": "水分测定ISO 12937-00",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Presence of water",
+        "tail_canonical_zh": "水的存在",
+        "tail_type": "Symptom",
+        "evidence_text": "erutsioM\n00-73921\nOSI(",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r006:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ASTM D6304",
+        "head_canonical_zh": "ASTM D6304标准",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "Moisture ISO 12937-00",
+        "tail_canonical_zh": "水分测定ISO 12937-00",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "]lacirtcelE[\n3351\nD\nMTSA\n)1.5.2/6(",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r006:c03"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Chemical Analysis",
+        "head_canonical_zh": "化学分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Salt Water Contamination",
+        "tail_canonical_zh": "海水污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "lacimehC sisylanA",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Chemical Analysis",
+        "head_canonical_zh": "化学分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Fresh Water Contamination",
+        "tail_canonical_zh": "淡水污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "lacimehC sisylanA",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Drain and refill systems",
+        "head_canonical_zh": "排放并重新加注系统",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Water Contamination",
+        "tail_canonical_zh": "水污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "llifer\ndna niarD\n,smetsys",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0073:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

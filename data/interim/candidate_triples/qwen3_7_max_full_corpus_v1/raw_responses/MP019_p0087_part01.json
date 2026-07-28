@@ -1,0 +1,139 @@
+{
+  "page_key": "MP019:p0087",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-65b803cc-8a9e-989a-a49c-861d2ed28dbb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1469,
+    "prompt_tokens": 2684,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4153
+  },
+  "latency_ms": 19820,
+  "attempt": 1,
+  "prompt_sha256": "9752c966b242abde47f420a3492f8773b6153dd2e57e8d519ccb7c4c18a5d25e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "aumento di temperatura",
+        "head_canonical_zh": "轴承温度升高",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "primo avviamento o dopo la lubrificazione di un cuscinetto",
+        "tail_canonical_zh": "首次启动或轴承润滑后",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Durante il primo avviamento o dopo la lubrificazione di un cuscinetto, è possibile che si manifesti temporaneamente un aumento di temperatura, per circa 10-20 ore.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "canale di lubrificazione sia aperto",
+        "head_canonical_zh": "润滑通道畅通",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare che il canale di lubrificazione sia aperto",
+        "tail_canonical_zh": "检查润滑通道是否畅通",
+        "tail_type": "InspectionAction",
+        "evidence_text": "– Controllare che il canale di lubrificazione sia aperto.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tutto il grasso in eccesso venga spinto fuori dai cuscinetti",
+        "head_canonical_zh": "多余润滑脂排出",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Far funzionare il motore per 1-2 ore",
+        "tail_canonical_zh": "运行电机1-2小时",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "– Far funzionare il motore per 1-2 ore per assicurarsi che tutto il grasso in eccesso venga spinto fuori dai cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "temperatura dei cuscinetti",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "misurare la temperatura dei cuscinetti per l'intera gamma di funzionamento",
+        "tail_canonical_zh": "测量全运行范围轴承温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Nel funzionamento a velocità variabile, ovvero con alimentazione da convertitore di frequenza, è necessario misurare la temperatura dei cuscinetti per l'intera gamma di funzionamento",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "intervalli di lubrificazione",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "se superiore a 80°C, dimezzare gli intervalli di lubrificazione ogni 15°C di aumento della temperatura dei cuscinetti",
+        "tail_canonical_zh": "温度超80°C时每升15°C减半润滑间隔",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "e se superiore a 80°C, dimezzare gli intervalli di lubrificazione ogni 15°C di aumento della temperatura dei cuscinetti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "temperatura massima di esercizio del grasso e dei cuscinetti, +110°C",
+        "head_canonical_zh": "润滑脂和轴承最高工作温度+110°C",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "non deve essere superata",
+        "tail_canonical_zh": "不得超过",
+        "tail_type": "Standard",
+        "evidence_text": "La temperatura massima di esercizio del grasso e dei cuscinetti, +110°C, non deve essere superata.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

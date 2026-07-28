@@ -1,0 +1,93 @@
+{
+  "page_key": "MP003:p0597",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3a755aea-5d68-935f-9de4-3f5123b4a5e8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 871,
+    "prompt_tokens": 5205,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6076
+  },
+  "latency_ms": 10392,
+  "attempt": 1,
+  "prompt_sha256": "aaa4cdf4ad91254e9d23cc4f1841e0afe50d1087186608c632738b7f06c40a8a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "high temperature alarm",
+        "head_canonical_zh": "高温报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "high medium temperature",
+        "tail_canonical_zh": "加热介质高温",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "a high temperature alarm is to be fitted to warn of any high medium temperature",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheating of fuel oil",
+        "head_canonical_zh": "燃油过热",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Means of temperature control",
+        "tail_canonical_zh": "温度控制装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means of temperature control are to be provided to prevent overheating of fuel oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil leaking into the steam system",
+        "head_canonical_zh": "油漏入蒸汽系统",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "observation tank",
+        "tail_canonical_zh": "观察柜",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "steam condensate returns are to be led to an observation tank, or other approved means, to enable detection of oil leaking into the steam system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "surface temperature of the heating element from exceeding 220°C (428°F)",
+        "head_canonical_zh": "加热元件表面温度超过220°C",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "automatic means of preventing the surface temperature of the heating element from exceeding 220°C (428°F)",
+        "tail_canonical_zh": "防止加热元件表面超温的自动装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "fitted with automatic means of preventing the surface temperature of the heating element from exceeding 220°C (428°F)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

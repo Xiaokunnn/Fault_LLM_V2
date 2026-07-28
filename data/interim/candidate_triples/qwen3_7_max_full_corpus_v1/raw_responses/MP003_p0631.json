@@ -1,0 +1,74 @@
+{
+  "page_key": "MP003:p0631",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3fecded4-a42b-9345-97e2-2dae27d7e959",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 635,
+    "prompt_tokens": 2419,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3054
+  },
+  "latency_ms": 8158,
+  "attempt": 1,
+  "prompt_sha256": "bcd6ced9b7b92c046f4459d8fa221514f9c1edceac0bcf68b1258bdc83b15616",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fuel oil service pumps",
+        "head_canonical_zh": "燃油供给泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "overhauled",
+        "tail_canonical_zh": "检修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pumps are to be arranged such that one may be overhauled while the other is in service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fuel oil service pumps",
+        "head_canonical_zh": "燃油供给泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "testing and certification",
+        "tail_canonical_zh": "测试与认证",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Provide an indication of integrity of propulsion boiler fuel oil service pumps by testing and certification.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fire arising in that space",
+        "head_canonical_zh": "舱室火灾",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "remote means of control situated outside the space in which they are located so that they may be stopped",
+        "tail_canonical_zh": "位于舱外的遥控停止装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil service pumps are to be fitted with remote means of control situated outside the space in which they are located so that they may be stopped in the event of fire arising in that space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

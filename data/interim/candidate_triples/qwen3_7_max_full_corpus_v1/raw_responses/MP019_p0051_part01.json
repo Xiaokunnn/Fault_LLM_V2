@@ -1,0 +1,139 @@
+{
+  "page_key": "MP019:p0051",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7cb10aee-0447-96a6-8373-26bf38f3969c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1569,
+    "prompt_tokens": 2735,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4304
+  },
+  "latency_ms": 18743,
+  "attempt": 1,
+  "prompt_sha256": "96673bfd625d4a95439756b53e8a724e6b7005217c7b03798e8bc2133e1c5fa4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Regraissage avec le moteur en marche",
+        "tail_canonical_zh": "电机运行时再润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Regraissage avec le moteur en marche\n– Otez le bouchon de l'orifice d'évacuation de la graisse ou ouvrez la valve de fermeture si le moteur en est doté.\n– Assurez-vous que le conduit de lubrification est ouvert\n– Injectez la quantité spécifiée de graisse dans le roulement.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Regraissage avec le moteur à l'arrêt",
+        "tail_canonical_zh": "电机停机时再润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Regraissage avec le moteur à l'arrêt\nIl est impossible de regraisser les roulements si le moteur ne tourne pas ; quant à la lubrification, elle peut être opérée lorsque le moteur est à l'arrêt.\n– Dans ce cas, commencez en injectant la moitié de la quantité de graisse et faites tourner le moteur à vitesse maximale pendant quelques minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubrification automatique",
+        "head_canonical_zh": "自动润滑",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "le bouchon de l'orifice d'évacuation de la graisse doit être retiré ou la valve de fermeture doit être ouverte",
+        "tail_canonical_zh": "拆除排脂孔塞或打开关闭阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "En cas de lubrification automatique, le bouchon de l'orifice d'évacuation de la graisse doit être retiré ou la valve de fermeture doit être ouverte, si le moteur en est doté.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "température du roulement",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "mesurer la température du roulement pour l'ensemble de la plage de fonctionnement",
+        "tail_canonical_zh": "测量整个运行范围内的轴承温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Dans le fonctionnement à vitesse variable (alimentation par convertisseur de fréquence) il est nécessaire de mesurer la température du roulement pour l'ensemble de la plage de fonctionnement.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hausse de température temporaire",
+        "head_canonical_zh": "暂时温升",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Lors du premier démarrage ou après une lubrification de roulement",
+        "tail_canonical_zh": "首次启动或轴承润滑后",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Lors du premier démarrage ou après une lubrification de roulement, une hausse de température temporaire peut se produire pendant environ 10 à 20 heures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "température maximum de fonctionnement de la graisse et des roulements (+110 °C)",
+        "head_canonical_zh": "润滑脂和轴承最高工作温度(+110°C)",
+        "head_type": "Standard",
+        "relation": "prevented_by",
+        "tail_surface": "Ne pas dépasser la température maximum de fonctionnement de la graisse et des roulements (+110 °C)",
+        "tail_canonical_zh": "不超过润滑脂和轴承最高工作温度(+110°C)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "AVERTISSEMENT\nNe pas dépasser la température maximum de fonctionnement de la graisse et des roulements (+110 °C).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

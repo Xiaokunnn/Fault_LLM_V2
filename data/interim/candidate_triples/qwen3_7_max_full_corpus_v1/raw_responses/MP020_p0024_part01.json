@@ -1,0 +1,156 @@
+{
+  "page_key": "MP020:p0024",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e1f4354c-b473-949c-9a7f-1fc2ab33be60",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1555,
+    "prompt_tokens": 7893,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9448
+  },
+  "latency_ms": 18647,
+  "attempt": 1,
+  "prompt_sha256": "2ba0fcfc053859d1f4458aaa6e5c6e8880ef2493a5228249b0b9bf512389c2ce",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Running clearance",
+        "head_canonical_zh": "运行间隙",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": ".010 inch on a side",
+        "tail_canonical_zh": "单侧0.010英寸",
+        "tail_type": "Standard",
+        "evidence_text": "Running clearance on most new general purpose water pumps is about .010 inch on a side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear increases this to .032 inch",
+        "head_canonical_zh": "磨损增加至0.032英寸",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear ring should be replaced",
+        "tail_canonical_zh": "更换耐磨环",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If wear increases this to .032 inch, the wear ring should be replaced and the impeller repaired or replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear increases this to .032 inch",
+        "head_canonical_zh": "磨损增加至0.032英寸",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "impeller repaired or replaced",
+        "tail_canonical_zh": "叶轮修复或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If wear increases this to .032 inch, the wear ring should be replaced and the impeller repaired or replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "abrasives in the pumpage",
+        "tail_canonical_zh": "泵送介质中的磨料",
+        "tail_type": "Cause",
+        "evidence_text": "Wear may be caused by abrasives in the pumpage, unsupported piping loads, or other causes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "unsupported piping loads",
+        "tail_canonical_zh": "管道支撑不足载荷",
+        "tail_type": "Cause",
+        "evidence_text": "Wear may be caused by abrasives in the pumpage, unsupported piping loads, or other causes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "GLAND NUTS",
+        "head_canonical_zh": "压盖螺母",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Tighten the gland nuts 1/4 turn every ten minutes until a leakage of only 40–60 drops per minutes is achieved",
+        "tail_canonical_zh": "每十分钟拧紧压盖螺母1/4圈直至泄漏量达到每分钟40-60滴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tighten the gland nuts 1/4 turn every ten minutes until a leakage of only 40–60 drops per minutes is achieved.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "packing must be replaced",
+        "head_canonical_zh": "填料必须更换",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "packing puller",
+        "tail_canonical_zh": "填料拆卸工具",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the packing must be replaced, a packing puller may be needed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

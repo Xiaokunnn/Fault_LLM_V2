@@ -1,0 +1,59 @@
+{
+  "page_key": "MP003:p0044",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ba43b723-afe9-95a2-ae07-a1afd77be6d0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 444,
+    "prompt_tokens": 2322,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2766
+  },
+  "latency_ms": 5906,
+  "attempt": 1,
+  "prompt_sha256": "e8f7b9f66a3ee9e65aa45f264399cc26a314c0955a4fbfd2ce25b5d92f119c67",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cooling medium jacket",
+        "head_canonical_zh": "冷却介质夹套",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Means are to be provided to prevent the cooling medium jacket from being over-pressurized",
+        "tail_canonical_zh": "设置防止冷却介质夹套超压的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided to preventthe cooling medium jacket from being over-pressurized.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheated engine",
+        "head_canonical_zh": "过热发动机",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "cause of overheating has been remedied",
+        "tail_canonical_zh": "排除过热原因",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "warn against restarting an overheated engine until the cause of overheating has been remedied",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

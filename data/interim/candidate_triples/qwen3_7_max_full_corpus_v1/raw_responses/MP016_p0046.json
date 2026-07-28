@@ -1,0 +1,116 @@
+{
+  "page_key": "MP016:p0046",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-592cec44-78cd-94f8-88cb-cb61a0e83317",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1256,
+    "prompt_tokens": 2688,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3944
+  },
+  "latency_ms": 15284,
+  "attempt": 1,
+  "prompt_sha256": "b0fc2f1fb9368fc2720c12b5b4da86771793a0e07f9910ecdd99d293ac492c4e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bomba",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "se la lava con agua o un agente neutralizante después de cada operación",
+        "tail_canonical_zh": "每次操作后用水或中和剂清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "La vida útil de la bomba se prolongará si se la lava con agua o un agente neutralizante después de cada operación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alineación del acoplamiento",
+        "head_canonical_zh": "联轴器对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Compruebe siempre la alineación entre la bomba y el accionamiento después de la instalación y antes de poner en marcha la bomba",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置的对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe siempre la alineación entre la bomba y el accionamiento después de la instalación y antes de poner en marcha la bomba.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tuberías de entrada",
+        "head_canonical_zh": "吸入管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Asegúrese de que las tuberías de entrada sean cortas, tengan un diámetro interior grande y no colapsen al someterlas al vacío",
+        "tail_canonical_zh": "确保吸入管路短、内径大且在真空下不塌陷",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Asegúrese de que las tuberías de entrada sean cortas, tengan un diámetro interior grande y no colapsen al someterlas al vacío.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "protecciones",
+        "head_canonical_zh": "防护罩",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Los acoplamientos, las correas y las poleas deben estar encerrados para evitar que los dedos, la ropa o las herramientas entren en contacto con las piezas móviles",
+        "tail_canonical_zh": "封闭联轴器、皮带和皮带轮以防止接触运动部件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Los acoplamientos, las correas y las poleas deben estar encerrados para evitar que los dedos, la ropa o las herramientas entren en contacto con las piezas móviles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bomba",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Lo más cerca posible de la fuente de líquidos y lo más baja posible para maximizar la presión neta de entrada disponible para la bomba",
+        "tail_canonical_zh": "尽可能靠近液源并尽可能低置以最大化净正吸入压头",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Lo más cerca posible de la fuente de líquidos y lo más baja posible para maximizar la presión neta de entrada disponible para la bomba.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

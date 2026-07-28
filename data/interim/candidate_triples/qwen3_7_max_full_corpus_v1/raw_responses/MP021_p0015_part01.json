@@ -1,0 +1,254 @@
+{
+  "page_key": "MP021:p0015",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cc177c0b-cdb3-927d-b335-e034c237c8d2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2618,
+    "prompt_tokens": 2857,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5475
+  },
+  "latency_ms": 30132,
+  "attempt": 1,
+  "prompt_sha256": "bd64fbd3c90fc7eefe925e06c268bfbb099fd7a026b53c62f708a25504eefc9e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Leaks in the suction line permitting air to be drawn in",
+        "head_canonical_zh": "吸入管路泄漏导致进气",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noisy pump",
+        "tail_canonical_zh": "泵噪声大",
+        "tail_type": "Symptom",
+        "evidence_text": "Leaks in the suction line permitting air to be drawn in may cause a noisy pump or a reduction in capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaks in the suction line permitting air to be drawn in",
+        "head_canonical_zh": "吸入管路泄漏导致进气",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "reduction in capacity",
+        "tail_canonical_zh": "流量降低",
+        "tail_type": "Symptom",
+        "evidence_text": "Leaks in the suction line permitting air to be drawn in may cause a noisy pump or a reduction in capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air pockets in the suction line",
+        "head_canonical_zh": "吸入管路气穴",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "hard for the pump to prime",
+        "tail_canonical_zh": "泵难以自吸",
+        "tail_type": "Symptom",
+        "evidence_text": "Air pockets in the suction line make it hard for the pump to prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foreign objects",
+        "head_canonical_zh": "异物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lock the pump",
+        "tail_canonical_zh": "泵卡死",
+        "tail_type": "FaultMode",
+        "evidence_text": "Without a strainer objects can lock the pump, and damage the internals and drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foreign objects",
+        "head_canonical_zh": "异物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the internals and drive",
+        "tail_canonical_zh": "损坏内部零件和驱动装置",
+        "tail_type": "FaultMode",
+        "evidence_text": "Without a strainer objects can lock the pump, and damage the internals and drive.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dragging",
+        "head_canonical_zh": "转子拖磨",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "unit misalignment",
+        "tail_canonical_zh": "机组不对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "dragging would indicate unit misalignment or casing distortion from piping strain",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dragging",
+        "head_canonical_zh": "转子拖磨",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "casing distortion from piping strain",
+        "tail_canonical_zh": "管路应力导致的泵壳变形",
+        "tail_type": "FaultMode",
+        "evidence_text": "dragging would indicate unit misalignment or casing distortion from piping strain",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignment of the drive",
+        "head_canonical_zh": "驱动对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the alignment of the drive after the piping is hooked up",
+        "tail_canonical_zh": "管路连接后检查驱动对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the alignment of the drive after the piping is hooked up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "clearance all the way around between the rotor and casing",
+        "head_canonical_zh": "转子与泵壳间全周间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "remove the head of the pump and with a feeler gauge determine if there is clearance all the way around between the rotor and casing",
+        "tail_canonical_zh": "拆卸泵头并用塞尺检查转子与泵壳间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "remove the head of the pump and with a feeler gauge determine if there is clearance all the way around between the rotor and casing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "strainer",
+        "head_canonical_zh": "过滤器",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "foreign objects from going into the pump",
+        "tail_canonical_zh": "防止异物进入泵内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The strainer will keep foreign objects from going into the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure relief device",
+        "head_canonical_zh": "泄压装置",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "pump or piping will rupture",
+        "tail_canonical_zh": "泵或管路破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "if there is no provision for pressure relief in the closed off section, there is a chance that the pump or piping will rupture",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foot valve",
+        "head_canonical_zh": "底阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "hold the liquid in the line and make it easier for the pump to prime",
+        "tail_canonical_zh": "保持管路充液并使泵易于自吸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a foot valve at the end of the suction piping or a check valve in the first horizontal run will hold the liquid in the line and make it easier for the pump to prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

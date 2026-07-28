@@ -1,0 +1,189 @@
+{
+  "page_key": "MP016:p0020",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-967c05af-b771-9c1a-9bfa-8cd46cff0c0e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2028,
+    "prompt_tokens": 2725,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4753
+  },
+  "latency_ms": 25380,
+  "attempt": 1,
+  "prompt_sha256": "7434021e14d0c1d542881319e7fac1ddd6ce7a87dc5a29ed7a0f201f90a349f2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Überschreiten Sie nicht den im Datenblatt vorgegebenen maximalen Differenzdruck",
+        "head_canonical_zh": "超过最大压差",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Beschädigung des Laufrads",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Überschreiten Sie nicht den im Datenblatt vorgegebenen maximalen Differenzdruck – dies würde schon nach einigen Sekunden zur Beschädigung des Laufrads führen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bei geschlossenem Ventil laufen",
+        "head_canonical_zh": "闭阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "Beschädigung des Laufrads",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Lassen Sie die Pumpe niemals bei geschlossenem Ventil laufen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unzureichender Einlassdruck",
+        "head_canonical_zh": "入口压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Kavitationen",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ein unzureichender Einlassdruck verursacht Kavitationen in der Pumpe",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "Kavitationen",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Leistungseinbußen",
+        "tail_canonical_zh": "性能下降",
+        "tail_type": "Symptom",
+        "evidence_text": "Ein unzureichender Einlassdruck verursacht Kavitationen in der Pumpe, was zu Leistungseinbußen, Geräuschen und einer kurzen Lebensdauer der Pumpe führt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Kavitationen",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Geräuschen",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Ein unzureichender Einlassdruck verursacht Kavitationen in der Pumpe, was zu Leistungseinbußen, Geräuschen und einer kurzen Lebensdauer der Pumpe führt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Kavitationen",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "kurzen Lebensdauer der Pumpe",
+        "tail_canonical_zh": "泵寿命缩短",
+        "tail_type": "Symptom",
+        "evidence_text": "Ein unzureichender Einlassdruck verursacht Kavitationen in der Pumpe, was zu Leistungseinbußen, Geräuschen und einer kurzen Lebensdauer der Pumpe führt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumpe",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "mit Wasser oder Neutralisierungsmittel spülen",
+        "tail_canonical_zh": "用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Zur Verlängerung der Lebensdauer der Pumpe können Sie sie am Ende des Arbeitstages mit Wasser oder Neutralisierungsmittel spülen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Explosion",
+        "head_canonical_zh": "爆炸",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Verwenden Sie Jabsco-Pumpen niemals für Benzin, sonstige Erdölprodukte oder irgendwelche Stoffe mit einem Flammpunkt unter 37 °C",
+        "tail_canonical_zh": "禁止输送汽油及闪点低于37°C的物质",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Verwenden Sie Jabsco-Pumpen niemals für Benzin, sonstige Erdölprodukte oder irgendwelche Stoffe mit einem Flammpunkt unter 37 °C – dies kann zur Explosion führen und ist lebensgefährlich!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pumpe",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Untersuchen Sie die Pumpe auf mögliche Transportschäden",
+        "tail_canonical_zh": "检查运输损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "b. Untersuchen Sie die Pumpe auf mögliche Transportschäden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

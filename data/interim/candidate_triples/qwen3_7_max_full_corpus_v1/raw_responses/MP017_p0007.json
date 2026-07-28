@@ -1,0 +1,161 @@
+{
+  "page_key": "MP017:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-690eefb2-b120-9aae-af5e-d1e649c530b7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1560,
+    "prompt_tokens": 2348,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3908
+  },
+  "latency_ms": 19750,
+  "attempt": 1,
+  "prompt_sha256": "9ab59a25da812850f88e331735f97031298cdb8d5de4ffbbf87d92af708e6f29",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump and power source",
+        "head_canonical_zh": "泵及动力源",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect ... for cracks, dents, damaged threads, and other obvious damage",
+        "tail_canonical_zh": "检查裂纹、凹痕、螺纹损坏及其他明显损伤",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the pump and power source (if so equipped) for cracks, dents, damaged threads, and other obvious damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loose attaching hardware",
+        "head_canonical_zh": "紧固件松动",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check for and tighten loose attaching hardware",
+        "tail_canonical_zh": "检查并紧固松动的安装硬件",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check for and tighten loose attaching hardware.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gaskets tend to shrink after drying",
+        "head_canonical_zh": "垫片干燥后收缩",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "loose hardware at mating surfaces",
+        "tail_canonical_zh": "配合面处紧固件松动",
+        "tail_type": "FaultMode",
+        "evidence_text": "Since gaskets tend to shrink after drying, check for loose hardware at mating surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loose hardware at mating surfaces",
+        "head_canonical_zh": "配合面处紧固件松动",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check for loose hardware at mating surfaces",
+        "tail_canonical_zh": "检查配合面处紧固件是否松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Since gaskets tend to shrink after drying, check for loose hardware at mating surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "components or lubricants",
+        "head_canonical_zh": "部件或润滑剂",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspected or replaced",
+        "tail_canonical_zh": "检查或更换",
+        "tail_type": "InspectionAction",
+        "evidence_text": "These must be inspected or replaced to ensure maximum pump service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "positive and negative cable connectors, and the battery terminals",
+        "head_canonical_zh": "正负极电缆接头及电池端子",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "clean",
+        "tail_canonical_zh": "清洁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before installing the battery, clean the positive and negative cable connectors, and the battery terminals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "terminals and clamps",
+        "head_canonical_zh": "端子与夹头",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "coated with petroleum jelly",
+        "tail_canonical_zh": "涂抹凡士林",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The terminals and clamps may be coated with petroleum jelly to retard corrosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.91,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

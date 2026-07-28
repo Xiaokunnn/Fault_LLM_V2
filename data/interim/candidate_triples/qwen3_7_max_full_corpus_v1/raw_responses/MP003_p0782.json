@@ -1,0 +1,189 @@
+{
+  "page_key": "MP003:p0782",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0264e31d-3e3c-966b-88a4-5ed16a2ded7b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2222,
+    "prompt_tokens": 7742,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9964
+  },
+  "latency_ms": 28192,
+  "attempt": 1,
+  "prompt_sha256": "6469d0a4468bf1801db5eb59674912f043464faf16e696d09d0fe91cf90f221d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "rotating machines",
+        "head_canonical_zh": "旋转电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Dielectric Strength Test",
+        "tail_canonical_zh": "介电强度试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The dielectric strength of all rotating machines is to be tested with all parts assembled and in a condition equivalent to normal working condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Field windings of synchronous generators, synchronous motors and synchronous condensers",
+        "head_canonical_zh": "同步发电机、同步电动机及同步调相机的励磁绕组",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Ten times the rated field voltage with a minimum of 1500 V and a maximum of 3500 V",
+        "tail_canonical_zh": "十倍额定励磁电压（最小1500V，最大3500V）",
+        "tail_type": "Standard",
+        "evidence_text": "Field windings of synchronous generators, synchronous motors and synchronous condensers: a) For all machines except that in b) a) Ten times the rated field voltage with a minimum of 1500 V and a maximum of 3500 V",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0782:t01:r001:c00",
+          "MP003:p0782:t01:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motors started with field winding connected across resistance of more than ten times of the field winding resistance",
+        "head_canonical_zh": "励磁绕组经大于十倍励磁绕组电阻启动的电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "1000 V + twice the maximum value of the voltage with a minimum of 1500 V",
+        "tail_canonical_zh": "1000V加两倍最大电压值（最小1500V）",
+        "tail_type": "Standard",
+        "evidence_text": "b) For motors started with field winding connected across resistance of more than ten times of the field winding resistance b) 1000 V + twice the maximum value of the voltage with a minimum of 1500 V",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0782:t01:r001:c00",
+          "MP003:p0782:t01:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Phase-wound rotors of induction motors",
+        "head_canonical_zh": "感应电动机绕线转子",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "1000 V + twice the open-circuit standstill secondary voltage",
+        "tail_canonical_zh": "1000V加两倍开路静止二次电压",
+        "tail_type": "Standard",
+        "evidence_text": "a) For non-reversing motors or motors reversible from standstill only a) 1000 V + twice the open-circuit standstill secondary voltage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0782:t01:r003:c00",
+          "MP003:p0782:t01:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motors reversible by reversing the primary supply while running",
+        "head_canonical_zh": "运行中通过反转一次电源换向的电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "1000 V + four times the open-circuit standstill secondary voltage",
+        "tail_canonical_zh": "1000V加四倍开路静止二次电压",
+        "tail_type": "Standard",
+        "evidence_text": "b) For motors reversible by reversing the primary supply while running b) 1000 V + four times the open-circuit standstill secondary voltage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0782:t01:r004:c00",
+          "MP003:p0782:t01:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motors",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Running Balance Test",
+        "tail_canonical_zh": "运行动平衡试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Motors are to be operated at no load and at rated speed while being supplied with a rated voltage and frequency; and in the case of a generator, driven by a suitable means and excited to give rated terminal voltage. The vibration of the machine and operation of the bearing lubrication system, where applicable, are to be checked and found satisfactory.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration of the machine",
+        "head_canonical_zh": "机器振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Running Balance Test",
+        "tail_canonical_zh": "运行动平衡试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The vibration of the machine and operation of the bearing lubrication system, where applicable, are to be checked and found satisfactory.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operation of the bearing lubrication system",
+        "head_canonical_zh": "轴承润滑系统运行",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Running Balance Test",
+        "tail_canonical_zh": "运行动平衡试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The vibration of the machine and operation of the bearing lubrication system, where applicable, are to be checked and found satisfactory.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

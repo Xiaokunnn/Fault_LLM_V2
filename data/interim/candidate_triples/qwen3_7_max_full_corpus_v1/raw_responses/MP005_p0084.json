@@ -1,0 +1,78 @@
+{
+  "page_key": "MP005:p0084",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a8689855-52dc-908c-8e28-5bfe60fb9c97",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 776,
+    "prompt_tokens": 3197,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3973
+  },
+  "latency_ms": 9816,
+  "attempt": 1,
+  "prompt_sha256": "5796ae948abddf5f9286f435c648514262b64e0b58163b682ae8b5bb5f01c8ff",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Loosen the rear cover from the pump casing by means of the pointed screws (86). The motor and motor bracket with rear cover and shaft with impeller can now be lifted up allowing inspection of the impeller",
+        "tail_canonical_zh": "松开泵体后盖并吊起电机组件以检查叶轮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "5. Loosen the rear cover from the pump casing by means of the pointed screws (86). The motor and motor bracket with rear cover and shaft with impeller can now be lifted up allowing inspection of the impeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump set",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Loosen the rear cover from the pump casing by means of the pointed screws (86)",
+        "tail_canonical_zh": "使用尖头螺钉松开泵体后盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "DISMANTLING THE PUMP SET ... 5. Loosen the rear cover from the pump casing by means of the pointed screws (86).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Pull the rear cover off the motor bracket, by which the coupling (19) is pulled off the motor shaft",
+        "tail_canonical_zh": "拆下电机支架后盖以移除联轴器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "9.1.2. Dismantling shaft seal ... 1. Pull the rear cover off the motor bracket, by which the coupling (19) is pulled off the motor shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

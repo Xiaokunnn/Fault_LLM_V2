@@ -1,0 +1,119 @@
+{
+  "page_key": "MP003:p0210",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4d9c84ca-d6b9-915c-a2e2-9e5553df5116",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1065,
+    "prompt_tokens": 2301,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3366
+  },
+  "latency_ms": 13877,
+  "attempt": 1,
+  "prompt_sha256": "85fd964715c60712b6000567d270dd3483db1734dc59e5925d2494d77086d107",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "gear shaft bearings",
+        "head_canonical_zh": "齿轮轴轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Shaft Alignment Analysis",
+        "tail_canonical_zh": "轴系对中分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "For gear-shafts which are directly connected to the propulsion shafting, the load on the gear shaft bearings is to be evaluated by taking into consideration the loads resulting from the shafting alignment condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gears",
+        "head_canonical_zh": "齿轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "access",
+        "tail_canonical_zh": "检查通道",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The construction of gear cases is to be such that sufficient number of access is provided for adequate inspection of gears",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gear teeth contacts",
+        "head_canonical_zh": "齿轮齿面接触",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "checking",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "checking of gear teeth contacts",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "thrust bearing clearance",
+        "head_canonical_zh": "推力轴承间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "measurement",
+        "tail_canonical_zh": "测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "measurement of thrust bearing clearance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubricating oil pump",
+        "head_canonical_zh": "润滑油泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "vessel is inclined",
+        "tail_canonical_zh": "船舶倾斜状态",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "the position of suction for lubricating oil pump within the gear unit is to be such as to provide adequate immersion when the vessel is inclined",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

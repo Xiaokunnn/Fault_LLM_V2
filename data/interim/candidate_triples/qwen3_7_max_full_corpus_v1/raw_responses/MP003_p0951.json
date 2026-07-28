@@ -1,0 +1,107 @@
+{
+  "page_key": "MP003:p0951",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4c263b19-5a68-97db-a9b4-cb087c66308b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1033,
+    "prompt_tokens": 18098,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 19131
+  },
+  "latency_ms": 15731,
+  "attempt": 1,
+  "prompt_sha256": "130608ef7ce5899e4a613f0b2cdd638a91b1a94a20493b2f5ee8813dc79180c0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Turbocharger lube oil inlet pressure – low",
+        "head_canonical_zh": "涡轮增压器润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing_or_lubrication_failure",
+        "tail_canonical_zh": "轴承或润滑故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Turbocharger lube oil\ninlet pressure – low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0951:t00:r006:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Turbocharger lube oil outlet temp., each bearing, - high",
+        "head_canonical_zh": "涡轮增压器各轴承润滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing_or_lubrication_failure",
+        "tail_canonical_zh": "轴承或润滑故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Turbocharger lube oil\noutlet temp., each\nbearing, - high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0951:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing_or_lubrication_failure",
+        "head_canonical_zh": "轴承或润滑故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Continuous monitoring of inlet pressure and inlet temperature in combination with specific intervals for bearing inspection",
+        "tail_canonical_zh": "连续监测进口压力和温度并结合定期轴承检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Continuous\nmonitoring of inlet pressure and\ninlet temperature in combination\nwith specific intervals for bearing\ninspection in accordance with the\nturbocharger manufacturer’s\ninstructions may be accepted as an\nalternative.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0951:t00:r007:c08"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Control, alarm or safety system, power supply failure",
+        "head_canonical_zh": "控制、报警或安全系统电源故障",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "motor_electrical_drive_failure",
+        "tail_canonical_zh": "电机电气驱动故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Control, alarm or safety\nsystem, power supply\nfailure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0951:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "page_key": "MP003:p0894",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1adf512f-0697-9466-9050-7f7db9476d21",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1261,
+    "prompt_tokens": 2368,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3629
+  },
+  "latency_ms": 15210,
+  "attempt": 1,
+  "prompt_sha256": "56d2c3cdf9d410072ba681defbe98ed80dc913913165b32c9854596c44d9c31c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Audible alarms",
+        "head_canonical_zh": "声响报警",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "means of testing",
+        "tail_canonical_zh": "测试装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Audible alarms and visual alarm indicating lamps are to be provided with means of testing that can be operated without disrupting the normal operation of the monitoring systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "visual alarm indicating lamps",
+        "head_canonical_zh": "视觉报警指示灯",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "means of testing",
+        "tail_canonical_zh": "测试装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Audible alarms and visual alarm indicating lamps are to be provided with means of testing that can be operated without disrupting the normal operation of the monitoring systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fault",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "self-monitoring mechanism",
+        "tail_canonical_zh": "自监测机制",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The monitoring system is to include a self-monitoring mechanism such that a fault (e.g., power failure, sensor failure, etc.) may be detected and alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power failure",
+        "head_canonical_zh": "电源故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "self-monitoring mechanism",
+        "tail_canonical_zh": "自监测机制",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The monitoring system is to include a self-monitoring mechanism such that a fault (e.g., power failure, sensor failure, etc.) may be detected and alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sensor failure",
+        "head_canonical_zh": "传感器故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "self-monitoring mechanism",
+        "tail_canonical_zh": "自监测机制",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The monitoring system is to include a self-monitoring mechanism such that a fault (e.g., power failure, sensor failure, etc.) may be detected and alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alarm circuits",
+        "head_canonical_zh": "报警电路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "temporarily disabled",
+        "tail_canonical_zh": "临时禁用",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Alarm circuits may be temporarily disabled, for example, for maintenance purposes, provided that such action is clearly indicated at the associated station in control and at the centralized control station, if fitted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

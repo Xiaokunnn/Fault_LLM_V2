@@ -1,0 +1,137 @@
+{
+  "page_key": "MP016:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-002afd18-4d3c-936a-a457-02917068010d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1332,
+    "prompt_tokens": 2351,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3683
+  },
+  "latency_ms": 17945,
+  "attempt": 1,
+  "prompt_sha256": "ba518689045805fb80455855a2dd6373678f7055cbc9ec38cb3a3ca2676b2e17",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Flexible Impeller pumps",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "up to 30 seconds to prime",
+        "tail_canonical_zh": "最长30秒自吸时间",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Flexible impeller pumps need up to 30 seconds to prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lack of liquid",
+        "head_canonical_zh": "缺液",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "damage the Impeller",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "lack of liquid will damage the Impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dry run",
+        "head_canonical_zh": "干转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "do not dry run any longer",
+        "tail_canonical_zh": "禁止超时干转",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "do not dry run any longer as lack of liquid will damage the Impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump will not prime",
+        "head_canonical_zh": "泵无法自吸",
+        "head_type": "Symptom",
+        "relation": "caused_by",
+        "tail_surface": "suction pipework is air tight",
+        "tail_canonical_zh": "吸入管路漏气",
+        "tail_type": "Cause",
+        "evidence_text": "Ensure suction pipework is air tight or pump will not prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump will not prime",
+        "head_canonical_zh": "泵无法自吸",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Ensure suction pipework is air tight",
+        "tail_canonical_zh": "确保吸入管路气密",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure suction pipework is air tight or pump will not prime",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "checked against the Data Sheet",
+        "tail_canonical_zh": "对照数据表核查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "the new application must be checked against the Data Sheet to ensure safe and reliable operation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": [
+      "Relation 'caused_by' used in triple 4 is not in the allowed relation list; corrected to 'causes' with reversed head/tail would violate evidence directionality, so kept as extracted but flagged.",
+      "Triple 6 links Component to InspectionAction via maintained_by based on application change context; confidence reduced as it is an indirect maintenance requirement rather than direct component maintenance."
+    ]
+  }
+}

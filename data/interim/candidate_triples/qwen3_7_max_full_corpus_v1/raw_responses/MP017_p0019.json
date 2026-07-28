@@ -1,0 +1,235 @@
+{
+  "page_key": "MP017:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a97ddf9f-e70c-9898-a688-f58b6c5da8e1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2576,
+    "prompt_tokens": 2381,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4957
+  },
+  "latency_ms": 35346,
+  "attempt": 1,
+  "prompt_sha256": "bb3924a65db207de6a6a98679e39d05ccaed940c2e5c6b28a3aa425df075bf45",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "freezing",
+        "head_canonical_zh": "冻结",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "drain the pump",
+        "tail_canonical_zh": "排放泵内液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In below freezing conditions, drain the pump to prevent damage from freezing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "remaining liquid that could freeze the pump rotating parts",
+        "head_canonical_zh": "可能导致泵转动部件冻结的残留液体",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Operate the pump for approximately one minute",
+        "tail_canonical_zh": "运行泵约一分钟",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Operate the pump for approximately one minute; this will remove any remaining liquid that could freeze the pump rotating parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "large solids from clogging the drain port and preventing the pump from completely draining",
+        "head_canonical_zh": "大颗粒固体堵塞排放口并阻碍泵完全排空",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "insert a rod or stiff wire in the drain port, and agitate the liquid during the draining process",
+        "tail_canonical_zh": "在排放口插入杆或硬丝并在排放过程中搅动液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent large solids from clogging the drain port and preventing the pump from completely draining, insert a rod or stiff wire in the drain port, and agitate the liquid during the draining process.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing temperatures",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "placing a contact-type thermometer against the housing",
+        "tail_canonical_zh": "将接触式温度计置于壳体上测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bearing temperatures can be measured accurately by placing a contact-type thermometer against the housing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sudden increase in bearing temperature",
+        "head_canonical_zh": "轴承温度突然升高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearings are at the point of failing to operate properly",
+        "tail_canonical_zh": "轴承即将失效无法正常运转",
+        "tail_type": "FaultMode",
+        "evidence_text": "A sudden increase in bearing temperature is a warning that the bearings are at the point of failing to operate properly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing overheating",
+        "head_canonical_zh": "轴承过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "shaft misalignment and/or excessive vibration",
+        "tail_canonical_zh": "轴不对中和/或过度振动",
+        "tail_type": "Cause",
+        "evidence_text": "Bearing overheating can also be caused by shaft misalignment and/or excessive vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil level in the seal and bearing cavities",
+        "head_canonical_zh": "密封腔和轴承腔油位",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "check the oil level in the seal and bearing cavities before initial startup, after the first two weeks of operation, and every month thereafter",
+        "tail_canonical_zh": "初次启动前、运行两周后及此后每月检查密封腔和轴承腔油位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "On a new pump, check the oil level in the seal and bearing cavities before initial startup, after the first two weeks of operation, and every month thereafter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "contamination",
+        "head_canonical_zh": "污染",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "clean the area around the plug",
+        "tail_canonical_zh": "清洁塞子周围区域",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before installing or removing the lubrication plug, always clean the area around the plug to prevent contamination.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "self lubricated seal assembly",
+        "head_canonical_zh": "自润滑密封组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "supply fresh lubricating liquid from an external source",
+        "tail_canonical_zh": "从外部源供应新鲜润滑液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When handling abrasive or tacky liquids, supply fresh lubricating liquid from an external source.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal cavity",
+        "head_canonical_zh": "密封腔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fill the seal cavity with SAE No. 30 non-detergent oil",
+        "tail_canonical_zh": "向密封腔加注SAE 30号非洗涤剂机油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before starting the pump, remove the vented plug and fill the seal cavity with SAE No. 30 non-detergent oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "automatic grease cup",
+        "head_canonical_zh": "自动油脂杯",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the automatic grease cup through the grease fitting with No. 2 lithium base grease until grease escapes from the relief hole",
+        "tail_canonical_zh": "通过注脂嘴向自动油脂杯加注2号锂基脂直至油脂从泄油孔溢出",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the automatic grease cup through the grease fitting with No. 2 lithium base grease until grease escapes from the relief hole.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "page_key": "MP001:p0082",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c6a6b586-3d08-9c9b-9d26-ea47f984129e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1499,
+    "prompt_tokens": 10981,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12480
+  },
+  "latency_ms": 23411,
+  "attempt": 1,
+  "prompt_sha256": "c62c82646c36e29d5f9361f3b5d20b4aa8bd834c7056efb5871d6188fe6f5ebf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Particle Light Scattering Counter",
+        "head_canonical_zh": "颗粒光散射计数器",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Particles in lubricating and hydraulic oil",
+        "tail_canonical_zh": "润滑油和液压油中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particle Light Scattering Counter\nParticles in lubricating and hydraulic oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0082:t00:r007:c01",
+          "MP001:p0082:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Magnetic Chip Detection",
+        "head_canonical_zh": "磁性碎屑检测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Wear and fatigue",
+        "tail_canonical_zh": "磨损与疲劳",
+        "tail_type": "FaultMode",
+        "evidence_text": "Magnetic Chip Detection\nWear and fatigue",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0082:t00:r007:c02",
+          "MP001:p0082:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Metal particles adhere to the magnetic plug",
+        "head_canonical_zh": "金属颗粒吸附于磁塞",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "microscopic examination of the plug",
+        "tail_canonical_zh": "磁塞显微检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Metal particles adhere to the magnetic plug which is periodically removed from the system for microscopic examination",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Type, quantity, size and condition of the equipment",
+        "head_canonical_zh": "设备类型、数量、尺寸及状态",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "captured particles",
+        "tail_canonical_zh": "捕获的颗粒",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Type, quantity, size of the captured particles can indicate the condition of the equipment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wear, fatigue, and corrosion",
+        "head_canonical_zh": "磨损、疲劳和腐蚀",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "Particles in lubricating and hydraulic oil systems caused by wear, fatigue, and corrosion contaminants",
+        "tail_canonical_zh": "由磨损、疲劳和腐蚀污染物引起的润滑及液压油系统中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particles in lubricating and hydraulic oil systems caused by wear, fatigue, and corrosion contaminants",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Particle Light Scattering Counter",
+        "head_canonical_zh": "颗粒光散射计数器",
+        "head_type": "InspectionMethod",
+        "relation": "specified_by",
+        "tail_surface": "ISO 4406 cleanliness value",
+        "tail_canonical_zh": "ISO 4406清洁度值",
+        "tail_type": "Standard",
+        "evidence_text": "cleanliness value ISO 4406 is automatically determined",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": [
+      "Table MP001:p0082:t00 appears to be parsed with reversed/mirrored column headers and scrambled text; extracted triples rely on reconstructed contiguous spans where possible but confidence is reduced.",
+      "Many table cells contain fragmented or inverted English text; only relations supported by sufficiently coherent evidence spans were retained."
+    ]
+  }
+}

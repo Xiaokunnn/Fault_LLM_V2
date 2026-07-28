@@ -1,0 +1,57 @@
+{
+  "page_key": "MP003:p0769",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-17cb4bf6-0a6b-9ecc-9cdc-a04fd7b2b9f2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 507,
+    "prompt_tokens": 2495,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3002
+  },
+  "latency_ms": 6680,
+  "attempt": 1,
+  "prompt_sha256": "ec446ca35d18a650eb631d5519753e6a1333731c858c8c609bd9426f184d4d15",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Fuel oil transfer pumps, fuel oil unit pumps and other similar fuel pumps, lubricating oil service pumps, thermal oil circulating pumps and oil separators",
+        "head_canonical_zh": "燃油及润滑油泵与分离器",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "remote means of stopping",
+        "tail_canonical_zh": "远程停止装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil transfer pumps, fuel oil unit pumps and other similar fuel pumps, lubricating oil service pumps, thermal oil circulating pumps and oil separators (purifiers, but not including oily water separators) are to be fitted with remote means of stopping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "remote means of stopping",
+        "head_canonical_zh": "远程停止装置",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "located outside the space where these pumps and separators are installed or at the firefighting station",
+        "tail_canonical_zh": "布置在泵舱外或消防站",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "These means are to be located outside the space where these pumps and separators are installed or at the firefighting station, if fitted, so that they may be stopped in the event of a fire arising in that space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

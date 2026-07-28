@@ -1,0 +1,237 @@
+{
+  "page_key": "MP017:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d04ce334-65a6-9581-82d6-1138f53846df",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2714,
+    "prompt_tokens": 2388,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5102
+  },
+  "latency_ms": 32364,
+  "attempt": 1,
+  "prompt_sha256": "298f5d5a99629898c9748aa58a281cbf0970e1c0bd79cc237c4d951b62eecefb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "stop the pump immediately and allow it to cool before servicing it",
+        "tail_canonical_zh": "立即停泵并冷却后再维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating does occur, stop the pump immediately and allow it to cool before servicing it.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rupture or explosion due to heat",
+        "head_canonical_zh": "热致破裂或爆炸",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "pressure relief valve which will open if vapor pressure within the pump casing reaches a critical point",
+        "tail_canonical_zh": "当泵壳内蒸汽压达到临界点时开启的安全阀",
+        "tail_type": "Component",
+        "evidence_text": "As a safeguard against rupture or explosion due to heat, some pumps are equipped with a pressure relief valve which will open if vapor pressure within the pump casing reaches a critical point.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure relief valve assembly",
+        "head_canonical_zh": "安全阀组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced at each overhaul, or any time the pump casing overheats and activates the valve",
+        "tail_canonical_zh": "每次大修或泵壳过热触发阀门时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is recommended that the pressure relief valve assembly be replaced at each overhaul, or any time the pump casing overheats and activates the valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air leak",
+        "head_canonical_zh": "空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Open the suction line, and read the vacuum gauge with the pump primed and at operation speed. Shut off the pump. The vacuum gauge reading will immediately drop proportionate to static suction lift, and should then stabilize. If the vacuum reading falls off rapidly after stabilization, an air leak exists.",
+        "tail_canonical_zh": "在泵引水且运行转速下读取真空表，停泵后若读数稳定后迅速下降则存在漏气",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Open the suction line, and read the vacuum gauge with the pump primed and at operation speed. Shut off the pump. The vacuum gauge reading will immediately drop proportionate to static suction lift, and should then stabilize. If the vacuum reading falls off rapidly after stabilization, an air leak exists.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "strainer blockage",
+        "head_canonical_zh": "滤器堵塞",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "monitor and record the readings regularly to detect strainer blockage",
+        "tail_canonical_zh": "定期监测并记录真空表读数以检测滤器堵塞",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If a vacuum suction gauge has been installed, monitor and record the readings regularly to detect strainer blockage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction strainer",
+        "head_canonical_zh": "吸入滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "check the strainer regularly, and clean it as necessary",
+        "tail_canonical_zh": "定期检查并按需清洗滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If a suction strainer has been shipped with the pump or installed by the user, check the strainer regularly, and clean it as necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "blockage",
+        "head_canonical_zh": "堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Never introduce air or steam pressure into the pump casing or piping to remove a blockage",
+        "tail_canonical_zh": "严禁向泵壳或管路通入空气或蒸汽以清除堵塞",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never introduce air or steam pressure into the pump casing or piping to remove a blockage. This could result in personal injury or damage to the equipment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unusual noises or excessive vibration",
+        "head_canonical_zh": "异常噪声或过度振动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "minor problems",
+        "tail_canonical_zh": "轻微故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Check the pump for unusual noises or excessive vibration while it is operating. If noise or vibration is excessive, stop the pump and refer to Troubleshooting in the Maintenance And Repair Manual for possible causes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "unusual noises or excessive vibration",
+        "head_canonical_zh": "异常噪声或过度振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check the pump for unusual noises or excessive vibration while it is operating",
+        "tail_canonical_zh": "运行时检查泵是否有异常噪声或过度振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the pump for unusual noises or excessive vibration while it is operating.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "damaging shock waves",
+        "head_canonical_zh": "破坏性冲击波",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Close all connecting valves slowly",
+        "tail_canonical_zh": "缓慢关闭所有连接阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never halt the flow of liquid suddenly. If the liquid being pumped is stopped abruptly, damaging shock waves can be transmitted to the pump and piping system. Close all connecting valves slowly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vacuum of 20 inches (508 mm) or more of mercury",
+        "head_canonical_zh": "20英寸汞柱及以上真空度",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "Pump Vacuum Check",
+        "tail_canonical_zh": "泵真空检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "At operating speed the pump should pull a vacuum of 20 inches (508 mm) or more of mercury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

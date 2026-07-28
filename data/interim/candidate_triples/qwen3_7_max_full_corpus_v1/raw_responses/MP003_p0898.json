@@ -1,0 +1,119 @@
+{
+  "page_key": "MP003:p0898",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5b128005-722f-90f4-a01a-b405f775d591",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1193,
+    "prompt_tokens": 2376,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3569
+  },
+  "latency_ms": 15694,
+  "attempt": 1,
+  "prompt_sha256": "c370ad10c16c4da4d0ecc8a765399df202fcc0c5d8729e4d4e7fea9038fe715a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pipe systems subject to pressure build-up that may exceed the rated pressure of the pipe and associated components",
+        "head_canonical_zh": "超压管路系统",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "suitable pressure relief devices fitted on the pump’s discharge side",
+        "tail_canonical_zh": "泵排出侧安全阀",
+        "tail_type": "Component",
+        "evidence_text": "Pipe systems subject to pressure build-up that may exceed the rated pressure of the pipe and associated components are to be provided with suitable pressure relief devices fitted on the pump’s discharge side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overload of the propulsion machinery",
+        "head_canonical_zh": "推进机械过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "means of preventing overload of the propulsion machinery",
+        "tail_canonical_zh": "推进机械防过载装置",
+        "tail_type": "Component",
+        "evidence_text": "including, where necessary, means of preventing overload of the propulsion machinery",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "low level starting medium energy condition",
+        "head_canonical_zh": "启动介质能量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "An alarm to indicate a low level starting medium energy condition",
+        "tail_canonical_zh": "启动介质能量低报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "An alarm to indicate a low level starting medium energy condition (e.g. a low starting air pressure) which is to be set at a level to permit further starting operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "conditions exist which may damage the propulsion machinery",
+        "head_canonical_zh": "推进机械损坏工况",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Starting of the propulsion machinery is to be automatically inhibited",
+        "tail_canonical_zh": "推进机械自动启动禁止",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Starting of the propulsion machinery is to be automatically inhibited where conditions exist which may damage the propulsion machinery (e.g., shaft-turning gear engaged, insufficient lubricating oil pressure, etc.).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "insufficient lubricating oil pressure",
+        "head_canonical_zh": "润滑油压力不足",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "conditions exist which may damage the propulsion machinery",
+        "tail_canonical_zh": "推进机械损坏工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "conditions exist which may damage the propulsion machinery (e.g., shaft-turning gear engaged, insufficient lubricating oil pressure, etc.)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.88
+      }
+    ],
+    "warnings": []
+  }
+}

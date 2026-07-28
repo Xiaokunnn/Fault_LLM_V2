@@ -1,0 +1,280 @@
+{
+  "page_key": "MP019:p0029",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-bd5a14ad-df77-9592-8521-2025b101f980",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 33412,
+  "attempt": 1,
+  "prompt_sha256": "fd903ebff3570f1432eb180adf4648968432c7c42e4767f2f57f970ee03d7eba",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Drehzahlgeregelte Antriebe",
+        "head_canonical_zh": "变速驱动装置",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "höhere Spannungsbelastungen",
+        "tail_canonical_zh": "较高电压应力",
+        "tail_type": "Cause",
+        "evidence_text": "Drehzahlgeregelte Antriebe verursachen an der Motorwicklung höhere Spannungsbelastungen als die sinusförmige Versorgung",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wicklungsisolierung des Motors",
+        "head_canonical_zh": "电机绕组绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "folgenden Angaben",
+        "tail_canonical_zh": "以下规定",
+        "tail_type": "Standard",
+        "evidence_text": "muss die Wicklungsisolierung des Motors sowie der Filter am Umrichterausgang entsprechend der folgenden Angaben dimensioniert sein",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Filter am Umrichterausgang",
+        "head_canonical_zh": "变频器输出端滤波器",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "folgenden Angaben",
+        "tail_canonical_zh": "以下规定",
+        "tail_type": "Standard",
+        "evidence_text": "muss die Wicklungsisolierung des Motors sowie der Filter am Umrichterausgang entsprechend der folgenden Angaben dimensioniert sein",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "额定供电电压≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standardisolierung",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N ABB Standardisolierung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0029:t00:r001:c00",
+          "MP019:p0029:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "额定供电电压≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Standardisolierung + dU/dt-Filter ODER ABB Spezialisolierung (Variantencode 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB专用绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N ABB Standardisolierung ABB Standardisolierung + dU/ dt-Filter ODER ABB Spezialisolierung (Variantencode 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0029:t00:r002:c00",
+          "MP019:p0029:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "额定供电电压≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Spezialisolierung (Variantencode 405) UND dU/dt-Filter am Umrichterausgang",
+        "tail_canonical_zh": "ABB专用绝缘(变体代码405)及变频器输出端dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (Variantencode 405) ABB Spezialisolierung (Variantencode 405) UND dU/dt-Filter am Umrichterausgang",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0029:t00:r003:c00",
+          "MP019:p0029:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N UND Kabellänge > 150 m",
+        "head_canonical_zh": "额定供电电压≤690V且电缆长度>150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "ABB Spezialisolierung (Variantencode 405)",
+        "tail_canonical_zh": "ABB专用绝缘(变体代码405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N UND Kabellänge > 150 m Umrichterausgang ABB Spezialisolierung (Variantencode 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0029:t00:r004:c00",
+          "MP019:p0029:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Standardisolierung",
+        "head_canonical_zh": "标准绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "Spannungsspitze 1300 V",
+        "tail_canonical_zh": "电压峰值1300V",
+        "tail_type": "Standard",
+        "evidence_text": "Standardisolierung Spannungsspitze 1300 V",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spezialisolierung",
+        "head_canonical_zh": "专用绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "Spannungsspitze 1800 V",
+        "tail_canonical_zh": "电压峰值1800V",
+        "tail_type": "Standard",
+        "evidence_text": "Spezialisolierung Spannungsspitze 1800 V",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "PTC-Thermistoren in den Ständerwicklungen",
+        "head_canonical_zh": "定子绕组中的PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "mit geeigneten Mitteln an den Frequenzumrichter angeschlossen werden",
+        "tail_canonical_zh": "使用适当方法连接至变频器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "sind mit PTC-Thermistoren in den Ständerwicklungen ausgestattet. Diese müssen mit geeigneten Mitteln an den Frequenzumrichter angeschlossen werden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagerströme",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "isolierte Lager oder Lagerkonstruktionen",
+        "tail_canonical_zh": "绝缘轴承或轴承结构",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Es sind isolierte Lager oder Lagerkonstruktionen, Gleichtaktfilter und geeignete Verkabelungs- und Erdungsverfahren gemäß der folgenden Anweisungen zu verwenden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagerströme",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Gleichtaktfilter",
+        "tail_canonical_zh": "共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Es sind isolierte Lager oder Lagerkonstruktionen, Gleichtaktfilter und geeignete Verkabelungs- und Erdungsverfahren gemäß der folgenden Anweisungen zu verwenden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lagerströme",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "geeignete Verkabelungs- und Erdungsverfahren",
+        "tail_canonical_zh": "适当的布线和接地方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Es sind isolierte Lager oder Lagerkonstruktionen, Gleichtaktfilter und geeignete Verkabelungs- und Erdungsverfahren gemäß der folgenden Anweisungen zu verwenden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

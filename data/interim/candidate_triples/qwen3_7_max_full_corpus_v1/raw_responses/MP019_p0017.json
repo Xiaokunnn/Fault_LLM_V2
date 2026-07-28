@@ -1,0 +1,118 @@
+{
+  "page_key": "MP019:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d8ed39dd-ced4-9ef1-b93e-832bcb598d11",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1025,
+    "prompt_tokens": 2312,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3337
+  },
+  "latency_ms": 12291,
+  "attempt": 1,
+  "prompt_sha256": "9b6a90fdcc667b626db5827ab8d6897ea9b8dfee56f3c1d9ac93eb71bedfb0fc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearing damage",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Incompatible lubricants",
+        "tail_canonical_zh": "不相容润滑脂",
+        "tail_type": "Cause",
+        "evidence_text": "Incompatible lubricants may cause bearing damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing damage",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Do not mix different types of grease",
+        "tail_canonical_zh": "不要混合不同类型的润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not mix different types of grease. Incompatible lubricants may cause bearing damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "regreasing",
+        "tail_canonical_zh": "补充润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When regreasing, use only special ball bearing grease",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubrication interval",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "listed high performance greases",
+        "tail_canonical_zh": "所列高性能润滑脂",
+        "tail_type": "Standard",
+        "evidence_text": "The lubrication interval are based on the listed high performance greases above.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lubrication interval",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "Using other greases",
+        "tail_canonical_zh": "使用其他润滑脂",
+        "tail_type": "Cause",
+        "evidence_text": "Using other greases can reduce the interval.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

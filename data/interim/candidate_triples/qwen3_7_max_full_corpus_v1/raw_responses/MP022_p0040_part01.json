@@ -1,0 +1,83 @@
+{
+  "page_key": "MP022:p0040",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2c5dc623-54a3-9203-a86e-21c3a36695cd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 777,
+    "prompt_tokens": 2055,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2832
+  },
+  "latency_ms": 9448,
+  "attempt": 1,
+  "prompt_sha256": "da3aab6d2b12129aa63a81a5381e120ee12fd4a5f515b8d1793fbfd60bf54211",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "rubber seals",
+        "head_canonical_zh": "橡胶密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Lubricate the rubber seals before fitting them",
+        "tail_canonical_zh": "安装前润滑橡胶密封件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lubricate the rubber seals before fitting them.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Ensure that the clearance between the impeller and back plate (25) is correct: 0.5 mm (0.02 inch) for LKH Prime 10 and 20 and 1mm (0,039inch) for LKH Prime 40",
+        "tail_canonical_zh": "检查并调整叶轮与后盖板间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ensure that the clearance between the impeller and back plate (25) is correct: 0.5 mm (0.02 inch) for LKH Prime 10 and 20 and 1mm (0,039inch) for LKH Prime 40.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stub shaft",
+        "head_canonical_zh": "短轴",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Tighten screws (6) evenly until the stub shaft (7) cannot move on the motor shaft",
+        "tail_canonical_zh": "均匀拧紧螺钉直至短轴在电机轴上无法移动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tighten screws (6) evenly until the stub shaft (7) cannot move on the motor shaft",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

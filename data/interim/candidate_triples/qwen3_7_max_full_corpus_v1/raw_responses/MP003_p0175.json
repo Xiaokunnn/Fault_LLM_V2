@@ -1,0 +1,184 @@
+{
+  "page_key": "MP003:p0175",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8a0e3f05-311b-9da5-94a8-53c0f97bc8d4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1927,
+    "prompt_tokens": 6252,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8179
+  },
+  "latency_ms": 22786,
+  "attempt": 1,
+  "prompt_sha256": "a40de50da5b63aabeb3279ab9a3a6768fab312ce1e2773d9ba82a3851eea5440",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Excessive (1)",
+        "tail_canonical_zh": "过度振动报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Vibration                         Excessive (1) Required (2)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0175:t00:r001:c00",
+          "MP003:p0175:t00:r001:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Axial displacement of rotor",
+        "head_canonical_zh": "转子轴向位移",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Axial displacement of rotor       High        Required (2, 3)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0175:t00:r002:c00",
+          "MP003:p0175:t00:r002:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Vacuum at compressor inlet",
+        "head_canonical_zh": "压气机进口真空度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High (1)",
+        "tail_canonical_zh": "高真空度报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Vacuum at compressor inlet        High (1)    Required (2)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0175:t00:r004:c00",
+          "MP003:p0175:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Control system power",
+        "head_canonical_zh": "控制系统电源",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "Loss",
+        "tail_canonical_zh": "电源丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "Control system power              Loss",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0175:t00:r005:c00",
+          "MP003:p0175:t00:r005:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air intake is to be provided with demisters and filters",
+        "head_canonical_zh": "进气口除雾器和滤器配置",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "minimize the entry of water and harmful foreign material",
+        "tail_canonical_zh": "减少水和有害异物进入",
+        "tail_type": "Cause",
+        "evidence_text": "Air intake is to be provided with demisters and filters to minimize the entry of water and harmful foreign material.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "designed as to prevent the accumulation of salt deposits on the compressor and turbine blades",
+        "head_canonical_zh": "防止盐分沉积的设计",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "accumulation of salt deposits on the compressor and turbine blades",
+        "tail_canonical_zh": "压气机和涡轮叶片盐分沉积",
+        "tail_type": "FaultMode",
+        "evidence_text": "They are to be so designed as to prevent the accumulation of salt deposits on the compressor and turbine blades.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Means are to be provided to prevent icing in the air intake",
+        "head_canonical_zh": "进气口防冰措施",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "icing in the air intake",
+        "tail_canonical_zh": "进气口结冰",
+        "tail_type": "FaultMode",
+        "evidence_text": "Means are to be provided to prevent icing in the air intake.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pipe or duct connections to the gas turbine casing are to be made in such a way as to prevent the transmission of excessive loads or moments to the turbine",
+        "head_canonical_zh": "燃机壳体管路连接防过载安装",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "transmission of excessive loads or moments to the turbine",
+        "tail_canonical_zh": "向涡轮传递过大载荷或力矩",
+        "tail_type": "Cause",
+        "evidence_text": "Pipe or duct connections to the gas turbine casing are to be made in such a way as to prevent the transmission of excessive loads or moments to the turbine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

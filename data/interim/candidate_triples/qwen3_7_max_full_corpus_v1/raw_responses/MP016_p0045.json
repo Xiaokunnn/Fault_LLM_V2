@@ -1,0 +1,192 @@
+{
+  "page_key": "MP016:p0045",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e0e1e93d-9684-9725-96e9-a4f5ea2e913c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1964,
+    "prompt_tokens": 2721,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4685
+  },
+  "latency_ms": 22829,
+  "attempt": 1,
+  "prompt_sha256": "b89d78ac5a86f8d81d3ac9454b064817e1da875b1f974e7d544fe310e6d301b6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bombas con impulsor flexible",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "hasta 30 segundos para cebarse",
+        "tail_canonical_zh": "自吸时间不超过30秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Las bombas de impulsor flexible necesitan hasta 30 segundos para cebarse",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "funcionar en seco",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "dañará el impulsor",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "no las haga funcionar en seco más tiempo ya que la falta de líquido dañará el impulsor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tubería de aspiración esté hermética",
+        "head_canonical_zh": "吸入管路密封",
+        "tail_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "la bomba no se cebará",
+        "tail_canonical_zh": "泵无法自吸",
+        "head_type": "OperatingCondition",
+        "evidence_text": "Asegúrese de que la tubería de aspiración esté hermética o la bomba no se cebará",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Revise la bomba para verificar si sufrió algún daño físico durante el envío",
+        "head_canonical_zh": "检查运输物理损伤",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "daño físico",
+        "tail_canonical_zh": "物理损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Revise la bomba para verificar si sufrió algún daño físico durante el envío",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "opere la bomba a un valor que supere la presión diferencial máxima",
+        "head_canonical_zh": "超过最大压差运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "se dañará el impulsor",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "No opere la bomba a un valor que supere la presión diferencial máxima que se indica en la hoja de datos, ni siquiera durante unos segundos, ya que se dañará el impulsor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "funcionar la bomba contra una válvula cerrada",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "se dañará el impulsor",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Nunca haga funcionar la bomba contra una válvula cerrada",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "presión de líquido no es suficiente en el puerto de entrada",
+        "head_canonical_zh": "入口液压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitación",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Si la presión de entrada es insuficiente, habrá cavitación de la bomba",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "cavitación",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "bajo rendimiento",
+        "tail_canonical_zh": "性能低下",
+        "tail_type": "Symptom",
+        "evidence_text": "habrá cavitación de la bomba, lo que provocará un bajo rendimiento, ruidos y una vida",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitación",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "ruidos",
+        "tail_canonical_zh": "噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "habrá cavitación de la bomba, lo que provocará un bajo rendimiento, ruidos y una vida",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

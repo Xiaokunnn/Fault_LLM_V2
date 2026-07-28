@@ -1,0 +1,75 @@
+{
+  "page_key": "MP019:p0031",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-7b8154dc-bebb-910d-b5e3-b0e1a4685fb7",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 8131,
+  "attempt": 1,
+  "prompt_sha256": "70b8a66e22b33d0e5307db3e4c8dfbdf40515e244df2b1ec7b729543dbf89b90",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Frequenzumrichter",
+        "head_canonical_zh": "变频器",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "Blockierschutz",
+        "tail_canonical_zh": "堵转保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ABB empfiehlt die Verwendung aller geeigneten Schutzfunktionen des Frequenzumrichters, um die Sicherheit der Anwendung zu erhöhen. Frequenzumrichter bieten in der Regel z. B. folgende Funktionen (Namen und Verfügbarkeit der Funktionen hängen von Hersteller und Modell des Frequenzumrichters ab): - Mindestdrehzahl - Höchstdrehzahl - Zeit für Beschleunigung und Abbremsung - Maximaler Strom - Maximales Drehmoment - Blockierschutz",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drehzahlgeregelten Motors",
+        "head_canonical_zh": "变频电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Motorleistungsschildern",
+        "tail_canonical_zh": "电机铭牌",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Alle zum Einrichten des Frequenzumrichters erforderlichen Parameter müssen den Motorleistungsschildern entnommen werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fehlenden oder ungenauen Daten",
+        "head_canonical_zh": "数据缺失或不准确",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "korrekten Einstellungen gewährleistet sind",
+        "tail_canonical_zh": "确保正确设置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bei fehlenden oder ungenauen Daten den Motor nicht in Betrieb nehmen, bevor die korrekten Einstellungen gewährleistet sind.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "page_key": "MP001:p0034",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0722235e-5126-9a72-9d66-a22ff0100f25",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1826,
+    "prompt_tokens": 11583,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13409
+  },
+  "latency_ms": 22327,
+  "attempt": 1,
+  "prompt_sha256": "041ab3409af35d7dc91a5f3f4365001fb8cbaa1e73a572be2866cc352fb5b938",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Temperature measurement",
+        "head_canonical_zh": "温度测量",
+        "head_type": "InspectionMethod",
+        "relation": "indicates",
+        "tail_surface": "excessive mechanical friction",
+        "tail_canonical_zh": "过度机械摩擦",
+        "tail_type": "FaultMode",
+        "evidence_text": "Measured temperature changes can indicate problems such as excessive mechanical friction (i.e., faulty bearings, inadequate lubrication)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Temperature measurement",
+        "head_canonical_zh": "温度测量",
+        "head_type": "InspectionMethod",
+        "relation": "indicates",
+        "tail_surface": "degraded heat transfer",
+        "tail_canonical_zh": "传热恶化",
+        "tail_type": "FaultMode",
+        "evidence_text": "Measured temperature changes can indicate problems such as ... degraded heat transfer (i.e., fouling in a heat exchanger)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature measurement",
+        "head_canonical_zh": "温度测量",
+        "head_type": "InspectionMethod",
+        "relation": "indicates",
+        "tail_surface": "poor electrical connections",
+        "tail_canonical_zh": "电气连接不良",
+        "tail_type": "FaultMode",
+        "evidence_text": "Measured temperature changes can indicate problems such as ... poor electrical connections (i.e., loose, corroded, or oxidized connections)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "faulty bearings",
+        "head_canonical_zh": "轴承故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "excessive mechanical friction",
+        "tail_canonical_zh": "过度机械摩擦",
+        "tail_type": "Symptom",
+        "evidence_text": "excessive mechanical friction (i.e., faulty bearings, inadequate lubrication)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "inadequate lubrication",
+        "head_canonical_zh": "润滑不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "excessive mechanical friction",
+        "tail_canonical_zh": "过度机械摩擦",
+        "tail_type": "Symptom",
+        "evidence_text": "excessive mechanical friction (i.e., faulty bearings, inadequate lubrication)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Thermocouple",
+        "head_canonical_zh": "热电偶",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Point temperature measurement",
+        "tail_canonical_zh": "点温测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A comparison of several characteristics of temperature sensors is provided in Section 4, Table 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Resistance Temperature Detector (RTD)",
+        "head_canonical_zh": "电阻温度检测器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Point temperature measurement",
+        "tail_canonical_zh": "点温测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A comparison of several characteristics of temperature sensors is provided in Section 4, Table 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Thermistor",
+        "head_canonical_zh": "热敏电阻",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Point temperature measurement",
+        "tail_canonical_zh": "点温测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A comparison of several characteristics of temperature sensors is provided in Section 4, Table 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Infrared Thermography",
+        "head_canonical_zh": "红外热成像",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Temperature measurement",
+        "tail_canonical_zh": "温度测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Temperature measurement (i.e., sensors, thermography) helps detect potential failures related to a temperature change in equipment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

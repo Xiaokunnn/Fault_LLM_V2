@@ -1,0 +1,118 @@
+{
+  "page_key": "MP006:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3651cc58-0bc5-9c15-9ae7-e74b1e96f949",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1046,
+    "prompt_tokens": 10437,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11483
+  },
+  "latency_ms": 13665,
+  "attempt": 1,
+  "prompt_sha256": "3b97da0262ef9fa37eead2a8c16f0c4274ca4e66bdba0be126174bda948d11e6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "frequency converter",
+        "head_canonical_zh": "变频器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴承电流",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "DESMI will provide consultancy to ensure all aspects concerning bearing currents etc. are taken into account.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "frequency converters",
+        "head_canonical_zh": "变频器",
+        "head_type": "Equipment",
+        "relation": "causes",
+        "tail_surface": "Interference",
+        "tail_canonical_zh": "干扰",
+        "tail_type": "Symptom",
+        "evidence_text": "Apart from generating interference for motors and pump installations, frequency converters are also known to generate interference towards the electricity grid",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Common Mode filters",
+        "head_canonical_zh": "共模滤波器",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "Interference",
+        "tail_canonical_zh": "干扰",
+        "tail_type": "Symptom",
+        "evidence_text": "For more information on Common Mode filters and other anti-interference filters, such as Sinus and dU/dt filters",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Insulated bearings",
+        "head_canonical_zh": "绝缘轴承",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "bearing currents",
+        "tail_canonical_zh": "轴承电流",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "DESMI’s recommendations concerning use of Common Mode filters and insulated bearings ... ensure all aspects concerning bearing currents etc. are taken into account",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "DESMI Automation",
+        "head_canonical_zh": "DESMI自动化部门",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "measure",
+        "tail_canonical_zh": "测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "DESMI Automation can measure and provide solutions for such situations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

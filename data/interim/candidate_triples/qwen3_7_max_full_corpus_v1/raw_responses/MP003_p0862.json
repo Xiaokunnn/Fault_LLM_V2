@@ -1,0 +1,156 @@
+{
+  "page_key": "MP003:p0862",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8ff5a896-3306-9640-a5cd-7ee8680ada43",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1690,
+    "prompt_tokens": 2457,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4147
+  },
+  "latency_ms": 21792,
+  "attempt": 1,
+  "prompt_sha256": "e17cab18a7020898980da398918cf47a553dd8c9dc3aea5620a80e684e5fec4e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "voltage harmonic distortion",
+        "head_canonical_zh": "电压谐波畸变",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Means of monitoring voltage harmonic distortion",
+        "tail_canonical_zh": "电压谐波畸变监测装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Means of monitoring voltage harmonic distortion shall be provided, including alarms at the main generation switchboard and at continuously manned stations when to notify of an increase in total or individual harmonic distortion levels above the maximum allowable levels.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "increase in total or individual harmonic distortion levels above the maximum allowable levels",
+        "head_canonical_zh": "总谐波或各次谐波畸变水平超过最大允许值",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "voltage harmonic distortion",
+        "tail_canonical_zh": "电压谐波畸变",
+        "tail_type": "FaultMode",
+        "evidence_text": "alarms at the main generation switchboard and at continuously manned stations when to notify of an increase in total or individual harmonic distortion levels above the maximum allowable levels",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "higher values of harmonic distortion",
+        "head_canonical_zh": "较高的谐波畸变值",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "additional heat losses in machines",
+        "tail_canonical_zh": "电机附加热损耗",
+        "tail_type": "Symptom",
+        "evidence_text": "Where higher values of harmonic distortion are expected, any other possible effects, such as additional heat losses in machines, network resonances, errors in control and monitoring systems are to be considered.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "higher values of harmonic distortion",
+        "head_canonical_zh": "较高的谐波畸变值",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "network resonances",
+        "tail_canonical_zh": "电网谐振",
+        "tail_type": "Symptom",
+        "evidence_text": "Where higher values of harmonic distortion are expected, any other possible effects, such as additional heat losses in machines, network resonances, errors in control and monitoring systems are to be considered.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "higher values of harmonic distortion",
+        "head_canonical_zh": "较高的谐波畸变值",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "errors in control and monitoring systems",
+        "tail_canonical_zh": "控制和监测系统误差",
+        "tail_type": "Symptom",
+        "evidence_text": "Where higher values of harmonic distortion are expected, any other possible effects, such as additional heat losses in machines, network resonances, errors in control and monitoring systems are to be considered.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of an excitation system",
+        "head_canonical_zh": "励磁系统故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Arrangements for electric propulsion generators are to be such that propulsion can be maintained",
+        "tail_canonical_zh": "电力推进发电机布置应能维持推进",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Arrangements for electric propulsion generators are to be such that propulsion can be maintained in case of failure of an excitation system or failure of a power supply for an excitation system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of a power supply for an excitation system",
+        "head_canonical_zh": "励磁系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Arrangements for electric propulsion generators are to be such that propulsion can be maintained",
+        "tail_canonical_zh": "电力推进发电机布置应能维持推进",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Arrangements for electric propulsion generators are to be such that propulsion can be maintained in case of failure of an excitation system or failure of a power supply for an excitation system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,864 @@
+{
+  "page_key": "MP021:p0017",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-576e2e62-d040-9918-af7d-c9e268157a3a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 9857,
+    "prompt_tokens": 2804,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 12661
+  },
+  "latency_ms": 114626,
+  "attempt": 1,
+  "prompt_sha256": "36e2e2a6b87edbe181c67c560564a31e49903af482c1406a54ba50ec2cff4d1f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Pump is being starved (heavy liquid cannot get to pump fast enough)",
+        "tail_canonical_zh": "泵供液不足（重质液体无法足够快到达泵）",
+        "tail_type": "Cause",
+        "evidence_text": "C. Pump is noisy. 1. Pump is being starved (heavy liquid cannot get to pump fast enough).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump is being starved (heavy liquid cannot get to pump fast enough)",
+        "head_canonical_zh": "泵供液不足（重质液体无法足够快到达泵）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase suction pipe size or reduce length",
+        "tail_canonical_zh": "增大吸入管径或缩短长度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pump is being starved (heavy liquid cannot get to pump fast enough). Increase suction pipe size or reduce length.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Pump is cavitating (liquid vaporizing in the suction line)",
+        "tail_canonical_zh": "泵汽蚀（吸入管路中液体汽化）",
+        "tail_type": "Cause",
+        "evidence_text": "C. Pump is noisy. ... 2. Pump is cavitating (liquid vaporizing in the suction line).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is cavitating (liquid vaporizing in the suction line)",
+        "head_canonical_zh": "泵汽蚀（吸入管路中液体汽化）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase suction pipe size or reduce length",
+        "tail_canonical_zh": "增大吸入管径或缩短长度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pump is cavitating (liquid vaporizing in the suction line). Increase suction pipe size or reduce length.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is cavitating (liquid vaporizing in the suction line)",
+        "head_canonical_zh": "泵汽蚀（吸入管路中液体汽化）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "If pump is above the liquid, raise the liquid level closer to the pump",
+        "tail_canonical_zh": "若泵位于液面上方，提高液位使其更接近泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If pump is above the liquid, raise the liquid level closer to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump is cavitating (liquid vaporizing in the suction line)",
+        "head_canonical_zh": "泵汽蚀（吸入管路中液体汽化）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "If the liquid is above the pump, increase the head of liquid",
+        "tail_canonical_zh": "若液体位于泵上方，增加液柱高度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the liquid is above the pump, increase the head of liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check alignment",
+        "tail_canonical_zh": "检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "C. Pump is noisy. ... 3. Check alignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "May have a bent shaft or rotor tooth",
+        "tail_canonical_zh": "轴弯曲或转子齿弯曲",
+        "tail_type": "Cause",
+        "evidence_text": "C. Pump is noisy. ... 4. May have a bent shaft or rotor tooth.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "May have a bent shaft or rotor tooth",
+        "head_canonical_zh": "轴弯曲或转子齿弯曲",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Straighten or replace",
+        "tail_canonical_zh": "校直或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "May have a bent shaft or rotor tooth. Straighten or replace.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Relief valve chatter",
+        "tail_canonical_zh": "安全阀颤振",
+        "tail_type": "Cause",
+        "evidence_text": "C. Pump is noisy. ... 5. Relief valve chatter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Relief valve chatter",
+        "head_canonical_zh": "安全阀颤振",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase pressure setting",
+        "tail_canonical_zh": "提高压力设定值",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Relief valve chatter. Increase pressure setting.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "anchor base or piping to eliminate or reduce vibration",
+        "tail_canonical_zh": "固定底座或管路以消除或减少振动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "6. May have to anchor base or piping to eliminate or reduce vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "May be a foreign object trying to get into the pump through the suction port",
+        "tail_canonical_zh": "异物试图通过吸入口进入泵内",
+        "tail_type": "Cause",
+        "evidence_text": "C. Pump is noisy. ... 7. May be a foreign object trying to get into the pump through the suction port.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump is noisy",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The magnetic coupling has decoupled",
+        "tail_canonical_zh": "磁力联轴器脱耦",
+        "tail_type": "Cause",
+        "evidence_text": "8. Mag Drive pumps ONLY: The magnetic coupling has decoupled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The magnetic coupling has decoupled",
+        "head_canonical_zh": "磁力联轴器脱耦",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Shut off and let cool, then restart",
+        "tail_canonical_zh": "停机冷却后重新启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The magnetic coupling has decoupled. Shut off and let cool, then restart.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Starving or cavitating",
+        "tail_canonical_zh": "供液不足或汽蚀",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. 1. Starving or cavitating.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Starving or cavitating",
+        "head_canonical_zh": "供液不足或汽蚀",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase suction pipe size or reduce length",
+        "tail_canonical_zh": "增大吸入管径或缩短长度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Starving or cavitating. Increase suction pipe size or reduce length.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Strainer partially clogged",
+        "tail_canonical_zh": "滤网部分堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 2. Strainer partially clogged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Air leak in suction piping or along pump shaft",
+        "tail_canonical_zh": "吸入管路或泵轴处空气泄漏",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 3. Air leak in suction piping or along pump shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Running too slowly",
+        "tail_canonical_zh": "转速过低",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 4. Running too slowly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Running too slowly",
+        "head_canonical_zh": "转速过低",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check the motor is running at the correct speed and that it is wired correctly",
+        "tail_canonical_zh": "检查电机转速正确且接线无误",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Running too slowly. Check the motor is running at the correct speed and that it is wired correctly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Bypass line around pump partially open",
+        "tail_canonical_zh": "泵旁通管路部分开启",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 5. Bypass line around pump partially open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Relief valve set too low or stuck open",
+        "tail_canonical_zh": "安全阀设定过低或卡滞在开启位置",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 6. Relief valve set too low or stuck open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Pump is worn out",
+        "tail_canonical_zh": "泵磨损严重",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 7. Pump is worn out.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump not up to capacity",
+        "head_canonical_zh": "泵流量不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Too much end clearance",
+        "tail_canonical_zh": "端面间隙过大",
+        "tail_type": "Cause",
+        "evidence_text": "D. Pump not up to capacity. ... 8. Too much end clearance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Running too fast",
+        "tail_canonical_zh": "转速过高",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. 1. Running too fast.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Running too fast",
+        "head_canonical_zh": "转速过高",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Verify the motor speed, reducer ratio, sheave size, and other drive components are correct for the application",
+        "tail_canonical_zh": "核实电机转速、减速比、皮带轮尺寸及其他驱动部件是否适合工况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Running too fast. Verify the motor speed, reducer ratio, sheave size, and other drive components are correct for the application?",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The liquid is too viscous for the size of the unit",
+        "tail_canonical_zh": "液体粘度过高超出机组规格",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 2. The liquid is too viscous for the size of the unit.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The liquid is too viscous for the size of the unit",
+        "head_canonical_zh": "液体粘度过高超出机组规格",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Heat the liquid to reduce viscosity, increase the pipe size, slow down the pump, or use a larger motor",
+        "tail_canonical_zh": "加热液体降低粘度、增大管径、降低泵速或使用更大电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The liquid is too viscous for the size of the unit. Heat the liquid to reduce viscosity, increase the pipe size, slow down the pump, or use a larger motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Discharge pressure higher than calculated",
+        "tail_canonical_zh": "排出压力高于计算值",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 3. Discharge pressure higher than calculated.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Discharge pressure higher than calculated",
+        "head_canonical_zh": "排出压力高于计算值",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Verify with a pressure gauge",
+        "tail_canonical_zh": "用压力表核实",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Discharge pressure higher than calculated. Verify with a pressure gauge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Discharge pressure higher than calculated",
+        "head_canonical_zh": "排出压力高于计算值",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase size or reduce length of pipe, reduce speed (capacity), or get bigger motor",
+        "tail_canonical_zh": "增大管径或缩短管长、降低转速（流量）或选用更大电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Discharge pressure higher than calculated. ... Increase size or reduce length of pipe, reduce speed (capacity), or get bigger motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Packing gland drawn down too tight",
+        "tail_canonical_zh": "填料压盖过紧",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 4. Packing gland drawn down too tight.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Pump misaligned",
+        "tail_canonical_zh": "泵对中不良",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 5. Pump misaligned.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Extra clearance on pumping elements may not be sufficient for operating conditions",
+        "tail_canonical_zh": "泵送元件额外间隙可能不足以适应工况",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 6. Extra clearance on pumping elements may not be sufficient for operating conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Extra clearance on pumping elements may not be sufficient for operating conditions",
+        "head_canonical_zh": "泵送元件额外间隙可能不足以适应工况",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check parts for evidence of drag or contact in pump",
+        "tail_canonical_zh": "检查零件是否有泵内拖曳或接触痕迹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Extra clearance on pumping elements may not be sufficient for operating conditions. Check parts for evidence of drag or contact in pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Extra clearance on pumping elements may not be sufficient for operating conditions",
+        "head_canonical_zh": "泵送元件额外间隙可能不足以适应工况",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "increase clearance where necessary",
+        "tail_canonical_zh": "必要时增大间隙",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check parts for evidence of drag or contact in pump and increase clearance where necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "System pressure relief valve is set too high",
+        "tail_canonical_zh": "系统安全阀设定过高",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 7. System pressure relief valve is set too high.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump takes too much power",
+        "head_canonical_zh": "泵功率消耗过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Bushings have locked to shaft or pin, or the liquid has set up in the pump",
+        "tail_canonical_zh": "衬套与轴或销咬死，或液体在泵内凝固",
+        "tail_type": "Cause",
+        "evidence_text": "E. Pump takes too much power. ... 8. Bushings have locked to shaft or pin, or the liquid has set up in the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Rapid Wear",
+        "head_canonical_zh": "快速磨损",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "heavy grooving, galling, twisting, breaking or similar severe signs of trouble",
+        "tail_canonical_zh": "严重沟槽、擦伤、扭曲、断裂或类似严重故障迹象",
+        "tail_type": "Symptom",
+        "evidence_text": "Rapid wear, occurring in a few minutes, hours or days, shows up as heavy grooving, galling, twisting, breaking or similar severe signs of trouble.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "压力表指针抖动、跳动或读数不稳定",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "Cause",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: a. Cavitation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "压力表指针抖动、跳动或读数不稳定",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Liquid is coming to the pump in slugs",
+        "tail_canonical_zh": "液体以段塞形式进入泵",
+        "tail_type": "Cause",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: ... b. Liquid is coming to the pump in slugs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "压力表指针抖动、跳动或读数不稳定",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Air leak is in the suction line",
+        "tail_canonical_zh": "吸入管路存在空气泄漏",
+        "tail_type": "Cause",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: ... c. Air leak is in the suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fluttering, jumping, or erratic reading",
+        "head_canonical_zh": "压力表指针抖动、跳动或读数不稳定",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Vibrating from misalignment or mechanical problems",
+        "tail_canonical_zh": "因对中不良或机械问题引起振动",
+        "tail_type": "Cause",
+        "evidence_text": "3. Fluttering, jumping, or erratic reading: ... d. Vibrating from misalignment or mechanical problems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

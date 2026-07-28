@@ -1,0 +1,95 @@
+{
+  "page_key": "MP005:p0093",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1e4ae93e-0304-9a9d-9a48-afab7c417163",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 964,
+    "prompt_tokens": 3694,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4658
+  },
+  "latency_ms": 12939,
+  "attempt": 1,
+  "prompt_sha256": "1c147885ce0a9501d6a79307b1c5555e0b3a3a3daed272ff75b855b1331ad59d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Remove the rear cover from the pump casing by means of the pointed screws (86) . The rear cover and the bearing housing with shaft and impeller can now be lifted up from the pump as a unit, and the impeller can be inspected.",
+        "tail_canonical_zh": "拆卸后盖并吊起转子组件以检查叶轮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Remove the rear cover from the pump casing by means of the pointed screws (86) . The rear cover and the bearing housing with shaft and impeller can now be lifted up from the pump as a unit, and the impeller can be inspected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump set",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Dismantle the pipe (58)",
+        "tail_canonical_zh": "拆卸管路(58)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "4. Dismantle the pipe (58).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rear cover",
+        "head_canonical_zh": "后盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remove set screws (22) with washers (23) which hold the rear cover to the pump casing",
+        "tail_canonical_zh": "拆除固定后盖至泵壳的紧定螺钉(22)及垫圈(23)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remove set screws (22) with washers (23) which hold the rear cover to the pump casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remove nut (6). Pull off the impeller and remove sunk key (9)",
+        "tail_canonical_zh": "拆卸螺母(6)、取下叶轮并移除平键(9)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Remove nut (6). Pull off the impeller and remove sunk key (9).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

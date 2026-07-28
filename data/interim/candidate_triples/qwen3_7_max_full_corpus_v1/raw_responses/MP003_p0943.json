@@ -1,0 +1,76 @@
+{
+  "page_key": "MP003:p0943",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-726f6c4c-1ee4-939c-93c1-6dc7fff51660",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 682,
+    "prompt_tokens": 2580,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3262
+  },
+  "latency_ms": 8044,
+  "attempt": 1,
+  "prompt_sha256": "7abfe1a5ad92c5de70b08d257b92976e1319872afd929cef4a6550fdccf9a128",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fuel oil, lubricating oil and thermal oil system pumps",
+        "head_canonical_zh": "燃油、滑油及热油系统泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Shutdown of fuel oil, lubricating oil and thermal oil system pumps",
+        "tail_canonical_zh": "关停燃油、滑油及热油系统泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Shutdown of fuel oil, lubricating oil and thermal oil system pumps",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fire pump",
+        "head_canonical_zh": "消防泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Starting of a fire pump located outside of the propulsion machinery space",
+        "tail_canonical_zh": "启动位于推进机械处所外部的消防泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Starting of a fire pump located outside of the propulsion machinery space, including operation of all necessary valves, to pressurize the fire main",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "possible flooding",
+        "head_canonical_zh": "可能的浸水",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "high-level bilge alarm",
+        "tail_canonical_zh": "高水位舱底报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "a high-level bilge alarm is to be fitted in the fire pump space, as well as the compartment containing the sea chest, in order to detect possible flooding in each of these spaces",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-7a8a8ab0-7b41-92de-9c16-2bbf3253e8a5",
+  "latency_ms": 15653,
+  "prompt_sha256": "64f87bdae7d5beeb85ebcbf1e520073033f1d9ef0a4c989ac1abd6a0d333c1f6",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-517bb3dc8b8c71f791a5",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "If moisture is present, bearings should be cleaned and grease applied.",
+        "reason_code": "direct_conditional_mitigation"
+      },
+      {
+        "id": "MPT-51accb876da900749fa4",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "the noise from the pump can be calculated as the noise level of the motor + 2dB(A)",
+        "reason_code": "direct_calculation_method"
+      },
+      {
+        "id": "MPT-51b6c0f546108a2074c9",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Parts list Mechanical seal MQ1 ... 1295 1 sealing ring",
+        "reason_code": "parts_list_inclusion"
+      },
+      {
+        "id": "MPT-51b6e81057e399a3629c",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "The gate valve is used to isolate the pump for maintenance, priming and starting.",
+        "reason_code": "function_not_maintenance_action"
+      },
+      {
+        "id": "MPT-51e1ff89830dd647f4c9",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Soak air screw in acid sanitiser for 5 minutes",
+        "reason_code": "direct_maintenance_instruction"
+      },
+      {
+        "id": "MPT-5226343d3e6a178b727a",
+        "verdict": "uncertain",
+        "confidence": 0.6,
+        "supporting_quote": "Semiconductor assemblies, as a minimum, shall have alarm functions for the following parameters:",
+        "reason_code": "functional_requirement_vs_physical_component"
+      },
+      {
+        "id": "MPT-5250db51fca3742f87f1",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "the independent circulating pump is to be arranged for automatic starting",
+        "reason_code": "design_config_not_maintenance"
+      },
+      {
+        "id": "MPT-5264d81730568ffc29a2",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "All wearing parts are to be accessible for inspection and be readily renewable.",
+        "reason_code": "attribute_not_maintenance_action"
+      }
+    ]
+  }
+}

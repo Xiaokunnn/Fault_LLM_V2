@@ -1,0 +1,77 @@
+{
+  "page_key": "MP003:p0896",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e6917b8a-3e45-9919-ac82-fb27615c82eb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 746,
+    "prompt_tokens": 2402,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3148
+  },
+  "latency_ms": 11905,
+  "attempt": 1,
+  "prompt_sha256": "a7d65f2e49f2b120741816c1b2e6d0b0b2aa5ffb32639521afce4dc548ccc5bc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "automatic safety shutdowns",
+        "head_canonical_zh": "自动安全停机",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "threshold warning of impending or imminent slowdown or shutdown",
+        "tail_canonical_zh": "即将减速或停机的阈值报警",
+        "tail_type": "Symptom",
+        "evidence_text": "automation systems are to be designed in a manner such that a threshold warning of impending or imminent slowdown or shutdown of the propulsion system is given to the officer in charge of the navigational watch in time to assess navigational circumstances in an emergency",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Activation of safety system to automatic slowdown or automatic shutdown of propulsion machinery",
+        "head_canonical_zh": "推进机械自动减速或自动停机的安全系统激活",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "individual alarm at remote propulsion control station",
+        "tail_canonical_zh": "远程推进控制站的独立报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Activation of safety system to automatic slowdown or automatic shutdown of propulsion machinery is each to be arranged with individual alarm at remote propulsion control station",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Propulsion machinery shutdown by safety system",
+        "head_canonical_zh": "安全系统导致的推进机械停机",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "reset manually",
+        "tail_canonical_zh": "手动复位",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Propulsion machinery shutdown by safety system is not to resume operation until it is reset manually",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": [
+      "Page content focuses on Remote Propulsion Control Safety System automation requirements rather than specific pump component faults or maintenance; limited direct evidence for target_fault_classes found.",
+      "Extracted triples relate to general propulsion safety system alarms and resets which may indirectly cover pump protection but do not explicitly mention pump-specific failure modes listed in metadata."
+    ]
+  }
+}

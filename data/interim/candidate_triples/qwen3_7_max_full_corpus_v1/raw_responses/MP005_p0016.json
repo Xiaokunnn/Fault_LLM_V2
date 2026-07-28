@@ -1,0 +1,74 @@
+{
+  "page_key": "MP005:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-796f715c-f049-9da4-b51d-62556425c684",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 642,
+    "prompt_tokens": 2153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2795
+  },
+  "latency_ms": 8526,
+  "attempt": 1,
+  "prompt_sha256": "ad63d1eea99d537769a6a981d50482ee1521bc6baab75b6ac8dc908b4168010b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "PT100 sensor should be mounted in the pump casing",
+        "tail_canonical_zh": "在泵壳安装PT100传感器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "if there’s a risk of too high liquid temperatures, then a PT100 sensor should be mounted in the pump casing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "too high liquid temperatures",
+        "head_canonical_zh": "液体温度过高",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "PT100 sensor should be mounted in the pump casing",
+        "tail_canonical_zh": "在泵壳安装PT100传感器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "if there’s a risk of too high liquid temperatures, then a PT100 sensor should be mounted in the pump casing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump set functions properly",
+        "head_canonical_zh": "泵组正常运行",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether monitoring equipment is required",
+        "tail_canonical_zh": "检查是否需要监测设备",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether monitoring equipment is required to ensure that the pump set functions properly",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

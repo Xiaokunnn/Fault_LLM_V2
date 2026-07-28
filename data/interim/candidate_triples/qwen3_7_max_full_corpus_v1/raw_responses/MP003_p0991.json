@@ -1,0 +1,273 @@
+{
+  "page_key": "MP003:p0991",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3519ae4b-7aeb-966d-af8d-0abfb8ac57e9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2911,
+    "prompt_tokens": 15919,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 18830
+  },
+  "latency_ms": 32558,
+  "attempt": 1,
+  "prompt_sha256": "952e95f5d15983a9be5b45459ce6efc1decfbbab487484b8689f1e1c72a02d4f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "L.O. Pressure to main engine & reduction gear",
+        "head_canonical_zh": "主机及减速齿轮润滑油压力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Low",
+        "tail_canonical_zh": "低压报警",
+        "tail_type": "Symptom",
+        "evidence_text": "L.O. Pressure to main engine & reduction gear Pressure Low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r001:c01",
+          "MP003:p0991:t00:r001:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Engine coolant",
+        "head_canonical_zh": "发动机冷却液",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高温报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Engine coolant Temperature High",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r002:c01",
+          "MP003:p0991:t00:r002:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Starting air (if applicable) pressure",
+        "head_canonical_zh": "启动空气压力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Low",
+        "tail_canonical_zh": "低压报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Starting air (if applicable) pressure Low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r003:c01",
+          "MP003:p0991:t00:r003:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Steering gear motor",
+        "head_canonical_zh": "舵机马达",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Stopped",
+        "tail_canonical_zh": "停止运行报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Steering gear motor Stopped",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r008:c01",
+          "MP003:p0991:t00:r008:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Control power",
+        "head_canonical_zh": "控制电源",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Failure",
+        "tail_canonical_zh": "故障报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Control power Available Failure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r009:c01",
+          "MP003:p0991:t00:r009:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil day tanks",
+        "head_canonical_zh": "燃油日用柜",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Low",
+        "tail_canonical_zh": "低液位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Fuel oil day tanks Level (1) Low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r012:c01",
+          "MP003:p0991:t00:r012:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fuel oil tanks heater temperature",
+        "head_canonical_zh": "燃油柜加热器温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高温报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Fuel oil tanks heater temperature [see 4-9-11/15.1.1(d)] High",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r013:c01",
+          "MP003:p0991:t00:r013:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oil collection tank",
+        "head_canonical_zh": "油收集柜",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Oil collection tank [see 4-9-11/15.1.1(a) and 4-9-11/15.1.1(b)] Level (1) High",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r014:c01",
+          "MP003:p0991:t00:r014:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bilge level",
+        "head_canonical_zh": "舱底水位",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Bilge level Light (1) High",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r015:c01",
+          "MP003:p0991:t00:r015:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fire alarm",
+        "head_canonical_zh": "火警",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "Fire",
+        "tail_canonical_zh": "火灾报警信号",
+        "tail_type": "Symptom",
+        "evidence_text": "Fire alarm Light (1) Fire",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0991:t00:r016:c01",
+          "MP003:p0991:t00:r016:c03"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fuel oil daily service tanks or settling tanks",
+        "head_canonical_zh": "燃油日用柜或沉淀柜",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "high temperature alarm",
+        "tail_canonical_zh": "高温报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where fuel oil daily service tanks or settling tanks are fitted with heating arrangements, a high temperature alarm, audible at the navigation bridge, is to be provided if the flashpoint of the fuel oil can be exceeded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bilges in machinery spaces",
+        "head_canonical_zh": "机舱舱底",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "high level alarm",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bilges in machinery spaces are to be provided with a high level alarm in such a way that the accumulation of liquids is detected at normal angles of trim and heel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

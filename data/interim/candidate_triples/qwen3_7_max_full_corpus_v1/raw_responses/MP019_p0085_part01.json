@@ -1,0 +1,83 @@
+{
+  "page_key": "MP019:p0085",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9a381aaa-d6ff-9fad-ba62-1975edd7d2c9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 690,
+    "prompt_tokens": 2477,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3167
+  },
+  "latency_ms": 10266,
+  "attempt": 1,
+  "prompt_sha256": "15a7a016fbac9999c4ef43aa076b30deee011941dfc7e20cfdce016544e6929d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Non superare la velocità massima del motore",
+        "head_canonical_zh": "超过电机最大转速",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Velocità massima",
+        "tail_canonical_zh": "最大速度限制功能",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTA Non superare la velocità massima del motore. ... - Velocità massima",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "informazioni mancanti o imprecise",
+        "head_canonical_zh": "信息缺失或不准确",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "verificato le impostazioni corrette",
+        "tail_canonical_zh": "核实正确设置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Nel caso di informazioni mancanti o imprecise, non azionare il motore senza aver prima verificato le impostazioni corrette",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "messa in servizio per applicazioni a velocità variabile",
+        "head_canonical_zh": "变速应用调试",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "ricavati dalle targhette del motore",
+        "tail_canonical_zh": "从电机铭牌获取参数",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tutti i parametri necessari per l'impostazione del convertitore devono essere ricavati dalle targhette del motore",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

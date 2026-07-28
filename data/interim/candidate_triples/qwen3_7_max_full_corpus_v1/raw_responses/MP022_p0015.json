@@ -1,0 +1,131 @@
+{
+  "page_key": "MP022:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-af467876-2b35-907d-a3a7-1230bd6cdb99",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 14568,
+  "attempt": 1,
+  "prompt_sha256": "39048eaa871e64699a902d8c9413b1e6debda93a69fcae1ecdaaa9659efd3d59",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "LKH Prime",
+        "head_canonical_zh": "LKH Prime自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drain connections",
+        "head_canonical_zh": "排放口连接",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Never short circuit the drain connections",
+        "tail_canonical_zh": "禁止短接排放口连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never short circuit the drain connections as this will reduce the          \n       air release capacity",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "short circuit the drain connections",
+        "head_canonical_zh": "短接排放口连接",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "reduce the air release capacity",
+        "tail_canonical_zh": "降低排气能力",
+        "tail_type": "Symptom",
+        "evidence_text": "Never short circuit the drain connections as this will reduce the          \n       air release capacity",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drain connections",
+        "head_canonical_zh": "排放口连接",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Always use two drain valves",
+        "tail_canonical_zh": "始终使用两个排放阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Always use two drain valves",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "LKH Prime",
+        "head_canonical_zh": "LKH Prime自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "liquid is in the pump on start-up",
+        "tail_canonical_zh": "启动时泵内有液体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "To ensure optimal function of the selfpriming capacity, LKH Prime          \n       must be installed in such a way that ensures liquid is in the pump         \n       on start-up e.g. with a swan neck design as illustrated.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "releasing air only",
+        "head_canonical_zh": "仅排气运行",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "Max running time ... should not exceed 15 min",
+        "tail_canonical_zh": "最长运行时间不应超过15分钟",
+        "tail_type": "Risk",
+        "evidence_text": "Max running time when releasing air only should not exceed 15              \n       min.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

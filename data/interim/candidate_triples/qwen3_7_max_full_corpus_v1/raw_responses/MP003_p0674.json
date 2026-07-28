@@ -1,0 +1,128 @@
+{
+  "page_key": "MP003:p0674",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-49cd9dc2-1272-920e-88de-605838d3ac39",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1424,
+    "prompt_tokens": 2742,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4166
+  },
+  "latency_ms": 17946,
+  "attempt": 1,
+  "prompt_sha256": "656d5f72afd3c4865e4866b28d2adc7e303a431393606b88e666c96faaf4f8e0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "fire pumps",
+        "head_canonical_zh": "消防泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "permanent pressurization",
+        "tail_canonical_zh": "永久加压",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Arrangements are to be made to ensure immediate availability of a supply of water from the fire main at the required pressure either by permanent pressurization or by suitably placed remote starting arrangements for the fire pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fire pumps",
+        "head_canonical_zh": "消防泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "remote starting arrangements",
+        "tail_canonical_zh": "远程启动装置",
+        "tail_type": "Component",
+        "evidence_text": "Arrangements are to be made to ensure immediate availability of a supply of water from the fire main at the required pressure either by permanent pressurization or by suitably placed remote starting arrangements for the fire pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drainage and pumping arrangements",
+        "head_canonical_zh": "排水和泵送布置",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "build-up of free surfaces",
+        "tail_canonical_zh": "自由液面积聚",
+        "tail_type": "Risk",
+        "evidence_text": "However, the drainage and pumping arrangements are to be such as to prevent the build-up of free surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drainage system",
+        "head_canonical_zh": "排水系统",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "remove no less than 125% of the combined capacity of both the water spraying system pumps and the required number of nozzles",
+        "tail_canonical_zh": "排量不小于喷水系统泵和所需喷嘴总容量的125%",
+        "tail_type": "Standard",
+        "evidence_text": "The drainage system is to be sized to remove no less than 125% of the combined capacity of both the water spraying system pumps and the required number of nozzles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "water spraying system pumps",
+        "head_canonical_zh": "喷水系统泵",
+        "head_type": "Equipment",
+        "relation": "located_in",
+        "tail_surface": "water spraying system",
+        "tail_canonical_zh": "喷水系统",
+        "tail_type": "Equipment",
+        "evidence_text": "The drainage system is to be sized to remove no less than 125% of the combined capacity of both the water spraying system pumps and the required number of nozzles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drencher pump",
+        "head_canonical_zh": "水幕泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "taken into account in this total capacity calculation",
+        "tail_canonical_zh": "纳入总容量计算",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If a drencher system is used to satisfy 4-7-2/7.3.1(c), the drencher pump is also to be taken into account in this total capacity calculation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.6
+      }
+    ],
+    "warnings": [
+      "页面主要内容为消防安全系统规范，与船舶机舱泵系故障诊断、症状、检查及维护的直接关联较弱，仅抽取了涉及泵类设备的通用运行条件、风险预防及设计标准相关三元组。",
+      "drencher pump相关的tail_surface 'taken into account in this total capacity calculation' 被归类为MaintenanceAction存在语义模糊，原文实为设计验证要求而非物理维护动作，但为满足schema约束且无更合适类型而保留。"
+    ]
+  }
+}

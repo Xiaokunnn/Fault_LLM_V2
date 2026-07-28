@@ -1,0 +1,101 @@
+{
+  "page_key": "MP020:p0008",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ea9ebf95-be2e-9dbe-89b5-14f3f71b0237",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 913,
+    "prompt_tokens": 7890,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8803
+  },
+  "latency_ms": 12101,
+  "attempt": 1,
+  "prompt_sha256": "9d10283607c37721685a1fb7a8f78ec95d24f157c0e205c303795c8a6b0d94d0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "FLEXIBLE JOINT",
+        "head_canonical_zh": "柔性接头",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "MISALIGMENT",
+        "tail_canonical_zh": "不对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "USE A FLEXIBLE JOINT WHICH PERMITS \n                                        SOME MISALIGMENT AND AXIAL MOVEMENT.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "THERMAL EXPANSION PROBLEMS",
+        "head_canonical_zh": "热膨胀问题",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "FLEXIBLE JOINT",
+        "tail_canonical_zh": "柔性接头",
+        "tail_type": "Component",
+        "evidence_text": "USE A FLEXIBLE JOINT WHICH PERMITS \n                                        SOME MISALIGMENT AND AXIAL MOVEMENT. \n                                            THIS ALSO RESOLVES MOST \n                                          THERMAL EXPANSION PROBLEMS.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "DISCHARGE PIPING",
+        "head_canonical_zh": "排出管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "TIE RODS TO SUPPORT \n                                                  HYDRAULIC FORCES",
+        "tail_canonical_zh": "支撑液压力的拉杆",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "DISCHARGE           PIPING      –  GOOD       PRACTICE\n                                                 TIE RODS TO SUPPORT \n                                                  HYDRAULIC FORCES",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "DISCHARGE PIPE",
+        "head_canonical_zh": "排出管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "PIPE \n                                                                   SUPPORT",
+        "tail_canonical_zh": "管道支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "DISCHARGE PIPE              \n                                                                    PIPE            \n                                                                   SUPPORT",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

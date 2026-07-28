@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0629",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-30e1b074-542a-960d-95df-1739ff27f5b1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 943,
+    "prompt_tokens": 2529,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3472
+  },
+  "latency_ms": 12326,
+  "attempt": 1,
+  "prompt_sha256": "350c32c2acd2a455cd5fb20c1563e08d3acdabffcb13476f5b19b5891c884a39",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "oil contamination",
+        "head_canonical_zh": "油污染",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "observation tank",
+        "tail_canonical_zh": "观察柜",
+        "tail_type": "Equipment",
+        "evidence_text": "Steam condensate lines from the heaters and heating coils in tanks are to be led to an observation tank to enable detection of possible oil contamination.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "condenser overpressure",
+        "head_canonical_zh": "冷凝器超压",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "pressure relief valve or burst disc",
+        "tail_canonical_zh": "安全阀或爆破片",
+        "tail_type": "Component",
+        "evidence_text": "Any condenser which can be subjected to a pressure greater than its design pressure is to be fitted with a pressure relief valve or burst disc of suitable capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overpressurization",
+        "head_canonical_zh": "超压",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "fail-safe automatic means",
+        "tail_canonical_zh": "故障安全自动装置",
+        "tail_type": "Component",
+        "evidence_text": "The relief valve or burst disc need not be fitted if a fail-safe automatic means of preventing overpressurization is provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Condensers",
+        "head_canonical_zh": "冷凝器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatic test",
+        "tail_canonical_zh": "液压试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Condensers (other than those in 4-6-6/5.11.2(c)) which are subject to pressure, and are essential for propulsion or power generation such as those associated with propulsion turbines but are not required to be certified on basis of above specified criteria, are to be subjected to a hydrostatic test in accordance with 4-4-1, Appendix 1/21.3.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      }
+    ],
+    "warnings": []
+  }
+}

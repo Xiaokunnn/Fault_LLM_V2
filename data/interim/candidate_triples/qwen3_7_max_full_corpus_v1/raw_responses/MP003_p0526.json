@@ -1,0 +1,169 @@
+{
+  "page_key": "MP003:p0526",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3b6f3143-beea-9d1b-9412-b3366833fd33",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1839,
+    "prompt_tokens": 2362,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4201
+  },
+  "latency_ms": 22427,
+  "attempt": 1,
+  "prompt_sha256": "a6c06e0b3aaec60588a721794fdfa680f5b17a02957c3065783245a6b8e32d65",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "piping system",
+        "head_canonical_zh": "管路系统",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "relief valve",
+        "tail_canonical_zh": "安全阀",
+        "tail_type": "Component",
+        "evidence_text": "Each piping system, or part of a system, which may be exposed to a pressure greater than that for which it is designed, is to be protected from over pressurization by a relief valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "over pressurization",
+        "head_canonical_zh": "超压",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "relief valve",
+        "tail_canonical_zh": "安全阀",
+        "tail_type": "Component",
+        "evidence_text": "is to be protected from over pressurization by a relief valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "systems are served only by centrifugal pumps such that the pressure delivered by the pump cannot exceed the design pressure of the piping",
+        "head_canonical_zh": "仅由离心泵供液且泵出口压力不超过管路设计压力的系统",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "relief valves are not necessary",
+        "tail_canonical_zh": "无需安装安全阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where systems are served only by centrifugal pumps such that the pressure delivered by the pump cannot exceed the design pressure of the piping, relief valves are not necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "thermometers or other temperature sensing devices",
+        "head_canonical_zh": "温度计或其他温度传感装置",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "thermometer wells",
+        "tail_canonical_zh": "温度计套管",
+        "tail_type": "Component",
+        "evidence_text": "Where thermometers or other temperature sensing devices are fitted in piping systems, thermometer wells are to be used so that the devices can be removed without impairing the integrity of the pressurized system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pressure gauges or other pressure sensing devices",
+        "head_canonical_zh": "压力表或其他压力传感装置",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "valves",
+        "tail_canonical_zh": "隔离阀",
+        "tail_type": "Component",
+        "evidence_text": "Where pressure gauges or other pressure sensing devices are fitted in piping systems, valves are to be provided so that the devices can be isolated and removed without impairing the integrity of the pressurized system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pressure, temperature and level sensing devices installed on tanks",
+        "head_canonical_zh": "安装在液舱上的压力、温度和液位传感装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fitted with valves or arranged such that they may be removed without emptying the tank",
+        "tail_canonical_zh": "装设阀门或布置成可在不排空液舱的情况下拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pressure, temperature and level sensing devices installed on tanks at locations where they are subjected to a static head of liquid are to be fitted with valves or arranged such that they may be removed without emptying the tank.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the material in the event of a fire",
+        "head_canonical_zh": "火灾中材料失效",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "danger of flooding",
+        "tail_canonical_zh": "进水危险",
+        "tail_type": "Risk",
+        "evidence_text": "failure of the material in the event of a fire would give rise to danger of flooding",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Materials readily rendered ineffective by heat",
+        "head_canonical_zh": "易受热失效的材料",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "not to be used for connection to the shell",
+        "tail_canonical_zh": "不得用于船壳连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Materials readily rendered ineffective by heat are not to be used for connection to the shell where the failure of the material in the event of a fire would give rise to danger of flooding.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

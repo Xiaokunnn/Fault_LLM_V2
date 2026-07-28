@@ -1,0 +1,1061 @@
+{
+  "page_key": "MP019:p0109",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e64ae693-4e36-92c5-910c-7123b3b12768",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 13149,
+    "prompt_tokens": 14898,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 28047
+  },
+  "latency_ms": 145014,
+  "attempt": 1,
+  "prompt_sha256": "3740cbe4576b3cd5e6976496a57547c4e664f68e16bb04e870bb34ab429aba57",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Säkringarna har löst ut",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Cause",
+        "evidence_text": "Motorn startar inte Säkringarna har löst ut Byt till säkringar av korrekt typ och utlösningsvärde.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Säkringarna har löst ut",
+        "head_canonical_zh": "熔断器熔断",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Byt till säkringar av korrekt typ och utlösningsvärde.",
+        "tail_canonical_zh": "更换为正确类型和脱扣值的熔断器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motorn startar inte Säkringarna har löst ut Byt till säkringar av korrekt typ och utlösningsvärde.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c01",
+          "MP019:p0109:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Överbelastningsutlösning",
+        "tail_canonical_zh": "过载脱扣",
+        "tail_type": "Cause",
+        "evidence_text": "Överbelastningsutlösning Kontrollera och återställ överbelastningsskyddet i startapparaten.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Överbelastningsutlösning",
+        "head_canonical_zh": "过载脱扣",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera och återställ överbelastningsskyddet i startapparaten.",
+        "tail_canonical_zh": "检查并复位起动器中的过载保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Överbelastningsutlösning Kontrollera och återställ överbelastningsskyddet i startapparaten.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r002:c01",
+          "MP019:p0109:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Felaktig matning",
+        "tail_canonical_zh": "电源不正确",
+        "tail_type": "Cause",
+        "evidence_text": "Felaktig matning      Kontrollera att matningen överensstämmer med uppgifterna på\n                                       motorns märkskylt och med driftförhållandena.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Felaktig matning",
+        "head_canonical_zh": "电源不正确",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera att matningen överensstämmer med uppgifterna på\n                                       motorns märkskylt och med driftförhållandena.",
+        "tail_canonical_zh": "检查电源是否符合电机铭牌数据和运行条件",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Felaktig matning      Kontrollera att matningen överensstämmer med uppgifterna på\n                                       motorns märkskylt och med driftförhållandena.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r003:c01",
+          "MP019:p0109:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Felaktig matningsanslutning",
+        "tail_canonical_zh": "电源连接错误",
+        "tail_type": "Cause",
+        "evidence_text": "Felaktig matningsanslutning Kontrollera anslutningarna mot det schema som medföljer motorn.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Felaktig matningsanslutning",
+        "head_canonical_zh": "电源连接错误",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera anslutningarna mot det schema som medföljer motorn.",
+        "tail_canonical_zh": "对照电机附带的接线图检查连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Felaktig matningsanslutning Kontrollera anslutningarna mot det schema som medföljer motorn.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r004:c01",
+          "MP019:p0109:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Lindningsbrott eller öppen brytare",
+        "tail_canonical_zh": "绕组断路或开关断开",
+        "tail_type": "Cause",
+        "evidence_text": "Lindningsbrott eller öppen brytare Känns igen på ett surrande ljud när brytaren är stängd.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lindningsbrott eller öppen brytare",
+        "head_canonical_zh": "绕组断路或开关断开",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "surrande ljud när brytaren är stängd",
+        "tail_canonical_zh": "开关闭合时的嗡嗡声",
+        "tail_type": "Symptom",
+        "evidence_text": "Lindningsbrott eller öppen brytare Känns igen på ett surrande ljud när brytaren är stängd.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r005:c01",
+          "MP019:p0109:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lindningsbrott eller öppen brytare",
+        "head_canonical_zh": "绕组断路或开关断开",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera\n                                       att alla anslutningar är väl åtdragna.",
+        "tail_canonical_zh": "检查所有连接是否紧固",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera\n                                       att alla anslutningar är väl åtdragna.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r005:c01",
+          "MP019:p0109:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lindningsbrott eller öppen brytare",
+        "head_canonical_zh": "绕组断路或开关断开",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera att alla hjälpkontakter sluts korrekt.",
+        "tail_canonical_zh": "检查所有辅助触点是否正确闭合",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera att alla hjälpkontakter sluts korrekt.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r005:c01",
+          "MP019:p0109:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Mekaniskt fel",
+        "tail_canonical_zh": "机械故障",
+        "tail_type": "Cause",
+        "evidence_text": "Mekaniskt fel         Kontrollera att motorn och den drivna utrustningen roterar fritt.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mekaniskt fel",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera att motorn och den drivna utrustningen roterar fritt.",
+        "tail_canonical_zh": "检查电机和被驱动设备是否能自由旋转",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mekaniskt fel         Kontrollera att motorn och den drivna utrustningen roterar fritt.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r006:c01",
+          "MP019:p0109:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mekaniskt fel",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera lager och smörjning.",
+        "tail_canonical_zh": "检查轴承和润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera lager och smörjning.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r006:c01",
+          "MP019:p0109:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Bristfällig anslutning av statorspole",
+        "tail_canonical_zh": "定子线圈连接不良",
+        "tail_type": "Cause",
+        "evidence_text": "Bristfällig anslutning av statorspole Känns igen på att säkringarna har löst ut.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bristfällig anslutning av statorspole",
+        "head_canonical_zh": "定子线圈连接不良",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "säkringarna har löst ut",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Symptom",
+        "evidence_text": "Bristfällig anslutning av statorspole Känns igen på att säkringarna har löst ut.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r007:c01",
+          "MP019:p0109:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bristfällig anslutning av statorspole",
+        "head_canonical_zh": "定子线圈连接不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motorn måste lindas om.",
+        "tail_canonical_zh": "电机必须重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motorn måste lindas om.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r007:c01",
+          "MP019:p0109:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bristfällig anslutning av statorspole",
+        "head_canonical_zh": "定子线圈连接不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Demontera lagersköldarna, hitta felet.",
+        "tail_canonical_zh": "拆卸端盖查找故障",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Demontera lagersköldarna, hitta felet.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r007:c01",
+          "MP019:p0109:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Rotorfel",
+        "tail_canonical_zh": "转子故障",
+        "tail_type": "Cause",
+        "evidence_text": "Rotorfel              Leta efter avbrutna stavar och gavelringar.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rotorfel",
+        "head_canonical_zh": "转子故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Leta efter avbrutna stavar och gavelringar.",
+        "tail_canonical_zh": "查找断裂的导条和端环",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Rotorfel              Leta efter avbrutna stavar och gavelringar.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r008:c01",
+          "MP019:p0109:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar inte",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Motorn kan vara överbelastad",
+        "tail_canonical_zh": "电机可能过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motorn kan vara överbelastad Minska belastningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r001:c00",
+          "MP019:p0109:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn kan vara överbelastad",
+        "head_canonical_zh": "电机可能过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Minska belastningen.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motorn kan vara överbelastad Minska belastningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r009:c01",
+          "MP019:p0109:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fastlåst",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "En fas kan vara öppen",
+        "tail_canonical_zh": "缺相",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fastlåst En fas kan vara öppen Kontrollera spänningen på alla faser.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c00",
+          "MP019:p0109:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "En fas kan vara öppen",
+        "head_canonical_zh": "缺相",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera spänningen på alla faser.",
+        "tail_canonical_zh": "检查所有相电压",
+        "tail_type": "InspectionAction",
+        "evidence_text": "En fas kan vara öppen Kontrollera spänningen på alla faser.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c01",
+          "MP019:p0109:t00:r010:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fastlåst",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Fel tillämpning",
+        "tail_canonical_zh": "应用不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fastlåst Fel tillämpning       Ändra typ eller storlek. Kontakta leverantören.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c00",
+          "MP019:p0109:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fel tillämpning",
+        "head_canonical_zh": "应用不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Ändra typ eller storlek. Kontakta leverantören.",
+        "tail_canonical_zh": "更改型号或尺寸，联系供应商",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fel tillämpning       Ändra typ eller storlek. Kontakta leverantören.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r011:c01",
+          "MP019:p0109:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fastlåst",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Överbelastning",
+        "tail_canonical_zh": "过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fastlåst Överbelastning        Minska belastningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c00",
+          "MP019:p0109:t00:r012:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Överbelastning",
+        "head_canonical_zh": "过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Minska belastningen.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Överbelastning        Minska belastningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r012:c01",
+          "MP019:p0109:t00:r012:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fastlåst",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "För låg spänning",
+        "tail_canonical_zh": "电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fastlåst För låg spänning      Kontrollera att matningsspänningen uppfyller kraven enligt\n                                       märkskylten. Kontrollera anslutningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c00",
+          "MP019:p0109:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "För låg spänning",
+        "head_canonical_zh": "电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera att matningsspänningen uppfyller kraven enligt\n                                       märkskylten. Kontrollera anslutningen.",
+        "tail_canonical_zh": "检查电源电压是否符合铭牌要求，检查连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "För låg spänning      Kontrollera att matningsspänningen uppfyller kraven enligt\n                                       märkskylten. Kontrollera anslutningen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r013:c01",
+          "MP019:p0109:t00:r013:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fastlåst",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Öppen krets",
+        "tail_canonical_zh": "开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fastlåst Öppen krets           Säkringar utlösta, kontrollera överbelastningsrelä, stator och\n                                       tryckknappar.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r010:c00",
+          "MP019:p0109:t00:r014:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Öppen krets",
+        "head_canonical_zh": "开路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "Säkringar utlösta",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Symptom",
+        "evidence_text": "Öppen krets           Säkringar utlösta, kontrollera överbelastningsrelä, stator och\n                                       tryckknappar.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r014:c01",
+          "MP019:p0109:t00:r014:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Öppen krets",
+        "head_canonical_zh": "开路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "kontrollera överbelastningsrelä, stator och\n                                       tryckknappar.",
+        "tail_canonical_zh": "检查过载继电器、定子和按钮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Öppen krets           Säkringar utlösta, kontrollera överbelastningsrelä, stator och\n                                       tryckknappar.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r014:c01",
+          "MP019:p0109:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn startar,\nmen retarderar\noch stannar",
+        "head_canonical_zh": "电机启动后减速并停止",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Matningsfel",
+        "tail_canonical_zh": "电源故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motorn startar,\nmen retarderar\noch stannar Matningsfel       Kontrollera om matningsanslutningarna behöver dras åt. Kontrollera\nsäkringar och manöverorgan.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r015:c00",
+          "MP019:p0109:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Matningsfel",
+        "head_canonical_zh": "电源故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera om matningsanslutningarna behöver dras åt. Kontrollera\nsäkringar och manöverorgan.",
+        "tail_canonical_zh": "检查电源连接是否需要紧固，检查熔断器和控制装置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Matningsfel       Kontrollera om matningsanslutningarna behöver dras åt. Kontrollera\nsäkringar och manöverorgan.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r015:c01",
+          "MP019:p0109:t00:r015:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn uppnår\ninte märkvarvtalet",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Felaktig användning",
+        "tail_canonical_zh": "使用不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motorn uppnår\ninte märkvarvtalet Felaktig användning Kontakta leverantören för anvisning om rätt typ.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c00",
+          "MP019:p0109:t00:r016:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Felaktig användning",
+        "head_canonical_zh": "使用不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontakta leverantören för anvisning om rätt typ.",
+        "tail_canonical_zh": "联系供应商获取正确型号指导",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Felaktig användning Kontakta leverantören för anvisning om rätt typ.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c01",
+          "MP019:p0109:t00:r016:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn uppnår\ninte märkvarvtalet",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "För låg spänning vid\nmotoranslutningarna på grund av\nspänningsfall i matningsnätet",
+        "tail_canonical_zh": "因供电网络压降导致电机端子电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "För låg spänning vid\nmotoranslutningarna på grund av\nspänningsfall i matningsnätet Använd högre spänning eller transformatoranslutningar för att\nminska belastningen. Kontrollera anslutningarna. Kontrollera att\nledarna har rätt dimension.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c00",
+          "MP019:p0109:t00:r017:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "För låg spänning vid\nmotoranslutningarna på grund av\nspänningsfall i matningsnätet",
+        "head_canonical_zh": "因供电网络压降导致电机端子电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Använd högre spänning eller transformatoranslutningar för att\nminska belastningen. Kontrollera anslutningarna. Kontrollera att\nledarna har rätt dimension.",
+        "tail_canonical_zh": "使用更高电压或变压器抽头以减小压降，检查连接，确认导线截面正确",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "För låg spänning vid\nmotoranslutningarna på grund av\nspänningsfall i matningsnätet Använd högre spänning eller transformatoranslutningar för att\nminska belastningen. Kontrollera anslutningarna. Kontrollera att\nledarna har rätt dimension.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r017:c01",
+          "MP019:p0109:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn uppnår\ninte märkvarvtalet",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "För hög startbelastning",
+        "tail_canonical_zh": "启动负载过高",
+        "tail_type": "Cause",
+        "evidence_text": "För hög startbelastning Kontrollera motorns startbelastning.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c00",
+          "MP019:p0109:t00:r018:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "För hög startbelastning",
+        "head_canonical_zh": "启动负载过高",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera motorns startbelastning.",
+        "tail_canonical_zh": "检查电机启动负载",
+        "tail_type": "InspectionAction",
+        "evidence_text": "För hög startbelastning Kontrollera motorns startbelastning.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r018:c01",
+          "MP019:p0109:t00:r018:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn uppnår\ninte märkvarvtalet",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Avbrutna rotorstavar eller lös rotor",
+        "tail_canonical_zh": "转子导条断裂或转子松动",
+        "tail_type": "Cause",
+        "evidence_text": "Avbrutna rotorstavar eller lös rotor Kontrollera om det finns sprickor nära ringarna. En ny rotor kan\n                                       behövas eftersom reparationer oftast är temporära.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c00",
+          "MP019:p0109:t00:r019:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Avbrutna rotorstavar eller lös rotor",
+        "head_canonical_zh": "转子导条断裂或转子松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kontrollera om det finns sprickor nära ringarna.",
+        "tail_canonical_zh": "检查端环附近是否有裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Avbrutna rotorstavar eller lös rotor Kontrollera om det finns sprickor nära ringarna.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r019:c01",
+          "MP019:p0109:t00:r019:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Avbrutna rotorstavar eller lös rotor",
+        "head_canonical_zh": "转子导条断裂或转子松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "En ny rotor kan\n                                       behövas eftersom reparationer oftast är temporära.",
+        "tail_canonical_zh": "可能需要新转子，因为修复通常是临时的",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "En ny rotor kan\n                                       behövas eftersom reparationer oftast är temporära.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r019:c01",
+          "MP019:p0109:t00:r019:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorn uppnår\ninte märkvarvtalet",
+        "head_canonical_zh": "电机未达到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Öppen primärkrets",
+        "tail_canonical_zh": "一次回路开路",
+        "tail_type": "Cause",
+        "evidence_text": "Öppen primärkrets     Hitta felet med mätinstrument och reparera.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r016:c00",
+          "MP019:p0109:t00:r020:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Öppen primärkrets",
+        "head_canonical_zh": "一次回路开路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Hitta felet med mätinstrument och reparera.",
+        "tail_canonical_zh": "用测量仪器查找故障并修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Öppen primärkrets     Hitta felet med mätinstrument och reparera.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0109:t00:r020:c01",
+          "MP019:p0109:t00:r020:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "page_key": "MP019:p0066",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-1869373c-ce02-9d85-b77f-34cc99aa206a",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 15718,
+  "attempt": 1,
+  "prompt_sha256": "1a62759f5356962def9b4cb9fe5c57a66b87e9acf343d30bd49ac950e393b25f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "corrientes de rodamiento dañinas",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Rodamiento aislado en el lado opuesto al acople",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW\nO bien\nIEC 315 ≤ tamaño de\ncarcasa ≤ IEC 355 Rodamiento aislado\nen el lado opuesto al\nacople",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0066:t00:r002:c01",
+          "MP019:p0066:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "corrientes de rodamiento dañinas",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Filtro de modo común en el convertidor",
+        "tail_canonical_zh": "变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nO bien\nIEC 400 ≤ tamaño de\ncarcasa ≤ IEC 450 Filtro de modo común\nen el convertidor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0066:t00:r003:c01",
+          "MP019:p0066:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "corrientes de rodamiento dañinas",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Rodamiento aislado en el lado opuesto al acople",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nO bien\nIEC 400 ≤ tamaño de\ncarcasa ≤ IEC 450 Rodamiento aislado\nen el lado opuesto al\nacople",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0066:t00:r003:c01",
+          "MP019:p0066:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "conexión equipotencial adicional entre la carcasa del motor y el equipo accionado",
+        "head_canonical_zh": "电机机壳与驱动设备间附加等电位连接",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "midiendo la diferencia de potencial existente entre los componentes",
+        "tail_canonical_zh": "测量部件间电位差",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "es necesario\ncomprobar la conductividad de alta frecuencia de la\nconexión ofrecida por la base de acero, por ejemplo\nmidiendo la diferencia de potencial existente entre los\ncomponentes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Corrientes a través de los rodamientos",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "cables apantallados simétricos y prensaestopas EMC",
+        "tail_canonical_zh": "对称屏蔽电缆及EMC电缆接头",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "30 kW deben estar cableados con cables apantallados\nsimétricos y prensaestopas EMC, es decir, que\nproporcionen una conexión equipotencial en los 360°.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "page_key": "MP019:p0049",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e9b4370b-ba78-90fe-bd05-3c3e5306817c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1101,
+    "prompt_tokens": 2464,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3565
+  },
+  "latency_ms": 14557,
+  "attempt": 1,
+  "prompt_sha256": "6217ccefdc943b446215d840b7112ec4ce738ba1b8501fb2e97f1c2ffd89d3d8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "moteurs ABB",
+        "head_canonical_zh": "ABB电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "applications à vitesse variable",
+        "tail_canonical_zh": "变速应用",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "L'utilisation des moteurs ABB dans des applications à vitesse variable ne nécessitent généralement pas de plaques signalétiques supplémentaires",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vitesse maximale du moteur",
+        "head_canonical_zh": "电机最大转速",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "dépassée",
+        "tail_canonical_zh": "超速",
+        "tail_type": "Risk",
+        "evidence_text": "La vitesse maximale du moteur ne doit pas être dépassée !",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "capacité de charge thermique réelle",
+        "head_canonical_zh": "实际热负载能力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "courbes de capacité de charge de référence",
+        "tail_canonical_zh": "参考负载能力曲线",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "La capacité de charge thermique réelle d'un moteur peut être inférieure à celle indiquée par les courbes de capacité de charge de référence",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "paramètres",
+        "head_canonical_zh": "参数",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "vérifiée l'exactitude",
+        "tail_canonical_zh": "验证准确性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "En cas d'absence d'information ou d'imprécision, n'utilisez le moteur qu'une fois vérifiée l'exactitude des paramètres !",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Protection contre les calages",
+        "head_canonical_zh": "堵转保护",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "convertisseurs",
+        "tail_canonical_zh": "变频器",
+        "tail_type": "Equipment",
+        "evidence_text": "Les convertisseurs offrent généralement les fonctionnalités suivantes ... Protection contre les calages",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

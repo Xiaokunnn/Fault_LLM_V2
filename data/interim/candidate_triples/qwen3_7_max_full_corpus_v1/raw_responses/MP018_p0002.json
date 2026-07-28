@@ -1,0 +1,62 @@
+{
+  "page_key": "MP018:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cc5f07ac-b03f-90c8-bab4-424429e75387",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 532,
+    "prompt_tokens": 1937,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2469
+  },
+  "latency_ms": 8805,
+  "attempt": 1,
+  "prompt_sha256": "90ec407113d167498349359fd897e630dbd66557b5704c7e6567272505b97bcd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Operation of the pump under conditions differing widely from those, on which the pump selection was based",
+        "head_canonical_zh": "泵在偏离选型工况下运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Operation of the pump under conditions differing widely from those, on which the pump selection was based",
+        "head_canonical_zh": "泵在偏离选型工况下运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "shortened life of bearings, seals, packing, and shaft",
+        "tail_canonical_zh": "轴承、密封、填料和轴寿命缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.88
+      }
+    ],
+    "warnings": []
+  }
+}

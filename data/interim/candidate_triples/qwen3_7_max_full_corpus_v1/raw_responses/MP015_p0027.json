@@ -1,0 +1,188 @@
+{
+  "page_key": "MP015:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8128ffd0-e0aa-9b12-bf66-32974f344450",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1901,
+    "prompt_tokens": 1974,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3875
+  },
+  "latency_ms": 24407,
+  "attempt": 1,
+  "prompt_sha256": "c102e01fe809997886cc8031d55dfabfe1bf77d69fec452a7d338aed43620247",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "turning the shaft end at the coupling a few times by hand",
+        "tail_canonical_zh": "手动转动联轴器处轴端数圈",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the pump shaft turns freely. Do this by turning the shaft end at the coupling a few times by hand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fuses",
+        "head_canonical_zh": "熔断器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the fuses have been mounted",
+        "tail_canonical_zh": "检查熔断器是否已安装",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the fuses have been mounted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "room in which the engine is placed",
+        "head_canonical_zh": "发动机所在房间",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the room in which the engine is placed is well ventilated",
+        "tail_canonical_zh": "检查发动机所在房间通风是否良好",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the room in which the engine is placed is well ventilated.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "exhaust of the engine",
+        "head_canonical_zh": "发动机排气",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the exhaust of the engine is not obstructed",
+        "tail_canonical_zh": "检查发动机排气是否畅通",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the exhaust of the engine is not obstructed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "oil level",
+        "head_canonical_zh": "油位",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "check the oil level",
+        "tail_canonical_zh": "检查油位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before starting the engine check the oil level.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "oil chamber",
+        "head_canonical_zh": "油腔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the oil chamber with oil",
+        "tail_canonical_zh": "向油腔注油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the oil chamber with oil, see paragraph 10.1 \"Oil chamber\" for the appropriate type and quantity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sense of rotation of the motor",
+        "head_canonical_zh": "电机转向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the sense of rotation of the motor corresponds with that of the pump",
+        "tail_canonical_zh": "检查电机转向是否与泵一致",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The sense of rotation of the pump is indicated by an arrow. Check whether the sense of rotation of the motor corresponds with that of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sense of rotation",
+        "head_canonical_zh": "转向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Let the motor run for only a short time and check the sense of rotation",
+        "tail_canonical_zh": "短时运行电机并检查转向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Let the motor run for only a short time and check the sense of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sense of rotation",
+        "head_canonical_zh": "转向",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "alter the sense of rotation",
+        "tail_canonical_zh": "更改转向",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the sense of rotation is not correct, alter the sense of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

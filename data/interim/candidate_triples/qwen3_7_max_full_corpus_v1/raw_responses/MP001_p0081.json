@@ -1,0 +1,128 @@
+{
+  "page_key": "MP001:p0081",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2cdb8ab1-6d34-9195-b6bb-30747745775c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1323,
+    "prompt_tokens": 8299,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9622
+  },
+  "latency_ms": 20531,
+  "attempt": 1,
+  "prompt_sha256": "67e24e4eeb7adc5a4d60007eea63976568d1ead90dea5cd2f9d13b72a1c4e16b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Particle Counter Light Extinction",
+        "head_canonical_zh": "遮光式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Particles in lubricating oil and hydraulic systems",
+        "tail_canonical_zh": "润滑油及液压系统中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particle Counter Light Extinction\nParticles in lubricating oil and hydraulic systems",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0081:t00:r007:c01",
+          "MP001:p0081:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue, wear, and corrosion",
+        "head_canonical_zh": "疲劳、磨损和腐蚀",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "Particles in lubricating oil and hydraulic systems",
+        "tail_canonical_zh": "润滑油及液压系统中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particles in lubricating oil and hydraulic systems caused by fatigue, wear, and corrosion",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0081:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "contaminants",
+        "head_canonical_zh": "污染物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Particles in lubricating oil and hydraulic systems",
+        "tail_canonical_zh": "润滑油及液压系统中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particles in lubricating oil and hydraulic systems ... contaminants",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0081:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Particle Counter Light Extinction",
+        "head_canonical_zh": "遮光式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "operates_under",
+        "tail_surface": "ISO 4406 cleanliness value",
+        "tail_canonical_zh": "ISO 4406清洁度等级",
+        "tail_type": "Standard",
+        "evidence_text": "This information is compared with the reflected and blocked light. ISO 4406 cleanliness value.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0081:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Particle Counter Light Extinction",
+        "head_canonical_zh": "遮光式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Trained skilled worker to operate instrument",
+        "tail_canonical_zh": "经培训的技术人员操作仪器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Skill Level Personnel: Trained skilled worker to operate instrument",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0081:t00:r002:c00",
+          "MP001:p0081:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": [
+      "Table text appears reversed or scrambled in OCR output (e.g., 'segatnavdasiD' for 'Disadvantages'), requiring mental reconstruction to identify valid English technical terms like 'Particle Counter Light Extinction' and 'ISO 4406'.",
+      "Evidence spans were reconstructed from vertically scattered and reversed text fragments within table cells to form coherent technical statements."
+    ]
+  }
+}

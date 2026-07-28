@@ -1,0 +1,190 @@
+{
+  "page_key": "MP019:p0042",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-450f996e-7225-9976-bd4d-90bd2433f6bb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2147,
+    "prompt_tokens": 23441,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 25588
+  },
+  "latency_ms": 25382,
+  "attempt": 1,
+  "prompt_sha256": "5e8f51efff1308caa2099f66c8b7065bdf1c2a328c32a0957d963dfdc704896a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "moteur",
+        "head_canonical_zh": "低压感应电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez l'état du moteur (bouts d'arbre, brides et surfaces peintes)",
+        "tail_canonical_zh": "检查电机状态（轴伸、法兰及漆面）",
+        "tail_type": "InspectionAction",
+        "evidence_text": "A la réception, vérifiez l'état du moteur (bouts d'arbre, brides et surfaces peintes) ; tout dommage doit être signalé immédiatement au transporteur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "moteur",
+        "head_canonical_zh": "低压感应电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez toutes les données de la plaque signalétique, plus particulièrement la tension et le mode de couplage des enroulements (étoile ou triangle)",
+        "tail_canonical_zh": "核查铭牌数据（电压及绕组接法）",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez toutes les données de la plaque signalétique, plus particulièrement la tension et le mode de couplage des enroulements (étoile ou triangle).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "moteur",
+        "head_canonical_zh": "低压感应电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "recouvertes d'une protection anticorrosion",
+        "tail_canonical_zh": "涂覆防锈保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les surfaces usinées non protégées (bouts d'arbre et brides) doivent être recouvertes d'une protection anticorrosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "moteur",
+        "head_canonical_zh": "低压感应电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "tourner l'arbre à la main à intervalles réguliers",
+        "tail_canonical_zh": "定期手动盘车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nous préconisons de tourner l'arbre à la main à intervalles réguliers pour prévenir tout écoulement de graisse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "écoulement de graisse",
+        "head_canonical_zh": "润滑脂流失",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "tourner l'arbre à la main à intervalles réguliers",
+        "tail_canonical_zh": "定期手动盘车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nous préconisons de tourner l'arbre à la main à intervalles réguliers pour prévenir tout écoulement de graisse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "condensation d'eau dans le moteur",
+        "head_canonical_zh": "电机内部凝露",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "L'utilisation de chauffages anti-condensation",
+        "tail_canonical_zh": "使用防冷凝加热器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "L'utilisation de chauffages anti-condensation est recommandée afin d'éviter toute condensation d'eau dans le moteur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "endommagement des roulements",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Le moteur ne doit pas être soumis à des vibrations supérieures à 0,5 mm/s à l'arrêt",
+        "tail_canonical_zh": "停机时振动不超过0.5mm/s",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Le moteur ne doit pas être soumis à des vibrations supérieures à 0,5 mm/s à l'arrêt afin d'éviter tout endommagement des roulements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotor des moteurs dotés de roulements à rouleaux cylindriques et/ ou à contact oblique",
+        "head_canonical_zh": "圆柱滚子或角接触轴承电机转子",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "immobilisé par un dispositif adéquat",
+        "tail_canonical_zh": "使用适当装置固定转子",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pendant le transport ou tout déplacement, le rotor des moteurs dotés de roulements à rouleaux cylindriques et/ ou à contact oblique doit être immobilisé par un dispositif adéquat.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "anneaux de levage",
+        "head_canonical_zh": "吊环",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez que les anneaux de levage intégrés ne sont pas endommagés avant le levage",
+        "tail_canonical_zh": "起吊前检查内置吊环是否损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Vérifiez que les anneaux de levage intégrés ne sont pas endommagés avant le levage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

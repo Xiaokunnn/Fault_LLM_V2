@@ -1,0 +1,841 @@
+{
+  "page_key": "MP019:p0037",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-1590cead-ab7f-9413-b1ac-a5bf92e1886b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 10478,
+    "prompt_tokens": 13930,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24408
+  },
+  "latency_ms": 106985,
+  "attempt": 1,
+  "prompt_sha256": "74408b0951949c3cec88a3605674b8393d21cfb21bbcae4eaed1d69654767d1d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Sicherungen durchgebrannt",
+        "tail_canonical_zh": "熔断器烧断",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht Sicherungen durchgebrannt Neue Sicherungen des richtigen Typs und mit entsprechenden\n                                       Bemessungsdaten einsetzen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Sicherungen durchgebrannt",
+        "head_canonical_zh": "熔断器烧断",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Neue Sicherungen des richtigen Typs und mit entsprechenden\nBemessungsdaten einsetzen.",
+        "tail_canonical_zh": "更换正确类型和额定参数的新熔断器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor startet nicht Sicherungen durchgebrannt Neue Sicherungen des richtigen Typs und mit entsprechenden\n                                       Bemessungsdaten einsetzen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c01",
+          "MP019:p0037:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Überlastauslösung",
+        "tail_canonical_zh": "过载脱扣",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Überlastauslösung     Überlast in Anlasser prüfen und zurücksetzen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Überlastauslösung",
+        "head_canonical_zh": "过载脱扣",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Überlast in Anlasser prüfen und zurücksetzen.",
+        "tail_canonical_zh": "检查并复位启动器中的过载保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Überlastauslösung     Überlast in Anlasser prüfen und zurücksetzen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r002:c01",
+          "MP019:p0037:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Fehlerhafte Stromversorgung",
+        "tail_canonical_zh": "电源故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Fehlerhafte Stromversorgung Überprüfen, ob die Stromversorgung den Angaben auf dem\n                                       Motorleistungsschild entspricht und für den jeweiligen Lastfaktor\n                                       geeignet ist.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fehlerhafte Stromversorgung",
+        "head_canonical_zh": "电源故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Überprüfen, ob die Stromversorgung den Angaben auf dem\nMotorleistungsschild entspricht und für den jeweiligen Lastfaktor\ngeeignet ist.",
+        "tail_canonical_zh": "检查电源是否符合电机铭牌参数及负载系数要求",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Fehlerhafte Stromversorgung Überprüfen, ob die Stromversorgung den Angaben auf dem\n                                       Motorleistungsschild entspricht und für den jeweiligen Lastfaktor\n                                       geeignet ist.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r003:c01",
+          "MP019:p0037:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Fehlerhafte Netzanschlüsse",
+        "tail_canonical_zh": "电网接线错误",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Fehlerhafte Netzanschlüsse Anschlüsse anhand des mit dem Motor gelieferten Schaltplans\n                                       überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fehlerhafte Netzanschlüsse",
+        "head_canonical_zh": "电网接线错误",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Anschlüsse anhand des mit dem Motor gelieferten Schaltplans\nüberprüfen.",
+        "tail_canonical_zh": "根据电机附带接线图检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Fehlerhafte Netzanschlüsse Anschlüsse anhand des mit dem Motor gelieferten Schaltplans\n                                       überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r004:c01",
+          "MP019:p0037:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Stromkreisunterbrechung in Wicklung\noder Steuerschalter",
+        "tail_canonical_zh": "绕组或控制开关电路断路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Stromkreisunterbrechung in Wicklung\noder Steuerschalter   Erkennbar an einem Summen bei Einschalten des Schalters.\nVerdrahtung auf lockere Anschlüsse überprüfen.\nAuch kontrollieren, ob alle Kontakte schließen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stromkreisunterbrechung in Wicklung\noder Steuerschalter",
+        "head_canonical_zh": "绕组或控制开关电路断路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "Summen bei Einschalten des Schalters",
+        "tail_canonical_zh": "合闸时嗡嗡声",
+        "tail_type": "Symptom",
+        "evidence_text": "Stromkreisunterbrechung in Wicklung\noder Steuerschalter   Erkennbar an einem Summen bei Einschalten des Schalters.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r005:c01",
+          "MP019:p0037:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stromkreisunterbrechung in Wicklung\noder Steuerschalter",
+        "head_canonical_zh": "绕组或控制开关电路断路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Verdrahtung auf lockere Anschlüsse überprüfen.\nAuch kontrollieren, ob alle Kontakte schließen.",
+        "tail_canonical_zh": "检查接线松动及触点闭合情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Stromkreisunterbrechung in Wicklung\noder Steuerschalter   Erkennbar an einem Summen bei Einschalten des Schalters.\nVerdrahtung auf lockere Anschlüsse überprüfen.\nAuch kontrollieren, ob alle Kontakte schließen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r005:c01",
+          "MP019:p0037:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Mechanischer Fehler",
+        "tail_canonical_zh": "机械故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Mechanischer Fehler   Überprüfen, ob Motor und Antrieb frei drehen. Lager und\n                                       Schmierung kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanischer Fehler",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Überprüfen, ob Motor und Antrieb frei drehen. Lager und\nSchmierung kontrollieren.",
+        "tail_canonical_zh": "检查电机和驱动是否转动自如，检查轴承和润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mechanischer Fehler   Überprüfen, ob Motor und Antrieb frei drehen. Lager und\n                                       Schmierung kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r006:c01",
+          "MP019:p0037:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung",
+        "tail_canonical_zh": "定子短路或定子绕组连接不良",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung Erkennbar an durchgebrannten Sicherungen. Motor muss neu\ngewickelt werden. Lagerschilde abnehmen; Fehler lokalisieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung",
+        "head_canonical_zh": "定子短路或定子绕组连接不良",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "durchgebrannten Sicherungen",
+        "tail_canonical_zh": "熔断器烧断",
+        "tail_type": "Symptom",
+        "evidence_text": "Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung Erkennbar an durchgebrannten Sicherungen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r007:c01",
+          "MP019:p0037:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung",
+        "head_canonical_zh": "定子短路或定子绕组连接不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor muss neu\ngewickelt werden. Lagerschilde abnehmen; Fehler lokalisieren.",
+        "tail_canonical_zh": "电机重绕；拆卸端盖定位故障",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ständerkurzschluss Schlechter\nAnschluss an Ständerwicklung Erkennbar an durchgebrannten Sicherungen. Motor muss neu\ngewickelt werden. Lagerschilde abnehmen; Fehler lokalisieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r007:c01",
+          "MP019:p0037:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Defekter Rotor",
+        "tail_canonical_zh": "转子缺陷",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Defekter Rotor        Auf gebrochene Stäbe oder Endringe kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Defekter Rotor",
+        "head_canonical_zh": "转子缺陷",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Auf gebrochene Stäbe oder Endringe kontrollieren.",
+        "tail_canonical_zh": "检查导条或端环是否断裂",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Defekter Rotor        Auf gebrochene Stäbe oder Endringe kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r008:c01",
+          "MP019:p0037:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor startet nicht",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Motor überlastet",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor startet nicht ... Motor überlastet      Last reduzieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r001:c00",
+          "MP019:p0037:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor überlastet",
+        "head_canonical_zh": "电机过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Last reduzieren.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor überlastet      Last reduzieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r009:c01",
+          "MP019:p0037:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht",
+        "head_canonical_zh": "电机不运转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Phasenausfall",
+        "tail_canonical_zh": "缺相",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht Phasenausfall   Leitungen auf offene Phase kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r010:c00",
+          "MP019:p0037:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Phasenausfall",
+        "head_canonical_zh": "缺相",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Leitungen auf offene Phase kontrollieren.",
+        "tail_canonical_zh": "检查线路是否断相",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Phasenausfall   Leitungen auf offene Phase kontrollieren.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r010:c01",
+          "MP019:p0037:t00:r010:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht",
+        "head_canonical_zh": "电机不运转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Unterspannung",
+        "tail_canonical_zh": "欠压",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht ... Unterspannung         Kontrollieren, ob die auf dem Leistungsschild angegebene\n                                       Spannung eingehalten wird. Anschluss überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r010:c00",
+          "MP019:p0037:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unterspannung",
+        "head_canonical_zh": "欠压",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollieren, ob die auf dem Leistungsschild angegebene\nSpannung eingehalten wird. Anschluss überprüfen.",
+        "tail_canonical_zh": "检查电压是否符合铭牌规定并检查接线",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unterspannung         Kontrollieren, ob die auf dem Leistungsschild angegebene\n                                       Spannung eingehalten wird. Anschluss überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r013:c01",
+          "MP019:p0037:t00:r013:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht",
+        "head_canonical_zh": "电机不运转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Offener Stromkreis",
+        "tail_canonical_zh": "开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht ... Offener Stromkreis    Durchgebrannte Sicherungen; Überlastrelais, Ständer und\n                                       Drucktasten prüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r010:c00",
+          "MP019:p0037:t00:r014:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Offener Stromkreis",
+        "head_canonical_zh": "开路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Durchgebrannte Sicherungen; Überlastrelais, Ständer und\nDrucktasten prüfen.",
+        "tail_canonical_zh": "检查熔断器、过载继电器、定子和按钮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Offener Stromkreis    Durchgebrannte Sicherungen; Überlastrelais, Ständer und\n                                       Drucktasten prüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r014:c01",
+          "MP019:p0037:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nur für\nkurzen Zeitraum",
+        "head_canonical_zh": "电机仅短时运行",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Netzausfall",
+        "tail_canonical_zh": "电网故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nur für\nkurzen Zeitraum Netzausfall   Auf lose Anschlüsse zum Netz, zu den Sicherungen und zur\n                                       Steuerung überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r015:c00",
+          "MP019:p0037:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Netzausfall",
+        "head_canonical_zh": "电网故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Auf lose Anschlüsse zum Netz, zu den Sicherungen und zur\nSteuerung überprüfen.",
+        "tail_canonical_zh": "检查电网、熔断器和控制回路的接线松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Netzausfall   Auf lose Anschlüsse zum Netz, zu den Sicherungen und zur\n                                       Steuerung überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r015:c01",
+          "MP019:p0037:t00:r015:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht\nhoch",
+        "head_canonical_zh": "电机无法加速至额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Unterspannung an Motorklemmen\ndurch Netzspannungsabfall",
+        "tail_canonical_zh": "电网压降导致电机端子欠压",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht\nhoch ... Unterspannung an Motorklemmen\ndurch Netzspannungsabfall Höhere Spannung oder höhere Transformatorstufe verwenden\noder Last reduzieren. Anschlüsse überprüfen. Leitungen auf\nangemessenen Querschnitt überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r016:c00",
+          "MP019:p0037:t00:r017:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unterspannung an Motorklemmen\ndurch Netzspannungsabfall",
+        "head_canonical_zh": "电网压降导致电机端子欠压",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Höhere Spannung oder höhere Transformatorstufe verwenden\noder Last reduzieren. Anschlüsse überprüfen. Leitungen auf\nangemessenen Querschnitt überprüfen.",
+        "tail_canonical_zh": "提高电压或变压器档位，或减小负载；检查接线及导线截面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unterspannung an Motorklemmen\ndurch Netzspannungsabfall Höhere Spannung oder höhere Transformatorstufe verwenden\noder Last reduzieren. Anschlüsse überprüfen. Leitungen auf\nangemessenen Querschnitt überprüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r017:c01",
+          "MP019:p0037:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht\nhoch",
+        "head_canonical_zh": "电机无法加速至额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Anlauflast zu hoch",
+        "tail_canonical_zh": "启动负载过高",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht\nhoch ... Anlauflast zu hoch    Anlauflast des Motors prüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r016:c00",
+          "MP019:p0037:t00:r018:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Anlauflast zu hoch",
+        "head_canonical_zh": "启动负载过高",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Anlauflast des Motors prüfen.",
+        "tail_canonical_zh": "检查电机启动负载",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Anlauflast zu hoch    Anlauflast des Motors prüfen.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r018:c01",
+          "MP019:p0037:t00:r018:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht\nhoch",
+        "head_canonical_zh": "电机无法加速至额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Gebrochene Rotorstäbe oder lockerer\nRotor",
+        "tail_canonical_zh": "转子导条断裂或转子松动",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht\nhoch ... Gebrochene Rotorstäbe oder lockerer\nRotor                 Kontrollieren, ob in der Nähe der Ringe Risse vorhanden sind.\nMöglicherweise wird ein neuer Rotor benötigt, da eine dauerhafte\nReparatur in diesem Fall meist nicht möglich ist.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r016:c00",
+          "MP019:p0037:t00:r019:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Gebrochene Rotorstäbe oder lockerer\nRotor",
+        "head_canonical_zh": "转子导条断裂或转子松动",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollieren, ob in der Nähe der Ringe Risse vorhanden sind.",
+        "tail_canonical_zh": "检查端环附近是否有裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Gebrochene Rotorstäbe oder lockerer\nRotor                 Kontrollieren, ob in der Nähe der Ringe Risse vorhanden sind.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r019:c01",
+          "MP019:p0037:t00:r019:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Gebrochene Rotorstäbe oder lockerer\nRotor",
+        "head_canonical_zh": "转子导条断裂或转子松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Möglicherweise wird ein neuer Rotor benötigt, da eine dauerhafte\nReparatur in diesem Fall meist nicht möglich ist.",
+        "tail_canonical_zh": "可能需要更换新转子，因为通常无法永久修复",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Gebrochene Rotorstäbe oder lockerer\nRotor                 Kontrollieren, ob in der Nähe der Ringe Risse vorhanden sind.\nMöglicherweise wird ein neuer Rotor benötigt, da eine dauerhafte\nReparatur in diesem Fall meist nicht möglich ist.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r019:c01",
+          "MP019:p0037:t00:r019:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft nicht\nhoch",
+        "head_canonical_zh": "电机无法加速至额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Offener Primärkreis",
+        "tail_canonical_zh": "初级回路开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft nicht\nhoch ... Offener Primärkreis   Fehler mit Prüfgerät lokalisieren und beheben.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r016:c00",
+          "MP019:p0037:t00:r020:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Offener Primärkreis",
+        "head_canonical_zh": "初级回路开路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Fehler mit Prüfgerät lokalisieren und beheben.",
+        "tail_canonical_zh": "使用测试设备定位并排除故障",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Offener Primärkreis   Fehler mit Prüfgerät lokalisieren und beheben.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0037:t00:r020:c01",
+          "MP019:p0037:t00:r020:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

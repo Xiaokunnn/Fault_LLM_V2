@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0646",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e8890d5a-d479-9bc0-8c9e-700e3f30198c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 479,
+    "prompt_tokens": 2444,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2923
+  },
+  "latency_ms": 6981,
+  "attempt": 1,
+  "prompt_sha256": "d0c6c60538f9ddd6c4498f7b47a8fdd6db97d19c79056a842ccf5fb0fbef691e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "over-pressurization of the delivery hose or of the filling hose",
+        "head_canonical_zh": "输送软管或加注软管超压",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "device that will prevent over-pressurization",
+        "tail_canonical_zh": "防超压装置",
+        "tail_type": "Component",
+        "evidence_text": "Refueling pump is to incorporate a device that will prevent over-pressurization of the delivery hose or of the filling hose.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Relief valve",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "discharge either to the suction side of the pumps or to the storage tanks",
+        "tail_canonical_zh": "排放至泵吸入侧或储存柜",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Relief valve, where fitted, is to discharge either to the suction side of the pumps or to the storage tanks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0354",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f1dae97f-4414-9e35-a955-e2c946ba3d62",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1020,
+    "prompt_tokens": 2273,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3293
+  },
+  "latency_ms": 13226,
+  "attempt": 1,
+  "prompt_sha256": "dcaadad5d6cffe0e169de11779f1a9575dbca15199fc0c13ec089729d6f2fa19",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Hydraulic lock",
+        "head_canonical_zh": "液压锁闭",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "loss of steering",
+        "tail_canonical_zh": "操舵丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "Hydraulic lock may occur where a piping system is arranged such that malfunctions (for example, in directional valves or in the valve control) can cause power units to work in a closed circuit against each other rather than in parallel delivering fluid to the rudder actuator, thus resulting in loss of steering.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "malfunctions (for example, in directional valves or in the valve control)",
+        "head_canonical_zh": "故障（例如换向阀或阀控装置故障）",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Hydraulic lock",
+        "tail_canonical_zh": "液压锁闭",
+        "tail_type": "FaultMode",
+        "evidence_text": "Hydraulic lock may occur where a piping system is arranged such that malfunctions (for example, in directional valves or in the valve control) can cause power units to work in a closed circuit against each other rather than in parallel delivering fluid to the rudder actuator, thus resulting in loss of steering.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power units to work in a closed circuit against each other rather than in parallel delivering fluid to the rudder actuator",
+        "head_canonical_zh": "动力单元在闭路中相互对抗而非并联向舵机供液",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "loss of steering",
+        "tail_canonical_zh": "操舵丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "Hydraulic lock may occur where a piping system is arranged such that malfunctions (for example, in directional valves or in the valve control) can cause power units to work in a closed circuit against each other rather than in parallel delivering fluid to the rudder actuator, thus resulting in loss of steering.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air may be bled from the system",
+        "head_canonical_zh": "系统可排气",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Air",
+        "tail_canonical_zh": "空气",
+        "tail_type": "Cause",
+        "evidence_text": "Piping is to be arranged such that: ... Air may be bled from the system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

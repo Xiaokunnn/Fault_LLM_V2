@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0578",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-baed0e97-615f-92ef-9564-29319db06a8b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 726,
+    "prompt_tokens": 2515,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3241
+  },
+  "latency_ms": 9788,
+  "attempt": 1,
+  "prompt_sha256": "8eaf204f8cce833857701d7488581c87c91e5847f34fff54914a1573b7c74a7c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "vents",
+        "head_canonical_zh": "透气口",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "means to prevent sea water from entering the tanks through these openings",
+        "tail_canonical_zh": "防止海水进入舱柜的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Outlet ends of vents and overflows, where exposed to the weather, are to be provided with means to prevent sea water from entering the tanks through these openings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "over-pressurization of a tank",
+        "head_canonical_zh": "舱柜超压",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Overflows",
+        "tail_canonical_zh": "溢流管",
+        "tail_type": "Component",
+        "evidence_text": "Overflows prevent over-pressurization of a tank if it is overfilled and also provide for safe discharge or disposal of the overflowing liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "inadvertent flooding of internal spaces",
+        "head_canonical_zh": "内部处所意外进水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "overflow outlets are to be located such that they either discharge overboard or into designated overflow tanks",
+        "tail_canonical_zh": "溢流出口布置为排至舷外或指定溢流柜",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Depending on the liquid contained in the tank, overflow outlets are to be located such that they either discharge overboard or into designated overflow tanks so as to avoid inadvertent flooding of internal spaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

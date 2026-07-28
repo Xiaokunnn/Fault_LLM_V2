@@ -1,0 +1,118 @@
+{
+  "page_key": "MP005:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8403bee0-94cc-9ec6-bfbf-f57604d7deb1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1089,
+    "prompt_tokens": 1977,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3066
+  },
+  "latency_ms": 14481,
+  "attempt": 1,
+  "prompt_sha256": "cd670e20b22237b6d86803fc13e86de614b28d1e1f7571ba1f623f6ea9618f38",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump inlet pressure is lower than the vapor pressure of the pumped liquid",
+        "head_canonical_zh": "泵入口压力低于液体饱和蒸汽压",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cavitation",
+        "tail_canonical_zh": "汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "If the pump inlet pressure is lower than the vapor pressure of the pumped liquid, cavitation will occur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "a minimum pressure at the side of pump must be guaranteed",
+        "tail_canonical_zh": "保证泵侧最小压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To avoid cavitation, a minimum pressure at the side of pump must be guaranteed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "deliver less flow",
+        "tail_canonical_zh": "流量减少",
+        "tail_type": "Symptom",
+        "evidence_text": "the pump will not work normally and might be damaged due to cavitation and/or deliver less flow",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "less differential pressure",
+        "tail_canonical_zh": "压差降低",
+        "tail_type": "Symptom",
+        "evidence_text": "might be damaged due to cavitation and/or deliver less flow and/or less differential pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The maximum suction up height should be lower than the following calculated value",
+        "tail_canonical_zh": "最大吸上高度应低于计算值",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The maximum suction up height should be lower than the following calculated value. If not, the pump will not work normally and might be damaged due to cavitation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

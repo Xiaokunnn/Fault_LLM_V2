@@ -1,0 +1,62 @@
+{
+  "page_key": "MP022:p0012",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8729e9bd-7a53-96fd-8f74-adb4a5bf30f9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 437,
+    "prompt_tokens": 1770,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2207
+  },
+  "latency_ms": 5364,
+  "attempt": 1,
+  "prompt_sha256": "6d53b2a50184e3365bb9014c1fb29c2c195b5b4bf469056ed20d5c4a4fd23c05",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "pump inlet and outlet",
+        "head_canonical_zh": "泵进出口",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "adjusting the pump legs",
+        "tail_canonical_zh": "调整泵支脚",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure correct alignment of pump inlet and outlet with piping\n              system.\n    Alignment can be done by adjusting the pump legs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  }
+}

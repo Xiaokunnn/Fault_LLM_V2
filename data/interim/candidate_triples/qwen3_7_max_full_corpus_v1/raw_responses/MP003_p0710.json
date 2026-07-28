@@ -1,0 +1,110 @@
+{
+  "page_key": "MP003:p0710",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2ab2307a-70b2-9e79-a5bb-7ecd4d59bb96",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1111,
+    "prompt_tokens": 2331,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3442
+  },
+  "latency_ms": 13421,
+  "attempt": 1,
+  "prompt_sha256": "d30ba8aa724b6adc446769049828a95ca8157d6e9b16897ef8774f3e864bf451",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "smoke",
+        "head_canonical_zh": "烟雾",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "fire",
+        "tail_canonical_zh": "火灾",
+        "tail_type": "FaultMode",
+        "evidence_text": "If smoke is sensed, the repeater panel (normally on the bridge) automatically sounds an alarm (not localized). The crew can then determine at the smoke sensing unit which cargo hold is on fire",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "alarm",
+        "head_canonical_zh": "报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "smoke",
+        "tail_canonical_zh": "烟雾",
+        "tail_type": "Symptom",
+        "evidence_text": "If smoke is sensed, the repeater panel (normally on the bridge) automatically sounds an alarm (not localized)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage of any toxic or flammable substances or fire-extinguishing media",
+        "head_canonical_zh": "有毒或易燃物质或灭火介质泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "designed, constructed and installed so as to prevent the leakage",
+        "tail_canonical_zh": "设计、建造和安装以防止泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The system shall be designed, constructed and installed so as to prevent the leakage of any toxic or flammable substances or fire-extinguishing media into any accommodation space, service space, and control station or machinery space",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "system",
+        "head_canonical_zh": "系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "tested for correct operation",
+        "tail_canonical_zh": "测试正确运行",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The system shall be of a type that can be tested for correct operation and restored to normal surveillance without the renewal of any component",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sensing unit",
+        "head_canonical_zh": "传感单元",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "smoke density within the sensing chamber exceeds 6.65% obscuration per meter",
+        "tail_canonical_zh": "传感室内烟雾密度超过每米6.65%遮光度",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The sensing unit shall be certified to operate before the smoke density within the sensing chamber exceeds 6.65% obscuration per meter (2% obscuration per foot)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

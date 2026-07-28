@@ -1,0 +1,165 @@
+{
+  "page_key": "MP003:p0097",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-54877966-7d55-9b54-b72a-f8c98f8b7b4c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1864,
+    "prompt_tokens": 2429,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4293
+  },
+  "latency_ms": 23978,
+  "attempt": 1,
+  "prompt_sha256": "69b7a13b1aded67d6291ae09ed230fe95aced858fc76f12cae20d40a2d828842",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "oil condensate",
+        "head_canonical_zh": "油冷凝液",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "blockage of the sampling pipe",
+        "tail_canonical_zh": "采样管堵塞",
+        "tail_type": "FaultMode",
+        "evidence_text": "Piping is to be arranged to prevent pooling of oil condensate which may cause a blockage of the sampling pipe over time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "blockage of the sampling pipe",
+        "head_canonical_zh": "采样管堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Piping is to be arranged to prevent pooling of oil condensate",
+        "tail_canonical_zh": "布置管路以防止油冷凝液积聚",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping is to be arranged to prevent pooling of oil condensate which may cause a blockage of the sampling pipe over time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "openings in detector equipment that is in contact with the crankcase atmosphere and may be exposed to oil splash and spray from engine lubricating oil",
+        "head_canonical_zh": "接触曲轴箱气氛且可能暴露于发动机润滑油飞溅和喷雾的探测器设备开口",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "demonstrated that openings ... do not occlude or become blocked under continuous oil splash and spray conditions",
+        "tail_canonical_zh": "验证在持续油飞溅和喷雾条件下开口不闭塞或堵塞",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is to be demonstrated that openings in detector equipment that is in contact with the crankcase atmosphere and may be exposed to oil splash and spray from engine lubricating oil do not occlude or become blocked under continuous oil splash and spray conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "water vapor from the crankcase atmosphere",
+        "head_canonical_zh": "曲轴箱气氛中的水蒸气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "affect the sensitivity of the detector equipment",
+        "tail_canonical_zh": "影响探测器设备的灵敏度",
+        "tail_type": "Symptom",
+        "evidence_text": "exposed to water vapor from the crankcase atmosphere, which may affect the sensitivity of the detector equipment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "exposure to water vapor and/or water condensation",
+        "head_canonical_zh": "暴露于水蒸气和/或水冷凝",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "equipment malfunctioning",
+        "tail_canonical_zh": "设备故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Where exposure to water vapor and/or water condensation has been identified as a possible source of equipment malfunctioning",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "equipment malfunctioning",
+        "head_canonical_zh": "设备故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "heating",
+        "tail_canonical_zh": "加热",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "testing is to demonstrate that any mitigating arrangements, such as heating, are effective",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "lenses fitted in the equipment and used in determination of the oil mist level have been partially obscured",
+        "head_canonical_zh": "设备中用于测定油雾浓度的透镜被部分遮挡",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "an indication is given",
+        "tail_canonical_zh": "给出指示",
+        "tail_type": "Symptom",
+        "evidence_text": "It is to be demonstrated that an indication is given where lenses fitted in the equipment and used in determination of the oil mist level have been partially obscured to a degree that will affect the reliability of the information and alarm indication.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lenses fitted in the equipment and used in determination of the oil mist level have been partially obscured",
+        "head_canonical_zh": "设备中用于测定油雾浓度的透镜被部分遮挡",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "demonstrated that an indication is given",
+        "tail_canonical_zh": "验证给出指示",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is to be demonstrated that an indication is given where lenses fitted in the equipment and used in determination of the oil mist level have been partially obscured to a degree that will affect the reliability of the information and alarm indication.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "page_key": "MP005:p0106",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7c1ef109-ba1f-96c2-94cb-f94ae748f5ba",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1378,
+    "prompt_tokens": 2939,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4317
+  },
+  "latency_ms": 16390,
+  "attempt": 1,
+  "prompt_sha256": "d43dd7719f7b5b1f279f6ed6d54b44d621b0d1d303f58705fc9da386785d0449",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearing cover",
+        "head_canonical_zh": "轴承盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Assemble bearing cover and rear cover",
+        "tail_canonical_zh": "组装轴承盖和后盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Assemble bearing cover and rear cover.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rear cover",
+        "head_canonical_zh": "后盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Assemble bearing cover and rear cover",
+        "tail_canonical_zh": "组装轴承盖和后盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Assemble bearing cover and rear cover.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water deflector (11)",
+        "head_canonical_zh": "挡水圈(11)",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Lead the water deflector (11) over the shaft until it touches the rear cover and then further 1-1.5 mm into the rear cover",
+        "tail_canonical_zh": "将挡水圈套入轴直至接触后盖并再推入1-1.5mm",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Lead the water deflector (11) over the shaft until it touches the rear cover and then further 1-1.5 mm into the rear cover.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "noise",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "shaft can rotate freely without noise",
+        "tail_canonical_zh": "轴能自由旋转且无噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing cover",
+        "head_canonical_zh": "轴承盖",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise",
+        "tail_canonical_zh": "电机安装且轴能自由旋转无噪声后再紧固轴承盖和电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electric motor",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise",
+        "tail_canonical_zh": "电机安装且轴能自由旋转无噪声后再紧固轴承盖和电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

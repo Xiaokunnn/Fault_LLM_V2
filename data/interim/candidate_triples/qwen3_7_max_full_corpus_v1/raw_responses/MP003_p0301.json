@@ -1,0 +1,112 @@
+{
+  "page_key": "MP003:p0301",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3f84518c-7bc6-98e7-8788-8681324f322a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1078,
+    "prompt_tokens": 2443,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3521
+  },
+  "latency_ms": 12757,
+  "attempt": 1,
+  "prompt_sha256": "d4060342aa2dc17ac8b04726bd91227f5c0f0e5deeb7061369591ccb89692e66",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Glass reinforced plastic coatings",
+        "head_canonical_zh": "玻璃纤维增强塑料涂层",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "cleaned with a suitable solvent and grit-blasted",
+        "tail_canonical_zh": "使用合适溶剂清洗并喷砂处理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Prior to coating, the shaft is to be cleaned with a suitable solvent and grit-blasted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Glass reinforced plastic coatings",
+        "head_canonical_zh": "玻璃纤维增强塑料涂层",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "examined prior to coating",
+        "tail_canonical_zh": "涂覆前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The shaft is to be examined prior to coating and the first layer is to be applied in the presence of the Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "finished shaft",
+        "head_canonical_zh": "完工轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "spark test or equivalent",
+        "tail_canonical_zh": "火花试验或等效方法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Subsequent to coating, the finished shaft is to be subjected to a spark test or equivalent to verify freedom from porosity to the satisfaction of the Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "porosity",
+        "head_canonical_zh": "孔隙",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "spark test or equivalent",
+        "tail_canonical_zh": "火花试验或等效方法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "spark test or equivalent to verify freedom from porosity",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water gain access to the metal of the shaft",
+        "head_canonical_zh": "水进入轴金属",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "effective means are to be provided to prevent water gain access to the metal of the shaft",
+        "tail_canonical_zh": "提供有效措施防止水进入轴金属",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In all cases where reinforced plastic coatings are employed, effective means are to be provided to prevent water gain access to the metal of the shaft.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

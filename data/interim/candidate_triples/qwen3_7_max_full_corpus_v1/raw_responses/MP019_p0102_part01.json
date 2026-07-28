@@ -1,0 +1,145 @@
+{
+  "page_key": "MP019:p0102",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8e377a4c-9fb2-9213-b307-cff0a091d707",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1688,
+    "prompt_tokens": 5304,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6992
+  },
+  "latency_ms": 19405,
+  "attempt": 1,
+  "prompt_sha256": "4977d3dedca74f7f1d2a28f18c36b9259fc525682e156805c0de5882b46af189",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "skadliga lagerströmmar",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Isolerande lager på\nickedrivande sida",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW\nELLER\nIEC 315 ≤ storlek ≤ IEC 355\tIsolerande lager på\nickedrivande sida",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0102:t00:r002:c00",
+          "MP019:p0102:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "skadliga lagerströmmar",
+        "head_canonical_zh": "有害轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Isolerande lager på\nickedrivande sida\nOCH\nCM-filter vid omriktaren",
+        "tail_canonical_zh": "非驱动端绝缘轴承及变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nELLER\nIEC 400 ≤ storlek ≤ IEC 450\tIsolerande lager på\nickedrivande sida\nOCH\nCM-filter vid omriktaren",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0102:t00:r003:c00",
+          "MP019:p0102:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lagerströmmar",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "mätning av potentialskillnaden\nmellan komponenterna",
+        "tail_canonical_zh": "部件间电位差测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "stålfundamentets ledningsförmåga för höga frekvenser\nkontrolleras, t.ex. genom mätning av potentialskillnaden\nmellan komponenterna.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Aluminiumoxidbeläggningarna",
+        "head_canonical_zh": "氧化铝涂层",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "behandlas med ett tätningsmedel",
+        "tail_canonical_zh": "密封剂处理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Aluminiumoxidbeläggningarna ska även\nbehandlas med ett tätningsmedel så att inte smuts och\nfukt tränger ned i den porösa beläggningen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motorer över 30 kW",
+        "head_canonical_zh": "30kW以上电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "anslutas med skärmade symmetriska kablar och EMC-\nkabelförskruvningar",
+        "tail_canonical_zh": "使用屏蔽对称电缆及EMC电缆接头连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "För tillräckligt jordningsskydd och överensstämmelse\nmed gällande EMC-krav ska motorer över 30 kW\nanslutas med skärmade symmetriska kablar och EMC-\nkabelförskruvningar, dvs. kabelförskruvningar som\nger 360° förbindning.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorer med storleken IEC 280 eller större",
+        "head_canonical_zh": "IEC 280及以上机座号电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "ytterligare potentialutjämning mellan motorhöljet och\nden drivna utrustningen",
+        "tail_canonical_zh": "电机外壳与被驱动设备间附加等电位连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motorer med storleken IEC 280 eller större måste ha\nytterligare potentialutjämning mellan motorhöljet och\nden drivna utrustningen om inte båda är monterade på",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

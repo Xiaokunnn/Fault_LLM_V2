@@ -1,0 +1,137 @@
+{
+  "page_key": "MP001:p0040",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-88c69be8-a1d1-906e-a95b-51f63a610940",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1262,
+    "prompt_tokens": 1866,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3128
+  },
+  "latency_ms": 14774,
+  "attempt": 1,
+  "prompt_sha256": "5f627c5deb9be1b31f54afe55f61108e372baf4225f133f31022e6e17dfdf69d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Infrared Thermograph",
+        "head_canonical_zh": "红外热成像检测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Electric Motor Bearing",
+        "tail_canonical_zh": "电动机轴承",
+        "tail_type": "Component",
+        "evidence_text": "Infrared Thermograph – Electric Motor Bearing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "heat developed in this internal bearing",
+        "head_canonical_zh": "内部轴承发热",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "poor lubrication",
+        "tail_canonical_zh": "润滑不良",
+        "tail_type": "FaultMode",
+        "evidence_text": "These results may indicate either poor lubrication or a misalignment problem.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "heat developed in this internal bearing",
+        "head_canonical_zh": "内部轴承发热",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "misalignment problem",
+        "tail_canonical_zh": "不对中故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "These results may indicate either poor lubrication or a misalignment problem.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "coupling itself, being the most flexible component, will heat up first",
+        "head_canonical_zh": "联轴器首先发热",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "misalignment is significant",
+        "tail_canonical_zh": "严重不对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "If misalignment is significant, the coupling itself, being the most flexible component, will heat up first.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Infrared Thermograph",
+        "head_canonical_zh": "红外热成像检测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Hot Electric Motor",
+        "tail_canonical_zh": "过热电动机",
+        "tail_type": "Equipment",
+        "evidence_text": "Infrared Thermograph – Hot Electric Motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "thermograph for this electric motor indicates it may be running too hot",
+        "head_canonical_zh": "电机热像显示运行过热",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "Infrared Thermograph",
+        "tail_canonical_zh": "红外热成像检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The thermograph for this electric motor indicates it may be running too hot.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

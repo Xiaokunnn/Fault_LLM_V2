@@ -1,0 +1,541 @@
+{
+  "page_key": "MP004:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b5fe0080-3401-99e0-8f0c-ecd50152eb37",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8392,
+    "prompt_tokens": 5437,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13829
+  },
+  "latency_ms": 100784,
+  "attempt": 1,
+  "prompt_sha256": "fe2df4c98324d4d2cc585844ec66bf7e33b9112fff2462370dee9e38f8b3fa1d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Counter-pressure too low",
+        "tail_canonical_zh": "背压过低",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The liquid is heavier than water",
+        "tail_canonical_zh": "液体比重高于水",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Foreign body in pump",
+        "tail_canonical_zh": "泵内有异物",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Electric motor is running on 2 phases",
+        "tail_canonical_zh": "电机缺相运行",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "RPM too high",
+        "tail_canonical_zh": "转速过高",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump and electric motor not aligned",
+        "tail_canonical_zh": "泵与电机不对中",
+        "tail_type": "Cause",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Insert orifice plate or check valve",
+        "tail_canonical_zh": "安装孔板或止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Dismantle the pump, remove the cause",
+        "tail_canonical_zh": "拆解泵并清除异物",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check fuses, cable connection, and cable",
+        "tail_canonical_zh": "检查熔断器、电缆连接及电缆",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Fit bigger V-belt pulley on pump",
+        "tail_canonical_zh": "更换更大的皮带轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change RPM of electric motor",
+        "tail_canonical_zh": "调整电机转速",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump uses too much power",
+        "head_canonical_zh": "泵功率过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Align unit",
+        "tail_canonical_zh": "机组对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump uses too\nmuch power           low               valve/Contact DESMI              \n                            2. The liquid is heavier Contact DESMI                \n                               than water                                          \n                            3. Foreign body in pump Dismantle the pump, remove    \n                                                 the cause                        \n                            4. Electric motor is Check fuses, cable               \n                               running on 2 phases connection, and cable          \n                            5. RPM too high                                        \n                                                 Fit bigger V-belt pulley on      \n                                                 pump. Change RPM of              \n                            6. Pump and electric electric motor.                  \n                               motor not aligned. Align unit (see para. about     \n                                                 alignment)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r002:c00",
+          "MP004:p0012:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump capacity is unstable",
+        "head_canonical_zh": "泵流量不稳定",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Suction line leaks",
+        "tail_canonical_zh": "吸入管路泄漏",
+        "tail_type": "Cause",
+        "evidence_text": "The pump capacity is 1. Suction line leaks Tighten suction line         \n          unstable          2. Air pockets in suction Normally the disappear in a \n                               line              short time                       \n                            3. The pump takes air Liquid reservoir emptied/       \n                                                 Suction line not sufficiently    \n                                                 submerged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r003:c00",
+          "MP004:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump capacity is unstable",
+        "head_canonical_zh": "泵流量不稳定",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Air pockets in suction line",
+        "tail_canonical_zh": "吸入管路存气",
+        "tail_type": "Cause",
+        "evidence_text": "The pump capacity is 1. Suction line leaks Tighten suction line         \n          unstable          2. Air pockets in suction Normally the disappear in a \n                               line              short time                       \n                            3. The pump takes air Liquid reservoir emptied/       \n                                                 Suction line not sufficiently    \n                                                 submerged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r003:c00",
+          "MP004:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump capacity is unstable",
+        "head_canonical_zh": "泵流量不稳定",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The pump takes air",
+        "tail_canonical_zh": "泵吸入空气",
+        "tail_type": "Cause",
+        "evidence_text": "The pump capacity is 1. Suction line leaks Tighten suction line         \n          unstable          2. Air pockets in suction Normally the disappear in a \n                               line              short time                       \n                            3. The pump takes air Liquid reservoir emptied/       \n                                                 Suction line not sufficiently    \n                                                 submerged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r003:c00",
+          "MP004:p0012:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump capacity is unstable",
+        "head_canonical_zh": "泵流量不稳定",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Tighten suction line",
+        "tail_canonical_zh": "紧固吸入管路",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump capacity is 1. Suction line leaks Tighten suction line         \n          unstable          2. Air pockets in suction Normally the disappear in a \n                               line              short time                       \n                            3. The pump takes air Liquid reservoir emptied/       \n                                                 Suction line not sufficiently    \n                                                 submerged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r003:c00",
+          "MP004:p0012:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump makes noise",
+        "head_canonical_zh": "泵产生噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Cavitation in pump",
+        "tail_canonical_zh": "泵内汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.            \n                            2. Incorrect alignment Align the pump and motor       \n                                                 (see para. about alignment)      \n                            3. Defective bearings Replace bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c00",
+          "MP004:p0012:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump makes noise",
+        "head_canonical_zh": "泵产生噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Incorrect alignment",
+        "tail_canonical_zh": "对中不良",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.            \n                            2. Incorrect alignment Align the pump and motor       \n                                                 (see para. about alignment)      \n                            3. Defective bearings Replace bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c00",
+          "MP004:p0012:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump makes noise",
+        "head_canonical_zh": "泵产生噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Defective bearings",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.            \n                            2. Incorrect alignment Align the pump and motor       \n                                                 (see para. about alignment)      \n                            3. Defective bearings Replace bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c00",
+          "MP004:p0012:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation in pump",
+        "head_canonical_zh": "泵内汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Suction lift too high",
+        "tail_canonical_zh": "吸上高度过高",
+        "tail_type": "Cause",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c01",
+          "MP004:p0012:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cavitation in pump",
+        "head_canonical_zh": "泵内汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Suction line wrongly dimensioned",
+        "tail_canonical_zh": "吸入管路尺寸不当",
+        "tail_type": "Cause",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c01",
+          "MP004:p0012:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Cavitation in pump",
+        "head_canonical_zh": "泵内汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Liquid temperature too high",
+        "tail_canonical_zh": "液体温度过高",
+        "tail_type": "Cause",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c01",
+          "MP004:p0012:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Incorrect alignment",
+        "head_canonical_zh": "对中不良",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Align the pump and motor",
+        "tail_canonical_zh": "泵与电机对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.            \n                            2. Incorrect alignment Align the pump and motor       \n                                                 (see para. about alignment)      \n                            3. Defective bearings Replace bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c01",
+          "MP004:p0012:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Defective bearings",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace bearings",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump makes    1. Cavitation in pump Suction lift too high/ Suction  \n          noise                                  line wrongly                     \n                                                 dimensioned/Liquid               \n                                                 temperature too high.            \n                            2. Incorrect alignment Align the pump and motor       \n                                                 (see para. about alignment)      \n                            3. Defective bearings Replace bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP004:p0012:t00:r004:c01",
+          "MP004:p0012:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

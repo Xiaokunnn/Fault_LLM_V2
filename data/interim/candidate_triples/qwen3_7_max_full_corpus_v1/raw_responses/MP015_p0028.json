@@ -1,0 +1,212 @@
+{
+  "page_key": "MP015:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6d5a8d67-185c-95ac-8008-bd041c0ce873",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2343,
+    "prompt_tokens": 2129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4472
+  },
+  "latency_ms": 31721,
+  "attempt": 1,
+  "prompt_sha256": "220cdbf1983e3ac9cd51834519e0415547a26e9b5fe1a453b1be534ba930af16",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fill the pump with the liquid to be handled through the filling plug at the pump front until the liquid starts to overflow",
+        "tail_canonical_zh": "通过泵前部注液塞向泵内注入输送液体直至溢出",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fill the pump with the liquid to be handled through the filling plug at the pump front until the liquid starts to overflow.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "double mechanical seal (version MD1)",
+        "head_canonical_zh": "双机械密封（MD1型）",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "the appropriate pressure of the flushing liquid must be set. This pressure must be 1,5 bar higher than the pressure at the impeller hub",
+        "tail_canonical_zh": "设定冲洗液适当压力，该压力须比叶轮轮毂处压力高1.5 bar",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When flushing a double mechanical seal (version MD1), the appropriate pressure of the flushing liquid must be set. This pressure must be 1,5 bar higher than the pressure at the impeller hub.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "self-priming phase",
+        "head_canonical_zh": "自吸阶段",
+        "head_type": "OperatingCondition",
+        "relation": "operates_under",
+        "tail_surface": "Open any pressure cut-off entirely... it is necessary that the air escapes unobstructed and without any back pressure in the discharge pipe",
+        "tail_canonical_zh": "全开压力切断阀，确保空气在排出管路中无阻碍且无背压地排出",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Open any pressure cut-off entirely. During the self-priming phase, it is necessary that the air escapes unobstructed and without any back pressure in the discharge pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotating parts",
+        "head_canonical_zh": "旋转部件",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "properly screened off by the guard",
+        "tail_canonical_zh": "由防护罩妥善遮蔽",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Make sure that when a pump is running, rotating parts are always properly screened off by the guard!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "The pump should never run dry",
+        "tail_canonical_zh": "泵严禁干转",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump should never run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "double mechanical seal (versions MD1)",
+        "head_canonical_zh": "双机械密封（MD1型）",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the absolute inlet pressure is sufficient, to prevent vaporization in the pump",
+        "tail_canonical_zh": "检查绝对入口压力是否充足以防止泵内汽化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the absolute inlet pressure is sufficient, to prevent vaporization in the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vaporization in the pump",
+        "head_canonical_zh": "泵内汽化",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Check whether the absolute inlet pressure is sufficient",
+        "tail_canonical_zh": "检查绝对入口压力是否充足",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the absolute inlet pressure is sufficient, to prevent vaporization in the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pressure difference between suction and delivery side",
+        "head_canonical_zh": "吸入侧与排出侧压差",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Check whether the pressure difference between suction and delivery side corresponds with the specifications of the pump's duty point",
+        "tail_canonical_zh": "检查吸入侧与排出侧压差是否符合泵工况点规格",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check whether the pressure difference between suction and delivery side corresponds with the specifications of the pump's duty point.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "noise level may exceed 85 dB(A)",
+        "tail_canonical_zh": "噪声级可能超过85 dB(A)",
+        "tail_type": "Symptom",
+        "evidence_text": "in case of cavitation, the noise level may exceed 85 dB(A).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "noise level may exceed 85 dB(A)",
+        "head_canonical_zh": "噪声级可能超过85 dB(A)",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "building a noise-barrier around the unit or wearing hearing protection",
+        "tail_canonical_zh": "在机组周围设置隔声屏障或佩戴听力保护装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In that case precautions should be taken, like building a noise-barrier around the unit or wearing hearing protection.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

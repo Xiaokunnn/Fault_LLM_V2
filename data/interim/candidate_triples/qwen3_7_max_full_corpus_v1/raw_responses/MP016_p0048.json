@@ -1,0 +1,287 @@
+{
+  "page_key": "MP016:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a04b8e65-e2d6-9f68-baba-f08f05841b61",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3170,
+    "prompt_tokens": 6287,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9457
+  },
+  "latency_ms": 37240,
+  "attempt": 1,
+  "prompt_sha256": "7c597b1527cb62136a4c026f5db2dcd669bff40a7d29de6cdca7563a5455c1d6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sellos mecánicos",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspeccione las caras del sello para detectar si hay desgaste",
+        "tail_canonical_zh": "检查密封面磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspeccione las caras del sello para detectar si hay desgaste y comprobar el estado de los elastómeros.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "elastómeros",
+        "head_canonical_zh": "弹性体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "comprobar el estado de los elastómeros",
+        "tail_canonical_zh": "检查弹性体状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspeccione las caras del sello para detectar si hay desgaste y comprobar el estado de los elastómeros.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sellos mecánicos",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Cambie los sellos mecánicos si están colocados y si es necesario",
+        "tail_canonical_zh": "必要时更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Cambie los sellos mecánicos si están colocados y si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "juntas tóricas",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Cambie las juntas tóricas y/o las juntas en el cabezal de la bomba",
+        "tail_canonical_zh": "更换泵头O型圈或垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Cambie las juntas tóricas y/o las juntas en el cabezal de la bomba.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cojinetes",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "comprobar si hay algún movimiento del eje de un lado a otro, o hacia adelante y atrás",
+        "tail_canonical_zh": "检查轴是否有径向或轴向窜动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Compruebe el desgaste de los cojinetes en las unidades de pedestal, para lo cual debe comprobar si hay algún movimiento del eje de un lado a otro, o hacia adelante y atrás.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "movimiento del eje",
+        "head_canonical_zh": "轴窜动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "desgaste de los cojinetes",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Compruebe el desgaste de los cojinetes en las unidades de pedestal, para lo cual debe comprobar si hay algún movimiento del eje de un lado a otro, o hacia adelante y atrás.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cojinetes",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reemplácelos junto con los sellos de labio si es necesario",
+        "tail_canonical_zh": "必要时更换轴承及唇形密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si se percibe movimiento, desensamble los cojinetes para inspeccionarlos, reemplácelos junto con los sellos de labio si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bombas",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "inspección visual diaria y comprobaciones periódicas a intervalos planificados",
+        "tail_canonical_zh": "每日目视检查和定期计划检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Si se garantiza una inspección visual diaria y comprobaciones periódicas a intervalos planificados, las bombas se pueden mantener al máximo rendimiento durante muchos años.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "limpiadores a base de yodo o fósforo",
+        "head_canonical_zh": "碘基或磷基清洁剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "afectarán negativamente la bomba y reducirán su rendimiento",
+        "tail_canonical_zh": "对泵产生负面影响并降低性能",
+        "tail_type": "FaultMode",
+        "evidence_text": "No utilice limpiadores a base de yodo o fósforo, ya que afectarán negativamente la bomba y reducirán su rendimiento.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impulsor",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Revise el impulsor para detectar signos de desgaste o daños",
+        "tail_canonical_zh": "检查叶轮磨损或损坏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Revise el impulsor para detectar signos de desgaste o daños; reemplácelo si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impulsor",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reemplácelo si es necesario",
+        "tail_canonical_zh": "必要时更换叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Revise el impulsor para detectar signos de desgaste o daños; reemplácelo si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Placa de desgaste",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Verifique la placa de desgaste para detectar si está desgastada o dañada",
+        "tail_canonical_zh": "检查耐磨板是否磨损或损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verifique la placa de desgaste para detectar si está desgastada o dañada.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "junta tórica",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "verifique si está desgastada",
+        "tail_canonical_zh": "检查是否磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Retire la junta tórica, verifique si está desgastada y reemplácela si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "junta tórica",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reemplácela si es necesario",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Retire la junta tórica, verifique si está desgastada y reemplácela si es necesario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0627",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-580ff086-d796-9915-9b4e-97f9cb0364c2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 888,
+    "prompt_tokens": 2324,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3212
+  },
+  "latency_ms": 11230,
+  "attempt": 1,
+  "prompt_sha256": "83d307c12cf912b5b826629093c8a26ec1349ac37fc88c692c46efd5a2ce2196",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "feed pump",
+        "head_canonical_zh": "给水泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "Redundant feed water pumps",
+        "tail_canonical_zh": "冗余给水泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Redundant feed water pumps for any boiler so that in the event of the failure of a feed pump the safety of the boiler is not compromised",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of a feed pump",
+        "head_canonical_zh": "给水泵故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Redundant feed water pumps",
+        "tail_canonical_zh": "冗余给水泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Redundant feed water pumps for any boiler so that in the event of the failure of a feed pump the safety of the boiler is not compromised",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Feed water piping",
+        "head_canonical_zh": "给水管道",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Hydrostatic tests",
+        "tail_canonical_zh": "水压试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Hydrostatic tests are to be in accordance with 4-6-2/7.3.1 and 4-6-2/7.3.3",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "system",
+        "head_canonical_zh": "系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "tried under working condition in the presence of a Surveyor",
+        "tail_canonical_zh": "在验船师在场情况下进行工作条件试车",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The system is to be tried under working condition in the presence of a Surveyor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

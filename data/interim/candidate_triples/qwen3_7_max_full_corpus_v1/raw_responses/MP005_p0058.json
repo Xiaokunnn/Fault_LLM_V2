@@ -1,0 +1,193 @@
+{
+  "page_key": "MP005:p0058",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cda57d7b-3b76-9b7a-9d73-ebac8d162071",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2131,
+    "prompt_tokens": 4654,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6785
+  },
+  "latency_ms": 26406,
+  "attempt": 1,
+  "prompt_sha256": "072fcfbb8d255873825de7d5b512520ea5d437dd3410273d06f208ff6506d107",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Too high density of the fluid pumped",
+        "head_canonical_zh": "输送流体密度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Observe the density information in the order documentation",
+        "tail_canonical_zh": "遵守订单文件中的密度信息",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.\n\nObserve the density information in the order documentation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Make sure that the motor has sufficient power reserves",
+        "tail_canonical_zh": "确保电机具有足够的功率储备",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Too high density of the fluid pumped could lead to motor overload, which could damage\nthe motor.\n\n...\n\nMake sure that the motor has sufficient power reserves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fluids containing abrasive substances",
+        "head_canonical_zh": "含磨蚀性物质的流体",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "increased wear of the hydraulic system and the shaft seal",
+        "tail_canonical_zh": "水力系统和轴封磨损增加",
+        "tail_type": "FaultMode",
+        "evidence_text": "When the pump handles fluids containing abrasive substances, increased wear of the hydraulic\nsystem and the shaft seal are to be expected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "increased wear of the hydraulic system and the shaft seal",
+        "head_canonical_zh": "水力系统和轴封磨损增加",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "reduce the commonly recommended inspection intervals",
+        "tail_canonical_zh": "缩短常规推荐的检查间隔",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When the pump handles fluids containing abrasive substances, increased wear of the hydraulic\nsystem and the shaft seal are to be expected. In this case, reduce the commonly recommended\ninspection intervals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "formation of deposits within the pump and the pump intake area",
+        "head_canonical_zh": "泵内及吸入口区域沉积物形成",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Start up the pump (set) regularly between once a month and once every three months for approximately five minutes during prolonged shutdown periods",
+        "tail_canonical_zh": "长期停机期间每月至每三个月定期启动泵组约五分钟",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start up the pump (set) regularly between once a month and once every three months for\napproximately five minutes during prolonged shutdown periods. This will prevent the formation\nof deposits within the pump and the pump intake area.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumpcasing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Spray-coat the inside wall of the pumpcasing, and in particular the impeller clearance areas, with a preservative",
+        "tail_canonical_zh": "对泵壳内壁特别是叶轮间隙区域喷涂防腐剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Spray-coat the inside wall of the pumpcasing, and in particular the impeller clearance areas,\nwith a preservative.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "impeller clearance areas",
+        "head_canonical_zh": "叶轮间隙区域",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Spray-coat the inside wall of the pumpcasing, and in particular the impeller clearance areas, with a preservative",
+        "tail_canonical_zh": "对泵壳内壁特别是叶轮间隙区域喷涂防腐剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Spray-coat the inside wall of the pumpcasing, and in particular the impeller clearance areas,\nwith a preservative.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

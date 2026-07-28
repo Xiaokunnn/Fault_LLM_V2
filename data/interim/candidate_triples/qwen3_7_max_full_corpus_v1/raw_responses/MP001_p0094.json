@@ -1,0 +1,139 @@
+{
+  "page_key": "MP001:p0094",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7d50d200-e5b6-9ca3-a265-41bdae54aa95",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1481,
+    "prompt_tokens": 2331,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3812
+  },
+  "latency_ms": 19652,
+  "attempt": 1,
+  "prompt_sha256": "5d36cc7c120bf1f8ad16d22fc4a992a0d08cd3c5126dab0ff574bc758e412624",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Ultrasonic Flaw Detection",
+        "head_canonical_zh": "超声探伤",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "transducer",
+        "tail_canonical_zh": "换能器",
+        "tail_type": "Component",
+        "evidence_text": "The test involves using a transducer to apply an ultrasound vibration to a test object and then receiving the signal back and analyzing it for changes that might indicate the presence of discontinuities in the test object.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "surface and subsurface discontinuities",
+        "head_canonical_zh": "表面及亚表面不连续缺陷",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ultrasonic Flaw Detection",
+        "tail_canonical_zh": "超声探伤",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "This technique helps to detect surface and subsurface discontinuities caused by problems such as fatigue, heat treatment, inclusions and lack of penetration, gas porosity welds, and general weld flaws.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue",
+        "head_canonical_zh": "疲劳",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "surface and subsurface discontinuities",
+        "tail_canonical_zh": "表面及亚表面不连续缺陷",
+        "tail_type": "FaultMode",
+        "evidence_text": "surface and subsurface discontinuities caused by problems such as fatigue, heat treatment, inclusions and lack of penetration, gas porosity welds, and general weld flaws",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "surface/near-surface cracks and discontinuities",
+        "head_canonical_zh": "表面/近表面裂纹及不连续缺陷",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Magnetic Particle Inspection",
+        "tail_canonical_zh": "磁粉检测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Magnetic particle inspection helps detect the location of surface/near-surface cracks and discontinuities caused by problems such as fatigue, wear, inclusions, laminations, heat treatment, hydrogen embrittlement, seams, and corrosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "surface/near-surface cracks and discontinuities",
+        "tail_canonical_zh": "表面/近表面裂纹及不连续缺陷",
+        "tail_type": "FaultMode",
+        "evidence_text": "surface/near-surface cracks and discontinuities caused by problems such as fatigue, wear, inclusions, laminations, heat treatment, hydrogen embrittlement, seams, and corrosion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "corrosion",
+        "head_canonical_zh": "腐蚀",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "surface/near-surface cracks and discontinuities",
+        "tail_canonical_zh": "表面/近表面裂纹及不连续缺陷",
+        "tail_type": "FaultMode",
+        "evidence_text": "surface/near-surface cracks and discontinuities caused by problems such as fatigue, wear, inclusions, laminations, heat treatment, hydrogen embrittlement, seams, and corrosion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-8816eb18-47c7-92bd-b93c-9bbe79e418ad",
+  "latency_ms": 9129,
+  "prompt_sha256": "008a1fd01b2b3f46a15c6114b543999c91aef03400ddde0131ac8a12c2299d85",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-ba8f85b0b9dd35aa4baf",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "During the priming cycle, air mixes with water retained inside the pump and is discharged out of the casing.",
+        "reason_code": "causal_direction_mismatch"
+      },
+      {
+        "id": "MPT-ba93e687dbd5989298c1",
+        "verdict": "not_entailed",
+        "confidence": 0.98,
+        "supporting_quote": "Alarm is to be activated prior to a critical data overload condition.",
+        "reason_code": "causal_direction_reversed"
+      },
+      {
+        "id": "MPT-baa1a128df3611039b1a",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Flaking and cracking... Bearing loads in excess of bearing capacity caused by misalignment.",
+        "reason_code": "direct_table_causation"
+      },
+      {
+        "id": "MPT-babdea149f3a094868fc",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "reason_code": "explicit_diagnostic_method"
+      },
+      {
+        "id": "MPT-bac9707ac79e4382bb1c",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Fuel oil pumps are to be fitted with stop valves at the suction and discharge sides.",
+        "reason_code": "design_requirement_not_maintenance"
+      },
+      {
+        "id": "MPT-baed3e3cc3ec8e07cc9a",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Screw the stationary seal ring into back plate (25)",
+        "reason_code": "assembly_instruction_not_maintenance"
+      },
+      {
+        "id": "MPT-bb1fd23dbf475df9e633",
+        "verdict": "not_entailed",
+        "confidence": 0.85,
+        "supporting_quote": "Dynamic monitoring systems may collect data utilizing permanent, semi-permanent, or portable measuring equipment.",
+        "reason_code": "data_collection_vs_inspection"
+      },
+      {
+        "id": "MPT-bb31ede1f88560e8a207",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Arrangements for electric propulsion generators are to be such that propulsion can be maintained in case of failure of an excitation system or failure of a power supply for an excitation system.",
+        "reason_code": "explicit_mitigation_design"
+      }
+    ]
+  }
+}

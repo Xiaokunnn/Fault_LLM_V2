@@ -1,0 +1,329 @@
+{
+  "page_key": "MP019:p0086",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-db73f647-ef4f-9d96-8813-fb1ead31efe2",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 48508,
+  "attempt": 1,
+  "prompt_sha256": "072ebebc86544a9d53bb6097b7578a740356bf6555b8a7a79272047ca595bdcb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motore",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Ispezionare il motore a intervalli regolari, almeno con cadenza annuale",
+        "tail_canonical_zh": "至少每年定期检查电机",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1. Ispezionare il motore a intervalli regolari, almeno con cadenza annuale.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motore",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Mantenere il motore pulito ed assicurare una buona ventilazione",
+        "tail_canonical_zh": "保持电机清洁并确保良好通风",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Mantenere il motore pulito ed assicurare una buona ventilazione.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sistema di ventilazione",
+        "head_canonical_zh": "通风系统",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "regolarmente pulito e controllato",
+        "tail_canonical_zh": "定期清洁和检查",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Se il motore è utilizzato in un ambiente polveroso, il sistema di ventilazione deve essere regolarmente pulito e controllato.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tenute d'albero",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare le condizioni delle tenute d'albero",
+        "tail_canonical_zh": "检查轴封状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "3. Controllare le condizioni delle tenute d'albero (ad es. anello a V o tenuta radiale) e se necessario sostituirle.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tenute d'albero",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "sostituirle",
+        "tail_canonical_zh": "更换轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "3. Controllare le condizioni delle tenute d'albero (ad es. anello a V o tenuta radiale) e se necessario sostituirle.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "collegamenti e dei bulloni di fissaggio e fondazione",
+        "head_canonical_zh": "连接及地脚螺栓",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare le condizioni dei collegamenti e dei bulloni di fissaggio e fondazione",
+        "tail_canonical_zh": "检查连接及地脚螺栓状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "4. Controllare le condizioni dei collegamenti e dei bulloni di fissaggio e fondazione.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare le condizioni dei cuscinetti prestando attenzione ai rumori anomali, alle vibrazioni, alla temperatura, analizzando il grasso consumato o effettuando monitoraggi con rilevatori SPM",
+        "tail_canonical_zh": "通过异常噪声、振动、温度、分析旧脂或SPM监测检查轴承状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "5. Controllare le condizioni dei cuscinetti prestando attenzione ai rumori anomali, alle vibrazioni, alla temperatura, analizzando il grasso consumato o effettuando monitoraggi con rilevatori SPM dove esistenti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rumori anomali",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "segni di usura",
+        "tail_canonical_zh": "磨损迹象",
+        "tail_type": "FaultMode",
+        "evidence_text": "5. Controllare le condizioni dei cuscinetti prestando attenzione ai rumori anomali, alle vibrazioni, alla temperatura... Quando si rilevano segni di usura, smontare il motore",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibrazioni",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "segni di usura",
+        "tail_canonical_zh": "磨损迹象",
+        "tail_type": "FaultMode",
+        "evidence_text": "5. Controllare le condizioni dei cuscinetti prestando attenzione ai rumori anomali, alle vibrazioni, alla temperatura... Quando si rilevano segni di usura, smontare il motore",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "temperatura",
+        "head_canonical_zh": "温度升高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "segni di usura",
+        "tail_canonical_zh": "磨损迹象",
+        "tail_type": "FaultMode",
+        "evidence_text": "5. Controllare le condizioni dei cuscinetti prestando attenzione ai rumori anomali, alle vibrazioni, alla temperatura... Quando si rilevano segni di usura, smontare il motore",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "segni di usura",
+        "head_canonical_zh": "磨损迹象",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "smontare il motore, controllarne le parti ed effettuare le necessarie sostituzioni",
+        "tail_canonical_zh": "拆卸电机、检查部件并进行必要更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Quando si rilevano segni di usura, smontare il motore, controllarne le parti ed effettuare le necessarie sostituzioni.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "sostituzione del cuscinetto",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Quando i cuscinetti vengono sostituiti, è necessario utilizzare cuscinetti identici a quelli montati originariamente.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tenute dell'albero",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "dovranno essere sostituite",
+        "tail_canonical_zh": "必须更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Contemporaneamente alla sostituzione del cuscinetto dovranno essere sostituite le tenute dell'albero, che dovranno avere la stessa qualità e le stesse caratteristiche di quelle originali.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tappi di scarico",
+        "head_canonical_zh": "排水塞",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "aprire periodicamente i tappi di scarico per verificare che la via di uscita della condensa non sia ostruita",
+        "tail_canonical_zh": "定期打开排水塞以确认冷凝水出口未堵塞",
+        "tail_type": "InspectionAction",
+        "evidence_text": "è consigliabile aprire periodicamente i tappi di scarico per verificare che la via di uscita della condensa non sia ostruita e per consentire la fuoriuscita della condensa dal motore.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "via di uscita della condensa ostruita",
+        "head_canonical_zh": "冷凝水出口堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "aprire periodicamente i tappi di scarico",
+        "tail_canonical_zh": "定期打开排水塞",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "è consigliabile aprire periodicamente i tappi di scarico per verificare che la via di uscita della condensa non sia ostruita e per consentire la fuoriuscita della condensa dal motore.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Ore di funzionamento a 25° C",
+        "tail_canonical_zh": "25°C运行小时数",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Ore di funzionamento per cuscinetti lubrificati a vita a temperature ambientali di 25 e 40°C:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Ore di funzionamento a 40° C",
+        "tail_canonical_zh": "40°C运行小时数",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Ore di funzionamento per cuscinetti lubrificati a vita a temperature ambientali di 25 e 40°C:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

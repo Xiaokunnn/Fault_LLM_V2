@@ -1,0 +1,185 @@
+{
+  "page_key": "MP022:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-1ee48e06-5ce7-9046-82f0-fe171e1901fe",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 19657,
+  "attempt": 1,
+  "prompt_sha256": "4eb6ba409c8ac2a07695217fb70a1d6ccabb518fca04c4f16fa0c0752b5ae835",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "remove the air screw and impeller before checking the direction of rotation",
+        "tail_canonical_zh": "检查旋转方向前拆除放气螺钉和叶轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Always remove the air screw and impeller before checking the direction of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Never start the pump if the impeller and air screw are fitted and the pump casing is removed",
+        "tail_canonical_zh": "叶轮和放气螺钉已装且泵壳拆除时禁止启动泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never start the pump if the impeller and air screw are fitted and the pump casing is removed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Never run the pump when both the suction side and the pressure side are blocked",
+        "tail_canonical_zh": "吸入侧和排出侧均堵塞时禁止运行泵",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Never run the pump when both the suction side and the pressure side are blocked.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Never run the pump when partially installed or not fully assembled",
+        "tail_canonical_zh": "部分安装或未完全装配时禁止运行泵",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Never run the pump when partially installed or not fully assembled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Necessary precautions must be taken in the event of leakage",
+        "tail_canonical_zh": "发生泄漏时必须采取必要预防措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Necessary precautions must be taken in the event of leakage as this can lead to hazardous situations.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motors with grease nipples",
+        "head_canonical_zh": "带注油嘴的电机",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "perform lubrication in accordance with the information plate/label on the motor",
+        "tail_canonical_zh": "按电机铭牌/标签进行润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remember to perform lubrication in accordance with the information plate/label on the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Always disconnect the power supply when servicing the pump",
+        "tail_canonical_zh": "维修泵时始终断开电源",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Always disconnect the power supply when servicing the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Never service the pump when it is hot",
+        "tail_canonical_zh": "泵热态时禁止维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never service the pump when it is hot.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Never service the pump if pressurised",
+        "tail_canonical_zh": "泵带压时禁止维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never service the pump if pressurised.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

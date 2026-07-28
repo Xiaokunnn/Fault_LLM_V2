@@ -1,0 +1,177 @@
+{
+  "page_key": "MP019:p0079",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f5fad1cb-5a5a-9765-b209-962259288192",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1997,
+    "prompt_tokens": 2565,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4562
+  },
+  "latency_ms": 32903,
+  "attempt": 1,
+  "prompt_sha256": "3d0655f877710e31064bc45fc3bee524c220bad3672f91f3ef8c2e933b7ea887",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "resistenza d'isolamento",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare la resistenza d'isolamento prima della messa in servizio e quando si sospetti una formazione di umidità negli avvolgimenti",
+        "tail_canonical_zh": "投运前及怀疑绕组受潮时检查绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare la resistenza d'isolamento prima della messa in servizio e quando si sospetti una formazione di umidità negli avvolgimenti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "avvolgimento è troppo umido",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Se il valore di riferimento della resistenza d'isolamento non viene raggiunto",
+        "tail_canonical_zh": "绝缘电阻未达参考值",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Se il valore di riferimento della resistenza d'isolamento non viene raggiunto, l'avvolgimento è troppo umido",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "avvolgimento è troppo umido",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "deve essere asciugato in forno. La temperatura del forno deve essere di 90°C per 12-16 ore e successivamente di 105°C per 6-8 ore",
+        "tail_canonical_zh": "烘箱干燥(90°C 12-16h后105°C 6-8h)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "l'avvolgimento è troppo umido e deve essere asciugato in forno. La temperatura del forno deve essere di 90°C per 12-16 ore e successivamente di 105°C per 6-8 ore.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cuscinetto a rulli",
+        "head_canonical_zh": "滚子轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Far girare a mano l'albero per verificare che ruoti liberamente",
+        "tail_canonical_zh": "手动盘车检查转动自由",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Far girare a mano l'albero per verificare che ruoti liberamente.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "funzionamento del motore in assenza di spinte radiali applicate all'albero",
+        "head_canonical_zh": "电机轴无径向载荷运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "potrebbe danneggiare il cuscinetto a rulli",
+        "tail_canonical_zh": "可能损坏滚子轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Il funzionamento del motore in assenza di spinte radiali applicate all'albero potrebbe danneggiare il cuscinetto a rulli.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "funzionamento del motore in assenza di spinte assiali applicate all'albero nella direzione corretta",
+        "head_canonical_zh": "电机轴无正确方向轴向载荷运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "potrebbe danneggiare il cuscinetto a contatto angolare",
+        "tail_canonical_zh": "可能损坏角接触轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Il funzionamento del motore in assenza di spinte assiali applicate all'albero nella direzione corretta potrebbe danneggiare il cuscinetto a contatto angolare",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motori dotati di ingrassatori",
+        "head_canonical_zh": "带注油嘴电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Al primo avviamento del motore, oppure dopo un lungo periodo di fermo, applicare la quantità di grasso specificata",
+        "tail_canonical_zh": "首次启动或长期停机后加注规定量润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Al primo avviamento del motore, oppure dopo un lungo periodo di fermo, applicare la quantità di grasso specificata.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "avvolgimenti impregnati di acqua di mare",
+        "head_canonical_zh": "海水浸泡绕组",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "devono solitamente essere rifatti",
+        "tail_canonical_zh": "通常需重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Gli avvolgimenti impregnati di acqua di mare devono solitamente essere rifatti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

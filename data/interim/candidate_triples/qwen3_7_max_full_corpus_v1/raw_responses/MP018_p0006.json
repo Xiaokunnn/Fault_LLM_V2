@@ -1,0 +1,231 @@
+{
+  "page_key": "MP018:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9f3ef34a-e90a-9aa7-82f7-feeabc2823d2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2411,
+    "prompt_tokens": 2114,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4525
+  },
+  "latency_ms": 58504,
+  "attempt": 1,
+  "prompt_sha256": "c37ea277c9069eda0b47276e8f8ced3b0e905fb72ab09323abc28281b8da8b17",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fresh lubricant must be applied to bearings upon removal of equipment from storage or when started for the first time",
+        "tail_canonical_zh": "出库或首次启动时涂抹新润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fresh lubricant must be applied to bearings upon removal of equipment from storage or when started for the first time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumping unit",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "accessible for both inspection and maintenance",
+        "tail_canonical_zh": "便于检查和维护的选址",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The unit should be accessible for both inspection and maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumping unit",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "accessible for both inspection and maintenance",
+        "tail_canonical_zh": "便于检查和维护的选址",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The unit should be accessible for both inspection and maintenance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction line is short and direct",
+        "head_canonical_zh": "吸入管路短而直",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "located as close as possible to the liquid supply",
+        "tail_canonical_zh": "尽可能靠近液源布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump should be located as close as possible to the liquid supply so that the suction line is short and direct.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "friction losses",
+        "head_canonical_zh": "摩擦损失",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "require a minimum of elbows and fittings in the discharge line",
+        "tail_canonical_zh": "排出管路弯头和附件最少化",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Location should require a minimum of elbows and fittings in the discharge line to minimize friction losses.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumping unit",
+        "head_canonical_zh": "泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "protected against flooding",
+        "tail_canonical_zh": "防洪保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The unit should be protected against flooding.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foundation",
+        "head_canonical_zh": "基础",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "sufficiently substantial to absorb vibration and to form a permanent rigid support for the base plate",
+        "tail_canonical_zh": "足够坚固以吸收振动并形成永久刚性支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The foundation should be sufficiently substantial to absorb vibration and to form a permanent rigid support for the base plate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Coupling halves",
+        "head_canonical_zh": "联轴器半体",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "disconnected when mounting pumping unit on foundation",
+        "tail_canonical_zh": "安装泵组于基础时断开联轴器半体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Coupling halves should be disconnected when mounting pumping unit on foundation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction and discharge flanges",
+        "head_canonical_zh": "吸入和排出法兰",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Adjust the wedges to raise or lower the unit as required to align suction and discharge flanges to piping and to level the baseplate",
+        "tail_canonical_zh": "调整楔块使吸入排出法兰与管路对中并找平底座",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Adjust the wedges to raise or lower the unit as required to align suction and discharge flanges to piping and to level the baseplate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "baseplate",
+        "head_canonical_zh": "底座",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "level the baseplate",
+        "tail_canonical_zh": "底座找平",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Adjust the wedges to raise or lower the unit as required to align suction and discharge flanges to piping and to level the baseplate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump will not start during coupling or intermediate shaft alignment and installation",
+        "head_canonical_zh": "联轴器或中间轴对中和安装期间泵不启动",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Disconnect all electrical connections",
+        "tail_canonical_zh": "断开所有电气连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Disconnect all electrical connections to insure that pump will not start during coupling or intermediate shaft alignment and installation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

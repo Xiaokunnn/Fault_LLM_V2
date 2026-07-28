@@ -1,0 +1,116 @@
+{
+  "page_key": "MP003:p0628",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3881f434-6f6e-9165-93b8-5ad1c50cf2d2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1124,
+    "prompt_tokens": 2517,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3641
+  },
+  "latency_ms": 14281,
+  "attempt": 1,
+  "prompt_sha256": "ef6ec767a1e9bc9ea890e558ddbc26577588e2216ce6efa4df474f01bbbd7677",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Feed water pipes",
+        "head_canonical_zh": "给水管路",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "not to be run through oil tanks",
+        "tail_canonical_zh": "禁止穿过油舱",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Feed water pipes are not to be run through oil tanks, nor are oil pipes to pass through boiler feed tanks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil pipes",
+        "head_canonical_zh": "油管",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "not to pass through boiler feed tanks",
+        "tail_canonical_zh": "禁止穿过锅炉给水舱",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Feed water pipes are not to be run through oil tanks, nor are oil pipes to pass through boiler feed tanks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "accidental contamination of the feed water from any salt water",
+        "head_canonical_zh": "海水意外污染给水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Piping connections to feed water tanks are to be arranged to prevent",
+        "tail_canonical_zh": "给水箱管路连接布置防污染",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Piping connections to feed water tanks are to be arranged to prevent an accidental contamination of the feed water from any salt water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Feed water tanks",
+        "head_canonical_zh": "给水箱",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "not to be located adjacent to fuel oil tanks",
+        "tail_canonical_zh": "禁止邻接燃油舱布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Feed water tanks are not to be located adjacent to fuel oil tanks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Feed-water regulator and feed-water heaters",
+        "head_canonical_zh": "给水调节阀和给水加热器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "provided with by-pass arrangements so as to allow their maintenance without interrupting the feed water supply",
+        "tail_canonical_zh": "设置旁通以便不停水维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Feed-water regulator and feed-water heaters, where fitted in the feed piping, are to be provided with by-pass arrangements so as to allow their maintenance without interrupting the feed water supply.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

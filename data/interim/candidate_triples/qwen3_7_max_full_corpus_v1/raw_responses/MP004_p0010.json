@@ -1,0 +1,315 @@
+{
+  "page_key": "MP004:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d782d5dd-5539-9cdd-a25f-3810f84bac5e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3327,
+    "prompt_tokens": 2250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5577
+  },
+  "latency_ms": 37600,
+  "attempt": 1,
+  "prompt_sha256": "0552b7deebf89e517eab1e45318a612a7665a33d15eb3b2b7d840644cdc8a715",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "self-priming centrifugal pump",
+        "head_canonical_zh": "自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "pump casing has been filled with liquid",
+        "tail_canonical_zh": "泵壳已充满液体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "A self-priming centrifugal pump will not function until the pump casing has been filled with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "liquid also serves as coolant",
+        "tail_canonical_zh": "液体作为冷却剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The liquid also serves as coolant for the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "must under no circumstances be started before it has been primed with liquid",
+        "tail_canonical_zh": "严禁在未灌液情况下启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Consequently, the pump must under no circumstances be started before it has been primed with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "must never run dry",
+        "tail_canonical_zh": "严禁干转",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Furthermore, the pump must never run dry.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "damage to the pump",
+        "head_canonical_zh": "泵损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps)",
+        "tail_canonical_zh": "关闭排出阀运行超时或超温",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps). Otherwise there is a risk of damage to the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "steam explosion",
+        "head_canonical_zh": "蒸汽爆炸",
+        "head_type": "Risk",
+        "relation": "causes",
+        "tail_surface": "operate against closed discharge valve",
+        "tail_canonical_zh": "关闭排出阀运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Otherwise there is a risk of damage to the pump and, at worst, of a steam explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unintentional operation",
+        "head_canonical_zh": "意外运行",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "relief valve which opens at a pre-set pressure",
+        "tail_canonical_zh": "定压开启的安全阀",
+        "tail_type": "Component",
+        "evidence_text": "To protect the pump against unintentional operation it is equipped with a relief valve which opens at a pre-set pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft rotates freely without jarring sounds",
+        "head_canonical_zh": "轴转动自由且无刺耳声",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Before starting the pump check",
+        "tail_canonical_zh": "启动前检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Before starting the pump check that - the shaft rotates freely without jarring sounds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump casing is filled with liquid",
+        "head_canonical_zh": "泵壳充满液体",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Before starting the pump check",
+        "tail_canonical_zh": "启动前检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Before starting the pump check that ... - the pump casing is filled with liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "direction of rotation",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Start the pump for a moment",
+        "tail_canonical_zh": "点动启动泵",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Start the pump for a moment to check the direction of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "considerably smaller delivery head than expected",
+        "tail_canonical_zh": "实际扬程远小于预期",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "heavy erosion",
+        "head_canonical_zh": "严重冲蚀",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "cavitation (corrosion)",
+        "tail_canonical_zh": "汽蚀（腐蚀）",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "quantity of liquid delivered",
+        "head_canonical_zh": "输送流量",
+        "head_type": "SignalFeature",
+        "relation": "diagnosed_by",
+        "tail_surface": "measuring the current intensity of the connected motor",
+        "tail_canonical_zh": "测量电机电流",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "power consumption",
+        "head_canonical_zh": "功耗",
+        "head_type": "SignalFeature",
+        "relation": "diagnosed_by",
+        "tail_surface": "measuring the current intensity of the connected motor",
+        "tail_canonical_zh": "测量电机电流",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "quantity of water delivered",
+        "head_canonical_zh": "输水量",
+        "head_type": "SignalFeature",
+        "relation": "diagnosed_by",
+        "tail_surface": "reading of the differential pressure",
+        "tail_canonical_zh": "读取压差",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Together with a reading of the differential pressure the quantity of water delivered can be determined against the characteristics of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

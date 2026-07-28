@@ -1,0 +1,245 @@
+{
+  "page_key": "MP019:p0020",
+  "request_part": 1,
+  "request_part_count": 3,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5c567be0-eb94-98f5-9e9b-d8ccfad4e133",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2662,
+    "prompt_tokens": 5376,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8038
+  },
+  "latency_ms": 28683,
+  "attempt": 1,
+  "prompt_sha256": "e13266837f6230037596f75c2be5688c94b0875f2d3a0a37581b52634f798787",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Excessive load",
+        "tail_canonical_zh": "过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current\nExcessive load",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r001:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current\nExcessive load\nReduce load.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r001:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Low voltage during start",
+        "tail_canonical_zh": "启动时电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current\nLow voltage during start",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r002:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Low voltage during start",
+        "head_canonical_zh": "启动时电压过低",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check for high resistance. Make sure that adequate cable\nsize is used.",
+        "tail_canonical_zh": "检查高电阻并确保电缆尺寸充足",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Low voltage during start\nCheck for high resistance. Make sure that adequate cable\nsize is used.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r002:c02",
+          "MP019:p0020:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Defective squirrel cage rotor",
+        "tail_canonical_zh": "鼠笼转子缺陷",
+        "tail_type": "FaultMode",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current\nDefective squirrel cage rotor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r003:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Defective squirrel cage rotor",
+        "head_canonical_zh": "鼠笼转子缺陷",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace with new rotor.",
+        "tail_canonical_zh": "更换新转子",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defective squirrel cage rotor\nReplace with new rotor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r003:c02",
+          "MP019:p0020:t00:r003:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "Motor takes too long to\naccelerate and/or draws\nhigh current",
+        "head_canonical_zh": "电机加速时间过长或电流过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Applied voltage too low",
+        "tail_canonical_zh": "施加电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor takes too long to\naccelerate and/or draws\nhigh current\nApplied voltage too low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r001:c01",
+          "MP019:p0020:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Applied voltage too low",
+        "head_canonical_zh": "施加电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Correct power supply.",
+        "tail_canonical_zh": "修正电源",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Applied voltage too low\nCorrect power supply.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r004:c02",
+          "MP019:p0020:t00:r004:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wrong rotation direction",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Wrong sequence of phases",
+        "tail_canonical_zh": "相序错误",
+        "tail_type": "Cause",
+        "evidence_text": "Wrong rotation direction\nWrong sequence of phases",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r005:c01",
+          "MP019:p0020:t00:r005:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wrong rotation direction",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reverse connections at motor or at switchboard.",
+        "tail_canonical_zh": "在电机或配电板处反接连线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wrong rotation direction\nWrong sequence of phases\nReverse connections at motor or at switchboard.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r005:c01",
+          "MP019:p0020:t00:r005:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

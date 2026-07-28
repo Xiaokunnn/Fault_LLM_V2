@@ -1,0 +1,117 @@
+{
+  "page_key": "MP003:p0937",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f2b215e1-9e02-9d1e-94a1-8d2728700c3b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1065,
+    "prompt_tokens": 29707,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 30772
+  },
+  "latency_ms": 14174,
+  "attempt": 1,
+  "prompt_sha256": "4dc94ac8671f4cbd41b9d68e2dc4dc2b67136800e1a342737d92153160b7495c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing lub oil inlet pressure - low",
+        "head_canonical_zh": "轴承润滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic shutdown prime mover",
+        "tail_canonical_zh": "原动机自动停机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bearing lub oil inlet pressure - low x x Automatic shutdown prime mover.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Generator cooling inlet pump or fan motor - fails",
+        "head_canonical_zh": "发电机冷却进口泵或风机电机故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "B9 Generator cooling inlet pump or fan motor - fails x",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Transfer pump start/stop",
+        "head_canonical_zh": "输送泵启停",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Start/stop may be automatic",
+        "tail_canonical_zh": "启停可为自动",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Transfer pump start/stop x x Start/stop may be automatic.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fuel oil heater, fuel oil temperature - high ( or viscosity low) or flow - low",
+        "head_canonical_zh": "燃油加热器燃油温度高或粘度低或流量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D6 Fuel oil heater, fuel oil temperature - high ( or viscosity low) or flow - low x",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Tank level - low",
+        "head_canonical_zh": "油柜液位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "E1 Tank level - low x",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

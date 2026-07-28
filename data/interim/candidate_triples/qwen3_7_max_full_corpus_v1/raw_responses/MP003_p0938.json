@@ -1,0 +1,129 @@
+{
+  "page_key": "MP003:p0938",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-36d6bb7b-4d2c-9fd2-93dd-eceb7a39ec5b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1314,
+    "prompt_tokens": 8599,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9913
+  },
+  "latency_ms": 16402,
+  "attempt": 1,
+  "prompt_sha256": "89575f87daa53d8217f8606e727c9861d62a27df4019ba772522d3caa0514fc1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bilge level - high",
+        "head_canonical_zh": "舱底水位高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "G1 Bilge level - high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0938:t00:r001:c02",
+          "MP003:p0938:t00:r001:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bilge pump status",
+        "head_canonical_zh": "舱底泵状态",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "G2 Bilge pump status     x  x    Alarm applicable to automatically started\n                                                     bilge pump that starts/stops excessively\n                                                     or running unduly long",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0938:t00:r002:c02",
+          "MP003:p0938:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bilge pump status",
+        "head_canonical_zh": "舱底泵状态",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "D",
+        "tail_canonical_zh": "显示",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "G2 Bilge pump status     x  x    Alarm applicable to automatically started\n                                                     bilge pump that starts/stops excessively\n                                                     or running unduly long",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0938:t00:r002:c02",
+          "MP003:p0938:t00:r002:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "starts/stops excessively",
+        "head_canonical_zh": "启停过于频繁",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Bilge pump status",
+        "tail_canonical_zh": "舱底泵状态",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Alarm applicable to automatically started\n                                                     bilge pump that starts/stops excessively\n                                                     or running unduly long",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0938:t00:r002:c02",
+          "MP003:p0938:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "running unduly long",
+        "head_canonical_zh": "运行时间过长",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Bilge pump status",
+        "tail_canonical_zh": "舱底泵状态",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Alarm applicable to automatically started\n                                                     bilge pump that starts/stops excessively\n                                                     or running unduly long",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0938:t00:r002:c02",
+          "MP003:p0938:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

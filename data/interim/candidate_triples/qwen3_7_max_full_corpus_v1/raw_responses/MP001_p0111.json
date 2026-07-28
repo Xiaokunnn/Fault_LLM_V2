@@ -1,0 +1,57 @@
+{
+  "page_key": "MP001:p0111",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-69412b03-bd4c-9268-ab95-8f2f98954772",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 412,
+    "prompt_tokens": 2495,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2907
+  },
+  "latency_ms": 5962,
+  "attempt": 1,
+  "prompt_sha256": "1c1c6da4a4825b2d77e6485a3afe0601d4b808bf43ca20ecf08798ff2ca4b832",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "inlet and outlet pressures of a pump",
+        "head_canonical_zh": "泵进出口压力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "average differential pressure",
+        "tail_canonical_zh": "平均压差",
+        "tail_type": "SignalFeature",
+        "evidence_text": "inlet and outlet pressures of a pump that are provided by the OPC Server can be processed to determine an average differential pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "average differential pressure",
+        "head_canonical_zh": "平均压差",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "maintenance task",
+        "tail_canonical_zh": "维护任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "average differential pressure that can be used to trigger certain physical events such as a maintenance task",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,411 @@
+{
+  "page_key": "MP016:p0022",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5d6338d2-e5c2-930a-8e2e-756816e20cc8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4585,
+    "prompt_tokens": 2698,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7283
+  },
+  "latency_ms": 51766,
+  "attempt": 1,
+  "prompt_sha256": "64099ddaf70ca85139f658d7574e2558e849128ee4ee42116feabb79f7e8528a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "trocken laufen",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "übermäßige Erwärmung der Dichtungsflächen",
+        "tail_canonical_zh": "密封面过热",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Pumpen dürfen niemals länger als 30 Sekunden trocken laufen, da dies zu einer übermäßigen Erwärmung der Dichtungsflächen und Schäden am Laufrad führt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "trocken laufen",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Schäden am Laufrad",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pumpen dürfen niemals länger als 30 Sekunden trocken laufen, da dies zu einer übermäßigen Erwärmung der Dichtungsflächen und Schäden am Laufrad führt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Geräusche",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollieren Sie die Pumpe während der ersten Betriebsstunden",
+        "tail_canonical_zh": "初始运行期间检查泵",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollieren Sie die Pumpe während der ersten Betriebsstunden – achten Sie auf Geräusche und übermäßige Erwärmung der Pumpe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "übermäßige Erwärmung der Pumpe",
+        "head_canonical_zh": "泵体过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollieren Sie die Pumpe während der ersten Betriebsstunden",
+        "tail_canonical_zh": "初始运行期间检查泵",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollieren Sie die Pumpe während der ersten Betriebsstunden – achten Sie auf Geräusche und übermäßige Erwärmung der Pumpe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Austritt der Förder- oder (falls zutreffend) Spülflüssigkeit",
+        "head_canonical_zh": "输送液或冲洗液泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Sichtprüfung aller Verbindungen",
+        "tail_canonical_zh": "目视检查所有连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Sichtprüfung aller Verbindungen, insbesondere auf Anzeichen von Austritt der Förder- oder (falls zutreffend) Spülflüssigkeit.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ungewöhnliche Geräusche",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Achten Sie auf ungewöhnliche Geräusche",
+        "tail_canonical_zh": "注意异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Achten Sie auf ungewöhnliche Geräusche.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ungewöhnliche Vibrationen",
+        "head_canonical_zh": "异常振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Achten Sie auf ungewöhnliche Vibrationen",
+        "tail_canonical_zh": "注意异常振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Achten Sie auf ungewöhnliche Vibrationen oder Temperaturschwankungen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperaturschwankungen",
+        "head_canonical_zh": "温度波动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Achten Sie auf ... Temperaturschwankungen",
+        "tail_canonical_zh": "注意温度波动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Achten Sie auf ungewöhnliche Vibrationen oder Temperaturschwankungen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Laufrad",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Die Endabdeckung der Pumpe entfernen und das Laufrad auf Anzeichen von Schäden oder Verschleiß untersuchen",
+        "tail_canonical_zh": "拆卸泵端盖并检查叶轮损伤或磨损迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Die Endabdeckung der Pumpe entfernen und das Laufrad auf Anzeichen von Schäden oder Verschleiß untersuchen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Laufrad",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Ggf. reparieren oder austauschen",
+        "tail_canonical_zh": "必要时修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ggf. reparieren oder austauschen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Dichtungsgehäuse",
+        "head_canonical_zh": "密封壳体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Dichtungsgehäuse auf undichte Stellen untersuchen",
+        "tail_canonical_zh": "检查密封壳体泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Dichtungsgehäuse auf undichte Stellen untersuchen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "O-Ring des Enddeckels oder die Enddeckeldichtung",
+        "head_canonical_zh": "端盖O型圈或端盖密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "auswechseln",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Den O-Ring des Enddeckels oder die Enddeckeldichtung auswechseln.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Welle",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Sichtprüfung der Welle",
+        "tail_canonical_zh": "轴的目视检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Sichtprüfung der Welle, ggf. reinigen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Dichtflächen",
+        "head_canonical_zh": "密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Dichtflächen auf Verschleiß prüfen",
+        "tail_canonical_zh": "检查密封面磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Dichtflächen auf Verschleiß prüfen und den Zustand der Elastomere untersuchen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Elastomere",
+        "head_canonical_zh": "弹性体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Zustand der Elastomere untersuchen",
+        "tail_canonical_zh": "检查弹性体状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Dichtflächen auf Verschleiß prüfen und den Zustand der Elastomere untersuchen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Gleitringdichtungen",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "bei Bedarf auswechseln",
+        "tail_canonical_zh": "按需更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die Gleitringdichtungen (falls vorhanden) bei Bedarf auswechseln.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "O-Ringe bzw. Dichtungen am Pumpenkopf",
+        "head_canonical_zh": "泵头O型圈或密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "austauschen",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die O-Ringe bzw. Dichtungen am Pumpenkopf austauschen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lager",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "prüfen, ob sich die Welle seitwärts oder vor und zurück bewegt",
+        "tail_canonical_zh": "检查轴是否侧向或前后移动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lagerverschleiß an den Sockeleinheiten prüfen; dazu ist zu prüfen, ob sich die Welle seitwärts oder vor und zurück bewegt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spiel",
+        "head_canonical_zh": "间隙",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Lagerverschleiß",
+        "tail_canonical_zh": "轴承磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "Wenn Spiel vorhanden ist, Lager zwecks Untersuchung ausbauen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lager",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Lager zwecks Untersuchung ausbauen; ggf. zusammen mit den Lippendichtungen austauschen",
+        "tail_canonical_zh": "拆卸轴承检查；必要时连同唇形密封一起更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wenn Spiel vorhanden ist, Lager zwecks Untersuchung ausbauen; ggf. zusammen mit den Lippendichtungen austauschen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Trockenlauf",
+        "head_canonical_zh": "干运转",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Lassen Sie die Pumpe nicht weiter laufen, wenn keine Flüssigkeit fließt",
+        "tail_canonical_zh": "无液体流动时停止泵运行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lassen Sie die Pumpe nicht weiter laufen, wenn keine Flüssigkeit fließt. Trockenlauf kann Dichtungen und Laufrad beschädigen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

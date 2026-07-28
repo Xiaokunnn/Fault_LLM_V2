@@ -1,0 +1,151 @@
+{
+  "page_key": "MP019:p0067",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-f3edf1d9-9eae-9cad-a9a9-9e4eb23b0184",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 19595,
+  "attempt": 1,
+  "prompt_sha256": "2dc3b9b129304209cbe749dbd3e8257bbc249db8243f793e097d6ff5360711f1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motores ABB",
+        "head_canonical_zh": "ABB电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "tensión insuficiente o sobretensión",
+        "tail_canonical_zh": "欠压或过压",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "El funcionamiento en condiciones de tensión insuficiente o sobretensión puede influir en el rendimiento de la aplicación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "convertidores ABB ACS800 con tensión de CC no controlada y control de DTC",
+        "head_canonical_zh": "带非受控直流电压和DTC控制的ABB ACS800变频器",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "curvas de capacidad de carga mostradas en las Figuras 4a - 4d",
+        "tail_canonical_zh": "图4a-4d所示负载能力曲线",
+        "tail_type": "Standard",
+        "evidence_text": "Las curvas de capacidad de carga mostradas en las Figuras 4a - 4d son válidas para los convertidores ABB ACS800 con tensión de CC no controlada y control de DTC.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "convertidores ABB de la serie ACS550",
+        "head_canonical_zh": "ABB ACS550系列变频器",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "curvas de capacidad de carga mostradas en las Figuras 5a - 5d",
+        "tail_canonical_zh": "图5a-5d所示负载能力曲线",
+        "tail_type": "Standard",
+        "evidence_text": "Las curvas de capacidad de carga mostradas en las Figuras 5a - 5d son válidas para los convertidores ABB de la serie ACS550.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "capacidad real de carga térmica",
+        "head_canonical_zh": "实际热负载能力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "capacidad de carga térmica real de un motor puede ser inferior a la mostrada por las curvas indicativas",
+        "tail_canonical_zh": "电机实际热负载能力可能低于指示曲线所示值",
+        "tail_type": "Risk",
+        "evidence_text": "La capacidad de carga térmica real de un motor puede ser inferior a la mostrada por las curvas indicativas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "aplicación de velocidad variable",
+        "head_canonical_zh": "变速应用",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "puesta en funcionamiento ... de acuerdo con las instrucciones del convertidor de frecuencia y la normativa y regulaciones locales",
+        "tail_canonical_zh": "按照变频器说明书及当地规范进行调试",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "La puesta en funcionamiento de la aplicación de velocidad variable debe realizarse de acuerdo con las instrucciones del convertidor de frecuencia y la normativa y regulaciones locales.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "garantizar que los valores sean los correctos",
+        "tail_canonical_zh": "确认参数值正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Si falta información o es inexacta, no utilice el motor antes de garantizar que los valores sean los correctos!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "aplicación",
+        "head_canonical_zh": "应用系统",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "utilizar todas las características de protección adecuadas que ofrezca el convertidor",
+        "tail_canonical_zh": "使用变频器提供的所有适当保护功能",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "ABB recomienda utilizar todas las características de protección adecuadas que ofrezca el convertidor para aumentar la seguridad de la aplicación.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "page_key": "MP002:p0127",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a16e1c75-807d-98b5-ab22-721072469f5d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1107,
+    "prompt_tokens": 2229,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3336
+  },
+  "latency_ms": 14859,
+  "attempt": 1,
+  "prompt_sha256": "93b412a93bcf82ffd5f5b921c06850e4f770c98c5a401dac3bf18ac26ea01704",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Nondestructive Testing",
+        "head_canonical_zh": "无损检测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "internal or surface defects, for example, cracks or cavities",
+        "tail_canonical_zh": "内部或表面缺陷（如裂纹或空洞）",
+        "tail_type": "FaultMode",
+        "evidence_text": "The nondestructive testing category refers to numerous techniques that assess the condition of the material in a component in equipment with regard to internal or surface defects, for example, cracks or cavities.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Electrical Condition Monitoring",
+        "head_canonical_zh": "电气状态监测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "changes in resistance, conductivity, dielectric strength and potential",
+        "tail_canonical_zh": "电阻、电导率、介电强度和电位的变化",
+        "tail_type": "SignalFeature",
+        "evidence_text": "The electrical condition monitoring category refers to numerous techniques, some proprietary, that assess changes in resistance, conductivity, dielectric strength and potential.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Performance Monitoring",
+        "head_canonical_zh": "性能监测",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "temperature, flow, pressure, power and torque",
+        "tail_canonical_zh": "温度、流量、压力、功率和扭矩",
+        "tail_type": "SignalFeature",
+        "evidence_text": "The performance monitoring category addresses simple, common techniques used to assess the operating condition of the equipment, namely temperature, flow, pressure, power and torque.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure modes",
+        "head_canonical_zh": "故障模式",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "warning",
+        "tail_canonical_zh": "预警征兆",
+        "tail_type": "Symptom",
+        "evidence_text": "Although many failure modes are not age-related, most of them give some sort of warning that they are in the process of occurring or about to occur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Potential Failure",
+        "head_canonical_zh": "潜在故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "detect onset of failure",
+        "tail_canonical_zh": "检测故障起始",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The time interval between the point at which one can detect onset of failure, the Potential Failure, and the point at which functional failure occurs, the Failure, is called the P-F interval.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0608",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-178477a9-8fff-91af-83c9-ac09bcf617f4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1120,
+    "prompt_tokens": 2635,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3755
+  },
+  "latency_ms": 15086,
+  "attempt": 1,
+  "prompt_sha256": "be2a1f08ff8bfb0481e16a3473ed529598866e46eb7c13d3c6a320bbe818eb44",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "oil spray or oil leakage",
+        "head_canonical_zh": "燃油喷射或泄漏",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Spray shields are to be fitted around flanged joints, flanged bonnets and any other flanged or threaded connections in fuel oil piping systems under pressure exceeding 0.18 N/mm2",
+        "tail_canonical_zh": "安装防溅罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Spray shields are to be fitted around flanged joints, flanged bonnets and any other flanged or threaded connections in fuel oil piping systems under pressure exceeding 0.18 N/mm2 (1.84 kgf/cm2, 26 psi) which are located above or near units of high temperature, including boilers, steam pipes, exhaust manifolds, silencers or other equipment required to be insulated by 4-6-4/13.3.2, and to avoid, as far as practicable, oil spray or oil leakage into machinery air intakes or other sources of ignition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high-pressure line failure",
+        "head_canonical_zh": "高压燃油管路失效",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "protected with a jacketed piping system capable of containing fuel from a high-pressure line failure",
+        "tail_canonical_zh": "采用双层套管系统保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All external high-pressure fuel delivery lines between the high-pressure fuel pumps and fuel injectors are to be protected with a jacketed piping system capable of containing fuel from a high-pressure line failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fuel line failure",
+        "head_canonical_zh": "燃油管路失效",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "arrangements are to be provided for an alarm to be given of a fuel line failure",
+        "tail_canonical_zh": "设置燃油管路失效报警装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The jacketed piping system is to include means for collection of leakages, and arrangements are to be provided for an alarm to be given of a fuel line failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure of the high pressure common rail system",
+        "head_canonical_zh": "高压共轨系统失效",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "provided with arrangement for leak collection and alarm in case of a failure of the high pressure common rail system",
+        "tail_canonical_zh": "设置泄漏收集及报警装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The high pressure common rail system is required to be properly enclosed and provided with arrangement for leak collection and alarm in case of a failure of the high pressure common rail system, see 4-6-5/3.3.7(a).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

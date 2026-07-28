@@ -1,0 +1,148 @@
+{
+  "page_key": "MP019:p0045",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b942e58c-ac60-9386-96e3-e4edf736d5d1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1625,
+    "prompt_tokens": 2751,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4376
+  },
+  "latency_ms": 21483,
+  "attempt": 1,
+  "prompt_sha256": "e750df59eaa82433bd7e097a8cab8557623559dfb63dacaa0fda7e78b3cbbdb3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "thermistances",
+        "head_canonical_zh": "热敏电阻",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "boîte à bornes",
+        "tail_canonical_zh": "接线盒",
+        "tail_type": "Component",
+        "evidence_text": "la boîte à bornes peut également contenir des raccordements pour des thermistances",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "éléments de réchauffage",
+        "head_canonical_zh": "加热元件",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "boîte à bornes",
+        "tail_canonical_zh": "接线盒",
+        "tail_type": "Component",
+        "evidence_text": "la boîte à bornes peut également contenir des raccordements pour des ... éléments de réchauffage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "entrées de câble inutilisées",
+        "head_canonical_zh": "未使用的电缆入口",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fermées à l'aide d'éléments étanches conformes à la classe IP de la boîte à bornes",
+        "tail_canonical_zh": "使用符合接线盒IP等级的密封元件封闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les entrées de câble inutilisées doivent être fermées à l'aide d'éléments étanches conformes à la classe IP de la boîte à bornes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "joints d'étanchéité de la boîte à bornes",
+        "head_canonical_zh": "接线盒密封圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "placés correctement dans les fentes prévues à cet effet afin de respecter la classe IP",
+        "tail_canonical_zh": "正确放置在指定槽内以保持IP等级",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les joints d'étanchéité de la boîte à bornes doivent être placés correctement dans les fentes prévues à cet effet afin de respecter la classe IP",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tension ou d'un courant de mesure supérieur(e)",
+        "head_canonical_zh": "过高的测量电压或电流",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "erreurs de lecture ou endommager le système",
+        "tail_canonical_zh": "读数错误或系统损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "L'application d'une tension ou d'un courant de mesure supérieur(e) peut provoquer des erreurs de lecture ou endommager le système",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "capteurs thermiques à bobinage",
+        "head_canonical_zh": "绕组温度传感器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "assurez-vous que l'isolation ou l'isolement est correct, voir IEC 60664",
+        "tail_canonical_zh": "确认绝缘或隔离正确（参照IEC 60664）",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lors du branchement des capteurs aux systèmes de commande, etc. assurez-vous que l'isolation ou l'isolement est correct, voir IEC 60664",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ventilateur unidirectionnel",
+        "head_canonical_zh": "单向风扇",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "vérifiez que celui-ci tourne effectivement dans le sens indiqué par la flèche figurant sur le moteur",
+        "tail_canonical_zh": "检查其是否确实按电机箭头所示方向旋转",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Si le moteur est doté d'un ventilateur unidirectionnel, vérifiez que celui-ci tourne effectivement dans le sens indiqué par la flèche figurant sur le moteur",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

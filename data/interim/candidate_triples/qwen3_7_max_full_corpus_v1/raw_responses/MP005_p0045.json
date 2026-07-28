@@ -1,0 +1,98 @@
+{
+  "page_key": "MP005:p0045",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d78a4552-ce92-94bc-828e-85c763f2767d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 965,
+    "prompt_tokens": 1828,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2793
+  },
+  "latency_ms": 13204,
+  "attempt": 1,
+  "prompt_sha256": "fee6a8bace00caf25f0df7b7ec598a37aee95bb0c149fa4dbd0e27004be8adaf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impurities",
+        "head_canonical_zh": "杂质",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Install a filter into the suction pipe",
+        "tail_canonical_zh": "在吸入管安装过滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Recommend installing filter and monitor device to avoid impurities into pump.\n\n• Install a filter into the suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impurities",
+        "head_canonical_zh": "杂质",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Install a differential pressure gauge to monitor impurity",
+        "tail_canonical_zh": "安装差压表监测杂质",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Recommend installing filter and monitor device to avoid impurities into pump.\n\n• Install a differential pressure gauge to monitor impurity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "v < 3 m/s at inlet side",
+        "tail_canonical_zh": "进口侧流速小于3米每秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Flow velocity (v) in following ranges\n\nNote: Higher velocities might be acceptable in some installations and/or for short term operation.\n\n• v < 3 m/s at inlet side (note: v<1.5 m/s in manifolds splitting flow to several pumps in parallel)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "v < 6 m/s at outlet side",
+        "tail_canonical_zh": "出口侧流速小于6米每秒",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Flow velocity (v) in following ranges\n\nNote: Higher velocities might be acceptable in some installations and/or for short term operation.\n\n• v < 3 m/s at inlet side (note: v<1.5 m/s in manifolds splitting flow to several pumps in parallel)\n\n• v < 6 m/s at outlet side",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

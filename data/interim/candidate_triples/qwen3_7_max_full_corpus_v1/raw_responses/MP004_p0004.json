@@ -1,0 +1,112 @@
+{
+  "page_key": "MP004:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ce5b5d3c-28af-9be6-86bc-37023efa35b5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1089,
+    "prompt_tokens": 2300,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3389
+  },
+  "latency_ms": 12710,
+  "attempt": 1,
+  "prompt_sha256": "0c95bbfd5fd45de6cd8fff329d84b7625b3907705de80ecd4f777c9d691dfca2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "DESMI SA",
+        "head_canonical_zh": "DESMI SA自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "mechanical shaft seal",
+        "tail_canonical_zh": "机械轴封",
+        "tail_type": "Component",
+        "evidence_text": "DESMI SA is a single-stage self-priming centrifugal pump with stainless steel shaft, and mechanical shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "DESMI SA",
+        "head_canonical_zh": "DESMI SA自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "semi-open impeller",
+        "tail_canonical_zh": "半开式叶轮",
+        "tail_type": "Component",
+        "evidence_text": "The SA-pump is further equipped with a semi-open impeller, which does not choke as easily as a closed impeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "clack flap leakage",
+        "head_canonical_zh": "止回阀泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "loose all the priming water",
+        "tail_canonical_zh": "失去全部引水",
+        "tail_type": "Symptom",
+        "evidence_text": "the pump will not - in case of a clack flap leakage - loose all the priming water and consequently the priming ability.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction branch ... mounted well above impeller inlet",
+        "head_canonical_zh": "吸入支管高于叶轮入口安装",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "loose all the priming water",
+        "tail_canonical_zh": "失去全部引水",
+        "tail_type": "Symptom",
+        "evidence_text": "The suction branch of the pump is mounted well above impeller inlet. This is an advantage as the pump will not - in case of a clack flap leakage - loose all the priming water",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.75,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "delivery",
+        "head_canonical_zh": "交付货物",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Check on receipt that the delivery is complete and undamaged",
+        "tail_canonical_zh": "收货时检查交付完整且无损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check on receipt that the delivery is complete and undamaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

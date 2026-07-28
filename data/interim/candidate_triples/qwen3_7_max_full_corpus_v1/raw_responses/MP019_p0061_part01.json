@@ -1,0 +1,157 @@
+{
+  "page_key": "MP019:p0061",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2e089de6-34a8-9bc6-b245-a2bb703dc7de",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1571,
+    "prompt_tokens": 2501,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4072
+  },
+  "latency_ms": 17535,
+  "attempt": 1,
+  "prompt_sha256": "f15f88748f74908f7cd0cfd4e05f216b476311d44d7ffec28affec18e50b14e1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "humedad en el devanado",
+        "head_canonical_zh": "绕组受潮",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Mida la resistencia de aislamiento",
+        "tail_canonical_zh": "测量绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mida la resistencia de aislamiento antes de poner el motor en servicio o cuando se sospeche la existencia de humedad en el devanado.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "devanado está demasiado húmedo",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "debe secarse al horno",
+        "tail_canonical_zh": "烘箱干燥",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si no se alcanza el valor de resistencia indicado, el devanado está demasiado húmedo y debe secarse al horno.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "humedad es causada por agua marina",
+        "head_canonical_zh": "海水引起的潮湿",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "debe bobinarse de nuevo el motor",
+        "tail_canonical_zh": "电机重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Normalmente, si la humedad es causada por agua marina, debe bobinarse de nuevo el motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Arrancar el motor sin fuerza radial aplicada al eje",
+        "head_canonical_zh": "无径向力启动电机",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "dañar los rodamientos de los rodillos",
+        "tail_canonical_zh": "损坏滚子轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Arrancar el motor sin fuerza radial aplicada al eje puede dañar los rodamientos de los rodillos.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Arrancar el motor sin fuerza axial aplicada en la dirección correcta respecto del eje",
+        "head_canonical_zh": "未施加正确轴向力启动电机",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "dañar los rodamientos de contacto angular",
+        "tail_canonical_zh": "损坏角接触轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Arrancar el motor sin fuerza axial aplicada en la dirección correcta respecto del eje puede dañar los rodamientos de contacto angular.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Gire el eje con la mano para comprobar que gira sin dificultad",
+        "head_canonical_zh": "手动盘车检查转动顺畅",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "gira sin dificultad",
+        "tail_canonical_zh": "转动无卡滞",
+        "tail_type": "Symptom",
+        "evidence_text": "Gire el eje con la mano para comprobar que gira sin dificultad, si es posible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "cimentaciones",
+        "head_canonical_zh": "基础",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "pintarse para evitar la corrosión",
+        "tail_canonical_zh": "涂漆防腐",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Las cimentaciones de metal deben pintarse para evitar la corrosión.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "page_key": "MP017:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-51c86d7a-b570-9fcb-845f-79ee88284c00",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1995,
+    "prompt_tokens": 2329,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4324
+  },
+  "latency_ms": 25408,
+  "attempt": 1,
+  "prompt_sha256": "eec0cd2b0867b73ffdc97237214c2ea7d5b016c07d6ee186c1fb4b0a5d1a4aae",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump assembly",
+        "head_canonical_zh": "泵机组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "chains or cables used to lift and move the unit are improperly wrapped around the pump",
+        "tail_canonical_zh": "吊装链条或缆绳缠绕不当",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump assembly can be seriously damaged if the chains or cables used to lift and move the unit are improperly wrapped around the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "supported or shimmed",
+        "tail_canonical_zh": "支撑或加垫片调平",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump may have to be supported or shimmed to provide for level operation or to eliminate vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive vibration",
+        "head_canonical_zh": "过度振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "strain on the pump",
+        "tail_canonical_zh": "泵体受力应变",
+        "tail_type": "Cause",
+        "evidence_text": "Lines near the pump must be independently supported to avoid strain on the pump which could cause excessive vibration, decreased bearing life, and increased shaft and seal wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "decreased bearing life",
+        "head_canonical_zh": "轴承寿命缩短",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "strain on the pump",
+        "tail_canonical_zh": "泵体受力应变",
+        "tail_type": "Cause",
+        "evidence_text": "Lines near the pump must be independently supported to avoid strain on the pump which could cause excessive vibration, decreased bearing life, and increased shaft and seal wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "increased shaft and seal wear",
+        "head_canonical_zh": "轴与密封磨损加剧",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "strain on the pump",
+        "tail_canonical_zh": "泵体受力应变",
+        "tail_type": "Cause",
+        "evidence_text": "Lines near the pump must be independently supported to avoid strain on the pump which could cause excessive vibration, decreased bearing life, and increased shaft and seal wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "strain on the pump",
+        "head_canonical_zh": "泵体受力应变",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Lines near the pump must be independently supported",
+        "tail_canonical_zh": "泵附近管路独立支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lines near the pump must be independently supported to avoid strain on the pump which could cause excessive vibration, decreased bearing life, and increased shaft and seal wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air pockets",
+        "head_canonical_zh": "气囊",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "suction line must be as short and direct as possible",
+        "tail_canonical_zh": "吸入管线尽可能短且直",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To avoid air pockets which could affect pump priming, the suction line must be as short and direct as possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump priming",
+        "head_canonical_zh": "泵自吸引水",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "air pockets",
+        "tail_canonical_zh": "气囊",
+        "tail_type": "Cause",
+        "evidence_text": "To avoid air pockets which could affect pump priming, the suction line must be as short and direct as possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "collapse under suction",
+        "head_canonical_zh": "吸入侧塌陷",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "rigid-wall, reinforced type",
+        "tail_canonical_zh": "刚性壁增强型软管",
+        "tail_type": "Component",
+        "evidence_text": "If hose is used in suction lines, it must be the rigid-wall, reinforced type to prevent collapse under suction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

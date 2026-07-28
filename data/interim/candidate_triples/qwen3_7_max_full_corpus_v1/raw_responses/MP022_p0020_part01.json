@@ -1,0 +1,63 @@
+{
+  "page_key": "MP022:p0020",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bc55f2c4-9619-9daf-ad0e-5d2b7375a980",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 470,
+    "prompt_tokens": 3909,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4379
+  },
+  "latency_ms": 5827,
+  "attempt": 1,
+  "prompt_sha256": "717022161d5e52112f6e2946a7472cf27d54fcc9d26954e307bfa7cb9cef2c40",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "run the pump when both the suction side and the pressure side are blocked",
+        "head_canonical_zh": "吸入侧和排出侧均堵塞时运行泵",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "Risk of explosion",
+        "tail_canonical_zh": "爆炸风险",
+        "tail_type": "Risk",
+        "evidence_text": "Risk of explosion!!!\nNever run the pump when both the suction side and the pressure side are blocked.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Risk of explosion",
+        "head_canonical_zh": "爆炸风险",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Never run the pump when both the suction side and the pressure side are blocked",
+        "tail_canonical_zh": "禁止在吸入侧和排出侧均堵塞时运行泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Risk of explosion!!!\nNever run the pump when both the suction side and the pressure side are blocked.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

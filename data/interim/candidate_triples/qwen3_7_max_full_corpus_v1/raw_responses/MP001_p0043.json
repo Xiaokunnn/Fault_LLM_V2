@@ -1,0 +1,118 @@
+{
+  "page_key": "MP001:p0043",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b38ea7ff-f364-9ec9-be68-bdeafdd34b32",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1117,
+    "prompt_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2978
+  },
+  "latency_ms": 13953,
+  "attempt": 1,
+  "prompt_sha256": "81385dff5152c46b5a88527d1cb3fa16953fc6498631c5f94dc29577ab41c8f0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "poor connection",
+        "head_canonical_zh": "连接不良",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Infrared Thermograph",
+        "tail_canonical_zh": "红外热像仪",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Infrared Thermograph – Heater Block* ... The B phase connection on this heater block appears to have a poor connection.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "heat dissipates the farther away from the connection",
+        "head_canonical_zh": "热量随距离连接点越远而消散",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wire connection is loose or corroded",
+        "tail_canonical_zh": "电线连接松动或腐蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Note how the heat dissipates the farther away from the connection. That usually indicates that the wire connection is loose or corroded.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "poor",
+        "head_canonical_zh": "连接不良",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Infrared Thermograph",
+        "tail_canonical_zh": "红外热像仪",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Infrared Thermograph – Variable Speed Drive* ... several wire connections appear to be poor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wire expands with the heat of the load and then cools when the load is off",
+        "head_canonical_zh": "导线随负载发热膨胀并在负载停止时冷却",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "wire becomes loose",
+        "tail_canonical_zh": "电线变松",
+        "tail_type": "FaultMode",
+        "evidence_text": "the wire expands with the heat of the load and then cools when the load is off. The securing screw does not move so the wire becomes loose.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "new installations",
+        "head_canonical_zh": "新安装设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "checked after they have been in operation",
+        "tail_canonical_zh": "投运后检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All new installations should be checked after they have been in operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

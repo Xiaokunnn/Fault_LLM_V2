@@ -1,0 +1,60 @@
+{
+  "page_key": "MP005:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0fe29115-1be2-9b52-9eb0-349f89e17669",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 476,
+    "prompt_tokens": 2031,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2507
+  },
+  "latency_ms": 6615,
+  "attempt": 1,
+  "prompt_sha256": "896657e587d0da352d78079e263f108edfafc908804251cf9a579b15770e1ff5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "leakages (e.g. at the shaft seal) of hazardous fluids",
+        "head_canonical_zh": "危险流体泄漏（如轴封处）",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Contain leakages",
+        "tail_canonical_zh": "围堵泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Contain leakages (e.g. at the shaft seal) of hazardous fluids handled (e.g. explosive, toxic, hot)\n            so as to avoid any danger to persons and the environment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "contact guards",
+        "head_canonical_zh": "接触防护罩",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the guards\n            function properly",
+        "tail_canonical_zh": "检查防护罩功能正常",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The operator shall fit contact guards for hot, cold and moving parts and check that the guards\n            function properly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

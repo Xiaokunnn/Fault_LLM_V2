@@ -1,0 +1,110 @@
+{
+  "page_key": "MP001:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-df243440-b8c3-946e-b88b-eacc441913dd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1013,
+    "prompt_tokens": 2311,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3324
+  },
+  "latency_ms": 13196,
+  "attempt": 1,
+  "prompt_sha256": "1d863a19d73f55a56ae8fe79b0442a084876c3218b4dd4c637e7cb9ff16a8aea",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearing",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "properly lubricated",
+        "tail_canonical_zh": "正确润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the failure rate and failure pattern for a bearing drastically changes if it is not properly lubricated",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "potential failure",
+        "head_canonical_zh": "潜在故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "condition-monitoring task",
+        "tail_canonical_zh": "状态监测任务",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A condition-monitoring task is a scheduled task used to detect the potential onset of a failure so that action can be taken to prevent the functional failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "functional failure",
+        "head_canonical_zh": "功能故障",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "action",
+        "tail_canonical_zh": "处置措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "action can be taken to prevent the functional failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hidden failures",
+        "head_canonical_zh": "隐蔽故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "failure-finding task",
+        "tail_canonical_zh": "故障查找任务",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A failure-finding task is a scheduled task used to detect hidden failures when no condition-monitoring or planned-maintenance task is applicable",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "wear-out pattern",
+        "head_canonical_zh": "耗损型故障模式",
+        "head_type": "FailureMechanism",
+        "relation": "mitigated_by",
+        "tail_surface": "Planned-maintenance Tasks",
+        "tail_canonical_zh": "计划性维修任务",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "this type of task is applied when no condition-monitoring task is identified or justified, and the failure mode is characterized with a wear-out pattern",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  }
+}

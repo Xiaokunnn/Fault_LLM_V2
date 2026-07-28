@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0988",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-241ac540-8530-9a54-9937-3c5ac0449b8a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1009,
+    "prompt_tokens": 2320,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3329
+  },
+  "latency_ms": 13499,
+  "attempt": 1,
+  "prompt_sha256": "01103e130ecabbfaa6317dca93a66f461ee01fe8ad8b4080db136692d8842a5e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bilge alarm",
+        "head_canonical_zh": "舱底水报警",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "All alarm points and displays",
+        "tail_canonical_zh": "所有报警点和显示装置测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "●  All alarm points and displays                                      \n            ●  Operations of automatic controlled machinery                       \n            \n            ●  Transfer of standby auxiliary                                      \n            ●  Remote control of auxiliary machinery                              \n            \n            ●  Fire detection system                                              \n            ●  Bilge alarm",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loss of electric power",
+        "head_canonical_zh": "失电",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "simulated loss of generator to test",
+        "tail_canonical_zh": "模拟发电机失效测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The loss of electric power (see 4-9-6/13.5) is to be simulated with the main engine running and\n                 simulated loss of generator to test:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loss of electric power",
+        "head_canonical_zh": "失电",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic restoration of electric power by standby generator(s)",
+        "tail_canonical_zh": "备用发电机自动恢复供电",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The loss of electric power (see 4-9-6/13.5) is to be simulated with the main engine running and\n                 simulated loss of generator to test:                             \n                 \n                 ●  Automatic restoration of electric power by standby generator(s);",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loss of electric power",
+        "head_canonical_zh": "失电",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Automatic starting of vital auxiliaries",
+        "tail_canonical_zh": "重要辅机自动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The loss of electric power (see 4-9-6/13.5) is to be simulated with the main engine running and\n                 simulated loss of generator to test:                             \n                 \n                 ●  Automatic restoration of electric power by standby generator(s);\n                 ●  Automatic starting of vital auxiliaries; and",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

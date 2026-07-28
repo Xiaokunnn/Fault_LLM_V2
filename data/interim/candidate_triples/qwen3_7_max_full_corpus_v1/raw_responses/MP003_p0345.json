@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0345",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-88eb1635-f77c-99d8-9b4a-b8c53711ec35",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 519,
+    "prompt_tokens": 2351,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2870
+  },
+  "latency_ms": 6168,
+  "attempt": 1,
+  "prompt_sha256": "0a78e45be4d558b64a6ef5ef4e081e30cba80add5d367986b723d384e4c1c371",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "hydraulic fluid leakage",
+        "head_canonical_zh": "液压油泄漏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "handrails, gratings or other non-slip surfaces",
+        "tail_canonical_zh": "扶手、格栅或其他防滑表面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Working access is to be provided to the steering gear machinery and controls with handrails, gratings or other non-slip surfaces to ensure suitable working conditions in the event of hydraulic fluid leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "control system failure",
+        "head_canonical_zh": "控制系统故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "means to indicate the position of the rudder",
+        "tail_canonical_zh": "舵角指示装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "In the event of control system failure, or the need to operate the main or the auxiliary steering gear from within the steering compartment or from positions other than the navigation bridge, vessels of 500 gross tons and above are to be provided with means to indicate the position of the rudder at these positions where emergency steering is to be conducted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "page_key": "MP019:p0065",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a448794d-039a-93fa-bf06-98eda9e06795",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2096,
+    "prompt_tokens": 5083,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7179
+  },
+  "latency_ms": 24055,
+  "attempt": 1,
+  "prompt_sha256": "6d49c3a96b1ea0026dfad51959acf96fba7d3371e47e59f59b862cfe6b8c111a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motores utilizados con alimentación con convertidores ACS550 y ACS800",
+        "head_canonical_zh": "ACS550/ACS800变频供电电机",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "Aislamiento del devanado y filtros necesarios",
+        "tail_canonical_zh": "绕组绝缘与滤波器选型",
+        "tail_type": "Standard",
+        "evidence_text": "En el caso de un accionamiento de la serie ACS800 o ACS550 de ABB con unidad de entrada de diodos (tensión de CC no controlada), la selección del aislamiento de devanado y de los filtros puede hacerse de acuerdo con la tabla siguiente:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 500 V N",
+        "head_canonical_zh": "变频器额定电压≤500V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Aislamiento estándar de ABB",
+        "tail_canonical_zh": "ABB标准绝缘",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 500 V N Aislamiento estándar de ABB",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0065:t00:r001:c00",
+          "MP019:p0065:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "UN ≤ 500 V U ≤ 600 V N",
+        "head_canonical_zh": "变频器额定电压≤600V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Aislamiento estándar de ABB + filtros dU/dt O bien Aislamiento especial de ABB (código de variante 405)",
+        "tail_canonical_zh": "ABB标准绝缘加dU/dt滤波器或ABB特殊绝缘(变体405)",
+        "tail_type": "Standard",
+        "evidence_text": "UN ≤ 500 V U ≤ 600 V N Aislamiento estándar de ABB Aislamiento estándar de ABB + filtros dU/dt O bien Aislamiento especial de ABB (código de variante 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0065:t00:r002:c00",
+          "MP019:p0065:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N",
+        "head_canonical_zh": "变频器额定电压≤690V",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Aislamiento especial de ABB (código de variante 405) Y filtros dU/dt en la salida del convertidor",
+        "tail_canonical_zh": "ABB特殊绝缘(变体405)及变频器输出端dU/dt滤波器",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N (código de variante 405) Aislamiento especial de ABB (código de variante 405) Y filtros dU/dt en la salida del convertidor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0065:t00:r003:c00",
+          "MP019:p0065:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U ≤ 690 V N Y longitud de cable > 150 m",
+        "head_canonical_zh": "变频器额定电压≤690V且电缆长度>150m",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Aislamiento especial de ABB (código de variante 405)",
+        "tail_canonical_zh": "ABB特殊绝缘(变体405)",
+        "tail_type": "Standard",
+        "evidence_text": "U ≤ 690 V N Y longitud de cable > 150 m convertidor Aislamiento especial de ABB (código de variante 405)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0065:t00:r004:c00",
+          "MP019:p0065:t00:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "termistores PTC en los devanados del estátor",
+        "head_canonical_zh": "定子绕组PTC热敏电阻",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "conectarlos al convertidor de frecuencia por los medios adecuados",
+        "tail_canonical_zh": "通过适当方式连接至变频器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "La mayoría de los motores tratados en este manual están equipados con termistores PTC en los devanados del estátor. Se recomienda conectarlos al convertidor de frecuencia por los medios adecuados.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "esfuerzos de tensión mayores que la alimentación sinusoidal del devanado del motor",
+        "head_canonical_zh": "高于正弦供电的电压应力",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "aislamiento de devanado del motor, así como el filtro de la salida del convertidor, deben dimensionarse",
+        "tail_canonical_zh": "电机绕组绝缘及变频器输出滤波器需按规范选型",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Los variadores de frecuencia generan esfuerzos de tensión mayores que la alimentación sinusoidal del devanado del motor y por ello el aislamiento de devanado del motor, así como el filtro de la salida del convertidor, deben dimensionarse de acuerdo con las instrucciones siguientes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

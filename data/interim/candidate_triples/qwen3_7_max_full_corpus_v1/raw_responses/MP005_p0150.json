@@ -1,0 +1,138 @@
+{
+  "page_key": "MP005:p0150",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-48a683bb-d2f3-901a-9259-9cf8f2337d21",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1439,
+    "prompt_tokens": 1976,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3415
+  },
+  "latency_ms": 17610,
+  "attempt": 1,
+  "prompt_sha256": "46ab6bb456b4d26e85bed9121013d497d455b34fb5e54f48016e064216ae63df",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "motor shaft",
+        "head_canonical_zh": "电机轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check length from motor shaft end to motor flange being within +/-0.5 mm of the nominal length",
+        "tail_canonical_zh": "检查电机轴端至电机法兰长度是否在标称长度±0.5mm内",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check length from motor shaft end to motor flange being within +/-0.5 mm of the nominal length",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor shaft is too short",
+        "head_canonical_zh": "电机轴过短",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "fit a pointed screw glued into the motor shaft end to adjust the pump shaft to correct mounting position",
+        "tail_canonical_zh": "在电机轴端粘接尖头螺钉以调整泵轴至正确安装位置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the motor shaft is too short then fit a pointed screw glued into the motor shaft end to adjust the pump shaft to correct mounting position",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.88
+      },
+      {
+        "head_surface": "motor shaft is too long",
+        "head_canonical_zh": "电机轴过长",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "machined / milled to nominal length",
+        "tail_canonical_zh": "机加工或铣削至标称长度",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the motor shaft is too long then it has to be machined / milled to nominal length",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft sealing",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "checked if the shaft sealing have the correct length when mounted on the pump shaft",
+        "tail_canonical_zh": "检查轴封安装在泵轴上时长度是否正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It has to be checked if the shaft sealing have the correct length when mounted on the pump shaft",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electric motor",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "make sure that the electric motor is with locked bearing in the drive end – i.e. there must not be forced axial stroke of the electric motor",
+        "tail_canonical_zh": "确认电机驱动端轴承已锁定，即电机不得有强制轴向窜动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Also make sure that the electric motor is with locked bearing in the drive end – i.e. there must not be forced axial stroke of the electric motor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "rubber parts as standard are in EPDM",
+        "head_canonical_zh": "标准橡胶件为EPDM材质",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Never use mineral oil / fat as grease",
+        "tail_canonical_zh": "严禁使用矿物油或脂肪作为润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: Never use mineral oil / fat as grease, as rubber parts as standard are in EPDM.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

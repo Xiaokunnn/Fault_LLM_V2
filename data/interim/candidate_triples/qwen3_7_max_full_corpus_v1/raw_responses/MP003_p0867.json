@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0867",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4acc8512-a92f-94c8-9752-031500e8293e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 925,
+    "prompt_tokens": 2514,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3439
+  },
+  "latency_ms": 11535,
+  "attempt": 1,
+  "prompt_sha256": "f5ef164b138e13deb95257e7b22c8ddd1443c472bc601ce9d1ca69568f5dd128",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water leakage",
+        "head_canonical_zh": "水泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "leak detector feature",
+        "tail_canonical_zh": "泄漏检测装置",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Water-air heat exchangers of rotating propulsion machines for single systems (single generator and single motor), as specified in 4-8-5/5.5.1(b), are to have double wall tubes and be fitted with a leak detector feature to monitor for any water leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water leakage",
+        "head_canonical_zh": "水泄漏",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "visual and audible alarm",
+        "tail_canonical_zh": "声光报警",
+        "tail_type": "Symptom",
+        "evidence_text": "A visual and audible alarm is to be provided at a normally manned location to indicate detection of such water leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "excessive overspeeding of the propulsion motors",
+        "head_canonical_zh": "推进电机过度超速",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "overspeed protection device",
+        "tail_canonical_zh": "超速保护装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "An overspeed protection device is to be provided to prevent excessive overspeeding of the propulsion motors due to light loads, loss of propeller, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "light loads, loss of propeller, etc.",
+        "head_canonical_zh": "轻载、螺旋桨丢失等",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "excessive overspeeding of the propulsion motors",
+        "tail_canonical_zh": "推进电机过度超速",
+        "tail_type": "FaultMode",
+        "evidence_text": "excessive overspeeding of the propulsion motors due to light loads, loss of propeller, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

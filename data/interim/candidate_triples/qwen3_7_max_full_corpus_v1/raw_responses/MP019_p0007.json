@@ -1,0 +1,234 @@
+{
+  "page_key": "MP019:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5a306462-de6e-9bb4-bb63-afb245886806",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2533,
+    "prompt_tokens": 2284,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4817
+  },
+  "latency_ms": 30722,
+  "attempt": 1,
+  "prompt_sha256": "3b0e38b2aa13dc0db817051b82aca858bf2d1d31f770d5029edf3dff24a48b79",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Insulation resistance",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Measure insulation resistance before commissioning and when winding dampness is suspected",
+        "tail_canonical_zh": "调试前及怀疑绕组受潮时测量绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Measure insulation resistance before commissioning and when winding dampness is suspected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "winding dampness",
+        "head_canonical_zh": "绕组受潮",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Measure insulation resistance before commissioning and when winding dampness is suspected",
+        "tail_canonical_zh": "调试前及怀疑绕组受潮时测量绝缘电阻",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Measure insulation resistance before commissioning and when winding dampness is suspected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "reference value, i.e. 100 MΩ",
+        "head_canonical_zh": "参考值100 MΩ",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "Insulation resistance, corrected to 25°C, must exceed the reference value, i.e. 100 MΩ (measured with 500 or 1000 V DC)",
+        "tail_canonical_zh": "校正至25°C的绝缘电阻必须超过参考值100 MΩ（使用500或1000 V DC测量）",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Insulation resistance, corrected to 25°C, must exceed the reference value, i.e. 100 MΩ (measured with 500 or 1000 V DC).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "winding is too damp",
+        "head_canonical_zh": "绕组过潮",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "reference resistance value is not attained",
+        "tail_canonical_zh": "未达到参考电阻值",
+        "tail_type": "Symptom",
+        "evidence_text": "If the reference resistance value is not attained, the winding is too damp and must be oven dried.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "winding is too damp",
+        "head_canonical_zh": "绕组过潮",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "must be oven dried",
+        "tail_canonical_zh": "必须进行烘箱干燥",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the reference resistance value is not attained, the winding is too damp and must be oven dried.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.97,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "roller bearing",
+        "head_canonical_zh": "滚动轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "apply the specified quantity of grease",
+        "tail_canonical_zh": "加注规定量的润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motors equipped with regreasing nipples: When starting the motor for the first time, or after long storage, apply the specified quantity of grease.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Running the motor with no radial force applied to the shaft",
+        "head_canonical_zh": "电机轴无径向力运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the roller bearing",
+        "tail_canonical_zh": "损坏滚动轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Running the motor with no radial force applied to the shaft may damage the roller bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Running the motor with no axial force applied in the right direction in relation to the shaft",
+        "head_canonical_zh": "电机轴未施加正确方向轴向力运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the angular contact bearing",
+        "tail_canonical_zh": "损坏角接触轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Running the motor with no axial force applied in the right direction in relation to the shaft may damage the angular contact bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "free rotation",
+        "head_canonical_zh": "自由转动",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Turn shaft by hand to check free rotation if possible",
+        "tail_canonical_zh": "如可能手动盘车检查自由转动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Turn shaft by hand to check free rotation if possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rating plate values",
+        "head_canonical_zh": "铭牌参数",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "All rating plate values must be carefully checked",
+        "tail_canonical_zh": "必须仔细核对所有铭牌参数",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All rating plate values must be carefully checked to ensure that the motor protection and connection will be properly done.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Windings drenched in seawater",
+        "head_canonical_zh": "绕组海水浸泡",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "need to be rewound",
+        "tail_canonical_zh": "需要重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Windings drenched in seawater normally need to be rewound.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

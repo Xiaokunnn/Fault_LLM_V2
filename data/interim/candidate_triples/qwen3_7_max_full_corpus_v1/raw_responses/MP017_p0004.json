@@ -1,0 +1,132 @@
+{
+  "page_key": "MP017:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c15d757f-39ab-9be0-963b-116ca2e90286",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1294,
+    "prompt_tokens": 2167,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3461
+  },
+  "latency_ms": 15925,
+  "attempt": 1,
+  "prompt_sha256": "3b054838b7a3c5f63d2170d686dff2ca43a24ce7148eab1a9d3de40a44c073d3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump components",
+        "head_canonical_zh": "泵组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Do not operate the pump against a closed discharge valve for long periods of time",
+        "tail_canonical_zh": "避免长时间关闭排出阀运行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not operate the pump against a closed discharge valve for long periods of time. If operated against a closed discharge valve, pump components will deteriorate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump components will deteriorate",
+        "head_canonical_zh": "泵组件劣化",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "operated against a closed discharge valve",
+        "tail_canonical_zh": "关闭排出阀运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "If operated against a closed discharge valve, pump components will deteriorate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheated",
+        "head_canonical_zh": "过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check the temperature before opening any covers, plates, or plugs",
+        "tail_canonical_zh": "开启盖板前检查温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the temperature before opening any covers, plates, or plugs",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Self-Priming Centrifugal pumps",
+        "head_canonical_zh": "自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Drain the pump",
+        "tail_canonical_zh": "排放泵内液体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before attempting to open or service the pump: ... 7. Drain the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Self-Priming Centrifugal pumps",
+        "head_canonical_zh": "自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Vent the pump slowly and cautiously",
+        "tail_canonical_zh": "缓慢谨慎地泄放泵压",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before attempting to open or service the pump: ... 6. Vent the pump slowly and cautiously.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Self-Priming Centrifugal pumps",
+        "head_canonical_zh": "自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Close the suction and discharge valves",
+        "tail_canonical_zh": "关闭吸入和排出阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before attempting to open or service the pump: ... 5. Close the suction and discharge valves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

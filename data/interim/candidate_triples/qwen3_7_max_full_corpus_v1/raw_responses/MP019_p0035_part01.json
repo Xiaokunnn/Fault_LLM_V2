@@ -1,0 +1,211 @@
+{
+  "page_key": "MP019:p0035",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-032cc823-61f6-9bc8-aed5-c3b41b56a77c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2352,
+    "prompt_tokens": 2496,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4848
+  },
+  "latency_ms": 24643,
+  "attempt": 1,
+  "prompt_sha256": "67d186189a1fd2239c58db9f200d59395c0669d295649d623ce162d067faea0e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Ungeeignete Schmiermittel",
+        "head_canonical_zh": "不合适的润滑剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Lager beschädigen",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ungeeignete Schmiermittel können die Lager beschädigen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Schmiermittel, denen EP-Zusätze beigemengt sind",
+        "head_canonical_zh": "含EP添加剂的润滑剂",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "hohen Lager-Temperaturen bei Baugrößen von 280 bis 450",
+        "tail_canonical_zh": "280至450机座号下的高轴承温度",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Schmiermittel, denen EP-Zusätze beigemengt sind, sind unter hohen Lager-Temperaturen bei Baugrößen von 280 bis 450 nicht zu empfehlen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Verschiedene Fetttypen nicht miteinander vermischen",
+        "head_canonical_zh": "禁止混合不同油脂类型",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "Ungeeignete Schmiermittel können die Lager beschädigen",
+        "tail_canonical_zh": "不合适的润滑剂可能损坏轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Verschiedene Fetttypen nicht miteinander vermischen. Ungeeignete Schmiermittel können die Lager beschädigen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kugellagern",
+        "head_canonical_zh": "球轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Nachschmierung",
+        "tail_canonical_zh": "补充润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Für die Nachschmierung darf nur ein speziell auf die Schmierung von Kugellagern abgestimmtes Fett",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vertikal montierte Motoren",
+        "head_canonical_zh": "立式安装电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "steiferer NLGI Grad",
+        "tail_canonical_zh": "较硬的NLGI等级",
+        "tail_type": "Standard",
+        "evidence_text": "Für vertikal montierte Motoren und unter heißen Betriebsbedingungen ist ein steiferer NLGI Grad zu empfehlen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "heißen Betriebsbedingungen",
+        "head_canonical_zh": "高温运行条件",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "steiferer NLGI Grad",
+        "tail_canonical_zh": "较硬的NLGI等级",
+        "tail_type": "Standard",
+        "evidence_text": "Für vertikal montierte Motoren und unter heißen Betriebsbedingungen ist ein steiferer NLGI Grad zu empfehlen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "2-polige Maschinen mit hoher Drehzahl",
+        "head_canonical_zh": "高转速2极电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Hochgeschwindigkeitsfette verwenden",
+        "tail_canonical_zh": "使用高速润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Stets Hochgeschwindigkeitsfette verwenden für 2-polige Maschinen mit hoher Drehzahl, bei denen der Drehzahlfaktor höher als 480.000 ist",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motortypen M2CA, M2FA, M2CG und M2FG, Baugröße 355 bis 400, 2-polige Maschinen",
+        "head_canonical_zh": "M2CA/M2FA/M2CG/M2FG型355-400机座2极电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Hochgeschwindigkeitsschmiermittel",
+        "tail_canonical_zh": "高速润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Das Hochgeschwindigkeitsschmiermittel wird auch für die Motortypen M2CA, M2FA, M2CG und M2FG, Baugröße 355 bis 400, 2-polige Maschinen verwendet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Graugussmotoren mit hoher Drehzahl",
+        "head_canonical_zh": "高转速灰铸铁电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Klüber Klüber Quiet BQH 72-102 (Polyuretan-Basis)",
+        "tail_canonical_zh": "Klüber Quiet BQH 72-102(聚氨酯基)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Folgende Schmierfette können mit Graugussmotoren mit hoher Drehzahl verwendet werden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Verwendung anderer Schmierfette",
+        "head_canonical_zh": "使用其他润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Intervalle verringern",
+        "tail_canonical_zh": "润滑间隔缩短",
+        "tail_type": "Symptom",
+        "evidence_text": "Bei Verwendung anderer Schmierfette können sich die Intervalle verringern.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

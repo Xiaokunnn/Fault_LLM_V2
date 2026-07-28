@@ -1,0 +1,366 @@
+{
+  "page_key": "MP017:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5ee0aa4b-5171-981d-ac5f-b119e87bf9e8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4003,
+    "prompt_tokens": 2350,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6353
+  },
+  "latency_ms": 50922,
+  "attempt": 1,
+  "prompt_sha256": "3b8a381353db0292d4bf5c9b33547be680e47f0813e3292adb14e24b0f8d5e6c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Reverse rotation",
+        "head_canonical_zh": "反转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "loosen the impeller",
+        "tail_canonical_zh": "叶轮松动",
+        "tail_type": "FaultMode",
+        "evidence_text": "Reverse rotation could loosen the impeller and seriously damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Reverse rotation",
+        "head_canonical_zh": "反转",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "seriously damage the pump",
+        "tail_canonical_zh": "泵严重损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Reverse rotation could loosen the impeller and seriously damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect rotation on a three-phase motor",
+        "head_canonical_zh": "三相电机转向错误",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "interchange any two of the three phase wires",
+        "tail_canonical_zh": "交换任意两根三相线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a three-phase motor, have a qualified electrician interchange any two of the three phase wires to change direction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate the pump against a closed discharge throttling valve for long periods of time",
+        "head_canonical_zh": "长时间关闭排出节流阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "pump components will deteriorate",
+        "tail_canonical_zh": "泵部件劣化",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not operate the pump against a closed discharge throttling valve for long periods of time. If operated against a closed discharge throttling valve, pump components will deteriorate",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate the pump against a closed discharge throttling valve",
+        "head_canonical_zh": "关闭排出节流阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "liquid could come to a boil",
+        "tail_canonical_zh": "液体沸腾",
+        "tail_type": "Symptom",
+        "evidence_text": "If operated against a closed discharge throttling valve, pump components will deteriorate, and the liquid could come to a boil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operate the pump against a closed discharge throttling valve",
+        "head_canonical_zh": "关闭排出节流阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "pump casing to rupture or explode",
+        "tail_canonical_zh": "泵壳破裂或爆炸",
+        "tail_type": "FaultMode",
+        "evidence_text": "If operated against a closed discharge throttling valve, pump components will deteriorate, and the liquid could come to a boil, build pressure, and cause the pump casing to rupture or explode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "No leakage should be visible at pump mating surfaces, or at pump connections or fittings",
+        "tail_canonical_zh": "检查泵配合面及连接处无可见泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Leakage No leakage should be visible at pump mating surfaces, or at pump connections or fittings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump mating surfaces, or at pump connections or fittings",
+        "head_canonical_zh": "泵配合面或连接件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Keep all line connections and fittings tight",
+        "tail_canonical_zh": "保持所有管路连接和配件紧固",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Keep all line connections and fittings tight to maintain maximum pump efficiency.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "caused_by",
+        "tail_surface": "operated with the valves in the suction or discharge lines closed",
+        "tail_canonical_zh": "吸入或排出管线阀门关闭运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Overheating can occur if operated with the valves in the suction or discharge lines closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating against closed valves",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "liquid to a boil",
+        "tail_canonical_zh": "液体沸腾",
+        "tail_type": "Symptom",
+        "evidence_text": "Operating against closed valves could bring the liquid to a boil, build pressure, and cause the pump to rupture or explode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating against closed valves",
+        "head_canonical_zh": "关阀运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "pump to rupture or explode",
+        "tail_canonical_zh": "泵破裂或爆炸",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operating against closed valves could bring the liquid to a boil, build pressure, and cause the pump to rupture or explode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "stop the pump and allow it to cool before servicing it",
+        "tail_canonical_zh": "停泵并冷却后再维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating occurs, stop the pump and allow it to cool before servicing it.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Refill the pump casing with cool liquid",
+        "tail_canonical_zh": "用冷液重新灌注泵壳",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating occurs, stop the pump and allow it to cool before servicing it. Refill the pump casing with cool liquid.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "over-heated pump",
+        "head_canonical_zh": "过热泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Allow an over-heated pump to completely cool before servicing",
+        "tail_canonical_zh": "维修前让过热泵完全冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Allow an over-heated pump to completely cool before servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "over-heated pump",
+        "head_canonical_zh": "过热泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Do not remove plates, covers, gauges, or fittings from an over-heated pump",
+        "tail_canonical_zh": "勿从过热泵上拆卸板盖仪表或配件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not remove plates, covers, gauges, or fittings from an over-heated pump. Liquid within the pump can reach boiling temperatures, and vapor pressure within the pump can cause parts being disengaged to be ejected with great force.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump fails to prime within five minutes",
+        "head_canonical_zh": "五分钟内未自吸成功",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check the suction line for leaks",
+        "tail_canonical_zh": "检查吸入管路泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If the pump fails to prime within five minutes, stop it and check the suction line for leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Priming",
+        "head_canonical_zh": "自吸过程",
+        "head_type": "OperatingCondition",
+        "relation": "indicates",
+        "tail_surface": "positive reading on the discharge pressure gauge",
+        "tail_canonical_zh": "排出压力表正读数",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Priming is indicated by a positive reading on the discharge pressure gauge or by a quieter operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Priming",
+        "head_canonical_zh": "自吸过程",
+        "head_type": "OperatingCondition",
+        "relation": "indicates",
+        "tail_surface": "quieter operation",
+        "tail_canonical_zh": "运行声音变小",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Priming is indicated by a positive reading on the discharge pressure gauge or by a quieter operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

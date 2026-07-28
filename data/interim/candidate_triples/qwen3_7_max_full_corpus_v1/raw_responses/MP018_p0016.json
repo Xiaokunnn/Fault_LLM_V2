@@ -1,0 +1,184 @@
+{
+  "page_key": "MP018:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-70879c63-7fa7-945a-86bf-e081ebadc225",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1979,
+    "prompt_tokens": 21698,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 23677
+  },
+  "latency_ms": 26961,
+  "attempt": 1,
+  "prompt_sha256": "bd119b4be6b3d2328a74dc0f5a858e48482934d35f765a0000c3e0064e230e36",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "GREASE LUBRICATED BEARINGS",
+        "head_canonical_zh": "脂润滑轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "SUGGESTED RE-LUBRICATION INTERVALS",
+        "tail_canonical_zh": "建议再润滑间隔",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "SUGGESTED RE-LUBRICATION INTERVALS FOR VARIOUS ENVIRONMENTAL, OPERATING AND TEMPERATURE CONDTIONS (GREASE LUBRICATED BEARINGS)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "GREASE LUBRICATED BEARINGS",
+        "head_canonical_zh": "脂润滑轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check grease conditions for oiliness and dirt",
+        "tail_canonical_zh": "检查润滑脂油性和污垢状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check grease conditions for oiliness and dirt and adjust greasing frequency accordingly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sudden rises",
+        "head_canonical_zh": "温度骤升",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "need for grease",
+        "tail_canonical_zh": "需要润滑脂",
+        "tail_type": "Cause",
+        "evidence_text": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sudden rises",
+        "head_canonical_zh": "温度骤升",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "over lubrication",
+        "tail_canonical_zh": "过度润滑",
+        "tail_type": "Cause",
+        "evidence_text": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operating temperatures",
+        "head_canonical_zh": "运行温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Watch",
+        "tail_canonical_zh": "监视",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Extreme dirt",
+        "head_canonical_zh": "极度脏污环境",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Daily flushing out dirt",
+        "tail_canonical_zh": "每日冲洗污垢",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Extreme dirt Dry Light to medium Slow to medium 0F (-18C) 200F (93C) Daily flushing out dirt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP018:p0016:t00:r006:c00",
+          "MP018:p0016:t00:r006:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High humidity Direct water Splash",
+        "head_canonical_zh": "高湿度直接进水飞溅",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Lithium or other corrosion control grease",
+        "tail_canonical_zh": "锂基或其他防腐蚀润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "High humidity Direct water Splash Light to heavy Slow to medium 32F (0C) 200F (93C) 1 to 4 weeks grease at shutdowns Lithium or other corrosion control grease",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP018:p0016:t00:r007:c01",
+          "MP018:p0016:t00:r007:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Possible frost",
+        "head_canonical_zh": "可能结霜",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Wide temperature range Diester-type greases (Silicone-Diester- Polyester lubricants)",
+        "tail_canonical_zh": "宽温范围双酯型润滑脂(硅酮-双酯-聚酯润滑剂)",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Possible frost Light to heavy Slow to medium -65F (-54C) +250F (121C) 1 to 4 weeks grease at shutdown Wide temperature range Diester-type greases (Silicone-Diester- Polyester lubricants)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP018:p0016:t00:r011:c01",
+          "MP018:p0016:t00:r011:c07"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

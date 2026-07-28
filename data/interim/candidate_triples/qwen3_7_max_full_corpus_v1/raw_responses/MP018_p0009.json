@@ -1,0 +1,294 @@
+{
+  "page_key": "MP018:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-65358c38-60b9-95db-857d-40b9ef5d82d7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3149,
+    "prompt_tokens": 2344,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5493
+  },
+  "latency_ms": 40152,
+  "attempt": 1,
+  "prompt_sha256": "2865def2cfdbc6b2ea1f92326914c1ddb0fc793aa384045b9016466f224c71bc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Grout",
+        "head_canonical_zh": "灌浆层",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "Use a non-shrinking grout",
+        "tail_canonical_zh": "使用无收缩灌浆料",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Grout compensates for unevenness in the foundation and distributes the weight of the unit uniformly on the foundation. It also prevents lateral shifting of the baseplate and reduces vibration. Use a non-shrinking grout.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Grout",
+        "tail_canonical_zh": "灌浆层",
+        "tail_type": "Component",
+        "evidence_text": "It also prevents lateral shifting of the baseplate and reduces vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "check alignment",
+        "tail_canonical_zh": "检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "After the grout has hardened (usually about 48 hours), thoroughly tighten foundation bolts and check alignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump out of alignment",
+        "head_canonical_zh": "泵失中",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The piping must never be pulled into position by the flange bolts",
+        "tail_canonical_zh": "严禁通过法兰螺栓强行拉管就位",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The piping must never be pulled into position by the flange bolts. Such action may draw the pump out of alignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "strain on pump casing",
+        "head_canonical_zh": "泵壳受力",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Pipes should be supported independently of pump",
+        "tail_canonical_zh": "管道应独立支撑不依附于泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pipes should be supported independently of pump so as not to put any strain on pump casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "faulty operation",
+        "head_canonical_zh": "运行故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Suction piping, if not properly installed",
+        "tail_canonical_zh": "吸入管路安装不当",
+        "tail_type": "Cause",
+        "evidence_text": "Suction piping, if not properly installed, is a potential source of faulty operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air leaks",
+        "head_canonical_zh": "空气泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Suction lines should be free of air leaks",
+        "tail_canonical_zh": "吸入管线应无空气泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Suction lines should be free of air leaks, and arranged so there are no loops or high spots in which air can be trapped.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air can be trapped",
+        "head_canonical_zh": "积气",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "arranged so there are no loops or high spots",
+        "tail_canonical_zh": "布置避免环路或高点",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Suction lines should be free of air leaks, and arranged so there are no loops or high spots in which air can be trapped.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vortices",
+        "head_canonical_zh": "漩涡",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "A large suction pipe",
+        "tail_canonical_zh": "大口径吸入管",
+        "tail_type": "Component",
+        "evidence_text": "A large suction pipe will usually prevent the formation of vortices, especially if the entrance is flared.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "noisy operation",
+        "head_canonical_zh": "噪声运行",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "disturbance in the flow caused by the sharp bend so near the pump inlet",
+        "tail_canonical_zh": "泵入口附近急弯引起的流场扰动",
+        "tail_type": "Cause",
+        "evidence_text": "The disturbance in the flow caused by the sharp bend so near the pump inlet may result in noisy operation, loss in efficiency and capacity, and heavy end thrust.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "loss in efficiency and capacity",
+        "head_canonical_zh": "效率和流量下降",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "disturbance in the flow caused by the sharp bend so near the pump inlet",
+        "tail_canonical_zh": "泵入口附近急弯引起的流场扰动",
+        "tail_type": "Cause",
+        "evidence_text": "The disturbance in the flow caused by the sharp bend so near the pump inlet may result in noisy operation, loss in efficiency and capacity, and heavy end thrust.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "heavy end thrust",
+        "head_canonical_zh": "轴向推力过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "disturbance in the flow caused by the sharp bend so near the pump inlet",
+        "tail_canonical_zh": "泵入口附近急弯引起的流场扰动",
+        "tail_type": "Cause",
+        "evidence_text": "The disturbance in the flow caused by the sharp bend so near the pump inlet may result in noisy operation, loss in efficiency and capacity, and heavy end thrust.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "foreign matter that might be drawn into impeller passages and clog them",
+        "head_canonical_zh": "异物进入叶轮流道造成堵塞",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "suction piping and pump should be inspected internally",
+        "tail_canonical_zh": "吸入管路和泵内部检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Prior to installing pump, suction piping and pump should be inspected internally for foreign matter that might be drawn into impeller passages and clog them.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "openings in the screen",
+        "head_canonical_zh": "滤网开孔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "checked and cleaned periodically",
+        "tail_canonical_zh": "定期检查清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The openings in the screen must be checked and cleaned periodically.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

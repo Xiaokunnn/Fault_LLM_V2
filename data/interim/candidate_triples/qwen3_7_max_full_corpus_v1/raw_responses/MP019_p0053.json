@@ -1,0 +1,113 @@
+{
+  "page_key": "MP019:p0053",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-6979d27f-b88d-94fc-962e-42f1af16fa6c",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 12489,
+  "attempt": 1,
+  "prompt_sha256": "ac8feab45f116bc803e9152300741c805ad78f43ddf2c4d359f500b9e8f561cb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "regraissage",
+        "tail_canonical_zh": "再润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pour le regraissage, seules les graisses spéciales pour roulements à billes présentant les propriétés suivantes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubrifiants non miscibles",
+        "head_canonical_zh": "不相容润滑剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "endommager les roulements",
+        "tail_canonical_zh": "损坏轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Des lubrifiants non miscibles peuvent endommager les roulements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "mélangez pas différents types de graisse",
+        "head_canonical_zh": "禁止混合不同油脂",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "endommager les roulements",
+        "tail_canonical_zh": "损坏轴承",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ne mélangez pas différents types de graisse. Des lubrifiants non miscibles peuvent endommager les roulements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "L'utilisation d'autres graisses",
+        "head_canonical_zh": "使用其他油脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "réduire l'intervalle",
+        "tail_canonical_zh": "缩短润滑间隔",
+        "tail_type": "Symptom",
+        "evidence_text": "L'utilisation d'autres graisses peut réduire l'intervalle.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "qualité correspond aux lubrifiants mentionnés précédemment",
+        "head_canonical_zh": "验证润滑剂质量符合前述标准",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Vérifiez auprès du fabricant",
+        "tail_canonical_zh": "向制造商核实",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Vérifiez auprès du fabricant que la qualité correspond aux lubrifiants mentionnés précédemment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

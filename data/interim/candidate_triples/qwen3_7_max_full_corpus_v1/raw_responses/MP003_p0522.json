@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0522",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ae690aa4-d5e3-92c9-8c54-73a9b83b9ff5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 930,
+    "prompt_tokens": 2415,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3345
+  },
+  "latency_ms": 11779,
+  "attempt": 1,
+  "prompt_sha256": "b8751a3b9536c396bf5ed7327add8168ffa240fd377089ecbe2d9a891e588ebf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Safety relief valves",
+        "head_canonical_zh": "安全泄放阀",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "recognized standard for relieving capacity",
+        "tail_canonical_zh": "泄放能力认可标准",
+        "tail_type": "Standard",
+        "evidence_text": "In general, they are also to comply with a recognized standard for relieving capacity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Valves",
+        "head_canonical_zh": "阀门",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "tested to a burst pressure without indication of failure or leakage",
+        "tail_canonical_zh": "爆破压力试验无失效或泄漏指示",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Valves are to be tested to a burst pressure without indication of failure or leakage at:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "non-standard filters or strainers",
+        "head_canonical_zh": "非标过滤器或滤器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "design review, shop inspection and testing",
+        "tail_canonical_zh": "设计审查、车间检验和试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "For non-standard filters or strainers, also referred to as non-standard fluid conditioner fittings, design review, shop inspection and testing in accordance with the requirements of the Rules as they apply to items a), b) or c) of 4-4-1/TABLE 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "All Classes I and II pipes and integral fittings",
+        "head_canonical_zh": "所有I级和II级管路及整体附件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatically tested",
+        "tail_canonical_zh": "液压试验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All Classes I and II pipes and integral fittings after completion of shop fabrication, but before insulation and coating, are to be hydrostatically tested, preferably before installation, in the presence of a Surveyor at the following pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

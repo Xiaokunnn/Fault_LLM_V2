@@ -1,0 +1,93 @@
+{
+  "page_key": "MP015:p0034",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-5a6b24db-b4f4-92f4-b306-4aefa8203e95",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 877,
+    "prompt_tokens": 2183,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3060
+  },
+  "latency_ms": 10670,
+  "attempt": 1,
+  "prompt_sha256": "1e646aa842ca4850b8df2b4365b7648b21b98d41973b9393ac9ed7538dc9e41c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Back-Pull-Out system",
+        "tail_canonical_zh": "后拉式拆装系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pumps are designed with a Back-Pull-Out system. This means that almost the whole pump can be dismantled without having to detach the suction and delivery piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing bracket (2100)",
+        "head_canonical_zh": "轴承支架",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Support it with a beam or hang it in a pulley sling",
+        "tail_canonical_zh": "用梁支撑或用滑轮吊索悬挂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The entire bearing bracket of large pumps is very heavy. Support it with a beam or hang it in a pulley sling.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump and motor shaft",
+        "head_canonical_zh": "泵和电机轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the alignment of pump and motor shaft",
+        "tail_canonical_zh": "检查泵和电机轴的对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the alignment of pump and motor shaft, see paragraph 3.4.3 \"Alignment of the coupling\".",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "gasket (0300)",
+        "head_canonical_zh": "垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit a new gasket (0300) into the pump casing",
+        "tail_canonical_zh": "将新垫片装入泵壳",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit a new gasket (0300) into the pump casing and fit the entire bearing bracket back into the pump casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "page_key": "MP002:p0076",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4f226e96-48de-9a1d-8e89-a3f466b3ff4c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1213,
+    "prompt_tokens": 12106,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13319
+  },
+  "latency_ms": 20152,
+  "attempt": 1,
+  "prompt_sha256": "bcf02212606f38bf9421770b2b7574f330be5e9939886d62f8463dfaeeee06f2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Wear-out",
+        "head_canonical_zh": "磨损失效",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "Reduced production rate",
+        "tail_canonical_zh": "生产率降低",
+        "tail_type": "Symptom",
+        "evidence_text": "tuo-raeW\nnoitcudorP\netar\ndecuder",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0076:t00:r011:c02",
+          "MP002:p0076:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Degraded head",
+        "head_canonical_zh": "扬程下降",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Wear-out",
+        "tail_canonical_zh": "磨损失效",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "tuo-raeW\nedargeD\ndaeh\nd",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0076:t00:r011:c02",
+          "MP002:p0076:t00:r012:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration analysis",
+        "head_canonical_zh": "振动分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Degraded head",
+        "tail_canonical_zh": "扬程下降",
+        "tail_type": "Symptom",
+        "evidence_text": "sisylana noitarbiv edargeD daeh d",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.3,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vibration analysis",
+        "head_canonical_zh": "振动分析",
+        "head_type": "InspectionMethod",
+        "relation": "maintained_by",
+        "tail_surface": "Maintain vibration analysis at 1 month interval",
+        "tail_canonical_zh": "保持每月一次振动分析",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "niatniaM .1 sisylana noitarbiv htnom 1 ta",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.5,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "rebuilding task",
+        "head_canonical_zh": "重建任务",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Increase rebuilding task interval to 2 years",
+        "tail_canonical_zh": "将重建任务间隔增加至2年",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "esaercnI .2 ksat gnidliuber sraey 2 ot lavretni",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.75
+      }
+    ],
+    "warnings": [
+      "Table text is reversed and fragmented; extracted relations rely on reconstructed word order with low confidence.",
+      "No explicit pump component mentioned on this page; triples are mapped to target fault classes based on generic machinery reliability context.",
+      "Evidence spans for E1 are reconstructed from scattered page text due to OCR/layout issues; confidence penalized accordingly."
+    ]
+  }
+}

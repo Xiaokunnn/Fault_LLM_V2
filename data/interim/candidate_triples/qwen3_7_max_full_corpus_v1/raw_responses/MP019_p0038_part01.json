@@ -1,0 +1,1525 @@
+{
+  "page_key": "MP019:p0038",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dca03eb9-1e2a-930e-9401-8a5cbb69de66",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 17608,
+    "prompt_tokens": 21972,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 39580
+  },
+  "latency_ms": 198556,
+  "attempt": 1,
+  "prompt_sha256": "c7c3eff3a6848743002fd89ba4225a7dfa5bafb10916773407e6098bdfc94f1e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor läuft zu langsam hoch und/oder zieht zu starken Strom",
+        "head_canonical_zh": "电机转速过低或电流过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Last zu hoch",
+        "tail_canonical_zh": "负载过高",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft zu langsam\nhoch und/oder zieht zu\nstarken Strom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r001:c02",
+          "MP019:p0038:t00:r001:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft zu langsam hoch und/oder zieht zu starken Strom",
+        "head_canonical_zh": "电机转速过低或电流过大",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Last reduzieren.",
+        "tail_canonical_zh": "降低负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor läuft zu langsam\nhoch und/oder zieht zu\nstarken Strom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r001:c02",
+          "MP019:p0038:t00:r001:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft zu langsam hoch und/oder zieht zu starken Strom",
+        "head_canonical_zh": "电机转速过低或电流过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Spannung beim Anlauf zu niedrig",
+        "tail_canonical_zh": "启动电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft zu langsam\nhoch und/oder zieht zu\nstarken Strom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r001:c02",
+          "MP019:p0038:t00:r002:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spannung beim Anlauf zu niedrig",
+        "head_canonical_zh": "启动电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Auf zu hohen Widerstand überprüfen. Angemessenen\nLeitungsquerschnitt verwenden.",
+        "tail_canonical_zh": "检查电阻过高并使用合适导线截面",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Spannung beim Anlauf zu niedrig",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r002:c03",
+          "MP019:p0038:t00:r002:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor läuft zu langsam hoch und/oder zieht zu starken Strom",
+        "head_canonical_zh": "电机转速过低或电流过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Defekter Käfigrotor",
+        "tail_canonical_zh": "鼠笼转子损坏",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft zu langsam\nhoch und/oder zieht zu\nstarken Strom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r001:c02",
+          "MP019:p0038:t00:r003:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Defekter Käfigrotor",
+        "head_canonical_zh": "鼠笼转子损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Neuen Rotor einbauen.",
+        "tail_canonical_zh": "安装新转子",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defekter Käfigrotor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r003:c03",
+          "MP019:p0038:t00:r003:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor läuft zu langsam hoch und/oder zieht zu starken Strom",
+        "head_canonical_zh": "电机转速过低或电流过大",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Netzspannung zu niedrig",
+        "tail_canonical_zh": "电网电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor läuft zu langsam\nhoch und/oder zieht zu\nstarken Strom",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r001:c02",
+          "MP019:p0038:t00:r004:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Netzspannung zu niedrig",
+        "head_canonical_zh": "电网电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Spannungsversorgung klären.",
+        "tail_canonical_zh": "查明电源供电情况",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Netzspannung zu niedrig",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r004:c03",
+          "MP019:p0038:t00:r004:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Falsche Drehrichtung",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Falsche Phasenfolge",
+        "tail_canonical_zh": "相序错误",
+        "tail_type": "Cause",
+        "evidence_text": "Falsche Drehrichtung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r005:c02",
+          "MP019:p0038:t00:r005:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Falsche Drehrichtung",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Anschlüsse am Motor bzw. an der Schalttafel vertauschen.",
+        "tail_canonical_zh": "调换电机或开关柜接线",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Falsche Drehrichtung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r005:c02",
+          "MP019:p0038:t00:r005:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Überlast",
+        "tail_canonical_zh": "过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r006:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Last reduzieren.",
+        "tail_canonical_zh": "降低负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r006:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Belüftungsöffnungen sind möglicher-\nweise durch Schmutz verstopft und\nverhindern eine ordnungsgemäße\nKühlung des Motors",
+        "tail_canonical_zh": "通风口被污物堵塞导致冷却不良",
+        "tail_type": "Cause",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r007:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Belüftungsöffnungen sind möglicher-\nweise durch Schmutz verstopft und\nverhindern eine ordnungsgemäße\nKühlung des Motors",
+        "head_canonical_zh": "通风口被污物堵塞导致冷却不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Belüftungsöffnungen säubern und kontrollieren, ob ein\nkontinuierlicher Luftstrom den Motor kühlt.",
+        "tail_canonical_zh": "清洁通风口并检查持续气流冷却电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Belüftungsöffnungen sind möglicher-\nweise durch Schmutz verstopft und\nverhindern eine ordnungsgemäße\nKühlung des Motors",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r007:c03",
+          "MP019:p0038:t00:r007:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Eine Motorphase ist möglicherweise\nausgefallen",
+        "tail_canonical_zh": "电机可能缺相",
+        "tail_type": "Cause",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r008:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Eine Motorphase ist möglicherweise\nausgefallen",
+        "head_canonical_zh": "电机可能缺相",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollieren, ob alle Leitungen richtig angeschlossen sind.",
+        "tail_canonical_zh": "检查所有线路连接是否正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Eine Motorphase ist möglicherweise\nausgefallen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r008:c03",
+          "MP019:p0038:t00:r008:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Erdschluss",
+        "tail_canonical_zh": "接地故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r009:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Erdschluss",
+        "head_canonical_zh": "接地故障",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor muss neu gewickelt werden",
+        "tail_canonical_zh": "电机必须重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Erdschluss",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r009:c03",
+          "MP019:p0038:t00:r009:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor überhitzt bei Betrieb unter Last",
+        "head_canonical_zh": "带载运行时电机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Unsymmetrische Klemmenspannung",
+        "tail_canonical_zh": "端子电压不平衡",
+        "tail_type": "Cause",
+        "evidence_text": "Motor überhitzt bei Betrieb\nunter Last",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r006:c02",
+          "MP019:p0038:t00:r010:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Unsymmetrische Klemmenspannung",
+        "head_canonical_zh": "端子电压不平衡",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Anschlussleitungen, Anschlüsse und Transformatoren auf\nFehler überprüfen.",
+        "tail_canonical_zh": "检查连接电缆、接头和变压器是否有故障",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Unsymmetrische Klemmenspannung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r010:c03",
+          "MP019:p0038:t00:r010:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Motor schlecht ausgerichtet",
+        "tail_canonical_zh": "电机对中不良",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r011:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor schlecht ausgerichtet",
+        "head_canonical_zh": "电机对中不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor nachrichten.",
+        "tail_canonical_zh": "校正电机对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor schlecht ausgerichtet",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c03",
+          "MP019:p0038:t00:r011:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Mangelnde Stabilität des Unterbaus",
+        "tail_canonical_zh": "底座稳定性不足",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r012:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mangelnde Stabilität des Unterbaus",
+        "head_canonical_zh": "底座稳定性不足",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Unterbau verstärken.",
+        "tail_canonical_zh": "加固底座",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Mangelnde Stabilität des Unterbaus",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r012:c03",
+          "MP019:p0038:t00:r012:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Unwucht in Kupplung",
+        "tail_canonical_zh": "联轴器不平衡",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r013:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unwucht in Kupplung",
+        "head_canonical_zh": "联轴器不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kupplung auswuchten.",
+        "tail_canonical_zh": "对联轴器进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unwucht in Kupplung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r013:c03",
+          "MP019:p0038:t00:r013:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Unwucht in getriebener Anlage",
+        "tail_canonical_zh": "被驱动设备不平衡",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r014:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Unwucht in getriebener Anlage",
+        "head_canonical_zh": "被驱动设备不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Getriebene Anlage neu auswuchten.",
+        "tail_canonical_zh": "重新对被驱动设备进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unwucht in getriebener Anlage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r014:c03",
+          "MP019:p0038:t00:r014:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Defekte Lager",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r015:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Defekte Lager",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Lager austauschen.",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defekte Lager",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r015:c03",
+          "MP019:p0038:t00:r015:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Lager schlecht ausgerichtet",
+        "tail_canonical_zh": "轴承对中不良",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r016:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lager schlecht ausgerichtet",
+        "head_canonical_zh": "轴承对中不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor reparieren.",
+        "tail_canonical_zh": "修理电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lager schlecht ausgerichtet",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r016:c03",
+          "MP019:p0038:t00:r016:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Auswuchtgewichte verschoben",
+        "tail_canonical_zh": "平衡块移位",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r017:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Auswuchtgewichte verschoben",
+        "head_canonical_zh": "平衡块移位",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor neu auswuchten.",
+        "tail_canonical_zh": "重新对电机进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Auswuchtgewichte verschoben",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r017:c03",
+          "MP019:p0038:t00:r017:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Wuchtung von Rotor und Kupplung nicht\naufeinander abgestimmt (Halbkeil- bzw.\nVollkeilwuchtung)",
+        "tail_canonical_zh": "转子与联轴器平衡不匹配（半键或全键平衡）",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r018:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Wuchtung von Rotor und Kupplung nicht\naufeinander abgestimmt (Halbkeil- bzw.\nVollkeilwuchtung)",
+        "head_canonical_zh": "转子与联轴器平衡不匹配（半键或全键平衡）",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Kupplung oder Motor neu auswuchten.",
+        "tail_canonical_zh": "重新对联轴器或电机进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wuchtung von Rotor und Kupplung nicht\naufeinander abgestimmt (Halbkeil- bzw.\nVollkeilwuchtung)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r018:c03",
+          "MP019:p0038:t00:r018:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Mehrphasenmotor läuft einphasig",
+        "tail_canonical_zh": "多相电机单相运行",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r019:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mehrphasenmotor läuft einphasig",
+        "head_canonical_zh": "多相电机单相运行",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Auf offenen Stromkreis überprüfen.",
+        "tail_canonical_zh": "检查是否存在开路",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mehrphasenmotor läuft einphasig",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r019:c03",
+          "MP019:p0038:t00:r019:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motorschwingungen",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Axialspiel zu groß",
+        "tail_canonical_zh": "轴向间隙过大",
+        "tail_type": "Cause",
+        "evidence_text": "Motorschwingungen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r011:c02",
+          "MP019:p0038:t00:r020:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Axialspiel zu groß",
+        "head_canonical_zh": "轴向间隙过大",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Lager nachstellen oder Feder-Ausgleichsscheibe einlegen.",
+        "tail_canonical_zh": "调整轴承或加装弹簧补偿垫圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Axialspiel zu groß",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r020:c03",
+          "MP019:p0038:t00:r020:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Geräusche",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Lüfter reibt an Lüfterkappe",
+        "tail_canonical_zh": "风扇摩擦风罩",
+        "tail_type": "Cause",
+        "evidence_text": "Geräusche",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r021:c02",
+          "MP019:p0038:t00:r021:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lüfter reibt an Lüfterkappe",
+        "head_canonical_zh": "风扇摩擦风罩",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Lüftermontage korrigieren.",
+        "tail_canonical_zh": "修正风扇安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lüfter reibt an Lüfterkappe",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r021:c03",
+          "MP019:p0038:t00:r021:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Geräusche",
+        "head_canonical_zh": "噪声",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Lockerer Sitz auf Grundplatte",
+        "tail_canonical_zh": "底座安装松动",
+        "tail_type": "Cause",
+        "evidence_text": "Geräusche",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r021:c02",
+          "MP019:p0038:t00:r022:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lockerer Sitz auf Grundplatte",
+        "head_canonical_zh": "底座安装松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Fußschrauben anziehen.",
+        "tail_canonical_zh": "拧紧地脚螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Lockerer Sitz auf Grundplatte",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r022:c03",
+          "MP019:p0038:t00:r022:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Betriebsgeräusch zu laut",
+        "head_canonical_zh": "运行噪声过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Luftspalt nicht gleichmäßig",
+        "tail_canonical_zh": "气隙不均匀",
+        "tail_type": "Cause",
+        "evidence_text": "Betriebsgeräusch zu laut",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r023:c02",
+          "MP019:p0038:t00:r023:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Luftspalt nicht gleichmäßig",
+        "head_canonical_zh": "气隙不均匀",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Lagerschildbefestigung bzw. Lager überprüfen und\nentsprechend korrigieren.",
+        "tail_canonical_zh": "检查端盖固定或轴承并进行相应校正",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Luftspalt nicht gleichmäßig",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r023:c03",
+          "MP019:p0038:t00:r023:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Betriebsgeräusch zu laut",
+        "head_canonical_zh": "运行噪声过大",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Unwucht im Rotor",
+        "tail_canonical_zh": "转子不平衡",
+        "tail_type": "Cause",
+        "evidence_text": "Betriebsgeräusch zu laut",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r023:c02",
+          "MP019:p0038:t00:r024:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unwucht im Rotor",
+        "head_canonical_zh": "转子不平衡",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Rotor neu auswuchten.",
+        "tail_canonical_zh": "重新对转子进行动平衡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unwucht im Rotor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r024:c03",
+          "MP019:p0038:t00:r024:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Welle verbogen oder beschädigt",
+        "tail_canonical_zh": "轴弯曲或损坏",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r025:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Welle verbogen oder beschädigt",
+        "head_canonical_zh": "轴弯曲或损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Welle richten oder austauschen.",
+        "tail_canonical_zh": "校直或更换轴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Welle verbogen oder beschädigt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c03",
+          "MP019:p0038:t00:r025:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Riemenzug zu stark",
+        "tail_canonical_zh": "皮带拉力过大",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r026:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Riemenzug zu stark",
+        "head_canonical_zh": "皮带拉力过大",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Riemenspannung reduzieren.",
+        "tail_canonical_zh": "减小皮带张力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Riemenzug zu stark",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r026:c03",
+          "MP019:p0038:t00:r026:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Riemenscheiben zu weit von\nWellenschulter entfernt",
+        "tail_canonical_zh": "皮带轮离轴肩过远",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r027:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Riemenscheiben zu weit von\nWellenschulter entfernt",
+        "head_canonical_zh": "皮带轮离轴肩过远",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Riemenscheibe näher am Motorlager anordnen.",
+        "tail_canonical_zh": "将皮带轮布置得更靠近电机轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Riemenscheiben zu weit von\nWellenschulter entfernt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r027:c03",
+          "MP019:p0038:t00:r027:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Durchmesser der Riemenscheiben zu\nklein",
+        "tail_canonical_zh": "皮带轮直径过小",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r028:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Durchmesser der Riemenscheiben zu\nklein",
+        "head_canonical_zh": "皮带轮直径过小",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Größere Riemenscheiben verwenden.",
+        "tail_canonical_zh": "使用更大的皮带轮",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Durchmesser der Riemenscheiben zu\nklein",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r028:c03",
+          "MP019:p0038:t00:r028:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Schlechte Ausrichtung",
+        "tail_canonical_zh": "对中不良",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r029:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Schlechte Ausrichtung",
+        "head_canonical_zh": "对中不良",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Durch Nachrichten des Antriebs korrigieren.",
+        "tail_canonical_zh": "通过校正驱动装置进行修正",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Schlechte Ausrichtung",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r029:c03",
+          "MP019:p0038:t00:r029:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Unzureichendes Schmierfett",
+        "tail_canonical_zh": "润滑脂不足",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r030:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unzureichendes Schmierfett",
+        "head_canonical_zh": "润滑脂不足",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Angemessene Qualität des im Lager vorhandenen\nSchmierfetts sicherstellen.",
+        "tail_canonical_zh": "确保轴承内润滑脂质量合格",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Unzureichendes Schmierfett",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r030:c03",
+          "MP019:p0038:t00:r030:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Qualität des Schmierfetts beeinträchtigt\noder Schmiermittel verschmutzt",
+        "tail_canonical_zh": "润滑脂质量下降或润滑剂污染",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r031:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Qualität des Schmierfetts beeinträchtigt\noder Schmiermittel verschmutzt",
+        "head_canonical_zh": "润滑脂质量下降或润滑剂污染",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Altes Schmierfett entfernen. Lager gründlich in Kerosin\nwaschen und mit neuem Fett schmieren.",
+        "tail_canonical_zh": "清除旧脂，用煤油彻底清洗轴承并加注新脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Qualität des Schmierfetts beeinträchtigt\noder Schmiermittel verschmutzt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r031:c03",
+          "MP019:p0038:t00:r031:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Überschüssiges Schmiermittel",
+        "tail_canonical_zh": "润滑剂过量",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r032:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Überschüssiges Schmiermittel",
+        "head_canonical_zh": "润滑剂过量",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Schmiermittelmenge verringern; das Lager sollte maximal\nzur Hälfte gefüllt sein.",
+        "tail_canonical_zh": "减少润滑剂量；轴承最多填充一半",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Überschüssiges Schmiermittel",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r032:c03",
+          "MP019:p0038:t00:r032:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Lager überlastet",
+        "tail_canonical_zh": "轴承载荷过大",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r033:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lager überlastet",
+        "head_canonical_zh": "轴承载荷过大",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Ausrichtung, Radial- und Axialschub überprüfen.",
+        "tail_canonical_zh": "检查对中、径向和轴向推力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Lager überlastet",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r033:c03",
+          "MP019:p0038:t00:r033:c04"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur zu hoch",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Defekte Kugel oder raue Laufbahnen",
+        "tail_canonical_zh": "滚动体损坏或滚道粗糙",
+        "tail_type": "Cause",
+        "evidence_text": "Lagertemperatur zu hoch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r025:c02",
+          "MP019:p0038:t00:r034:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Defekte Kugel oder raue Laufbahnen",
+        "head_canonical_zh": "滚动体损坏或滚道粗糙",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Lager austauschen; vor dem Einbau des neuen Lagers\ndas Lagergehäuse gründlich reinigen.",
+        "tail_canonical_zh": "更换轴承；安装新轴承前彻底清洁轴承座",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Defekte Kugel oder raue Laufbahnen",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0038:t00:r034:c03",
+          "MP019:p0038:t00:r034:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

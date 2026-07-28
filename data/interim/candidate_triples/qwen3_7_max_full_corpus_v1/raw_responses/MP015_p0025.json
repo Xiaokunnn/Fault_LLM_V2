@@ -1,0 +1,133 @@
+{
+  "page_key": "MP015:p0025",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cd3cf827-f9ab-95c5-8037-00c45fc9916c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1256,
+    "prompt_tokens": 1920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3176
+  },
+  "latency_ms": 17466,
+  "attempt": 1,
+  "prompt_sha256": "d916d44da01eab4485a95ff0eafa317ba3364b677b4dff114dd5c72590c18fdb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "electric motor",
+        "head_canonical_zh": "电动机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "connected to the mains by an approved electrician",
+        "tail_canonical_zh": "由合格电工连接至电源",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The electric motor must be connected to the mains by an approved electrician, according to the locally prevailing regulations of the electricity company.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "working switch",
+        "head_canonical_zh": "工作开关",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "fit a working switch as close as possible to the pump",
+        "tail_canonical_zh": "在泵附近安装工作开关",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If possible, fit a working switch as close as possible to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "exhaust of combustion gases",
+        "head_canonical_zh": "燃烧废气排放",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "screened off",
+        "tail_canonical_zh": "加装防护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The exhaust of combustion gases must be screened off to prevent incidental contact.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "starting device",
+        "head_canonical_zh": "启动装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "automatically be disengaged after the engine has been started",
+        "tail_canonical_zh": "发动机启动后自动脱开",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The starting device should automatically be disengaged after the engine has been started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "oil level",
+        "head_canonical_zh": "油位",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "check the oil level",
+        "tail_canonical_zh": "检查油位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before starting the engine check the oil level.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sense of rotation",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Verify whether the sense of rotation of the combustion engine is the same as that of the pump",
+        "tail_canonical_zh": "验证内燃机与泵的旋转方向是否一致",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verify whether the sense of rotation of the combustion engine is the same as that of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

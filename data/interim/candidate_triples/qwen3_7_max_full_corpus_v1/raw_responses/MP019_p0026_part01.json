@@ -1,0 +1,216 @@
+{
+  "page_key": "MP019:p0026",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-996ac58e-3783-90d0-8954-937e7d283c3e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2398,
+    "prompt_tokens": 2499,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4897
+  },
+  "latency_ms": 26231,
+  "attempt": 1,
+  "prompt_sha256": "e8ee4e8001b9f937a3ebd1efe466f57f701379e7ea2b2babdbc0edf3c69b9d86",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lagerschäden",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "sorgfältige Ausrichtung",
+        "tail_canonical_zh": "仔细对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die sorgfältige Ausrichtung ist von entscheidender Bedeutung für das Vermeiden von Lagerschäden, Schwingungen und möglichen Brüchen der Wellenenden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Schwingungen",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "sorgfältige Ausrichtung",
+        "tail_canonical_zh": "仔细对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die sorgfältige Ausrichtung ist von entscheidender Bedeutung für das Vermeiden von Lagerschäden, Schwingungen und möglichen Brüchen der Wellenenden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Brüchen der Wellenenden",
+        "head_canonical_zh": "轴端断裂",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "sorgfältige Ausrichtung",
+        "tail_canonical_zh": "仔细对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Die sorgfältige Ausrichtung ist von entscheidender Bedeutung für das Vermeiden von Lagerschäden, Schwingungen und möglichen Brüchen der Wellenenden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Beschädigung der Lager",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Übermäßige Riemenspannung",
+        "tail_canonical_zh": "皮带张力过大",
+        "tail_type": "Cause",
+        "evidence_text": "Übermäßige Riemenspannung führt zur Beschädigung der Lager und kann den Bruch der Welle zur Folge haben!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bruch der Welle",
+        "head_canonical_zh": "断轴",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Übermäßige Riemenspannung",
+        "tail_canonical_zh": "皮带张力过大",
+        "tail_type": "Cause",
+        "evidence_text": "Übermäßige Riemenspannung führt zur Beschädigung der Lager und kann den Bruch der Welle zur Folge haben!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Spiel b",
+        "head_canonical_zh": "间隙b",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "prüfen, dass das Spiel b weniger als 0,05 mm beträgt",
+        "tail_canonical_zh": "检查间隙b小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Einbaugenauigkeit der Kupplungshälfte: prüfen, dass das Spiel b weniger als 0,05 mm beträgt und dass der Abstand a1 zu a2 ebenso unter 0,05 mm liegt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Abstand a1 zu a2",
+        "head_canonical_zh": "距离a1至a2",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "prüfen, dass ... der Abstand a1 zu a2 ebenso unter 0,05 mm liegt",
+        "tail_canonical_zh": "检查距离a1至a2小于0.05mm",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Einbaugenauigkeit der Kupplungshälfte: prüfen, dass das Spiel b weniger als 0,05 mm beträgt und dass der Abstand a1 zu a2 ebenso unter 0,05 mm liegt.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ausrichtung",
+        "head_canonical_zh": "对中",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "nach endgültigem Festziehen der Bolzen oder Ankerschrauben erneut prüfen",
+        "tail_canonical_zh": "最终紧固螺栓或地脚螺栓后重新检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ausrichtung nach endgültigem Festziehen der Bolzen oder Ankerschrauben erneut prüfen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lager und Dichtungen",
+        "head_canonical_zh": "轴承和密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "mit geeigneter Ausrüstung und Werkzeug auf der Welle montiert",
+        "tail_canonical_zh": "使用合适的设备和工具安装在轴上",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kupplungshälften und Riemenscheiben dürfen nur mit geeigneter Ausrüstung und Werkzeug auf der Welle montiert werden, damit die Lager und Dichtungen nicht beschädigt werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kondenswasseröffnungen und Kondenswasserstopfen",
+        "head_canonical_zh": "冷凝水排放口和堵头",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Sicherstellen, dass Kondenswasseröffnungen und Kondenswasserstopfen nach unten zeigen",
+        "tail_canonical_zh": "确保冷凝水排放口和堵头朝下",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Sicherstellen, dass Kondenswasseröffnungen und Kondenswasserstopfen nach unten zeigen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

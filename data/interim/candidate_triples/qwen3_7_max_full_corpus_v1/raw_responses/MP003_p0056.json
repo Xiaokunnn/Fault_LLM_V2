@@ -1,0 +1,116 @@
+{
+  "page_key": "MP003:p0056",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-56b5523b-b715-9ab9-ab8c-28244bfc8e33",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1126,
+    "prompt_tokens": 2376,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3502
+  },
+  "latency_ms": 15405,
+  "attempt": 1,
+  "prompt_sha256": "b1d514501cd75470627bc43b07c54064030b9f66b5dd7a7a8cfbc11888962480",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "safety system",
+        "head_canonical_zh": "安全系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Functional tests",
+        "tail_canonical_zh": "功能测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Functional tests are to be performed for the following: ... d)   The safety system, particularly for overspeed and low lubricating oil pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "high-pressure fuel oil lines",
+        "head_canonical_zh": "高压燃油管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspected for jacketing",
+        "tail_canonical_zh": "检查护套",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The engine is to be inspected for jacketing of high-pressure fuel oil lines, including the system for the detection of leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "system for the detection of leakage",
+        "head_canonical_zh": "泄漏检测系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "inspected for jacketing of high-pressure fuel oil lines",
+        "tail_canonical_zh": "高压燃油管路护套检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The engine is to be inspected for jacketing of high-pressure fuel oil lines, including the system for the detection of leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hot surfaces",
+        "head_canonical_zh": "热表面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Readings of surface temperatures are to be done by use of Infrared Thermoscanning Equipment",
+        "tail_canonical_zh": "使用红外热扫描设备读取表面温度",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Proper insulation of hot surfaces is to be verified while running the engine at 100% load... Readings of surface temperatures are to be done by use of Infrared Thermoscanning Equipment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "crankshaft deflections",
+        "head_canonical_zh": "曲轴臂距差",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "measured in the specified (by designer) condition",
+        "tail_canonical_zh": "在设计规定条件下测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The crankshaft deflections are to be measured in the specified (by designer) condition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

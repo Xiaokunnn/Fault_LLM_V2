@@ -1,0 +1,142 @@
+{
+  "page_key": "MP019:p0048",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-cd6b08af-aa1f-924c-aceb-254177d8006f",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 20710,
+  "attempt": 1,
+  "prompt_sha256": "48f82dd4965369f320f5ba68311d26d5424b6ace83c30543c273465422dfa5ec",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "courants de roulement",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Roulement isolé côté non-entraînement",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW\nOU\nCEI 315 ≤ Frame size\n≤ CEI 355\tRoulement isolé côté\nnon-entraînement",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0048:t00:r002:c00",
+          "MP019:p0048:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "courants de roulement",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Roulement isolé côté non-entraînement ET Filtre en mode commun au niveau du convertisseur",
+        "tail_canonical_zh": "非驱动端绝缘轴承及变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nOU\nCEI 400 ≤ Frame size\n≤ CEI 450\tRoulement isolé côté\nnon-entraînement\nET\nFiltre en mode\ncommun au niveau du\nconvertisseur",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0048:t00:r003:c00",
+          "MP019:p0048:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "courants de roulement susceptibles d'altérer le fonctionnement des moteurs",
+        "head_canonical_zh": "影响电机运行的轴承电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "presse-étoupes appropriés assurant une continuité de masse sur 360°",
+        "tail_canonical_zh": "确保360°接地连续性的合适电缆密封接头",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Des presse-étoupes appropriés assurant une continuité de masse sur 360° doivent être utilisés au niveau de tous les points de raccordement ; par exemple, au niveau du moteur, du convertisseur, de l'éventuel commutateur de sécurité, etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "moteurs d'une hauteur d'axe supérieure ou égale à CEI 280",
+        "head_canonical_zh": "轴高大于等于CEI 280的电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "égalisation supplémentaire du potentiel entre le châssis du moteur et l'équipement entraîné",
+        "tail_canonical_zh": "电机机壳与被驱动设备间的附加等电位连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pour les moteurs d'une hauteur d'axe supérieure ou égale à CEI 280, il est nécessaire de procéder à une égalisation supplémentaire du potentiel entre le châssis du moteur et l'équipement entraîné, sauf si le moteur et l'équipement sont montés sur un même socle d'acier.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "conductivité haute fréquence de la connexion fournie par le socle en acier",
+        "head_canonical_zh": "钢制底座连接的高频导电性",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "mesurant la différence de potentiel entre les composants",
+        "tail_canonical_zh": "测量组件间电位差",
+        "tail_type": "InspectionAction",
+        "evidence_text": "la conductivité haute fréquence de la connexion fournie par le socle en acier doit être vérifiée, par exemple, en mesurant la différence de potentiel entre les composants.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vitesses supérieures à la vitesse nominale",
+        "head_canonical_zh": "超过额定转速",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "vérifiez l'absence de dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application",
+        "tail_canonical_zh": "核查未超过最高允许转速或应用系统临界转速",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Pour les vitesses supérieures à la vitesse nominale inscrite sur la plaque signalétique du moteur ou dans le catalogue produit correspondant, vérifiez l'absence de dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

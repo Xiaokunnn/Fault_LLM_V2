@@ -1,0 +1,192 @@
+{
+  "page_key": "MP015:p0024",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-005160db-17fc-9095-8851-acb3fba88b02",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1961,
+    "prompt_tokens": 14876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 16837
+  },
+  "latency_ms": 32011,
+  "attempt": 1,
+  "prompt_sha256": "c88944fd6ec3f7d8c238636df6b504325fc34e548dc2ff5d5f207820226f5633",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump casing",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "gasket",
+        "tail_canonical_zh": "垫片",
+        "tail_type": "Component",
+        "evidence_text": "Figure 6: Connection main piping on pump casing. ... D   gasket",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "flange of connected piping",
+        "head_canonical_zh": "连接管路法兰",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "Connection main piping on pump casing",
+        "tail_canonical_zh": "泵壳主接管连接",
+        "tail_type": "Component",
+        "evidence_text": "Figure 6: Connection main piping on pump casing. ... B   flange of connected piping",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high pressure impulses",
+        "head_canonical_zh": "高压冲击",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Sudden changes in the rate of flow",
+        "tail_canonical_zh": "流量突变",
+        "tail_type": "Cause",
+        "evidence_text": "Sudden changes in the rate of flow can lead to high pressure impulses in the pump and the piping (water shock).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "high pressure impulses",
+        "head_canonical_zh": "高压冲击",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "don’t use quick-acting closing devices, valves etc.",
+        "tail_canonical_zh": "不使用快关阀或快速关闭装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Sudden changes in the rate of flow can lead to high pressure impulses in the pump and the piping (water shock). Therefore, don’t use quick-acting closing devices, valves etc.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "entry of big or hard particles",
+        "head_canonical_zh": "大颗粒或硬物进入",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "installing a strainer",
+        "tail_canonical_zh": "安装过滤器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid the entry of big or hard particles by installing a strainer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "double mechanical seal",
+        "head_canonical_zh": "双机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "connect the flushing chamber to the flushing system",
+        "tail_canonical_zh": "将冲洗腔连接至冲洗系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In case of a pump with a double mechanical seal (shaft sealing variant MD1), connect the flushing chamber to the flushing system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flushing system",
+        "head_canonical_zh": "冲洗系统",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "pressure of the flushing system must be 1,5 bar higher than the pressure at the impeller hub",
+        "tail_canonical_zh": "冲洗系统压力须比叶轮轮毂处压力高1.5巴",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The pressure of the flushing system must be 1,5 bar higher than the pressure at the impeller hub!",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "piping",
+        "head_canonical_zh": "管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "must fit exactly and must not be subject to stress during operation",
+        "tail_canonical_zh": "精确配合且运行时不受应力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The piping to the suction and delivery connections must fit exactly and must not be subject to stress during operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction pipe",
+        "head_canonical_zh": "吸入管",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "passage of the suction pipe must be amply dimensioned",
+        "tail_canonical_zh": "吸入管通径应足够大",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The passage of the suction pipe must be amply dimensioned.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

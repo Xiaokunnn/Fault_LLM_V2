@@ -1,0 +1,213 @@
+{
+  "page_key": "MP016:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ee43c27b-110e-90f4-9e49-44a5294f2496",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2278,
+    "prompt_tokens": 2865,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5143
+  },
+  "latency_ms": 26451,
+  "attempt": 1,
+  "prompt_sha256": "d51a52306626e40c45fed4f20399feceef88e15986374b55da99138036bc8666",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Una pressione di alimentazione insufficiente",
+        "head_canonical_zh": "进料压力不足",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "cavitazione della pompa",
+        "tail_canonical_zh": "泵汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Una pressione di alimentazione insufficiente causerà la cavitazione della pompa con una conseguente riduzione delle prestazioni, aumento del rumore e riduzione della vita utile della pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitazione della pompa",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "riduzione delle prestazioni",
+        "tail_canonical_zh": "性能下降",
+        "tail_type": "Symptom",
+        "evidence_text": "Una pressione di alimentazione insufficiente causerà la cavitazione della pompa con una conseguente riduzione delle prestazioni, aumento del rumore e riduzione della vita utile della pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitazione della pompa",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "aumento del rumore",
+        "tail_canonical_zh": "噪声增加",
+        "tail_type": "Symptom",
+        "evidence_text": "Una pressione di alimentazione insufficiente causerà la cavitazione della pompa con una conseguente riduzione delle prestazioni, aumento del rumore e riduzione della vita utile della pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitazione della pompa",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "riduzione della vita utile della pompa",
+        "tail_canonical_zh": "泵使用寿命缩短",
+        "tail_type": "Symptom",
+        "evidence_text": "Una pressione di alimentazione insufficiente causerà la cavitazione della pompa con una conseguente riduzione delle prestazioni, aumento del rumore e riduzione della vita utile della pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressione differenziale superiore a quella indicata nella scheda dati",
+        "head_canonical_zh": "超过数据表规定的压差",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "danneggiare la girante",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "non utilizzare la pompa a una pressione differenziale superiore a quella indicata nella scheda dati, nemmeno per qualche secondo, per non danneggiare la girante.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valvola chiusa",
+        "head_canonical_zh": "阀门关闭",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "danneggiare la girante",
+        "tail_canonical_zh": "叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Non utilizzare la pompa con una valvola chiusa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "tubazioni di alimentazione",
+        "head_canonical_zh": "进料管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Verificare che le tubazioni di alimentazione siano corte, abbiano un alesaggio elevato e non collassino a causa del vuoto",
+        "tail_canonical_zh": "验证进料管路短、孔径大且不因真空塌陷",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Verificare che le tubazioni di alimentazione siano corte, abbiano un alesaggio elevato e non collassino a causa del vuoto.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "allineamento della pompa con l’azionamento",
+        "head_canonical_zh": "泵与驱动装置对中",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Controllare sempre l’allineamento della pompa con l’azionamento dopo l’installazione e prima di avviare la pompa",
+        "tail_canonical_zh": "安装后及启动前检查泵与驱动装置对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Controllare sempre l’allineamento della pompa con l’azionamento dopo l’installazione e prima di avviare la pompa.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pompa",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "spurgarla con acqua o un agente neutralizzante dopo ogni utilizzo",
+        "tail_canonical_zh": "每次使用后用水或中和剂冲洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Per estendere la vita utile della pompa, spurgarla con acqua o un agente neutralizzante dopo ogni utilizzo.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "parti in movimento",
+        "head_canonical_zh": "运动部件",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "protette da ripari",
+        "tail_canonical_zh": "安装防护罩保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tutte le parti in movimento devono essere protette da ripari, in conformità con le direttive applicabili.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

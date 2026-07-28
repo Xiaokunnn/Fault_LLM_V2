@@ -1,0 +1,166 @@
+{
+  "page_key": "MP019:p0125",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-66e2621c-e406-9df7-86cd-6aaf528e07a6",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 24173,
+  "attempt": 1,
+  "prompt_sha256": "217bae7ad964346054cd7f10d198ced7942139fd5affae0885ef0d5d406d01ba",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "laakerivaurion",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Yhteensopimattomat voiteluaineet",
+        "tail_canonical_zh": "不相容润滑剂",
+        "tail_type": "Cause",
+        "evidence_text": "Yhteensopimattomat voiteluaineet voivat aiheuttaa laakerivaurion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "laakerivaurion",
+        "head_canonical_zh": "轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Älä sekoita eri voiteluaineita keskenään",
+        "tail_canonical_zh": "禁止混合不同润滑剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Älä sekoita eri voiteluaineita keskenään. Yhteensopimattomat voiteluaineet voivat aiheuttaa laakerivaurion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "kuulalaakereille",
+        "head_canonical_zh": "球轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "käytettävä vain erikoisesti kuulalaakereille tarkoitettuja... voiteluaineita",
+        "tail_canonical_zh": "使用专用球轴承润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Voideltaessa on käytettävä vain erikoisesti kuulalaakereille tarkoitettuja, seuraavat ominaisuudet täyttäviä voiteluaineita",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "suurnopeusmoottoreissa",
+        "head_canonical_zh": "高速电机",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "nopeuskerroin (Dm x n...) on suurempi kuin 480 000",
+        "tail_canonical_zh": "速度系数大于480000",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Kaksinapaisissa suurnopeusmoottoreissa, joiden nopeuskerroin (Dm x n, jossa Dm = keskimääräinen laakerin halkaisija mm:nä ja n = pyörimisnopeus, rpm) on suurempi kuin 480 000",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suurnopeusmoottoreissa",
+        "head_canonical_zh": "高速电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "on käytettävä suurnopeusvoiteluaineita",
+        "tail_canonical_zh": "必须使用高速润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kaksinapaisissa suurnopeusmoottoreissa... on käytettävä suurnopeusvoiteluaineita",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "EP-lisäaineisia voiteluaineita",
+        "head_canonical_zh": "含EP添加剂润滑脂",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "korkeissa laakerilämpötiloissa runkokokoluokissa 280–450",
+        "tail_canonical_zh": "机座号280-450高轴承温度工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "EP-lisäaineisia voiteluaineita ei suositella korkeissa laakerilämpötiloissa runkokokoluokissa 280–450",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "voiteluväli",
+        "head_canonical_zh": "润滑间隔",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "käytetään edellä lueteltuja laadukkaita voitelulaineita",
+        "tail_canonical_zh": "使用上述优质润滑脂",
+        "tail_type": "Standard",
+        "evidence_text": "Voiteluaineiden voiteluväli perustuu siihen, että käytetään edellä lueteltuja laadukkaita voitelulaineita",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Muiden voiteluaineiden käyttäminen",
+        "head_canonical_zh": "使用其他润滑剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lyhentää voiteluväliä",
+        "tail_canonical_zh": "缩短润滑间隔",
+        "tail_type": "Symptom",
+        "evidence_text": "Muiden voiteluaineiden käyttäminen voi lyhentää voiteluväliä",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

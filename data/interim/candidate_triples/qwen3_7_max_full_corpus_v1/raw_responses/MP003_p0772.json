@@ -1,0 +1,95 @@
+{
+  "page_key": "MP003:p0772",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7f89916e-8084-9052-ba4f-6ea62d8819b2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 852,
+    "prompt_tokens": 2072,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2924
+  },
+  "latency_ms": 10803,
+  "attempt": 1,
+  "prompt_sha256": "6f8e092a54e1beade66aafed908cb5944ff3a2fe9fdce4154276d88888a28857",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Electrical and electronic equipment",
+        "head_canonical_zh": "电气和电子设备",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Local Fixed Pressure Water-spraying or Local Water-mist Fire Extinguishing Systems",
+        "tail_canonical_zh": "局部固定压力水喷淋或局部水雾灭火系统",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Electrical and electronic equipment within areas affected by Local Fixed Pressure Water-spraying or Local Water-mist Fire Extinguishing Systems are to be suitable for use in the affected area.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water entering the equipment",
+        "head_canonical_zh": "水进入设备",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "Tracking",
+        "tail_canonical_zh": "爬电",
+        "tail_type": "FaultMode",
+        "evidence_text": "Tracking as the result of water entering the equipment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "residual salts from sea water systems",
+        "head_canonical_zh": "海水系统残留盐分",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Potential damage",
+        "tail_canonical_zh": "潜在损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Potential damage as the result of residual salts from sea water systems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Equipment",
+        "head_canonical_zh": "设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "maintenance after being subjected to water mist/spray",
+        "tail_canonical_zh": "经受水雾/喷淋后的维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Equipment may require maintenance after being subjected to water mist/spray.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

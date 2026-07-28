@@ -1,0 +1,578 @@
+{
+  "page_key": "MP018:p0027",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-99c3f3a7-42a1-9597-a094-6c4a5f62cdd4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 6087,
+    "prompt_tokens": 2052,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8139
+  },
+  "latency_ms": 67607,
+  "attempt": 1,
+  "prompt_sha256": "960ef575769c0a756567d9d5a5b775327a2dc4c4935955f67523765ca5b09163",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "No Water Delivered",
+        "head_canonical_zh": "不出水",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Pump not primed",
+        "tail_canonical_zh": "泵未灌引水",
+        "tail_type": "Cause",
+        "evidence_text": "Pump not primed – indicated by no pressure on discharge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "no pressure on discharge",
+        "head_canonical_zh": "排出端无压力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Pump not primed",
+        "tail_canonical_zh": "泵未灌引水",
+        "tail_type": "Cause",
+        "evidence_text": "Pump not primed – indicated by no pressure on discharge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "No Water Delivered",
+        "head_canonical_zh": "不出水",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Speed too low",
+        "tail_canonical_zh": "转速过低",
+        "tail_type": "Cause",
+        "evidence_text": "Speed too low – indicated by low pressure on discharge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "low pressure on discharge",
+        "head_canonical_zh": "排出压力低",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Speed too low",
+        "tail_canonical_zh": "转速过低",
+        "tail_type": "Cause",
+        "evidence_text": "Speed too low – indicated by low pressure on discharge.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "No Water Delivered",
+        "head_canonical_zh": "不出水",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Discharge valve closed",
+        "tail_canonical_zh": "排出阀关闭",
+        "tail_type": "Cause",
+        "evidence_text": "Discharge valve closed – indicated by high discharge head.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "high discharge head",
+        "head_canonical_zh": "排出扬程过高",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Discharge valve closed",
+        "tail_canonical_zh": "排出阀关闭",
+        "tail_type": "Cause",
+        "evidence_text": "Discharge valve closed – indicated by high discharge head.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impeller completely plugged up",
+        "head_canonical_zh": "叶轮完全堵塞",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "low discharge pressure",
+        "tail_canonical_zh": "排出压力低",
+        "tail_type": "Symptom",
+        "evidence_text": "Impeller completely plugged up or Suction Valve closed - indicated by low discharge pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Suction Valve closed",
+        "head_canonical_zh": "吸入阀关闭",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "low discharge pressure",
+        "tail_canonical_zh": "排出压力低",
+        "tail_type": "Symptom",
+        "evidence_text": "Impeller completely plugged up or Suction Valve closed - indicated by low discharge pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wrong direction of rotation",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "No Water Delivered",
+        "tail_canonical_zh": "不出水",
+        "tail_type": "Symptom",
+        "evidence_text": "No Water Delivered:\n...\ne. Wrong direction of rotation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air leaks in suction pipe or stuffing boxes",
+        "head_canonical_zh": "吸入管或填料函漏气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Abnormally Small Quantities Delivered",
+        "tail_canonical_zh": "出水量异常小",
+        "tail_type": "Symptom",
+        "evidence_text": "Abnormally Small Quantities Delivered:\na. Air leaks in suction pipe or stuffing boxes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impeller partially plugged up",
+        "head_canonical_zh": "叶轮部分堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Abnormally Small Quantities Delivered",
+        "tail_canonical_zh": "出水量异常小",
+        "tail_type": "Symptom",
+        "evidence_text": "Abnormally Small Quantities Delivered:\n...\nd. Impeller partially plugged up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Obstruction in suction line",
+        "head_canonical_zh": "吸入管路阻塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Abnormally Small Quantities Delivered",
+        "tail_canonical_zh": "出水量异常小",
+        "tail_type": "Symptom",
+        "evidence_text": "Abnormally Small Quantities Delivered:\n...\ne. Obstruction in suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impeller damaged",
+        "head_canonical_zh": "叶轮损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Abnormally Small Quantities Delivered",
+        "tail_canonical_zh": "出水量异常小",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Casing or packing defective; impeller damaged; suction and/or impeller rings worn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "suction and/or impeller rings worn",
+        "head_canonical_zh": "吸入环和/或叶轮口环磨损",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Abnormally Small Quantities Delivered",
+        "tail_canonical_zh": "出水量异常小",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Casing or packing defective; impeller damaged; suction and/or impeller rings worn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Damaged impeller",
+        "head_canonical_zh": "叶轮损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Insufficient Pressure",
+        "tail_canonical_zh": "压力不足",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Damaged impeller; defective casing or packing; suction and/or impeller rings worn.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cracking noise",
+        "head_canonical_zh": "爆裂噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Air in the water",
+        "tail_canonical_zh": "水中含气",
+        "tail_type": "Cause",
+        "evidence_text": "Air in the water will cause the pump to make cracking noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaky suction line",
+        "head_canonical_zh": "吸入管路泄漏",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Intermittent Operation",
+        "tail_canonical_zh": "间歇运行",
+        "tail_type": "Symptom",
+        "evidence_text": "Intermittent Operation:\na. Leaky suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water or grease seal plugged",
+        "head_canonical_zh": "水封或油脂密封堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Intermittent Operation",
+        "tail_canonical_zh": "间歇运行",
+        "tail_type": "Symptom",
+        "evidence_text": "Water or grease seal plugged (hence, leaky stuffing box).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stuffing boxes too tight",
+        "head_canonical_zh": "填料函过紧",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump Overloads Drive",
+        "tail_canonical_zh": "泵过载驱动",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Stuffing boxes too tight; shaft bent; rotating element binds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft bent",
+        "head_canonical_zh": "轴弯曲",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Overloads Drive",
+        "tail_canonical_zh": "泵过载驱动",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Stuffing boxes too tight; shaft bent; rotating element binds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rubbing due to foreign matter in the pump",
+        "head_canonical_zh": "泵内异物引起摩擦",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Overloads Drive",
+        "tail_canonical_zh": "泵过载驱动",
+        "tail_type": "Symptom",
+        "evidence_text": "Rubbing due to foreign matter in the pump and between the suction rings and impeller rings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump Vibrates:\na. Misalignment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "Impeller partially clogged",
+        "head_canonical_zh": "叶轮部分堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump Vibrates:\n...\nc. Impeller partially clogged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bent shaft",
+        "head_canonical_zh": "轴弯曲",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Bent shaft; rotating element binding; bearing worn; coupling defective.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearing worn",
+        "head_canonical_zh": "轴承磨损",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Bent shaft; rotating element binding; bearing worn; coupling defective.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "coupling defective",
+        "head_canonical_zh": "联轴器缺陷",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Mechanical defects: Bent shaft; rotating element binding; bearing worn; coupling defective.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump cavitation",
+        "head_canonical_zh": "泵汽蚀",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump cavitation from too high a suction lift.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "too high a suction lift",
+        "head_canonical_zh": "吸上高度过高",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump cavitation",
+        "tail_canonical_zh": "泵汽蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pump cavitation from too high a suction lift.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "Air entrainment in the pump suction",
+        "head_canonical_zh": "泵吸入端卷气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Pump Vibrates",
+        "tail_canonical_zh": "泵振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Air entrainment in the pump suction due to low submergence.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

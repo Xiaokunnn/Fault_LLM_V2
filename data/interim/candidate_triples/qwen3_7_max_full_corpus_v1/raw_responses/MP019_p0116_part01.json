@@ -1,0 +1,177 @@
+{
+  "page_key": "MP019:p0116",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-784e4772-61cc-970d-9330-3cb5524f7c43",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1918,
+    "prompt_tokens": 3027,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4945
+  },
+  "latency_ms": 26828,
+  "attempt": 1,
+  "prompt_sha256": "0f98f9f674ad079488a2e7c478a8ba72f4c447ce99868e3b205175788b79fc89",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Liiallinen hihnojen kiristys",
+        "head_canonical_zh": "皮带过紧",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "laakerivaurioiden",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Liiallinen hihnojen kiristys vaurioittaa laakereita ja voi aiheuttaa akselin vahingoittumisen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Liiallinen hihnojen kiristys",
+        "head_canonical_zh": "皮带过紧",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "akselin vahingoittumisen",
+        "tail_canonical_zh": "轴损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Liiallinen hihnojen kiristys vaurioittaa laakereita ja voi aiheuttaa akselin vahingoittumisen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oikea linjaus",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "laakerivaurioiden",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Oikea linjaus on erittäin tärkeää laakerivaurioiden, tärinän ja akselivaurioiden estämiseksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oikea linjaus",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "tärinän",
+        "tail_canonical_zh": "振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Oikea linjaus on erittäin tärkeää laakerivaurioiden, tärinän ja akselivaurioiden estämiseksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oikea linjaus",
+        "head_canonical_zh": "正确对中",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "akselivaurioiden",
+        "tail_canonical_zh": "轴损伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Oikea linjaus on erittäin tärkeää laakerivaurioiden, tärinän ja akselivaurioiden estämiseksi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kytkimen asennustarkkuus",
+        "head_canonical_zh": "联轴器安装精度",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "poikkeama b on alle 0,05 mm",
+        "tail_canonical_zh": "偏差b小于0.05mm",
+        "tail_type": "Standard",
+        "evidence_text": "Kytkimen asennustarkkuus: tarkista, että poikkeama b on alle 0,05 mm ja että ero a1–a2 on myös alle 0,05 mm, katso kuva 3.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Kytkimen asennustarkkuus",
+        "head_canonical_zh": "联轴器安装精度",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "ero a1–a2 on myös alle 0,05 mm",
+        "tail_canonical_zh": "差值a1-a2小于0.05mm",
+        "tail_type": "Standard",
+        "evidence_text": "Kytkimen asennustarkkuus: tarkista, että poikkeama b on alle 0,05 mm ja että ero a1–a2 on myös alle 0,05 mm, katso kuva 3.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "linjaus",
+        "head_canonical_zh": "对中",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Tarkista linjaus uudelleen, kun pultit tai kierretangot on kiristetty lopullisesti",
+        "tail_canonical_zh": "最终紧固螺栓或螺杆后重新检查对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tarkista linjaus uudelleen, kun pultit tai kierretangot on kiristetty lopullisesti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

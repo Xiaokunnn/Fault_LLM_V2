@@ -1,0 +1,95 @@
+{
+  "page_key": "MP003:p0321",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0f311d51-e1d4-9ba6-ae64-b60ee37fbe77",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 811,
+    "prompt_tokens": 2167,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2978
+  },
+  "latency_ms": 9882,
+  "attempt": 1,
+  "prompt_sha256": "da7cc10452800bcba14af703d3a81c8a65ce4ff196ff8428c02f523ed30803dd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Line cutters",
+        "head_canonical_zh": "绳索切割器",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "propeller entanglement",
+        "tail_canonical_zh": "螺旋桨缠绕",
+        "tail_type": "FaultMode",
+        "evidence_text": "Line cutters reduce the risk of propeller entanglement and shaft seal damage caused by line intrusion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Line cutters",
+        "head_canonical_zh": "绳索切割器",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "shaft seal damage",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Line cutters reduce the risk of propeller entanglement and shaft seal damage caused by line intrusion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "line intrusion",
+        "head_canonical_zh": "绳索侵入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "propeller entanglement",
+        "tail_canonical_zh": "螺旋桨缠绕",
+        "tail_type": "FaultMode",
+        "evidence_text": "propeller entanglement and shaft seal damage caused by line intrusion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "line intrusion",
+        "head_canonical_zh": "绳索侵入",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "shaft seal damage",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "propeller entanglement and shaft seal damage caused by line intrusion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

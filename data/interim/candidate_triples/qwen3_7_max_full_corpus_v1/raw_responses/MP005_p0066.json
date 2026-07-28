@@ -1,0 +1,248 @@
+{
+  "page_key": "MP005:p0066",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e495787e-4cfa-94d1-8df3-f1f9026e29a5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2584,
+    "prompt_tokens": 11122,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 13706
+  },
+  "latency_ms": 31769,
+  "attempt": 1,
+  "prompt_sha256": "5d1210414966a6d50666587dabf6ef803e10a2bfd664661572e030a6154f556b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Potentially explosive atmosphere inside the pump",
+        "head_canonical_zh": "泵内潜在爆炸性气氛",
+        "head_type": "Risk",
+        "relation": "causes",
+        "tail_surface": "death or serious injury",
+        "tail_canonical_zh": "死亡或重伤",
+        "tail_type": "Risk",
+        "evidence_text": "Potentially explosive atmosphere inside the pump will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump internals in contact with the fluid to be handled, including the seal chamber and auxiliary systems",
+        "head_canonical_zh": "接触介质的泵内部件（含密封腔及辅助系统）",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "must be filled with the fluid to be handled at all times",
+        "tail_canonical_zh": "必须始终充满输送介质",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump internals in contact with the fluid to be handled, including the seal chamber and auxiliary systems, must be filled with the fluid to be handled at all times.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Potentially explosive atmosphere inside the pump",
+        "head_canonical_zh": "泵内潜在爆炸性气氛",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Provide sufficient inlet pressure",
+        "tail_canonical_zh": "提供足够的进口压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Potentially explosive atmosphere inside the pump will cause death or serious injury.\n\n                      The pump internals in contact with the fluid to be handled, including the seal chamber\n                      and auxiliary systems, must be filled with the fluid to be handled at all times.\n\n                      Provide sufficient inlet pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Potentially explosive atmosphere inside the pump",
+        "head_canonical_zh": "泵内潜在爆炸性气氛",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "Provide an appropriate monitoring system",
+        "tail_canonical_zh": "提供适当的监测系统",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Provide an appropriate monitoring system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Damaged or deformed shaft seal",
+        "head_canonical_zh": "轴封损坏或变形",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage to the pump, death or serious injury",
+        "tail_canonical_zh": "泵损坏、死亡或重伤",
+        "tail_type": "Risk",
+        "evidence_text": "Damaged or deformed shaft seal will cause damage to the pump, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Do the maintenance on the shaft seal regularly",
+        "tail_canonical_zh": "定期维护轴封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do the maintenance on the shaft seal regularly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings running hot",
+        "head_canonical_zh": "轴承过热运行",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Excessive temperature",
+        "tail_canonical_zh": "温度过高",
+        "tail_type": "Symptom",
+        "evidence_text": "Excessive temperature as a result of bearings running hot or defective bearing seals",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "defective bearing seals",
+        "head_canonical_zh": "轴承密封缺陷",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Excessive temperature",
+        "tail_canonical_zh": "温度过高",
+        "tail_type": "Symptom",
+        "evidence_text": "Excessive temperature as a result of bearings running hot or defective bearing seals",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Excessive temperature",
+        "head_canonical_zh": "温度过高",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "damage to the pump, death or serious injury",
+        "tail_canonical_zh": "泵损坏、死亡或重伤",
+        "tail_type": "Risk",
+        "evidence_text": "Excessive temperature as a result of bearings running hot or defective bearing seals will\n                      cause damage to the pump, death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lubricant level",
+        "head_canonical_zh": "润滑油位",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Regularly check the lubricant level",
+        "tail_canonical_zh": "定期检查润滑油位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly check the lubricant level.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rolling-element bearings",
+        "head_canonical_zh": "滚动轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Regularly check the rolling-element bearings for running noises",
+        "tail_canonical_zh": "定期检查滚动轴承运行噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly check the rolling-element bearings for running noises.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "running noises",
+        "head_canonical_zh": "运行噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "rolling-element bearings",
+        "tail_canonical_zh": "滚动轴承",
+        "tail_type": "Component",
+        "evidence_text": "Regularly check the rolling-element bearings for running noises.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

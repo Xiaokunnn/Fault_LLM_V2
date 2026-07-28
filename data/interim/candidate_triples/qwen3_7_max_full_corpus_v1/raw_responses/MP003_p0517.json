@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0517",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7e5162f5-831b-9ba1-9932-a159df803936",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 693,
+    "prompt_tokens": 2113,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2806
+  },
+  "latency_ms": 9378,
+  "attempt": 1,
+  "prompt_sha256": "a5d44ffcd35cafca29b45cb4a46b6d60e4fb9f377e9fdf6afbe4db3f10c85335",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "joint assembly",
+        "head_canonical_zh": "接头组件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visual examination",
+        "tail_canonical_zh": "目视检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Visual examination of the joint assembly is to be carried out.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drop in the pressure and of visible leakage",
+        "head_canonical_zh": "压力下降和可见泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "the test is to be repeated",
+        "tail_canonical_zh": "重复试验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In the event of drop in the pressure and of visible leakage the test is to be repeated as described in 4-6-2/5.9.2(e).iv.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "leakage or damage",
+        "head_canonical_zh": "泄漏或损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "withstand not less than 107 cycles with frequency 20-50 Hz",
+        "tail_canonical_zh": "承受不少于10^7次20-50Hz循环",
+        "tail_type": "Standard",
+        "evidence_text": "Test specimen is to withstand not less than 107 cycles with frequency 20-50 Hz without leakage or damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

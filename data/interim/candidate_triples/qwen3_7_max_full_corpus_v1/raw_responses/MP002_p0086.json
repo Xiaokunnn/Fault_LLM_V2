@@ -1,0 +1,76 @@
+{
+  "page_key": "MP002:p0086",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f4c15af4-7694-968d-83bb-02bb35aa93ea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 632,
+    "prompt_tokens": 1967,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2599
+  },
+  "latency_ms": 9659,
+  "attempt": 1,
+  "prompt_sha256": "21bb9d909b2d39743eb2fa52839b7d33a0f7eeb6f7931ca122a2103ee3f5a8bc",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failures",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "incorrect rebuilds or adjustments",
+        "tail_canonical_zh": "不正确的重装或调整",
+        "tail_type": "Cause",
+        "evidence_text": "Failures occur after PMs (incorrect rebuilds or adjustments)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "asset failure",
+        "head_canonical_zh": "资产故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Performance Monitoring",
+        "tail_canonical_zh": "性能监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Performance Monitoring. Evaluation of an asset’s operating parameters (e.g., pressure, temp, flow, speed) through trend analysis that will allow forecasting asset failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "asset’s current and/or future condition",
+        "head_canonical_zh": "资产当前和/或未来状态",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Condition Based Maintenance",
+        "tail_canonical_zh": "视情维护",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Condition Based Maintenance. Monitoring of any parameter that will allow evaluation of the asset’s current and/or future condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

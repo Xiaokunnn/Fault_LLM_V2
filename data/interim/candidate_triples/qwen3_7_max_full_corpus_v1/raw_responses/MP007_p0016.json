@@ -1,0 +1,97 @@
+{
+  "page_key": "MP007:p0016",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-733a0da2-9166-953c-9678-7d45a417a519",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 958,
+    "prompt_tokens": 3476,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4434
+  },
+  "latency_ms": 11135,
+  "attempt": 1,
+  "prompt_sha256": "e9d4035e0c372af22a798a7fae0dfdec3e2df864b3e3eeec55267e600083dde9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "ethylene glycol is filled into the pump chamber during pump storage so as to avoid frost",
+        "tail_canonical_zh": "储存期间向泵腔注入乙二醇以防冻",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is suggested that ethylene glycol is filled into the pump chamber during pump storage so as to avoid frost.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "frost",
+        "head_canonical_zh": "冻结",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "ethylene glycol is filled into the pump chamber during pump storage",
+        "tail_canonical_zh": "储存期间向泵腔注入乙二醇",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "It is suggested that ethylene glycol is filled into the pump chamber during pump storage so as to avoid frost.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Ambient temperature (°C) -10 / +40",
+        "tail_canonical_zh": "环境温度-10至+40°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Ambient temperature (°C) -10 / +40",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0016:t00:r001:c00",
+          "MP007:p0016:t00:r001:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "Less than 80% and no condensation occurs to the pump at 20°C",
+        "tail_canonical_zh": "湿度低于80%且20°C时泵体无凝露",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Maximum humidity Less than 80% and no condensation occurs to the pump at 20°C",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0016:t00:r002:c00",
+          "MP007:p0016:t00:r002:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

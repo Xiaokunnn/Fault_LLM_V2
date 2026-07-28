@@ -1,0 +1,113 @@
+{
+  "page_key": "MP019:p0107",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-55edb3b9-d076-9f30-b4c1-9e45849f5702",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 14285,
+  "attempt": 1,
+  "prompt_sha256": "ad83364b57b36e1317936a2e411e8791c0542b3cc189e8adf9d6e97a04b337d0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Inkompatibla smörjmedel",
+        "head_canonical_zh": "不相容润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lagerskador",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Inkompatibla smörjmedel kan orsaka lagerskador.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Blanda inte olika typer av fett",
+        "head_canonical_zh": "禁止混合不同种类润滑脂",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "lagerskador",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Blanda inte olika typer av fett. Inkompatibla smörjmedel kan orsaka lagerskador.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Smörjmedel som innehåller EP-tillsatser rekommenderas inte vid höga lagertemperaturer för storlekarna 280-450",
+        "head_canonical_zh": "280-450机座号电机高温下不推荐使用含EP添加剂润滑脂",
+        "head_type": "OperatingCondition",
+        "relation": "increases_risk_of",
+        "tail_surface": "lagerskador",
+        "tail_canonical_zh": "轴承损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Smörjmedel som innehåller EP-tillsatser rekommenderas inte vid höga lagertemperaturer för storlekarna 280-450.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Kontrollera med tillverkaren att kvaliteten motsvarar den hos ovan nämnda smörjmedel",
+        "head_canonical_zh": "向制造商核实润滑脂质量符合上述要求",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Om andra smörjmedel används",
+        "tail_canonical_zh": "使用其他润滑脂时",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Om andra smörjmedel används: Kontrollera med tillverkaren att kvaliteten motsvarar den hos ovan nämnda smörjmedel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motorerna",
+        "head_canonical_zh": "电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "eftersmörjs",
+        "tail_canonical_zh": "补充润滑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "När motorerna eftersmörjs ska endast fett med nedanstående egenskaper användas",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

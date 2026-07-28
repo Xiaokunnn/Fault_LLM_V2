@@ -1,0 +1,151 @@
+{
+  "page_key": "MP019:p0099",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-eac118aa-a155-91e1-96cf-4a2bdf32ad1c",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 20826,
+  "attempt": 1,
+  "prompt_sha256": "28842b822f906cdfa8dbb07582b88f1b522625d81d6e34a5ee643e06fa12b701",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "termistorer eller andra motståndstemperaturgivare",
+        "head_canonical_zh": "热敏电阻或温度传感器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Maximal mätspänning för termistorerna är 2,5 V. Maximal mätström för Pt100 är 5 mA",
+        "tail_canonical_zh": "热敏电阻最大测量电压2.5V及Pt100最大测量电流5mA",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Maximal mätspänning för termistorerna är 2,5 V. Maximal mätström för Pt100 är 5 mA",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "högre mätspänning eller mätström",
+        "head_canonical_zh": "过高的测量电压或电流",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "avläsningsfel eller systemskador",
+        "tail_canonical_zh": "读数错误或系统损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Om högre mätspänning eller mätström används kan avläsningsfel eller systemskador uppstå",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isoleringen av lindningens termiska givare",
+        "head_canonical_zh": "绕组热传感器绝缘",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "IEC 60664",
+        "tail_canonical_zh": "IEC 60664标准",
+        "tail_type": "Standard",
+        "evidence_text": "Isoleringen av lindningens termiska givare är av grundtyp. ... Säkerställ isoleringsnivån hos termistorkretsen (se IEC 60664)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "termistorkretsen",
+        "head_canonical_zh": "热敏电阻电路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Säkerställ isoleringsnivån",
+        "tail_canonical_zh": "确保绝缘水平",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Säkerställ isoleringsnivån hos termistorkretsen (se IEC 60664)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Tätningarna för uttagslådorna",
+        "head_canonical_zh": "接线盒密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "placeras på rätt sätt i de förberedda skårorna",
+        "tail_canonical_zh": "正确放置在预制槽中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tätningarna för uttagslådorna måste placeras på rätt sätt i de förberedda skårorna för att säkerställa rätt IP-klass",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "rotationsriktningen",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "roterar axeln medurs sett mot axeländen på drivsidan",
+        "tail_canonical_zh": "从驱动端看轴顺时针旋转",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Om nätfaserna L1, L2 och L3 ligger anslutna till uttagen enligt Figur 1 roterar axeln medurs sett mot axeländen på drivsidan",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "rotationsriktningen",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "Låt två av matningskablarna byta plats",
+        "tail_canonical_zh": "交换两根供电电缆位置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Låt två av matningskablarna byta plats om rotationsriktningen ska ändras",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

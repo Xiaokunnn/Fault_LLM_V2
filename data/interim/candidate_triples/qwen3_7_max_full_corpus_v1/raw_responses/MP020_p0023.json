@@ -1,0 +1,190 @@
+{
+  "page_key": "MP020:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-d81a6191-38bc-9cd5-b6a5-9d8cec3d4628",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 22933,
+  "attempt": 1,
+  "prompt_sha256": "9de09e7bcc2ab0e1e961ce76ec95401d5ba8b8cebc4bd3b2be1eafb3b1cf2063",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing temperatures to 160°F (71°C)",
+        "head_canonical_zh": "轴承温度正常范围",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "normal",
+        "tail_canonical_zh": "正常工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Bearing temperatures to 160°F (71°C) are normal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Temperatures over 200°F (93°C)",
+        "head_canonical_zh": "轴承温度过高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "too high",
+        "tail_canonical_zh": "温度异常过高",
+        "tail_type": "FaultMode",
+        "evidence_text": "Temperatures over 200°F (93°C) are too high.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high temperatures",
+        "head_canonical_zh": "高温",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Use a thermometer or other device for temperature measurement",
+        "tail_canonical_zh": "使用温度计或其他测温装置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The human hand can not estimate high temperatures. Use a thermometer or other device for temperature measurement.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Oil level",
+        "head_canonical_zh": "油位",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Oil level must be correct before unit is started",
+        "tail_canonical_zh": "启动前确认油位正确",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Oil level must be correct before unit is started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oil lubricated frames",
+        "head_canonical_zh": "油润滑机架",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "installed horizontally and level",
+        "tail_canonical_zh": "水平安装并调平",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Oil lubricated frames must be installed horizontally and level.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Grease lubricated motors and frames",
+        "head_canonical_zh": "脂润滑电机和机架",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "maintained per instructions accompanying the pump",
+        "tail_canonical_zh": "按泵附带说明维护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Grease lubricated motors and frames must be maintained per instructions accompanying the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Grease code EP-2",
+        "head_canonical_zh": "EP-2润滑脂",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "recommended for most applications",
+        "tail_canonical_zh": "推荐用于大多数应用",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Grease code EP-2 is recommended for most applications.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Added grease",
+        "head_canonical_zh": "补充润滑脂",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "must be the same type as recommended in the O&M manual",
+        "tail_canonical_zh": "必须与运维手册推荐类型一致",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Added grease must be the same type as recommended in the O&M manual.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oil and grease",
+        "head_canonical_zh": "润滑油与润滑脂",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "should not be mixed",
+        "tail_canonical_zh": "禁止混合使用",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Oil and grease should not be mixed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

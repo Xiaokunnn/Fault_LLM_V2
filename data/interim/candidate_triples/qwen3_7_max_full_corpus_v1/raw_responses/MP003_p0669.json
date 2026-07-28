@@ -1,0 +1,81 @@
+{
+  "page_key": "MP003:p0669",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c2a66939-9ee0-9d12-9403-f4dd1788bf0f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 884,
+    "prompt_tokens": 2472,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3356
+  },
+  "latency_ms": 10450,
+  "attempt": 1,
+  "prompt_sha256": "fa0a5b3734c192829bdbcf45e8bccb1da70954633a773fe44cb90995243788a8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water spraying system",
+        "head_canonical_zh": "水喷雾系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump",
+        "tail_canonical_zh": "采取预防措施防止喷嘴堵塞及管路腐蚀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The water spraying system may be connected to the vessel's fire main system, in which case the fire pump capacity is to be sufficient for simultaneous operation of the fire main system as required in 4-7-3/1.7 and the water spray system. Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "nozzles becoming clogged by impurities in the water",
+        "head_canonical_zh": "水中杂质导致喷嘴堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump",
+        "tail_canonical_zh": "采取预防措施防止喷嘴堵塞及管路腐蚀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "corrosion of piping, nozzles, valves and pump",
+        "head_canonical_zh": "管路、喷嘴、阀门和泵的腐蚀",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump",
+        "tail_canonical_zh": "采取预防措施防止喷嘴堵塞及管路腐蚀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Precautions are to be taken to prevent the nozzles from becoming clogged by impurities in the water or corrosion of piping, nozzles, valves and pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

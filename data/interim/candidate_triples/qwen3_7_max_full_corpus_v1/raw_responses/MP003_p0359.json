@@ -1,0 +1,59 @@
+{
+  "page_key": "MP003:p0359",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dc9de9c8-c01d-9708-962d-40b29454df63",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 549,
+    "prompt_tokens": 2381,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2930
+  },
+  "latency_ms": 7300,
+  "attempt": 1,
+  "prompt_sha256": "eece2653223fb159e827352213620c199f4075ee83828f0babcd4428de9b9ef2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "automatic autopilot override fails to respond",
+        "head_canonical_zh": "自动舵覆盖失效无响应",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "audible and visual alarm",
+        "tail_canonical_zh": "声光报警",
+        "tail_type": "Symptom",
+        "evidence_text": "An audible and visual alarm is to be provided at the primary steering station in the event that:\ni)   The automatic autopilot override fails to respond when the manual helm order is 5\ndegrees of rudder angle or greater",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failures likely to cause uncontrolled movements of rudder",
+        "head_canonical_zh": "导致舵叶失控运动的故障",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Failure Mode and Effect Analysis methodology",
+        "tail_canonical_zh": "故障模式与影响分析方法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The failures (as listed, but not limited to those items in 4-3-4/15 TABLE 1) likely to cause\nuncontrolled movements of rudder are to be clearly identified. In the event of detection of such\nfailure, the rudder is to stop in the current position without manual intervention or is to return to\nthe midship/neutral position. Failure Mode and Effect Analysis methodology may be used to\nidentify the failures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

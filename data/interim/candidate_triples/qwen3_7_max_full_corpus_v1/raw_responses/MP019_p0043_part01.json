@@ -1,0 +1,256 @@
+{
+  "page_key": "MP019:p0043",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cb1c18f7-a481-93cd-b513-5fa2891256b1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3021,
+    "prompt_tokens": 2561,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5582
+  },
+  "latency_ms": 42987,
+  "attempt": 1,
+  "prompt_sha256": "eeea08e6a46f63f5ea7610ecd348780bd77b7d76ff6f0c81dea100874dd287fa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "La résistance de l'isolation du moteur",
+        "head_canonical_zh": "电机绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Mesure de la résistance de l'isolation",
+        "tail_canonical_zh": "绝缘电阻测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "3.2 Mesure de la résistance de l'isolation ... La résistance de l'isolation du moteur doit être mesurée avant sa mise en service et en particulier si les bobinages sont susceptibles d'être humides.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bobinages sont susceptibles d'être humides",
+        "head_canonical_zh": "绕组受潮",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Mesure de la résistance de l'isolation",
+        "tail_canonical_zh": "绝缘电阻测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "La résistance de l'isolation du moteur doit être mesurée avant sa mise en service et en particulier si les bobinages sont susceptibles d'être humides.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rotation s'effectue sans entrave",
+        "head_canonical_zh": "转动无阻碍",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Tournez l'arbre à la main",
+        "tail_canonical_zh": "手动盘车",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tournez l'arbre à la main pour vérifier que sa rotation s'effectue sans entrave.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "endommager le roulement à rouleaux",
+        "head_canonical_zh": "滚子轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "rotation du moteur sans charge radiale appliquée à l'arbre",
+        "tail_canonical_zh": "无径向负载下旋转电机轴",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "La rotation du moteur sans charge radiale appliquée à l'arbre est susceptible d'endommager le roulement à rouleaux.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "endommager le roulement à contact oblique",
+        "head_canonical_zh": "角接触轴承损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "rotation du moteur, sans charge axiale appliquée sur l'arbre dans la direction adéquate",
+        "tail_canonical_zh": "无适当轴向负载下旋转电机轴",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "La rotation du moteur, sans charge axiale appliquée sur l'arbre dans la direction adéquate, est susceptible d'endommager le roulement à contact oblique.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Moteurs dotés de graisseurs",
+        "head_canonical_zh": "带注油嘴电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "appliquez la quantité de graisse spécifiée",
+        "tail_canonical_zh": "加注规定量润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Moteurs dotés de graisseurs : Lors du démarrage du moteur pour la première fois ou après un entreposage de longue durée, appliquez la quantité de graisse spécifiée.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration au moteur",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Fondations doivent être à niveau ... et suffisamment rigides ... conception et dimensions permettant d'éviter tout transfert de vibration",
+        "tail_canonical_zh": "基础水平、足够刚性且设计尺寸避免振动传递",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les fondations doivent être à niveau, voir schéma ci-dessous, et suffisamment rigides pour encaisser les effets de courts-circuits. Elles doivent être d'une conception et de dimensions permettant d'éviter tout transfert de vibration au moteur, ainsi que toute vibration provoquée par résonance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "vibration provoquée par résonance",
+        "head_canonical_zh": "共振引起的振动",
+        "head_type": "Symptom",
+        "relation": "prevented_by",
+        "tail_surface": "Fondations doivent être à niveau ... et suffisamment rigides ... conception et dimensions permettant d'éviter ... toute vibration provoquée par résonance",
+        "tail_canonical_zh": "基础水平、足够刚性且设计尺寸避免共振振动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Elles doivent être d'une conception et de dimensions permettant d'éviter tout transfert de vibration au moteur, ainsi que toute vibration provoquée par résonance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bobinages sont trop humides",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Si vous n'obtenez pas la valeur de résistance de référence",
+        "tail_canonical_zh": "未获得参考电阻值",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Si vous n'obtenez pas la valeur de résistance de référence, les bobinages sont trop humides.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bobinages sont trop humides",
+        "head_canonical_zh": "绕组过湿",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "séchés en étuve, à une température de 90 °C pendant 12 à 16 heures, puis à 105 °C pendant 6 à 8 heures",
+        "tail_canonical_zh": "烘箱干燥90°C 12-16小时后105°C 6-8小时",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ils doivent alors être séchés en étuve, à une température de 90 °C pendant 12 à 16 heures, puis à 105 °C pendant 6 à 8 heures.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bouchons de purge sont fixés",
+        "head_canonical_zh": "排水塞固定",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "démonter les flasques et couvercles de boîtes à bornes pour l'opération de séchage",
+        "tail_canonical_zh": "干燥作业时拆卸端盖和接线盒盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Même si les bouchons de purge sont fixés, il est recommandé de démonter les flasques et couvercles de boîtes à bornes pour l'opération de séchage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bobinages imprégnés d'eau de mer",
+        "head_canonical_zh": "海水浸泡绕组",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "rebobinés",
+        "tail_canonical_zh": "重绕绕组",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les bobinages imprégnés d'eau de mer doivent normalement être rebobinés.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

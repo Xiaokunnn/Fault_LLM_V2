@@ -1,0 +1,82 @@
+{
+  "page_key": "MP019:p0054",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3b96322f-0201-981f-8849-75168a84c648",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 705,
+    "prompt_tokens": 2042,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2747
+  },
+  "latency_ms": 8042,
+  "attempt": 1,
+  "prompt_sha256": "5a377e0e5672094094325daa465b0084cd918c04834ec6ffdecf1041f14df48b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "roulements",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "démontés avec un extracteur et remontés à chaud ou avec des outils appropriés",
+        "tail_canonical_zh": "使用拉拔器拆卸并热装或使用专用工具安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ils doivent être démontés avec un extracteur et remontés à chaud ou avec des outils appropriés.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "moteurs de désenfumage et autres moteurs spéciaux",
+        "head_canonical_zh": "排烟电机及其他特种电机",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "ne doivent pas être rebobinés sans avoir au préalable contacté ABB",
+        "tail_canonical_zh": "未事先联系ABB不得重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Les moteurs de désenfumage et autres moteurs spéciaux ne doivent pas être rebobinés sans avoir au préalable contacté ABB.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.93
+      },
+      {
+        "head_surface": "Le rebobinage",
+        "head_canonical_zh": "重绕",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "doit toujours être réalisé dans un atelier spécialisé",
+        "tail_canonical_zh": "必须在专业车间进行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Le rebobinage doit toujours être réalisé dans un atelier spécialisé.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.96,
+        "tail_translation_confidence": 0.94
+      }
+    ],
+    "warnings": []
+  }
+}

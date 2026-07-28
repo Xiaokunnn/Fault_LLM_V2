@@ -1,0 +1,74 @@
+{
+  "page_key": "MP001:p0009",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-adb65004-8662-9134-ab99-dbb5d4eee7e9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 633,
+    "prompt_tokens": 2179,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2812
+  },
+  "latency_ms": 7938,
+  "attempt": 1,
+  "prompt_sha256": "b6fc6e79294302be919482ac12ca1de780dbcbe9b163b8537b50a411493c4bd1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "potential failure",
+        "head_canonical_zh": "潜在故障",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "condition-monitoring tasks",
+        "tail_canonical_zh": "状态监测任务",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Condition-monitoring tasks are scheduled activities used to monitor machine condition and to detect a potential failure in advance so that action can be taken to prevent that failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "potential failure",
+        "head_canonical_zh": "潜在故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "functional failure is either about to occur or is in the process of occurring",
+        "tail_canonical_zh": "功能故障即将发生或正在发生",
+        "tail_type": "Symptom",
+        "evidence_text": "A potential failure is an identifiable condition that indicates that a functional failure is either about to occur or is in the process of occurring.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "failure",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "action",
+        "tail_canonical_zh": "处置措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A condition-monitoring task is a scheduled task used to detect the potential onset of a failure so that action can be taken to prevent such failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

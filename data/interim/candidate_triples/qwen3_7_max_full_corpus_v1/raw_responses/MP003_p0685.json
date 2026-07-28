@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0685",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7d785e36-45a5-91d8-97a0-e9de617453f9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 922,
+    "prompt_tokens": 2501,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3423
+  },
+  "latency_ms": 11068,
+  "attempt": 1,
+  "prompt_sha256": "47839d4e51a8cc32f747e0b7ad7ab4a03e82bb3489c286684c7e2158647fd081",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Relief valves",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "excessive pressure in any part of the fire main system",
+        "tail_canonical_zh": "消防总管系统任何部分的超压",
+        "tail_type": "Risk",
+        "evidence_text": "These valves are to be so placed and adjusted as to prevent excessive pressure in any part of the fire main system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "isolation valves",
+        "head_canonical_zh": "隔离阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "preserve the integrity of the fire main system in case of fire or explosion",
+        "tail_canonical_zh": "在火灾或爆炸情况下保持消防总管系统的完整性",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "isolation valves are to be fitted in the fire main at poop front in a protected position and on the tank deck at intervals of not more than 40 m (132 ft.) to preserve the integrity of the fire main system in case of fire or explosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "fire mains and hydrants",
+        "head_canonical_zh": "消防总管和消火栓",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Suitable drainage provisions",
+        "tail_canonical_zh": "适当的排水设施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Suitable drainage provisions are to be provided for the fire main piping.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pipes and hydrants",
+        "head_canonical_zh": "管路和消火栓",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "arrangement ... to avoid the possibility of freezing",
+        "tail_canonical_zh": "避免冻结可能性的布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The arrangement of pipes and hydrants is to be such as to avoid the possibility of freezing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

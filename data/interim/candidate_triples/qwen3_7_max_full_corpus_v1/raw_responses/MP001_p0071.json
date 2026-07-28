@@ -1,0 +1,283 @@
+{
+  "page_key": "MP001:p0071",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9b856bf6-080a-9f28-b627-1f82fd61d433",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2984,
+    "prompt_tokens": 8915,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11899
+  },
+  "latency_ms": 45241,
+  "attempt": 1,
+  "prompt_sha256": "4cda353a776dd7d2edbfccfe97182d6c0035507dd75b58b1eb1c713cd20dcc53",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Chemical Analysis",
+        "tail_canonical_zh": "化学分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Condition Monitoring Subcategory Chemical Analysis Condition Lubricating Oil deterioration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r007:c01",
+          "MP001:p0071:t00:r008:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "High Acid",
+        "tail_canonical_zh": "高酸值",
+        "tail_type": "Symptom",
+        "evidence_text": "Condition Change High Acid Condition Lubricating Oil deterioration",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r005:c01",
+          "MP001:p0071:t00:r008:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "weak acids in a lubricating oil",
+        "head_canonical_zh": "润滑油中的弱酸",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Lubricating Oil deterioration",
+        "tail_canonical_zh": "润滑油劣化",
+        "tail_type": "FaultMode",
+        "evidence_text": "The build-up of weak acids in a lubricating oil can be indicative of oxidation caused by high operating temperature, low oil level, contamination, hot spots, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r004:c02",
+          "MP001:p0071:t00:r008:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "high operating temperature",
+        "head_canonical_zh": "高运行温度",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "oxidation",
+        "tail_canonical_zh": "氧化",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "oxidation caused by high operating temperature, low oil level, contamination, hot spots, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "low oil level",
+        "head_canonical_zh": "低油位",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "oxidation",
+        "tail_canonical_zh": "氧化",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "oxidation caused by high operating temperature, low oil level, contamination, hot spots, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "contamination",
+        "head_canonical_zh": "污染",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "oxidation",
+        "tail_canonical_zh": "氧化",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "oxidation caused by high operating temperature, low oil level, contamination, hot spots, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hot spots",
+        "head_canonical_zh": "热点",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "oxidation",
+        "tail_canonical_zh": "氧化",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "oxidation caused by high operating temperature, low oil level, contamination, hot spots, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r004:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Differential of component temperatures",
+        "head_canonical_zh": "部件温差",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "component problems",
+        "tail_canonical_zh": "部件问题",
+        "tail_type": "FaultMode",
+        "evidence_text": "Check temperature of fluid and local bulk also Differential of component temperatures more than 10°C could indicate component problems",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r003:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change oil to more thermally stable grade",
+        "tail_canonical_zh": "更换为热稳定性更好的油品",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Change oil to more thermally stable grade Check component for level problems",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r003:c02",
+          "MP001:p0071:t00:r008:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check oil tank for contamination",
+        "tail_canonical_zh": "检查油箱污染情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check oil tank for contamination Select higher TBN oil Change oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r003:c01",
+          "MP001:p0071:t00:r008:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Select higher TBN oil",
+        "tail_canonical_zh": "选择更高总碱值油品",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Select higher TBN oil Change oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r003:c01",
+          "MP001:p0071:t00:r008:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lubricating Oil deterioration",
+        "head_canonical_zh": "润滑油劣化",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Change oil",
+        "tail_canonical_zh": "换油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Change oil Select higher TBN oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0071:t00:r003:c01",
+          "MP001:p0071:t00:r008:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

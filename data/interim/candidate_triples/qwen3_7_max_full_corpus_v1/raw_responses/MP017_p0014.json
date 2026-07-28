@@ -1,0 +1,192 @@
+{
+  "page_key": "MP017:p0014",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-66168d4c-8a92-9794-a52f-07c1d04b6e0c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1985,
+    "prompt_tokens": 2083,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4068
+  },
+  "latency_ms": 24435,
+  "attempt": 1,
+  "prompt_sha256": "413753edf27534a8a329491247438878310c9da3b7b9724662812f75399e4651",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "checking alignment",
+        "head_canonical_zh": "对中检查",
+        "head_type": "InspectionAction",
+        "relation": "prevented_by",
+        "tail_surface": "disconnect the power source",
+        "tail_canonical_zh": "断开电源",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When checking alignment, disconnect the power source to ensure that the pump will remain inoperative.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "misaligned",
+        "head_canonical_zh": "联轴器不对中",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "use a feeler gauge between the coupling and the straightedge to measure the amount of misalignment",
+        "tail_canonical_zh": "使用塞尺测量不对中量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "If the coupling is misaligned, use a feeler gauge between the coupling and the straightedge to measure the amount of misalignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unmatched sets",
+        "head_canonical_zh": "皮带组不匹配",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "accelerated belt wear",
+        "tail_canonical_zh": "皮带加速磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "unmatched sets will cause accelerated belt wear",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "belts are too loose",
+        "head_canonical_zh": "皮带过松",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "slip",
+        "tail_canonical_zh": "打滑",
+        "tail_type": "Symptom",
+        "evidence_text": "If the belts are too loose, they will slip",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "belts are too tight",
+        "head_canonical_zh": "皮带过紧",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "excessive power loss",
+        "tail_canonical_zh": "过大功率损失",
+        "tail_type": "Symptom",
+        "evidence_text": "if the belts are too tight, there will be excessive power loss",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "belts are too tight",
+        "head_canonical_zh": "皮带过紧",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "possible bearing failure",
+        "tail_canonical_zh": "轴承故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "if the belts are too tight, there will be excessive power loss and possible bearing failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Align spider insert type couplings",
+        "head_canonical_zh": "弹性块联轴器对中",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "using calipers to measure the dimensions on the circumference of the outer ends of the coupling hub every 90 degrees",
+        "tail_canonical_zh": "每90度用卡尺测量轮毂外端尺寸",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Align spider insert type couplings by using calipers to measure the dimensions on the circumference of the outer ends of the coupling hub every 90 degrees",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Align non-spider type couplings",
+        "head_canonical_zh": "非弹性块联轴器对中",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "using a feeler gauge or taper gauge between the coupling halves every 90 degrees",
+        "tail_canonical_zh": "每90度用塞尺或锥尺测量联轴器半体间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Align non-spider type couplings by using a feeler gauge or taper gauge between the coupling halves every 90 degrees",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "V-belt drives",
+        "head_canonical_zh": "V带传动",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Use a straightedge along the sides of the pulleys to ensure that the pulleys are properly aligned",
+        "tail_canonical_zh": "沿带轮侧面使用直尺检查对齐",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Use a straightedge along the sides of the pulleys to ensure that the pulleys are properly aligned",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

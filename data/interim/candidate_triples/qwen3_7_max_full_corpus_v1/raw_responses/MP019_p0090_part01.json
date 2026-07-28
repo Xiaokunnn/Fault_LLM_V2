@@ -1,0 +1,63 @@
+{
+  "page_key": "MP019:p0090",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-de753a34-c18a-9693-824e-9333d1b602a5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 453,
+    "prompt_tokens": 2076,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2529
+  },
+  "latency_ms": 7954,
+  "attempt": 1,
+  "prompt_sha256": "a651eacf03a99a82fbde5ce8b1e610f79a9b5af3d445265076e038babf205c3a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cuscinetti",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "rimossi servendosi di estrattori e montati a caldo o con strumenti adatti",
+        "tail_canonical_zh": "使用拉拔器拆卸并热装或使用合适工具安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Devono essere rimossi servendosi di estrattori e montati a caldo o con strumenti adatti.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "riavvolgimento",
+        "head_canonical_zh": "重绕",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "officina autorizzata",
+        "tail_canonical_zh": "授权车间",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Il riavvolgimento deve sempre essere eseguito da una officina autorizzata.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

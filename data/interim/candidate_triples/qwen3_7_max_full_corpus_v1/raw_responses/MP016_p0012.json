@@ -1,0 +1,74 @@
+{
+  "page_key": "MP016:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d6bf29fa-7940-95d8-a4c9-de089730d152",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 765,
+    "prompt_tokens": 3703,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4468
+  },
+  "latency_ms": 9945,
+  "attempt": 1,
+  "prompt_sha256": "64687433f1ef2d49de5a04c120303436caa3208c8fe79b0ec7979b65b945b9e5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bronze FIP",
+        "head_canonical_zh": "青铜柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Clutches",
+        "tail_canonical_zh": "离合器",
+        "tail_type": "Component",
+        "evidence_text": "Some Bronze FIP can be supplied with Clutches attached.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pompes à turbine flexible en bronze",
+        "head_canonical_zh": "青铜柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "pomper des fluides délicats, visqueux et chargés de particules ainsi que des liquides minces",
+        "tail_canonical_zh": "输送敏感、粘性、含颗粒流体及稀薄液体",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Les pompes à turbine flexible en bronze sont des pompes volumétriques semi-positives conçues pour pomper des fluides délicats, visqueux et chargés de particules ainsi que des liquides minces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Isolez et verrouillez toujours le moteur d’entraînement de la pompe avant d’inspecter ou d’entretenir la pompe",
+        "head_canonical_zh": "检查或维护前隔离并锁定泵驱动电机",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "dangers liés aux pièces mobiles, à la pression élevée du fluide, aux températures extrêmes, aux liquides dangereux et à l’électricité",
+        "tail_canonical_zh": "运动部件、高压流体、极端温度、危险液体及电气相关危险",
+        "tail_type": "Risk",
+        "evidence_text": "N’oubliez pas les dangers liés aux pièces mobiles, à la pression élevée du fluide, aux températures extrêmes, aux liquides dangereux et à l’électricité. Isolez et verrouillez toujours le moteur d’entraînement de la pompe avant d’inspecter ou d’entretenir la pompe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

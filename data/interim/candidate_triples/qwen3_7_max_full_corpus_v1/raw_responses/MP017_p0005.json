@@ -1,0 +1,100 @@
+{
+  "page_key": "MP017:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fa0133b8-cdec-9d3f-b2a1-c841ebeb1311",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 930,
+    "prompt_tokens": 2137,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3067
+  },
+  "latency_ms": 15794,
+  "attempt": 1,
+  "prompt_sha256": "30676942b0012c5f9e62e7195c4e78c1bd28560629786bad56d165f3605cf9d4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "overheated",
+        "head_canonical_zh": "过热",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "pump casing to rupture or explode",
+        "tail_canonical_zh": "泵壳破裂或爆炸",
+        "tail_type": "FaultMode",
+        "evidence_text": "to a boil, build pressure, and cause the pump casing to rupture or explode.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheated",
+        "head_canonical_zh": "过热",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Allow the pump to cool before servicing",
+        "tail_canonical_zh": "维修前让泵冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Do not remove plates, covers, gauges, pipe plugs, or fittings from an overheated pump. Vapor pressure within the pump can cause parts being disengaged to be ejected with great force. Allow the pump to cool before servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "run this pump backwards",
+        "head_canonical_zh": "泵反转运行",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Be certain that rotation is correct before fully engaging the pump",
+        "tail_canonical_zh": "完全启动泵前确认转向正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Never run this pump backwards. Be certain that rotation is correct before fully engaging the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electrical components of this pump",
+        "head_canonical_zh": "泵电气部件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Obtain the services of a qualified electrician to troubleshoot, test and/or service",
+        "tail_canonical_zh": "由合格电工进行故障排查、测试和/或维修",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Obtain the services of a qualified electrician to troubleshoot, test and/or service the electrical components of this pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

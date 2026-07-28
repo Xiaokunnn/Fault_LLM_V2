@@ -1,0 +1,120 @@
+{
+  "page_key": "MP017:p0015",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8de54384-c399-9789-aa91-e8d1364d30af",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1156,
+    "prompt_tokens": 1921,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3077
+  },
+  "latency_ms": 14642,
+  "attempt": 1,
+  "prompt_sha256": "e8ff19b2b1ecea3504cb8e432c6385aff59d627e4aae448f3a0b4db244c0cdb3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "overspeeding the pump",
+        "head_canonical_zh": "泵超速运行",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage both pump and power source",
+        "tail_canonical_zh": "泵及动力源损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "overspeeding the pump may damage both pump and power source",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "electrical service available matches the motor requirements stamped on the motor nameplate",
+        "head_canonical_zh": "核查电源与电机铭牌要求匹配",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "connecting a motor to the incoming power",
+        "tail_canonical_zh": "电机接线前检查",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "check that the electrical service available matches the motor requirements stamped on the motor nameplate before connecting a motor to the incoming power",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor speed meets pump specifications",
+        "head_canonical_zh": "核查电机转速符合泵规格",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "connecting a motor to the incoming power",
+        "tail_canonical_zh": "电机接线前检查",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check that the motor speed meets pump specifications",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rotation is incorrect on a three-phase motor",
+        "head_canonical_zh": "三相电机转向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "have a qualified electrician interchange any two of the three phase wires to change direction",
+        "tail_canonical_zh": "由合格电工交换任意两根相线以改变转向",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a three-phase motor, have a qualified electrician interchange any two of the three phase wires to change direction",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rotation is incorrect on a single-phase motor",
+        "head_canonical_zh": "单相电机转向错误",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "consult the literature supplied with the motor for specific instructions",
+        "tail_canonical_zh": "查阅电机附带文献获取具体调整说明",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If rotation is incorrect on a single-phase motor, consult the literature supplied with the motor for specific instructions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

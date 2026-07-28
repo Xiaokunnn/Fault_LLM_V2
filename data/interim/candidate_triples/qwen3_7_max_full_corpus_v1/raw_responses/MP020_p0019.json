@@ -1,0 +1,132 @@
+{
+  "page_key": "MP020:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-5640b1ab-a4ea-9b43-82d9-c083a540a06d",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 15451,
+  "attempt": 1,
+  "prompt_sha256": "89355d69bb112b50405703a63219ecb84bbb0bd123596598647f9e0f6eee2406",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "entrained air",
+        "head_canonical_zh": "夹带空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vent of air during filling of pump & line",
+        "head_canonical_zh": "泵及管路充液时排气",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Caution must be taken to vent of air during filling of pump & line. As little as 3% entrained air can cause centrifugal pumps to lose prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Close vent and supply valves prior to pump operation",
+        "head_canonical_zh": "启动前关闭排气阀和供给阀",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "lose prime",
+        "tail_canonical_zh": "失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Close vent and supply valves prior to pump operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "HAND PRIMER",
+        "head_canonical_zh": "手动引水装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Manual method of pulling fluid into volute",
+        "tail_canonical_zh": "手动将流体吸入蜗壳的方法",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "HAND PRIMER Manual method of pulling fluid into volute, allowing pump to operate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "VACUUM PRIMING",
+        "head_canonical_zh": "真空引水",
+        "head_type": "InspectionMethod",
+        "relation": "mitigated_by",
+        "tail_surface": "External vacuum pump creates a vacuum that pulls water into the volute",
+        "tail_canonical_zh": "外部真空泵产生真空将水吸入蜗壳",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "VACUUM PRIMING External vacuum pump creates a vacuum that pulls water into the volute.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "SELF-PRIMING",
+        "head_canonical_zh": "自吸式引水",
+        "head_type": "OperatingCondition",
+        "relation": "manifests_as",
+        "tail_surface": "air mixes with water retained inside the pump and is discharged out of the casing",
+        "tail_canonical_zh": "空气与泵内留存的水混合并从泵壳排出",
+        "tail_type": "Symptom",
+        "evidence_text": "SELF-PRIMING During the priming cycle, air mixes with water retained inside the pump and is discharged out of the casing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

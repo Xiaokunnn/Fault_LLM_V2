@@ -1,0 +1,57 @@
+{
+  "page_key": "MP003:p0336",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-68623677-e1d4-94db-8e6f-da96e186c9ea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 421,
+    "prompt_tokens": 4873,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5294
+  },
+  "latency_ms": 5196,
+  "attempt": 1,
+  "prompt_sha256": "00728b34041066378d834e1621e8b5ceccb260e064715fa3a1297bad9de1a7e5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "hydraulic power pump units",
+        "head_canonical_zh": "液压动力泵组",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "automatic start of the standby pump unit",
+        "tail_canonical_zh": "备用泵自动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For propulsion machinery spaces intended for unattended operation (ACCU or ABCU notation), automatic start of the standby pump unit is to be provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pitch actuating system",
+        "head_canonical_zh": "螺距调节系统",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "hydraulic power pump units",
+        "tail_canonical_zh": "液压动力泵组",
+        "tail_type": "Equipment",
+        "evidence_text": "At least two hydraulic power pump units for the pitch actuating system are to be provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

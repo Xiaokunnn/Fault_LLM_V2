@@ -1,0 +1,259 @@
+{
+  "page_key": "MP003:p0771",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-94aea1c7-2aa4-9b4d-a251-69bda0be7daf",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2798,
+    "prompt_tokens": 8740,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11538
+  },
+  "latency_ms": 36497,
+  "attempt": 1,
+  "prompt_sha256": "324e099f356122b7daacb3ccc4235bfce20712acae232eb2a4ab36b792b1a214",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Electrical equipment",
+        "head_canonical_zh": "电气设备",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "normally occurring variations in voltage and frequency",
+        "tail_canonical_zh": "电压和频率的正常变化",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The electrical characteristics of electrical equipment supplied from the main or emergency systems, other than battery supplies, are to be capable of being operated satisfactorily under normally occurring variations in voltage and frequency.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Frequency",
+        "head_canonical_zh": "频率",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "±5%",
+        "tail_canonical_zh": "±5%",
+        "tail_type": "Standard",
+        "evidence_text": "Frequency                    ±5%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t00:r002:c00",
+          "MP003:p0771:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Frequency",
+        "head_canonical_zh": "频率",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "±10% (5 s)",
+        "tail_canonical_zh": "±10% (5秒)",
+        "tail_type": "Standard",
+        "evidence_text": "Frequency                    ±5%                 ±10% (5 s)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t00:r002:c00",
+          "MP003:p0771:t00:r002:c02"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Voltage",
+        "head_canonical_zh": "电压",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "+6%, -10%",
+        "tail_canonical_zh": "+6%, -10%",
+        "tail_type": "Standard",
+        "evidence_text": "Voltage                     +6%, -10%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t00:r003:c00",
+          "MP003:p0771:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Voltage",
+        "head_canonical_zh": "电压",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "±20% (1.5 s)",
+        "tail_canonical_zh": "±20% (1.5秒)",
+        "tail_type": "Standard",
+        "evidence_text": "Voltage                     +6%, -10%           ±20% (1.5 s)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t00:r003:c00",
+          "MP003:p0771:t00:r003:c02"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.99,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Voltage Tolerance (continuous)",
+        "head_canonical_zh": "连续电压容差",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "±10%",
+        "tail_canonical_zh": "±10%",
+        "tail_type": "Standard",
+        "evidence_text": "Voltage Tolerance (continuous)                     ±10%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t01:r002:c00",
+          "MP003:p0771:t01:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Voltage cyclic variation deviation",
+        "head_canonical_zh": "电压周期性变化偏差",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "5%",
+        "tail_canonical_zh": "5%",
+        "tail_type": "Standard",
+        "evidence_text": "Voltage cyclic variation deviation                 5%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t01:r003:c00",
+          "MP003:p0771:t01:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Voltage ripple (AC r.m.s over steady DC voltage)",
+        "head_canonical_zh": "电压纹波(稳态直流电压上的交流均方根值)",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "10%",
+        "tail_canonical_zh": "10%",
+        "tail_type": "Standard",
+        "evidence_text": "Voltage ripple (AC r.m.s over steady DC voltage)   10%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t01:r004:c00",
+          "MP003:p0771:t01:r004:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Components connected to the battery during charging",
+        "head_canonical_zh": "充电期间连接至电池的组件",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "+30%, -25%",
+        "tail_canonical_zh": "+30%, -25%",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Components connected to the battery during charging (see note) +30%, -25%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t02:r002:c00",
+          "MP003:p0771:t02:r002:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Components not connected to the battery during charging",
+        "head_canonical_zh": "充电期间未连接至电池的组件",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "+20%, -25%",
+        "tail_canonical_zh": "+20%, -25%",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Components not connected to the battery during charging +20%, -25%",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0771:t02:r003:c00",
+          "MP003:p0771:t02:r003:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "special ystem, such as electronic circuits",
+        "head_canonical_zh": "特殊系统(如电子电路)",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "supplied directly from the system but by alternative means, such as through a stabilized supply",
+        "tail_canonical_zh": "通过替代方式(如稳压电源)供电而非直接由系统供电",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Any special ystem, such as electronic circuits, whose function cannot operate satisfactorily within the limits shown in the above tables, is not to be supplied directly from the system but by alternative means, such as through a stabilized supply.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

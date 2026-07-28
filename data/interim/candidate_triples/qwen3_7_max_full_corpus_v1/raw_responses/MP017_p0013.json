@@ -1,0 +1,156 @@
+{
+  "page_key": "MP017:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0fe99248-b6fe-92ad-b031-ac7b95e63d27",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1529,
+    "prompt_tokens": 3735,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5264
+  },
+  "latency_ms": 19175,
+  "attempt": 1,
+  "prompt_sha256": "48df33de7e45c58000045cf7efb813e28ffa6197f9d4752faebf0c775ba8c749",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pump discharge port and the non-pressurized side of the discharge check valve",
+        "tail_canonical_zh": "泵排出口与排出止回阀非承压侧之间",
+        "tail_type": "Component",
+        "evidence_text": "The valve inlet line must be installed between the pump discharge port and the non-pressurized side of the discharge check valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bleed line",
+        "head_canonical_zh": "泄放管路",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "wet well or sump",
+        "tail_canonical_zh": "湿井或集水坑",
+        "tail_type": "Component",
+        "evidence_text": "The outlet should be connected to a bleed line which slopes back to the wet well or sump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "trouble-free mechanical operation",
+        "tail_canonical_zh": "无故障机械运行（否定语境）",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The alignment of the pump and its power source is critical for trouble-free mechanical operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中检查",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "checked after the pump and piping are installed, and before operation",
+        "tail_canonical_zh": "泵和管路安装后及运行前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is imperative that alignment be checked after the pump and piping are installed, and before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Misalignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "checked and realigned before operation",
+        "tail_canonical_zh": "运行前检查并重新对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pumps must be checked and realigned before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "InspectionAction",
+        "relation": "prevented_by",
+        "tail_surface": "tighten the foundation bolts",
+        "tail_canonical_zh": "紧固地脚螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before checking alignment, tighten the foundation bolts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "alignment",
+        "head_canonical_zh": "对中",
+        "head_type": "InspectionAction",
+        "relation": "prevented_by",
+        "tail_surface": "pump casing feet and/or pedestal feet, and the driver mounting bolts should also be tightly secured",
+        "tail_canonical_zh": "泵壳底脚和/或底座底脚及驱动机安装螺栓应紧固",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump casing feet and/or pedestal feet, and the driver mounting bolts should also be tightly secured.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

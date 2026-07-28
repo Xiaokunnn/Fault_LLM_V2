@@ -1,0 +1,76 @@
+{
+  "page_key": "MP002:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-64e4c53b-aae2-9ff5-b77e-fba55bf99837",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 623,
+    "prompt_tokens": 2271,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2894
+  },
+  "latency_ms": 11164,
+  "attempt": 1,
+  "prompt_sha256": "a658f2714e1436cf0646ce98960362237e55d39a43506231e1686edca805e306",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Condition Monitoring (CM)",
+        "head_canonical_zh": "状态监测",
+        "head_type": "InspectionMethod",
+        "relation": "indicates",
+        "tail_surface": "potential failure",
+        "tail_canonical_zh": "潜在故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Condition Monitoring (CM): Scheduled diagnostic technologies used to monitor machine condition to detect a potential failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Corrective Measures",
+        "head_canonical_zh": "纠正措施",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "failure mode",
+        "tail_canonical_zh": "故障模式",
+        "tail_type": "FaultMode",
+        "evidence_text": "Corrective Measures: Engineered or administrative procedures activated to reduce the likelihood of a failure mode and/or its end effect.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump bearing seizure",
+        "head_canonical_zh": "泵轴承抱死",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "failure mode where a pump fails",
+        "tail_canonical_zh": "泵失效故障模式",
+        "tail_type": "FaultMode",
+        "evidence_text": "For example, pump bearing seizure is one failure cause of the failure mode where a pump fails.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

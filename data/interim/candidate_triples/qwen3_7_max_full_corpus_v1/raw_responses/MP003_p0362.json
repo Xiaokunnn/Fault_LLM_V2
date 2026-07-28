@@ -1,0 +1,112 @@
+{
+  "page_key": "MP003:p0362",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-bb219833-f34e-90c0-b4aa-b032d54e4af9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1128,
+    "prompt_tokens": 2276,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3404
+  },
+  "latency_ms": 12989,
+  "attempt": 1,
+  "prompt_sha256": "eeae8a9bae1d820cdbd5f97c6c98d7b8914796ef94b944d669f2ffde21129cd5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "steering gear piping system",
+        "head_canonical_zh": "舵机管系",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatically tested to 1.5 times the relief valve setting",
+        "tail_canonical_zh": "1.5倍溢流阀设定压力液压试验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Each component of the steering gear piping system, including the power units, rudder actuators and piping is to be inspected by a Surveyor during fabrication and hydrostatically tested to 1.5 times the relief valve setting (or system design pressure) in the presence of a Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "complete piping system",
+        "head_canonical_zh": "完整管系",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatic test equal to 110% of the relief valve setting",
+        "tail_canonical_zh": "110%溢流阀设定压力液压试验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "After installation on board the vessel, the complete piping system, including power units, rudder actuators and piping is to be subjected to a hydrostatic test equal to 110% of the relief valve setting, including a check of the relief valve operation in the presence of the Surveyor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "relief valve operation",
+        "head_canonical_zh": "溢流阀动作",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check of the relief valve operation",
+        "tail_canonical_zh": "溢流阀动作检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "including a check of the relief valve operation in the presence of the Surveyor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hydraulic locking",
+        "head_canonical_zh": "液压锁闭",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "failure alarms",
+        "tail_canonical_zh": "故障报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Where failure alarms are provided to indicate hydraulic locking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hydraulic locking",
+        "head_canonical_zh": "液压锁闭",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "shut down the failed system",
+        "tail_canonical_zh": "关闭故障系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "instructions are to be permanently posted on the navigation bridge and in the steering gear compartment for the operator to shut down the failed system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-3275088e-3fb7-9788-b385-88e18ede602b",
+  "latency_ms": 12128,
+  "prompt_sha256": "1a4894e35114615f83569fe7ed1def7f26f6050e0cc143d41c55cc4038a816c2",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-5284f31e95e2f1b53b50",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Vérifiez que le moteur est correctement refroidi.",
+        "reason_code": "direct_inspection_instruction"
+      },
+      {
+        "id": "MPT-52b85fa2ac9c6887592b",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "Spare parts list NSL350-525 -12 combination ... 1     Pump casing",
+        "reason_code": "table_row_association"
+      },
+      {
+        "id": "MPT-52cf2f04e9ff42e79779",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "The pump must run quietly and free from vibrations at all times.",
+        "reason_code": "state_vs_action_mismatch"
+      },
+      {
+        "id": "MPT-533d6b968cde7ed0172a",
+        "verdict": "not_entailed",
+        "confidence": 0.92,
+        "supporting_quote": "Overflow lines are to be self-draining.",
+        "reason_code": "attribute_vs_maintenance_action"
+      },
+      {
+        "id": "MPT-537dd4054b551d70ea69",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Contain leakages (e.g. at the shaft seal) of hazardous fluids",
+        "reason_code": "direct_mitigation_statement"
+      },
+      {
+        "id": "MPT-539f157c0e4b1621504e",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "Listen for unexpected noises.",
+        "reason_code": "direct_diagnostic_instruction"
+      },
+      {
+        "id": "MPT-53ba1200441266790dab",
+        "verdict": "not_entailed",
+        "confidence": 0.85,
+        "supporting_quote": "Do not fasten bearing cover and electric motor until the motor has been mounted and the shaft can rotate freely without noise.",
+        "reason_code": "condition_not_diagnosis"
+      },
+      {
+        "id": "MPT-53bc4f8151a88631e0e6",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Polyphase motor running single phase\n--- CELL ---\nCheck for open circuit.",
+        "reason_code": "structured_cause_check_pair"
+      }
+    ]
+  }
+}

@@ -1,0 +1,767 @@
+{
+  "page_key": "MP007:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b1d05465-11b9-90bd-92f1-4e17d1057197",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8961,
+    "prompt_tokens": 14657,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 23618
+  },
+  "latency_ms": 106747,
+  "attempt": 1,
+  "prompt_sha256": "cb6c458d90be623dfa2304d2bba0f17373a1b07593879d5b07f6ae34a423ebdd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Pump startup failure",
+        "head_canonical_zh": "泵启动失败",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "No power",
+        "tail_canonical_zh": "无电源",
+        "tail_type": "Cause",
+        "evidence_text": "Pump startup failure No power",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r001:c00",
+          "MP007:p0018:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "No power",
+        "head_canonical_zh": "无电源",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check the power supply",
+        "tail_canonical_zh": "检查电源供应",
+        "tail_type": "InspectionAction",
+        "evidence_text": "No power Check the power supply",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r001:c01",
+          "MP007:p0018:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump startup failure",
+        "head_canonical_zh": "泵启动失败",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check the safety setting of the motor",
+        "tail_canonical_zh": "检查电机安全设置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Pump startup failure Check the safety setting of\nthe motor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r001:c00",
+          "MP007:p0018:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump startup failure",
+        "head_canonical_zh": "泵启动失败",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The heat protection switch of the motor is triggered",
+        "tail_canonical_zh": "电机热保护开关触发",
+        "tail_type": "Cause",
+        "evidence_text": "Pump startup failure The heat protection switch\nof the motor is triggered",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r001:c00",
+          "MP007:p0018:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The heat protection switch of the motor is triggered",
+        "head_canonical_zh": "电机热保护开关触发",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check if the set value is correct",
+        "tail_canonical_zh": "检查设定值是否正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The heat protection switch\nof the motor is triggered Check if the set value is\ncorrect",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r003:c01",
+          "MP007:p0018:t00:r003:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor started but pump failure to work",
+        "head_canonical_zh": "电机运转但泵不工作",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The coupling between the pump and the motor is loose",
+        "tail_canonical_zh": "泵与电机联轴器松动",
+        "tail_type": "Cause",
+        "evidence_text": "Motor started but pump\nfailure to work The coupling between the\npump and the motor is\nloose",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r004:c00",
+          "MP007:p0018:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The coupling between the pump and the motor is loose",
+        "head_canonical_zh": "泵与电机联轴器松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Check and tighten the coupling bolt",
+        "tail_canonical_zh": "检查并紧固联轴器螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The coupling between the\npump and the motor is\nloose Check and tighten the\ncoupling bolt",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r004:c01",
+          "MP007:p0018:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor started but pump failure to work",
+        "head_canonical_zh": "电机运转但泵不工作",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "The pump shaft is damaged",
+        "tail_canonical_zh": "泵轴损坏",
+        "tail_type": "Cause",
+        "evidence_text": "Motor started but pump\nfailure to work The pump shaft is\ndamaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r004:c00",
+          "MP007:p0018:t00:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump shaft is damaged",
+        "head_canonical_zh": "泵轴损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Contact the manufacturer to replace it",
+        "tail_canonical_zh": "联系制造商更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump shaft is\ndamaged Contact the manufacturer\nto replace it",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r005:c01",
+          "MP007:p0018:t00:r005:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The outlet or inlet valve is closed",
+        "tail_canonical_zh": "出口或进口阀门关闭",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The outlet or inlet valve is\nclosed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The outlet or inlet valve is closed",
+        "head_canonical_zh": "出口或进口阀门关闭",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Open the valve",
+        "tail_canonical_zh": "打开阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The outlet or inlet valve is\nclosed Open the valve",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c01",
+          "MP007:p0018:t00:r006:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "There is air in the pump",
+        "tail_canonical_zh": "泵内有空气",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump There is air in the pump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is air in the pump",
+        "head_canonical_zh": "泵内有空气",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Discharge air in the pump",
+        "tail_canonical_zh": "排出泵内空气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "There is air in the pump Discharge air in the pump",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r007:c01",
+          "MP007:p0018:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Pressure at the pump suction end is low",
+        "tail_canonical_zh": "泵吸入端压力低",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump Pressure at the pump\nsuction end is low",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pressure at the pump suction end is low",
+        "head_canonical_zh": "泵吸入端压力低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase pressure at the pump suction end",
+        "tail_canonical_zh": "提高泵吸入端压力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pressure at the pump\nsuction end is low Increase pressure at the\npump suction end",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r008:c01",
+          "MP007:p0018:t00:r008:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The pump rotating direction is wrong",
+        "tail_canonical_zh": "泵旋转方向错误",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The pump rotating\ndirection is wrong",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump rotating direction is wrong",
+        "head_canonical_zh": "泵旋转方向错误",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace two phases of three-phase wiring",
+        "tail_canonical_zh": "调换三相接线中的两相",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump rotating\ndirection is wrong Replace two phases of\nthree-phase wiring",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r009:c01",
+          "MP007:p0018:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "There is no air discharge in the suction pipe",
+        "tail_canonical_zh": "吸入管未排气",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump There is no air discharge\nin the suction pipe",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is no air discharge in the suction pipe",
+        "head_canonical_zh": "吸入管未排气",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Discharge air in the suction pipe.",
+        "tail_canonical_zh": "排出吸入管内空气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "There is no air discharge\nin the suction pipe Discharge air in the\nsuction pipe.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r010:c01",
+          "MP007:p0018:t00:r010:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "There is air leakage at the suction end",
+        "tail_canonical_zh": "吸入端漏气",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump There is air leakage at the\nsuction end",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is air leakage at the suction end",
+        "head_canonical_zh": "吸入端漏气",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check the air leakage position.",
+        "tail_canonical_zh": "检查漏气位置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "There is air leakage at the\nsuction end Check the air leakage\nposition.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r011:c01",
+          "MP007:p0018:t00:r011:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "Water flow is very low, the bubble pump is blocked",
+        "tail_canonical_zh": "水流量极低导致气泡泵堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump Water flow is very low, the\nbubble pump is blocked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r012:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Water flow is very low, the bubble pump is blocked",
+        "head_canonical_zh": "水流量极低导致气泡泵堵塞",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Make sure that flow is increased or a smaller pump is used",
+        "tail_canonical_zh": "确保增加流量或选用更小泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Water flow is very low, the\nbubble pump is blocked Make sure that flow is\nincreased or a smaller\npump is used",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r012:c01",
+          "MP007:p0018:t00:r012:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The diameter of suction pipe is small",
+        "tail_canonical_zh": "吸入管径过小",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The diameter of suction\npipe is small",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The diameter of suction pipe is small",
+        "head_canonical_zh": "吸入管径过小",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Increase the pipe diameter",
+        "tail_canonical_zh": "增大管径",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The diameter of suction\npipe is small Increase the pipe diameter",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r013:c01",
+          "MP007:p0018:t00:r013:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The bottom valve is blocked",
+        "tail_canonical_zh": "底阀堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The bottom valve is\nblocked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r014:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The bottom valve is blocked",
+        "head_canonical_zh": "底阀堵塞",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Clean the bottom valve",
+        "tail_canonical_zh": "清洗底阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The bottom valve is\nblocked Clean the bottom valve",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r014:c01",
+          "MP007:p0018:t00:r014:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The impeller or pump chamber is blocked",
+        "tail_canonical_zh": "叶轮或泵腔堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The impeller or pump\nchamber is blocked",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The impeller or pump chamber is blocked",
+        "head_canonical_zh": "叶轮或泵腔堵塞",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Clean the pump interior",
+        "tail_canonical_zh": "清理泵内部",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The impeller or pump\nchamber is blocked Clean the pump interior",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r015:c01",
+          "MP007:p0018:t00:r015:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The O-ring of the diffuser is damaged",
+        "tail_canonical_zh": "导流器O型圈损坏",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The O-ring of the diffuser\nis damaged",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r016:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The O-ring of the diffuser is damaged",
+        "head_canonical_zh": "导流器O型圈损坏",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace the O-ring",
+        "tail_canonical_zh": "更换O型圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The O-ring of the diffuser\nis damaged Replace the O-ring",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r016:c01",
+          "MP007:p0018:t00:r016:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Insufficient flow or/and pressure of pump",
+        "head_canonical_zh": "泵流量或压力不足",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "The O-ring is not suitable for the pumping medium",
+        "tail_canonical_zh": "O型圈不适用于输送介质",
+        "tail_type": "Cause",
+        "evidence_text": "Insufficient flow or/and\npressure of pump The O-ring is not suitable\nfor the pumping medium",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r006:c00",
+          "MP007:p0018:t00:r017:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The O-ring is not suitable for the pumping medium",
+        "head_canonical_zh": "O型圈不适用于输送介质",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace with an O-ring suitable for the pumping medium.",
+        "tail_canonical_zh": "更换为适用于输送介质的O型圈",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The O-ring is not suitable\nfor the pumping medium Replace with an O-ring\nsuitable for the pumping\nmedium.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP007:p0018:t00:r017:c01",
+          "MP007:p0018:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

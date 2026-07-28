@@ -1,0 +1,152 @@
+{
+  "page_key": "MP003:p0962",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-46e604e8-6147-9988-b2bf-28d9f49a7bb5",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1578,
+    "prompt_tokens": 22593,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24171
+  },
+  "latency_ms": 20266,
+  "attempt": 1,
+  "prompt_sha256": "300837bede944ac835e35304164a0cebd3bc396287b4c22aa9ef45a08c98d8ec",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Feedwater outlet salinity - high",
+        "head_canonical_zh": "给水出口盐度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A1",
+        "tail_canonical_zh": "给水出口盐度高监测参数A1",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Feedwater A1 Feedwater outlet salinity - high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r001:c01",
+          "MP003:p0962:t00:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Water level - low",
+        "head_canonical_zh": "锅炉汽包水位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A3",
+        "tail_canonical_zh": "锅炉汽包水位低监测参数A3",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A3 Water level - low     x  x  x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r003:c01",
+          "MP003:p0962:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Pump outlet pressure - low",
+        "head_canonical_zh": "燃油泵出口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A8",
+        "tail_canonical_zh": "燃油泵出口压力低监测参数A8",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil A8 Pump outlet pressure - low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r008:c01",
+          "MP003:p0962:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Ignition or flame - fails",
+        "head_canonical_zh": "点火或火焰失败",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A11",
+        "tail_canonical_zh": "点火或火焰失败监测参数A11",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Burner A11 Ignition or flame - fails x x x Individual; see 4-9-6/23 TABLE 5A",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r011:c01",
+          "MP003:p0962:t00:r011:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Flame scanner - fails",
+        "head_canonical_zh": "火焰扫描器故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A12",
+        "tail_canonical_zh": "火焰扫描器故障监测参数A12",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A12 Flame scanner - fails x    x  Individual; see 4-9-6/23 TABLE 5A",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r012:c01",
+          "MP003:p0962:t00:r012:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Control system power supply - fails",
+        "head_canonical_zh": "控制系统电源故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A14",
+        "tail_canonical_zh": "控制系统电源故障监测参数A14",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Power A14 Control system power supply - fails x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0962:t00:r014:c01",
+          "MP003:p0962:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

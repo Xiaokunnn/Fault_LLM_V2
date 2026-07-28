@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0040",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4f166b4a-0489-966a-ab6e-8d5330585c47",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1478,
+    "prompt_tokens": 2396,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3874
+  },
+  "latency_ms": 21196,
+  "attempt": 1,
+  "prompt_sha256": "c4e2ff9efa6365d2c9f6e8271fd3329d1911e7dde8c259b28851aeccc250f5b5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "monitored for abnormal temperature",
+        "tail_canonical_zh": "异常温度监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All bearings (main, crank, crosshead, thrust, etc.) that have open communication with the crankcase are to be monitored for abnormal temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lubricating oil temperature at the outlet of each main, crank, crosshead and thrust bearing",
+        "head_canonical_zh": "主轴承、曲柄轴承、十字头轴承及推力轴承出口滑油温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "temperature of these bearings",
+        "tail_canonical_zh": "轴承温度",
+        "tail_type": "Symptom",
+        "evidence_text": "For slow speed engines, the lubricating oil temperature at the outlet of each main, crank, crosshead and thrust bearing may be monitored in lieu of directly monitoring the temperature of these bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of oil mist that may lead to a potentially explosive condition within the crankcase",
+        "head_canonical_zh": "曲轴箱内可能导致爆炸性工况的油雾积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "oil splash temperature monitoring",
+        "tail_canonical_zh": "油溅温度监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In order to prevent the buildup of a potentially explosive condition, it may be necessary to provide combinations of means, such as: oil splash temperature monitoring, crankcase pressure monitoring, recirculation arrangements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of oil mist that may lead to a potentially explosive condition within the crankcase",
+        "head_canonical_zh": "曲轴箱内可能导致爆炸性工况的油雾积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "crankcase pressure monitoring",
+        "tail_canonical_zh": "曲轴箱压力监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "In order to prevent the buildup of a potentially explosive condition, it may be necessary to provide combinations of means, such as: oil splash temperature monitoring, crankcase pressure monitoring, recirculation arrangements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of oil mist that may lead to a potentially explosive condition within the crankcase",
+        "head_canonical_zh": "曲轴箱内可能导致爆炸性工况的油雾积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "recirculation arrangements",
+        "tail_canonical_zh": "再循环布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to prevent the buildup of a potentially explosive condition, it may be necessary to provide combinations of means, such as: oil splash temperature monitoring, crankcase pressure monitoring, recirculation arrangements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "potential crankcase explosion",
+        "head_canonical_zh": "潜在曲轴箱爆炸",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "introduction of inert gas into the crankcase",
+        "tail_canonical_zh": "向曲轴箱注入惰性气体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where it is proposed to use the introduction of inert gas into the crankcase to minimize a potential crankcase explosion, details of the arrangements are to be submitted for consideration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "page_key": "MP019:p0027",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-af352521-1013-9b5d-b493-3d2a05ad975b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1254,
+    "prompt_tokens": 2688,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3942
+  },
+  "latency_ms": 14245,
+  "attempt": 1,
+  "prompt_sha256": "88515c333006335984c4fdf405910b9d95abbf19c560bba1c8de78d8dbb73101",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Messfehlern oder Systemschäden",
+        "head_canonical_zh": "测量错误或系统损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Verwendung einer höheren Messspannung oder eines höheren Messstroms",
+        "tail_canonical_zh": "使用过高的测量电压或测量电流",
+        "tail_type": "Cause",
+        "evidence_text": "Die Verwendung einer höheren Messspannung oder eines höheren Messstroms kann zu Messfehlern oder Systemschäden führen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Messfehlern oder Systemschäden",
+        "head_canonical_zh": "测量错误或系统损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "maximale Messspannung für die Kaltleiter beträgt 2,5 V",
+        "tail_canonical_zh": "冷导体最大测量电压为2.5V",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Die maximale Messspannung für die Kaltleiter beträgt 2,5 V. Der maximale Messstrom für Pt100 beträgt 5 mA. Die Verwendung einer höheren Messspannung oder eines höheren Messstroms kann zu Messfehlern oder Systemschäden führen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wasser in den Motor oder die Klemmenkästen eindringen",
+        "head_canonical_zh": "水进入电机或接线盒",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Dichtungen von Klemmenkästen sorgfältig in die hierfür vorgesehenen Schlitze eingesetzt werden",
+        "tail_canonical_zh": "将接线盒密封件仔细插入指定槽中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Zur Gewährleistung der richtigen IP-Klasse müssen die Dichtungen von Klemmenkästen sorgfältig in die hierfür vorgesehenen Schlitze eingesetzt werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isolationspegel oder die Isolierung des Kaltleiter-Auslösegeräts",
+        "head_canonical_zh": "冷导体触发装置的绝缘水平或绝缘",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "IEC 60664",
+        "tail_canonical_zh": "IEC 60664标准",
+        "tail_type": "Standard",
+        "evidence_text": "Gewährleisten Sie den Isolationspegel oder die Isolierung des Kaltleiter-Auslösegeräts, siehe IEC 60664.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "angemessene Isolation oder Isolierung",
+        "head_canonical_zh": "适当的隔离或绝缘",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Anschluss der Sensoren an Steuersysteme",
+        "tail_canonical_zh": "传感器连接至控制系统",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Beim Anschluss der Sensoren an Steuersysteme usw. muss die angemessene Isolation oder Isolierung gewährleistet sein, siehe IEC 60664.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

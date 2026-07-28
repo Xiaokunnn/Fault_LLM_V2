@@ -1,0 +1,175 @@
+{
+  "page_key": "MP015:p0038",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7371b427-510e-9861-9024-07ad90de1ea3",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1759,
+    "prompt_tokens": 9673,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11432
+  },
+  "latency_ms": 21028,
+  "attempt": 1,
+  "prompt_sha256": "89c92e3f34bb27a2edfe02724b0e2b5ff8bfd54f095ac932565b2e55ae05d21b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "clearance between impeller and wear plate",
+        "head_canonical_zh": "叶轮与耐磨板间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Measuring clearance between impeller and wear plate",
+        "tail_canonical_zh": "测量叶轮与耐磨板间隙",
+        "tail_type": "InspectionAction",
+        "evidence_text": "7.6.2 Measuring clearance between impeller and wear plate, other bearing groups",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "clearance",
+        "head_canonical_zh": "间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Measure the distance B between wear plate and pump casing",
+        "tail_canonical_zh": "测量耐磨板与泵壳距离B",
+        "tail_type": "InspectionAction",
+        "evidence_text": "3 Measure the distance B between wear plate and pump casing, see figure 13.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "clearance",
+        "head_canonical_zh": "间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Measure the distance C between impeller and intermediate cover",
+        "tail_canonical_zh": "测量叶轮与中间盖距离C",
+        "tail_type": "InspectionAction",
+        "evidence_text": "4 Measure the distance C between impeller and intermediate cover, see figure 13.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "clearance",
+        "head_canonical_zh": "间隙",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Calculate the size of the clearance E, using formula: E = B - C + D",
+        "tail_canonical_zh": "计算公式E=B-C+D确定间隙E尺寸",
+        "tail_type": "InspectionAction",
+        "evidence_text": "6 Calculate the size of the clearance E, using formula: E = B - C + D",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "clearance ... has increased more than the maximum permitted value",
+        "head_canonical_zh": "间隙超过最大允许值",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "the impeller and the wear plate should be replaced",
+        "tail_canonical_zh": "更换叶轮和耐磨板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "7 In case the clearance, due to wearing, has increased more than the maximum permitted value, the impeller and the wear plate should be replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wearing",
+        "head_canonical_zh": "磨损",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "clearance ... has increased more than the maximum permitted value",
+        "tail_canonical_zh": "间隙超过最大允许值",
+        "tail_type": "FaultMode",
+        "evidence_text": "In case the clearance, due to wearing, has increased more than the maximum permitted value",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "wrong adjustment of the impeller",
+        "head_canonical_zh": "叶轮调整不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "too much clearance",
+        "tail_canonical_zh": "间隙过大",
+        "tail_type": "FaultMode",
+        "evidence_text": "wrong adjustment of the impeller can also be a cause of too much clearance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "too much clearance",
+        "head_canonical_zh": "间隙过大",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check distance A",
+        "tail_canonical_zh": "检查距离A",
+        "tail_type": "InspectionAction",
+        "evidence_text": "For FRES or FREM it may be useful to check distance A",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

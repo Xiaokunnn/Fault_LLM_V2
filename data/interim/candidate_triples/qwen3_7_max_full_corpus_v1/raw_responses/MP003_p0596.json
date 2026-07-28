@@ -1,0 +1,119 @@
+{
+  "page_key": "MP003:p0596",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e42211e9-7d94-93d9-b4f1-c79199813f8e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1159,
+    "prompt_tokens": 2662,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3821
+  },
+  "latency_ms": 15281,
+  "attempt": 1,
+  "prompt_sha256": "4b61997309db5f0f3490305fde9e7a929983cd69f50e27515c39ada38154b3af",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "spillage",
+        "head_canonical_zh": "溢油",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "an alarm is to be fitted to warn of the level reaching a predetermined high level",
+        "tail_canonical_zh": "安装高液位报警",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To prevent spillage, an alarm is to be fitted to warn of the level reaching a predetermined high level.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "release of fuel oil",
+        "head_canonical_zh": "燃油泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "failure of, or the damage to, the level gauge will not result in the release of fuel oil",
+        "tail_canonical_zh": "液位计故障或损坏不导致燃油泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Level gauges may be fitted in lieu of sounding pipes, provided that the failure of, or the damage to, the level gauge will not result in the release of fuel oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "release of fuel oil",
+        "head_canonical_zh": "燃油泄漏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "encased in steel, or equivalent, such that no release of fuel oil is possible in the event of their damage due to fire",
+        "tail_canonical_zh": "钢质或等效外壳防护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where fitted, they are to be encased in steel, or equivalent, such that no release of fuel oil is possible in the event of their damage due to fire.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "low level conditions",
+        "head_canonical_zh": "低液位工况",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "alarmed at the centralized control station",
+        "tail_canonical_zh": "集中控制站报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "low level conditions of fuel oil settling and service tanks are to be alarmed at the centralized control station",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high level",
+        "head_canonical_zh": "高液位",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "high level alarms",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Where tanks are automatically filled, high level alarms are also to be provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

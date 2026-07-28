@@ -1,0 +1,120 @@
+{
+  "page_key": "MP005:p0052",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-78e82455-f54e-9fb6-9c88-d816b020aab2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1138,
+    "prompt_tokens": 3463,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4601
+  },
+  "latency_ms": 14350,
+  "attempt": 1,
+  "prompt_sha256": "e8c78ca0fb3f82a148082eecc46069cf864b19790239f5a2a0e3eb1e5eba10d3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Automatic venting and priming system",
+        "head_canonical_zh": "自动排气与引水系统",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "dry running",
+        "tail_canonical_zh": "干运转",
+        "tail_type": "FaultMode",
+        "evidence_text": "Automatic venting and priming system is designed for centrifugal pumps to prevent dry running\nwhile the liquid level is below the pump inlet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "centrifugal pump",
+        "head_canonical_zh": "离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Vent the pump and the suction line and prime both with the fluid to be handled",
+        "tail_canonical_zh": "对泵及吸入管路排气并用输送介质引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Vent the pump and the suction line and prime both with the fluid to be handled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "centrifugal pump",
+        "head_canonical_zh": "离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fully open the shut-off element in the suction line",
+        "tail_canonical_zh": "全开吸入管路截止阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Fully open the shut-off element in the suction line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "centrifugal pump",
+        "head_canonical_zh": "离心泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Fully open all auxiliary feed lines (barrier fluid, flushing liquid, etc.), if any",
+        "tail_canonical_zh": "全开所有辅助供给管路（如阻隔液、冲洗液等）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "3. Fully open all auxiliary feed lines (barrier fluid, flushing liquid, etc.), if any.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "priming system",
+        "head_canonical_zh": "引水系统",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "pressure switch",
+        "tail_canonical_zh": "压力开关",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "As soon as the centrifugal pump builds up the necessary discharge pressure, the priming system is switched off\nvia the pressure switch.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

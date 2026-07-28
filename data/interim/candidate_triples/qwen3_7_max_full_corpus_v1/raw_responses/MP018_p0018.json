@@ -1,0 +1,423 @@
+{
+  "page_key": "MP018:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-33edb912-e4c7-946b-b374-9000d5a75a3c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4566,
+    "prompt_tokens": 2477,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7043
+  },
+  "latency_ms": 54919,
+  "attempt": 1,
+  "prompt_sha256": "c3f41c0e677485d5ac2dd6ed7982b0be09d7c6c909a7bf84c365d700c5cdf119",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "oil level setting",
+        "head_canonical_zh": "油位设定",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "checked and properly set",
+        "tail_canonical_zh": "检查并正确设定",
+        "tail_type": "InspectionAction",
+        "evidence_text": "It is extremely important that the oil level setting be checked and properly set if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil level",
+        "head_canonical_zh": "油位",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "loosen the set screws and raise the slant tube and bowl to the proper dimensions",
+        "tail_canonical_zh": "松开紧定螺钉并将斜管和油杯升至适当尺寸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the oil level is too low, simply loosen the set screws and raise the slant tube and bowl to the proper dimensions, as shown on Figure 5b.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bearing housing",
+        "head_canonical_zh": "轴承箱",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fill the bottle, screw it in the lower reservoir of the Optomatic oiler and allow the oil to flow into the bearing housing",
+        "tail_canonical_zh": "注满油瓶，旋入Optomatic注油器下储油器并使油流入轴承箱",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To fill the bearing housing, fill the bottle, screw it in the lower reservoir of the Optomatic oiler and allow the oil to flow into the bearing housing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil",
+        "head_canonical_zh": "润滑油",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "draining a small amount from bearing housing",
+        "tail_canonical_zh": "从轴承箱排放少量油样",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the oil from time to time by draining a small amount from bearing housing (31).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foaming",
+        "head_canonical_zh": "起泡",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "moisture is present",
+        "tail_canonical_zh": "存在水分",
+        "tail_type": "Cause",
+        "evidence_text": "If foaming occurs, moisture is present.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is black",
+        "head_canonical_zh": "油变黑",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing is running hot and burning the oil",
+        "tail_canonical_zh": "轴承过热并烧油",
+        "tail_type": "FaultMode",
+        "evidence_text": "If the oil is black, the bearing is running hot and burning the oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is brown",
+        "head_canonical_zh": "油变棕",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "contaminants have mixed with the oil",
+        "tail_canonical_zh": "污染物混入油中",
+        "tail_type": "Cause",
+        "evidence_text": "If the oil is brown, contaminants have mixed with the oil.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "foaming",
+        "head_canonical_zh": "起泡",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "the oil must be drained, the bearing cleaned and the oil replaced",
+        "tail_canonical_zh": "排油、清洗轴承并换油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In each of these cases, the oil must be drained, the bearing cleaned and the oil replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is black",
+        "head_canonical_zh": "油变黑",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "the oil must be drained, the bearing cleaned and the oil replaced",
+        "tail_canonical_zh": "排油、清洗轴承并换油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In each of these cases, the oil must be drained, the bearing cleaned and the oil replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil is brown",
+        "head_canonical_zh": "油变棕",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "the oil must be drained, the bearing cleaned and the oil replaced",
+        "tail_canonical_zh": "排油、清洗轴承并换油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In each of these cases, the oil must be drained, the bearing cleaned and the oil replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "grease lubricated bearing",
+        "head_canonical_zh": "脂润滑轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "flushing hot, light (no heavier than SAE 10) oil through the housing",
+        "tail_canonical_zh": "用热的轻质油（不高于SAE 10）冲洗壳体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Whenever the grease lubricated bearing is cleaned without dismounting by flushing hot, light (no heavier than SAE 10) oil through the housing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "thrust bearing oil",
+        "head_canonical_zh": "推力轴承油",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the thrust bearing oil should be replaced as it will be contaminated by the oil used for flushing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stuffing box",
+        "head_canonical_zh": "填料函",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "adjusted after the pump is started",
+        "tail_canonical_zh": "泵启动后调整",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Stuffing box glands should be adjusted after the pump is started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage is excessive",
+        "head_canonical_zh": "泄漏过多",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "adjust the valve in the seal water line until desired amount of leakage is achieved",
+        "tail_canonical_zh": "调整密封水管路上的阀门直至达到期望泄漏量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When leakage is excessive, adjust the valve in the seal water line until desired amount of leakage is achieved.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheating",
+        "head_canonical_zh": "过热",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "increase the flow rate until the temperature stabilizes",
+        "tail_canonical_zh": "增加流量直至温度稳定",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If overheating does occur, increase the flow rate until the temperature stabilizes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gland tightness and seal water flow rate",
+        "head_canonical_zh": "压盖紧度与密封水流量",
+        "head_type": "OperatingCondition",
+        "relation": "maintained_by",
+        "tail_surface": "The gland may need to be adjusted",
+        "tail_canonical_zh": "可能需要调整压盖",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The gland may need to be adjusted to achieve a proper balance between gland tightness and seal water flow rate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gland bolts",
+        "head_canonical_zh": "压盖螺栓",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "tighten gland bolts evenly, a little at a time",
+        "tail_canonical_zh": "均匀且逐步拧紧压盖螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Be sure to tighten gland bolts evenly, a little at a time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overheating and undue wear on shaft sleeves",
+        "head_canonical_zh": "过热及轴套过度磨损",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Never tighten gland to be leakproof",
+        "tail_canonical_zh": "切勿将压盖拧紧至无泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Never tighten gland to be leakproof as this will cause overheating and undue wear on shaft sleeves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stuffing box packing",
+        "head_canonical_zh": "填料函盘根",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace the stuffing box packing",
+        "tail_canonical_zh": "更换填料函盘根",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Replace the stuffing box packing as follows:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft sleeve",
+        "head_canonical_zh": "轴套",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the shaft sleeve for wear",
+        "tail_canonical_zh": "检查轴套磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the shaft sleeve for wear, if it is scored or grooved, it should be replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "scored or grooved",
+        "head_canonical_zh": "划伤或沟槽",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "replaced",
+        "tail_canonical_zh": "更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "if it is scored or grooved, it should be replaced",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "page_key": "MP001:p0080",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7985c294-8448-9c70-a921-e731f2dc737d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3014,
+    "prompt_tokens": 12807,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 15821
+  },
+  "latency_ms": 40623,
+  "attempt": 1,
+  "prompt_sha256": "254a0ce7d651a823b1c65f7e89937dc998e3ff690f39354079fab494fac28191",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Ferrography",
+        "head_canonical_zh": "铁谱分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Direct Reading Ferrograph",
+        "tail_canonical_zh": "直读式铁谱仪",
+        "tail_type": "Equipment",
+        "evidence_text": "Ferrography Direct Reading Ferrograph",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ferrography",
+        "head_canonical_zh": "铁谱分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Analytical Ferrography",
+        "tail_canonical_zh": "分析式铁谱技术",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ferrography Analytical Ferrography",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ferrography",
+        "head_canonical_zh": "铁谱分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "LIDAR (Light Detection and Ranging)",
+        "tail_canonical_zh": "激光雷达",
+        "tail_type": "Equipment",
+        "evidence_text": "Ferrography LIDAR (Light Detection and Ranging)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear",
+        "head_canonical_zh": "磨损",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ferrography",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Machine wear, fatigue, corrosion particles Monitored Condition ... Ferrography",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r006:c01",
+          "MP001:p0080:t00:r007:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue",
+        "head_canonical_zh": "疲劳",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ferrography",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Machine wear, fatigue, corrosion particles Monitored Condition ... Ferrography",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r006:c01",
+          "MP001:p0080:t00:r007:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "corrosion",
+        "head_canonical_zh": "腐蚀",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Ferrography",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Machine wear, fatigue, corrosion particles Monitored Condition ... Ferrography",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r006:c01",
+          "MP001:p0080:t00:r007:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Particles in lubricating oil and hydraulic systems",
+        "head_canonical_zh": "润滑油及液压系统中的颗粒",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "wear, fatigue, and corrosion",
+        "tail_canonical_zh": "磨损、疲劳和腐蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Particles in lubricating oil and hydraulic systems caused by wear, fatigue, and corrosion, and contaminants",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r006:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "contaminants",
+        "head_canonical_zh": "污染物",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Particles in lubricating oil and hydraulic systems",
+        "tail_canonical_zh": "润滑油及液压系统中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Particles in lubricating oil and hydraulic systems caused by wear, fatigue, and corrosion, and contaminants",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r006:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Oils used in diesel and gasoline engines, gas turbines, transmissions, reduction gears and hydraulic compressor systems",
+        "head_canonical_zh": "用于柴油机、汽油机、燃气轮机、变速箱、减速齿轮及液压压缩机系统的油液",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Ferrography",
+        "tail_canonical_zh": "铁谱分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Oils used in diesel and gasoline engines, gas turbines, transmissions, reduction gears and hydraulic compressor systems Applications (Equipment) ... Ferrography",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r005:c01",
+          "MP001:p0080:t00:r007:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "This device measures quantitatively the concentration of ferromagnetic particles",
+        "head_canonical_zh": "该装置定量测量铁磁性颗粒浓度",
+        "head_type": "InspectionAction",
+        "relation": "contains",
+        "tail_surface": "precipitating the particles in a sample onto the bottom of a glass tube by subjecting them to a strong magnetic field",
+        "tail_canonical_zh": "通过强磁场将样品中的颗粒沉淀到玻璃管底部",
+        "tail_type": "InspectionAction",
+        "evidence_text": "This device measures quantitatively the concentration of ferromagnetic particles by precipitating the particles in a sample onto the bottom of a glass tube by subjecting them to a strong magnetic field",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "A sample of oil is diluted and passed through a series of standard filter discs",
+        "head_canonical_zh": "油样被稀释并通过一系列标准滤膜",
+        "head_type": "InspectionAction",
+        "relation": "contains",
+        "tail_surface": "Each disc is examined microscopically",
+        "tail_canonical_zh": "每个滤膜在显微镜下检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "A sample of oil is diluted and passed through a series of standard filter discs. Each disc is examined microscopically",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Analysis determines whether wear is normal or not",
+        "head_canonical_zh": "分析确定磨损是否正常",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "A statistical distribution is created in the form of a graph",
+        "tail_canonical_zh": "以图表形式创建统计分布",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Analysis determines whether wear is normal or not. A statistical distribution is created in the form of a graph",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0080:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

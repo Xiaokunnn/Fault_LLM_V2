@@ -1,0 +1,169 @@
+{
+  "page_key": "MP003:p0567",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-75492e62-5975-9f27-a4f3-0979365f1bf7",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1907,
+    "prompt_tokens": 2449,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4356
+  },
+  "latency_ms": 23850,
+  "attempt": 1,
+  "prompt_sha256": "1f9f8615586f2e2217c89a1fbf5dea2bb70ebf5d12c55308203c2a1c1608f27c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "enclosed cargo spaces",
+        "head_canonical_zh": "封闭货舱",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "gravity drains discharging directly overboard",
+        "tail_canonical_zh": "直接排舷外重力排水管",
+        "tail_type": "Component",
+        "evidence_text": "Enclosed cargo spaces of a vessel, whose summer freeboard is such that the deck edge of the cargo spaces being drained is not immersed when the vessel heels 5 degrees, may be drained by means of a sufficient number of suitably sized gravity drains discharging directly overboard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drains from these enclosed cargo spaces",
+        "head_canonical_zh": "封闭货舱排水",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "high water level alarm",
+        "tail_canonical_zh": "高水位报警",
+        "tail_type": "Component",
+        "evidence_text": "the drains from these enclosed cargo spaces are to be led to a suitable space, or spaces, of adequate capacity, having a high water level alarm and provided with fixed pumping arrangement for discharge overboard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "drains from these enclosed cargo spaces",
+        "head_canonical_zh": "封闭货舱排水",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "fixed pumping arrangement for discharge overboard",
+        "tail_canonical_zh": "固定排舷外泵送装置",
+        "tail_type": "Equipment",
+        "evidence_text": "the drains from these enclosed cargo spaces are to be led to a suitable space, or spaces, of adequate capacity, having a high water level alarm and provided with fixed pumping arrangement for discharge overboard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unreasonable accumulation of free water",
+        "head_canonical_zh": "自由水不合理积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The number, size and disposition of the drain pipes",
+        "tail_canonical_zh": "排水管的数量、尺寸和布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The number, size and disposition of the drain pipes are to prevent unreasonable accumulation of free water",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "escape of the smothering gas",
+        "head_canonical_zh": "窒息气体逸出",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "means to prevent the escape of the smothering gas",
+        "tail_canonical_zh": "防止窒息气体逸出的装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the enclosed cargo space is protected by a fixed gas fire-extinguishing system the drain pipes are to be fitted with means to prevent the escape of the smothering gas.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "U-tube water seal arrangement",
+        "head_canonical_zh": "U型管水封装置",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "possible evaporation of water and the difficulty in assuring its effectiveness",
+        "tail_canonical_zh": "水蒸发及有效性难以保证",
+        "tail_type": "Risk",
+        "evidence_text": "The U-tube water seal arrangement should not be used due to possible evaporation of water and the difficulty in assuring its effectiveness.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "build-up of free surfaces",
+        "head_canonical_zh": "自由液面积聚",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "drainage arrangements",
+        "tail_canonical_zh": "排水布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the cargo space is fitted with a fixed water-spray fire extinguishing system, the drainage arrangements are to be such as to prevent the build-up of free surfaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.91,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Watertight spaces such as a steering gear compartment, accommodations, voids, etc.",
+        "head_canonical_zh": "水密处所（如舵机舱、起居处所、空舱等）",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "fitted with a valve operable from above the freeboard deck or a quick-acting, self-closing valve",
+        "tail_canonical_zh": "装设可从干舷甲板以上操作的阀或速闭自闭阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Watertight spaces such as a steering gear compartment, accommodations, voids, etc. may be drained to the main machinery space; all such drains are to be fitted with a valve operable from above the freeboard deck or a quick-acting, self-closing valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.89,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

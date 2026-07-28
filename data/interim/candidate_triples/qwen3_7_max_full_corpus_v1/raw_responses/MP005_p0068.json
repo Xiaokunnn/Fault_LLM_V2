@@ -1,0 +1,231 @@
+{
+  "page_key": "MP005:p0068",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e7cc93ba-6148-9628-98f1-686298ebee99",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2383,
+    "prompt_tokens": 5804,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8187
+  },
+  "latency_ms": 29210,
+  "attempt": 1,
+  "prompt_sha256": "9b4522b4595b923e9693dc7360456b0618ddbbbfd0d72279672e496628e15362",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "stand-by pumps",
+        "head_canonical_zh": "备用泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "start them up once a week",
+        "tail_canonical_zh": "每周启动一次",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To make sure that the stand-by pumps are ready for operation, start them up once a week.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing temperature",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor the bearing temperature",
+        "tail_canonical_zh": "监测轴承温度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Monitor the bearing temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the shaft seal for leaks at regular intervals",
+        "tail_canonical_zh": "定期检查轴封泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the shaft seal for leaks at regular intervals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump without guard",
+        "head_canonical_zh": "无防护罩泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "check that the pump cannot be started unintentionally",
+        "tail_canonical_zh": "检查泵不会意外启动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before inspection of a pump without guard, check that the pump cannot be started unintentionally.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect bearing temperature",
+        "head_canonical_zh": "轴承温度异常",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the pump",
+        "tail_canonical_zh": "损坏泵",
+        "tail_type": "FaultMode",
+        "evidence_text": "Operation of the pump at incorrect bearing temperature could damage the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing temperature of the pump (set)",
+        "head_canonical_zh": "泵组轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "specified_by",
+        "tail_surface": "not more than 90 °C",
+        "tail_canonical_zh": "不超过90°C",
+        "tail_type": "Standard",
+        "evidence_text": "Make sure that the bearing temperature of the pump (set) is not more than 90 °C (measured on the outside of the motor housing).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "running-in process",
+        "head_canonical_zh": "磨合过程",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "increased temperatures",
+        "tail_canonical_zh": "温度升高",
+        "tail_type": "Symptom",
+        "evidence_text": "After commissioning, increased temperatures may occur at grease-lubricated rolling element bearing due to the running-in process.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drain hole at the mechanical shaft seal",
+        "head_canonical_zh": "机械轴封排放孔",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspected regularly",
+        "tail_canonical_zh": "定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "On pumps with bearing (/-02 design or Spacer), the drain hole at the mechanical shaft seal must be inspected regularly",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drain hole",
+        "head_canonical_zh": "排放孔",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Clean the drain hole as needed",
+        "tail_canonical_zh": "按需清洁排放孔",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Clean the drain hole as needed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "drain hole clogs up",
+        "head_canonical_zh": "排放孔堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "leaking liquid and/or vapor from the shaft seal can be forced up into the bearing unit",
+        "tail_canonical_zh": "轴封泄漏液或蒸汽被迫进入轴承单元",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "If the drain hole clogs up, leaking liquid and/or vapor from the shaft seal can be forced up into the bearing unit",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leaking liquid and/or vapor from the shaft seal can be forced up into the bearing unit",
+        "head_canonical_zh": "轴封泄漏液或蒸汽被迫进入轴承单元",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "much shorter bearing life than normal",
+        "tail_canonical_zh": "轴承寿命显著缩短",
+        "tail_type": "FaultMode",
+        "evidence_text": "leaking liquid and/or vapor from the shaft seal can be forced up into the bearing unit, which can result in a much shorter bearing life than normal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "page_key": "MP016:p0005",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6e03bbf4-a4c5-95ba-8fd3-56c40eed1c70",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4205,
+    "prompt_tokens": 5973,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10178
+  },
+  "latency_ms": 49232,
+  "attempt": 1,
+  "prompt_sha256": "f00e37cfe8dba8b32808e530061b9f4206aec4935ab3450261f18d6768b9ab47",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage seals and Impeller",
+        "tail_canonical_zh": "密封和叶轮损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not continue to run the pump if fluid is not flowing; dry running can damage seals and Impeller.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unexpected noises",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Listen for unexpected noises",
+        "tail_canonical_zh": "倾听异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Listen for unexpected noises.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leaks",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for leaks",
+        "tail_canonical_zh": "检查泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check for leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "signs of leakage of product, flushing liquid",
+        "head_canonical_zh": "介质或冲洗液泄漏迹象",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Visual checks of all joints and for signs of leakage of product, flushing liquid",
+        "tail_canonical_zh": "目视检查所有接头及介质或冲洗液泄漏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visual checks of all joints and for signs of leakage of product, flushing liquid (if used).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unusual noises",
+        "head_canonical_zh": "异常噪声",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Listen for any unusual noises",
+        "tail_canonical_zh": "倾听任何异常噪声",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Listen for any unusual noises",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "unusual vibration",
+        "head_canonical_zh": "异常振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for any unusual vibration",
+        "tail_canonical_zh": "检查任何异常振动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check for any unusual vibration or temperature changes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "temperature changes",
+        "head_canonical_zh": "温度变化",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for any ... temperature changes",
+        "tail_canonical_zh": "检查温度变化",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check for any unusual vibration or temperature changes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspect Impeller for signs of damage or wear",
+        "tail_canonical_zh": "检查叶轮损伤或磨损迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Remove end cover of pump and inspect Impeller for signs of damage or wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Repair or replace as necessary",
+        "tail_canonical_zh": "必要时修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Repair or replace as necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal housing",
+        "head_canonical_zh": "密封腔体",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visually check ... seal housing for leaks",
+        "tail_canonical_zh": "目视检查密封腔体泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visually check Impeller for damage or wear and seal housing for leaks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "end cover O-ring or end cover gasket",
+        "head_canonical_zh": "端盖O型圈或端盖垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Change end cover O-ring or end cover gasket",
+        "tail_canonical_zh": "更换端盖O型圈或端盖垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Change end cover O-ring or end cover gasket.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Remove Impeller for visual inspection and signs of wear",
+        "tail_canonical_zh": "拆卸叶轮进行目视检查及磨损迹象检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Remove Impeller for visual inspection and signs of wear if so replace.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Visual inspection of shaft",
+        "tail_canonical_zh": "轴的目视检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Visual inspection of shaft, clean if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal faces",
+        "head_canonical_zh": "密封端面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect seal faces for wear and condition of elastomers",
+        "tail_canonical_zh": "检查密封端面磨损及弹性体状况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect seal faces for wear and condition of elastomers.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seals",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Change mechanical seals if fitted, and if required",
+        "tail_canonical_zh": "如已安装且需要则更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Change mechanical seals if fitted, and if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "O-rings and/or gaskets on pump head",
+        "head_canonical_zh": "泵头O型圈和/或垫片",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Change O-rings and/or gaskets on pump head",
+        "tail_canonical_zh": "更换泵头O型圈和/或垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Change O-rings and/or gaskets on pump head.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing wear on Pedestal units",
+        "head_canonical_zh": "底座单元轴承磨损",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Check bearing wear on Pedestal units by seeing if there is any movement of the shaft side to side or forwards and backwards",
+        "tail_canonical_zh": "通过观察轴是否有侧向或前后移动来检查底座单元轴承磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check bearing wear on Pedestal units by seeing if there is any movement of the shaft side to side or forwards and backwards.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "dismantle bearings for inspection, replace along with Lip Seals if necessary",
+        "tail_canonical_zh": "拆卸轴承检查，必要时连同唇形密封一起更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If movement is perceived dismantle bearings for inspection, replace along with Lip Seals if necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "o-ring",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check for wear",
+        "tail_canonical_zh": "检查磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Remove o-ring, check for wear and replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "o-ring",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replace if required",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Remove o-ring, check for wear and replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

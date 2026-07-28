@@ -1,0 +1,57 @@
+{
+  "page_key": "MP002:p0042",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-7b66a1b3-d3f9-9b44-9826-f80209499313",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 409,
+    "prompt_tokens": 1764,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2173
+  },
+  "latency_ms": 5408,
+  "attempt": 1,
+  "prompt_sha256": "cace0b45e1331dddc5a0395d5d5c6a31b8efcdb123dbd86b8d61b5ede101e0f8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "machinery with vibration readings above those in the approved baseline",
+        "head_canonical_zh": "振动读数超基线的机械",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "additional monitoring",
+        "tail_canonical_zh": "额外监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "additional monitoring is needed for machinery with vibration readings above those in the approved baseline",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration readings above those in the approved baseline",
+        "head_canonical_zh": "振动读数超过批准基线",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "machinery",
+        "tail_canonical_zh": "机械设备",
+        "tail_type": "Equipment",
+        "evidence_text": "machinery with vibration readings above those in the approved baseline",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

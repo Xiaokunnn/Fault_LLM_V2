@@ -1,0 +1,57 @@
+{
+  "page_key": "MP003:p0484",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6b82718c-61e8-9f90-8e47-65c5da6f703e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 445,
+    "prompt_tokens": 2101,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2546
+  },
+  "latency_ms": 6190,
+  "attempt": 1,
+  "prompt_sha256": "fe909402e2625a92684d748ed81be56ae02952cb78fead362f5c2f892c311751",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "hydraulic pump",
+        "head_canonical_zh": "液压泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "input/output torque, speed, delivery pressures and flow rates ... are to be measured",
+        "tail_canonical_zh": "输入输出扭矩、转速、排出压力和流量测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "During the testing, the input/output torque, speed, delivery pressures and flow rates of the pump and the hydraulic motor are to be measured, as appropriate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hydraulic pump",
+        "head_canonical_zh": "液压泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "tested at the shop",
+        "tail_canonical_zh": "车间试验",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the prime mover is a hydraulic motor, in addition to the hydraulic motor, the hydraulic pump is also to be tested at the shop.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

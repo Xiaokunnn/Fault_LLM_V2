@@ -1,0 +1,95 @@
+{
+  "page_key": "MP003:p0693",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b49338ba-ecad-9751-a1e0-f1defabcd4c1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1049,
+    "prompt_tokens": 2366,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3415
+  },
+  "latency_ms": 13484,
+  "attempt": 1,
+  "prompt_sha256": "02c9d4eadece4dad5b02c7968e045d1fe1482a1b4f40b0c5e6f649e9246c4b43",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "CO2 release",
+        "head_canonical_zh": "二氧化碳释放",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Two separate controls",
+        "tail_canonical_zh": "两个独立控制装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Precautions are to be made to prevent the inadvertent release of CO2 into spaces which are required, see 4-7-3/3.1.5, to be provided with means to automatically give an audible warning of the release of fire extinguishing medium. For this purpose, the following arrangements are to be complied with for carbon dioxide systems for the protection of ro-ro spaces, container holds equipped with integral reefer containers, spaces accessible by doors or hatches, and other spaces in which personnel normally work or to which they have access: i) Two separate controls are to be provided at each release location for releasing CO2 into a protected space and to ensure the activation of the alarm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inadvertent blackout condition in machinery spaces",
+        "head_canonical_zh": "机舱意外失电",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Systems are to be designed so that opening of the door to a CO2 release mechanism will not cause an inadvertent blackout condition in machinery spaces",
+        "tail_canonical_zh": "系统设计确保开启CO2释放机构门不会导致机舱意外失电",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Systems are to be designed so that opening of the door to a CO2 release mechanism will not cause an inadvertent blackout condition in machinery spaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "free air flow in all pipes and nozzles",
+        "head_canonical_zh": "所有管路和喷嘴的自由气流",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "a test of the free air flow in all pipes and nozzles",
+        "tail_canonical_zh": "所有管路和喷嘴自由气流测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "When the system has been installed, pressure-tested and inspected, the following are to be carried out: i) a test of the free air flow in all pipes and nozzles; and",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alarm equipment",
+        "head_canonical_zh": "报警设备",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "a functional test of the alarm equipment",
+        "tail_canonical_zh": "报警设备功能测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "When the system has been installed, pressure-tested and inspected, the following are to be carried out: ... ii) a functional test of the alarm equipment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

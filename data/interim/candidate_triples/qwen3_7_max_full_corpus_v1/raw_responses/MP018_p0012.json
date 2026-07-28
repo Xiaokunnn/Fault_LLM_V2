@@ -1,0 +1,169 @@
+{
+  "page_key": "MP018:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3688d4be-93d5-9f1c-84c2-d510d841bfaf",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1823,
+    "prompt_tokens": 2090,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3913
+  },
+  "latency_ms": 28643,
+  "attempt": 1,
+  "prompt_sha256": "1b148b8fcba18178875124f49b1ff6b2ba92ac047c954168e87c031398340d88",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Trico Optomatic Oiler",
+        "head_canonical_zh": "Trico Optomatic油位计",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Installation",
+        "tail_canonical_zh": "安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Install the oiler according to the instructions given herein.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "spherical roller thrust bearing",
+        "head_canonical_zh": "球面滚子推力轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Trico Optomatic Oiler",
+        "tail_canonical_zh": "Trico Optomatic油位计",
+        "tail_type": "Component",
+        "evidence_text": "Each Model FS Pump is normally supplied with a Trico Optomatic Oiler as standard to maintain a constant oil level in the spherical roller thrust bearing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "improper thrust bearing lubrication conditions",
+        "head_canonical_zh": "推力轴承润滑不良",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The top of the slanted cut on the sight glass tube must correspond to the oil level required as shown on the assembly section drawing",
+        "tail_canonical_zh": "视液管斜切口顶部与装配剖面图所示油位一致",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The top of the slanted cut on the sight glass tube must correspond to the oil level required as shown on the assembly section drawing in order to proper bearing lubrication and prevent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "damage to the pump",
+        "head_canonical_zh": "泵损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The top of the slanted cut on the sight glass tube must correspond to the oil level required as shown on the assembly section drawing",
+        "tail_canonical_zh": "视液管斜切口顶部与装配剖面图所示油位一致",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The top of the slanted cut on the sight glass tube must correspond to the oil level required as shown on the assembly section drawing in order to proper bearing lubrication and prevent damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "improper thrust bearing lubrication conditions",
+        "head_canonical_zh": "推力轴承润滑不良",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "bearing failure",
+        "tail_canonical_zh": "轴承失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to attain correct oil level will result in improper thrust bearing lubrication conditions and possible bearing failure and other damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "improper thrust bearing lubrication conditions",
+        "head_canonical_zh": "推力轴承润滑不良",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "other damage to the pump",
+        "tail_canonical_zh": "泵其他损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure to attain correct oil level will result in improper thrust bearing lubrication conditions and possible bearing failure and other damage to the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oiler",
+        "head_canonical_zh": "油位计",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "be sure that oiler is level",
+        "tail_canonical_zh": "确认油位计水平",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When installing be sure that oiler is level, that all chips and dirt are carefully removed, and that thread compound is used on all threaded connections.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "threaded connections",
+        "head_canonical_zh": "螺纹连接",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "thread compound is used on all threaded connections",
+        "tail_canonical_zh": "所有螺纹连接使用螺纹密封剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When installing be sure that oiler is level, that all chips and dirt are carefully removed, and that thread compound is used on all threaded connections.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "page_key": "MP019:p0033",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d361f4b1-ca9b-99d2-8cfb-d9decbc3bcff",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2826,
+    "prompt_tokens": 2641,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5467
+  },
+  "latency_ms": 31754,
+  "attempt": 1,
+  "prompt_sha256": "12c3bb6c082e32ec1bb3190b5036c316ced1ebd294181ef825beab9ac5665e48",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "temporärer Temperaturanstieg",
+        "head_canonical_zh": "临时温升",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "Beim ersten Start oder nach einer Lagerschmierung",
+        "tail_canonical_zh": "首次启动或轴承润滑后",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Beim ersten Start oder nach einer Lagerschmierung kann für ca. 10 bis 20 Stunden ein temporärer Temperaturanstieg auftreten.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Nachschmieren bei laufendem Motor",
+        "head_canonical_zh": "运行中补脂",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Den Stopfen der Schmiermittel-Auslassöffnung abnehmen oder das Sperrventil öffnen",
+        "tail_canonical_zh": "拆下润滑脂出口塞或打开截止阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nachschmieren bei laufendem Motor – Den Stopfen der Schmiermittel-Auslassöffnung abnehmen oder das Sperrventil öffnen, falls vorhanden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Nachschmieren bei laufendem Motor",
+        "head_canonical_zh": "运行中补脂",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Sicherstellen, dass der Schmierkanal offen ist",
+        "tail_canonical_zh": "确保润滑通道畅通",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nachschmieren bei laufendem Motor ... – Sicherstellen, dass der Schmierkanal offen ist.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Nachschmieren bei laufendem Motor",
+        "head_canonical_zh": "运行中补脂",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Die vorgesehene Menge Schmierfett in das Lager einspritzen",
+        "tail_canonical_zh": "向轴承注入规定量润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nachschmieren bei laufendem Motor ... – Die vorgesehene Menge Schmierfett in das Lager einspritzen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "überschüssiges Fett",
+        "head_canonical_zh": "多余润滑脂",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Den Motor 1-2 Stunden laufen lassen",
+        "tail_canonical_zh": "让电机运行1-2小时",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "– Den Motor 1-2 Stunden laufen lassen, um sicherzustellen, dass sämtliches überschüssiges Fett aus dem Lager gedrückt ist.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Nachschmieren bei stillstehendem Motor",
+        "head_canonical_zh": "停机补脂",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "nur die Hälfte der Fettmenge benutzen",
+        "tail_canonical_zh": "仅使用一半油脂量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nachschmieren bei stillstehendem Motor ... – In diesem Fall nur die Hälfte der Fettmenge benutzen",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Nachschmieren bei stillstehendem Motor",
+        "head_canonical_zh": "停机补脂",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "den Motor für einige Minuten bei voller Drehzahl laufen lassen",
+        "tail_canonical_zh": "让电机全速运行几分钟",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Nachschmieren bei stillstehendem Motor ... – In diesem Fall nur die Hälfte der Fettmenge benutzen, anschließend den Motor für einige Minuten bei voller Drehzahl laufen lassen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fett-Auslassöffnung",
+        "head_canonical_zh": "油脂出口",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "verschließen",
+        "tail_canonical_zh": "封闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "– Nach 1-2 Stunden Durchlauf die Fett-Auslassöffnung verschließen oder das Sperrventil, falls vorhanden, schließen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "automatische Schmierung",
+        "head_canonical_zh": "自动润滑",
+        "head_type": "OperatingCondition",
+        "relation": "requires",
+        "tail_surface": "Fett-Auslassöffnung beständig offen sein",
+        "tail_canonical_zh": "油脂出口保持常开",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Bei automatischer Schmierung muss die Fett-Auslassöffnung beständig offen sein, bzw. das Sperrventil, falls vorhanden, geöffnet sein.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Lagertemperatur",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "für den gesamten Betriebsbereich gemessen werden",
+        "tail_canonical_zh": "在整个运行范围内测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Bei drehzahlgeregeltem Betrieb (d.h. Frequenzumrichterspeisung) muss die Lagertemperatur für den gesamten Betriebsbereich gemessen werden",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "80°C überschreitet",
+        "head_canonical_zh": "超过80°C",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Schmierintervalle ... halbiert werden",
+        "tail_canonical_zh": "润滑间隔减半",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "wenn sie 80°C überschreitet, sollten die Schmierintervalle für einen Anstieg um 15°C der Lagertemperatur halbiert werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "zulässige Höchsttemperatur für Lager und Schmierfett von +110 °C",
+        "head_canonical_zh": "轴承和润滑脂允许最高温度+110°C",
+        "head_type": "Standard",
+        "relation": "prevented_by",
+        "tail_surface": "darf nicht überschritten werden",
+        "tail_canonical_zh": "不得超过",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Die zulässige Höchsttemperatur für Lager und Schmierfett von +110 °C darf nicht überschritten werden.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

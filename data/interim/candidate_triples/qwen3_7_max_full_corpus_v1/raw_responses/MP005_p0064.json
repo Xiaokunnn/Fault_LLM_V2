@@ -1,0 +1,257 @@
+{
+  "page_key": "MP005:p0064",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d676f36e-9d1f-99a3-8dfd-611dc99dde10",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2902,
+    "prompt_tokens": 7560,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10462
+  },
+  "latency_ms": 36267,
+  "attempt": 1,
+  "prompt_sha256": "998aef1495c0386abaeabcb34791e50bc5f4156516bbaf086bb93b842f13435c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Shutting down and closing valves creates noise and give hydraulic shocks to the whole system",
+        "tail_canonical_zh": "停泵及关阀产生噪声并对全系统造成液压冲击",
+        "tail_type": "Symptom",
+        "evidence_text": "1. Shutting down\nand closing\nvalves creates\nnoise and give\nhydraulic shocks\nto the whole\nsystem",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Will cause mechanical damage, not only to mechanical seals",
+        "tail_canonical_zh": "造成机械损伤，不仅限于机械密封",
+        "tail_type": "Symptom",
+        "evidence_text": "2. Will cause\nmechanical\ndamage, not only\nto mechanical\nseals",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Have sufficient ramp down time and avoid closing valves too fast",
+        "tail_canonical_zh": "保证足够降速时间并避免过快关闭阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Have sufficient\nramp down time\nand avoid closing\nvalves too fast.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Water hammer / hydraulic shocks",
+        "head_canonical_zh": "水锤/液压冲击",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Correct usage of non-return valves",
+        "tail_canonical_zh": "正确使用止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Correct usage of\nnon-return valves",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r002:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵内部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Missing supply of liquid for cooling/lubrication of mechanical shaft seal and/or missing automatic air venting of shaft seal chamber",
+        "tail_canonical_zh": "机械轴封冷却/润滑液供给缺失和/或轴封腔自动排气失效",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Missing supply of\nliquid for\ncooling/lubrication of\nmechanical shaft\nseal and/or missing\nautomatic air venting\nof shaft seal\nchamber",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c03"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵内部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "1. Seal leakage\nafter short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵内部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Ensure proper filters / mesh size on suction side of pump",
+        "tail_canonical_zh": "确保泵吸入侧过滤器/滤网规格合适",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Ensure proper\nfilters / mesh size\non suction side\nof pump.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pump parts (e.g. vent/flush piping) in pump clogged up",
+        "head_canonical_zh": "泵内部件（如排气/冲洗管路）堵塞",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "If solids sediment inside pump parts (e.g. piping) they must be disassembled and cleaned inside reqularly",
+        "tail_canonical_zh": "若固体在泵部件（如管路）内沉积，须定期拆解并内部清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. If solids sediment\ninside pump\nparts (e.g.\npiping) they must\nbe disassembled\nand cleaned\ninside reqularly",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r003:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Production faults from maker",
+        "head_canonical_zh": "制造商生产缺陷",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "Seal leakage after short time",
+        "tail_canonical_zh": "短时间内密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "1. Seal leakage\nafter short time",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Production faults from maker",
+        "head_canonical_zh": "制造商生产缺陷",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Hydrostatic (leakage) and performance test 3.1 or 3.2",
+        "tail_canonical_zh": "静压（泄漏）及性能试验3.1或3.2",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "1. Hydrostatic\n(leakage) and\nperformance test\n3.1 or 3.2.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Production faults from maker",
+        "head_canonical_zh": "制造商生产缺陷",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Specific classification requirement testing to exclude possibility of production faults",
+        "tail_canonical_zh": "按特定船级社要求测试以排除生产缺陷可能",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "2. Specific\nclassification\nrequirement\ntesting to\nexclude\npossibility of\nproduction faults",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0064:t00:r004:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

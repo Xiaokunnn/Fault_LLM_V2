@@ -1,0 +1,137 @@
+{
+  "page_key": "MP001:p0053",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3d377210-b9be-956c-b67c-b1aa3a599044",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1350,
+    "prompt_tokens": 2123,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3473
+  },
+  "latency_ms": 17557,
+  "attempt": 1,
+  "prompt_sha256": "3ed2e365ca8ac6b6f51e54de0f7a5727090c74610696de46c7228ca9d2faf668",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Ultrasonic Analysis",
+        "head_canonical_zh": "超声波分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "wear, fatigue and deterioration in moving parts",
+        "tail_canonical_zh": "运动部件磨损、疲劳和劣化",
+        "tail_type": "FaultMode",
+        "evidence_text": "When used as a dynamic monitoring technique, ultrasonic analysis helps detect changes in sound patterns caused by problems such as wear, fatigue and deterioration in moving parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ultrasonic Analysis",
+        "head_canonical_zh": "超声波分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "ultrasonic translator",
+        "tail_canonical_zh": "超声波转换器",
+        "tail_type": "Equipment",
+        "evidence_text": "Ultrasound (i.e., high-frequency sound waves that are above human perception from 20 kHz to 100 kHz) is detected by an ultrasonic translator and converted to audible or visual output.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ultrasonic Analysis",
+        "head_canonical_zh": "超声波分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "bearing fatigue or wear",
+        "tail_canonical_zh": "轴承疲劳或磨损",
+        "tail_type": "FaultMode",
+        "evidence_text": "This technique can be used to monitor bearing fatigue or wear.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cavitation",
+        "head_canonical_zh": "气蚀",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Test results",
+        "tail_canonical_zh": "测试结果",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Test results can be affected by equipment operating nearby or other components operating within the equipment as well as cavitation, new bearings, incorrect greasing, flow instabilities and gear noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect greasing",
+        "head_canonical_zh": "润滑脂加注不当",
+        "head_type": "Cause",
+        "relation": "indicates",
+        "tail_surface": "Test results",
+        "tail_canonical_zh": "测试结果",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Test results can be affected by equipment operating nearby or other components operating within the equipment as well as cavitation, new bearings, incorrect greasing, flow instabilities and gear noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flow instabilities",
+        "head_canonical_zh": "流动不稳定",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "Test results",
+        "tail_canonical_zh": "测试结果",
+        "tail_type": "SignalFeature",
+        "evidence_text": "Test results can be affected by equipment operating nearby or other components operating within the equipment as well as cavitation, new bearings, incorrect greasing, flow instabilities and gear noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

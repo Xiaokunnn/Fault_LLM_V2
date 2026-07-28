@@ -1,0 +1,142 @@
+{
+  "page_key": "MP019:p0084",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-7cf2cd95-e433-9e03-87cd-8e52298c75ca",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 21214,
+  "attempt": 1,
+  "prompt_sha256": "4e1b29e544606c61482ad3da1431c6e473b248d017227925159ee2462d0085d9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "correnti dannose nei cuscinetti dei motori",
+        "head_canonical_zh": "电机轴承有害电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Cuscinetto isolato lato opposto comando",
+        "tail_canonical_zh": "非驱动端绝缘轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 100 kW\nOPPURE\nIEC 315 ≤ Grandezza\ncarcassa ≤ IEC 355 Cuscinetto isolato lato\nopposto comando",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0084:t00:r002:c00",
+          "MP019:p0084:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "correnti dannose nei cuscinetti dei motori",
+        "head_canonical_zh": "电机轴承有害电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Filtro di modo comune sul convertitore",
+        "tail_canonical_zh": "变频器共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pn ≥ 350 kW\nOPPURE\nIEC 400 ≤ Grandezza\ncarcassa ≤ IEC 450 Filtro di modo comune\nsul convertitore",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0084:t00:r003:c00",
+          "MP019:p0084:t00:r003:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "correnti dannose nei cuscinetti dei motori",
+        "head_canonical_zh": "电机轴承有害电流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "equalizzazione aggiuntiva dei potenziali tra la carcassa del motore e l'apparecchiatura azionata",
+        "tail_canonical_zh": "电机机壳与被驱动设备间附加等电位连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Per i motori in grandezza carcassa IEC 280 e superiori,\nè necessaria un'equalizzazione aggiuntiva dei potenziali\ntra la carcassa del motore e l'apparecchiatura azionata",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "equalizzazione aggiuntiva dei potenziali",
+        "head_canonical_zh": "附加等电位连接",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "misurando la differenza di potenziale tra i componenti",
+        "tail_canonical_zh": "测量组件间电位差",
+        "tail_type": "InspectionAction",
+        "evidence_text": "è necessario verificare la\nconduttività ad alta frequenza del collegamento fornito\ndal basamento in acciaio, ad esempio misurando la\ndifferenza di potenziale tra i componenti",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cuscinetti isolati",
+        "head_canonical_zh": "绝缘轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "rivestita in ossido di alluminio o con elementi rotanti in ceramica",
+        "tail_canonical_zh": "氧化铝涂层或陶瓷滚动体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si consigliano cuscinetti isolati con sede interna e/o\nesterna rivestita in ossido di alluminio o con elementi\nrotanti in ceramica",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rivestimenti in ossido di alluminio",
+        "head_canonical_zh": "氧化铝涂层",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "trattati con sigillante per impedire a sporco e umidità di penetrare nel rivestimento poroso",
+        "tail_canonical_zh": "密封处理防止污湿渗入多孔涂层",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "I rivestimenti in ossido di alluminio\nvengono anche trattati con sigillante per impedire a\nsporco e umidità di penetrare nel rivestimento poroso",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

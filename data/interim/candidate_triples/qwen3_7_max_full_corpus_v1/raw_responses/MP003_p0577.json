@@ -1,0 +1,137 @@
+{
+  "page_key": "MP003:p0577",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dbe0f155-03f4-97de-b0dd-528aa1ac1513",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1339,
+    "prompt_tokens": 2442,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3781
+  },
+  "latency_ms": 15937,
+  "attempt": 1,
+  "prompt_sha256": "bfb7bbfb01a7180fbc19897a88bf57775c18749d715d245919558dd3bcca0da8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "progressive flooding of intact ballast tanks",
+        "head_canonical_zh": "完整压载舱渐进进水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "fitted with valves in the pipes in the intact tanks",
+        "tail_canonical_zh": "在完整舱内管路安装阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Affected ballast piping is to be fitted with valves in the pipes in the intact tanks to prevent progressive flooding of these tanks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loss of control power",
+        "head_canonical_zh": "控制动力丧失",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "fail in closed position",
+        "tail_canonical_zh": "失电关闭",
+        "tail_type": "Symptom",
+        "evidence_text": "the valves are to be arranged to fail in closed position upon loss of control power",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "cross-contamination",
+        "head_canonical_zh": "交叉污染",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "ballast lines are to be of steel or equivalent",
+        "tail_canonical_zh": "压载管路采用钢或等效材料",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To minimize cross-contamination, where passing through fuel oil tanks, unless being led through pipe tunnel, ballast lines are to be of steel or equivalent",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cross-contamination",
+        "head_canonical_zh": "交叉污染",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Pipe joints are to be welded or heavy flanged",
+        "tail_canonical_zh": "管接头采用焊接或重型法兰连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "To minimize cross-contamination... Pipe joints are to be welded or heavy flanged (e.g. one pressure rating higher).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Slip joints",
+        "head_canonical_zh": "滑动接头",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "cross-contamination",
+        "tail_canonical_zh": "交叉污染",
+        "tail_type": "FaultMode",
+        "evidence_text": "Slip joints are not permitted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inoperability of the ballast water treatment system",
+        "head_canonical_zh": "压载水处理系统失效",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "ballast water exchange as a contingency measure",
+        "tail_canonical_zh": "压载水交换作为应急措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The use of ballast water exchange as a contingency measure is subject to approval... in case of inoperability of the ballast water treatment system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

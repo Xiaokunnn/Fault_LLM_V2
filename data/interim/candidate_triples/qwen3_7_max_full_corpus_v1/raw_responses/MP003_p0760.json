@@ -1,0 +1,222 @@
+{
+  "page_key": "MP003:p0760",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-03072568-8703-9bc0-b9fc-53e2fdd615a1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2371,
+    "prompt_tokens": 4380,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6751
+  },
+  "latency_ms": 30817,
+  "attempt": 1,
+  "prompt_sha256": "bb2d489ffb783e9b3745e3ad79cb0c21b878f782bc43cf09114acc51cff31567",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor branch circuits",
+        "head_canonical_zh": "电动机分支电路",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "protected with fuses or circuit breakers having both instantaneous and long-time delay trips",
+        "tail_canonical_zh": "采用具有瞬时和长延时脱扣的熔断器或断路器保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor branch circuits are to be protected with fuses or circuit breakers having both instantaneous and long-time delay trips.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "protective device",
+        "head_canonical_zh": "保护装置",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "set in excess of the motor's full load current but not more than the limitations given in the table below",
+        "tail_canonical_zh": "设定值高于电机满载电流但不超过下表限制",
+        "tail_type": "Standard",
+        "evidence_text": "Normally, the protective device is to be set in excess of the motor's full load current but not more than the limitations given in the table below.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Squirrel-cage and synchronous full-voltage, reactor- or resistor-starting",
+        "head_canonical_zh": "鼠笼式及同步全压、电抗器或电阻器启动电机",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "250",
+        "tail_canonical_zh": "250%电机满载电流",
+        "tail_type": "Standard",
+        "evidence_text": "Squirrel-cage and synchronous full-voltage, reactor- or resistor-\nstarting                                 250",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0760:t00:r001:c00",
+          "MP003:p0760:t00:r001:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Autotransformer starting",
+        "head_canonical_zh": "自耦变压器启动电机",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "200",
+        "tail_canonical_zh": "200%电机满载电流",
+        "tail_type": "Standard",
+        "evidence_text": "Autotransformer starting                    200",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0760:t00:r002:c00",
+          "MP003:p0760:t00:r002:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wound rotor",
+        "head_canonical_zh": "绕线转子电机",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "150",
+        "tail_canonical_zh": "150%电机满载电流",
+        "tail_type": "Standard",
+        "evidence_text": "Wound rotor                                 150",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0760:t00:r003:c00",
+          "MP003:p0760:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "polyphase motor circuits",
+        "head_canonical_zh": "多相电机电路",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "arranged to protect against single-phasing",
+        "tail_canonical_zh": "配置防止单相运行保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "When fuses are used to protect polyphase motor circuits, they are to be arranged to protect against single-phasing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor controller",
+        "head_canonical_zh": "电机控制器",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "short circuit rating matching at least that of the circuit breaker instantaneous trip setting",
+        "tail_canonical_zh": "短路额定值至少匹配断路器瞬时脱扣设定值",
+        "tail_type": "Standard",
+        "evidence_text": "the motor controller is to have short circuit rating matching at least that of the circuit breaker instantaneous trip setting",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "motor overload protection",
+        "head_canonical_zh": "电机过载保护",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "arranged to open all conductors",
+        "tail_canonical_zh": "配置为断开所有导体",
+        "tail_type": "Standard",
+        "evidence_text": "the motor overload protection (see 4-8-2/9.17.2) is to be arranged to open all conductors.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overload protective devices of motors",
+        "head_canonical_zh": "电机过载保护装置",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "compatible with the motor overload thermal characteristics",
+        "tail_canonical_zh": "与电机过载热特性兼容",
+        "tail_type": "Standard",
+        "evidence_text": "The overload protective devices of motors are to be compatible with the motor overload thermal characteristics",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "overload protective devices of motors",
+        "head_canonical_zh": "电机过载保护装置",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "set at 100% of the motor rated current for continuous rated motor",
+        "tail_canonical_zh": "连续额定电机设定为100%电机额定电流",
+        "tail_type": "Standard",
+        "evidence_text": "and are to be set at 100% of the motor rated current for continuous rated motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "page_key": "MP003:p0592",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-977a4339-048d-94f1-9019-f60dba461c52",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1286,
+    "prompt_tokens": 2544,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3830
+  },
+  "latency_ms": 16610,
+  "attempt": 1,
+  "prompt_sha256": "8f39ca1a3320b32dfdf95a32141b8195196b3b1efdf79a9639cff351d75fd3e0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Fuel oil system components, such as pumps, strainers, purifiers, etc. and fuel oil heaters",
+        "head_canonical_zh": "燃油系统部件（泵、滤器、净化器、加热器）",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "drip pans fitted underneath to contain the leakage",
+        "tail_canonical_zh": "安装接油盘以容纳泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil system components, such as pumps, strainers, purifiers, etc. and fuel oil heaters, which require occasional dismantling for examination, and where leakage may normally be expected, are to have drip pans fitted underneath to contain the leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "drip pans fitted underneath to contain the leakage",
+        "tail_canonical_zh": "安装接油盘以容纳泄漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fuel oil system components, such as pumps, strainers, purifiers, etc. and fuel oil heaters, which require occasional dismantling for examination, and where leakage may normally be expected, are to have drip pans fitted underneath to contain the leakage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "oil spray or oil leakage into machinery air intakes or other sources of ignition",
+        "head_canonical_zh": "油雾或漏油进入机械进气口或其他点火源",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "accordance with 4-6-4/13.3.2",
+        "tail_canonical_zh": "符合4-6-4/13.3.2要求",
+        "tail_type": "Standard",
+        "evidence_text": "accordance with 4-6-4/13.3.2, and also to avoid oil spray or oil leakage into machinery air intakes or other sources of ignition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "drain tank",
+        "head_canonical_zh": "泄放柜",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "high level alarm",
+        "tail_canonical_zh": "高液位报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The drain tank is to be fitted with a high level alarm for propulsion machinery spaces intended for centralized operation (ACC notation) or unattended operation (ACCU or ABCU notation).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding in case of bottom damage to the tank",
+        "head_canonical_zh": "因柜体底部破损导致的进水",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "all drain lines entering the tank are to be fitted with non-return valves at the tank",
+        "tail_canonical_zh": "所有进入该柜的泄放管在柜处装设止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where the drain tank is a double bottom tank, all drain lines entering the tank are to be fitted with non-return valves at the tank so as to protect the engine room from flooding in case of bottom damage to the tank.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

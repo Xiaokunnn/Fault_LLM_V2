@@ -1,0 +1,129 @@
+{
+  "page_key": "MP020:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-80344993-d083-932a-bc19-28f04c5ce177",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 15380,
+  "attempt": 1,
+  "prompt_sha256": "cdb127123f55a5b46dd15cbbfd9b2c08dbd36e1461c63bd9458f03a647ebc712",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Cornell Redi-Prime, fully automated, self-priming pumps",
+        "head_canonical_zh": "Cornell Redi-Prime全自动自吸泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "unattended operation",
+        "tail_canonical_zh": "无人值守运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Cornell Redi-Prime, fully automated, self-priming pumps are ideal for unattended operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "positive sealing float box and diaphram vacuum pump configurration",
+        "head_canonical_zh": "正密封浮子箱与隔膜真空泵配置",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "water carry-over",
+        "tail_canonical_zh": "水携带",
+        "tail_type": "FaultMode",
+        "evidence_text": "Our postitive sealing float box and diaphram vacuum pump configurration insures that there is no water carry-over.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "The pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "filled with liquid before it is started",
+        "tail_canonical_zh": "启动前充液",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump must be filled with liquid before it is started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Automatic priming",
+        "head_canonical_zh": "自动引水",
+        "head_type": "MaintenanceAction",
+        "relation": "operates_under",
+        "tail_surface": "unattended operation",
+        "tail_canonical_zh": "无人值守运行",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Automatic priming is used for unattended operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Electric sensing and controls",
+        "head_canonical_zh": "电动传感与控制装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "prime the unit before start-up",
+        "tail_canonical_zh": "启动前对机组引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Electric sensing and controls prime the unit before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Specially constructed engine-driven pumps",
+        "head_canonical_zh": "特制发动机驱动泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "primed with an exhaust operated vacuum producing device",
+        "tail_canonical_zh": "使用排气驱动真空发生装置引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Specially constructed engine-driven pumps can be primed with an exhaust operated vacuum producing device.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

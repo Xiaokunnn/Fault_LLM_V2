@@ -1,0 +1,122 @@
+{
+  "page_key": "MP003:p0355",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-98b22653-9299-98e8-b963-3cfbf6f2103a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1189,
+    "prompt_tokens": 2305,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3494
+  },
+  "latency_ms": 14838,
+  "attempt": 1,
+  "prompt_sha256": "ef47fafe5ecc3609292e254d58faa5fa07cde2e330eecbcc477f4d49c9c3f9b1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "hydraulic lock alarm",
+        "head_canonical_zh": "液压锁闭报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "failed system",
+        "tail_canonical_zh": "故障系统",
+        "tail_type": "FaultMode",
+        "evidence_text": "visual hydraulic lock alarm, which identifies the failed system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "steering failure alarm system",
+        "head_canonical_zh": "操舵故障报警系统",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "actual position of the rudder differs by more than 5 degrees from the rudder position ordered",
+        "tail_canonical_zh": "舵实际位置与指令位置偏差超过5度",
+        "tail_type": "SignalFeature",
+        "evidence_text": "The steering failure alarm system is to actuate an audible and visible alarm in the wheelhouse when the actual position of the rudder differs by more than 5 degrees from the rudder position ordered by the follow-up control systems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Isolating valves",
+        "head_canonical_zh": "隔离阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fitted on the pipe connections to the rudder actuators",
+        "tail_canonical_zh": "安装在舵机执行器管路连接处",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Isolating valves are to be fitted on the pipe connections to the rudder actuators",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "hydraulic fluid",
+        "head_canonical_zh": "液压油",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "A means is to be provided to maintain the cleanliness",
+        "tail_canonical_zh": "提供保持清洁度的措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A means is to be provided to maintain the cleanliness of the hydraulic fluid",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Relief valves",
+        "head_canonical_zh": "安全阀",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "provided for the protection of the hydraulic system at any part which can be isolated and in which pressure can be generated",
+        "tail_canonical_zh": "为可隔离且可能产生压力的液压系统部分提供保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Relief valves are to be provided for the protection of the hydraulic system at any part which can be isolated and in which pressure can be generated from the power source or from external forces",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

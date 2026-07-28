@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0365",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e1f3e284-d6a9-9fbb-a70c-30ac82712f4f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 870,
+    "prompt_tokens": 2402,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3272
+  },
+  "latency_ms": 12305,
+  "attempt": 1,
+  "prompt_sha256": "bc767add26a0c9f8ab72e3a55da983b520500fda708e28ab900ca351b4384407",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Loss of hydraulic fluid",
+        "head_canonical_zh": "液压油泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "detected",
+        "tail_canonical_zh": "检测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Loss of hydraulic fluid from one system is to be capable of being detected",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "defective system",
+        "head_canonical_zh": "故障系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "automatically isolated",
+        "tail_canonical_zh": "自动隔离",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the defective system automatically isolated so that the other actuating system or systems is to remain fully operational",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "loss of steering capability due to a single failure of any part of the piping system",
+        "head_canonical_zh": "管路系统单点故障导致的操舵能力丧失",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "loss of steering capability",
+        "tail_canonical_zh": "操舵能力丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "Following the loss of steering capability due to a single failure of any part of the piping system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "single failure of any part of the piping system",
+        "head_canonical_zh": "管路系统单点故障",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "loss of steering capability",
+        "tail_canonical_zh": "操舵能力丧失",
+        "tail_type": "Symptom",
+        "evidence_text": "loss of steering capability due to a single failure of any part of the piping system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

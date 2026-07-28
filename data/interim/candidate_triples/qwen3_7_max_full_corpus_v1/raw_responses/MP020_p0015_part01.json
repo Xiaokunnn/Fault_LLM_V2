@@ -1,0 +1,142 @@
+{
+  "page_key": "MP020:p0015",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-91fcea08-8df2-996e-a523-1f965079b7ea",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1347,
+    "prompt_tokens": 3619,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4966
+  },
+  "latency_ms": 17393,
+  "attempt": 1,
+  "prompt_sha256": "9d0db78e003547a92d167056a642e3b99611d20a27f083c1af01db07e1a05d96",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Correct Alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "STRAIGHT EDGE",
+        "tail_canonical_zh": "直尺法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "MOTOR STRAIGHT EDGE PUMP FRAME                                                  MOTOR      CALIPER PUMP FRAME                                                                                                                                                    Correct Alignment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Correct Alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "CALIPER",
+        "tail_canonical_zh": "卡尺法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "MOTOR STRAIGHT EDGE PUMP FRAME                                                  MOTOR      CALIPER PUMP FRAME                                                                                                                                                    Correct Alignment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Incorrect Alignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "STRAIGHT EDGE",
+        "tail_canonical_zh": "直尺法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "MOTOR STRAIGHT EDGE PUMP FRAME     MOTOR     CALIPER PUMP FRAME                                                                                                                                              Incorrect Alignment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Incorrect Alignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "CALIPER",
+        "tail_canonical_zh": "卡尺法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "MOTOR STRAIGHT EDGE PUMP FRAME     MOTOR     CALIPER PUMP FRAME                                                                                                                                              Incorrect Alignment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Incorrect Alignment",
+        "head_canonical_zh": "不对中",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Reinstall coupling guard before start-up.",
+        "tail_canonical_zh": "启动前重新安装联轴器护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Incorrect Alignment                    before start-up.    ",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Correct Alignment",
+        "head_canonical_zh": "正确对中",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Reinstall coupling guard before start-up.",
+        "tail_canonical_zh": "启动前重新安装联轴器护罩",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Correct Alignment           Reinstall coupling guard                                                                before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "页面主要展示联轴器对中的示意图及标签，文本证据较为碎片化；'Reinstall coupling guard before start-up' 在图中同时关联了Correct和Incorrect Alignment状态，作为通用安全维护步骤抽取，但其并非针对不对中故障本身的直接纠正措施（如重新对中），置信度相应调低。",
+      "表格解析结果均为空单元格，未从表格中提取任何三元组。"
+    ]
+  }
+}

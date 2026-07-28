@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0932",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e11b71fb-71cf-95ef-b4e5-f8378444310f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 856,
+    "prompt_tokens": 2491,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3347
+  },
+  "latency_ms": 10022,
+  "attempt": 1,
+  "prompt_sha256": "680948f66d5ef8fc2f0b7a79084bf41ad043f20d0857543ccbfb4d09608397ba",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Failure of the guardian valve to open",
+        "head_canonical_zh": "守护阀开启失败",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed at the centralized control station",
+        "tail_canonical_zh": "集中控制站报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Failure of the guardian valve to open is to be alarmed at the centralized control station.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "low water supply situation",
+        "head_canonical_zh": "低供水工况",
+        "head_type": "OperatingCondition",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "a low water supply situation is to be alarmed to allow manual starting of the main circulating pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "main circulating pump",
+        "head_canonical_zh": "主循环泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "manual starting",
+        "tail_canonical_zh": "手动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a low water supply situation is to be alarmed to allow manual starting of the main circulating pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "main circulating pump",
+        "head_canonical_zh": "主循环泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "automatically started",
+        "tail_canonical_zh": "自动启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the pump may be automatically started as vessel speed reduces or as required by the design of the cooling system for satisfactory operation of the propulsion machinery",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

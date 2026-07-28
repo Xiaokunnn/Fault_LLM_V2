@@ -1,0 +1,95 @@
+{
+  "page_key": "MP005:p0050",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-03542864-cefc-99fb-b446-73f9fda82e87",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 2509,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3344
+  },
+  "latency_ms": 10623,
+  "attempt": 1,
+  "prompt_sha256": "55453c4588494116a2ab0e280e03a629f15567eea47534ebd79d529256a92cc1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "room temperature not exceeding 45 °C",
+        "tail_canonical_zh": "室温不超过45°C",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The room temperature not exceeding 45 °C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump motor",
+        "head_canonical_zh": "泵电机",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Ensure airflow around the pump motor",
+        "tail_canonical_zh": "确保泵电机周围气流",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure airflow around the pump motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "admissible temperature are exceeded",
+        "head_canonical_zh": "超过允许温度",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "additional measures must be taken",
+        "tail_canonical_zh": "必须采取额外措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: If the admissible temperature are exceeded, additional measures must be taken.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0050:t00:r000:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "admissible temperature are exceeded",
+        "head_canonical_zh": "超过允许温度",
+        "head_type": "OperatingCondition",
+        "relation": "mitigated_by",
+        "tail_surface": "Maintenance intervals and maintenance measures may have to be adjusted accordingly",
+        "tail_canonical_zh": "相应调整维护间隔和维护措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Maintenance intervals and maintenance measures may have to be adjusted accordingly.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0050:t00:r001:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

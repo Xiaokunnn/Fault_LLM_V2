@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0585",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-391de3a4-9b2f-9d2e-aec4-a183c13b15ae",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 933,
+    "prompt_tokens": 1904,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2837
+  },
+  "latency_ms": 13160,
+  "attempt": 1,
+  "prompt_sha256": "3d271e96b79c97facada0ea65624f7892a1f1782cf3af4913f145bba5c1fc1a5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "tanks capable of being filled by a pumping system",
+        "head_canonical_zh": "可由泵系充注的液舱",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "provided with a means of overflow",
+        "tail_canonical_zh": "设置溢流装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Generally, all tanks capable of being filled by a pumping system, as indicated in 4-6-4/9.1.2, are to be provided with a means of overflow.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "means of overflow",
+        "head_canonical_zh": "溢流装置",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "overflowing through dedicated overflow pipes",
+        "tail_canonical_zh": "通过专用溢流管溢流",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This may be achieved by overflowing through dedicated overflow pipes or through the tank vents provided the size of the vents meet 4-6-4/9.3.3(b).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "means of overflow",
+        "head_canonical_zh": "溢流装置",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "through the tank vents provided the size of the vents meet 4-6-4/9.3.3(b)",
+        "tail_canonical_zh": "通过满足尺寸要求的透气孔溢流",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This may be achieved by overflowing through dedicated overflow pipes or through the tank vents provided the size of the vents meet 4-6-4/9.3.3(b).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Overflow lines",
+        "head_canonical_zh": "溢流管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "self-draining",
+        "tail_canonical_zh": "自泄放设计",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Overflow lines are to be self-draining.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

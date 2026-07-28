@@ -1,0 +1,233 @@
+{
+  "page_key": "MP005:p0089",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-18d3333a-e0a3-989c-bc21-bd792c43399f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2484,
+    "prompt_tokens": 4364,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6848
+  },
+  "latency_ms": 32671,
+  "attempt": 1,
+  "prompt_sha256": "5ead0804134fc4217f83fddfb23f38d0a21dcbf5ec98ce22a8449307c919d15b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Sealing ring/impeller",
+        "head_canonical_zh": "密封环/叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the following parts for wear and damage",
+        "tail_canonical_zh": "检查磨损和损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When the pump has been dismantled, check the following parts for wear and damage:\n        - Sealing ring/impeller: Max. clearance 0.4-0.5 mm measured in radius.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Shaft seal/rear cover",
+        "head_canonical_zh": "轴封/后盖",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the seat for flatness and cracks",
+        "tail_canonical_zh": "检查座面平整度和裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "- Shaft seal/rear cover: Check the seat for flatness and cracks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rubber parts",
+        "head_canonical_zh": "橡胶件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the rubber parts for elasticity",
+        "tail_canonical_zh": "检查橡胶件弹性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the rubber parts for elasticity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the following parts for wear and damage",
+        "tail_canonical_zh": "检查磨损和损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When the pump has been dismantled, check the following parts for wear and damage:\n        - Bearings: Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wear and noise",
+        "head_canonical_zh": "磨损和噪声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "Bearings",
+        "tail_canonical_zh": "轴承",
+        "tail_type": "Component",
+        "evidence_text": "- Bearings: Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace in case of wear and noise",
+        "tail_canonical_zh": "磨损或噪声时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Bearings: Replace in case of wear and noise.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "coupling",
+        "head_canonical_zh": "联轴器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Dismantle the coupling by removing the pointed screw (73) and pull off the coupling",
+        "tail_canonical_zh": "拆卸尖头螺钉并拉下联轴器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Dismantle the coupling by removing the pointed\nscrew (73) and pull off the coupling. The\ncoupling might be heated to help dismantling.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0089:t00:r000:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "coupling",
+        "head_canonical_zh": "联轴器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "The coupling might be heated to help dismantling",
+        "tail_canonical_zh": "加热联轴器辅助拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Dismantle the coupling by removing the pointed\nscrew (73) and pull off the coupling. The\ncoupling might be heated to help dismantling.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0089:t00:r000:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "take care that the bearing is not damaged by pulling too hard on the coupling",
+        "tail_canonical_zh": "注意不要因用力拉联轴器而损坏轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "NOTE: If the coupling is removed on the assembled pump, take care that the bearing is not\ndamaged by pulling too hard on the coupling.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "轴",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Remove pointed screws (73). Pull off the shaft",
+        "tail_canonical_zh": "拆卸尖头螺钉并拉出轴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Remove pointed screws (73). Pull off the shaft.\nThe coupling might be heated to facilitate\ndismantling.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0089:t02:r000:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "coupling",
+        "head_canonical_zh": "联轴器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "The coupling might be heated to facilitate dismantling",
+        "tail_canonical_zh": "加热联轴器便于拆卸",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Remove pointed screws (73). Pull off the shaft.\nThe coupling might be heated to facilitate\ndismantling.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0089:t02:r000:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

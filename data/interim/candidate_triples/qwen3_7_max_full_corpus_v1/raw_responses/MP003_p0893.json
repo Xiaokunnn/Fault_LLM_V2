@@ -1,0 +1,132 @@
+{
+  "page_key": "MP003:p0893",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-677b3d16-aa11-9251-8987-7a4b0e0162f1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1225,
+    "prompt_tokens": 2358,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3583
+  },
+  "latency_ms": 16473,
+  "attempt": 1,
+  "prompt_sha256": "c06da98194555378de67af0e553c75117b96437b5944ff5b8fa68fdef901980b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "hydraulic pumps",
+        "head_canonical_zh": "液压泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "fitted in duplicate",
+        "tail_canonical_zh": "成对安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where power supply is hydraulic, hydraulic pumps are to be fitted in duplicate.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "cavitation or starvation of the pump",
+        "head_canonical_zh": "泵汽蚀或吸空",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "pump suctions are to be sized and positioned",
+        "tail_canonical_zh": "泵吸口尺寸与布置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump suctions are to be sized and positioned to prevent cavitation or starvation of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "cavitation",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "duplex filter",
+        "head_canonical_zh": "双联滤器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "cleaned without interrupting the oil supply",
+        "tail_canonical_zh": "不停油清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A duplex filter, which can be cleaned without interrupting the oil supply, is to be fitted on the discharge side of pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Each power supply",
+        "head_canonical_zh": "每个动力源",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "monitored",
+        "tail_canonical_zh": "监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Each power supply is to be monitored and its failure is to be alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "alarmed",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "its failure is to be alarmed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "circuits",
+        "head_canonical_zh": "电路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "protected for short circuit and monitored for voltage failure",
+        "tail_canonical_zh": "短路保护及电压故障监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Each of these circuits is to be protected for short circuit and monitored for voltage failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

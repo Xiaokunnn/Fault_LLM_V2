@@ -1,0 +1,61 @@
+{
+  "page_key": "MP019:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fc867d10-6b71-960a-88c1-248ed7777dfe",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 440,
+    "prompt_tokens": 1941,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2381
+  },
+  "latency_ms": 5546,
+  "attempt": 1,
+  "prompt_sha256": "4c9c5f438e2cba6c6958b4020bd7324d7a176da3e7e0299fd1750160cdb85db1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "removed using pullers and fitted by heating or using special tools for the purpose",
+        "tail_canonical_zh": "使用拉拔器拆卸并通过加热或专用工具安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "These must be removed using pullers and fitted by heating or using special tools for the purpose.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Rewinding",
+        "head_canonical_zh": "电机重绕",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "qualified repair shops",
+        "tail_canonical_zh": "合格维修车间",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Rewinding should always be carried out by qualified repair shops.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

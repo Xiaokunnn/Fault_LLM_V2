@@ -1,0 +1,309 @@
+{
+  "page_key": "MP007:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-853a44e5-a6b8-9be5-890d-e30dead68203",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3281,
+    "prompt_tokens": 5009,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8290
+  },
+  "latency_ms": 37839,
+  "attempt": 1,
+  "prompt_sha256": "97e3ae14770a32fe102fbf30958b0df1db9d0557e94e0d8e8b13cef58e63e4de",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Siphonage",
+        "head_canonical_zh": "虹吸现象",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "install one vacuum valve near the pump",
+        "tail_canonical_zh": "在泵附近安装真空阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If your installation is characterized by one of\nfollowing features, please install one vacuum\nvalve near the pump.\n● The discharge pipe is sloped downwards\nin the direction of leaving the pump.\n● Siphonage may occur.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "backflow of unclean water",
+        "head_canonical_zh": "不洁水倒流",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "install one vacuum valve near the pump",
+        "tail_canonical_zh": "在泵附近安装真空阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If your installation is characterized by one of\nfollowing features, please install one vacuum\nvalve near the pump.\n● The discharge pipe is sloped downwards\nin the direction of leaving the pump.\n● Siphonage may occur.\n● It is necessary to stop backflow of unclean\nwater.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "pump bearing and shaft seal will be damaged",
+        "tail_canonical_zh": "泵轴承和轴封损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "In case of dry running,\npump bearing and shaft seal will be damaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure",
+          "bearing_or_lubrication_failure",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dry running",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Do not start the pump before water is filled and air is discharged",
+        "tail_canonical_zh": "注水排气前禁止启动泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\npump bearing and shaft seal will be damaged.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Check if foot bolts are tightened",
+        "tail_canonical_zh": "检查地脚螺栓是否紧固",
+        "tail_type": "InspectionAction",
+        "evidence_text": "7.2 CHECK BEFORE PUMP STARTUP\n• Check if foot bolts are tightened.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "If the pump is full of water or not",
+        "tail_canonical_zh": "检查泵内是否充满水",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• If the pump is full of water or not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "power grid",
+        "head_canonical_zh": "电网",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "If the voltage of power grid is correct or not",
+        "tail_canonical_zh": "检查电网电压是否正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• If the voltage of power grid is correct or not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "If the rotating direction is correct or not",
+        "tail_canonical_zh": "检查旋转方向是否正确",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• If the rotating direction is correct or not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pipes",
+        "head_canonical_zh": "管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "If all pipes are tightly connected or not",
+        "tail_canonical_zh": "检查所有管路连接是否紧密",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• If all pipes are tightly connected or not, if pipes can\n• provide water normally or not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "valves on inlet pipes",
+        "head_canonical_zh": "进口管阀门",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "If valves on inlet pipes are completely opened or not",
+        "tail_canonical_zh": "检查进口管阀门是否全开",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• If valves on inlet pipes are completely opened or not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "working pressure",
+        "head_canonical_zh": "工作压力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Check working pressure if a pressure meter is installed",
+        "tail_canonical_zh": "若装有压力表则检查工作压力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "• Check working pressure if a pressure meter is installed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "full-load current of the motor",
+        "head_canonical_zh": "电机满载电流",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Check if the full-load current of the motor exceeds the maximum allowable current via the pressure switch",
+        "tail_canonical_zh": "通过压力开关检查电机满载电流是否超过最大允许电流",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check if the full-load current of the motor exceeds the maximum allowable current\nvia the pressure switch.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor connection box",
+        "head_canonical_zh": "电机接线盒",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "make sure that the power supply is disconnected",
+        "tail_canonical_zh": "确保电源已断开",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Before dismantling the motor connection box or the pump, make sure that the power supply is\ndisconnected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "One-phase motor",
+        "head_canonical_zh": "单相电机",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "heat protector",
+        "tail_canonical_zh": "热保护器",
+        "tail_type": "Component",
+        "evidence_text": "One-phase motor is provided with a heat protector inside",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "three-phase motor",
+        "head_canonical_zh": "三相电机",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "provided with a three-phase protector before installation",
+        "tail_canonical_zh": "安装前配备三相保护器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "three-phase motor shall be provided\nwith a three-phase protector before installation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

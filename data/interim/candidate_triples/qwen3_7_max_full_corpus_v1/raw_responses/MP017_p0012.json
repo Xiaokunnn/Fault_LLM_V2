@@ -1,0 +1,150 @@
+{
+  "page_key": "MP017:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-aea9b3a6-66fd-9389-9589-cabcb2ce98f8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1544,
+    "prompt_tokens": 2068,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3612
+  },
+  "latency_ms": 20075,
+  "attempt": 1,
+  "prompt_sha256": "83fea42526723edceaff94a88c3904a496244d055513a36122780587382d6a9e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "bypass line",
+        "tail_canonical_zh": "旁通管路",
+        "tail_type": "Component",
+        "evidence_text": "Duringtheprimingcycle, airfromthe pumpcasing flowsthroughthebypassline, and passesthrough the Air Release Valve to the wet well",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air Release Valve",
+        "head_canonical_zh": "排气阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "moving the spring retaining pin up or down the plunger rod",
+        "tail_canonical_zh": "上下移动弹簧固定销",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Valveclos- ing pressure can be further adjusted to the exact system requirements by moving the spring retain- ing pin up or down the plunger rod to increase or decrease tension on the spring",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "independently mounted in a horizontal position",
+        "tail_canonical_zh": "独立水平安装",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The Automatic Air Release Valve must be inde- pendently mounted in a horizontal position",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Automatic Air Release Valve",
+        "head_canonical_zh": "自动排气阀",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "discharge line of the self-priming centrifugal pump",
+        "tail_canonical_zh": "自吸离心泵排出管路",
+        "tail_type": "Component",
+        "evidence_text": "connected to the discharge line of the self-priming centrifugal pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hazardous spills",
+        "head_canonical_zh": "危险泄漏",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "Be sure the bypass line is directed back to the wet well or tank",
+        "tail_canonical_zh": "确保旁通管引回湿井或储罐",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Be sure the bypass line is directed back to the wet well or tank to prevent hazardous spills",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "solids that mayhaveaccumulatedinthe diaphragmchamber",
+        "head_canonical_zh": "膜片腔内积聚的固体",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "flushed out during the next priming cycle",
+        "tail_canonical_zh": "在下次引水循环中冲洗排出",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Any solids that mayhaveaccumulatedinthe diaphragmchamber settle to the bottom and are flushed out during the next priming cycle",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump does not reach its designed capacity or head",
+        "head_canonical_zh": "泵未达到设计流量或扬程",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "valve will remain open",
+        "tail_canonical_zh": "阀门保持开启",
+        "tail_type": "Symptom",
+        "evidence_text": "The valve will remain open if the pump does not reach its designed capacity or head",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

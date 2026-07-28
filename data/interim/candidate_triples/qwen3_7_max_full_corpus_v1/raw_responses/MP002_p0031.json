@@ -1,0 +1,171 @@
+{
+  "page_key": "MP002:p0031",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-e58614ff-4257-9b1c-814e-53f06f0fc1bd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1869,
+    "prompt_tokens": 7773,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9642
+  },
+  "latency_ms": 23796,
+  "attempt": 1,
+  "prompt_sha256": "4c316e21549d023caa7ed68e1dea7c8b88659839a7d1ee5fac9fa28bda2f2a71",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Run to Failure (RTF)",
+        "head_canonical_zh": "故障后更换策略",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "replacement of the failed component(s)",
+        "tail_canonical_zh": "更换失效部件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Run to Failure (RTF). This strategy allows the asset to operate until a failure occurs followed by replacement of the failed component(s).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Top 25%",
+        "head_canonical_zh": "关键性前25%设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "FMECA",
+        "tail_canonical_zh": "故障模式影响及危害性分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Top 25%            X",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0031:t00:r002:c00",
+          "MP002:p0031:t00:r002:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Upper Middle 25%",
+        "head_canonical_zh": "关键性中上25%设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "MTA",
+        "tail_canonical_zh": "维护任务分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Upper Middle 25%      O        X",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0031:t00:r003:c00",
+          "MP002:p0031:t00:r003:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lower Middle 25%",
+        "head_canonical_zh": "关键性中下25%设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "BSD",
+        "tail_canonical_zh": "基本系统设计审查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Lower Middle 25%               O        X",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0031:t00:r004:c00",
+          "MP002:p0031:t00:r004:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bottom 25%",
+        "head_canonical_zh": "关键性后25%设备",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "RTF*",
+        "tail_canonical_zh": "故障后更换策略",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Bottom 25%                            O        X*",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP002:p0031:t00:r005:c00",
+          "MP002:p0031:t00:r005:c04"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "component failure",
+        "head_canonical_zh": "部件故障",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "asset to cease operation or operate at an unsatisfactory level of performance",
+        "tail_canonical_zh": "资产停止运行或性能不达标",
+        "tail_type": "Symptom",
+        "evidence_text": "The component failure causes the asset to cease operation or operate at an unsatisfactory level of performance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "asset is operating unsatisfactorily, functioning inefficiently, or the maintenance strategy is ineffective",
+        "head_canonical_zh": "资产运行不良、效率低下或维护策略无效",
+        "head_type": "Symptom",
+        "relation": "diagnosed_by",
+        "tail_surface": "root cause analysis (RCA)",
+        "tail_canonical_zh": "根本原因分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "In the event it is determined that the asset is operating unsatisfactorily, functioning inefficiently, or the maintenance strategy is ineffective based on monitoring operational performance, a root cause analysis (RCA) should be performed",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "asset is operating unsatisfactorily, functioning inefficiently, or the maintenance strategy is ineffective",
+        "head_canonical_zh": "资产运行不良、效率低下或维护策略无效",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "corrective and preventative actions required to restore the asset to a functional condition",
+        "tail_canonical_zh": "恢复资产功能状态的纠正和预防措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "a root cause analysis (RCA) should be performed to identify the corrective and preventative actions required to restore the asset to a functional condition",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

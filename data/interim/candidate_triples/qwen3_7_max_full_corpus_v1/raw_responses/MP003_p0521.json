@@ -1,0 +1,97 @@
+{
+  "page_key": "MP003:p0521",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-d135eab6-9f80-9487-a083-78b196df457d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 940,
+    "prompt_tokens": 2569,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3509
+  },
+  "latency_ms": 12140,
+  "attempt": 1,
+  "prompt_sha256": "f925439bf9d9683d08af6f3d55c87ea18e3d9b13ba85329e38dade3db97a94e9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "mechanical joint assembly",
+        "head_canonical_zh": "机械接头组件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Vacuum Test",
+        "tail_canonical_zh": "真空试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Vacuum Test. In order to establish the capability of the mechanical joint assembly to withstand internal pressures below atmospheric, similar to the conditions likely to be encountered under service conditions, the following vacuum test is to be carried out.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical joint test specimen",
+        "head_canonical_zh": "机械接头试件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Repeated Assembly Test",
+        "tail_canonical_zh": "重复装配试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Repeated Assembly Test. The mechanical joint test specimen are to be dismantled and reassembled 10 times in accordance with manufacturer's instructions and then subjected to a tightness test as defined in 4-6-2/5.9.2(e).i.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "valves",
+        "head_canonical_zh": "阀门",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "recognized national standard",
+        "tail_canonical_zh": "公认国家标准",
+        "tail_type": "Standard",
+        "evidence_text": "In general, valves are to comply with a recognized national standard and are to be permanently marked in accordance with the requirements of the standard",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stems, discs or disc faces, seats, and other wearing parts of valves",
+        "head_canonical_zh": "阀杆、阀瓣或阀瓣面、阀座及其他阀门磨损件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "corrosion resistant materials suitable for intended service",
+        "tail_canonical_zh": "适用于预定用途的耐腐蚀材料",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Stems, discs or disc faces, seats, and other wearing parts of valves are to be of corrosion resistant materials suitable for intended service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

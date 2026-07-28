@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0761",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-76a42877-0692-977e-8141-06549ed45d77",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 492,
+    "prompt_tokens": 2393,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2885
+  },
+  "latency_ms": 7112,
+  "attempt": 1,
+  "prompt_sha256": "acac235c9771ccd9eed4d7853342f2ac26904429ded3993b480e6448f1b133df",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Undervoltage protection",
+        "head_canonical_zh": "欠压保护",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "undesired restarting upon restoration of the normal voltage, after a stoppage due to a low voltage condition or voltage failure condition",
+        "tail_canonical_zh": "低电压或电压故障停机后恢复供电时的非预期重启",
+        "tail_type": "Risk",
+        "evidence_text": "Undervoltage protection is to be provided for motors having power rating exceeding 0.5 kW (0.7 hp) to prevent undesired restarting upon restoration of the normal voltage, after a stoppage due to a low voltage condition or voltage failure condition.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive starting current",
+        "head_canonical_zh": "过大启动电流",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "sequential starting",
+        "tail_canonical_zh": "顺序启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means such as sequential starting is to be provided to limit excessive starting current, where necessary.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "page_key": "MP020:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-dbe510c0-4404-9425-b1d5-f5fbc47730ac",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 8732,
+  "attempt": 1,
+  "prompt_sha256": "a299d0289c7d6db1163a2507f48f51b9b74b4908e0a36d61c5d6f4e3df1b7f39",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "drive coupling",
+        "head_canonical_zh": "驱动联轴器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "make sure the drive coupling (if any) is within adjustable limits",
+        "tail_canonical_zh": "确认联轴器在可调范围内",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Before final placement or grouting, make sure the drive coupling (if any) is within adjustable limits.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pipe supports",
+        "head_canonical_zh": "管道支架",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "make provisions for thermal expansion",
+        "tail_canonical_zh": "设置热膨胀补偿措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the system is subject to wide temperature ranges, make provisions for thermal expansion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "piping weights as filled with pumpage",
+        "head_canonical_zh": "充满输送介质的管道重量",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Pipe supports must handle piping weights as filled with pumpage",
+        "tail_canonical_zh": "管道支架必须承受充满介质的管道重量",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Pipe supports must handle piping weights as filled with pumpage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

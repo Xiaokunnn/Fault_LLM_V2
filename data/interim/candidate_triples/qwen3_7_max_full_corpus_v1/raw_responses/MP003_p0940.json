@@ -1,0 +1,79 @@
+{
+  "page_key": "MP003:p0940",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-711def01-5c63-9445-87a1-87eb5780d60e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 768,
+    "prompt_tokens": 2447,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3215
+  },
+  "latency_ms": 9557,
+  "attempt": 1,
+  "prompt_sha256": "e8ed74bd5f2f9745b7947d07ecd1848708f543aa8e00d92ca016309365e0b0fa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "low or the loss of system pressure",
+        "head_canonical_zh": "系统压力低或丧失",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "automatic startup of and changeover to the standby pumps",
+        "tail_canonical_zh": "备用泵自动启动及切换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In the event of detecting low or the loss of system pressure as specified in 4-9-6/23 TABLE 1A through 4-9-6/23 TABLE 3 and 4-9-6/23 TABLE 5A (in “Auto start” column), automatic startup of and changeover to the standby pumps, which are essential to maintain the running of the propulsion machinery, are to be provided.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fault",
+        "head_canonical_zh": "故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "automatically start a standby pump",
+        "tail_canonical_zh": "自动启动备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Safety system is to be designed to take the least drastic action first in response to a fault, and when this fails to avert the situation, to intervene sequentially with more drastic actions. The system is to incorporate ability to automatically start a standby pump, or automatic slowdown or automatic shutdown of propulsion machinery, as applicable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of either power source",
+        "head_canonical_zh": "任一电源失效",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "the power supply status display and the alarm of the failure of either power source are to be provided at the navigating bridge",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

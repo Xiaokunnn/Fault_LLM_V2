@@ -1,0 +1,93 @@
+{
+  "page_key": "MP003:p0510",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-96c6453f-a20d-9fa1-a3f2-3d0e542c833d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 893,
+    "prompt_tokens": 2277,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3170
+  },
+  "latency_ms": 11114,
+  "attempt": 1,
+  "prompt_sha256": "f31ad51569c012121c6c3bd605241cceb52f50e820f4a5c2d14030376c740715",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Taper-thread joints",
+        "head_canonical_zh": "锥螺纹接头",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "hydraulic oil system",
+        "tail_canonical_zh": "液压油系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Taper-thread joints for hydraulic oil system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Straight-thread 'o'-ring joints",
+        "head_canonical_zh": "直螺纹O型圈接头",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "hydraulic oil piping",
+        "tail_canonical_zh": "液压油管路",
+        "tail_type": "Equipment",
+        "evidence_text": "For hydraulic oil piping, straight thread 'o'-ring type fittings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flexible hose assemblies",
+        "head_canonical_zh": "软管组件",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "oil fuel, lubricating, hydraulic and thermal oil systems, fresh water and sea water cooling systems, compressed air systems, bilge and ballast systems, and Class III steam systems",
+        "tail_canonical_zh": "燃油、滑油、液压及热油系统，淡水及海水冷却系统，压缩空气系统，舱底及压载系统，以及III级蒸汽系统",
+        "tail_type": "Equipment",
+        "evidence_text": "Flexible hose assemblies as defined in 4-6-2/5.7.1 are acceptable for use in oil fuel, lubricating, hydraulic and thermal oil systems, fresh water and sea water cooling systems, compressed air systems, bilge and ballast systems, and Class III steam systems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Flexible hoses",
+        "head_canonical_zh": "软管",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "not acceptable in high pressure fuel oil injection systems",
+        "tail_canonical_zh": "禁止用于高压燃油喷射系统",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Flexible hoses are not acceptable in high pressure fuel oil injection systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

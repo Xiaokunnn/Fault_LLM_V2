@@ -1,0 +1,95 @@
+{
+  "page_key": "MP003:p0695",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3c52071a-4bb5-941e-9e73-3bbc5c9f505f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 936,
+    "prompt_tokens": 2541,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3477
+  },
+  "latency_ms": 12050,
+  "attempt": 1,
+  "prompt_sha256": "e9a5a20f594b2c8d6558de0391e29d5570895c0ddd04bc577d9b47b6214d3e15",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Cooling water supply to the refrigerating plant",
+        "head_canonical_zh": "制冷装置冷却水供应",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "at least two circulating pumps",
+        "tail_canonical_zh": "至少两台循环泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Cooling water supply to the refrigerating plant (where required) is to be provided from at least two circulating pumps one of which being used as a stand-by.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cooling water supply to the refrigerating plant",
+        "head_canonical_zh": "制冷装置冷却水供应",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "taken from not less than two sea connections",
+        "tail_canonical_zh": "取自不少于两个海水接口",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Cooling water is to be taken from not less than two sea connections, preferably one port and one starboard.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pipes, fittings, and pipe joints",
+        "head_canonical_zh": "管子、附件和管接头",
+        "head_type": "Component",
+        "relation": "specified_by",
+        "tail_surface": "piping classes to be determined in accordance with in 4-6-1/5",
+        "tail_canonical_zh": "按4-6-1/5确定的管路等级",
+        "tail_type": "Standard",
+        "evidence_text": "Pipes, fittings, and pipe joints are to be designed, fabricated and tested, and to be of materials according to the piping classes to be determined in accordance with in 4-6-1/5.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Safety relief devices",
+        "head_canonical_zh": "安全泄放装置",
+        "tail_surface": "buildup of pressure in excess of the design pressure",
+        "tail_canonical_zh": "压力积聚超过设计压力",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_type": "Cause",
+        "evidence_text": "Safety relief devices are to be provided in each section of pipe that may be isolated by block valves and in which there could be a buildup of pressure in excess of the design pressure of any of the components.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

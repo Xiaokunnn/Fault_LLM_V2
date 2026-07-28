@@ -1,0 +1,182 @@
+{
+  "page_key": "MP022:p0018",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c8a55068-6026-9407-9689-583c0f428b42",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2015,
+    "prompt_tokens": 3082,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5097
+  },
+  "latency_ms": 24190,
+  "attempt": 1,
+  "prompt_sha256": "7d15dc6a6f0842409b53ea0b8560869f758f3ea60d5b7d9aae6cbe393fca2cca",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the direction of rotation of the impeller before operation",
+        "tail_canonical_zh": "运行前检查叶轮旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the direction of rotation of the impeller before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pump casing (29)",
+        "head_canonical_zh": "泵壳",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit pump casing (29) and washers (24a). Fit and tighten cap nuts (24) according to torque values in chapter 6 Technical data",
+        "tail_canonical_zh": "安装泵壳和垫圈并按技术数据章节扭矩值拧紧盖形螺母",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit pump casing (29) and washers (24a). Fit and tighten cap nuts (24) according to torque values in chapter 6 Technical data",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air screw (58)",
+        "head_canonical_zh": "放气螺钉",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit air screw (58) and tighten with a spanner (Torque: see table below)",
+        "tail_canonical_zh": "安装放气螺钉并用扳手按表中扭矩拧紧",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit air screw (58) and tighten with a spanner (Torque: see table below)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "front cover O-ring (59)",
+        "head_canonical_zh": "前盖O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit front cover O-ring (59) and fit and align front cover (60). Fit clamp and tighten screws (57) gently",
+        "tail_canonical_zh": "安装前盖O型圈并对齐前盖，安装卡箍并轻拧螺钉",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit front cover O-ring (59) and fit and align front cover (60). Fit clamp and tighten screws (57) gently",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "recirculations pipe (56)",
+        "head_canonical_zh": "回流管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Fit recirculations pipe (56), align front cover (60) and tighten unions",
+        "tail_canonical_zh": "安装回流管并对齐前盖后拧紧活接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fit recirculations pipe (56), align front cover (60) and tighten unions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "LKH Prime 10",
+        "head_canonical_zh": "LKH Prime 10泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "Torque = 20 Nm (15 lbf-ft)",
+        "tail_canonical_zh": "扭矩20Nm(15lbf-ft)",
+        "tail_type": "Standard",
+        "evidence_text": "Torque = 20 Nm (15 lbf-ft)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0018:t00:r000:c00",
+          "MP022:p0018:t00:r000:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "LKH Prime 20",
+        "head_canonical_zh": "LKH Prime 20泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "Torque = 40 Nm (30 lbf-ft)",
+        "tail_canonical_zh": "扭矩40Nm(30lbf-ft)",
+        "tail_type": "Standard",
+        "evidence_text": "Torque = 40 Nm (30 lbf-ft)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0018:t00:r001:c00",
+          "MP022:p0018:t00:r001:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "LKH Prime 40",
+        "head_canonical_zh": "LKH Prime 40泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "Torque = 40 Nm (30 lbf-ft)",
+        "tail_canonical_zh": "扭矩40Nm(30lbf-ft)",
+        "tail_type": "Standard",
+        "evidence_text": "Torque = 40 Nm (30 lbf-ft)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP022:p0018:t00:r001:c00",
+          "MP022:p0018:t00:r001:c01"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

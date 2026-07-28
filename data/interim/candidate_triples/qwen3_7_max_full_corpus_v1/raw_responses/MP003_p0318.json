@@ -1,0 +1,288 @@
+{
+  "page_key": "MP003:p0318",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-05e11809-e7c6-9cd7-8eb6-48768174962d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3004,
+    "prompt_tokens": 21129,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 24133
+  },
+  "latency_ms": 38432,
+  "attempt": 1,
+  "prompt_sha256": "c5a2aae8f1d2fbbea0124da31a5be306637c0e97199969316335232ecacb38f0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Bearing Temperature",
+        "head_canonical_zh": "轴承温度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高温报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Bearing Temperature OL & CL High x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r005:c00",
+          "MP003:p0318:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wear Down(3)",
+        "head_canonical_zh": "磨损量",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高磨损报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Wear Down(3) OL & CL High x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r008:c00",
+          "MP003:p0318:t00:r008:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Diff. Pressure\n(Filter)",
+        "head_canonical_zh": "滤器压差",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高压差报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Diff. Pressure\n(Filter) OL & CL High x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r003:c00",
+          "MP003:p0318:t00:r003:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Tank Level",
+        "head_canonical_zh": "液位",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "Low",
+        "tail_canonical_zh": "低液位报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Tank Level CL Low x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r009:c00",
+          "MP003:p0318:t00:r009:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Failure",
+        "tail_canonical_zh": "泵故障报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Pump OL & CL Failure x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r011:c00",
+          "MP003:p0318:t00:r011:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "mechanical_seal_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Power Circuit",
+        "head_canonical_zh": "电源电路",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "Failure",
+        "tail_canonical_zh": "电源故障报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Power Circuit OL & CL Failure x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r012:c00",
+          "MP003:p0318:t00:r012:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Water filtration\nSystem",
+        "head_canonical_zh": "水过滤系统",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Failure",
+        "tail_canonical_zh": "过滤系统故障报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Water filtration\nSystem OL & CL Failure x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r010:c00",
+          "MP003:p0318:t00:r010:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Salinity",
+        "head_canonical_zh": "盐度",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "High",
+        "tail_canonical_zh": "高盐度报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Salinity CL High x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0318:t00:r007:c00",
+          "MP003:p0318:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water lubricating stern tube system",
+        "head_canonical_zh": "水润滑尾管系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Instruments for monitoring",
+        "tail_canonical_zh": "监测仪表",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Instruments for monitoring the water lubricating stern tube system are to be provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "alarms",
+        "head_canonical_zh": "报警",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "provisions for testing alarms",
+        "tail_canonical_zh": "报警测试规定",
+        "tail_type": "InspectionAction",
+        "evidence_text": "There are to be provisions for testing alarms",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water lubricating stern tube system",
+        "head_canonical_zh": "水润滑尾管系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Sampling and testing procedures",
+        "tail_canonical_zh": "取样和测试程序",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Sampling and testing procedures are to be available on board",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water filtration system",
+        "head_canonical_zh": "水过滤系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "sampling point is to be provided after the water filtration system for periodical testing",
+        "tail_canonical_zh": "过滤器后定期测试取样点",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "A sampling point is to be provided after the water filtration system for periodical testing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "closed loop systems",
+        "head_canonical_zh": "闭式循环系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "additional sampling system is to be provided in the return lubricant line, after bearing lubrication",
+        "tail_canonical_zh": "轴承润滑后回油管路附加取样系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For closed loop systems, an additional sampling system is to be provided in the return lubricant line, after bearing lubrication",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "page_key": "MP016:p0042",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-17244815-3e11-9f55-b8ee-3d915265367c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 4310,
+    "prompt_tokens": 6449,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10759
+  },
+  "latency_ms": 52068,
+  "attempt": 1,
+  "prompt_sha256": "83ec02924ad7f2c6e8190b59f6dcaac01cafe7a0f1936cdc03f8fe5071b1c304",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pumparna",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "visuell inspektion dagligen",
+        "tail_canonical_zh": "每日目视检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Genom att säkerställa visuell inspektion dagligen och regel- bundna kontroller vid planerade intervall kan pumparna fortsätta leverera maximal prestanda under många år.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumparna",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "regelbundna kontroller vid planerade intervall",
+        "tail_canonical_zh": "定期计划间隔检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Genom att säkerställa visuell inspektion dagligen och regel- bundna kontroller vid planerade intervall kan pumparna fortsätta leverera maximal prestanda under många år.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumpen",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "manuell rengöring",
+        "tail_canonical_zh": "手动清洁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "För att rengöra pumpen måste den demonteras för manuell rengöring som en del av proceduren för rengöring av hela systemet.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumpen",
+        "head_canonical_zh": "柔性叶轮泵",
+        "head_type": "Equipment",
+        "relation": "prevented_by",
+        "tail_surface": "Använd inte jod- eller fosforbaserade rengöringsmedel",
+        "tail_canonical_zh": "不使用碘基或磷基清洁剂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Använd inte jod- eller fosforbaserade rengöringsmedel, eftersom dessa kommer angripa pumpen och försämra dess prestanda.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "jod- eller fosforbaserade rengöringsmedel",
+        "head_canonical_zh": "碘基或磷基清洁剂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "angripa pumpen och försämra dess prestanda",
+        "tail_canonical_zh": "腐蚀泵体并降低性能",
+        "tail_type": "FaultMode",
+        "evidence_text": "Använd inte jod- eller fosforbaserade rengöringsmedel, eftersom dessa kommer angripa pumpen och försämra dess prestanda.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pumphuvudets komponenter",
+        "head_canonical_zh": "泵头组件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspekterar ... regelbundet",
+        "tail_canonical_zh": "定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Det rekommenderas dock att man inspekterar pumphuvu- dets komponenter (särskilt tätningar och fogar) regelbundet, så att de kan rengöras eller bytas ut innan de tas i drift.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tätningar och fogar",
+        "head_canonical_zh": "密封件和接合面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "inspekterar ... regelbundet",
+        "tail_canonical_zh": "定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Det rekommenderas dock att man inspekterar pumphuvu- dets komponenter (särskilt tätningar och fogar) regelbundet, så att de kan rengöras eller bytas ut innan de tas i drift.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impellern",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera impellern för tecken på slitage eller skador",
+        "tail_canonical_zh": "检查叶轮磨损或损坏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera impellern för tecken på slitage eller skador, byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "slitplattan",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera slitageplåten för slitage eller skador",
+        "tail_canonical_zh": "检查耐磨板磨损或损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera slitageplåten för slitage eller skador. Slitplattan kan innehålla statisk tätningsyta eller ha polerad yta för försegling,",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "den dynamiska tätningsytan",
+        "head_canonical_zh": "动密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspektera komponenterna för slitage",
+        "tail_canonical_zh": "检查组件磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Skjut den dynamiska tätningsytan från axeln. Inspektera komponenterna för slitage och byt ut dem vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Tätningar",
+        "head_canonical_zh": "静密封件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspektera tätningen med avseende på slitage",
+        "tail_canonical_zh": "检查密封件磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tätningar kan försiktigt dras ut ur kroppens urtag. Inspektera tätningen med avseende på slitage och byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "läpptätningarna",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Kontrollera om läpptätningarna är skadade",
+        "tail_canonical_zh": "检查唇形密封是否损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Kontrollera om läpptätningarna är skadade och byt ut dem vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "o-ringen",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "kontrollera för slitage",
+        "tail_canonical_zh": "检查磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Ta bort o-ringen, kontrollera för slitage och byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impellern",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kontrollera impellern för tecken på slitage eller skador, byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "slitplattan",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kontrollera slitageplåten för slitage eller skador. Slitplattan kan innehålla statisk tätningsyta eller ha polerad yta för försegling,",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "komponenterna",
+        "head_canonical_zh": "动密封组件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut dem vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Skjut den dynamiska tätningsytan från axeln. Inspektera komponenterna för slitage och byt ut dem vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tätningen",
+        "head_canonical_zh": "静密封件",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Tätningar kan försiktigt dras ut ur kroppens urtag. Inspektera tätningen med avseende på slitage och byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "läpptätningarna",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut dem vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Kontrollera om läpptätningarna är skadade och byt ut dem vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "o-ringen",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "byt ut vid behov",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ta bort o-ringen, kontrollera för slitage och byt ut vid behov.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

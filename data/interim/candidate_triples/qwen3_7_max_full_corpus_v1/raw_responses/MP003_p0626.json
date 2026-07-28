@@ -1,0 +1,154 @@
+{
+  "page_key": "MP003:p0626",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-542ad459-19e2-9076-961f-67e66496f0ac",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1644,
+    "prompt_tokens": 2392,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4036
+  },
+  "latency_ms": 20541,
+  "attempt": 1,
+  "prompt_sha256": "26a3f86f5f52d871fc12365ee98b51a9e87d98f86c117487b4b751e56cab608d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "steam supply to an astern turbine",
+        "head_canonical_zh": "倒车汽轮机蒸汽供应",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "guarding valve",
+        "tail_canonical_zh": "防护阀",
+        "tail_type": "Component",
+        "evidence_text": "This does not prevent the use of a guarding valve in the steam supply line to the astern turbine if this valve is operable from the same location as the ahead and astern control valves location.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pressure and temperature of the steam will not exceed those which the turbines and condenser can safely withstand",
+        "head_canonical_zh": "蒸汽压力和温度不超过安全限值",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Adequate arrangements and controls",
+        "tail_canonical_zh": "充分的布置和控制措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adequate arrangements and controls are to be provided for these operating conditions so that the pressure and temperature of the steam will not exceed those which the turbines and condenser can safely withstand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "all combinations of pipes and valves",
+        "head_canonical_zh": "所有管路和阀门组合",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "fit up test",
+        "tail_canonical_zh": "装配试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A fit up test of all combinations of pipes and valves is to be performed prior to the first sea trials.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "operation of the turbines under emergency conditions",
+        "head_canonical_zh": "应急工况下汽轮机运行",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "assessed for the potential influence on shaft alignment and gear teeth loading conditions",
+        "tail_canonical_zh": "评估对轴系对中和齿轮齿载荷的潜在影响",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The operation of the turbines under emergency conditions is to be assessed for the potential influence on shaft alignment and gear teeth loading conditions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "steam piping",
+        "head_canonical_zh": "蒸汽管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "reducing valve, relief valve and pressure gauge",
+        "tail_canonical_zh": "减压阀、安全阀和压力表",
+        "tail_type": "Component",
+        "evidence_text": "Where steam piping may receive steam from any source at higher pressure than that for which it is designed, or where auxiliary steam piping is not designed to withstand boiler pressure, a suitable reducing valve, relief valve and pressure gauge are to be fitted.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive pressure",
+        "head_canonical_zh": "超压",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "safety valve installed is to have sufficient discharge capacity",
+        "tail_canonical_zh": "安装的安全阀具有足够排放能力",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The safety valve installed is to have sufficient discharge capacity to protect the piping against excessive pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "blow-off pipes of two or more boilers are connected to a common discharge",
+        "head_canonical_zh": "多台锅炉排污管连接至公共排放口",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "non-return valve is to be provided in the piping from each boiler",
+        "tail_canonical_zh": "每台锅炉管路中设置止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where blow-off pipes of two or more boilers are connected to a common discharge, a non-return valve is to be provided in the piping from each boiler.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "page_key": "MP005:p0024",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4f9d337f-8c15-9246-af14-422c5c4edf65",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1618,
+    "prompt_tokens": 17319,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 18937
+  },
+  "latency_ms": 20690,
+  "attempt": 1,
+  "prompt_sha256": "459f7ddf273a947939af8577db1e45f33469ff6e9e0334f8979f92dcbd0869c6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pumping liquids with a higher density and/or viscosity than water",
+        "head_canonical_zh": "输送高密度或高粘度液体",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "overloading of the pump shaft and the motor",
+        "tail_canonical_zh": "泵轴和电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "pumping liquids with a higher density and/or viscosity than water require more torque from pump shaft and more mechanical power from the electric motor. This could cause overloading of the pump shaft and the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overloading of the pump shaft and the motor",
+        "head_canonical_zh": "泵轴和电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Contact your supplier for advice",
+        "tail_canonical_zh": "联系供应商咨询",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This could cause overloading of the pump shaft and the motor. Contact your supplier for advice, if needed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "NSL80-215",
+        "head_canonical_zh": "NSL80-215泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "∑F 1500",
+        "tail_canonical_zh": "法兰允许合力1500N",
+        "tail_type": "Standard",
+        "evidence_text": "NSL80-215\nNSL80-265\nNSL80-330 ... 1500",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0024:t01:r001:c00",
+          "MP005:p0024:t01:r001:c04"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "NSL100-215",
+        "head_canonical_zh": "NSL100-215泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "∑F 2000",
+        "tail_canonical_zh": "法兰允许合力2000N",
+        "tail_type": "Standard",
+        "evidence_text": "NSL100-215\nNSL100-265\nNSL100-330\nNSL100-415 ... 2000",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0024:t01:r002:c00",
+          "MP005:p0024:t01:r002:c04"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "NSL125-215",
+        "head_canonical_zh": "NSL125-215泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "∑F 2500",
+        "tail_canonical_zh": "法兰允许合力2500N",
+        "tail_type": "Standard",
+        "evidence_text": "NSL125-215\nNSL125-265\nNSL125-330\nNSL125-415 ... 2500",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0024:t01:r003:c00",
+          "MP005:p0024:t01:r003:c04"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "NSL150-215",
+        "head_canonical_zh": "NSL150-215泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "∑F 2950",
+        "tail_canonical_zh": "法兰允许合力2950N",
+        "tail_type": "Standard",
+        "evidence_text": "NSL150-215\nNSL150-265\nNSL150-330\nNSL150-415 ... 2950",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0024:t01:r004:c00",
+          "MP005:p0024:t01:r004:c04"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

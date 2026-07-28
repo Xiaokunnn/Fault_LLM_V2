@@ -1,0 +1,99 @@
+{
+  "page_key": "MP003:p0643",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-329c615c-8bfd-9fae-851b-8576b50c6307",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 949,
+    "prompt_tokens": 2436,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3385
+  },
+  "latency_ms": 11289,
+  "attempt": 1,
+  "prompt_sha256": "d29ce26f0fee3a1525871294dd1ef39f69c3d6475c57dde901970343198c2d3a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "over-pressure",
+        "head_canonical_zh": "超压",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Means are to be provided to prevent over-pressure in any part of the pneumatic system",
+        "tail_canonical_zh": "设置防超压措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are to be provided to prevent over-pressure in any part of the pneumatic system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "dangerous over-pressure",
+        "head_canonical_zh": "危险超压",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "leakage into them from air pressure parts",
+        "tail_canonical_zh": "空气压力部件泄漏进入水套或壳体",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "water jackets or casing of air compressors and coolers which may be subjected to dangerous over-pressure due to leakage into them from air pressure parts",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "entry of oil or water into the compressed air system",
+        "head_canonical_zh": "油或水进入压缩空气系统",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Provisions are to be made to minimize the entry of oil or water into the compressed air system",
+        "tail_canonical_zh": "采取措施减少油水进入压缩空气系统",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Provisions are to be made to minimize the entry of oil or water into the compressed air system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "entry of oil or water into the compressed air system",
+        "head_canonical_zh": "油或水进入压缩空气系统",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Suitable separation and drainage arrangements are to be provided before the air enters the reservoirs",
+        "tail_canonical_zh": "在空气进入储气瓶前设置适当的分离和排放装置",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Suitable separation and drainage arrangements are to be provided before the air enters the reservoirs.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      }
+    ],
+    "warnings": []
+  }
+}

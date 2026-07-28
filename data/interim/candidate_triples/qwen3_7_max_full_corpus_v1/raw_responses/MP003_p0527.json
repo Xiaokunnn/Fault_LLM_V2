@@ -1,0 +1,98 @@
+{
+  "page_key": "MP003:p0527",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-611054d4-5186-9f3e-a8cc-989579ddb270",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 918,
+    "prompt_tokens": 2457,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3375
+  },
+  "latency_ms": 11214,
+  "attempt": 1,
+  "prompt_sha256": "12aaca8def2579869055d5cf24970fd7096d1241f6296cefde9c6abaceac6ceb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "dangerous build-up of static charges",
+        "head_canonical_zh": "静电荷危险积聚",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "earthed (grounded) to the hull",
+        "tail_canonical_zh": "接地至船体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to prevent dangerous build-up of static charges resulting from the flow of fluid in piping, the following items are to be earthed (grounded) to the hull",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "strainer plates",
+        "head_canonical_zh": "滤器板",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "clearing the strainer plates, such as by using compressed air or low pressure steam",
+        "tail_canonical_zh": "使用压缩空气或低压蒸汽清理滤器板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Means are provided for clearing the strainer plates, such as by using compressed air or low pressure steam",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "blanking off the suction",
+        "head_canonical_zh": "吸口堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Located in positions where the possibility of blanking off the suction is minimized",
+        "tail_canonical_zh": "安装在吸口堵塞可能性最小的位置",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Located in positions where the possibility of blanking off the suction is minimized",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Power-operated valves",
+        "head_canonical_zh": "动力操作阀",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "arranged for manual operation in the event of a failure of the power supply",
+        "tail_canonical_zh": "布置为在动力供应故障时可手动操作",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Power-operated valves are to be arranged for manual operation in the event of a failure of the power supply",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

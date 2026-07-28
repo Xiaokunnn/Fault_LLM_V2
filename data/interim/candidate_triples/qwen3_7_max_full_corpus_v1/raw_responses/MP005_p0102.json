@@ -1,0 +1,177 @@
+{
+  "page_key": "MP005:p0102",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-db33197b-2533-90ed-a7d8-7e2c7da9bb66",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1786,
+    "prompt_tokens": 14989,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 16775
+  },
+  "latency_ms": 21993,
+  "attempt": 1,
+  "prompt_sha256": "8d880f5e5a0251d3941a9b00261b538c412de08852535166378d09e04888f55b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "O-ring",
+        "head_canonical_zh": "O型圈",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check the material of the O-ring first",
+        "tail_canonical_zh": "检查O型圈材料",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When placing the O-ring, check the material of the O-ring first.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mineral grease",
+        "head_canonical_zh": "矿物润滑脂",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "EPDM which will be damaged by mineral grease",
+        "tail_canonical_zh": "EPDM被矿物润滑脂损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "it might be EPDM which will be damaged by mineral grease",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "EPDM which will be damaged by mineral grease",
+        "head_canonical_zh": "EPDM被矿物润滑脂损坏",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Use soft soap or silicone grease for EPDM",
+        "tail_canonical_zh": "对EPDM使用软皂或硅脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "EPDM which will be damaged by mineral grease. Use soft soap or silicone grease for EPDM.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the shaft rotates freely",
+        "tail_canonical_zh": "检查泵轴转动是否灵活",
+        "tail_type": "InspectionAction",
+        "evidence_text": "When the pump has been assembled, check that the shaft rotates freely.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "tap the shaft towards the shaft end of the electric motor by means of a plastic hammer",
+        "tail_canonical_zh": "用塑料锤向电机轴端敲击泵轴",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "tap the shaft towards the shaft end of the electric motor by means of a plastic hammer",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pointed screws",
+        "head_canonical_zh": "紧定螺钉",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fasten the pointed screws (first the middle screw) according to the below table",
+        "tail_canonical_zh": "按表紧固紧定螺钉（先紧中间螺钉）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "fasten the pointed screws (first the middle screw) according to the below table",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wobble",
+        "head_canonical_zh": "晃动量",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the wobble, measured as close to the shaft end as possible, is within the limits indicated in the table",
+        "tail_canonical_zh": "检查尽可能靠近轴端测量的晃动量是否在表中限值内",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the wobble, measured as close to the shaft end as possible, is within the limits indicated in the table.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Max. wobble",
+        "head_canonical_zh": "最大晃动量",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "70 μm",
+        "tail_canonical_zh": "70微米",
+        "tail_type": "Standard",
+        "evidence_text": "Max. wobble 70 μm",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0102:t02:r002:c07"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "page_key": "MP003:p0959",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-98404ca7-5273-9b79-beee-f04cfa5eee32",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 5897,
+    "prompt_tokens": 33356,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 39253
+  },
+  "latency_ms": 35557,
+  "attempt": 1,
+  "prompt_sha256": "d595a9beac74473839bf2170432671d659c4bd6f1648c7c8e0e968c332b25936",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Turbocharger oil inlet pressure - low",
+        "head_canonical_zh": "涡轮增压器滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Turbocharger oil inlet\npressure - low x Unless provided with a self-contained\nlubricating oil system integrated with the\nturbocharger",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r001:c02",
+          "MP003:p0959:t00:r001:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Turbocharger oil outlet temp., each bearing, - high",
+        "head_canonical_zh": "涡轮增压器各轴承滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Turbocharger oil outlet\ntemp., each bearing, - high x Where outlet temperature from each\nbearing cannot be monitored due to the\nengine/ turbocharger design, alternative\narrangements may be accepted.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r002:c02",
+          "MP003:p0959:t00:r002:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Turbocharger oil outlet temp., each bearing, - high",
+        "head_canonical_zh": "涡轮增压器各轴承滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "specific intervals for bearing inspection in accordance with the turbocharger manufacturer’s instructions",
+        "tail_canonical_zh": "按制造商说明进行轴承定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Continuous monitoring of inlet pressure\nand inlet temperature in combination with\nspecific intervals for bearing inspection\nin accordance with the turbocharger\nmanufacturer’s instructions may be\naccepted as an alternative.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r002:c07"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Speed of turbocharger",
+        "head_canonical_zh": "涡轮增压器转速",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Speed of turbocharger x Alarm Activation for High Speed only\nrequired for turbochargers of categories B\nand C.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r003:c02",
+          "MP003:p0959:t00:r003:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Over speed",
+        "head_canonical_zh": "超速",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Over speed x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r004:c02",
+          "MP003:p0959:t00:r004:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Over speed",
+        "head_canonical_zh": "超速",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Over speed x          x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r004:c02",
+          "MP003:p0959:t00:r004:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pressure or flow – low",
+        "head_canonical_zh": "燃油压力或流量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pressure or flow – low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r008:c02",
+          "MP003:p0959:t00:r008:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature – high and low (or viscosity – low and high)",
+        "head_canonical_zh": "燃油温度过高或过低（或粘度过低或过高）",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Temperature – high and\nlow (or viscosity – low\nand high) x x For heavy fuel oil.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r009:c02",
+          "MP003:p0959:t00:r009:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Inlet pressure – low",
+        "head_canonical_zh": "滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Inlet pressure – low x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r010:c02",
+          "MP003:p0959:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Inlet pressure – low",
+        "head_canonical_zh": "滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Start",
+        "tail_canonical_zh": "自动启动备用泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Inlet pressure – low x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r010:c02",
+          "MP003:p0959:t00:r010:c05"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Inlet pressure – low",
+        "head_canonical_zh": "滑油进口压力低",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Inlet pressure – low x x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r010:c02",
+          "MP003:p0959:t00:r010:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Inlet temperature – high",
+        "head_canonical_zh": "滑油进口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Inlet temperature – high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r011:c02",
+          "MP003:p0959:t00:r011:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Bearing temp. or bearing oil outlet temp. – high",
+        "head_canonical_zh": "轴承温度或轴承滑油出口温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Bearing temp. or bearing\noil outlet temp. – high x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r012:c02",
+          "MP003:p0959:t00:r012:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Filter differential pressure – high",
+        "head_canonical_zh": "滤器压差高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Filter differential pressure\n– high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r013:c02",
+          "MP003:p0959:t00:r013:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Tank level – low",
+        "head_canonical_zh": "滑油柜液位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Tank level – low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r014:c02",
+          "MP003:p0959:t00:r014:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Pressure or flow – low",
+        "head_canonical_zh": "冷却介质压力或流量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Pressure or flow – low x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r015:c02",
+          "MP003:p0959:t00:r015:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature – high",
+        "head_canonical_zh": "冷却介质温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Temperature – high x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r016:c02",
+          "MP003:p0959:t00:r016:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stored starting energy level – low",
+        "head_canonical_zh": "起动储能水平低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Stored starting energy\nlevel – low x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r017:c02",
+          "MP003:p0959:t00:r017:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ignition failure",
+        "head_canonical_zh": "点火失败",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ignition failure x        x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r018:c02",
+          "MP003:p0959:t00:r018:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Ignition failure",
+        "head_canonical_zh": "点火失败",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ignition failure x        x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r018:c02",
+          "MP003:p0959:t00:r018:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Combustion or flame failure",
+        "head_canonical_zh": "燃烧或熄火故障",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Combustion or flame\nfailure x  x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r019:c02",
+          "MP003:p0959:t00:r019:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Combustion or flame failure",
+        "head_canonical_zh": "燃烧或熄火故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Combustion or flame\nfailure x  x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r019:c02",
+          "MP003:p0959:t00:r019:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature – high",
+        "head_canonical_zh": "排气温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A",
+        "tail_canonical_zh": "报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Temperature – high x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r020:c02",
+          "MP003:p0959:t00:r020:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Temperature – high",
+        "head_canonical_zh": "排气温度高",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Auto Shut down",
+        "tail_canonical_zh": "自动停车",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Temperature – high x x x",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0959:t00:r020:c02",
+          "MP003:p0959:t00:r020:c06"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

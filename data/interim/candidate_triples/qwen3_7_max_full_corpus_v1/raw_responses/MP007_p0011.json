@@ -1,0 +1,95 @@
+{
+  "page_key": "MP007:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-2ee26bd5-2210-9b3b-b9f0-1b139c2cdb26",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 861,
+    "prompt_tokens": 6876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7737
+  },
+  "latency_ms": 10917,
+  "attempt": 1,
+  "prompt_sha256": "b47cf881c24aa09f7ef2b90870bbb233ff71ca51c14a5843344821d4a2853e67",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "noise made by the pump",
+        "head_canonical_zh": "泵噪声",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "install expansion joints at both sides of the pump",
+        "tail_canonical_zh": "在泵两侧安装膨胀节",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "In order to minimize any noise made by the\npump, we suggest that you install expansion\njoints at both sides of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "backflow of medium",
+        "head_canonical_zh": "介质倒流",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use a check valve",
+        "tail_canonical_zh": "使用止回阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Use a check\nvalve to prevent backflow of medium and to\nprotect the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air lock",
+        "head_canonical_zh": "气锁",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Install pipes to avoid air lock",
+        "tail_canonical_zh": "安装管道以避免气锁",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Install pipes to avoid air lock, especially at\nthe inlet side of the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Install isolating valves at both ends of the pump",
+        "tail_canonical_zh": "在泵两端安装隔离阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Install isolating valves at both ends of the\npump so as to avoid system discharge when\nit is necessary for pump cleaning,\nmaintenance and replacement.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

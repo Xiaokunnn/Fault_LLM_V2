@@ -1,0 +1,80 @@
+{
+  "page_key": "MP003:p0790",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0118046b-4bfd-9efc-a101-a5da78bea09a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 964,
+    "prompt_tokens": 6359,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 7323
+  },
+  "latency_ms": 13916,
+  "attempt": 1,
+  "prompt_sha256": "dc01ea079e08e010d18a63840ab0f2c879387891e8127566f0063b0278b709ec",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "insulation resistance",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Insulation Resistance Measurement",
+        "tail_canonical_zh": "绝缘电阻测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "5.11.2 Insulation Resistance Measurement\n                 The insulation resistance between current-carrying parts and earth and between current-carrying\n                 parts of opposite polarity is to be measured at a DC voltage of not less than 500 V before and after\n                 the dielectric strength tests.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dielectric strength of the insulation",
+        "head_canonical_zh": "绝缘介电强度",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Dielectric Strength Test",
+        "tail_canonical_zh": "介电强度试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "5.11.3 Dielectric Strength Test\n                 The dielectric strength of the insulation is to be tested for 60 seconds by an AC voltage applied",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Switchboards and associated motor control centers and distribution board, motor controllers of\n                 100 kW and over, battery charger units of 25 kW and over, uninterruptible power system (UPS)\n                 units of 50 KVA and over",
+        "head_canonical_zh": "配电板及相关电机控制中心、100kW及以上电机控制器、25kW及以上电池充电装置、50kVA及以上不间断电源装置",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "inspected\n                 by, tested in the presence of and certified by the Surveyor",
+        "tail_canonical_zh": "验船师检验、在场试验及认证",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Switchboards and associated motor control centers and distribution board, motor controllers of\n                 100 kW and over, battery charger units of 25 kW and over, uninterruptible power system (UPS)\n                 units of 50 KVA and over, and distribution boards [associated with the charging and discharging\n                 of the battery system or unnterruptible power system (UPS)], where required for essential services\n                 (see 4-8-1/7.3.3), and services indicated in 4-8-3/15 TABLE 7, transitional source of power (see\n                 4-8-2/5.11) and for distribution of emergency source of power (see 4-8-2/5), are to be inspected\n                 by, tested in the presence of and certified by the Surveyor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "page_key": "MP022:p0016",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8f2d203f-0c11-9984-b716-1ab272ea70c0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1701,
+    "prompt_tokens": 2074,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3775
+  },
+  "latency_ms": 19415,
+  "attempt": 1,
+  "prompt_sha256": "8b52e212f5d9bdad177d20736fa549366d043bbe4ef748cd84528ba50deb73ef",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "LKH Prime",
+        "head_canonical_zh": "LKH Prime自吸离心泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pre-use check",
+        "tail_canonical_zh": "使用前检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always check the pump before operation.\n       - See pre-use check in section 3.3 Pre-use check",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air entrapments",
+        "head_canonical_zh": "空气滞留",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Design suction line with slope down toward the pump",
+        "tail_canonical_zh": "吸入管路设计为向泵倾斜下坡",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Design suction line with slope down toward the pump to avoid air entrapments",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Air inclusions",
+        "head_canonical_zh": "气体夹杂",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Controlled start/stop of pump eg. Level Switch (LS)",
+        "tail_canonical_zh": "通过液位开关等控制泵的启停",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Air inclusions - Controlled start/stop of pump eg. Level Switch (LS)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Air inclusions",
+        "head_canonical_zh": "气体夹杂",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Do not start the LKH Prime before tank bottom is liquid filled",
+        "tail_canonical_zh": "罐底未充满液体前不启动LKH Prime",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Do not start the LKH Prime before tank bottom is liquid filled",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Air inclusions",
+        "head_canonical_zh": "气体夹杂",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Stop the LKH Prime during phase changes",
+        "tail_canonical_zh": "相变期间停止LKH Prime",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "- Stop the LKH Prime during phase changes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "effective air evacuation",
+        "head_canonical_zh": "有效排气",
+        "head_type": "OperatingCondition",
+        "relation": "operates_under",
+        "tail_surface": "Minimum speed for effective air evacuation is 2800 RPM",
+        "tail_canonical_zh": "有效排气最低转速2800 RPM",
+        "tail_type": "Standard",
+        "evidence_text": "Minimum speed for effective air evacuation is 2800 RPM",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Air evacuation ability",
+        "head_canonical_zh": "排气能力",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "higher speed",
+        "tail_canonical_zh": "更高转速",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Air evacuation ability improves with higher speed (Max speed 3600 RPM)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Check valve",
+        "head_canonical_zh": "止回阀",
+        "tail_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Replace check valve with automated valve if possible",
+        "tail_canonical_zh": "尽可能用自动阀替换止回阀",
+        "head_type": "Component",
+        "evidence_text": "- Replace check valve with automated valve if possible",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "page_key": "MP003:p0781",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-78e47367-9665-9753-b4d9-3d1b4cc2774d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2343,
+    "prompt_tokens": 7928,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10271
+  },
+  "latency_ms": 27184,
+  "attempt": 1,
+  "prompt_sha256": "b43274089323a1cce7c828b3911fc4ecb9785435926081d667e954a27bf99cf9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "insulation resistance",
+        "head_canonical_zh": "绝缘电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "measured close to the operating temperature",
+        "tail_canonical_zh": "在接近运行温度时测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The insulation resistance is to be measured close to the operating temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "resistance of the machine winding",
+        "head_canonical_zh": "电机绕组电阻",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "bridge method or voltage and current method",
+        "tail_canonical_zh": "电桥法或电压电流法",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The resistance of the machine winding is to be measured and recorded, using an appropriate bridge method or voltage and current method.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "automatic voltage regulation system",
+        "head_canonical_zh": "自动电压调节系统",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Tests are to be conducted on generators to verify that the automatic voltage regulation system is capable of achieving the performance described in 4-8-3/3.13.2",
+        "tail_canonical_zh": "发电机测试验证自动电压调节系统性能",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tests are to be conducted on generators to verify that the automatic voltage regulation system is capable of achieving the performance described in 4-8-3/3.13.2",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "temperature rises",
+        "head_canonical_zh": "温升",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "measured after running at the output, voltage, frequency and duty for which the machine is rated",
+        "tail_canonical_zh": "在额定工况运行后测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The temperature rises are to be measured after running at the output, voltage, frequency and duty for which the machine is rated.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "overload and over-current capabilities",
+        "head_canonical_zh": "过载和过流能力",
+        "head_type": "SignalFeature",
+        "relation": "inspected_by",
+        "tail_surface": "Tests are to be conducted on generators and motors to demonstrate that their overload and over-current capabilities are as described in 4-8-3/3.7",
+        "tail_canonical_zh": "发电机和电机过载过流能力测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tests are to be conducted on generators and motors to demonstrate that their overload and over-current capabilities are as described in 4-8-3/3.7",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "generator and its automatic voltage regulation system",
+        "head_canonical_zh": "发电机及其自动电压调节系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "sustaining without damage, under steady-state short-circuit condition, a current of three times the rated current for 2 seconds",
+        "tail_canonical_zh": "稳态短路条件下承受3倍额定电流2秒无损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Tests are to be conducted on AC generators to demonstrate that the generator and its automatic voltage regulation system are capable of sustaining without damage, under steady-state short-circuit condition, a current of three times the rated current for 2 seconds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "AC generators",
+        "head_canonical_zh": "交流发电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "withstand without damage a test run at 1.2 times the rated speed for at least 2 minutes",
+        "tail_canonical_zh": "1.2倍额定转速超速试验至少2分钟无损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "AC generators and, where specified and agree upon between purchaser and manufacturer, AC motors are to withstand without damage a test run at 1.2 times the rated speed for at least 2 minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Generators",
+        "head_canonical_zh": "直流发电机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "1.2 times the rated speed",
+        "tail_canonical_zh": "1.2倍额定转速",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Generators 1.2 times the rated speed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0781:t01:r001:c01",
+          "MP003:p0781:t01:r001:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Shunt-wounded and separately excited motors",
+        "head_canonical_zh": "并励和他励直流电动机",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "1.2 times the highest rated speed, or 1.15 times the corresponding no-load speed, whichever is the greater",
+        "tail_canonical_zh": "1.2倍最高额定转速或1.15倍空载转速取大者",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Shunt-wounded and separately excited motors 1.2 times the highest rated speed, or 1.15 times the corresponding no-load speed, whichever is the greater",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0781:t01:r002:c01",
+          "MP003:p0781:t01:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

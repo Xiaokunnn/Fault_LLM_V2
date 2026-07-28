@@ -1,0 +1,61 @@
+{
+  "page_key": "MP003:p0783",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-49db0c2d-4a52-9ce5-8511-642b0a5a1032",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 476,
+    "prompt_tokens": 2426,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2902
+  },
+  "latency_ms": 7347,
+  "attempt": 1,
+  "prompt_sha256": "04a2286db7f20b2fb30fad8b9a1de55b7bf8066643ec78752ad5d3ab4995e0f0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "sleeve bearings",
+        "head_canonical_zh": "滑动轴承",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "machines having sleeve bearings are to be opened to establish that the shaft is properly seated in the bearings",
+        "tail_canonical_zh": "打开机器检查轴在轴承中是否正确就位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "machines having sleeve bearings are to be opened to establish that the shaft is properly seated in the bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft is properly seated in the bearings",
+        "head_canonical_zh": "轴在轴承中正确就位",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "machines having sleeve bearings are to be opened",
+        "tail_canonical_zh": "打开装有滑动轴承的机器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "machines having sleeve bearings are to be opened to establish that the shaft is properly seated in the bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

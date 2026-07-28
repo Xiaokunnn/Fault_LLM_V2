@@ -1,0 +1,180 @@
+{
+  "page_key": "MP006:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-4b37beab-bc10-95d2-a3b9-75a9563b3134",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1868,
+    "prompt_tokens": 2058,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3926
+  },
+  "latency_ms": 22866,
+  "attempt": 1,
+  "prompt_sha256": "4f30ec6195a623fb2a07122ff463119b6839bac00513be452cee5eacae239b44",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "rotated freely - i.e. by hand without noise and abnormal resistance",
+        "tail_canonical_zh": "手动盘车检查无异响和异常阻力",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the pump shaft can be rotated freely - i.e. by hand without noise and abnormal resistance.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bolt holes",
+        "head_canonical_zh": "螺栓孔",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that the bolt holes are aligned",
+        "tail_canonical_zh": "检查螺栓孔对中",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check that the bolt holes are aligned and that the gasket surfaces are parallel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "gasket surfaces",
+        "head_canonical_zh": "垫片密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "check that ... the gasket surfaces are parallel",
+        "tail_canonical_zh": "检查垫片密封面平行度",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check that the bolt holes are aligned and that the gasket surfaces are parallel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flange support(s)",
+        "head_canonical_zh": "法兰支撑",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the flange support(s) have full contact with the underlying structure",
+        "tail_canonical_zh": "检查法兰支撑与基础完全接触",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the flange support(s) have full contact with the underlying structure (if there is more than a 0.5 mm air gap under the feet, shims must be placed underneath)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump shaft",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check that the pump shaft still can be rotated freely",
+        "tail_canonical_zh": "复查泵轴转动灵活性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check that the pump shaft still can be rotated freely (sound and resistance must not have changed according to point 2).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "thermal stresses / movements in the pipe system",
+        "head_canonical_zh": "管路系统热应力或位移",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "pump cannot rotate freely",
+        "tail_canonical_zh": "泵轴无法自由转动",
+        "tail_type": "Symptom",
+        "evidence_text": "If the temperature of the pipe system changes significantly (up or down) after commissioning the pump and consequent thermal stresses / movements in the pipe system, if any, can be transferred to the pump... If the pump cannot rotate freely under all operating conditions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump cannot rotate freely",
+        "head_canonical_zh": "泵轴无法自由转动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "the pipe system must be better supported",
+        "tail_canonical_zh": "改善管路支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the pump cannot rotate freely under all operating conditions, the pipe system must be better supported",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump cannot rotate freely",
+        "head_canonical_zh": "泵轴无法自由转动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "compensator(s) must be installed between the pump and pipe system",
+        "tail_canonical_zh": "在泵与管路间安装补偿器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "alternatively, compensator(s) must be installed between the pump and pipe system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

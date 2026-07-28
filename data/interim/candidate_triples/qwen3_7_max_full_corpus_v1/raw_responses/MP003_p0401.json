@@ -1,0 +1,138 @@
+{
+  "page_key": "MP003:p0401",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-15e45817-b103-9d91-a93e-63c15e65f718",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1552,
+    "prompt_tokens": 2275,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3827
+  },
+  "latency_ms": 19864,
+  "attempt": 1,
+  "prompt_sha256": "b3e65f81ec1924c6b3ae007d0fb547c4a5afa36e78874bb9386df66eb1a38285",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Lubricating oil tank low level",
+        "head_canonical_zh": "润滑油箱低液位",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "air_ingress_or_loss_of_prime",
+        "tail_canonical_zh": "进气或失去灌注",
+        "tail_type": "FaultMode",
+        "evidence_text": "Individual visual and audible alarms are to be provided at the engine room control station to indicate:\n\ni)   Rpm for inner and outer shafts\nii)  Lubricating oil pressure\niii) Lubricating oil tank low level",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "High temperature lubricating oil",
+        "head_canonical_zh": "润滑油高温",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing_or_lubrication_failure",
+        "tail_canonical_zh": "轴承或润滑故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "iv)  High temperature lubricating oil",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "High bearing temperature for bearings inner shaft bearings and outer shaft bearings",
+        "head_canonical_zh": "内轴和外轴轴承高温",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "bearing_or_lubrication_failure",
+        "tail_canonical_zh": "轴承或润滑故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "v)   High bearing temperature for bearings inner shaft bearings and outer shaft bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high contamination level of metal particles in the lubricating oil for inner shaft roller bearings",
+        "head_canonical_zh": "内轴滚柱轴承润滑油中金属颗粒污染度高",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "impeller_or_wear_part_damage",
+        "tail_canonical_zh": "叶轮或磨损件损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "b)   For anti-friction bearing (roller bearing) arrangements, high contamination level of metal\n                      particles in the lubricating oil for inner shaft roller bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage",
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Contra-rotating propeller units and associated equipment",
+        "head_canonical_zh": "对转螺旋桨装置及相关设备",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "inspected, tested and certified by ABS",
+        "tail_canonical_zh": "ABS检验、测试和认证",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Contra-rotating propeller units and associated equipment are to be inspected, tested and certified by ABS\n            in accordance with the following requirements, as applicable:",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "performance tests",
+        "head_canonical_zh": "性能试验",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "running tests at intermittent or continuous rating",
+        "tail_canonical_zh": "间歇或连续额定工况运行试验",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Upon completion of the installation, performance tests are to be carried out in the presence of a Surveyor\n            in a sea trial. This is to include but not limited to running tests at intermittent or continuous rating, vessel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": [
+      "页面主要涉及对转螺旋桨（Contra-Rotating Propellers）及其轴系、报警与认证要求，未直接提及泵（pump）或管路系统具体故障与维护内容。所抽取的symptom均源自推进机械润滑与轴承监测条款，仅在广义机舱旋转机械范畴下与target_fault_classes存在弱关联。",
+      "未发现明确的maintenance动作或prevented_by关系；所有报警条目仅作为指示信号，原文未给出对应的纠正或预防措施描述。",
+      "部分fault_class_ids为基于症状的推断映射（如低油位->进气/失灌），原文未显式声明该因果关系，置信度已相应调低。"
+    ]
+  }
+}

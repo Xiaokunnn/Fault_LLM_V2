@@ -1,0 +1,83 @@
+{
+  "page_key": "MP022:p0019",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-15ab523b-22bc-9120-bb68-796d6fc45515",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 644,
+    "prompt_tokens": 1931,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2575
+  },
+  "latency_ms": 7540,
+  "attempt": 1,
+  "prompt_sha256": "954da040ce300d0726f71e8c20176fc21e4a34b4375ed70393a3caae5202ff2b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check the direction of rotation of the impeller before operation",
+        "tail_canonical_zh": "运行前检查叶轮旋转方向",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check the direction of rotation of the impeller before operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "direction of rotation of the impeller",
+        "head_canonical_zh": "叶轮旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "indication label on the pump",
+        "tail_canonical_zh": "泵体指示标签",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "See the indication label on the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "machine",
+        "head_canonical_zh": "机器",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "oil and wearing parts in the machine are replaced",
+        "tail_canonical_zh": "更换机器中的油和易损件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "During maintenance, oil and wearing parts in the machine are replaced",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

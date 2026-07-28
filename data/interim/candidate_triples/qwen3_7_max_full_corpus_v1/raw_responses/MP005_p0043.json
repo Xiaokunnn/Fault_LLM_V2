@@ -1,0 +1,137 @@
+{
+  "page_key": "MP005:p0043",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cc2ded3f-c65e-9a7d-902e-2c6e511cc0bd",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1337,
+    "prompt_tokens": 2007,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3344
+  },
+  "latency_ms": 16625,
+  "attempt": 1,
+  "prompt_sha256": "9847b1c24ce4ace395d19785dcfd0fa3da8e88a5fd0666de81aa21a3ce1777f6",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "vibrations",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Ensure a solid base plate",
+        "tail_canonical_zh": "确保坚固的底座板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure a solid base plate to minimise vibrations and extend service intervals.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "tension in the pump foot",
+        "head_canonical_zh": "泵脚应力",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use shims between pump base plate and foundation",
+        "tail_canonical_zh": "在泵底板与基础之间使用垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Use shims between pump base plate and foundation to avoid tension in the pump foot when the installation is secured.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "impede flow on the pump suction side",
+        "head_canonical_zh": "阻碍泵吸入侧流动",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid 90-degree bends, T-pieces or other components",
+        "tail_canonical_zh": "避免90度弯头、三通或其他部件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid 90-degree bends, T-pieces or other components that can impede flow on the pump suction side.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "radius of curvature of less than 1.5 times the nominal pipe diameter",
+        "head_canonical_zh": "曲率半径小于公称管径1.5倍",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid radius of curvature of less than 1.5 times the nominal pipe diameter",
+        "tail_canonical_zh": "避免曲率半径小于公称管径1.5倍",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid radius of curvature of less than 1.5 times the nominal pipe diameter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "abrupt changes of cross-section along the piping system",
+        "head_canonical_zh": "管路系统截面突变",
+        "head_type": "Cause",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid abrupt changes of cross-section along the piping system",
+        "tail_canonical_zh": "避免管路系统截面突变",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid abrupt changes of cross-section along the piping system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bearing currents",
+        "head_canonical_zh": "轴承电流",
+        "head_type": "FailureMechanism",
+        "relation": "mitigated_by",
+        "tail_surface": "Using Common Mode filter",
+        "tail_canonical_zh": "使用共模滤波器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Using Common Mode filter for minimizing bearing currents when installing frequency convert",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

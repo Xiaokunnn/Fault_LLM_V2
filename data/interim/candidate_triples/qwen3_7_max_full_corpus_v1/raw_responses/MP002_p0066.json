@@ -1,0 +1,91 @@
+{
+  "page_key": "MP002:p0066",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-89a40f94-1e9f-9b8b-bec0-d76dfe0c9473",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 854,
+    "prompt_tokens": 2095,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2949
+  },
+  "latency_ms": 10607,
+  "attempt": 1,
+  "prompt_sha256": "95b3547187e0970bc8323f49ad61e22a7650c8c12e84228dd67b945dbd8e6b17",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Condition based maintenance",
+        "head_canonical_zh": "状态维修",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Condition Monitoring (CM)",
+        "tail_canonical_zh": "状态监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Condition based maintenance, also known as predictive maintenance, is a failure management strategy, with tasks conducted on a frequent or real-time basis, which is based on the use of Condition Monitoring (CM) to determine when corrective action or part replacement is required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Condition based maintenance",
+        "head_canonical_zh": "状态维修",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "Repairs or replacement of parts",
+        "tail_canonical_zh": "修理或部件更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Repairs or replacement of parts are carried out before the machinery fails based upon the use of the tools prescribed for CM.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Planned maintenance",
+        "head_canonical_zh": "计划维修",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "Restoring the item or discarding it and replacing it with a new item",
+        "tail_canonical_zh": "修复或报废并更换新件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Restoring the item or discarding it and replacing it with a new item prevent the potential of failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Run-to-failure",
+        "head_canonical_zh": "事后维修",
+        "head_type": "MaintenanceAction",
+        "relation": "maintained_by",
+        "tail_surface": "repair or replacement",
+        "tail_canonical_zh": "修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Run-to-failure is a failure management strategy that allows an equipment item to run until failure occurs and then a repair or replacement is made.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

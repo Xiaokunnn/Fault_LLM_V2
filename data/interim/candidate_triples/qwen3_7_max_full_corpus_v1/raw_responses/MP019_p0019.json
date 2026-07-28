@@ -1,0 +1,1125 @@
+{
+  "page_key": "MP019:p0019",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3fba8759-bcc9-916f-8bc8-3179dd1a549c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 12865,
+    "prompt_tokens": 13553,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 26418
+  },
+  "latency_ms": 165632,
+  "attempt": 1,
+  "prompt_sha256": "4234aa67b3788236ffa08c9a4bd66169f8d2e09d5070f2d3d9526f6ee98db9b4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Blown fuses",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Blown fuses",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Blown fuses",
+        "head_canonical_zh": "熔断器熔断",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Replace fuses with proper type and rating.",
+        "tail_canonical_zh": "更换合适类型和额定值的熔断器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Blown fuses Replace fuses with proper type and rating.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c01",
+          "MP019:p0019:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Overload trips",
+        "tail_canonical_zh": "过载跳闸",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Overload trips",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Overload trips",
+        "head_canonical_zh": "过载跳闸",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Check and reset overload in starter.",
+        "tail_canonical_zh": "检查并复位启动器中的过载保护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Overload trips Check and reset overload in starter.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r002:c01",
+          "MP019:p0019:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Improper power supply",
+        "tail_canonical_zh": "电源不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Improper power supply",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r003:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper power supply",
+        "head_canonical_zh": "电源不当",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check to see that power supplied agrees with motor rating plate and\n                                       load factor.",
+        "tail_canonical_zh": "检查供电是否符合电机铭牌和负载系数",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Improper power supply Check to see that power supplied agrees with motor rating plate and\n                                       load factor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r003:c01",
+          "MP019:p0019:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Improper line connections",
+        "tail_canonical_zh": "线路连接不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Improper line connections",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Improper line connections",
+        "head_canonical_zh": "线路连接不当",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check connections against diagram supplied with motor.",
+        "tail_canonical_zh": "对照电机提供的接线图检查连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Improper line connections Check connections against diagram supplied with motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r004:c01",
+          "MP019:p0019:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Open circuit in winding or control\nswitch",
+        "tail_canonical_zh": "绕组或控制开关开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Open circuit in winding or control\nswitch",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open circuit in winding or control\nswitch",
+        "head_canonical_zh": "绕组或控制开关开路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "humming sound when switch is closed",
+        "tail_canonical_zh": "开关闭合时的嗡嗡声",
+        "tail_type": "Symptom",
+        "evidence_text": "Open circuit in winding or control\nswitch Indicated by humming sound when switch is closed.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r005:c01",
+          "MP019:p0019:t00:r005:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open circuit in winding or control\nswitch",
+        "head_canonical_zh": "绕组或控制开关开路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check for loose\nwiring connections.",
+        "tail_canonical_zh": "检查接线是否松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Open circuit in winding or control\nswitch Indicated by humming sound when switch is closed. Check for loose\nwiring connections.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r005:c01",
+          "MP019:p0019:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open circuit in winding or control\nswitch",
+        "head_canonical_zh": "绕组或控制开关开路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "ensure that all control contacts are closing.",
+        "tail_canonical_zh": "确保所有控制触点闭合",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Also ensure that all control contacts are closing.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r005:c01",
+          "MP019:p0019:t00:r005:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Mechanical failure",
+        "tail_canonical_zh": "机械故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Mechanical failure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanical failure",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check to see if motor and drive turn freely.",
+        "tail_canonical_zh": "检查电机和驱动装置是否转动灵活",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mechanical failure Check to see if motor and drive turn freely.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r006:c01",
+          "MP019:p0019:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Mechanical failure",
+        "head_canonical_zh": "机械故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check bearings and\n                                       lubrication.",
+        "tail_canonical_zh": "检查轴承和润滑",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mechanical failure Check to see if motor and drive turn freely. Check bearings and\n                                       lubrication.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r006:c01",
+          "MP019:p0019:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Short circuited stator",
+        "tail_canonical_zh": "定子短路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Short circuited stator",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r007:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Short circuited stator",
+        "head_canonical_zh": "定子短路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "blown fuses",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Symptom",
+        "evidence_text": "Short circuited stator Indicated by blown fuses.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r007:c01",
+          "MP019:p0019:t00:r007:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Short circuited stator",
+        "head_canonical_zh": "定子短路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Motor must be rewound.",
+        "tail_canonical_zh": "电机必须重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Short circuited stator Indicated by blown fuses. Motor must be rewound.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r007:c01",
+          "MP019:p0019:t00:r007:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Short circuited stator",
+        "head_canonical_zh": "定子短路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Remove end\nshields, locate fault.",
+        "tail_canonical_zh": "拆卸端盖定位故障",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Short circuited stator Indicated by blown fuses. Motor must be rewound. Remove end\nshields, locate fault.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r007:c01",
+          "MP019:p0019:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Rotor defective",
+        "tail_canonical_zh": "转子缺陷",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Rotor defective",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r008:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rotor defective",
+        "head_canonical_zh": "转子缺陷",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Look for broken bars or end rings.",
+        "tail_canonical_zh": "检查断条或端环",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Rotor defective Look for broken bars or end rings.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r008:c01",
+          "MP019:p0019:t00:r008:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor fails to start",
+        "head_canonical_zh": "电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Motor may be overloaded",
+        "tail_canonical_zh": "电机可能过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor fails to start Motor may be overloaded",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r001:c00",
+          "MP019:p0019:t00:r009:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor may be overloaded",
+        "head_canonical_zh": "电机可能过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor may be overloaded Reduce load.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r009:c01",
+          "MP019:p0019:t00:r009:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor stalls",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "One phase may be open",
+        "tail_canonical_zh": "缺相",
+        "tail_type": "Cause",
+        "evidence_text": "Motor stalls One phase may be open",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c00",
+          "MP019:p0019:t00:r010:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "One phase may be open",
+        "head_canonical_zh": "缺相",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check lines for open phase.",
+        "tail_canonical_zh": "检查线路是否缺相",
+        "tail_type": "InspectionAction",
+        "evidence_text": "One phase may be open Check lines for open phase.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c01",
+          "MP019:p0019:t00:r010:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor stalls",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Wrong application",
+        "tail_canonical_zh": "选型不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motor stalls Wrong application",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c00",
+          "MP019:p0019:t00:r011:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wrong application",
+        "head_canonical_zh": "选型不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Change type or size. Consult equipment supplier.",
+        "tail_canonical_zh": "更改型号或尺寸并咨询设备供应商",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Wrong application Change type or size. Consult equipment supplier.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r011:c01",
+          "MP019:p0019:t00:r011:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor stalls",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Overload",
+        "tail_canonical_zh": "过载",
+        "tail_type": "Cause",
+        "evidence_text": "Motor stalls Overload",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c00",
+          "MP019:p0019:t00:r012:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Overload",
+        "head_canonical_zh": "过载",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Overload Reduce load.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r012:c01",
+          "MP019:p0019:t00:r012:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor stalls",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Low voltage",
+        "tail_canonical_zh": "低电压",
+        "tail_type": "Cause",
+        "evidence_text": "Motor stalls Low voltage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c00",
+          "MP019:p0019:t00:r013:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Low voltage",
+        "head_canonical_zh": "低电压",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Ensure the rating plate voltage is maintained. Check connection.",
+        "tail_canonical_zh": "确保维持铭牌电压并检查连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Low voltage Ensure the rating plate voltage is maintained. Check connection.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r013:c01",
+          "MP019:p0019:t00:r013:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor stalls",
+        "head_canonical_zh": "电机堵转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Open circuit",
+        "tail_canonical_zh": "开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor stalls Open circuit",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r010:c00",
+          "MP019:p0019:t00:r014:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open circuit",
+        "head_canonical_zh": "开路",
+        "head_type": "Cause",
+        "relation": "manifests_as",
+        "tail_surface": "Fuses blown",
+        "tail_canonical_zh": "熔断器熔断",
+        "tail_type": "Symptom",
+        "evidence_text": "Open circuit Fuses blown",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r014:c01",
+          "MP019:p0019:t00:r014:c02"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open circuit",
+        "head_canonical_zh": "开路",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "check overload relay, stator and push buttons.",
+        "tail_canonical_zh": "检查过载继电器、定子和按钮",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Open circuit Fuses blown, check overload relay, stator and push buttons.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r014:c01",
+          "MP019:p0019:t00:r014:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor runs and\nthen dies down",
+        "head_canonical_zh": "电机运行后停转",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Power failure",
+        "tail_canonical_zh": "电源故障",
+        "tail_type": "Cause",
+        "evidence_text": "Motor runs and\nthen dies down Power failure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r015:c00",
+          "MP019:p0019:t00:r015:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Power failure",
+        "head_canonical_zh": "电源故障",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check for loose connections to line, to fuses and to control.",
+        "tail_canonical_zh": "检查线路、熔断器和控制回路的连接是否松动",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Power failure Check for loose connections to line, to fuses and to control.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r015:c01",
+          "MP019:p0019:t00:r015:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor does\nnot come up to\nnominal speed",
+        "head_canonical_zh": "电机达不到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Not applied properly",
+        "tail_canonical_zh": "应用不当",
+        "tail_type": "Cause",
+        "evidence_text": "Motor does\nnot come up to\nnominal speed Not applied properly",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c00",
+          "MP019:p0019:t00:r016:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Not applied properly",
+        "head_canonical_zh": "应用不当",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Consult equipment supplier for proper type.",
+        "tail_canonical_zh": "咨询设备供应商获取正确型号",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Not applied properly Consult equipment supplier for proper type.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c01",
+          "MP019:p0019:t00:r016:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor does\nnot come up to\nnominal speed",
+        "head_canonical_zh": "电机达不到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Voltage too low at motor terminals\nbecause of line drop",
+        "tail_canonical_zh": "线路压降导致电机端子电压过低",
+        "tail_type": "Cause",
+        "evidence_text": "Motor does\nnot come up to\nnominal speed Voltage too low at motor terminals\nbecause of line drop",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c00",
+          "MP019:p0019:t00:r017:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Voltage too low at motor terminals\nbecause of line drop",
+        "head_canonical_zh": "线路压降导致电机端子电压过低",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "Use higher voltage or transformer terminals or reduce load.",
+        "tail_canonical_zh": "使用更高电压或变压器端子或减小负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Voltage too low at motor terminals\nbecause of line drop Use higher voltage or transformer terminals or reduce load.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r017:c01",
+          "MP019:p0019:t00:r017:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Voltage too low at motor terminals\nbecause of line drop",
+        "head_canonical_zh": "线路压降导致电机端子电压过低",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check\nconnections.",
+        "tail_canonical_zh": "检查连接",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Voltage too low at motor terminals\nbecause of line drop Use higher voltage or transformer terminals or reduce load. Check\nconnections.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r017:c01",
+          "MP019:p0019:t00:r017:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Voltage too low at motor terminals\nbecause of line drop",
+        "head_canonical_zh": "线路压降导致电机端子电压过低",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check conductors for proper size.",
+        "tail_canonical_zh": "检查导线尺寸是否合适",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Voltage too low at motor terminals\nbecause of line drop Use higher voltage or transformer terminals or reduce load. Check\nconnections. Check conductors for proper size.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r017:c01",
+          "MP019:p0019:t00:r017:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor does\nnot come up to\nnominal speed",
+        "head_canonical_zh": "电机达不到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Starting load too high",
+        "tail_canonical_zh": "启动负载过高",
+        "tail_type": "Cause",
+        "evidence_text": "Motor does\nnot come up to\nnominal speed Starting load too high",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c00",
+          "MP019:p0019:t00:r018:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Starting load too high",
+        "head_canonical_zh": "启动负载过高",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Check the start load of the motor.",
+        "tail_canonical_zh": "检查电机启动负载",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Starting load too high Check the start load of the motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r018:c01",
+          "MP019:p0019:t00:r018:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor does\nnot come up to\nnominal speed",
+        "head_canonical_zh": "电机达不到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Broken rotor bars or loose rotor",
+        "tail_canonical_zh": "转子断条或转子松动",
+        "tail_type": "Cause",
+        "evidence_text": "Motor does\nnot come up to\nnominal speed Broken rotor bars or loose rotor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c00",
+          "MP019:p0019:t00:r019:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Broken rotor bars or loose rotor",
+        "head_canonical_zh": "转子断条或转子松动",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "Look for cracks near the rings.",
+        "tail_canonical_zh": "检查端环附近是否有裂纹",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Broken rotor bars or loose rotor Look for cracks near the rings.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r019:c01",
+          "MP019:p0019:t00:r019:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Broken rotor bars or loose rotor",
+        "head_canonical_zh": "转子断条或转子松动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "A new rotor may be required, as\n                                       repairs are usually temporary.",
+        "tail_canonical_zh": "可能需要更换新转子因为修复通常是临时的",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Broken rotor bars or loose rotor Look for cracks near the rings. A new rotor may be required, as\n                                       repairs are usually temporary.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r019:c01",
+          "MP019:p0019:t00:r019:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor does\nnot come up to\nnominal speed",
+        "head_canonical_zh": "电机达不到额定转速",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Open primary circuit",
+        "tail_canonical_zh": "一次回路开路",
+        "tail_type": "Cause",
+        "evidence_text": "Motor does\nnot come up to\nnominal speed Open primary circuit",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r016:c00",
+          "MP019:p0019:t00:r020:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open primary circuit",
+        "head_canonical_zh": "一次回路开路",
+        "head_type": "Cause",
+        "relation": "diagnosed_by",
+        "tail_surface": "Locate fault with testing device",
+        "tail_canonical_zh": "使用测试设备定位故障",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Open primary circuit Locate fault with testing device and repair.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r020:c01",
+          "MP019:p0019:t00:r020:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Open primary circuit",
+        "head_canonical_zh": "一次回路开路",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "repair.",
+        "tail_canonical_zh": "修理",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Open primary circuit Locate fault with testing device and repair.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0019:t00:r020:c01",
+          "MP019:p0019:t00:r020:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "page_key": "MP003:p0426",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-be31825c-9b49-9b51-a9aa-f906511bc92c",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2179,
+    "prompt_tokens": 7807,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9986
+  },
+  "latency_ms": 25707,
+  "attempt": 1,
+  "prompt_sha256": "d4a62533ef7a9e745f488e94e2b2d73f9624cb0090662baf4bc32094e088f059",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Boiler drum water level -low",
+        "head_canonical_zh": "锅炉汽包水位低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "A1 Boiler drum water level -low",
+        "tail_canonical_zh": "锅炉汽包水位低报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "A1 Boiler drum water level -low    x          4-4-1/11.7.1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0426:t00:r002:c01",
+          "MP003:p0426:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Exhaust gas automatic diversion",
+        "head_canonical_zh": "废气自动旁通",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Boiler drum water level -low",
+        "tail_canonical_zh": "锅炉汽包水位低",
+        "tail_type": "Symptom",
+        "evidence_text": "Arrangements are to be provided to divert the\n                 exhaust gas in a low water level condition, either manually or automatically.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Exhaust gas automatic diversion",
+        "head_canonical_zh": "废气自动旁通",
+        "head_type": "MaintenanceAction",
+        "relation": "inspected_by",
+        "tail_surface": "B1 Exhaust gas automatic diversion",
+        "tail_canonical_zh": "废气自动旁通报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "B1 Exhaust gas automatic diversion x          4-4-1/11.7.1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0426:t00:r003:c01",
+          "MP003:p0426:t00:r003:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Exhaust gas temperature at outlet -high",
+        "head_canonical_zh": "出口废气温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "C1 Exhaust gas temperature at outlet -high",
+        "tail_canonical_zh": "出口废气温度高报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "C1 Exhaust gas temperature at outlet -high x  4-4-1/11.5.1",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0426:t00:r004:c01",
+          "MP003:p0426:t00:r004:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Water flow in the tubes -low",
+        "head_canonical_zh": "管内水流量低",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "D1 Water flow in the tubes -low",
+        "tail_canonical_zh": "管内水流量低报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "D1 Water flow in the tubes -low    x          4-4-1/11.7.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0426:t00:r006:c01",
+          "MP003:p0426:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "standby feed water pump",
+        "head_canonical_zh": "备用给水泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "low water flow in the tubes",
+        "tail_canonical_zh": "管内水流量低",
+        "tail_type": "Symptom",
+        "evidence_text": "Arrangements are to be provided to\n                 automatically start a standby feed water pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Exhaust gas temperature at outlet -high",
+        "head_canonical_zh": "出口废气温度高",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "E1 Exhaust gas temperature at outlet -high",
+        "tail_canonical_zh": "出口废气温度高报警监测",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "E1 Exhaust gas temperature at outlet -high x  4-4-1/11.5.2",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0426:t00:r007:c01",
+          "MP003:p0426:t00:r007:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "burner primary-air pressure",
+        "head_canonical_zh": "燃烧器一次风压",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Off-limit condition of burner primary-air pressure or atomizing-\n                 steam pressure is to be alarmed",
+        "tail_canonical_zh": "燃烧器一次风压或雾化蒸汽压力超限报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Off-limit condition of burner primary-air pressure or atomizing-\n                 steam pressure is to be alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "atomizing-\n                 steam pressure",
+        "head_canonical_zh": "雾化蒸汽压力",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Off-limit condition of burner primary-air pressure or atomizing-\n                 steam pressure is to be alarmed",
+        "tail_canonical_zh": "燃烧器一次风压或雾化蒸汽压力超限报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Off-limit condition of burner primary-air pressure or atomizing-\n                 steam pressure is to be alarmed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

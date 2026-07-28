@@ -1,0 +1,126 @@
+{
+  "page_key": "MP001:p0083",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-012f6f4a-7777-93ad-b8ae-d91374a00f58",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1268,
+    "prompt_tokens": 10604,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 11872
+  },
+  "latency_ms": 17474,
+  "attempt": 1,
+  "prompt_sha256": "54d67535e94ce770eee2dcff53106dfb06b05ebc1599d2c570e9ad540256f7a9",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Mesh Particle Counter",
+        "head_canonical_zh": "网式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Particles in lubricating and hydraulic oil",
+        "tail_canonical_zh": "润滑油和液压油中的颗粒",
+        "tail_type": "Symptom",
+        "evidence_text": "Mesh Particle Counter Particles in lubricating and hydraulic oil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0083:t00:r007:c01",
+          "MP001:p0083:t00:r006:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Patch Test",
+        "head_canonical_zh": "斑痕试验",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "Wear metals, corrosion, fatigue, sludge, particles, etc.",
+        "tail_canonical_zh": "磨损金属、腐蚀、疲劳、油泥、颗粒等",
+        "tail_type": "Symptom",
+        "evidence_text": "Patch Test Wear metals, corrosion, fatigue, sludge, particles, etc.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0083:t00:r007:c02",
+          "MP001:p0083:t00:r006:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Particles in lubricating and hydraulic oil",
+        "head_canonical_zh": "润滑油和液压油中的颗粒",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "systems caused by wear, fatigue, corrosion, and contaminants",
+        "tail_canonical_zh": "由磨损、疲劳、腐蚀和污染物引起的系统故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Particles in lubricating and hydraulic oil systems caused by wear, fatigue, corrosion, and contaminants",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0083:t00:r006:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.5,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Mesh Particle Counter",
+        "head_canonical_zh": "网式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "Differential Pressure",
+        "tail_canonical_zh": "压差测量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Mesh Particle Counter (Differential Pressure)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0083:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Mesh Particle Counter",
+        "head_canonical_zh": "网式颗粒计数器",
+        "head_type": "InspectionMethod",
+        "relation": "specified_by",
+        "tail_surface": "ISO 4406",
+        "tail_canonical_zh": "ISO 4406标准",
+        "tail_type": "Standard",
+        "evidence_text": "converted to an ISO 4406 cleanliness value",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0083:t00:r003:c01"
+        ],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": [
+      "Table text is reversed/mirrored in source parsing; entities were reconstructed by reading cell content backwards which may affect exact string matching confidence.",
+      "Evidence spans for E2 items are reconstructed from reversed cell text; strict contiguous span verification is compromised by OCR/parsing artifact."
+    ]
+  }
+}

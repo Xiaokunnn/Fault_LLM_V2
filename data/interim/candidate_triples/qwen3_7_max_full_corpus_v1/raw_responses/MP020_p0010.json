@@ -1,0 +1,172 @@
+{
+  "page_key": "MP020:p0010",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-483d4aba-19ec-9461-a58c-cc1f0d446911",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 22422,
+  "attempt": 1,
+  "prompt_sha256": "c51213df904bbccfc2a54abcb70b077a568d373800721bdf3fd2af9deb3d814e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Entrained air",
+        "head_canonical_zh": "夹带空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "lose performance, efficiency, and possibly prime",
+        "tail_canonical_zh": "性能、效率下降及可能失去自吸能力",
+        "tail_type": "Symptom",
+        "evidence_text": "Entrained air can be carried to a nearby suction pipe. The pump will lose performance, efficiency, and possibly prime.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "discharge 'in-flow' above the surface",
+        "head_canonical_zh": "进水口上方排放",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Entrained air",
+        "tail_canonical_zh": "夹带空气",
+        "tail_type": "Cause",
+        "evidence_text": "Do not discharge 'in-flow' above the surface. Entrained air can be carried to a nearby suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air_ingress_or_loss_of_prime",
+        "head_canonical_zh": "进气或失去自吸",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Extend the pipe below the minimum pumpage level",
+        "tail_canonical_zh": "将管道延伸至最低抽水位以下",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The pump will lose performance, efficiency, and possibly prime. Extend the pipe below the minimum pumpage level (shown by dashed line).",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "air_ingress_or_loss_of_prime",
+        "head_canonical_zh": "进气或失去自吸",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Adding a baffle",
+        "tail_canonical_zh": "加装挡板",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adding a baffle may help if the 'in-flow' already contains air bubbles.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "suction bell",
+        "head_canonical_zh": "吸入喇叭口",
+        "head_type": "Component",
+        "relation": "mitigated_by",
+        "tail_surface": "vortexing",
+        "tail_canonical_zh": "涡流",
+        "tail_type": "FaultMode",
+        "evidence_text": "A suction bell reduces inlet losses and helps suppress vortexing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "cavitation"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hydraulic_blockage",
+        "head_canonical_zh": "水力堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "open area should be at least four times the pipe area",
+        "tail_canonical_zh": "开孔面积至少为管道面积的四倍",
+        "tail_type": "Standard",
+        "evidence_text": "The open area should be at least four times the pipe area.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "very fine screen",
+        "head_canonical_zh": "极细滤网",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "plug easily and possibly collapse",
+        "tail_canonical_zh": "易堵塞并可能塌陷",
+        "tail_type": "Symptom",
+        "evidence_text": "Avoid use of very fine screen. It will plug easily and possibly collapse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hydraulic_blockage",
+        "head_canonical_zh": "水力堵塞",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Avoid use of very fine screen",
+        "tail_canonical_zh": "避免使用极细滤网",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Avoid use of very fine screen. It will plug easily and possibly collapse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "page_key": "MP003:p0594",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-190c789d-c7e6-9f33-a5c6-161312b65674",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1127,
+    "prompt_tokens": 2481,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3608
+  },
+  "latency_ms": 14002,
+  "attempt": 1,
+  "prompt_sha256": "7354f746b4f49dbb3c37fb32e6b9fdbbadd7063e3358c40240a86dff7434715b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "low level conditions of fuel oil settling and service tanks",
+        "head_canonical_zh": "燃油沉淀柜和服务柜低液位",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "alarmed at the centralized control station",
+        "tail_canonical_zh": "集中控制站报警",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "low level conditions of fuel oil settling and service tanks are to be alarmed at the centralized control station",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "high level alarms",
+        "head_canonical_zh": "高液位报警",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "tanks are automatically filled",
+        "tail_canonical_zh": "油柜自动加注",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Where tanks are automatically filled, high level alarms are also to be provided",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "catastrophic contamination (e.g. by water ingress) of the fuel service tank",
+        "head_canonical_zh": "燃油服务柜严重污染（如进水）",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "have fuel immediately ready for use",
+        "tail_canonical_zh": "备有立即可用燃油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This requirement was derived from the need to have fuel immediately ready for use in the event of catastrophic contamination (e.g. by water ingress) of the fuel service tank in use",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "spillages or leakages on heated surfaces",
+        "head_canonical_zh": "热表面上的溢油或泄漏",
+        "head_type": "Risk",
+        "relation": "prevented_by",
+        "tail_surface": "not to be located over boilers",
+        "tail_canonical_zh": "不得位于锅炉上方",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "they are not to be located over boilers",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "leakage points such as manholes, drain valves, gauge glasses",
+        "head_canonical_zh": "泄漏点（如人孔、排放阀、液位计）",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "oil tight spill tray of ample size",
+        "tail_canonical_zh": "足够大的油密溢油盘",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "placed in an oil tight spill tray of ample size (e.g., large enough to cover leakage points such as manholes, drain valves, gauge glasses, etc.)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

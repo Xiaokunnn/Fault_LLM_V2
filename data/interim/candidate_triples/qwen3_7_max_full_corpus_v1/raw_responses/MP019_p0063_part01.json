@@ -1,0 +1,139 @@
+{
+  "page_key": "MP019:p0063",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-226c9e03-9c92-9788-9664-79fbb4f5e465",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1525,
+    "prompt_tokens": 2674,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4199
+  },
+  "latency_ms": 16785,
+  "attempt": 1,
+  "prompt_sha256": "6efe0099b531bdfe297702a657f6f652732ad9a900070188d80be8a6355b4f5f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "termistores u otros RTDs (Pt100, relés térmicos, etc.)",
+        "head_canonical_zh": "热敏电阻或RTD传感器",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "conectarlos de la forma adecuada",
+        "tail_canonical_zh": "正确连接辅助元件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Si un motor está equipado con termistores u otros RTDs (Pt100, relés térmicos, etc.) y dispositivos auxiliares, se recomienda usarlos y conectarlos de la forma adecuada.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "errores en las lecturas o daños en el sistema",
+        "head_canonical_zh": "读数错误或系统损坏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "uso de una tensión o una intensidad de medida superiores",
+        "tail_canonical_zh": "使用过高的测量电压或电流",
+        "tail_type": "Cause",
+        "evidence_text": "El uso de una tensión o una intensidad de medida superiores puede dar lugar a errores en las lecturas o daños en el sistema.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "penetrar agua en el motor ni en las cajas de bornes",
+        "head_canonical_zh": "水进入电机或接线盒",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Asegúrese de que la protección del motor se corresponde con las condiciones ambientales y climáticas",
+        "tail_canonical_zh": "确保电机防护等级符合环境气候条件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Asegúrese de que la protección del motor se corresponde con las condiciones ambientales y climáticas, p. ej. que no pueda penetrar agua en el motor ni en las cajas de bornes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "clase IP correcta",
+        "head_canonical_zh": "正确的IP防护等级",
+        "head_type": "Standard",
+        "relation": "maintained_by",
+        "tail_surface": "Las juntas de las cajas de bornes deben estar colocadas correctamente en las ranuras correspondientes",
+        "tail_canonical_zh": "接线盒密封垫正确安装在槽内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Las juntas de las cajas de bornes deben estar colocadas correctamente en las ranuras correspondientes, para garantizar una clase IP correcta.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sentido de rotación",
+        "head_canonical_zh": "旋转方向",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "secuencia de fases de línea a los bornes es L1, L2, L3",
+        "tail_canonical_zh": "检查端子相序为L1, L2, L3",
+        "tail_type": "InspectionAction",
+        "evidence_text": "El eje gira en el sentido de las agujas del reloj, visto desde el lado de acople del motor, si la secuencia de fases de línea a los bornes es L1, L2, L3, como se muestra en la Figura 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ventilador unidireccional",
+        "head_canonical_zh": "单向风扇",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "asegúrese de que gire en el mismo sentido que el indicado por la flecha marcada en el motor",
+        "tail_canonical_zh": "确认风扇转向与电机箭头指示一致",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Si el motor tiene un ventilador unidireccional, asegúrese de que gire en el mismo sentido que el indicado por la flecha marcada en el motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

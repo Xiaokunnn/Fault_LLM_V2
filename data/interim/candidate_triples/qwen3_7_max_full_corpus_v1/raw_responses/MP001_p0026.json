@@ -1,0 +1,63 @@
+{
+  "page_key": "MP001:p0026",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3fc2ffc6-360b-9868-84fd-6f376eb0cef1",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 502,
+    "prompt_tokens": 5509,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6011
+  },
+  "latency_ms": 7069,
+  "attempt": 1,
+  "prompt_sha256": "a3651b23a5a7ee34b53c717f3ff62245292bf469b2e29c5e0d4e8369bb834fbb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump impeller",
+        "head_canonical_zh": "泵叶轮",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "Pattern B – Traditional Wear-out",
+        "tail_canonical_zh": "模式B-传统磨损失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Pattern B – Traditional Wear-out:\nConstant or slowly increasing failure rate followed by a\ndistinct wear-out zone\nExample: reciprocating engine, pump impeller",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0026:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "equipment failure mode exhibits a wear-out pattern",
+        "head_canonical_zh": "设备故障模式呈现磨损特征",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "rebuilding or replacing the equipment item",
+        "tail_canonical_zh": "重建或更换设备部件",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "if an equipment failure mode exhibits a wear-out pattern, rebuilding or replacing the equipment item may be an appropriate strategy",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

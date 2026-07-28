@@ -1,0 +1,148 @@
+{
+  "page_key": "MP003:p0799",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-681ecc9a-8f7f-9465-b1fb-e7064b6defc6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1473,
+    "prompt_tokens": 2342,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3815
+  },
+  "latency_ms": 18201,
+  "attempt": 1,
+  "prompt_sha256": "2831b1fff4e802600827e2ff94f311950ea747c57e306c2ec3e70bfdc0dd3c70",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "cooling system",
+        "head_canonical_zh": "冷却系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "coolant leak pressure test",
+        "tail_canonical_zh": "冷却液泄漏压力试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "the cooling piping system shall be subject to a coolant leak pressure test",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "cooling system piping",
+        "head_canonical_zh": "冷却系统管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "hydrostatically tested to 1.5 times the design pressure for a period of 30 minutes",
+        "tail_canonical_zh": "1.5倍设计压力液压试验30分钟",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The cooling system piping shall be hydrostatically tested to 1.5 times the design pressure for a period of 30 minutes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pressure relief mechanism",
+        "head_canonical_zh": "泄压装置",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "checked for proper calibration and operation",
+        "tail_canonical_zh": "检查校准和功能",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The pressure relief mechanism shall also be checked for proper calibration and operation",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "monitoring the pressure",
+        "tail_canonical_zh": "压力监测",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The cooling system shall be verified as having no leakage by monitoring the pressure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "visual inspection",
+        "tail_canonical_zh": "目视检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The cooling system shall be verified as having no leakage by ... visual inspection",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "instrumentation critical to the operation of the cooling system",
+        "head_canonical_zh": "冷却系统关键仪表",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "checked to ensure correct calibration and functionality",
+        "tail_canonical_zh": "检查校准和功能正确性",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The instrumentation critical to the operation of the cooling system ... shall be checked to ensure correct calibration and functionality",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "loss of cooling",
+        "head_canonical_zh": "冷却丧失",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Testing of the converter for scenarios like ... loss of cooling",
+        "tail_canonical_zh": "变流器冷却丧失场景测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Testing of the converter for scenarios like, but not limited to, emergency trip of the assembly, input fault protection, loss of cooling",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

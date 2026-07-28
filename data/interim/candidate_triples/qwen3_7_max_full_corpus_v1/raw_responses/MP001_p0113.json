@@ -1,0 +1,107 @@
+{
+  "page_key": "MP001:p0113",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-a99017f7-ac91-906a-8eed-33f4e90045af",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1050,
+    "prompt_tokens": 7890,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8940
+  },
+  "latency_ms": 12558,
+  "attempt": 1,
+  "prompt_sha256": "357b9edb7c37ea7dfae71a73ee352402ba015385789a4836f7dee7633b03ce6b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Fuel oil system",
+        "head_canonical_zh": "燃油系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pressures in various parts of system, temperature, viscosity, leakage",
+        "tail_canonical_zh": "系统各部分压力、温度、粘度及泄漏",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Fuel oil system\tPressures in various parts of system, temperature, viscosity, leakage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0113:t00:r002:c00",
+          "MP001:p0113:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cooling water system (fresh water\nand sea water)",
+        "head_canonical_zh": "冷却水系统（淡水及海水）",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pressures, temperatures",
+        "tail_canonical_zh": "压力和温度",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Cooling water system (fresh water\nand sea water)\tPressures, temperatures",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0113:t00:r003:c00",
+          "MP001:p0113:t00:r003:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lubricating oil system",
+        "head_canonical_zh": "润滑油系统",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Pressures, temperatures, flow",
+        "tail_canonical_zh": "压力、温度和流量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Lubricating oil system\tPressures, temperatures, flow",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0113:t00:r007:c00",
+          "MP001:p0113:t00:r007:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Turbocharger parameters",
+        "head_canonical_zh": "涡轮增压器参数",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Lubricating oil temperatures, pressures, speed",
+        "tail_canonical_zh": "润滑油温度、压力和转速",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Turbocharger parameters\tLubricating oil temperatures, pressures, speed",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP001:p0113:t00:r011:c00",
+          "MP001:p0113:t00:r011:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "page_key": "MP003:p0891",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6bc801bd-7bfe-9297-b425-1db19b7fed4a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 719,
+    "prompt_tokens": 5072,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5791
+  },
+  "latency_ms": 9065,
+  "attempt": 1,
+  "prompt_sha256": "de33861d5456e5f04bf96fe43879c59a0b160b9e5a4e44f516949e6fc64a524d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Cooling water valve",
+        "head_canonical_zh": "冷却水阀",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "In most cases open",
+        "tail_canonical_zh": "大多数情况下开启",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Cooling water valve                   In most cases open",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0891:t00:r005:c00",
+          "MP003:p0891:t00:r005:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Propulsion safety shut down",
+        "head_canonical_zh": "推进安全停机",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Maintain state and alarm",
+        "tail_canonical_zh": "保持状态并报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Propulsion safety shut down         Maintain state and alarm",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0891:t00:r003:c00",
+          "MP003:p0891:t00:r003:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Alarm system",
+        "head_canonical_zh": "报警系统",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "Annunciated",
+        "tail_canonical_zh": "发出声光报警",
+        "tail_type": "Symptom",
+        "evidence_text": "Alarm system                           Annunciated",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP003:p0891:t00:r004:c00",
+          "MP003:p0891:t00:r004:c01"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

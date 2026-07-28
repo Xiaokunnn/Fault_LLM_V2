@@ -1,0 +1,114 @@
+{
+  "page_key": "MP003:p0013",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-35c740ba-e138-9ef0-8a5b-9385bf03a5d4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1222,
+    "prompt_tokens": 2465,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3687
+  },
+  "latency_ms": 15087,
+  "attempt": 1,
+  "prompt_sha256": "2347b2d81cfa0f6ffb00558f87153894962b717e1957a304e456c79e52e2ebe7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "overload of the propulsion machinery",
+        "head_canonical_zh": "推进机械过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "running astern is not to lead to overload of the propulsion machinery",
+        "tail_canonical_zh": "倒车运行不导致推进机械过载",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "For main propulsion systems with reversing gears, controllable pitch propellers or electric propulsion drive, running astern is not to lead to overload of the propulsion machinery.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "astern response characteristics",
+        "head_canonical_zh": "倒车响应特性",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "tests",
+        "tail_canonical_zh": "试验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Main propulsion systems are to undergo tests to demonstrate the astern response characteristics.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "ability of the machinery, including the blade pitch control system of controllable pitch propellers, to reverse the direction of thrust of the propeller in sufficient time",
+        "head_canonical_zh": "机械及调距桨螺距控制系统及时反转螺旋桨推力的能力",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "trials",
+        "tail_canonical_zh": "试航",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "The ability of the machinery, including the blade pitch control system of controllable pitch propellers, to reverse the direction of thrust of the propeller in sufficient time, and so to bring the vessel to rest within a reasonable distance from maximum ahead service speed, is to be demonstrated and recorded during trials.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "overheating of the turbine",
+        "head_canonical_zh": "汽轮机过热",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "effects of “windage” and friction",
+        "tail_canonical_zh": "鼓风效应和摩擦的影响",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "The astern trial is to be limited to 30 minutes or is to be in accordance with manufacturer’s recommendation to avoid overheating of the turbine due to the effects of “windage” and friction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "overheating of the turbine",
+        "head_canonical_zh": "汽轮机过热",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "The astern trial is to be limited to 30 minutes or is to be in accordance with manufacturer’s recommendation",
+        "tail_canonical_zh": "倒车试验限制在30分钟内或按制造商建议进行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The astern trial is to be limited to 30 minutes or is to be in accordance with manufacturer’s recommendation to avoid overheating of the turbine due to the effects of “windage” and friction.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

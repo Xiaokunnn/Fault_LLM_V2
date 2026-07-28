@@ -1,0 +1,530 @@
+{
+  "page_key": "MP005:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-94fa3c12-e6ed-9fe9-a156-f37dd7f2ce45",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 6441,
+    "prompt_tokens": 12961,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 19402
+  },
+  "latency_ms": 80461,
+  "attempt": 1,
+  "prompt_sha256": "d16f3377ac153f0c05092dd8d372ec6b349f74c57167d8d5bd002dd53eb29e5a",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "accumulated vibration on pump shall be less than 2.8mm/s",
+        "tail_canonical_zh": "泵累积振动小于2.8mm/s",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "During DESMI factory testing the accumulated vibration on pump shall be less than 2.8mm/s.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "pump vibrations to be less than 7 mm/s",
+        "tail_canonical_zh": "泵振动小于7mm/s",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Adding any external excited vibrations on site the pump vibrations to be less than 7 mm/s",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "external excited vibrations",
+        "head_canonical_zh": "外部激励振动",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "anti-vibration foundation or other vibration reduction measure on pump",
+        "tail_canonical_zh": "防振基础或其他泵减振措施",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Adding any external excited vibrations on site the pump vibrations to be less than 7 mm/s otherwise anti-vibration foundation or other vibration reduction measure on pump to be applied.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Minimum inlet pressure",
+        "head_canonical_zh": "最小入口压力",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "NPSH  + Suction pipework friction + Fluid vapour pressure – Fluid surface pressure+0.5m",
+        "tail_canonical_zh": "NPSHreq+吸入管路摩擦+流体蒸气压-流体表面压力+0.5m",
+        "tail_type": "Standard",
+        "evidence_text": "Minimum inlet pressure NPSH  + Suction pipework friction + Fluid vapour pressure – Fluid surface pressure+0.5m (It is the pressure that will not lead pump cavitation in specific pump operational conditions and specific pumping media.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [
+          "cavitation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Maximum inlet pressure",
+        "head_canonical_zh": "最大入口压力",
+        "head_type": "OperatingCondition",
+        "relation": "specified_by",
+        "tail_surface": "Pump maximum working pressure – pump shut head",
+        "tail_canonical_zh": "泵最大工作压力减去泵关死扬程",
+        "tail_type": "Standard",
+        "evidence_text": "Maximum inlet pressure Pump maximum working pressure – pump shut head",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "NSL80-215",
+        "head_canonical_zh": "NSL80-215泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3600",
+        "tail_canonical_zh": "3600 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL80-215   3600",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r001:c00",
+          "MP005:p0023:t00:r001:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL125-415",
+        "head_canonical_zh": "NSL125-415泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL125-415  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r001:c02",
+          "MP005:p0023:t00:r001:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL250-330",
+        "head_canonical_zh": "NSL250-330泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL250-330  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r001:c04",
+          "MP005:p0023:t00:r001:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL80-265",
+        "head_canonical_zh": "NSL80-265泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3600",
+        "tail_canonical_zh": "3600 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL80-265   3600",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r002:c00",
+          "MP005:p0023:t00:r002:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL150-215",
+        "head_canonical_zh": "NSL150-215泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL150-215  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r002:c02",
+          "MP005:p0023:t00:r002:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL250-415",
+        "head_canonical_zh": "NSL250-415泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL250-415  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r002:c04",
+          "MP005:p0023:t00:r002:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL80-330",
+        "head_canonical_zh": "NSL80-330泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3600",
+        "tail_canonical_zh": "3600 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL80-330   3600",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r003:c00",
+          "MP005:p0023:t00:r003:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL150-265",
+        "head_canonical_zh": "NSL150-265泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL150-265  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r003:c02",
+          "MP005:p0023:t00:r003:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL250-525",
+        "head_canonical_zh": "NSL250-525泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL250-525  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r003:c04",
+          "MP005:p0023:t00:r003:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL100-215",
+        "head_canonical_zh": "NSL100-215泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3600",
+        "tail_canonical_zh": "3600 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL100-215  3600",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r004:c00",
+          "MP005:p0023:t00:r004:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL150-330",
+        "head_canonical_zh": "NSL150-330泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL150-330  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r004:c02",
+          "MP005:p0023:t00:r004:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL300-415",
+        "head_canonical_zh": "NSL300-415泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL300-415  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r004:c04",
+          "MP005:p0023:t00:r004:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL100-265",
+        "head_canonical_zh": "NSL100-265泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3600",
+        "tail_canonical_zh": "3600 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL100-265  3600",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r005:c00",
+          "MP005:p0023:t00:r005:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL150-415",
+        "head_canonical_zh": "NSL150-415泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL150-415  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r005:c02",
+          "MP005:p0023:t00:r005:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL300-418",
+        "head_canonical_zh": "NSL300-418泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL300-418  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r005:c04",
+          "MP005:p0023:t00:r005:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL100-330",
+        "head_canonical_zh": "NSL100-330泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "3000",
+        "tail_canonical_zh": "3000 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL100-330  3000",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r006:c00",
+          "MP005:p0023:t00:r006:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL200-265",
+        "head_canonical_zh": "NSL200-265泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL200-265  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r006:c02",
+          "MP005:p0023:t00:r006:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL300-465",
+        "head_canonical_zh": "NSL300-465泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "2000",
+        "tail_canonical_zh": "2000 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL300-465  2000",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r006:c04",
+          "MP005:p0023:t00:r006:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL100-415",
+        "head_canonical_zh": "NSL100-415泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL100-415  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r007:c00",
+          "MP005:p0023:t00:r007:c01"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL200-330",
+        "head_canonical_zh": "NSL200-330泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL200-330  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r007:c02",
+          "MP005:p0023:t00:r007:c03"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "NSL300-525",
+        "head_canonical_zh": "NSL300-525泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "1800",
+        "tail_canonical_zh": "1800 RPM",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "NSL300-525  1800",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0023:t00:r007:c04",
+          "MP005:p0023:t00:r007:c05"
+        ],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  }
+}

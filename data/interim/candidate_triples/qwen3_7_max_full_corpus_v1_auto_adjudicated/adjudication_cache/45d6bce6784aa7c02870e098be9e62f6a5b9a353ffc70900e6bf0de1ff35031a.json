@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-9b5db53b-f634-9ca9-8adb-d10e5c44c94c",
+  "latency_ms": 8203,
+  "prompt_sha256": "45d6bce6784aa7c02870e098be9e62f6a5b9a353ffc70900e6bf0de1ff35031a",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-bb3266fe669ec88a144a",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "Improper power supply\n--- CELL ---\nCheck to see that power supplied agrees with motor rating plate and\n                                       load factor.",
+        "reason_code": "direct_table_mapping"
+      },
+      {
+        "id": "MPT-bb44ae8efb87a6cb936e",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "LKH Prime must be installed in such a way that ensures liquid is in the pump on start-up",
+        "reason_code": "direct_condition_statement"
+      },
+      {
+        "id": "MPT-bbbfb7f9384c5ed8d99b",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "During DESMI factory testing the accumulated vibration on pump shall be less than 2.8mm/s.",
+        "reason_code": "condition_scope_mismatch"
+      },
+      {
+        "id": "MPT-bbc71981ce7846454037",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Misalignment may be the cause of noisy pump operation",
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "id": "MPT-bbf024e4f67e1edd60a4",
+        "verdict": "not_entailed",
+        "confidence": 0.98,
+        "supporting_quote": "2200* 1   pump shaft                   stainless steel",
+        "reason_code": "list_item_misinterpretation"
+      },
+      {
+        "id": "MPT-bc11123b618def99d5ae",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "13. Monitor the motor temperature.",
+        "reason_code": "direct_instruction"
+      },
+      {
+        "id": "MPT-bc5b5e8757c70c21b2dc",
+        "verdict": "entailed",
+        "confidence": 0.85,
+        "supporting_quote": "If all pipes are tightly connected or not",
+        "reason_code": "direct_inspection_item"
+      },
+      {
+        "id": "MPT-bc6fd3eefc8795cf967f",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "The ball bearings and/or coils in the motor can overheat if a pump is insulated all the way up to the motor flange.",
+        "reason_code": "direct_conditional_cause"
+      }
+    ]
+  }
+}
