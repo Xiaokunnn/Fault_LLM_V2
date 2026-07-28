@@ -188,8 +188,18 @@ def _canonicalize_endpoint(
     if matched is not None:
         canonical_label = str(matched["canonical_label_zh"]).strip()
         terminology_id = str(matched["terminology_id"])
-        translation_method = "type_scoped_dictionary"
-        translation_status = "dictionary_approved"
+        translation_status = str(
+            matched.get("approval_status") or "dictionary_approved"
+        )
+        translation_method = (
+            "secondary_ai_verified"
+            if translation_status == "secondary_ai_verified"
+            else "human_reviewed"
+            if translation_status == "human_approved"
+            else "source_zh_exact"
+            if translation_status == "source_zh_exact"
+            else "type_scoped_dictionary"
+        )
         if proposed_label_zh and normalize_lookup_text(proposed_label_zh) != normalize_lookup_text(
             canonical_label
         ):

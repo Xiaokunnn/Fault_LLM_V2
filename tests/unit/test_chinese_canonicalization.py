@@ -62,6 +62,42 @@ class ChineseCanonicalizationTests(unittest.TestCase):
             result.reasons,
         )
 
+    def test_secondary_ai_verified_dictionary_entry_keeps_silver_status(
+        self,
+    ) -> None:
+        terminology = json.loads(json.dumps(self.terminology))
+        terminology["terms"].append(
+            {
+                "terminology_id": "MPTERM-SILVER-TEST",
+                "entity_type": "Symptom",
+                "canonical_label_zh": "泵内快速发热",
+                "approval_status": "secondary_ai_verified",
+                "source_forms": [
+                    {
+                        "language": "en",
+                        "surface": "quickly generating heat in the pump",
+                    }
+                ],
+            }
+        )
+        result = validate_chinese_canonicalization(
+            head_surface="Cavitation",
+            head_type="FaultMode",
+            relation="causes",
+            tail_surface="quickly generating heat in the pump",
+            tail_type="Symptom",
+            terminology=terminology,
+        )
+        self.assertTrue(result.graph_ready)
+        self.assertEqual(
+            result.tail.translation_status,
+            "secondary_ai_verified",
+        )
+        self.assertEqual(
+            result.tail.translation_method,
+            "secondary_ai_verified",
+        )
+
     def test_secondary_review_and_protected_term_retention(self) -> None:
         result = validate_chinese_canonicalization(
             head_surface="NPSH required",
