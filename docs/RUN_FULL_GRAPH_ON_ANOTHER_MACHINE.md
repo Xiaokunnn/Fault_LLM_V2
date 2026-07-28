@@ -91,9 +91,17 @@ data/kg/marine_pump/triples/KG_v1_validated/
 
 如果程序警告中文发布图谱为空或覆盖不足，说明证据抽取完成但中文术语治理尚未完成。不得为了得到非空图谱而直接把英文surface当作中文规范实体，也不得把待审核记录手工批量晋升为Silver。
 
-## 7. Linux服务器上的增量发布修复
+## 7. 全量抽取后的增量发布修复
 
 若1889页全量抽取已经完成，但中文术语首轮治理尚未达到10/10，不需要重跑逐页抽取。在仓库根目录更新代码后运行：
+
+Windows PowerShell：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_full_graph_release_repair_secure.ps1
+```
+
+Linux：
 
 ```bash
 chmod +x scripts/run_full_graph_release_repair_secure.sh

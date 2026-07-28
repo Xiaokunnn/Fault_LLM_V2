@@ -1,0 +1,200 @@
+[
+  {
+    "id": "TERM-0052",
+    "entity_type": "Cause",
+    "source_forms": [
+      "Motor may be overloaded"
+    ],
+    "proposed_canonical_zh": "电机可能过载",
+    "alternative_proposals": [
+      {
+        "label": "电机可能过载",
+        "count": 2
+      }
+    ],
+    "protected_tokens": [],
+    "contexts": [
+      {
+        "doc_id": "MP019",
+        "pdf_page_number": 19,
+        "relation": "causes",
+        "evidence_text": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+      },
+      {
+        "doc_id": "MP019",
+        "pdf_page_number": 19,
+        "relation": "mitigated_by",
+        "evidence_text": "Motor may be overloaded\n--- CELL ---\nReduce load."
+      }
+    ],
+    "first_pass_votes": [
+      {
+        "id": "TERM-0052",
+        "verdict": "approved",
+        "canonical_label_zh": "电机可能过载",
+        "confidence": 0.9,
+        "reason_code": "MATCH_SEMANTIC"
+      },
+      {
+        "id": "TERM-0052",
+        "verdict": "rejected",
+        "canonical_label_zh": "电机过载",
+        "confidence": 0.9,
+        "reason_code": "CONDITION_LOSS"
+      }
+    ],
+    "first_pass_local_checks": {
+      "two_votes_present": true,
+      "unanimous_approved": false,
+      "minimum_confidence_0_9": true,
+      "same_nonempty_chinese_label": false,
+      "protected_tokens_preserved": true
+    },
+    "frozen_reconciliation_candidate_zh": "电机可能过载",
+    "candidate_artifact_version": "marine_pump_zh_release_gap_machine_candidates_v1"
+  },
+  {
+    "id": "TERM-0158",
+    "entity_type": "FaultMode",
+    "source_forms": [
+      "Choking or clogging of the pump"
+    ],
+    "proposed_canonical_zh": "泵堵塞或节流",
+    "alternative_proposals": [
+      {
+        "label": "泵堵塞或节流",
+        "count": 1
+      }
+    ],
+    "protected_tokens": [],
+    "contexts": [
+      {
+        "doc_id": "MP005",
+        "pdf_page_number": 9,
+        "relation": "causes",
+        "evidence_text": "Choking or clogging of the pump can result in either too low load or overload of the\n                  motor or bending of the shaft."
+      }
+    ],
+    "first_pass_votes": [
+      {
+        "id": "TERM-0158",
+        "verdict": "approved",
+        "canonical_label_zh": "泵堵塞或节流",
+        "confidence": 0.95,
+        "reason_code": "EQUIVALENT_MAPPING"
+      },
+      {
+        "id": "TERM-0158",
+        "verdict": "rejected",
+        "canonical_label_zh": "泵堵塞或节流",
+        "confidence": 0.8,
+        "reason_code": "FAULT_CONDITION_CONFLATION"
+      }
+    ],
+    "first_pass_local_checks": {
+      "two_votes_present": true,
+      "unanimous_approved": false,
+      "minimum_confidence_0_9": false,
+      "same_nonempty_chinese_label": true,
+      "protected_tokens_preserved": true
+    },
+    "frozen_reconciliation_candidate_zh": "泵受阻或堵塞",
+    "candidate_artifact_version": "marine_pump_zh_release_gap_machine_candidates_v1"
+  },
+  {
+    "id": "TERM-0257",
+    "entity_type": "MaintenanceAction",
+    "source_forms": [
+      "Reduce load."
+    ],
+    "proposed_canonical_zh": "减小负载",
+    "alternative_proposals": [
+      {
+        "label": "减小负载",
+        "count": 1
+      }
+    ],
+    "protected_tokens": [],
+    "contexts": [
+      {
+        "doc_id": "MP019",
+        "pdf_page_number": 19,
+        "relation": "mitigated_by",
+        "evidence_text": "Motor may be overloaded\n--- CELL ---\nReduce load."
+      }
+    ],
+    "first_pass_votes": [
+      {
+        "id": "TERM-0257",
+        "verdict": "rejected",
+        "canonical_label_zh": "减小负载",
+        "confidence": 0.9,
+        "reason_code": "NOT_TERMINOLOGY"
+      },
+      {
+        "id": "TERM-0257",
+        "verdict": "approved",
+        "canonical_label_zh": "减小负载",
+        "confidence": 1.0,
+        "reason_code": "EQUIVALENT"
+      }
+    ],
+    "first_pass_local_checks": {
+      "two_votes_present": true,
+      "unanimous_approved": false,
+      "minimum_confidence_0_9": true,
+      "same_nonempty_chinese_label": true,
+      "protected_tokens_preserved": true
+    },
+    "frozen_reconciliation_candidate_zh": "降低负载",
+    "candidate_artifact_version": "marine_pump_zh_release_gap_machine_candidates_v1"
+  },
+  {
+    "id": "TERM-0389",
+    "entity_type": "Symptom",
+    "source_forms": [
+      "Incorrect inlet pressure"
+    ],
+    "proposed_canonical_zh": "进口压力异常",
+    "alternative_proposals": [
+      {
+        "label": "进口压力异常",
+        "count": 1
+      }
+    ],
+    "protected_tokens": [],
+    "contexts": [
+      {
+        "doc_id": "MP005",
+        "pdf_page_number": 74,
+        "relation": "causes",
+        "evidence_text": "Incorrect inlet pressure due to clogged filter in the suction line could damage the pump"
+      }
+    ],
+    "first_pass_votes": [
+      {
+        "id": "TERM-0389",
+        "verdict": "rejected",
+        "canonical_label_zh": "进口压力异常",
+        "confidence": 0.6,
+        "reason_code": "SEMANTIC_DRIFT"
+      },
+      {
+        "id": "TERM-0389",
+        "verdict": "rejected",
+        "canonical_label_zh": "进口压力异常",
+        "confidence": 0.9,
+        "reason_code": "SEMANTIC_DRIFT"
+      }
+    ],
+    "first_pass_local_checks": {
+      "two_votes_present": true,
+      "unanimous_approved": false,
+      "minimum_confidence_0_9": false,
+      "same_nonempty_chinese_label": true,
+      "protected_tokens_preserved": true
+    },
+    "frozen_reconciliation_candidate_zh": "进口压力不正确",
+    "candidate_artifact_version": "marine_pump_zh_release_gap_machine_candidates_v1"
+  }
+]

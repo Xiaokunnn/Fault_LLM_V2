@@ -659,7 +659,9 @@ def main() -> None:
         "chinese_release_classes_passing": chinese_coverage[
             "fault_classes_passing_gate"
         ],
-        "terminology_artifact": str(terminology_path.relative_to(PROJECT_ROOT)),
+        "terminology_artifact": terminology_path.relative_to(
+            PROJECT_ROOT
+        ).as_posix(),
         "human_expert_reviewed": False,
         "label_policy": "Silver only; never Gold",
     }
