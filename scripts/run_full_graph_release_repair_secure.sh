@@ -32,7 +32,7 @@ run_step() {
 
 STARTED=$SECONDS
 
-run_step "1/3 Repair evidence coverage gaps locally" \
+run_step "1/4 Repair evidence coverage gaps locally" \
   scripts/repair_full_graph_evidence_gaps.py
 
 if [[ -z "${DASHSCOPE_API_KEY:-}" ]]; then
@@ -45,21 +45,25 @@ fi
   exit 2
 }
 
-run_step "2/3 Govern fault-core Chinese Silver terminology" \
-  scripts/run_silver_terminology_governance.py
+run_step "2/4 Govern fault-core Chinese Silver terminology" \
+  scripts/run_silver_terminology_governance.py \
+  --allow-incomplete
+
+run_step "3/4 Reconcile only Chinese release-gap terminology" \
+  scripts/reconcile_chinese_terminology_release_gaps.py
 
 cleanup_secret
 
-run_step "3/3 Rebuild raw and Chinese-validated graph" \
+run_step "4/4 Rebuild raw and Chinese-validated graph" \
   scripts/build_versioned_knowledge_graph.py \
   --input \
-  data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_governed/candidate_triples.zh_governed.jsonl \
+  data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_reconciled/candidate_triples.zh_reconciled.jsonl \
   --output-root data/kg/marine_pump
 
 echo
 echo "========== Full graph release repair result =========="
 echo "Evidence coverage: data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_evidence_repaired/coverage_evidence_only.json"
-echo "Terminology governance: data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_governed/terminology_governance_summary.json"
+echo "Terminology reconciliation: data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_reconciled/reconciliation_summary.json"
 echo "Validated graph: data/kg/marine_pump/graph_versions/KG_v1_validated"
 echo "Rerun the same command after interruption; terminology calls reuse cache."
 printf 'Total elapsed: %d minutes %d seconds\n' "$(((SECONDS-STARTED)/60))" "$(((SECONDS-STARTED)%60))"

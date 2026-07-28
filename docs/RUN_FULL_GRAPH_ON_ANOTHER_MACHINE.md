@@ -91,7 +91,29 @@ data/kg/marine_pump/triples/KG_v1_validated/
 
 如果程序警告中文发布图谱为空或覆盖不足，说明证据抽取完成但中文术语治理尚未完成。不得为了得到非空图谱而直接把英文surface当作中文规范实体，也不得把待审核记录手工批量晋升为Silver。
 
-## 7. 完成判定
+## 7. Linux服务器上的增量发布修复
+
+若1889页全量抽取已经完成，但中文术语首轮治理尚未达到10/10，不需要重跑逐页抽取。在仓库根目录更新代码后运行：
+
+```bash
+chmod +x scripts/run_full_graph_release_repair_secure.sh
+./scripts/run_full_graph_release_repair_secure.sh
+```
+
+该入口只会重算本地证据修复、复用首轮术语缓存、对实际阻塞发布门槛的少量术语执行两路独立保守复核，并在中文覆盖达到10/10后重建图谱。密钥使用隐藏输入，不写入文件或命令历史。
+
+关键增量输出为：
+
+```text
+data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_evidence_repaired/
+data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_governed/
+data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_reconciled/
+configs/entity_terminology_zh_marine_pump_v4_silver.json
+```
+
+若两路复核未对同一冻结候选名以不低于0.9的置信度达成一致，程序会继续隔离该术语并停止构图，不会降低门槛。
+
+## 8. 完成判定
 
 全量运行结束后应同时满足：
 

@@ -494,7 +494,11 @@ def recanonicalize_records(
             else "not_silver_evidence"
         )
         record["terminology_governance"] = {
-            "version": "marine_pump_zh_terminology_v3_0_silver",
+            "version": str(
+                terminology.get(
+                    "version", "marine_pump_zh_terminology_v3_0_silver"
+                )
+            ),
             "human_expert_reviewed": False,
             "label_policy": "Silver only; never Gold",
         }
@@ -548,6 +552,15 @@ def main() -> None:
     )
     parser.add_argument("--batch-size", type=int, default=20)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--allow-incomplete",
+        action="store_true",
+        help=(
+            "Write quarantined first-pass outputs without failing when the "
+            "Chinese release gate is below 10/10. Intended only when the "
+            "gap-reconciliation stage immediately follows."
+        ),
+    )
     args = parser.parse_args()
 
     records = read_jsonl(PROJECT_ROOT / args.input)
@@ -658,7 +671,10 @@ def main() -> None:
         f"{len(fault_ids)}",
         flush=True,
     )
-    if summary["chinese_release_classes_passing"] != len(fault_ids):
+    if (
+        summary["chinese_release_classes_passing"] != len(fault_ids)
+        and not args.allow_incomplete
+    ):
         raise RuntimeError(
             "Chinese release coverage remains below 10/10; unresolved "
             "terminology must remain quarantined."
