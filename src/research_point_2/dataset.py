@@ -224,6 +224,8 @@ def write_benchmark(
     queries: Iterable[SilverQuery],
     candidates: Iterable[EvidenceCandidate],
     output_dir: str | Path,
+    *,
+    manifest_overrides: dict[str, Any] | None = None,
 ) -> None:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -246,6 +248,7 @@ def write_benchmark(
         "scope": "development_only_from_frozen_CQ_v1_and_KG_v1_validated",
         "held_out_test": False,
     }
+    manifest.update(manifest_overrides or {})
     (output / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
     )
