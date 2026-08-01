@@ -8,6 +8,10 @@
 - `tmp/pdfs/`：阅读规划PDF时生成的页面渲染缓存，可随时重建。
 - `results/experiments/research_point_1/api_prompt_comparison_v1/*/extraction_run_summary.json`：B0–Ours仅本地dry-run形成的空摘要，不包含真实API结果，保留会造成“实验已完成”的误解。
 - `data/interim/heldout_external/rp1_extraction_v1/extraction_run_summary.json`：外部抽取仅dry-run产生的空摘要，不是MP010–MP013真实模型结果。
+- `data/interim/page_index/marine_pump_pages_v1.sqlite`及摘要：可由`corpus_v2`确定性重建的旧词法页面索引；正式GraphRAG v2将改建向量索引。
+- `results/experiments/research_point_2/development_v1/retrieval_results.jsonl`：30次重复产生的逐请求调试明细，约8MB；汇总指标和报告已保留，需要时可用`--save-results`重新生成。
+- `qwen3_7_max_corpus_retrieval_v2_large_audit_dry_run/`：不含真实模型响应的空dry-run目录。
+- 项目内`__pycache__`、`.pytest_cache`：Python和测试缓存，可自动重建。
 
 ## 必须保留
 

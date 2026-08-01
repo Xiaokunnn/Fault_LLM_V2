@@ -49,6 +49,11 @@ def main() -> int:
     parser.add_argument("--max-selected", type=int, default=8)
     parser.add_argument("--max-per-family", type=int, default=2)
     parser.add_argument("--repeats", type=int, default=30)
+    parser.add_argument(
+        "--save-results",
+        action="store_true",
+        help="Persist every repeated query result; metrics are always saved.",
+    )
     args = parser.parse_args()
 
     benchmark = ROOT / args.benchmark_dir
@@ -82,9 +87,10 @@ def main() -> int:
     (output / "metrics.json").write_text(
         json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    with (output / "retrieval_results.jsonl").open("w", encoding="utf-8") as handle:
-        for row in results:
-            handle.write(json.dumps(row.to_dict(), ensure_ascii=False) + "\n")
+    if args.save_results:
+        with (output / "retrieval_results.jsonl").open("w", encoding="utf-8") as handle:
+            for row in results:
+                handle.write(json.dumps(row.to_dict(), ensure_ascii=False) + "\n")
     print(json.dumps(metrics, ensure_ascii=False, indent=2), flush=True)
     return 0
 
