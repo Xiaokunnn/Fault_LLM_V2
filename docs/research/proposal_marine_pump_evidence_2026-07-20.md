@@ -1,5 +1,7 @@
 # 面向远洋船舶边缘端的机舱泵系故障证据增强辅助诊断方法研究
 
+> 历史版本说明：本文保留用于记录2026年7月的方案演变，不再作为当前研究点编号和执行依据。后续统一遵循 [`MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)。
+
 ## 硕士论文研究规划（研究对象与研究目标调整修订版）
 
 **版本：** V1.2  

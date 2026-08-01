@@ -1,8 +1,8 @@
 # Fault LLM v2
 
-面向船舶机械故障智能诊断的研究项目，最新三研究点规划为：研究点一研究船舶机舱泵系可追溯 Silver 证据知识图谱构建与质量治理；研究点二研究来源族感知的预算约束低时延图谱证据检索；研究点三研究证据选择/诊断能力蒸馏及风险受控使用。三点形成“可信知识生产→低时延证据选择→能力蒸馏与风险控制”的递进链条。
+面向船舶机舱泵系的大语言模型知识增强故障辅助诊断研究项目。最新三研究点为：研究点一研究大模型驱动的审计型 Silver 知识图谱构建与质量治理；研究点二研究向量召回、图谱约束检索与本地7B生成一体化的来源感知预算约束 GraphRAG；研究点三研究GraphRAG教师到本地7B的证据知识蒸馏与风险受控回退。三点形成“可信知识生产→GraphRAG知识使用→能力内化与风险控制”的递进链条。
 
-完整的三研究点规划见 [`docs/research/proposal_marine_pump_evidence_2026-07-20.md`](docs/research/proposal_marine_pump_evidence_2026-07-20.md)；研究点一的当前基础、实施细节和迁移说明见 [`docs/RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md)。
+后续唯一有效的三研究点主规划见 [`docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)。旧规划仅保留研究演变记录；当前基础和迁移说明见 [`docs/RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md)。
 
 该项目是重新构建的独立主数据线。旧轴承图谱、旧图片和既有实验继续保留在同级 `Edge_Fault_LLM`，不迁入本目录。旧项目只作为算法原型参考，v2 的图谱、数据划分和实验结论必须独立生成。
 

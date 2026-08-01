@@ -24,6 +24,12 @@
 
 研究点一的当前正式方法与实验边界见 [`research/research_point_1_traceable_silver_kg_method_v1.md`](research/research_point_1_traceable_silver_kg_method_v1.md)。
 
+## 0.2 2026-08-01 大模型主线纠偏
+
+后续三研究点的唯一主规划为 [`research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)。研究点二必须是完整的GraphRAG：服务器向量模型用于语义召回，图谱方法用于结构约束和预算选择，本地7B模型用于统一的证据约束回答。当前字符词法和图结构实验只作为先导实验，不能替代正式向量检索与7B端到端评价。研究点三以冻结GraphRAG为教师，研究本地7B的证据蒸馏、知识内化和选择性回退。
+
+MP010–MP013是在结构检索v1冻结后首次解析的，但正式GraphRAG v2随后新增了向量模型和7B生成协议。因此四份文档仍保持来源留出、不入主图且不得回流调参，但对v2不能再称“完全未接触的严格盲测”。如论文需要严格盲测，应在v2全部冻结后另登记此前未接触的新来源。
+
 ## 1. 文档目的
 
 本文档用于说明研究点一的研究背景、研究定位、研究目标、当前基础、关键问题和后续实施安排，并作为迁移到 `Fault_llm_v2` 后继续研究点一的统一上下文。完整课题保留原方案的三个研究点：低算力约束下的低时延图谱证据检索与自适应剪枝、图谱证据蒸馏与原型记忆边缘轻量模型、置信度校准与选择性回退。当前只实施研究点一；这是研究次序安排，不代表研究点二、三被删除。完整规划见 [`research/proposal_marine_pump_evidence_2026-07-20.md`](research/proposal_marine_pump_evidence_2026-07-20.md)。
