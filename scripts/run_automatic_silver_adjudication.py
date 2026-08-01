@@ -79,7 +79,8 @@ def normalized(value: object) -> str:
     return " ".join(unicodedata.normalize("NFKC", str(value)).casefold().split())
 
 
-def eligible(record: dict[str, object]) -> bool:
+def eligible(record: dict[str, object], allowed_splits: set[str] | None = None) -> bool:
+    allowed_splits = allowed_splits or {"build_train"}
     evidence = record.get("evidence_validation", {}) or {}
     entailment = record.get("relation_entailment_validation", {}) or {}
     return bool(
@@ -89,7 +90,7 @@ def eligible(record: dict[str, object]) -> bool:
         and evidence.get("silver_eligible") is True
         and record.get("relation_type_valid") is True
         and entailment.get("status") == "undetermined"
-        and record.get("document_split") == "build_train"
+        and record.get("document_split") in allowed_splits
         and record.get("inferred_edge") is not True
         and not record.get("semantic_adjudication")
     )
@@ -131,6 +132,11 @@ def main() -> None:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
+        "--allowed-splits",
+        default="build_train",
+        help="Comma-separated document splits eligible for adjudication.",
+    )
+    parser.add_argument(
         "--reuse-cache-dir",
         action="append",
         default=[],
@@ -141,7 +147,8 @@ def main() -> None:
     config = json.loads((PROJECT_ROOT / args.config).read_text(encoding="utf-8"))
     source_path = PROJECT_ROOT / args.input_dir / "candidate_triples.strict_v2.jsonl"
     records = read_jsonl(source_path)
-    queue = [record for record in records if eligible(record)]
+    allowed_splits = {value.strip() for value in args.allowed_splits.split(",") if value.strip()}
+    queue = [record for record in records if eligible(record, allowed_splits)]
     if args.limit is not None:
         queue = queue[: args.limit]
     output_dir = PROJECT_ROOT / args.output_dir

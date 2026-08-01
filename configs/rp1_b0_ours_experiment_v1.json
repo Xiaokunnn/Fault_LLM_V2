@@ -1,0 +1,162 @@
+{
+  "experiment_id": "marine_pump_rp1_b0_ours_ablation_v1",
+  "version": "1.0.0",
+  "status": "frozen",
+  "frozen_at": "2026-07-30",
+  "language": "zh-CN",
+  "scope": "ship_engine_room_pump_system_research_point_1",
+  "execution_semantics": "offline_fixed_candidate_governance_ablation_no_model_or_network_calls",
+  "interpretation_boundary": {
+    "fixed_candidate_universe": true,
+    "reruns_extraction_prompts": false,
+    "measures_accuracy": false,
+    "human_expert_reviewed": false,
+    "label_policy": "Silver only; never Gold",
+    "statement": "B0-Ours在同一8003条审计候选上实施累计门控与发布消融，用于隔离治理模块的结构效应；它不是使用不同提示词重新抽取的模型端对照，也不提供事实准确率。"
+  },
+  "inputs": {
+    "raw_source_records": "data/kg/marine_pump/triples/KG_v1_raw/source_records.jsonl",
+    "raw_source_records_sha256": "6c4c4c75ba565cb9860872509742414a9957bb65def24c8c06b615a0fdb11359",
+    "cq_evaluation": "results/experiments/research_point_1/cq_v1/cq_v1_evaluation.json",
+    "cq_config": "configs/competency_questions_marine_pump_v1.json",
+    "cq_config_sha256": "9d00fffa69022a99f9f92fd32cb0bb7c129966f923048973aece627578ee8de7",
+    "source_family_summary": "results/experiments/research_point_1/source_family_support_v1/source_family_support_summary.json",
+    "constraint_report": "results/experiments/research_point_1/constraint_report_v1/graph_constraint_report.json"
+  },
+  "split_policy": {
+    "eligible_split": "build_train",
+    "eligible_build_doc_ids": [
+      "MP001",
+      "MP002",
+      "MP003",
+      "MP004",
+      "MP005",
+      "MP006",
+      "MP007",
+      "MP015",
+      "MP016",
+      "MP017",
+      "MP018",
+      "MP019",
+      "MP020",
+      "MP021",
+      "MP022"
+    ],
+    "development_doc_ids": [
+      "MP008"
+    ],
+    "held_out_test_doc_ids": [
+      "MP009",
+      "MP010",
+      "MP011",
+      "MP012",
+      "MP013"
+    ],
+    "excluded_doc_ids": [
+      "MP014"
+    ]
+  },
+  "methods": [
+    {
+      "method_id": "B0",
+      "name_zh": "固定候选扁平接受",
+      "cumulative_gates": []
+    },
+    {
+      "method_id": "B1",
+      "name_zh": "Schema约束",
+      "cumulative_gates": [
+        "relation_schema"
+      ]
+    },
+    {
+      "method_id": "B2",
+      "name_zh": "结构证据门控",
+      "cumulative_gates": [
+        "relation_schema",
+        "evidence_grounding"
+      ]
+    },
+    {
+      "method_id": "B3",
+      "name_zh": "可追溯Silver治理",
+      "cumulative_gates": [
+        "relation_schema",
+        "evidence_grounding",
+        "relation_entailment",
+        "provenance_and_split",
+        "heuristic_score"
+      ]
+    },
+    {
+      "method_id": "Ours",
+      "name_zh": "来源族与中文双门控",
+      "cumulative_gates": [
+        "relation_schema",
+        "evidence_grounding",
+        "relation_entailment",
+        "provenance_and_split",
+        "heuristic_score",
+        "chinese_release"
+      ],
+      "non_filtering_modules": [
+        "source_family_capped_corroboration",
+        "claim_evidence_layering",
+        "cq_v1_functional_evaluation"
+      ]
+    }
+  ],
+  "parameters": {
+    "silver_score_threshold": 0.8,
+    "source_family_budget": 2,
+    "bootstrap": {
+      "cluster_unit": "document",
+      "replicates": 2000,
+      "seed": 20260730,
+      "confidence_level": 0.95
+    },
+    "sensitivity": {
+      "silver_score_thresholds": [
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.925,
+        0.95,
+        0.975
+      ],
+      "source_family_budgets": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "cq_minimum_answers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "cq_minimum_source_families": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "outputs": {
+    "directory": "results/experiments/research_point_1/b0_ours_ablation_v1",
+    "report": "rp1_b0_ours_experiment_report.md"
+  }
+}

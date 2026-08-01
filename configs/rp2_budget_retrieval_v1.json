@@ -1,0 +1,74 @@
+{
+  "protocol_id": "marine_pump_rp2_budget_retrieval_v1",
+  "version": "1.0.0",
+  "status": "frozen_before_strict_heldout",
+  "frozen_at": "2026-08-01",
+  "language": "zh-CN",
+  "input_graph": "KG_v1_validated",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "online_feature_policy": {
+    "allowed": [
+      "query_text",
+      "canonical_entity_labels_zh",
+      "source_surfaces_for_anchor_matching",
+      "entity_types",
+      "relation_codes",
+      "evidence_confidence",
+      "source_family_id",
+      "precomputed_read_only_indexes"
+    ],
+    "hidden_evaluation_only": [
+      "fault_class_ids",
+      "relevant_evidence_ids",
+      "answer_entity_ids",
+      "relevance_grade"
+    ]
+  },
+  "development_benchmark": {
+    "source": "marine_pump_cq_v1@1.0.1 + KG_v1_validated",
+    "query_count": 40,
+    "candidate_pool_size": 64,
+    "answerless_queries_are_not_in_ranking_denominator": true,
+    "held_out_test": false
+  },
+  "methods": [
+    "lexical_full_scan",
+    "role_topk",
+    "metapath_topk",
+    "fixed_hop_2",
+    "adaptive_energy_prune",
+    "ours_source_family_aware_budgeted"
+  ],
+  "default_budget": {
+    "max_scored_candidates": 32,
+    "max_selected_evidence": 4,
+    "max_per_source_family": 3,
+    "deadline_ms": null,
+    "source_family_bonus": 0.12,
+    "redundancy_penalty": 0.32
+  },
+  "development_selection_rule": "Pareto non-dominated; Recall@4 >= metapath_topk@4 - 0.01; then maximize source-family coverage, minimize exact-claim redundancy, minimize p95 latency",
+  "frozen_input_hashes_sha256": {
+    "KG_v1_validated_graph_statistics.json": "FF756A9B6BDDB1502A0B7B9B5B35F19ACE6BEC8E9E1C468DBE368CD137449FCA",
+    "rp2_development_queries.jsonl": "CE1FA7B3ADB9C1CF64A769995A052680117EBFAADD72C817A5C4C27D084FD22E",
+    "rp2_development_evidence_candidates.jsonl": "0506F3818830D928BD6ADDE61EE87DB551BD59CB26F6DE87CE07CB142B0865B4"
+  },
+  "primary_metrics": [
+    "recall_at_budget_macro",
+    "mrr",
+    "ndcg_at_budget_macro",
+    "latency_ms_p50",
+    "latency_ms_p95",
+    "timeout_rate",
+    "mean_scored_candidates",
+    "mean_source_family_coverage",
+    "mean_exact_claim_redundancy"
+  ],
+  "held_out_policy": {
+    "MP009": "non_blind_transfer_only",
+    "MP010_MP013": "strict_external_test_after_protocol_freeze",
+    "must_not_tune_on_heldout": true,
+    "must_not_add_heldout_evidence_to_primary_graph": true
+  }
+}

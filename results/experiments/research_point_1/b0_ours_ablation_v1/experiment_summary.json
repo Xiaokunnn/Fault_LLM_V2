@@ -1,0 +1,578 @@
+{
+  "experiment_version": "marine_pump_rp1_b0_ours_ablation_v1",
+  "execution_semantics": "offline_fixed_candidate_governance_ablation_no_model_or_network_calls",
+  "candidate_universe": {
+    "record_count": 8003,
+    "document_count": 15,
+    "decision_counts": {
+      "candidate_needs_review": 881,
+      "rejected": 5424,
+      "silver_candidate": 1698
+    },
+    "human_expert_reviewed": false,
+    "label_policy": "Silver only; never Gold"
+  },
+  "b0_ours_comparison": [
+    {
+      "method_id": "B0",
+      "method_name_zh": "固定候选扁平接受",
+      "assertion_count": 8003,
+      "retention_from_b0": 1.0,
+      "claim_count": 7651,
+      "entity_count": 9149,
+      "document_count": 15,
+      "source_family_count": 10,
+      "fault_class_count": 10,
+      "schema_pass_rate": 0.838561,
+      "evidence_grounding_pass_rate": 0.371236,
+      "entailment_pass_rate": 0.229164,
+      "provenance_split_pass_rate": 1.0,
+      "score_pass_rate": 0.228039,
+      "chinese_release_pass_rate": 0.02599
+    },
+    {
+      "method_id": "B1",
+      "method_name_zh": "Schema约束",
+      "assertion_count": 6711,
+      "retention_from_b0": 0.838561,
+      "claim_count": 6384,
+      "entity_count": 7726,
+      "document_count": 15,
+      "source_family_count": 10,
+      "fault_class_count": 10,
+      "schema_pass_rate": 1.0,
+      "evidence_grounding_pass_rate": 0.373268,
+      "entailment_pass_rate": 0.253911,
+      "provenance_split_pass_rate": 1.0,
+      "score_pass_rate": 0.253017,
+      "chinese_release_pass_rate": 0.030994
+    },
+    {
+      "method_id": "B2",
+      "method_name_zh": "结构证据门控",
+      "assertion_count": 2505,
+      "retention_from_b0": 0.313008,
+      "claim_count": 2424,
+      "entity_count": 3712,
+      "document_count": 15,
+      "source_family_count": 10,
+      "fault_class_count": 10,
+      "schema_pass_rate": 1.0,
+      "evidence_grounding_pass_rate": 1.0,
+      "entailment_pass_rate": 0.68024,
+      "provenance_split_pass_rate": 1.0,
+      "score_pass_rate": 0.677844,
+      "chinese_release_pass_rate": 0.083034
+    },
+    {
+      "method_id": "B3",
+      "method_name_zh": "可追溯Silver治理",
+      "assertion_count": 1698,
+      "retention_from_b0": 0.21217,
+      "claim_count": 1650,
+      "entity_count": 2613,
+      "document_count": 15,
+      "source_family_count": 10,
+      "fault_class_count": 10,
+      "schema_pass_rate": 1.0,
+      "evidence_grounding_pass_rate": 1.0,
+      "entailment_pass_rate": 1.0,
+      "provenance_split_pass_rate": 1.0,
+      "score_pass_rate": 1.0,
+      "chinese_release_pass_rate": 0.122497
+    },
+    {
+      "method_id": "Ours",
+      "method_name_zh": "来源族与中文双门控",
+      "assertion_count": 208,
+      "retention_from_b0": 0.02599,
+      "claim_count": 203,
+      "entity_count": 281,
+      "document_count": 14,
+      "source_family_count": 10,
+      "fault_class_count": 10,
+      "schema_pass_rate": 1.0,
+      "evidence_grounding_pass_rate": 1.0,
+      "entailment_pass_rate": 1.0,
+      "provenance_split_pass_rate": 1.0,
+      "score_pass_rate": 1.0,
+      "chinese_release_pass_rate": 1.0
+    }
+  ],
+  "incremental_gate_ablation": [
+    {
+      "module": "relation_schema",
+      "module_name_zh": "关系Schema与Domain/Range",
+      "input_count": 8003,
+      "output_count": 6711,
+      "removed_count": 1292,
+      "removed_rate": 0.161439
+    },
+    {
+      "module": "evidence_grounding",
+      "module_name_zh": "E1/E2原文与表格对齐",
+      "input_count": 6711,
+      "output_count": 2505,
+      "removed_count": 4206,
+      "removed_rate": 0.626732
+    },
+    {
+      "module": "relation_entailment",
+      "module_name_zh": "关系语义蕴含",
+      "input_count": 2505,
+      "output_count": 1704,
+      "removed_count": 801,
+      "removed_rate": 0.31976
+    },
+    {
+      "module": "provenance_and_split",
+      "module_name_zh": "溯源与文档划分",
+      "input_count": 1704,
+      "output_count": 1704,
+      "removed_count": 0,
+      "removed_rate": 0.0
+    },
+    {
+      "module": "heuristic_score",
+      "module_name_zh": "启发式分数阈值",
+      "input_count": 1704,
+      "output_count": 1698,
+      "removed_count": 6,
+      "removed_rate": 0.003521
+    },
+    {
+      "module": "chinese_release",
+      "module_name_zh": "中文术语发布门控",
+      "input_count": 1698,
+      "output_count": 208,
+      "removed_count": 1490,
+      "removed_rate": 0.877503
+    }
+  ],
+  "specific_module_ablation": [
+    {
+      "ablation": "release_e3",
+      "name_zh": "将E3并入自动发布",
+      "effect_value": 400,
+      "effect_unit": "条E3重建证据失去人工隔离",
+      "interpretation": "这些记录不应被自动等同于E1/E2。"
+    },
+    {
+      "ablation": "flatten_claim_evidence",
+      "name_zh": "扁平化Claim与Evidence",
+      "effect_value": 48,
+      "effect_unit": "条额外来源断言被覆盖",
+      "interpretation": "30个多证据Claim受到影响。"
+    },
+    {
+      "ablation": "document_count_as_independence",
+      "name_zh": "以文档数代替来源族",
+      "effect_value": 1.0,
+      "effect_unit": "文档计数相对放大率",
+      "interpretation": "同族复制后文档计数翻倍，但来源族封顶指数变化为0。"
+    },
+    {
+      "ablation": "remove_chinese_gate",
+      "name_zh": "去除中文术语发布门控",
+      "effect_value": 1490,
+      "effect_unit": "条非中文发布就绪记录会混入",
+      "interpretation": "证据Silver不等于中文规范实体发布就绪。"
+    },
+    {
+      "ablation": "remove_cq",
+      "name_zh": "去除CQ功能评价",
+      "effect_value": 6,
+      "effect_unit": "个功能缺口将不可见",
+      "interpretation": "图谱规模不能替代可回答问题覆盖。"
+    }
+  ],
+  "sensitivity": {
+    "silver_score_threshold": [
+      {
+        "threshold": 0.6,
+        "assertion_count": 1704,
+        "claim_count": 1656,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 1.0
+      },
+      {
+        "threshold": 0.65,
+        "assertion_count": 1702,
+        "claim_count": 1654,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.998826
+      },
+      {
+        "threshold": 0.7,
+        "assertion_count": 1702,
+        "claim_count": 1654,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.998826
+      },
+      {
+        "threshold": 0.75,
+        "assertion_count": 1701,
+        "claim_count": 1653,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.998239
+      },
+      {
+        "threshold": 0.8,
+        "assertion_count": 1698,
+        "claim_count": 1650,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.996479
+      },
+      {
+        "threshold": 0.85,
+        "assertion_count": 1678,
+        "claim_count": 1630,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.984742
+      },
+      {
+        "threshold": 0.9,
+        "assertion_count": 1525,
+        "claim_count": 1483,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.894953
+      },
+      {
+        "threshold": 0.925,
+        "assertion_count": 895,
+        "claim_count": 863,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.525235
+      },
+      {
+        "threshold": 0.95,
+        "assertion_count": 867,
+        "claim_count": 835,
+        "fault_class_count": 10,
+        "retention_from_hard_gate": 0.508803
+      },
+      {
+        "threshold": 0.975,
+        "assertion_count": 36,
+        "claim_count": 34,
+        "fault_class_count": 8,
+        "retention_from_hard_gate": 0.021127
+      }
+    ],
+    "source_family_budget": [
+      {
+        "claim_count": 1650,
+        "eligible_assertion_count": 1698,
+        "claims_with_at_least_two_families": 0,
+        "claims_with_multiple_documents": 3,
+        "mean_family_count": 1.0,
+        "mean_doc_count": 1.001818,
+        "support_index": {
+          "minimum": 0.8,
+          "p25": 0.9,
+          "median": 0.95,
+          "mean": 0.922116,
+          "p75": 0.95,
+          "maximum": 0.98,
+          "count_ge_0_5": 1650,
+          "count_ge_0_8": 1650
+        },
+        "budget": 1
+      },
+      {
+        "claim_count": 1650,
+        "eligible_assertion_count": 1698,
+        "claims_with_at_least_two_families": 0,
+        "claims_with_multiple_documents": 3,
+        "mean_family_count": 1.0,
+        "mean_doc_count": 1.001818,
+        "support_index": {
+          "minimum": 0.4,
+          "p25": 0.45,
+          "median": 0.475,
+          "mean": 0.461058,
+          "p75": 0.475,
+          "maximum": 0.49,
+          "count_ge_0_5": 0,
+          "count_ge_0_8": 0
+        },
+        "budget": 2
+      },
+      {
+        "claim_count": 1650,
+        "eligible_assertion_count": 1698,
+        "claims_with_at_least_two_families": 0,
+        "claims_with_multiple_documents": 3,
+        "mean_family_count": 1.0,
+        "mean_doc_count": 1.001818,
+        "support_index": {
+          "minimum": 0.266667,
+          "p25": 0.3,
+          "median": 0.316667,
+          "mean": 0.307372,
+          "p75": 0.316667,
+          "maximum": 0.326667,
+          "count_ge_0_5": 0,
+          "count_ge_0_8": 0
+        },
+        "budget": 3
+      },
+      {
+        "claim_count": 1650,
+        "eligible_assertion_count": 1698,
+        "claims_with_at_least_two_families": 0,
+        "claims_with_multiple_documents": 3,
+        "mean_family_count": 1.0,
+        "mean_doc_count": 1.001818,
+        "support_index": {
+          "minimum": 0.2,
+          "p25": 0.225,
+          "median": 0.2375,
+          "mean": 0.230529,
+          "p75": 0.2375,
+          "maximum": 0.245,
+          "count_ge_0_5": 0,
+          "count_ge_0_8": 0
+        },
+        "budget": 4
+      }
+    ],
+    "cq": {
+      "minimum_answers": [
+        {
+          "minimum_answers": 1,
+          "answerable_task_count": 34,
+          "task_count": 40,
+          "answerable_rate": 0.85
+        },
+        {
+          "minimum_answers": 2,
+          "answerable_task_count": 28,
+          "task_count": 40,
+          "answerable_rate": 0.7
+        },
+        {
+          "minimum_answers": 3,
+          "answerable_task_count": 23,
+          "task_count": 40,
+          "answerable_rate": 0.575
+        },
+        {
+          "minimum_answers": 4,
+          "answerable_task_count": 18,
+          "task_count": 40,
+          "answerable_rate": 0.45
+        },
+        {
+          "minimum_answers": 5,
+          "answerable_task_count": 17,
+          "task_count": 40,
+          "answerable_rate": 0.425
+        },
+        {
+          "minimum_answers": 6,
+          "answerable_task_count": 16,
+          "task_count": 40,
+          "answerable_rate": 0.4
+        },
+        {
+          "minimum_answers": 7,
+          "answerable_task_count": 10,
+          "task_count": 40,
+          "answerable_rate": 0.25
+        },
+        {
+          "minimum_answers": 8,
+          "answerable_task_count": 8,
+          "task_count": 40,
+          "answerable_rate": 0.2
+        },
+        {
+          "minimum_answers": 9,
+          "answerable_task_count": 7,
+          "task_count": 40,
+          "answerable_rate": 0.175
+        },
+        {
+          "minimum_answers": 10,
+          "answerable_task_count": 6,
+          "task_count": 40,
+          "answerable_rate": 0.15
+        }
+      ],
+      "minimum_source_families": [
+        {
+          "minimum_source_families": 1,
+          "answerable_task_count": 34,
+          "task_count": 40,
+          "answerable_rate": 0.85
+        },
+        {
+          "minimum_source_families": 2,
+          "answerable_task_count": 28,
+          "task_count": 40,
+          "answerable_rate": 0.7
+        },
+        {
+          "minimum_source_families": 3,
+          "answerable_task_count": 18,
+          "task_count": 40,
+          "answerable_rate": 0.45
+        },
+        {
+          "minimum_source_families": 4,
+          "answerable_task_count": 10,
+          "task_count": 40,
+          "answerable_rate": 0.25
+        },
+        {
+          "minimum_source_families": 5,
+          "answerable_task_count": 4,
+          "task_count": 40,
+          "answerable_rate": 0.1
+        }
+      ]
+    }
+  },
+  "bootstrap": {
+    "stage_retention": [
+      {
+        "metric": "retention_from_b0",
+        "cluster_unit": "document",
+        "method_id": "B0",
+        "estimate": 1.0,
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "confidence_level": 0.95,
+        "replicates": 2000,
+        "seed": 20260730
+      },
+      {
+        "metric": "retention_from_b0",
+        "cluster_unit": "document",
+        "method_id": "B1",
+        "estimate": 0.838561,
+        "ci_lower": 0.80873,
+        "ci_upper": 0.882299,
+        "confidence_level": 0.95,
+        "replicates": 2000,
+        "seed": 20260730
+      },
+      {
+        "metric": "retention_from_b0",
+        "cluster_unit": "document",
+        "method_id": "B2",
+        "estimate": 0.313008,
+        "ci_lower": 0.208654,
+        "ci_upper": 0.404474,
+        "confidence_level": 0.95,
+        "replicates": 2000,
+        "seed": 20260730
+      },
+      {
+        "metric": "retention_from_b0",
+        "cluster_unit": "document",
+        "method_id": "B3",
+        "estimate": 0.21217,
+        "ci_lower": 0.149323,
+        "ci_upper": 0.276385,
+        "confidence_level": 0.95,
+        "replicates": 2000,
+        "seed": 20260730
+      },
+      {
+        "metric": "retention_from_b0",
+        "cluster_unit": "document",
+        "method_id": "Ours",
+        "estimate": 0.02599,
+        "ci_lower": 0.015049,
+        "ci_upper": 0.043449,
+        "confidence_level": 0.95,
+        "replicates": 2000,
+        "seed": 20260730
+      }
+    ],
+    "cq_answerability": {
+      "metric": "traceable_structure_answerability",
+      "cluster_unit": "fault_class",
+      "estimate": 0.85,
+      "ci_lower": 0.725,
+      "ci_upper": 0.975,
+      "confidence_level": 0.95,
+      "replicates": 2000,
+      "seed": 20260731
+    }
+  },
+  "source_family_result": {
+    "eligible_assertion_count": 1698,
+    "claim_count": 1650,
+    "claims_with_at_least_two_families": 0,
+    "observed_multi_document_claims": 3,
+    "observed_multi_document_single_family_claims": 3,
+    "replication_invariance_passed": true,
+    "replication_doc_count_amplification": 2.0,
+    "replication_maximum_index_delta": 0.0
+  },
+  "cq_result": {
+    "task_count": 40,
+    "answerable_task_count": 34,
+    "traceable_structure_answerability": 0.85,
+    "metric_is_accuracy": false
+  },
+  "constraint_result": {
+    "check_count": 36,
+    "release_blocking_check_count": 0,
+    "release_blocked": false,
+    "is_shacl_or_rdf_validation": false
+  },
+  "conclusion_boundaries": {
+    "fixed_candidate_offline_ablation": true,
+    "prompt_level_extraction_comparison": false,
+    "factual_accuracy_measured": false,
+    "natural_cross_family_discriminative_validity_observed": false,
+    "research_point_1_complete": false
+  },
+  "generated_at_utc": "2026-07-30T12:41:11.342725+00:00",
+  "input_provenance": {
+    "config": {
+      "path": "configs/rp1_b0_ours_experiment_v1.json",
+      "sha256": "1464dc1d7cc00501d2a80e9c8e7b6d1702dfc94848205dd45c0d15deb8f13736",
+      "size_bytes": 4078
+    },
+    "raw_source_records": {
+      "path": "data/kg/marine_pump/triples/KG_v1_raw/source_records.jsonl",
+      "sha256": "6c4c4c75ba565cb9860872509742414a9957bb65def24c8c06b615a0fdb11359",
+      "size_bytes": 61442822
+    },
+    "cq_config": {
+      "path": "configs/competency_questions_marine_pump_v1.json",
+      "sha256": "9d00fffa69022a99f9f92fd32cb0bb7c129966f923048973aece627578ee8de7",
+      "size_bytes": 13871
+    },
+    "cq_report": {
+      "path": "results/experiments/research_point_1/cq_v1/cq_v1_evaluation.json",
+      "sha256": "a400f142b028bd78e1241d1a0a59f57f421241dc1e506887d66cd48b7e09c007"
+    },
+    "source_family_summary": {
+      "path": "results/experiments/research_point_1/source_family_support_v1/source_family_support_summary.json",
+      "sha256": "49d5f80e6288e6575151b89c671785375a26af782793779ca3da2ded86b6f5ed"
+    },
+    "constraint_report": {
+      "path": "results/experiments/research_point_1/constraint_report_v1/graph_constraint_report.json",
+      "sha256": "dbb681f376472b16544684ffc23d26d69e2d71de6f14049336e363bf9bfd8be0"
+    },
+    "cross_input_consistency_passed": true
+  },
+  "config_version": "1.0.0",
+  "config_status": "frozen",
+  "figure_files": [
+    "b0_ours_overview.png",
+    "b0_ours_overview.svg",
+    "cq_fault_role_heatmap.png",
+    "cq_fault_role_heatmap.svg",
+    "parameter_sensitivity.png",
+    "parameter_sensitivity.svg",
+    "ablation_and_replication.png",
+    "ablation_and_replication.svg"
+  ]
+}

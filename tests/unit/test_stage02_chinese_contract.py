@@ -110,6 +110,16 @@ class ChineseExtractionContractTests(unittest.TestCase):
         self.assertIn("Component不能作为manifests_as的头实体", prompt)
         self.assertIn("initial leakage", prompt)
 
+    def test_real_api_ablation_prompts_are_versioned(self) -> None:
+        b0 = system_prompt_for_version("marine_pump_api_ablation_b0")
+        b1 = system_prompt_for_version("marine_pump_api_ablation_b1")
+        b2 = system_prompt_for_version("marine_pump_api_ablation_b2")
+        b3 = system_prompt_for_version("marine_pump_api_ablation_b3")
+        self.assertNotIn("实体类型只能使用", b0)
+        self.assertIn("实体类型只能使用", b1)
+        self.assertIn("E2必须列出", b2)
+        self.assertIn("关系方向必须", b3)
+
     def test_non_chinese_canonical_label_is_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "Han"):
             normalize_model_candidate(

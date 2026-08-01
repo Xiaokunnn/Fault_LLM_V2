@@ -1,0 +1,148 @@
+{
+  "summary_version": "marine_pump_rp1_graph_quality_v1",
+  "generated_at_utc": "2026-07-30T10:12:12.549582+00:00",
+  "scope": "ship_engine_room_pump_system_research_point_1",
+  "execution_semantics": "local_only_no_model_or_network_calls",
+  "input_reports": {
+    "cq_v1": {
+      "path": "results/experiments/research_point_1/cq_v1/cq_v1_evaluation.json",
+      "sha256": "a400f142b028bd78e1241d1a0a59f57f421241dc1e506887d66cd48b7e09c007",
+      "size_bytes": 211688
+    },
+    "source_family_support_v1": {
+      "path": "results/experiments/research_point_1/source_family_support_v1/source_family_support_summary.json",
+      "sha256": "49d5f80e6288e6575151b89c671785375a26af782793779ca3da2ded86b6f5ed",
+      "size_bytes": 8746
+    },
+    "constraint_report_v1": {
+      "path": "results/experiments/research_point_1/constraint_report_v1/graph_constraint_report.json",
+      "sha256": "dbb681f376472b16544684ffc23d26d69e2d71de6f14049336e363bf9bfd8be0",
+      "size_bytes": 26963
+    }
+  },
+  "cross_report_graph_input_consistency": {
+    "passed": true,
+    "policy": "CQ KG_v1_validated five-layer hashes must equal constraint KG_v1_validated; source-family KG_v1_raw source_records hash must equal constraint KG_v1_raw.",
+    "kg_v1_validated_layer_sha256": {
+      "entities.jsonl": "3d9850431b75c0ca704ede368d5247f838a38191e11539a4d55525b1575f8b45",
+      "claims.jsonl": "13347eabd82f8d0324791a42abe7c9f2162a76e04bc5142567576cd48563e861",
+      "evidence_assertions.jsonl": "1a6d91987a955fd9aa4bdd61105a6aec5b2636e624a6d8868b9b9d1d9c59270a",
+      "claim_evidence_links.jsonl": "50afcd1568f7474b083edaf636f3d5e7e239d8b9be321d9e68cdb17ebb7af8de",
+      "source_records.jsonl": "85e0fc2782c21034a8e292f83cf0a9b529fc19f3348e77521f6d847484a60a6f"
+    },
+    "kg_v1_raw_source_records_sha256": "6c4c4c75ba565cb9860872509742414a9957bb65def24c8c06b615a0fdb11359"
+  },
+  "cq_v1": {
+    "task_count": 40,
+    "answerable_task_count": 34,
+    "traceable_structure_answerability": 0.85,
+    "unanswerable_task_count": 6,
+    "unanswerable_tasks": [
+      {
+        "cq_id": "CQ-F01-INS",
+        "fault_id": "cavitation",
+        "fault_name_zh": "汽蚀",
+        "role": "inspection",
+        "role_name_zh": "检查",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      },
+      {
+        "cq_id": "CQ-F02-SYM",
+        "fault_id": "air_ingress_or_loss_of_prime",
+        "fault_name_zh": "空气侵入或失去自吸",
+        "role": "symptom",
+        "role_name_zh": "症状",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      },
+      {
+        "cq_id": "CQ-F02-INS",
+        "fault_id": "air_ingress_or_loss_of_prime",
+        "fault_name_zh": "空气侵入或失去自吸",
+        "role": "inspection",
+        "role_name_zh": "检查",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      },
+      {
+        "cq_id": "CQ-F03-SYM",
+        "fault_id": "hydraulic_blockage",
+        "fault_name_zh": "流道、叶轮、过滤器或管路堵塞",
+        "role": "symptom",
+        "role_name_zh": "症状",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      },
+      {
+        "cq_id": "CQ-F08-SYM",
+        "fault_id": "motor_electrical_drive_failure",
+        "fault_name_zh": "电机缺相、过载或电气驱动异常",
+        "role": "symptom",
+        "role_name_zh": "症状",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      },
+      {
+        "cq_id": "CQ-F08-INS",
+        "fault_id": "motor_electrical_drive_failure",
+        "fault_name_zh": "电机缺相、过载或电气驱动异常",
+        "role": "inspection",
+        "role_name_zh": "检查",
+        "reason_codes": [
+          "no_legal_semantic_path"
+        ]
+      }
+    ],
+    "metric_is_accuracy": false
+  },
+  "source_family_corroboration_v1": {
+    "eligible_silver_assertions": 1698,
+    "claim_count": 1650,
+    "claims_with_at_least_two_families": 0,
+    "budget": 2,
+    "mean_index": 0.461058,
+    "median_index": 0.475,
+    "same_family_replication_invariance_passed": true,
+    "maximum_replication_index_delta": 0.0,
+    "observed_multiple_document_claim_count": 3,
+    "observed_multiple_document_single_family_claim_count": 3,
+    "observed_same_family_collapse_audit_passed": true,
+    "changes_existing_silver_labels": false,
+    "metric_is_probability_or_independence_proof": false
+  },
+  "constraint_report_v1": {
+    "check_count": 36,
+    "failed_check_count": 1,
+    "release_blocking_check_count": 0,
+    "release_blocked": false,
+    "validator_kind": "custom_python_graph_constraint_profile",
+    "is_shacl_or_rdf_validation": false
+  },
+  "readiness": {
+    "three_input_reports_aggregated": true,
+    "release_constraints_passed": true,
+    "same_family_replication_property_verified": true,
+    "observed_same_family_multi_document_property_verified": true,
+    "full_40_cq_structural_coverage": false,
+    "natural_cross_family_claim_corroboration_observed": false,
+    "ablation_experiments_completed": false,
+    "pipeline_ready_to_start_experiments": true,
+    "method_evidence_complete": false,
+    "research_point_1_complete": false,
+    "recommended_next_stage": "baseline_and_ablation_experiments_with_observed_cq_and_claim_alignment_gaps_reported"
+  },
+  "limitations": [
+    "冻结的CQ v1中有6个任务在KG_v1_validated中不存在可追溯合法答案路径。",
+    "没有精确Claim ID获得两个来源族的自然佐证；当前来源族实验只验证了同族复制不变性。",
+    "约束报告含非阻断失败或警告，需结合Markdown明细解释。",
+    "基线、消融和自然跨来源族区分实验尚未完成。"
+  ],
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

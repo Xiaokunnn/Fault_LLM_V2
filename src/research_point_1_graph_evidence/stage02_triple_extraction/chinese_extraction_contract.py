@@ -217,7 +217,50 @@ SYSTEM_PROMPT_ZH_V4_FULL_CORPUS = (
 )
 
 
+API_ABLATION_OUTPUT_CONTRACT = f"""
+为保证各对照的输出可比，只返回JSON对象，结构为：
+{{"triples":[{{"head_surface":"原文实体","head_canonical_zh":"中文候选名",
+"head_type":"实体类型","relation":"关系","tail_surface":"原文实体",
+"tail_canonical_zh":"中文候选名","tail_type":"实体类型",
+"evidence_text":"原文证据","evidence_mode":"E1_contiguous_text",
+"evidence_unit_ids":[],"evidence_role":"cause_or_mechanism","fault_class_ids":[],
+"model_confidence":0.0,"head_translation_confidence":0.0,
+"tail_translation_confidence":0.0}}],"warnings":[]}}
+中文规范名只是自动候选，不是人工确认术语。
+"""
+
+SYSTEM_PROMPT_API_B0 = """从单个船舶机舱泵系技术文档页面中抽取有用事实。
+自行选择实体类型、关系名称和证据文本，不要补充页面外常识。
+""" + API_ABLATION_OUTPUT_CONTRACT
+
+SYSTEM_PROMPT_API_B1 = f"""从单个船舶机舱泵系技术文档页面中抽取候选三元组。
+实体类型只能使用 {", ".join(NODE_TYPES)}。
+关系只能使用 {", ".join(RELATIONS)}。
+两端surface保留原文，不得用中文译文代替。
+""" + API_ABLATION_OUTPUT_CONTRACT
+
+SYSTEM_PROMPT_API_B2 = SYSTEM_PROMPT_API_B1 + """
+证据对齐要求：E1必须是包含两端surface的单一连续原文跨度；
+E2必须列出同一行或已验证同行组内、同时覆盖两端的单元格ID。
+不得跨页、拼接远距离文本或使用省略号。
+"""
+
+SYSTEM_PROMPT_API_B3 = SYSTEM_PROMPT_API_B2 + """
+关系方向必须与原文语义一致，例如原因/机理/工况 -> causes -> 故障/症状；
+故障/机理 -> manifests_as -> 症状；故障/原因 -> diagnosed_by -> 检查方法。
+保留条件、否定和适用范围，仅抽取DOCUMENT_METADATA声明的泵型、服务与故障范围内事实。
+"""
+
+
 def system_prompt_for_version(prompt_version: str) -> str:
+    if prompt_version == "marine_pump_api_ablation_b0":
+        return SYSTEM_PROMPT_API_B0
+    if prompt_version == "marine_pump_api_ablation_b1":
+        return SYSTEM_PROMPT_API_B1
+    if prompt_version == "marine_pump_api_ablation_b2":
+        return SYSTEM_PROMPT_API_B2
+    if prompt_version == "marine_pump_api_ablation_b3":
+        return SYSTEM_PROMPT_API_B3
     if prompt_version == "marine_pump_full_corpus_prompt_v4":
         return SYSTEM_PROMPT_ZH_V4_FULL_CORPUS
     if prompt_version == "marine_pump_symptom_role_repair_prompt_v3":

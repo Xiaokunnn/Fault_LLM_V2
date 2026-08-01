@@ -41,6 +41,13 @@ from .fault_class_mapper import (
     load_fault_ontology,
     map_fault_classes,
 )
+from .graph_constraint_report import (
+    GraphPackage,
+    generate_graph_constraint_report,
+    load_graph_package,
+    render_graph_constraint_report_markdown,
+    write_graph_constraint_report,
+)
 from .relation_entailment_validator import (
     RelationEntailmentValidation,
     validate_relation_entailment,
@@ -72,6 +79,7 @@ __all__ = [
     "E3",
     "EvidenceSpanValidation",
     "FaultClassMapping",
+    "GraphPackage",
     "RelationEntailmentValidation",
     "RelationTypeValidation",
     "SurfaceSpan",
@@ -86,8 +94,10 @@ __all__ = [
     "default_terminology_path",
     "default_ontology_path",
     "enrich_stable_ids",
+    "generate_graph_constraint_report",
     "is_build_coverage_eligible",
     "load_fault_ontology",
+    "load_graph_package",
     "load_chinese_terminology",
     "load_provenance_schema",
     "locate_surface",
@@ -96,6 +106,7 @@ __all__ = [
     "normalize_identity_text",
     "normalize_lookup_text",
     "normalize_relation_direction",
+    "render_graph_constraint_report_markdown",
     "stable_claim_id",
     "stable_entity_id",
     "stable_evidence_id",
@@ -106,4 +117,5 @@ __all__ = [
     "validate_table_alignment",
     "validate_candidate",
     "validate_chinese_canonicalization",
+    "write_graph_constraint_report",
 ]

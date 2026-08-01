@@ -1,0 +1,306 @@
+{
+  "analysis_version": "marine_pump_source_family_support_v1",
+  "formula": {
+    "family_cap": "s_f(c)=max_{a_i in A_f(c)} q_i",
+    "claim_index": "S_fam^B(c)=(1/B)*sum_{j=1}^{min(B,|F_c|)} s_(j)(c)",
+    "q": "q_i=model_confidence*w_E(evidence_level)*w_R(entailment_status)",
+    "missing_family_slots": "zero"
+  },
+  "budget": 2,
+  "minimum_heuristic_score": 0.8,
+  "metric_semantics": "heuristic_corroboration_index_not_probability_or_independence_proof",
+  "changes_existing_silver_labels": false,
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold",
+  "eligibility_audit": {
+    "input_record_count": 8003,
+    "eligible_assertion_count": 1698,
+    "excluded_record_count": 6305,
+    "exclusion_reason_counts_nonexclusive": {
+      "decision_not_silver": 6305,
+      "entailment_not_silver_eligible": 6169,
+      "evidence_invalid": 4632,
+      "evidence_level_not_e1_e2": 1572,
+      "evidence_not_silver_eligible": 5032,
+      "heuristic_score_below_minimum": 6178,
+      "relation_entailment_not_entailed": 6169,
+      "relation_type_invalid": 1292
+    },
+    "required": [
+      "decision in {silver_candidate, accepted_silver}",
+      "document_split == build_train",
+      "doc_id in frozen build set MP001-MP007, MP015-MP022",
+      "evidence_level in {E1, E2}",
+      "inferred_edge != true",
+      "stable claim_id, doc_id and source_family_id",
+      "relation type valid",
+      "relation entailment valid and Silver-eligible",
+      "evidence valid and Silver-eligible",
+      "q_i >= 0.8"
+    ],
+    "frozen_build_doc_ids": [
+      "MP001",
+      "MP002",
+      "MP003",
+      "MP004",
+      "MP005",
+      "MP006",
+      "MP007",
+      "MP015",
+      "MP016",
+      "MP017",
+      "MP018",
+      "MP019",
+      "MP020",
+      "MP021",
+      "MP022"
+    ],
+    "eligible_doc_ids": [
+      "MP001",
+      "MP002",
+      "MP003",
+      "MP004",
+      "MP005",
+      "MP006",
+      "MP007",
+      "MP015",
+      "MP016",
+      "MP017",
+      "MP018",
+      "MP019",
+      "MP020",
+      "MP021",
+      "MP022"
+    ]
+  },
+  "claim_summary": {
+    "claim_count": 1650,
+    "eligible_assertion_count": 1698,
+    "claims_with_at_least_two_families": 0,
+    "claims_with_multiple_documents": 3,
+    "mean_family_count": 1.0,
+    "mean_doc_count": 1.001818,
+    "support_index": {
+      "minimum": 0.4,
+      "p25": 0.45,
+      "median": 0.475,
+      "mean": 0.461058,
+      "p75": 0.475,
+      "maximum": 0.49,
+      "count_ge_0_5": 0,
+      "count_ge_0_8": 0
+    }
+  },
+  "multi_document_same_family_audit": {
+    "multiple_document_claim_count": 3,
+    "multiple_document_single_family_claim_count": 3,
+    "multiple_document_multiple_family_claim_count": 0,
+    "all_observed_multiple_document_claims_are_single_family": true,
+    "claims": [
+      {
+        "claim_id": "MPC-36747723ee45d8d1a897",
+        "doc_count": 2,
+        "doc_ids": [
+          "MP004",
+          "MP005"
+        ],
+        "family_count": 1,
+        "source_family_ids": [
+          "DESMI"
+        ],
+        "source_family_support_index": 0.45125
+      },
+      {
+        "claim_id": "MPC-b2e161b88d30c30d619b",
+        "doc_count": 2,
+        "doc_ids": [
+          "MP001",
+          "MP002"
+        ],
+        "family_count": 1,
+        "source_family_ids": [
+          "ABS"
+        ],
+        "source_family_support_index": 0.475
+      },
+      {
+        "claim_id": "MPC-c6f9b9bfa94ad7a6a3a6",
+        "doc_count": 2,
+        "doc_ids": [
+          "MP004",
+          "MP005"
+        ],
+        "family_count": 1,
+        "source_family_ids": [
+          "DESMI"
+        ],
+        "source_family_support_index": 0.475
+      }
+    ],
+    "interpretation": "This is an exact-Claim audit. It does not merge semantically similar Claims and does not imply class-level source coverage."
+  },
+  "source_family_distribution": [
+    {
+      "source_family_id": "ABS",
+      "eligible_assertion_count": 648,
+      "document_count": 3,
+      "claim_count": 646
+    },
+    {
+      "source_family_id": "DESMI",
+      "eligible_assertion_count": 362,
+      "document_count": 4,
+      "claim_count": 356
+    },
+    {
+      "source_family_id": "ABB",
+      "eligible_assertion_count": 143,
+      "document_count": 1,
+      "claim_count": 141
+    },
+    {
+      "source_family_id": "PATTERSON_PUMP",
+      "eligible_assertion_count": 126,
+      "document_count": 1,
+      "claim_count": 126
+    },
+    {
+      "source_family_id": "SPX_FLOW__JOHNSON_PUMP",
+      "eligible_assertion_count": 121,
+      "document_count": 1,
+      "claim_count": 116
+    },
+    {
+      "source_family_id": "XYLEM__JABSCO",
+      "eligible_assertion_count": 114,
+      "document_count": 1,
+      "claim_count": 96
+    },
+    {
+      "source_family_id": "ALFA_LAVAL",
+      "eligible_assertion_count": 97,
+      "document_count": 1,
+      "claim_count": 82
+    },
+    {
+      "source_family_id": "INDICOR__CORNELL_PUMP",
+      "eligible_assertion_count": 49,
+      "document_count": 1,
+      "claim_count": 49
+    },
+    {
+      "source_family_id": "IDEX__VIKING_PUMP",
+      "eligible_assertion_count": 34,
+      "document_count": 1,
+      "claim_count": 34
+    },
+    {
+      "source_family_id": "GORMAN_RUPP",
+      "eligible_assertion_count": 4,
+      "document_count": 1,
+      "claim_count": 4
+    }
+  ],
+  "budget_sensitivity": [
+    {
+      "claim_count": 1650,
+      "eligible_assertion_count": 1698,
+      "claims_with_at_least_two_families": 0,
+      "claims_with_multiple_documents": 3,
+      "mean_family_count": 1.0,
+      "mean_doc_count": 1.001818,
+      "support_index": {
+        "minimum": 0.8,
+        "p25": 0.9,
+        "median": 0.95,
+        "mean": 0.922116,
+        "p75": 0.95,
+        "maximum": 0.98,
+        "count_ge_0_5": 1650,
+        "count_ge_0_8": 1650
+      },
+      "budget": 1
+    },
+    {
+      "claim_count": 1650,
+      "eligible_assertion_count": 1698,
+      "claims_with_at_least_two_families": 0,
+      "claims_with_multiple_documents": 3,
+      "mean_family_count": 1.0,
+      "mean_doc_count": 1.001818,
+      "support_index": {
+        "minimum": 0.4,
+        "p25": 0.45,
+        "median": 0.475,
+        "mean": 0.461058,
+        "p75": 0.475,
+        "maximum": 0.49,
+        "count_ge_0_5": 0,
+        "count_ge_0_8": 0
+      },
+      "budget": 2
+    },
+    {
+      "claim_count": 1650,
+      "eligible_assertion_count": 1698,
+      "claims_with_at_least_two_families": 0,
+      "claims_with_multiple_documents": 3,
+      "mean_family_count": 1.0,
+      "mean_doc_count": 1.001818,
+      "support_index": {
+        "minimum": 0.266667,
+        "p25": 0.3,
+        "median": 0.316667,
+        "mean": 0.307372,
+        "p75": 0.316667,
+        "maximum": 0.326667,
+        "count_ge_0_5": 0,
+        "count_ge_0_8": 0
+      },
+      "budget": 3
+    },
+    {
+      "claim_count": 1650,
+      "eligible_assertion_count": 1698,
+      "claims_with_at_least_two_families": 0,
+      "claims_with_multiple_documents": 3,
+      "mean_family_count": 1.0,
+      "mean_doc_count": 1.001818,
+      "support_index": {
+        "minimum": 0.2,
+        "p25": 0.225,
+        "median": 0.2375,
+        "mean": 0.230529,
+        "p75": 0.2375,
+        "maximum": 0.245,
+        "count_ge_0_5": 0,
+        "count_ge_0_8": 0
+      },
+      "budget": 4
+    }
+  ],
+  "replication_invariance_experiment": {
+    "experiment": "same_source_family_replication_invariance",
+    "budget": 2,
+    "synthetic_copies_per_assertion": 1,
+    "claims_tested": 1650,
+    "eligible_assertions_before": 1698,
+    "eligible_assertions_after": 3396,
+    "sum_claim_doc_counts_before": 1653,
+    "sum_claim_doc_counts_after": 3306,
+    "claims_with_increased_doc_count": 1650,
+    "claims_with_changed_family_count": 0,
+    "claims_with_changed_support_index": 0,
+    "maximum_absolute_index_delta": 0.0,
+    "invariance_passed": true,
+    "interpretation": "Synthetic documents retain the original source_family_id. Document counts must rise while family-capped scores remain unchanged."
+  },
+  "generated_at_utc": "2026-07-30T10:12:01.025215+00:00",
+  "input": "data/kg/marine_pump/triples/KG_v1_raw/source_records.jsonl",
+  "input_provenance": {
+    "path": "data/kg/marine_pump/triples/KG_v1_raw/source_records.jsonl",
+    "source_records_sha256": "6C4C4C75BA565CB9860872509742414A9957BB65DEF24C8C06B615A0FDB11359",
+    "size_bytes": 61442822
+  },
+  "output_directory": "results/experiments/research_point_1/source_family_support_v1"
+}

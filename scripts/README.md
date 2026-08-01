@@ -51,3 +51,13 @@ powershell -ExecutionPolicy Bypass -File scripts/run_corpus_pipeline_secure.ps1 
 - `build_fault_coverage_matrix.py`：合并严格证据覆盖与构建集词法候选页，生成类别缺口矩阵。
 
 其中 `run_bailian_triple_pilot.mjs` 只用于复现历史四页试抽取。下一轮24页正式抽取必须先完成 `layout_v2` 解析，并遵循 `stage02_triple_extraction/chinese_extraction_contract.py` 的“原文surface + 中文规范名候选”契约；当前尚未提供或运行正式API传输脚本。
+
+## 研究点一：B0–Ours、消融与敏感性实验
+
+在冻结的8003条审计候选上执行纯本地累计治理对照、关键模块消融、文档/故障类聚类bootstrap、参数敏感性和数据可视化：
+
+```powershell
+python scripts/run_rp1_b0_ours_experiments.py
+```
+
+该命令不调用模型或网络。实验配置冻结在 `configs/rp1_b0_ours_experiment_v1.json`，默认输出到 `results/experiments/research_point_1/b0_ours_ablation_v1/`。这里的B0–Ours是同一候选集合上的治理门控对照，不是不同提示词的模型端重新抽取对照。

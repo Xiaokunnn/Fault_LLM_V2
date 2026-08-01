@@ -1,0 +1,65 @@
+{
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "benchmark_scope": "development_only_not_held_out",
+  "methods": {
+    "lexical_full_scan": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 1200,
+      "recall_at_budget_macro": 0.5044458572902846,
+      "mrr": 0.5325980392156863,
+      "ndcg_at_budget_macro": 0.4457521993295065,
+      "mean_source_family_coverage": 3.7058823529411766,
+      "mean_exact_claim_redundancy": 0.029411764705882353,
+      "latency_ms_p50": 2.5446999999999997,
+      "latency_ms_p95": 3.353925,
+      "mean_scored_candidates": 64.0,
+      "timeout_count": 0
+    },
+    "metapath_topk": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 1200,
+      "recall_at_budget_macro": 0.646482935279375,
+      "mrr": 0.8627450980392156,
+      "ndcg_at_budget_macro": 0.7004410879218715,
+      "mean_source_family_coverage": 3.411764705882353,
+      "mean_exact_claim_redundancy": 0.025735294117647058,
+      "latency_ms_p50": 0.5972999999999999,
+      "latency_ms_p95": 1.1309449999999996,
+      "mean_scored_candidates": 13.3,
+      "timeout_count": 0
+    },
+    "ours": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 1200,
+      "recall_at_budget_macro": 0.5794108432846823,
+      "mrr": 0.857843137254902,
+      "ndcg_at_budget_macro": 0.6475711144784939,
+      "mean_source_family_coverage": 4.470588235294118,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 1.0829499999999999,
+      "latency_ms_p95": 2.0021499999999994,
+      "mean_scored_candidates": 13.3,
+      "timeout_count": 0
+    },
+    "role_topk": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 1200,
+      "recall_at_budget_macro": 0.6420711705734925,
+      "mrr": 0.8627450980392156,
+      "ndcg_at_budget_macro": 0.6938930343673771,
+      "mean_source_family_coverage": 4.235294117647059,
+      "mean_exact_claim_redundancy": 0.025735294117647058,
+      "latency_ms_p50": 2.1671,
+      "latency_ms_p95": 2.907249999999999,
+      "mean_scored_candidates": 41.5,
+      "timeout_count": 0
+    }
+  },
+  "run_config": {
+    "max_scored_candidates": 64,
+    "max_selected_evidence": 8,
+    "max_per_source_family": 2,
+    "repeats": 30
+  }
+}

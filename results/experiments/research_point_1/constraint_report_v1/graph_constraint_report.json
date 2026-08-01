@@ -1,0 +1,735 @@
+{
+  "report_version": "marine_pump_graph_constraint_report_v1",
+  "generated_at": "2026-07-30T10:12:12.335448+00:00",
+  "validator_kind": "custom_python_graph_constraint_profile",
+  "validation_scope": {
+    "description": "Project-specific executable checks over current layered JSONL graph packages and source records.",
+    "reuses": [
+      "provenance_schema_v3 relation registry and Domain/Range",
+      "current stable identifier functions",
+      "current Chinese terminology and protected-term validator",
+      "frozen document split"
+    ],
+    "explicit_non_claims": [
+      "not a complete validation of every provenance_schema_v3 JSON Schema field",
+      "not RDF validation",
+      "not SHACL validation",
+      "not human expert review",
+      "not a Gold-label quality guarantee"
+    ]
+  },
+  "inputs": {
+    "graph_root": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump",
+    "schema": {
+      "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/schema/provenance_schema_v3.json",
+      "schema_version": "marine_pump_provenance_v3.0.0",
+      "sha256": "e69730e4d1f28b03cfb9fbd86fd5b3466cd1b591c2fcfb2c33fd6b57105a3982"
+    },
+    "terminology": {
+      "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/configs/entity_terminology_zh_marine_pump_v4_silver.json",
+      "version": "marine_pump_zh_terminology_v4_0_silver",
+      "sha256": "11682e3dc3fb0408d8f278bcdc549806a3f34e331320a272acc859f8dd12f3dd"
+    },
+    "document_split": {
+      "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/configs/document_split_marine_pump_v4.json",
+      "version": "marine_pump_document_split_v4",
+      "sha256": "4d725a9e1aa0f89602b7b93b6b3922168a59aa49624893e0b82525fec918011a"
+    }
+  },
+  "packages": {
+    "KG_v1_raw": {
+      "directory": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw",
+      "records": {
+        "source_records": 8003,
+        "entities": 9149,
+        "claims": 7651,
+        "evidence_assertions": 8003,
+        "claim_evidence_links": 8003
+      },
+      "decision_counts": {
+        "candidate_needs_review": 881,
+        "silver_candidate": 1698,
+        "rejected": 5424
+      },
+      "document_splits": {
+        "build_train": 8003
+      },
+      "evidence_levels": {
+        "E3": 440,
+        "E2": 2761,
+        "E1": 3670,
+        "MISSING": 1132
+      },
+      "input_files": {
+        "source_records": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw/source_records.jsonl",
+          "bytes": 61442822,
+          "sha256": "6c4c4c75ba565cb9860872509742414a9957bb65def24c8c06b615a0fdb11359",
+          "records": 8003
+        },
+        "entities": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw/entities.jsonl",
+          "bytes": 3097133,
+          "sha256": "a9884b3f6c634297bb49611684f79ed3cecadcbb9f7d191a2fedfeee8b0ea113",
+          "records": 9149
+        },
+        "claims": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw/claims.jsonl",
+          "bytes": 1715080,
+          "sha256": "de8ab6ea3689f5482b4bd03ac75d8b8ed5ab08d20c610ad0c9e29c399069e28b",
+          "records": 7651
+        },
+        "evidence_assertions": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw/evidence_assertions.jsonl",
+          "bytes": 5916130,
+          "sha256": "f2a397fd32244daef28272ad6a8c4df4d81fe510c34b9d16f5e7824541f3492d",
+          "records": 8003
+        },
+        "claim_evidence_links": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_raw/claim_evidence_links.jsonl",
+          "bytes": 2552844,
+          "sha256": "435ebeaa3b0d72175270dbba60cb1f58464adf34bed9e6cf764cecf0099c4875",
+          "records": 8003
+        }
+      }
+    },
+    "KG_v1_validated": {
+      "directory": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated",
+      "records": {
+        "source_records": 208,
+        "entities": 281,
+        "claims": 203,
+        "evidence_assertions": 208,
+        "claim_evidence_links": 208
+      },
+      "decision_counts": {
+        "silver_candidate": 208
+      },
+      "document_splits": {
+        "build_train": 208
+      },
+      "evidence_levels": {
+        "E1": 145,
+        "E2": 63
+      },
+      "input_files": {
+        "source_records": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated/source_records.jsonl",
+          "bytes": 1644749,
+          "sha256": "85e0fc2782c21034a8e292f83cf0a9b529fc19f3348e77521f6d847484a60a6f",
+          "records": 208
+        },
+        "entities": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated/entities.jsonl",
+          "bytes": 91157,
+          "sha256": "3d9850431b75c0ca704ede368d5247f838a38191e11539a4d55525b1575f8b45",
+          "records": 281
+        },
+        "claims": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated/claims.jsonl",
+          "bytes": 51350,
+          "sha256": "13347eabd82f8d0324791a42abe7c9f2162a76e04bc5142567576cd48563e861",
+          "records": 203
+        },
+        "evidence_assertions": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated/evidence_assertions.jsonl",
+          "bytes": 146010,
+          "sha256": "1a6d91987a955fd9aa4bdd61105a6aec5b2636e624a6d8868b9b9d1d9c59270a",
+          "records": 208
+        },
+        "claim_evidence_links": {
+          "path": "E:/704/2026年春季研究生中期考核工作材料包/Fault_llm_v2/data/kg/marine_pump/triples/KG_v1_validated/claim_evidence_links.jsonl",
+          "bytes": 67007,
+          "sha256": "50afcd1568f7474b083edaf636f3d5e7e239d8b9be321d9e68cdb17ebb7af8de",
+          "records": 208
+        }
+      }
+    }
+  },
+  "summary": {
+    "checks": 36,
+    "status_counts": {
+      "pass": 33,
+      "info": 2,
+      "fail": 1
+    },
+    "severity_counts": {
+      "info": 35,
+      "warning": 1
+    },
+    "failed_checks": 1,
+    "release_blocking_checks": 0,
+    "release_blocked": false,
+    "human_expert_reviewed": false,
+    "label_policy": "Silver only; never Gold"
+  },
+  "checks": [
+    {
+      "rule_id": "PKG001_REQUIRED_LAYER_FILES",
+      "title": "五个分层JSONL文件均存在",
+      "scope": "KG_v1_raw",
+      "description": "检查source_records、entities、claims、evidence_assertions和claim_evidence_links；这是当前项目图谱包结构检查。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 5,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG002_UNIQUE_STABLE_IDENTIFIERS",
+      "title": "分层记录ID唯一且非空",
+      "scope": "KG_v1_raw",
+      "description": "检查实体、Claim、Evidence和源记录的稳定ID唯一性。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 32806,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG003_LINK_TARGETS_AND_UNIQUENESS",
+      "title": "Claim—Evidence链接稳定且目标存在",
+      "scope": "KG_v1_raw",
+      "description": "每条链接必须引用存在的Claim和Evidence，同一二元链接不得重复。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG004_CLAIM_HAS_EVIDENCE",
+      "title": "每个Claim至少关联一条Evidence",
+      "scope": "KG_v1_raw",
+      "description": "Claim本身不是证据，发布和审计Claim均须保留断言链接。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 7651,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG005_EVIDENCE_HAS_CLAIM_LINK",
+      "title": "每条Evidence至少被一个Claim引用",
+      "scope": "KG_v1_raw",
+      "description": "检测分层输出中的孤立证据记录。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG006_SOURCE_RECORD_LINK_COVERAGE",
+      "title": "源记录与Claim—Evidence链接双向覆盖",
+      "scope": "KG_v1_raw",
+      "description": "源记录中的Claim/Evidence对必须与链接层一一对应。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 16006,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "GOV001_ALLOWED_GOVERNANCE_STATUS",
+      "title": "治理状态属于冻结枚举",
+      "scope": "KG_v1_raw",
+      "description": "允许Silver、待复核/隔离、背景复核和拒绝状态；本检查兼容silver_candidate与accepted_silver两个历史码。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "SPLIT001_PRIMARY_GRAPH_BUILD_ONLY",
+      "title": "主图谱不含开发集或保留测试集",
+      "scope": "KG_v1_raw",
+      "description": "KG_v1_raw与KG_v1_validated都是主图谱资产，只允许冻结的build_train文档。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "GOV003_RAW_STATUS_DISTRIBUTION",
+      "title": "审计图治理状态分布",
+      "scope": "KG_v1_raw",
+      "description": "审计图保留全部状态，此项仅报告分布，不作为发布错误。",
+      "status": "info",
+      "severity": "info",
+      "failure_severity": "info",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": [
+        {
+          "decision_counts": {
+            "candidate_needs_review": 881,
+            "silver_candidate": 1698,
+            "rejected": 5424
+          }
+        }
+      ]
+    },
+    {
+      "rule_id": "PROV001_CORE_FIELDS_PRESENT",
+      "title": "Silver/发布记录具有核心溯源字段",
+      "scope": "KG_v1_raw",
+      "description": "检查文档、划分、发布者、来源族、URL、文档/页面哈希、物理页、原文、证据等级和来源语言。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 1698,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PROV002_PAGE_URL_HASH_FORMAT",
+      "title": "物理页、URL和哈希格式有效",
+      "scope": "KG_v1_raw",
+      "description": "物理页必须为正整数，URL必须为HTTP(S)，哈希为64位十六进制。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 1698,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PROV003_NONRELEASE_EVIDENCE_GAPS",
+      "title": "非发布记录的原文缺失审计",
+      "scope": "KG_v1_raw",
+      "description": "拒绝项允许因证据缺失而存在于审计图；此项作为warning记录，不阻止已经合格的发布子集。",
+      "status": "fail",
+      "severity": "warning",
+      "failure_severity": "warning",
+      "evaluated": 6305,
+      "violation_count": 40,
+      "release_blocking": false,
+      "examples": [
+        {
+          "record": "MPT-137c56bd0e93b9430080",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-218938f7da5ee89f8a26",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-25de13f7c2347a2bf52a",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-2c59246962bfd3d4f338",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-399ee638a1ce309f6dcd",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-3a529725e95e8c884520",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-3c7481214481d4b5b9d5",
+          "reason": "nonrelease_record_missing_evidence_text"
+        },
+        {
+          "record": "MPT-3e4bad767a6ea0bd268e",
+          "reason": "nonrelease_record_missing_evidence_text"
+        }
+      ]
+    },
+    {
+      "rule_id": "EVID001_RELEASE_E1_E2_NONINFERRED_ENTAILED",
+      "title": "Silver/发布记录为有效E1/E2且非推断",
+      "scope": "KG_v1_raw",
+      "description": "检查证据等级、位置、E2单元格结构、证据验证状态、蕴含状态和inferred_edge。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 1698,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "REL001_REGISTRY_DOMAIN_RANGE",
+      "title": "Silver/发布关系符合注册表与Domain/Range",
+      "scope": "KG_v1_raw",
+      "description": "复用provenance_schema_v3关系注册表和本地类型校验器。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 1698,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "ID001_STABLE_SOURCE_IDENTIFIERS",
+      "title": "Silver/发布源记录稳定ID可重算",
+      "scope": "KG_v1_raw",
+      "description": "按当前实体、Claim、Evidence和Triple确定性身份函数重算并比对。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 1698,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "REL002_RAW_NONRELEASE_INVALID_RELATIONS",
+      "title": "审计图非发布记录中的关系违规分布",
+      "scope": "KG_v1_raw",
+      "description": "Raw图按设计保留待审和拒绝记录；这些违规只作误差分析，不表示它们可进入发布图。",
+      "status": "info",
+      "severity": "info",
+      "failure_severity": "info",
+      "evaluated": 1292,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": [
+        {
+          "record": "MPT-00486caee26542d6202e",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-00c0386665ce1217eade",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-00ca473c8ac6a83d96c5",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-00cb8860c8cfe9a00f58",
+          "decision": "rejected",
+          "reasons": [
+            "tail_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-017512323846b9862890",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-019cace049e8da279931",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-020e12374897da17971d",
+          "decision": "rejected",
+          "reasons": [
+            "tail_type_not_allowed_for_relation"
+          ]
+        },
+        {
+          "record": "MPT-02112b104c56114e1d27",
+          "decision": "rejected",
+          "reasons": [
+            "head_type_not_allowed_for_relation",
+            "tail_type_not_allowed_for_relation"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_id": "PKG007_LAYER_PROJECTION_CONSISTENCY",
+      "title": "源记录与实体/Claim/Evidence投影一致",
+      "scope": "KG_v1_raw",
+      "description": "检查分层JSONL没有改变源记录的语义和证据主字段。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 8003,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG001_REQUIRED_LAYER_FILES",
+      "title": "五个分层JSONL文件均存在",
+      "scope": "KG_v1_validated",
+      "description": "检查source_records、entities、claims、evidence_assertions和claim_evidence_links；这是当前项目图谱包结构检查。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 5,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG002_UNIQUE_STABLE_IDENTIFIERS",
+      "title": "分层记录ID唯一且非空",
+      "scope": "KG_v1_validated",
+      "description": "检查实体、Claim、Evidence和源记录的稳定ID唯一性。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 900,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG003_LINK_TARGETS_AND_UNIQUENESS",
+      "title": "Claim—Evidence链接稳定且目标存在",
+      "scope": "KG_v1_validated",
+      "description": "每条链接必须引用存在的Claim和Evidence，同一二元链接不得重复。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG004_CLAIM_HAS_EVIDENCE",
+      "title": "每个Claim至少关联一条Evidence",
+      "scope": "KG_v1_validated",
+      "description": "Claim本身不是证据，发布和审计Claim均须保留断言链接。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 203,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG005_EVIDENCE_HAS_CLAIM_LINK",
+      "title": "每条Evidence至少被一个Claim引用",
+      "scope": "KG_v1_validated",
+      "description": "检测分层输出中的孤立证据记录。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG006_SOURCE_RECORD_LINK_COVERAGE",
+      "title": "源记录与Claim—Evidence链接双向覆盖",
+      "scope": "KG_v1_validated",
+      "description": "源记录中的Claim/Evidence对必须与链接层一一对应。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 416,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "GOV001_ALLOWED_GOVERNANCE_STATUS",
+      "title": "治理状态属于冻结枚举",
+      "scope": "KG_v1_validated",
+      "description": "允许Silver、待复核/隔离、背景复核和拒绝状态；本检查兼容silver_candidate与accepted_silver两个历史码。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "SPLIT001_PRIMARY_GRAPH_BUILD_ONLY",
+      "title": "主图谱不含开发集或保留测试集",
+      "scope": "KG_v1_validated",
+      "description": "KG_v1_raw与KG_v1_validated都是主图谱资产，只允许冻结的build_train文档。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "GOV002_VALIDATED_ONLY_SILVER",
+      "title": "发布图只包含Silver记录",
+      "scope": "KG_v1_validated",
+      "description": "待复核和拒绝记录只能保留在审计图。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PROV001_CORE_FIELDS_PRESENT",
+      "title": "Silver/发布记录具有核心溯源字段",
+      "scope": "KG_v1_validated",
+      "description": "检查文档、划分、发布者、来源族、URL、文档/页面哈希、物理页、原文、证据等级和来源语言。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PROV002_PAGE_URL_HASH_FORMAT",
+      "title": "物理页、URL和哈希格式有效",
+      "scope": "KG_v1_validated",
+      "description": "物理页必须为正整数，URL必须为HTTP(S)，哈希为64位十六进制。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PROV003_NONRELEASE_EVIDENCE_GAPS",
+      "title": "非发布记录的原文缺失审计",
+      "scope": "KG_v1_validated",
+      "description": "拒绝项允许因证据缺失而存在于审计图；此项作为warning记录，不阻止已经合格的发布子集。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "warning",
+      "evaluated": 0,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "EVID001_RELEASE_E1_E2_NONINFERRED_ENTAILED",
+      "title": "Silver/发布记录为有效E1/E2且非推断",
+      "scope": "KG_v1_validated",
+      "description": "检查证据等级、位置、E2单元格结构、证据验证状态、蕴含状态和inferred_edge。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "REL001_REGISTRY_DOMAIN_RANGE",
+      "title": "Silver/发布关系符合注册表与Domain/Range",
+      "scope": "KG_v1_validated",
+      "description": "复用provenance_schema_v3关系注册表和本地类型校验器。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "ID001_STABLE_SOURCE_IDENTIFIERS",
+      "title": "Silver/发布源记录稳定ID可重算",
+      "scope": "KG_v1_validated",
+      "description": "按当前实体、Claim、Evidence和Triple确定性身份函数重算并比对。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "PKG007_LAYER_PROJECTION_CONSISTENCY",
+      "title": "源记录与实体/Claim/Evidence投影一致",
+      "scope": "KG_v1_validated",
+      "description": "检查分层JSONL没有改变源记录的语义和证据主字段。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "ZH001_RELEASE_ENDPOINT_GOVERNANCE",
+      "title": "发布端点满足中文术语门控",
+      "scope": "KG_v1_validated",
+      "description": "检查中文规范名、术语ID、允许的翻译状态、受保护词以及关系/类型中文显示名。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "ZH002_RELEASE_ENTITY_PROJECTION",
+      "title": "发布实体具有中文规范名和术语ID",
+      "scope": "KG_v1_validated",
+      "description": "检查Validated实体投影，不以英文surface冒充中文实体。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 281,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    },
+    {
+      "rule_id": "RELEASE001_VALIDATED_SUBSET_WITH_IMMUTABLE_EVIDENCE",
+      "title": "发布记录可回溯到Raw且原文溯源未变",
+      "scope": "KG_v1_raw -> KG_v1_validated",
+      "description": "Validated记录必须存在于Raw审计图，原文surface、证据、页码、URL及文档/页面哈希保持不变。",
+      "status": "pass",
+      "severity": "info",
+      "failure_severity": "error",
+      "evaluated": 208,
+      "violation_count": 0,
+      "release_blocking": false,
+      "examples": []
+    }
+  ]
+}

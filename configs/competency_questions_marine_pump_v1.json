@@ -1,0 +1,413 @@
+{
+  "cq_suite_id": "marine_pump_cq_v1",
+  "version": "1.0.1",
+  "status": "frozen",
+  "frozen_at": "2026-07-30",
+  "language": "zh-CN",
+  "research_scope": "ship_engine_room_pump_system",
+  "evaluation_semantics": {
+    "metric_name_zh": "可追溯结构可回答率",
+    "not_accuracy": true,
+    "statement": "该指标只判断图谱中是否存在符合本体类型、合法元路径和证据谱系门控的答案结构，不判断答案事实正确性或诊断准确率。",
+    "answer_unit": "unique_canonical_entity",
+    "minimum_answers_for_answerable": 1,
+    "minimum_traceable_assertions_per_answer": 1
+  },
+  "input_contract": {
+    "graph_version": "KG_v1_validated",
+    "layered_jsonl_root": "data/kg/marine_pump/triples/KG_v1_validated",
+    "graphml_path": "data/kg/marine_pump/graph_versions/KG_v1_validated/marine_pump_graph.graphml",
+    "schema_path": "data/kg/marine_pump/schema/provenance_schema_v3.json",
+    "ontology_path": "configs/fault_ontology_marine_pump_v1.json",
+    "required_jsonl_files": [
+      "entities.jsonl",
+      "claims.jsonl",
+      "evidence_assertions.jsonl",
+      "claim_evidence_links.jsonl",
+      "source_records.jsonl"
+    ]
+  },
+  "split_policy": {
+    "eligible_split": "build_train",
+    "eligible_build_doc_ids": [
+      "MP001",
+      "MP002",
+      "MP003",
+      "MP004",
+      "MP005",
+      "MP006",
+      "MP007",
+      "MP015",
+      "MP016",
+      "MP017",
+      "MP018",
+      "MP019",
+      "MP020",
+      "MP021",
+      "MP022"
+    ],
+    "development_doc_ids": [
+      "MP008"
+    ],
+    "held_out_test_doc_ids": [
+      "MP009",
+      "MP010",
+      "MP011",
+      "MP012",
+      "MP013"
+    ],
+    "excluded_doc_ids": [
+      "MP014"
+    ],
+    "fail_on_primary_graph_contamination": true
+  },
+  "silver_evidence_gate": {
+    "accepted_decisions": [
+      "silver_candidate",
+      "accepted_silver"
+    ],
+    "accepted_evidence_levels": [
+      "E1",
+      "E2"
+    ],
+    "relation_type_valid_required": true,
+    "evidence_validation_valid_required": true,
+    "evidence_validation_silver_eligible_required": true,
+    "relation_entailment_validation_silver_eligible_required": true,
+    "eligible_for_chinese_graph_required": true,
+    "relation_entailment_valid_required": true,
+    "inferred_edge_forbidden": true,
+    "required_provenance_fields": [
+      "doc_id",
+      "pdf_page_number",
+      "source_url",
+      "source_family_id",
+      "document_sha256",
+      "page_text_sha256",
+      "evidence_text"
+    ]
+  },
+  "frozen_schema_registry": {
+    "node_types": [
+      "Equipment",
+      "Component",
+      "FaultMode",
+      "FailureMechanism",
+      "Symptom",
+      "SignalFeature",
+      "Cause",
+      "OperatingCondition",
+      "InspectionMethod",
+      "InspectionAction",
+      "MaintenanceAction",
+      "Standard",
+      "Risk"
+    ],
+    "relations": [
+      "contains",
+      "located_in",
+      "occurs_at",
+      "causes",
+      "indicates",
+      "manifests_as",
+      "evolves_to",
+      "diagnosed_by",
+      "inspected_by",
+      "mitigated_by",
+      "prevented_by",
+      "maintained_by",
+      "operates_under",
+      "increases_risk_of",
+      "specified_by"
+    ]
+  },
+  "fault_classes": [
+    {
+      "fault_id": "cavitation",
+      "name_zh": "汽蚀"
+    },
+    {
+      "fault_id": "air_ingress_or_loss_of_prime",
+      "name_zh": "空气侵入或失去自吸"
+    },
+    {
+      "fault_id": "hydraulic_blockage",
+      "name_zh": "流道、叶轮、过滤器或管路堵塞"
+    },
+    {
+      "fault_id": "impeller_or_wear_part_damage",
+      "name_zh": "叶轮或耐磨部件磨损损坏"
+    },
+    {
+      "fault_id": "mechanical_seal_failure",
+      "name_zh": "机械密封失效与泄漏"
+    },
+    {
+      "fault_id": "bearing_or_lubrication_failure",
+      "name_zh": "轴承磨损、润滑不良或过热"
+    },
+    {
+      "fault_id": "pump_motor_misalignment",
+      "name_zh": "泵电机联轴器或轴系不对中"
+    },
+    {
+      "fault_id": "motor_electrical_drive_failure",
+      "name_zh": "电机缺相、过载或电气驱动异常"
+    },
+    {
+      "fault_id": "pipe_or_valve_integrity_failure",
+      "name_zh": "管路或阀件泄漏、卡滞和完整性失效"
+    },
+    {
+      "fault_id": "dry_running_or_maintenance_induced_failure",
+      "name_zh": "干运转、错误操作或维护引入故障"
+    }
+  ],
+  "role_templates": {
+    "symptom": {
+      "name_zh": "症状",
+      "question_template_zh": "“{fault_name_zh}”有哪些可追溯的故障表现、症状或信号特征？",
+      "legal_metapaths": [
+        {
+          "path_id": "SYM-MANIFESTS-AS",
+          "head_types": [
+            "FaultMode",
+            "FailureMechanism"
+          ],
+          "relation": "manifests_as",
+          "tail_types": [
+            "Symptom",
+            "SignalFeature"
+          ],
+          "answer_side": "tail"
+        },
+        {
+          "path_id": "SYM-INDICATES-REVERSE",
+          "head_types": [
+            "Symptom",
+            "SignalFeature"
+          ],
+          "relation": "indicates",
+          "tail_types": [
+            "Cause",
+            "FailureMechanism",
+            "FaultMode",
+            "Risk"
+          ],
+          "answer_side": "head"
+        }
+      ]
+    },
+    "cause_or_mechanism": {
+      "name_zh": "原因或机理",
+      "question_template_zh": "哪些原因、机理或运行工况与“{fault_name_zh}”有关并形成可追溯因果证据？",
+      "legal_metapaths": [
+        {
+          "path_id": "CAUSE-CAUSES",
+          "head_types": [
+            "Cause",
+            "FailureMechanism",
+            "OperatingCondition"
+          ],
+          "relation": "causes",
+          "tail_types": [
+            "FailureMechanism",
+            "FaultMode",
+            "Symptom",
+            "SignalFeature",
+            "Risk"
+          ],
+          "answer_side": "head"
+        },
+        {
+          "path_id": "CAUSE-EVOLVES-TO",
+          "head_types": [
+            "FailureMechanism"
+          ],
+          "relation": "evolves_to",
+          "tail_types": [
+            "FaultMode",
+            "FailureMechanism",
+            "Risk"
+          ],
+          "answer_side": "head"
+        }
+      ]
+    },
+    "inspection": {
+      "name_zh": "检查",
+      "question_template_zh": "针对“{fault_name_zh}”可采用哪些有原文依据的检查或诊断方法？",
+      "legal_metapaths": [
+        {
+          "path_id": "INS-DIAGNOSED-BY",
+          "head_types": [
+            "Cause",
+            "FailureMechanism",
+            "FaultMode",
+            "Symptom",
+            "SignalFeature",
+            "Risk"
+          ],
+          "relation": "diagnosed_by",
+          "tail_types": [
+            "InspectionMethod",
+            "InspectionAction"
+          ],
+          "answer_side": "tail"
+        },
+        {
+          "path_id": "INS-INSPECTED-BY",
+          "head_types": [
+            "Equipment",
+            "Component",
+            "Cause",
+            "FailureMechanism",
+            "FaultMode"
+          ],
+          "relation": "inspected_by",
+          "tail_types": [
+            "InspectionMethod",
+            "InspectionAction"
+          ],
+          "answer_side": "tail"
+        }
+      ]
+    },
+    "maintenance": {
+      "name_zh": "维护",
+      "question_template_zh": "针对“{fault_name_zh}”可采取哪些有原文依据的维护、缓解或预防措施？",
+      "legal_metapaths": [
+        {
+          "path_id": "MAINT-MITIGATED-BY",
+          "head_types": [
+            "Cause",
+            "FailureMechanism",
+            "FaultMode",
+            "Risk"
+          ],
+          "relation": "mitigated_by",
+          "tail_types": [
+            "MaintenanceAction"
+          ],
+          "answer_side": "tail"
+        },
+        {
+          "path_id": "MAINT-PREVENTED-BY",
+          "head_types": [
+            "Cause",
+            "FailureMechanism",
+            "FaultMode",
+            "OperatingCondition",
+            "Risk"
+          ],
+          "relation": "prevented_by",
+          "tail_types": [
+            "MaintenanceAction"
+          ],
+          "answer_side": "tail"
+        },
+        {
+          "path_id": "MAINT-MAINTAINED-BY",
+          "head_types": [
+            "Equipment",
+            "Component"
+          ],
+          "relation": "maintained_by",
+          "tail_types": [
+            "MaintenanceAction"
+          ],
+          "answer_side": "tail"
+        }
+      ]
+    }
+  },
+  "task_units": [
+    {"cq_id": "CQ-F01-SYM", "fault_id": "cavitation", "role": "symptom"},
+    {"cq_id": "CQ-F01-CAUSE", "fault_id": "cavitation", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F01-INS", "fault_id": "cavitation", "role": "inspection"},
+    {"cq_id": "CQ-F01-MAINT", "fault_id": "cavitation", "role": "maintenance"},
+    {"cq_id": "CQ-F02-SYM", "fault_id": "air_ingress_or_loss_of_prime", "role": "symptom"},
+    {"cq_id": "CQ-F02-CAUSE", "fault_id": "air_ingress_or_loss_of_prime", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F02-INS", "fault_id": "air_ingress_or_loss_of_prime", "role": "inspection"},
+    {"cq_id": "CQ-F02-MAINT", "fault_id": "air_ingress_or_loss_of_prime", "role": "maintenance"},
+    {"cq_id": "CQ-F03-SYM", "fault_id": "hydraulic_blockage", "role": "symptom"},
+    {"cq_id": "CQ-F03-CAUSE", "fault_id": "hydraulic_blockage", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F03-INS", "fault_id": "hydraulic_blockage", "role": "inspection"},
+    {"cq_id": "CQ-F03-MAINT", "fault_id": "hydraulic_blockage", "role": "maintenance"},
+    {"cq_id": "CQ-F04-SYM", "fault_id": "impeller_or_wear_part_damage", "role": "symptom"},
+    {"cq_id": "CQ-F04-CAUSE", "fault_id": "impeller_or_wear_part_damage", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F04-INS", "fault_id": "impeller_or_wear_part_damage", "role": "inspection"},
+    {"cq_id": "CQ-F04-MAINT", "fault_id": "impeller_or_wear_part_damage", "role": "maintenance"},
+    {"cq_id": "CQ-F05-SYM", "fault_id": "mechanical_seal_failure", "role": "symptom"},
+    {"cq_id": "CQ-F05-CAUSE", "fault_id": "mechanical_seal_failure", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F05-INS", "fault_id": "mechanical_seal_failure", "role": "inspection"},
+    {"cq_id": "CQ-F05-MAINT", "fault_id": "mechanical_seal_failure", "role": "maintenance"},
+    {"cq_id": "CQ-F06-SYM", "fault_id": "bearing_or_lubrication_failure", "role": "symptom"},
+    {"cq_id": "CQ-F06-CAUSE", "fault_id": "bearing_or_lubrication_failure", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F06-INS", "fault_id": "bearing_or_lubrication_failure", "role": "inspection"},
+    {"cq_id": "CQ-F06-MAINT", "fault_id": "bearing_or_lubrication_failure", "role": "maintenance"},
+    {"cq_id": "CQ-F07-SYM", "fault_id": "pump_motor_misalignment", "role": "symptom"},
+    {"cq_id": "CQ-F07-CAUSE", "fault_id": "pump_motor_misalignment", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F07-INS", "fault_id": "pump_motor_misalignment", "role": "inspection"},
+    {"cq_id": "CQ-F07-MAINT", "fault_id": "pump_motor_misalignment", "role": "maintenance"},
+    {"cq_id": "CQ-F08-SYM", "fault_id": "motor_electrical_drive_failure", "role": "symptom"},
+    {"cq_id": "CQ-F08-CAUSE", "fault_id": "motor_electrical_drive_failure", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F08-INS", "fault_id": "motor_electrical_drive_failure", "role": "inspection"},
+    {"cq_id": "CQ-F08-MAINT", "fault_id": "motor_electrical_drive_failure", "role": "maintenance"},
+    {"cq_id": "CQ-F09-SYM", "fault_id": "pipe_or_valve_integrity_failure", "role": "symptom"},
+    {"cq_id": "CQ-F09-CAUSE", "fault_id": "pipe_or_valve_integrity_failure", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F09-INS", "fault_id": "pipe_or_valve_integrity_failure", "role": "inspection"},
+    {"cq_id": "CQ-F09-MAINT", "fault_id": "pipe_or_valve_integrity_failure", "role": "maintenance"},
+    {"cq_id": "CQ-F10-SYM", "fault_id": "dry_running_or_maintenance_induced_failure", "role": "symptom"},
+    {"cq_id": "CQ-F10-CAUSE", "fault_id": "dry_running_or_maintenance_induced_failure", "role": "cause_or_mechanism"},
+    {"cq_id": "CQ-F10-INS", "fault_id": "dry_running_or_maintenance_induced_failure", "role": "inspection"},
+    {"cq_id": "CQ-F10-MAINT", "fault_id": "dry_running_or_maintenance_induced_failure", "role": "maintenance"}
+  ],
+  "traceability_cqs": [
+    {
+      "cq_id": "CQ-TRACE-01",
+      "question_zh": "每个结构答案是否能够沿CanonicalEntity—Claim—EvidenceAssertion路径回溯到至少一条合格Silver证据断言？",
+      "population": "unique_answers",
+      "required_fields": [
+        "claim_id",
+        "evidence_id"
+      ]
+    },
+    {
+      "cq_id": "CQ-TRACE-02",
+      "question_zh": "每条计入评价的证据断言是否能够回溯到构建集文档、PDF物理页、来源URL、文档哈希和页面哈希？",
+      "population": "eligible_evidence_assertions",
+      "required_fields": [
+        "doc_id",
+        "pdf_page_number",
+        "source_url",
+        "document_sha256",
+        "page_text_sha256"
+      ]
+    },
+    {
+      "cq_id": "CQ-TRACE-03",
+      "question_zh": "每个结构答案是否能够枚举其支持文档及来源族，且开发集和保留测试集未计入主图评价？",
+      "population": "unique_answers",
+      "required_fields": [
+        "doc_id",
+        "source_family_id",
+        "document_split"
+      ]
+    }
+  ],
+  "report_contract": {
+    "default_output_dir": "results/experiments/research_point_1/cq_v1",
+    "json_filename": "cq_v1_evaluation.json",
+    "csv_filename": "cq_v1_task_summary.csv",
+    "markdown_filename": "cq_v1_report.md",
+    "required_per_cq_fields": [
+      "answer_count",
+      "legal_metapaths",
+      "evidence_assertion_count",
+      "document_count",
+      "source_family_count",
+      "traceable_structure_answerability"
+    ]
+  }
+}
