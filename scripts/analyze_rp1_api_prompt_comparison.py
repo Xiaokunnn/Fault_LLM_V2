@@ -138,9 +138,14 @@ def _plot(rows: list[dict]) -> None:
     handles2, legends2 = second.get_legend_handles_labels()
     axes[1].legend(handles + handles2, legends + legends2, loc="upper left")
     figure.suptitle("RP1 fixed-page qwen3.7-max comparison (20 pages; Silver labels)")
-    figure.savefig(BASE / "comparison_figure.svg", metadata={"Date": None})
+    svg_path = BASE / "comparison_figure.svg"
+    figure.savefig(svg_path, metadata={"Date": None})
     figure.savefig(BASE / "comparison_figure.png", dpi=180, metadata={"Date": None})
     plt.close(figure)
+    svg_path.write_text(
+        "\n".join(line.rstrip() for line in svg_path.read_text(encoding="utf-8").splitlines()) + "\n",
+        encoding="utf-8",
+    )
 
 
 def main() -> int:
