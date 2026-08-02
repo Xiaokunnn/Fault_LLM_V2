@@ -1,0 +1,372 @@
+{
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "benchmark_scope": "development_only_not_held_out",
+  "methods": {
+    "closed_book": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_budget_macro": 0.0,
+      "mean_source_family_coverage": 0.0,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 0.0,
+      "latency_ms_p95": 0.0,
+      "mean_scored_candidates": 0.0,
+      "mean_selected_evidence": 0.0,
+      "mean_visited_evidence": 0.0,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    },
+    "dense_adaptive": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.38577878519828984,
+      "mrr": 0.7156862745098039,
+      "ndcg_at_budget_macro": 0.6680901907562092,
+      "mean_source_family_coverage": 2.0588235294117645,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 278.88191400000005,
+      "latency_ms_p95": 413.4659859499999,
+      "mean_scored_candidates": 9.05,
+      "mean_selected_evidence": 3.35,
+      "mean_visited_evidence": 9.05,
+      "mean_visited_nodes": 30.775,
+      "mean_visited_edges": 1496.775,
+      "timeout_count": 0
+    },
+    "dense_fixed_hop": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.38682920536635707,
+      "mrr": 0.7156862745098039,
+      "ndcg_at_budget_macro": 0.6673979776395217,
+      "mean_source_family_coverage": 2.0588235294117645,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 249.478983,
+      "latency_ms_p95": 470.35451244999996,
+      "mean_scored_candidates": 11.475,
+      "mean_selected_evidence": 3.425,
+      "mean_visited_evidence": 11.475,
+      "mean_visited_nodes": 27.85,
+      "mean_visited_edges": 43.275,
+      "timeout_count": 0
+    },
+    "dense_metapath": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.43042164234114694,
+      "mrr": 0.7794117647058824,
+      "ndcg_at_budget_macro": 0.6658846511469306,
+      "mean_source_family_coverage": 2.411764705882353,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 377.282374,
+      "latency_ms_p95": 415.8888011499999,
+      "mean_scored_candidates": 25.35,
+      "mean_selected_evidence": 4.0,
+      "mean_visited_evidence": 25.35,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    },
+    "dense_ours": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.40221786082854194,
+      "mrr": 0.7941176470588235,
+      "ndcg_at_budget_macro": 0.5992856993451511,
+      "mean_source_family_coverage": 3.9705882352941178,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 245.073958,
+      "latency_ms_p95": 408.0685541,
+      "mean_scored_candidates": 25.35,
+      "mean_selected_evidence": 4.0,
+      "mean_visited_evidence": 25.35,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    },
+    "dense_topk": {
+      "evaluated_answerable_queries": 34,
+      "latency_samples": 40,
+      "recall_at_budget_macro": 0.25727738463806576,
+      "mrr": 0.5073529411764706,
+      "ndcg_at_budget_macro": 0.4055342751595761,
+      "mean_source_family_coverage": 2.3529411764705883,
+      "mean_exact_claim_redundancy": 0.0,
+      "latency_ms_p50": 366.25350249999997,
+      "latency_ms_p95": 406.54149639999997,
+      "mean_scored_candidates": 64.0,
+      "mean_selected_evidence": 4.0,
+      "mean_visited_evidence": 64.0,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    }
+  },
+  "generation": {
+    "samples": 240,
+    "citation_validity_rate": 0.7041666666666667,
+    "uncited_answer_point_rate": 0.15,
+    "relevant_citation_recall": 0.2813484384982063,
+    "latency_ms_mean": 192916.8169588671,
+    "generated_tokens_mean": 198.14166666666668,
+    "tokens_per_second_mean": 0.9279294840511336,
+    "cuda_peak_memory_bytes_max": 0,
+    "by_method": {
+      "closed_book": {
+        "samples": 40,
+        "citation_validity_rate": 0.0,
+        "uncited_answer_point_rate": 0.775,
+        "relevant_citation_recall": 0.0,
+        "latency_ms_mean": 139504.90030417457,
+        "tokens_per_second_mean": 0.9310984288870173
+      },
+      "dense_topk": {
+        "samples": 40,
+        "citation_validity_rate": 0.975,
+        "uncited_answer_point_rate": 0.0,
+        "relevant_citation_recall": 0.2557293970219667,
+        "latency_ms_mean": 229672.60855075056,
+        "tokens_per_second_mean": 1.0069323309186058
+      },
+      "dense_fixed_hop": {
+        "samples": 40,
+        "citation_validity_rate": 0.85,
+        "uncited_answer_point_rate": 0.05,
+        "relevant_citation_recall": 0.3351236547250479,
+        "latency_ms_mean": 185605.25882147468,
+        "tokens_per_second_mean": 0.9802750068683309
+      },
+      "dense_adaptive": {
+        "samples": 40,
+        "citation_validity_rate": 0.825,
+        "uncited_answer_point_rate": 0.075,
+        "relevant_citation_recall": 0.32987155388471173,
+        "latency_ms_mean": 182374.78517480195,
+        "tokens_per_second_mean": 0.9871517825962505
+      },
+      "dense_metapath": {
+        "samples": 40,
+        "citation_validity_rate": 0.8,
+        "uncited_answer_point_rate": 0.0,
+        "relevant_citation_recall": 0.40497659590151847,
+        "latency_ms_mean": 222345.93619302614,
+        "tokens_per_second_mean": 0.7863317512823805
+      },
+      "dense_ours": {
+        "samples": 40,
+        "citation_validity_rate": 0.775,
+        "uncited_answer_point_rate": 0.0,
+        "relevant_citation_recall": 0.36238942945599295,
+        "latency_ms_mean": 197997.41270897465,
+        "tokens_per_second_mean": 0.8757876037542168
+      }
+    }
+  },
+  "run_manifest": {
+    "protocol_id": "marine_pump_rp2_graphrag_v2",
+    "protocol_version": "0.1.0-development",
+    "embedding_model": {
+      "path": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/model/BAAI-bge-m3",
+      "file_count": 30,
+      "total_bytes": 4587311333,
+      "structure_sha256": "7b99c8d196a71d863dbdfbeab151d047533e897bbb5ce6c996fd36619ccf9c99",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1627
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 191
+        },
+        {
+          "path": "README.md",
+          "bytes": 15822
+        },
+        {
+          "path": "colbert_linear.pt",
+          "bytes": 2100674
+        },
+        {
+          "path": "config.json",
+          "bytes": 687
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 123
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 77
+        },
+        {
+          "path": "imgs/bm25.jpg",
+          "bytes": 131849
+        },
+        {
+          "path": "imgs/long.jpg",
+          "bytes": 485432
+        },
+        {
+          "path": "imgs/miracl.jpg",
+          "bytes": 576482
+        },
+        {
+          "path": "imgs/mkqa.jpg",
+          "bytes": 608027
+        },
+        {
+          "path": "imgs/nqa.jpg",
+          "bytes": 158358
+        },
+        {
+          "path": "imgs/others.webp",
+          "bytes": 20984
+        },
+        {
+          "path": "long.jpg",
+          "bytes": 126894
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349
+        },
+        {
+          "path": "onnx/Constant_7_attr__value",
+          "bytes": 65552
+        },
+        {
+          "path": "onnx/config.json",
+          "bytes": 698
+        },
+        {
+          "path": "onnx/model.onnx",
+          "bytes": 724923
+        },
+        {
+          "path": "onnx/model.onnx_data",
+          "bytes": 2266820608
+        },
+        {
+          "path": "onnx/sentencepiece.bpe.model",
+          "bytes": 5069051
+        },
+        {
+          "path": "onnx/special_tokens_map.json",
+          "bytes": 964
+        },
+        {
+          "path": "onnx/tokenizer.json",
+          "bytes": 17082821
+        },
+        {
+          "path": "onnx/tokenizer_config.json",
+          "bytes": 1173
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 2271145830
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 54
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "bytes": 5069051
+        },
+        {
+          "path": "sparse_linear.pt",
+          "bytes": 3516
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 964
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 17098108
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 444
+        }
+      ]
+    },
+    "generator_model": {
+      "path": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/model/Qwen2.5-7B-Instruct",
+      "file_count": 15,
+      "total_bytes": 15242807272,
+      "structure_sha256": "2c06ea9a01d9292ff15aa6de22f7429a2938a5459a6713277298fda52befcaaf",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11343
+        },
+        {
+          "path": "README.md",
+          "bytes": 6240
+        },
+        {
+          "path": "config.json",
+          "bytes": 663
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 2
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 243
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 1671839
+        },
+        {
+          "path": "model-00001-of-00004.safetensors",
+          "bytes": 3945441440
+        },
+        {
+          "path": "model-00002-of-00004.safetensors",
+          "bytes": 3864726352
+        },
+        {
+          "path": "model-00003-of-00004.safetensors",
+          "bytes": 3864726424
+        },
+        {
+          "path": "model-00004-of-00004.safetensors",
+          "bytes": 3556377672
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "bytes": 27752
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 7031645
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 7305
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 2776833
+        }
+      ]
+    },
+    "full_graph_candidate_count": 208,
+    "query_count": 40,
+    "label_policy": "Silver only; never Gold"
+  }
+}
