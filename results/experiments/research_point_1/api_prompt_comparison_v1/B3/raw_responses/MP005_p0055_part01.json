@@ -1,0 +1,107 @@
+{
+  "page_key": "MP005:p0055",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f2db5cb9-19a9-9065-8c9c-04e33d74bb2b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 929,
+    "prompt_tokens": 7864,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8793
+  },
+  "latency_ms": 11377,
+  "attempt": 1,
+  "prompt_sha256": "7c5d5c1302592b87595078073306d2ad521c8a876034c67a4f410ef306192388",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Start-up against open discharge line",
+        "head_canonical_zh": "排出管路开启状态下启动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Heat build-up inside the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t03:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pump",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t03:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      }
+    ],
+    "warnings": []
+  }
+}

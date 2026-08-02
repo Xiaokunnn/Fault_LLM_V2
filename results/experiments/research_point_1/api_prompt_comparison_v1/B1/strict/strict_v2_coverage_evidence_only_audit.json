@@ -10,17 +10,21 @@
     "source_families": 2,
     "minimum_silver_confidence": 0.8
   },
-  "input_records": 11,
-  "eligible_build_silver_records": 2,
+  "input_records": 184,
+  "eligible_build_silver_records": 50,
   "fault_coverage": {
     "cavitation": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
+      "eligible_triples": 1,
+      "unique_evidence_units": 1,
       "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
-      "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "cause_or_mechanism_evidence": 1,
+      "inspection_or_maintenance_evidence": 1,
+      "document_ids": [
+        "MP005"
+      ],
+      "source_families": [
+        "DESMI"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
@@ -31,34 +35,40 @@
       "gate_passed": false
     },
     "air_ingress_or_loss_of_prime": {
+      "eligible_triples": 6,
+      "unique_evidence_units": 6,
+      "symptom_evidence": 5,
+      "cause_or_mechanism_evidence": 6,
+      "inspection_or_maintenance_evidence": 0,
+      "document_ids": [
+        "MP018",
+        "MP020"
+      ],
+      "source_families": [
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP"
+      ],
+      "gate_checks": {
+        "symptom_at_least_5": true,
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": false,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
+      },
+      "gate_passed": false
+    },
+    "hydraulic_blockage": {
       "eligible_triples": 1,
       "unique_evidence_units": 1,
       "symptom_evidence": 0,
       "cause_or_mechanism_evidence": 1,
       "inspection_or_maintenance_evidence": 0,
       "document_ids": [
-        "MP018"
+        "MP005"
       ],
       "source_families": [
-        "PATTERSON_PUMP"
+        "DESMI"
       ],
-      "gate_checks": {
-        "symptom_at_least_5": false,
-        "cause_or_mechanism_at_least_3": false,
-        "inspection_or_maintenance_at_least_2": false,
-        "independent_documents_at_least_2": false,
-        "source_families_at_least_2": false
-      },
-      "gate_passed": false
-    },
-    "hydraulic_blockage": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
-      "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
-      "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
@@ -69,85 +79,110 @@
       "gate_passed": false
     },
     "impeller_or_wear_part_damage": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
+      "eligible_triples": 2,
+      "unique_evidence_units": 2,
       "symptom_evidence": 0,
       "cause_or_mechanism_evidence": 0,
-      "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "inspection_or_maintenance_evidence": 2,
+      "document_ids": [
+        "MP016"
+      ],
+      "source_families": [
+        "XYLEM__JABSCO"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
-        "inspection_or_maintenance_at_least_2": false,
+        "inspection_or_maintenance_at_least_2": true,
         "independent_documents_at_least_2": false,
         "source_families_at_least_2": false
       },
       "gate_passed": false
     },
     "mechanical_seal_failure": {
-      "eligible_triples": 1,
-      "unique_evidence_units": 1,
+      "eligible_triples": 5,
+      "unique_evidence_units": 5,
       "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 1,
-      "inspection_or_maintenance_evidence": 0,
+      "cause_or_mechanism_evidence": 2,
+      "inspection_or_maintenance_evidence": 3,
       "document_ids": [
+        "MP005",
+        "MP016",
         "MP018"
       ],
       "source_families": [
-        "PATTERSON_PUMP"
+        "DESMI",
+        "PATTERSON_PUMP",
+        "XYLEM__JABSCO"
       ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
-        "inspection_or_maintenance_at_least_2": false,
-        "independent_documents_at_least_2": false,
-        "source_families_at_least_2": false
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
       },
       "gate_passed": false
     },
     "bearing_or_lubrication_failure": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
-      "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
-      "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "eligible_triples": 8,
+      "unique_evidence_units": 8,
+      "symptom_evidence": 3,
+      "cause_or_mechanism_evidence": 7,
+      "inspection_or_maintenance_evidence": 1,
+      "document_ids": [
+        "MP005",
+        "MP018"
+      ],
+      "source_families": [
+        "DESMI",
+        "PATTERSON_PUMP"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
-        "cause_or_mechanism_at_least_3": false,
+        "cause_or_mechanism_at_least_3": true,
         "inspection_or_maintenance_at_least_2": false,
-        "independent_documents_at_least_2": false,
-        "source_families_at_least_2": false
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
       },
       "gate_passed": false
     },
     "pump_motor_misalignment": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
-      "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
-      "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "eligible_triples": 12,
+      "unique_evidence_units": 12,
+      "symptom_evidence": 2,
+      "cause_or_mechanism_evidence": 5,
+      "inspection_or_maintenance_evidence": 7,
+      "document_ids": [
+        "MP001",
+        "MP003",
+        "MP018"
+      ],
+      "source_families": [
+        "ABS",
+        "PATTERSON_PUMP"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
-        "cause_or_mechanism_at_least_3": false,
-        "inspection_or_maintenance_at_least_2": false,
-        "independent_documents_at_least_2": false,
-        "source_families_at_least_2": false
+        "cause_or_mechanism_at_least_3": true,
+        "inspection_or_maintenance_at_least_2": true,
+        "independent_documents_at_least_2": true,
+        "source_families_at_least_2": true
       },
       "gate_passed": false
     },
     "motor_electrical_drive_failure": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
+      "eligible_triples": 2,
+      "unique_evidence_units": 2,
       "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
+      "cause_or_mechanism_evidence": 2,
       "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "document_ids": [
+        "MP005"
+      ],
+      "source_families": [
+        "DESMI"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
@@ -158,13 +193,17 @@
       "gate_passed": false
     },
     "pipe_or_valve_integrity_failure": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
+      "eligible_triples": 2,
+      "unique_evidence_units": 2,
       "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
+      "cause_or_mechanism_evidence": 2,
       "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "document_ids": [
+        "MP005"
+      ],
+      "source_families": [
+        "DESMI"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,
@@ -175,13 +214,17 @@
       "gate_passed": false
     },
     "dry_running_or_maintenance_induced_failure": {
-      "eligible_triples": 0,
-      "unique_evidence_units": 0,
+      "eligible_triples": 1,
+      "unique_evidence_units": 1,
       "symptom_evidence": 0,
-      "cause_or_mechanism_evidence": 0,
+      "cause_or_mechanism_evidence": 1,
       "inspection_or_maintenance_evidence": 0,
-      "document_ids": [],
-      "source_families": [],
+      "document_ids": [
+        "MP005"
+      ],
+      "source_families": [
+        "DESMI"
+      ],
       "gate_checks": {
         "symptom_at_least_5": false,
         "cause_or_mechanism_at_least_3": false,

@@ -1,0 +1,147 @@
+{
+  "page_key": "MP003:p0524",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-0873ea95-7638-989e-b500-ee30673449b8",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 19717,
+  "attempt": 1,
+  "prompt_sha256": "bc121607d1b5656ae37c8ef3fdb51bf3a329d98e3dc341f0c7c99676ebb7e56d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "piping",
+        "head_canonical_zh": "管路",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "checked in the presence of the Surveyor to ensure that the resistance from any point along the piping to the hull does not exceed 1 MΩ",
+        "tail_canonical_zh": "在验船师在场情况下检查确保管路任一点至船体电阻不超过1MΩ",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Piping required by 4-6-2/9.15 to be electrically earthed (grounded) to the hull, are to be checked in the presence of the Surveyor to ensure that the resistance from any point along the piping to the hull does not exceed 1 MΩ.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "All piping located in a position where it is liable to mechanical damage",
+        "head_canonical_zh": "位于易受机械损伤位置的管路",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "protected",
+        "tail_canonical_zh": "防护",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All piping located in a position where it is liable to mechanical damage is to be protected.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "protective arrangements",
+        "head_canonical_zh": "防护装置",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "capable of being removed to enable inspection",
+        "tail_canonical_zh": "可拆卸以便检查",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The protective arrangements are to be capable of being removed to enable inspection.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Misalignment of an expansion joint",
+        "head_canonical_zh": "膨胀节不对中",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "reduced service life",
+        "tail_canonical_zh": "使用寿命缩短",
+        "tail_type": "Symptom",
+        "evidence_text": "Misalignment of an expansion joint reduces the rated movements and can induce severe stresses into the joint material, thus causing reduced service life.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Misalignment of an expansion joint",
+        "head_canonical_zh": "膨胀节不对中",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Alignment is to be within tolerances specified by the expansion joint manufacturer",
+        "tail_canonical_zh": "对中应在膨胀节制造商规定的公差范围内",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Misalignment of an expansion joint reduces the rated movements and can induce severe stresses into the joint material, thus causing reduced service life. Alignment is to be within tolerances specified by the expansion joint manufacturer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "expansion joints",
+        "head_canonical_zh": "膨胀节",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "installed in accessible locations to permit regular inspection and/or periodic servicing",
+        "tail_canonical_zh": "安装在便于定期检查和/或维护的位置",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Expansion joints are to be installed in accessible locations to permit regular inspection and/or periodic servicing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "excessive movements",
+        "head_canonical_zh": "过度位移",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "control rods may be installed on the expansion joint",
+        "tail_canonical_zh": "在膨胀节上安装限位拉杆",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Where an anchoring system is not used, control rods may be installed on the expansion joint to prevent excessive movements from occurring due to pressure thrust of the line.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

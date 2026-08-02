@@ -1,0 +1,88 @@
+{
+  "page_key": "MP001:p0102",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-1d9d2c3d-686f-98b7-bf42-a00f0e85a189",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 10553,
+  "attempt": 1,
+  "prompt_sha256": "2a8002ec917152747006143bdffa8b11e43856482dc7a361651c4da308dfdde7",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "InspectionMethod",
+        "relation": "diagnosed_by",
+        "tail_surface": "machinery misalignment",
+        "tail_canonical_zh": "机械不对中",
+        "tail_type": "FaultMode",
+        "evidence_text": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/\ncracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "monitoring current flow in one of the power leads at the motor control center or starter",
+        "tail_canonical_zh": "在电机控制中心或启动器处监测一根电源引线中的电流",
+        "tail_type": "InspectionAction",
+        "evidence_text": "This online technique\ninvolves monitoring current flow in one of the power leads at the motor control center or starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "electrical current variations",
+        "head_canonical_zh": "电流变化",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "changing machine operating conditions",
+        "tail_canonical_zh": "变化的机器运行工况",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The\nelectrical current variations identified in the test indicate changing machine operating conditions and can\nbe trended over time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "InspectionMethod",
+        "relation": "operates_under",
+        "tail_surface": "online",
+        "tail_canonical_zh": "在线",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "This online technique\ninvolves monitoring current flow in one of the power leads at the motor control center or starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

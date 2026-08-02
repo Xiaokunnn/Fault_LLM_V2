@@ -1,0 +1,73 @@
+{
+  "page_key": "MP005:p0055",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-f0c6b1ca-a28e-9137-84f4-6de72e5b8726",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 9130,
+  "attempt": 1,
+  "prompt_sha256": "2755e7a70777a322ec23ac23c6d1af7d9a13f30ffb5672ba489a0710163e2242",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Start-up against open discharge line",
+        "head_canonical_zh": "排出管路开启状态下启动",
+        "head_type": "操作工况",
+        "relation": "导致",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "故障模式",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Heat build-up inside the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "故障机理",
+        "relation": "损坏",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "部件",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "部件",
+        "relation": "具有特性",
+        "tail_surface": "maintenance-free",
+        "tail_canonical_zh": "免维护",
+        "tail_type": "技术特性",
+        "evidence_text": "Mechanical seals are maintenance-free.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

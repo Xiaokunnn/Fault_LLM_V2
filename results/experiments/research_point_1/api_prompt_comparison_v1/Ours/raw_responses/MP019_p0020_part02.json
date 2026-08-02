@@ -1,0 +1,745 @@
+{
+  "page_key": "MP019:p0020",
+  "request_part": 2,
+  "request_part_count": 3,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-c2b85d63-4655-92f1-b45e-be0edf1b82d9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 8487,
+    "prompt_tokens": 10667,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 19154
+  },
+  "latency_ms": 97919,
+  "attempt": 1,
+  "prompt_sha256": "de5e869759c07d08829900969f24e57e211b8e5330aa84386fb426948c814ce3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Overload",
+        "head_canonical_zh": "过载",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor overheats while\nrunning",
+        "tail_canonical_zh": "电机运行时过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor overheats while\nrunning\nOverload",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r006:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overheats while\nrunning",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "Reduce load.",
+        "tail_canonical_zh": "降低负载",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor overheats while\nrunning\nOverload\nReduce load.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r006:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Frame or ventilation openings may\nbe full of dirt and prevent proper\nventilation of motor",
+        "head_canonical_zh": "机座或通风口积尘阻碍电机通风",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor overheats while\nrunning",
+        "tail_canonical_zh": "电机运行时过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor overheats while\nrunning\nFrame or ventilation openings may\nbe full of dirt and prevent proper\nventilation of motor",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r007:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overheats while\nrunning",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Open vent holes and check for a continuous stream of air\nfrom the motor.",
+        "tail_canonical_zh": "打开通风孔并检查电机是否有连续气流",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor overheats while\nrunning\nFrame or ventilation openings may\nbe full of dirt and prevent proper\nventilation of motor\nOpen vent holes and check for a continuous stream of air\nfrom the motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r007:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor may have one phase open",
+        "head_canonical_zh": "电机单相开路",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor overheats while\nrunning",
+        "tail_canonical_zh": "电机运行时过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor overheats while\nrunning\nMotor may have one phase open",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r008:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overheats while\nrunning",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check to make sure that all leads are well connected.",
+        "tail_canonical_zh": "检查确保所有引线连接良好",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor overheats while\nrunning\nMotor may have one phase open\nCheck to make sure that all leads are well connected.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r008:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Grounded coil",
+        "head_canonical_zh": "线圈接地",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor overheats while\nrunning",
+        "tail_canonical_zh": "电机运行时过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor overheats while\nrunning\nGrounded coil",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r009:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overheats while\nrunning",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Motor must be rewound",
+        "tail_canonical_zh": "电机必须重绕",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor overheats while\nrunning\nGrounded coil\nMotor must be rewound",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r009:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Unbalanced terminal voltage",
+        "head_canonical_zh": "端电压不平衡",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor overheats while\nrunning",
+        "tail_canonical_zh": "电机运行时过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor overheats while\nrunning\nUnbalanced terminal voltage",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r010:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor overheats while\nrunning",
+        "head_canonical_zh": "电机运行时过热",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for faulty leads, connections and transformers.",
+        "tail_canonical_zh": "检查故障引线、连接和变压器",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor overheats while\nrunning\nUnbalanced terminal voltage\nCheck for faulty leads, connections and transformers.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r006:c01",
+          "MP019:p0020:t00:r010:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Motor misaligned",
+        "head_canonical_zh": "电机不对中",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nMotor misaligned",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r011:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Realign.",
+        "tail_canonical_zh": "重新对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nMotor misaligned\nRealign.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r011:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Weak support",
+        "head_canonical_zh": "支撑薄弱",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nWeak support",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r012:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Strengthen base.",
+        "tail_canonical_zh": "加固基座",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nWeak support\nStrengthen base.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r012:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Coupling out of balance",
+        "head_canonical_zh": "联轴器不平衡",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nCoupling out of balance",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r013:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Balance coupling.",
+        "tail_canonical_zh": "平衡联轴器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nCoupling out of balance\nBalance coupling.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r013:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Driven equipment unbalanced",
+        "head_canonical_zh": "被驱动设备不平衡",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nDriven equipment unbalanced",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r014:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Rebalance driven equipment.",
+        "tail_canonical_zh": "重新平衡被驱动设备",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nDriven equipment unbalanced\nRebalance driven equipment.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r014:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Defective bearings",
+        "head_canonical_zh": "轴承缺陷",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nDefective bearings",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r015:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Replace bearings.",
+        "tail_canonical_zh": "更换轴承",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nDefective bearings\nReplace bearings.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r015:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Bearings not in line",
+        "head_canonical_zh": "轴承不同心",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nBearings not in line",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r016:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Repair motor.",
+        "tail_canonical_zh": "修理电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nBearings not in line\nRepair motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r016:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Balancing weights shifted",
+        "head_canonical_zh": "平衡块移位",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nBalancing weights shifted",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r017:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Rebalance motor.",
+        "tail_canonical_zh": "重新平衡电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nBalancing weights shifted\nRebalance motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r017:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Contradiction between balancing of\nrotor and coupling (half key - full key)",
+        "head_canonical_zh": "转子与联轴器平衡矛盾（半键-全键）",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nContradiction between balancing of\nrotor and coupling (half key - full key)",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r018:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Rebalance coupling or motor.",
+        "tail_canonical_zh": "重新平衡联轴器或电机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nContradiction between balancing of\nrotor and coupling (half key - full key)\nRebalance coupling or motor.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r018:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Polyphase motor running single phase",
+        "head_canonical_zh": "多相电机单相运行",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nPolyphase motor running single phase",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r019:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for open circuit.",
+        "tail_canonical_zh": "检查开路",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motor vibrates\nPolyphase motor running single phase\nCheck for open circuit.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r019:c03"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Excessive end play",
+        "head_canonical_zh": "轴向窜动过大",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Motor vibrates",
+        "tail_canonical_zh": "电机振动",
+        "tail_type": "Symptom",
+        "evidence_text": "Motor vibrates\nExcessive end play",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r020:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Motor vibrates",
+        "head_canonical_zh": "电机振动",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Adjust bearing or add shim.",
+        "tail_canonical_zh": "调整轴承或加垫片",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Motor vibrates\nExcessive end play\nAdjust bearing or add shim.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r011:c01",
+          "MP019:p0020:t00:r020:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Fan rubbing end shield or fan cover",
+        "head_canonical_zh": "风扇摩擦端盖或风罩",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Scraping noise",
+        "tail_canonical_zh": "刮擦噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Scraping noise\nFan rubbing end shield or fan cover",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r021:c01",
+          "MP019:p0020:t00:r021:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Scraping noise",
+        "head_canonical_zh": "刮擦噪声",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Correct fan mounting.",
+        "tail_canonical_zh": "纠正风扇安装",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Scraping noise\nFan rubbing end shield or fan cover\nCorrect fan mounting.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r021:c01",
+          "MP019:p0020:t00:r021:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Loose on bedplate",
+        "head_canonical_zh": "底座松动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "Scraping noise",
+        "tail_canonical_zh": "刮擦噪声",
+        "tail_type": "Symptom",
+        "evidence_text": "Scraping noise\nLoose on bedplate",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r021:c01",
+          "MP019:p0020:t00:r022:c02"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Scraping noise",
+        "head_canonical_zh": "刮擦噪声",
+        "head_type": "Symptom",
+        "relation": "maintained_by",
+        "tail_surface": "Tighten holding bolts.",
+        "tail_canonical_zh": "紧固固定螺栓",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Scraping noise\nLoose on bedplate\nTighten holding bolts.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP019:p0020:t00:r021:c01",
+          "MP019:p0020:t00:r022:c03"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

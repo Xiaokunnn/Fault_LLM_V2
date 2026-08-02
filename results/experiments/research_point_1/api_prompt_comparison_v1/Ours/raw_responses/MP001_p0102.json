@@ -1,0 +1,75 @@
+{
+  "page_key": "MP001:p0102",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-0ed47398-b69b-95f5-9c76-6076351ef16c",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 8792,
+  "attempt": 1,
+  "prompt_sha256": "7aacc5cf5acc4e735ca4f00dc6fa19efed34a92550ed941ab602d6cedf2e0721",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "machinery misalignment",
+        "head_canonical_zh": "机械不对中",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "Power signature analysis",
+        "tail_canonical_zh": "功率特征分析",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/\n            cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "machinery misalignment",
+        "head_canonical_zh": "机械不对中",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "monitoring current flow in one of the power leads at the motor control center or starter",
+        "tail_canonical_zh": "监测电机控制中心或启动器处一根电源引线的电流",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/\n            cracked end rings, flow or machine output restrictions, and machinery misalignment. This online technique\n            involves monitoring current flow in one of the power leads at the motor control center or starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "electrical current variations",
+        "head_canonical_zh": "电流变化",
+        "head_type": "SignalFeature",
+        "relation": "indicates",
+        "tail_surface": "changing machine operating conditions",
+        "tail_canonical_zh": "机器运行工况变化",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The electrical current variations identified in the test indicate changing machine operating conditions and can be trended over time.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

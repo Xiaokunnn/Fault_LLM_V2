@@ -1,0 +1,228 @@
+{
+  "page_key": "MP005:p0065",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-b8b00ff9-3f48-9eb7-b987-fadc5440a9e8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2264,
+    "prompt_tokens": 1465,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3729
+  },
+  "latency_ms": 27789,
+  "attempt": 1,
+  "prompt_sha256": "fc38634a29d43af4b54d448ddaadae3470c74d07c81f84b06e32207e9607998f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "1-stage centrifugal pump",
+        "tail_canonical_zh": "单级离心泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Mechanical seal is the single most exposed/vulnerable part in a 1-stage centrifugal pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal failure",
+        "head_canonical_zh": "机械密封故障",
+        "head_type": "FaultMode",
+        "relation": "indicates",
+        "tail_surface": "problems",
+        "tail_canonical_zh": "问题",
+        "tail_type": "FaultMode",
+        "evidence_text": "hence a mechanical seal failure is often the first indication of problems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "wrong conditions",
+        "head_canonical_zh": "错误工况",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "Failure",
+        "tail_canonical_zh": "故障",
+        "tail_type": "FaultMode",
+        "evidence_text": "Failure can occur in only a few minutes running in the wrong conditions",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "initial leakage like drops or a small trickle",
+        "tail_canonical_zh": "初始泄漏如滴液或细流",
+        "tail_type": "Symptom",
+        "evidence_text": "A mechanical seal might have some initial leakage like drops or a small trickle during first start-up",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal leak drain hole",
+        "head_canonical_zh": "轴封泄漏排放孔",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "rear cover",
+        "tail_canonical_zh": "后盖",
+        "tail_type": "Component",
+        "evidence_text": "shaft seal leak drain hole in the rear cover",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "clogged shaft seal leak hole",
+        "head_canonical_zh": "轴封泄漏孔堵塞",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "A clogged shaft seal leak hole can lead to premature bearing failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.97,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water rising up into the pump ball bearings",
+        "head_canonical_zh": "水进入泵滚动轴承",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "premature bearing failure",
+        "tail_canonical_zh": "轴承过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "premature bearing failure due to water rising up into the pump ball bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal leak drain hole",
+        "head_canonical_zh": "轴封泄漏排放孔",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check regularly",
+        "tail_canonical_zh": "定期检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check regularly that the shaft seal leak drain hole ... is not clogged up",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumps",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect the pumps regularly for initial leakage",
+        "tail_canonical_zh": "定期检查泵的初始泄漏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Inspect the pumps regularly for initial leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "dismantle the mechanical seal and clean it properly",
+        "tail_canonical_zh": "拆卸并正确清洁机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "dismantle the mechanical seal and clean it properly to stop the leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "seal failure",
+        "head_canonical_zh": "密封故障",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "having spare mechanical seal (spare part kit) onboard",
+        "tail_canonical_zh": "船上备有备用机械密封（备件包）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "recommend having spare mechanical seal (spare part kit) onboard the vessel at all time to avoid standstill of pumps in case of seal failure",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

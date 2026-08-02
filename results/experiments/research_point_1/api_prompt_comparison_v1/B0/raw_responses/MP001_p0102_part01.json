@@ -1,0 +1,78 @@
+{
+  "page_key": "MP001:p0102",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-fb8ca3db-1d30-9519-9be7-9c0eda090650",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 631,
+    "prompt_tokens": 1267,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1898
+  },
+  "latency_ms": 7794,
+  "attempt": 1,
+  "prompt_sha256": "0b231f4e4a2ea0d00e01632356c421aecea7b8ed076610cb9f5e6e91f46a24f2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "检测技术",
+        "relation": "可检测故障",
+        "tail_surface": "machinery misalignment",
+        "tail_canonical_zh": "机械不对中",
+        "tail_type": "故障模式",
+        "evidence_text": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "检测技术",
+        "relation": "适用设备",
+        "tail_surface": "pumps",
+        "tail_canonical_zh": "泵",
+        "tail_type": "设备类型",
+        "evidence_text": "This technique can be used to analyze AC induction motors, synchronous motors, compressors, pumps, and motor-operated valves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.99
+      },
+      {
+        "head_surface": "Power signature analysis",
+        "head_canonical_zh": "功率特征分析",
+        "head_type": "检测技术",
+        "relation": "监测参数",
+        "tail_surface": "current flow",
+        "tail_canonical_zh": "电流",
+        "tail_type": "物理量",
+        "evidence_text": "This online technique involves monitoring current flow in one of the power leads at the motor control center or starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "page_key": "MP018:p0013",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-396e5a86-48dc-9dc0-a854-af063a1c4887",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1936,
+    "prompt_tokens": 1175,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3111
+  },
+  "latency_ms": 23943,
+  "attempt": 1,
+  "prompt_sha256": "bdafe7f1174826265fb05f0f94b82a68a38dd3a7eefe93858855761c3483a660",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "requires_pre_start_check",
+        "tail_surface": "shaft alignment",
+        "tail_canonical_zh": "轴对中",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Prior to each startup, check the shaft alignment as covered in Installation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pumps with oil lubricated bearings",
+        "head_canonical_zh": "油润滑轴承泵",
+        "head_type": "EquipmentSubtype",
+        "relation": "requires_maintenance",
+        "tail_surface": "install oil",
+        "tail_canonical_zh": "加注润滑油",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "install oil in pumps with oil lubricated bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operation of the pump without proper lubrication",
+        "head_canonical_zh": "泵在无适当润滑下运行",
+        "head_type": "FaultCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FailureMode",
+        "evidence_text": "Operation of the pump without proper lubrication will cause damage to the pump and possible personal injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "bearing_or_lubrication_failure"
+        ],
+        "model_confidence": 0.99,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "requires_pre_start_check",
+        "tail_surface": "shaft turns freely by hand",
+        "tail_canonical_zh": "手动盘车检查",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check that the shaft turns freely by hand.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "valve in the suction line",
+        "head_canonical_zh": "吸入管路阀门",
+        "head_type": "Component",
+        "relation": "operational_requirement",
+        "tail_surface": "completely open",
+        "tail_canonical_zh": "完全打开",
+        "tail_type": "OperationalState",
+        "evidence_text": "Any valve in the suction line must be completely open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.97,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "requires_priming_method",
+        "tail_surface": "open the vent valve on top of the pump casing",
+        "tail_canonical_zh": "打开泵壳顶部排气阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the pump operates under positive pressure, open the vent valve on top of the pump casing. After all entrained air has escaped, close the vent valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "requires_priming_method",
+        "tail_surface": "fill the pump and suction line with liquid from an outside source",
+        "tail_canonical_zh": "外部水源灌泵及吸入管",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the pump operates on a suction lift and a foot valve is included in the system, fill the pump and suction line with liquid from an outside source.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "requires_priming_method",
+        "tail_surface": "use a vacuum pump or ejector",
+        "tail_canonical_zh": "使用真空泵或喷射器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If the pump operates on a suction lift and no foot valve is provided; use a vacuum pump or ejector operated by air, steam, water, etc., to evacuate air from the pump case and the suction line",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pump is operated against a closed valve for more than a few minutes",
+        "head_canonical_zh": "泵在关闭阀门下运行超过数分钟",
+        "head_type": "FaultCondition",
+        "relation": "causes",
+        "tail_surface": "Overheating and/or loss of prime",
+        "tail_canonical_zh": "过热和/或失去灌注",
+        "tail_type": "FailureMode",
+        "evidence_text": "Overheating and/or loss of prime will result if the pump is operated against a closed valve for more than a few minutes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

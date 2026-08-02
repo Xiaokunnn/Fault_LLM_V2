@@ -1,0 +1,189 @@
+{
+  "page_key": "MP005:p0055",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-58832f68-89c2-9fc8-bfd9-4615c04ea4ef",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 23748,
+  "attempt": 1,
+  "prompt_sha256": "6e70aab64dd393f9c92395c87db7937eebe4b4824301ef164ae6385162601e5f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Start-up against open discharge line",
+        "head_canonical_zh": "排出阀全开启动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Make sure that the motor has sufficient power reserves",
+        "tail_canonical_zh": "确保电机有足够功率储备",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage\nthe motor.\n\nMake sure that the motor has sufficient power reserves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use a soft starter",
+        "tail_canonical_zh": "使用软启动器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage\nthe motor.\n\nMake sure that the motor has sufficient power reserves.\n\nUse a soft starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Use speed control",
+        "tail_canonical_zh": "使用调速控制",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage\nthe motor.\n\nMake sure that the motor has sufficient power reserves.\n\nUse a soft starter.\nUse speed control.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Heat build-up inside the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "damage the shaft seal",
+        "head_canonical_zh": "轴封损坏",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Stop the heat source, and always allow the fluid handled to completely cool down after the pump set stops",
+        "tail_canonical_zh": "停止热源并在泵组停机后待介质完全冷却",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.\n\nStop the heat source, and always allow the fluid handled to completely cool down after\nthe pump set stops.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Checking the shaft seal",
+        "tail_canonical_zh": "检查轴封",
+        "tail_type": "InspectionAction",
+        "evidence_text": "6.4. Checking the shaft seal                                                \n\nThe mechanical seal only leaks slightly or invisibly (as vapor) during operation. Mechanical seals\n\nare maintenance-free.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "leaks slightly or invisibly (as vapor)",
+        "tail_canonical_zh": "轻微泄漏或不可见泄漏（蒸汽）",
+        "tail_type": "Symptom",
+        "evidence_text": "The mechanical seal only leaks slightly or invisibly (as vapor) during operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

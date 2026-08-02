@@ -1,0 +1,156 @@
+{
+  "page_key": "MP016:p0006",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-55532c8e-83a3-9307-8cc0-6c2e815c82e9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1430,
+    "prompt_tokens": 1671,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3101
+  },
+  "latency_ms": 17225,
+  "attempt": 1,
+  "prompt_sha256": "9b61cd579b7585314366397a6757808f3debc049780dd235095cfadb77c1fa72",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check Impeller for signs of wear or damage",
+        "tail_canonical_zh": "检查叶轮磨损或损坏迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check Impeller for signs of wear or damage, replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "wearplate",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check wearplate for wear or damage",
+        "tail_canonical_zh": "检查耐磨板磨损或损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check wearplate for wear or damage.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "dynamic seal face",
+        "head_canonical_zh": "动密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect components for wear",
+        "tail_canonical_zh": "检查部件磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Slide dynamic seal face from shaft. Inspect components for wear and replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.92
+      },
+      {
+        "head_surface": "Static Face",
+        "head_canonical_zh": "静密封面",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Inspect seal for wear",
+        "tail_canonical_zh": "检查密封件磨损",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Seals can carefully be pulled out from body recess. Inspect seal for wear and replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.96,
+        "tail_translation_confidence": 0.94
+      },
+      {
+        "head_surface": "lip seals",
+        "head_canonical_zh": "唇形密封",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Check lip seals for damage",
+        "tail_canonical_zh": "检查唇形密封损坏",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check lip seals for damage and replace as required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.97,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Impeller",
+        "head_canonical_zh": "叶轮",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replace if required",
+        "tail_canonical_zh": "必要时更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Check Impeller for signs of wear or damage, replace if required.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.96
+      },
+      {
+        "head_surface": "wearplate",
+        "head_canonical_zh": "耐磨板",
+        "head_type": "Component",
+        "relation": "contains",
+        "tail_surface": "static seal face",
+        "tail_canonical_zh": "静密封面",
+        "tail_type": "Component",
+        "evidence_text": "Wearplate may contain static seal face or have polished face for seal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.96
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "page_key": "MP001:p0047",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-daec55fa-5062-9703-b29a-5cc4a5ab1bf2",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 428,
+    "prompt_tokens": 1385,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1813
+  },
+  "latency_ms": 5553,
+  "attempt": 1,
+  "prompt_sha256": "e5367588bf55ab3ef1b7ba76050ff3c46da168113f1beca7f1db700e9335c688",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Time waveform analysis",
+        "head_canonical_zh": "时域波形分析",
+        "head_type": "监测技术",
+        "relation": "可识别故障",
+        "tail_surface": "misalignment",
+        "tail_canonical_zh": "不对中",
+        "tail_type": "机械故障",
+        "evidence_text": "Time waveform analysis can identify a wide range of mechanical instabilities, including problems such as chipped, cracked, or broken teeth; misalignment; looseness; or eccentricity.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pump_motor_misalignment"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Time waveform analysis",
+        "head_canonical_zh": "时域波形分析",
+        "head_type": "监测技术",
+        "relation": "适用设备",
+        "tail_surface": "pumps",
+        "tail_canonical_zh": "泵",
+        "tail_type": "旋转机械",
+        "evidence_text": "This technique can be used to monitor gearboxes, pumps, and roller bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.98
+      }
+    ],
+    "warnings": []
+  }
+}

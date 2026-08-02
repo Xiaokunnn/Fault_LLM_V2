@@ -1,0 +1,144 @@
+{
+  "page_key": "MP005:p0055",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-bbfa3cc5-0865-951a-ac66-a58df618cada",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 31505,
+  "attempt": 1,
+  "prompt_sha256": "ac36d7ef51ffffcc3e78101524975c88415f6ba7aff97cdbdf7e6f6ad7d8acce",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Start-up against open discharge line",
+        "head_canonical_zh": "排出管路开启状态下启动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor overload",
+        "tail_canonical_zh": "电机过载",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "damage the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload, which could damage the motor.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Heat build-up inside the pump",
+        "head_canonical_zh": "泵内热量积聚",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "轴封损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t03:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pump",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "Heat build-up inside the pump could damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t03:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.98
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "soft starter",
+        "tail_canonical_zh": "软启动器",
+        "tail_type": "Equipment",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload... Use a soft starter.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01",
+          "MP005:p0055:t01:r004:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motor overload",
+        "head_canonical_zh": "电机过载",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "speed control",
+        "tail_canonical_zh": "速度控制",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start-up against open discharge line could lead to motor overload... Use speed control.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [
+          "MP005:p0055:t01:r001:c01",
+          "MP005:p0055:t01:r005:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "page_key": "MP005:p0054",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-998d83d0-1ba7-9fcb-9653-530f733d4382",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 24063,
+  "attempt": 1,
+  "prompt_sha256": "a40dae88cd215700e262434827e547eca399a5d0ffbbfd4399b74470b602c586",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pump",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "avoid standstill damage to shaft seal and bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bearings",
+        "head_canonical_zh": "轴承",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "pump",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Equipment",
+        "evidence_text": "avoid standstill damage to shaft seal and bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "standstill damage",
+        "head_canonical_zh": "停机损坏",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "avoid standstill damage to shaft seal and bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "standstill damage",
+        "head_canonical_zh": "停机损坏",
+        "head_type": "FaultMode",
+        "relation": "occurs_at",
+        "tail_surface": "bearings",
+        "tail_canonical_zh": "轴承",
+        "tail_type": "Component",
+        "evidence_text": "avoid standstill damage to shaft seal and bearings",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "seizing of the impeller",
+        "head_canonical_zh": "叶轮卡死",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "shaft rotation or start-up",
+        "tail_canonical_zh": "轴转动或启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "require more frequent shaft rotation or start-up in order to avoid seizing of the impeller",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "seizing of ... the shaft seal",
+        "head_canonical_zh": "轴封卡死",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "shaft rotation or start-up",
+        "tail_canonical_zh": "轴转动或启动",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "require more frequent shaft rotation or start-up in order to avoid seizing of the impeller and/or the shaft seal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "leaks",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "occurs_at",
+        "tail_surface": "shaft seal",
+        "tail_canonical_zh": "轴封",
+        "tail_type": "Component",
+        "evidence_text": "the shaft seal often leaks a bit during standstill",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "standstill",
+        "head_canonical_zh": "停机状态",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "leaks",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "the shaft seal often leaks a bit during standstill",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "passively rotating pump",
+        "head_canonical_zh": "被动旋转的泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage the shaft seal",
+        "tail_canonical_zh": "损坏轴封",
+        "tail_type": "FaultMode",
+        "evidence_text": "lead liquid ... through a passively rotating pump, as this may damage the shaft seal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft rotates freely without jarring sounds",
+        "head_canonical_zh": "轴自由旋转且无刺耳声音",
+        "head_type": "InspectionAction",
+        "relation": "inspected_by",
+        "tail_surface": "Check",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Before starting the pump check that: - The shaft rotates freely without jarring sounds.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "page_key": "MP005:p0063",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-384100a9-51e9-9978-8372-b7e313d1f70f",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 26161,
+  "attempt": 1,
+  "prompt_sha256": "3a90930f1703b0de8a3146020a058ef0c759eb712a3320d7692c85bbeee2b63b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Dry running of the pump – closed inlet/discharge valve",
+        "head_canonical_zh": "泵干运转（进出口阀关闭）",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "quickly generating heat in the pump, high noises, increased power consumption before total breakdown",
+        "tail_canonical_zh": "泵内快速发热、高噪声、总故障前功耗增加",
+        "tail_type": "Symptom",
+        "evidence_text": "1. Valves closed,\nquickly\ngenerating heat\nin the pump, high\nnoises,\nincreased power\nconsumption\nbefore total\nbreakdown",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r002:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Dry running of the pump – closed inlet/discharge valve",
+        "head_canonical_zh": "泵干运转（进出口阀关闭）",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Always make sure pump is never operated dry (check regularly that any priming systems are working) and/or with closed suction valves",
+        "tail_canonical_zh": "确保泵绝不干转（定期检查引水系统工作正常）且不在吸入阀关闭下运行",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "1. Always make\nsure pump is\nnever operated\ndry (check\nregularly that any\npriming systems\nare working)\nand/or with\nclosed suction\nvalves.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r002:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating outside recommended QH area (70-120% of BEP)",
+        "head_canonical_zh": "在推荐QH区域外运行（BEP的70-120%以外）",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "Readings of operational/log data",
+        "tail_canonical_zh": "读取运行/日志数据",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1. Readings of\noperational/log\ndata.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r003:c06"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating outside recommended QH area (70-120% of BEP)",
+        "head_canonical_zh": "在推荐QH区域外运行（BEP的70-120%以外）",
+        "head_type": "OperatingCondition",
+        "relation": "inspected_by",
+        "tail_surface": "At least diff. pressure, power and pump speed. Compare with design specification",
+        "tail_canonical_zh": "至少监测压差、功率和泵转速并与设计规格比较",
+        "tail_type": "InspectionAction",
+        "evidence_text": "2. At least diff.\npressure, power\nand pump speed.\nCompare with\ndesign\nspecification",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r003:c06"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating outside recommended QH area (70-120% of BEP)",
+        "head_canonical_zh": "在推荐QH区域外运行（BEP的70-120%以外）",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Continously monitoring the operation",
+        "tail_canonical_zh": "持续监控运行状态",
+        "tail_type": "InspectionAction",
+        "evidence_text": "1. Continously\nmonitoring the\noperation.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r003:c09"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Operating outside recommended QH area (70-120% of BEP)",
+        "head_canonical_zh": "在推荐QH区域外运行（BEP的70-120%以外）",
+        "head_type": "OperatingCondition",
+        "relation": "prevented_by",
+        "tail_surface": "Use limitations and alarms in the control system – min/max rpm, flow, pressure",
+        "tail_canonical_zh": "在控制系统中使用限值和报警（最小/最大转速、流量、压力）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "2. Use limitations\nand alarms in the\ncontrol system –\nmin/max rpm,\nflow, pressure",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r003:c09"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Medium and/or pressure and/or liquid temperature not according to specification",
+        "head_canonical_zh": "介质和/或压力和/或液体温度不符合规格",
+        "head_type": "OperatingCondition",
+        "relation": "manifests_as",
+        "tail_surface": "Abnormal wear and corrosion in the pump",
+        "tail_canonical_zh": "泵内异常磨损和腐蚀",
+        "tail_type": "Symptom",
+        "evidence_text": "1. Abnormal wear\nand corrosion in\nthe pump.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Medium and/or pressure and/or liquid temperature not according to specification",
+        "head_canonical_zh": "介质和/或压力和/或液体温度不符合规格",
+        "head_type": "OperatingCondition",
+        "relation": "manifests_as",
+        "tail_surface": "Leaking mechanical seal",
+        "tail_canonical_zh": "机械密封泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "2. Leaking\nmechanical seal",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0063:t00:r004:c06"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

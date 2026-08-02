@@ -1,0 +1,101 @@
+{
+  "page_key": "MP005:p0054",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-18e12a4e-fc72-9867-b314-41ef0343ff75",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 927,
+    "prompt_tokens": 1116,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2043
+  },
+  "latency_ms": 11885,
+  "attempt": 1,
+  "prompt_sha256": "6989b3945a3842e4911a22ba6bf38f34bb2a3c4a923946373b6b4ad634c94cac",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "component",
+        "relation": "failure_cause",
+        "tail_surface": "standstill",
+        "tail_canonical_zh": "停机静止",
+        "tail_type": "operational_state",
+        "evidence_text": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "component",
+        "relation": "failure_cause",
+        "tail_surface": "seizing",
+        "tail_canonical_zh": "卡死",
+        "tail_type": "failure_mode",
+        "evidence_text": "In special applications, it may require more frequent shaft rotation or start-up in order to avoid seizing of the impeller and/or the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "component",
+        "relation": "failure_cause",
+        "tail_surface": "lead liquid through a passively rotating pump",
+        "tail_canonical_zh": "液体流经被动旋转的泵",
+        "tail_type": "improper_operation",
+        "evidence_text": "It is not recommended to lead liquid (either one way or the other) through a passively rotating pump, as this may damage the shaft seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "shaft seal",
+        "head_canonical_zh": "轴封",
+        "head_type": "component",
+        "relation": "maintenance_requirement",
+        "tail_surface": "run at least 300 rpm",
+        "tail_canonical_zh": "运行转速至少300 rpm",
+        "tail_type": "operational_parameter",
+        "evidence_text": "For the sake of the shaft seal lifetime, it is recommended to run at least 300 rpm and use max. 1 minute on acceleration from 0 to 300 rpm and max. 1 minute on deceleration from 300 to 0 rpm.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}
