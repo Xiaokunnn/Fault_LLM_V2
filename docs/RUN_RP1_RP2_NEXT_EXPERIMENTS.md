@@ -47,11 +47,11 @@ bash scripts/run_rp1_api_prompt_comparison_secure.sh --limit 2
 服务器需要保持以下精确路径：
 
 ```text
-data/mode/BAAI-bge-m3
-data/mode/Qwen2.5-7B-Instruct
+data/model/BAAI-bge-m3
+data/model/Qwen2.5-7B-Instruct
 ```
 
-`data/mode/` 已加入 Git 忽略，不会把模型权重推送到 GitHub。
+`data/model/` 已加入 Git 忽略，不会把模型权重推送到 GitHub。
 
 ### 3.2 实验链路
 

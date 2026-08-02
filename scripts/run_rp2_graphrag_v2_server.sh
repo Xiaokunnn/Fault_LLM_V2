@@ -8,12 +8,12 @@ PYTHON="${PYTHON:-python}"
 echo "[RP2 server] root=$ROOT"
 echo "[RP2 server] python=$($PYTHON --version 2>&1)"
 
-if [[ ! -d data/mode/BAAI-bge-m3 ]]; then
-  echo "Missing model: data/mode/BAAI-bge-m3" >&2
+if [[ ! -d data/model/BAAI-bge-m3 ]]; then
+  echo "Missing model: data/model/BAAI-bge-m3" >&2
   exit 2
 fi
-if [[ ! -d data/mode/Qwen2.5-7B-Instruct ]]; then
-  echo "Missing model: data/mode/Qwen2.5-7B-Instruct" >&2
+if [[ ! -d data/model/Qwen2.5-7B-Instruct ]]; then
+  echo "Missing model: data/model/Qwen2.5-7B-Instruct" >&2
   exit 2
 fi
 
