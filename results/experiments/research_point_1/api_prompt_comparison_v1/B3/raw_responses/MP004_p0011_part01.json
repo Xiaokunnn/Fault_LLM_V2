@@ -1,0 +1,624 @@
+{
+  "page_key": "MP004:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-dfc1599b-8e79-98ee-970d-ce0205e5b72d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 7266,
+    "prompt_tokens": 3572,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 10838
+  },
+  "latency_ms": 78552,
+  "attempt": 1,
+  "prompt_sha256": "9997522ff66270b5ece782fefebbcb3bc552e5e680b04aac1a6f20b306f1435e",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "The pump is not filled with liquid",
+        "head_canonical_zh": "泵未充满液体",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 1. The pump is not filled with liquid",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Leaking non-return valve in pump",
+        "head_canonical_zh": "泵内止回阀泄漏",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 2. Leaking non-return valve in pump",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Wrong direction of rotation",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 3. Wrong direction of rotation",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air is drawn in because of too little liquid or leaking suction line",
+        "head_canonical_zh": "因液位过低或吸入管路泄漏导致吸气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 4. Air is drawn in because of too little liquid or leaking suction line",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Liquid lock in outlet line",
+        "head_canonical_zh": "排出管路液锁",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 5. Liquid lock in outlet line",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Temperature of liquid too high",
+        "head_canonical_zh": "液体温度过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 6. Temperature of liquid too high",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Air cannot escape on pressure side",
+        "head_canonical_zh": "压力侧空气无法排出",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump does not prime",
+        "tail_canonical_zh": "泵无法自吸",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump does not prime ... 7. Air cannot escape on pressure side",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c00",
+          "MP004:p0011:t00:r001:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fill pump casing with liquid",
+        "head_canonical_zh": "向泵壳注液",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "The pump is not filled with liquid",
+        "tail_canonical_zh": "泵未充满液体",
+        "tail_type": "Cause",
+        "evidence_text": "1. The pump is not filled with liquid ... Fill pump casing with liquid",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Remove foreign body in pump/Remove any coating on mating faces",
+        "head_canonical_zh": "清除泵内异物/清除配合面涂层",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Leaking non-return valve in pump",
+        "tail_canonical_zh": "泵内止回阀泄漏",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "2. Leaking non-return valve in pump ... Remove foreign body in pump/Remove any coating on mating faces",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Change direction of rotation",
+        "head_canonical_zh": "改变旋转方向",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Wrong direction of rotation",
+        "tail_canonical_zh": "旋转方向错误",
+        "tail_type": "Cause",
+        "evidence_text": "3. Wrong direction of rotation ... Change direction of rotation",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Lower suction pipe/Tighten suction line",
+        "head_canonical_zh": "降低吸水管/紧固吸入管路",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Air is drawn in because of too little liquid or leaking suction line",
+        "tail_canonical_zh": "因液位过低或吸入管路泄漏导致吸气",
+        "tail_type": "Cause",
+        "evidence_text": "4. Air is drawn in because of too little liquid or leaking suction line ... Lower suction pipe/Tighten suction line",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Change the pressure line so that the air can pass out freely",
+        "head_canonical_zh": "更改压力管路使空气能自由排出",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Liquid lock in outlet line",
+        "tail_canonical_zh": "排出管路液锁",
+        "tail_type": "Cause",
+        "evidence_text": "5. Liquid lock in outlet line ... Change the pressure line so that the air can pass out freely",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Replace liquid in pump casing/Wrong dimensioning/Contact DESMI",
+        "head_canonical_zh": "更换泵壳内液体/尺寸选型错误/联系DESMI",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Temperature of liquid too high",
+        "tail_canonical_zh": "液体温度过高",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "6. Temperature of liquid too high ... Replace liquid in pump casing/Wrong dimensioning/Contact DESMI",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ventilate the system",
+        "head_canonical_zh": "系统排气",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Air cannot escape on pressure side",
+        "tail_canonical_zh": "压力侧空气无法排出",
+        "tail_type": "Cause",
+        "evidence_text": "7. Air cannot escape on pressure side ... Ventilate the system",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r001:c01",
+          "MP004:p0011:t00:r001:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Wrong direction of rotation",
+        "head_canonical_zh": "旋转方向错误",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 1. Wrong direction of rotation",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Piping system choked",
+        "head_canonical_zh": "管路系统堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 2. Piping system choked",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The pump is choked",
+        "head_canonical_zh": "泵堵塞",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 3. The pump is choked",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Suction line leaks, pump takes air",
+        "head_canonical_zh": "吸入管路泄漏，泵吸入空气",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 4. Suction line leaks, pump takes air",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Suction lift too high",
+        "head_canonical_zh": "吸程过高",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 5. Suction lift too high",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Pump and piping system wrongly dimensioned",
+        "head_canonical_zh": "泵和管路系统尺寸选型错误",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 6. Pump and piping system wrongly dimensioned",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "RPM too low",
+        "head_canonical_zh": "转速过低",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "The pump has no or too low capacity",
+        "tail_canonical_zh": "泵无流量或流量过低",
+        "tail_type": "FaultMode",
+        "evidence_text": "The pump has no or too low capacity ... 7. RPM too low",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c00",
+          "MP004:p0011:t00:r002:c01"
+        ],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Change direction of rotation to clockwise when viewed from shaft end (the direction of the arrow)",
+        "head_canonical_zh": "从轴端看改为顺时针旋转（箭头方向）",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Wrong direction of rotation",
+        "tail_canonical_zh": "旋转方向错误",
+        "tail_type": "Cause",
+        "evidence_text": "1. Wrong direction of rotation ... Change direction of rotation to clockwise when viewed from shaft end (the direction of the arrow)",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Clean or replace",
+        "head_canonical_zh": "清洁或更换",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Piping system choked",
+        "tail_canonical_zh": "管路系统堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "2. Piping system choked ... Clean or replace",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Clean the pump",
+        "head_canonical_zh": "清洁泵",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "The pump is choked",
+        "tail_canonical_zh": "泵堵塞",
+        "tail_type": "Cause",
+        "evidence_text": "3. The pump is choked ... Clean the pump",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Find the leakage, repair the fault, non-return valve not submerged",
+        "head_canonical_zh": "查找泄漏点，修复故障，止回阀未浸没",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "Suction line leaks, pump takes air",
+        "tail_canonical_zh": "吸入管路泄漏，泵吸入空气",
+        "tail_type": "Cause",
+        "evidence_text": "4. Suction line leaks, pump takes air ... Find the leakage, repair the fault, non-return valve not submerged",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Check data sheet Q/H curve and NPSH or contact DESMI",
+        "head_canonical_zh": "检查数据表Q/H曲线和NPSH或联系DESMI",
+        "head_type": "InspectionAction",
+        "relation": "diagnosed_by",
+        "tail_surface": "Suction lift too high",
+        "tail_canonical_zh": "吸程过高",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "5. Suction lift too high ... Check data sheet Q/H curve and NPSH or contact DESMI",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Fit smaller V-belt pulley on pump. Change RPM of electric motor",
+        "head_canonical_zh": "在泵上安装更小的V带轮。改变电机转速",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "RPM too low",
+        "tail_canonical_zh": "转速过低",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "7. RPM too low ... Fit smaller V-belt pulley on pump. Change RPM of electric motor",
+        "evidence_mode": "E2_table_row",
+        "evidence_unit_ids": [
+          "MP004:p0011:t00:r002:c01",
+          "MP004:p0011:t00:r002:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

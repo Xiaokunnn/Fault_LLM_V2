@@ -1,0 +1,122 @@
+{
+  "page_key": "MP018:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-567be066-5fb4-9269-940d-6657624c9d0a",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1122,
+    "prompt_tokens": 1297,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2419
+  },
+  "latency_ms": 11621,
+  "attempt": 1,
+  "prompt_sha256": "6b9cf7b733fee7e93c54834469b21102335f4061dbaac97a60bafbf76d06167d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "air leakage into the pump",
+        "tail_canonical_zh": "空气漏入泵内",
+        "tail_type": "FaultMode",
+        "evidence_text": "Improper seal water conditions can cause air leakage into the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "excessive seepage out of the pump",
+        "tail_canonical_zh": "泵过度泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Improper seal water conditions can cause ... excessive seepage out of the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "overheating of packing",
+        "tail_canonical_zh": "填料过热",
+        "tail_type": "Symptom",
+        "evidence_text": "Improper seal water conditions can cause ... overheating of packing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature failure of packing",
+        "tail_canonical_zh": "填料过早失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Improper seal water conditions can cause ... premature failure of packing",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "scoring of shaft sleeve",
+        "tail_canonical_zh": "轴套划伤",
+        "tail_type": "FaultMode",
+        "evidence_text": "Improper seal water conditions can cause ... scoring of shaft sleeve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": [
+      "Evidence for 'excessive seepage out of the pump', 'overheating of packing', 'premature failure of packing', and 'scoring of shaft sleeve' shares the same contiguous sentence with 'Improper seal water conditions' but contains intervening list items; strictly E1 compliant as single sentence span."
+    ]
+  }
+}

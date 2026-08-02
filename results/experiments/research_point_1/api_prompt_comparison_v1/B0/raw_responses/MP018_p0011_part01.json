@@ -1,0 +1,116 @@
+{
+  "page_key": "MP018:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-66bbef6b-59ed-9b1f-9583-1dda119a9586",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1091,
+    "prompt_tokens": 1095,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2186
+  },
+  "latency_ms": 12092,
+  "attempt": 1,
+  "prompt_sha256": "573fdef8df64eabcb79f32bee9b66252eff40d0be2414b8c5de69f2d9e3377ef",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "check valve",
+        "head_canonical_zh": "止回阀",
+        "head_type": "component",
+        "relation": "prevents",
+        "tail_surface": "reverse flow",
+        "tail_canonical_zh": "倒流",
+        "tail_type": "phenomenon",
+        "evidence_text": "The check valve prevents reverse flow and protects the pump from excessive back pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "check valve",
+        "head_canonical_zh": "止回阀",
+        "head_type": "component",
+        "relation": "protects_from",
+        "tail_surface": "excessive back pressure",
+        "tail_canonical_zh": "过高背压",
+        "tail_type": "phenomenon",
+        "evidence_text": "The check valve prevents reverse flow and protects the pump from excessive back pressure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "condition",
+        "relation": "causes",
+        "tail_surface": "air leakage into the pump",
+        "tail_canonical_zh": "空气漏入泵内",
+        "tail_type": "fault_symptom",
+        "evidence_text": "WARNING ! ! Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Improper seal water conditions",
+        "head_canonical_zh": "密封水条件不当",
+        "head_type": "condition",
+        "relation": "causes",
+        "tail_surface": "premature failure of packing",
+        "tail_canonical_zh": "填料过早失效",
+        "tail_type": "fault_symptom",
+        "evidence_text": "WARNING ! ! Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "Failure to observe these instructions",
+        "head_canonical_zh": "未遵守这些说明",
+        "head_type": "condition",
+        "relation": "results_in",
+        "tail_surface": "seizure of the rotating element",
+        "tail_canonical_zh": "旋转元件咬死",
+        "tail_type": "fault_symptom",
+        "evidence_text": "WARNING ! ! Failure to observe these instructions may result in damage to the pump due to seizure of the rotating element.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.8,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}
