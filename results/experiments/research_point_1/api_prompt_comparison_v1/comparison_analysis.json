@@ -1,0 +1,316 @@
+{
+  "experiment": "rp1_fixed_page_real_api_prompt_comparison_v1_analysis",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "statistical_unit": "page_cluster",
+  "bootstrap_repeats": 10000,
+  "bootstrap_seed": 20260802,
+  "rows": [
+    {
+      "method": "B0",
+      "pages": 20,
+      "raw_proposals": 162,
+      "normalized_candidates": 0,
+      "strict_silver": 0,
+      "contract_yield": 0.0,
+      "strict_silver_rate_over_raw": 0.0,
+      "strict_silver_rate_over_normalized": 0.0,
+      "latency_ms_total": 450116,
+      "latency_ms_per_page": 22505.8,
+      "strict_silver_per_minute": 0.0,
+      "needs_review": 0,
+      "rejected": 0
+    },
+    {
+      "method": "B1",
+      "pages": 20,
+      "raw_proposals": 312,
+      "normalized_candidates": 184,
+      "strict_silver": 50,
+      "contract_yield": 0.5897435897435898,
+      "strict_silver_rate_over_raw": 0.16025641025641027,
+      "strict_silver_rate_over_normalized": 0.2717391304347826,
+      "latency_ms_total": 817301,
+      "latency_ms_per_page": 40865.05,
+      "strict_silver_per_minute": 3.670618291180361,
+      "needs_review": 41,
+      "rejected": 93
+    },
+    {
+      "method": "B2",
+      "pages": 20,
+      "raw_proposals": 226,
+      "normalized_candidates": 97,
+      "strict_silver": 31,
+      "contract_yield": 0.42920353982300885,
+      "strict_silver_rate_over_raw": 0.13716814159292035,
+      "strict_silver_rate_over_normalized": 0.31958762886597936,
+      "latency_ms_total": 650502,
+      "latency_ms_per_page": 32525.1,
+      "strict_silver_per_minute": 2.859330178846491,
+      "needs_review": 28,
+      "rejected": 38
+    },
+    {
+      "method": "B3",
+      "pages": 20,
+      "raw_proposals": 254,
+      "normalized_candidates": 120,
+      "strict_silver": 32,
+      "contract_yield": 0.47244094488188976,
+      "strict_silver_rate_over_raw": 0.12598425196850394,
+      "strict_silver_rate_over_normalized": 0.26666666666666666,
+      "latency_ms_total": 717682,
+      "latency_ms_per_page": 35884.1,
+      "strict_silver_per_minute": 2.6752795806499257,
+      "needs_review": 30,
+      "rejected": 58
+    },
+    {
+      "method": "Ours",
+      "pages": 20,
+      "raw_proposals": 367,
+      "normalized_candidates": 367,
+      "strict_silver": 148,
+      "contract_yield": 1.0,
+      "strict_silver_rate_over_raw": 0.4032697547683924,
+      "strict_silver_rate_over_normalized": 0.4032697547683924,
+      "latency_ms_total": 1078872,
+      "latency_ms_per_page": 53943.6,
+      "strict_silver_per_minute": 8.230818855248815,
+      "needs_review": 92,
+      "rejected": 127
+    }
+  ],
+  "bootstrap_ci95": {
+    "B0": {
+      "contract_yield": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "strict_silver_per_minute": {
+        "estimate": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      }
+    },
+    "B1": {
+      "contract_yield": {
+        "estimate": 0.5897435897435898,
+        "ci95_low": 0.3258136488530107,
+        "ci95_high": 0.9450624512099921
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate": 0.16025641025641027,
+        "ci95_low": 0.07873924613589968,
+        "ci95_high": 0.3028882575757575
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate": 0.2717391304347826,
+        "ci95_low": 0.156349246742671,
+        "ci95_high": 0.42779761904761876
+      },
+      "strict_silver_per_minute": {
+        "estimate": 3.670618291180361,
+        "ci95_low": 1.75979085407788,
+        "ci95_high": 7.210451807476356
+      }
+    },
+    "B2": {
+      "contract_yield": {
+        "estimate": 0.42920353982300885,
+        "ci95_low": 0.2213089915548932,
+        "ci95_high": 0.7797619047619048
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate": 0.13716814159292035,
+        "ci95_low": 0.0625,
+        "ci95_high": 0.26751816632277736
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate": 0.31958762886597936,
+        "ci95_low": 0.19791380494505495,
+        "ci95_high": 0.4563106796116505
+      },
+      "strict_silver_per_minute": {
+        "estimate": 2.859330178846491,
+        "ci95_low": 1.2618397499720337,
+        "ci95_high": 5.8319623813795936
+      }
+    },
+    "B3": {
+      "contract_yield": {
+        "estimate": 0.47244094488188976,
+        "ci95_low": 0.23872452978056424,
+        "ci95_high": 0.7875695252194141
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate": 0.12598425196850394,
+        "ci95_low": 0.06101591566763125,
+        "ci95_high": 0.23899447768062584
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate": 0.26666666666666666,
+        "ci95_low": 0.14705882352941177,
+        "ci95_high": 0.44
+      },
+      "strict_silver_per_minute": {
+        "estimate": 2.6752795806499257,
+        "ci95_low": 1.2658410172042187,
+        "ci95_high": 5.2687841805904485
+      }
+    },
+    "Ours": {
+      "contract_yield": {
+        "estimate": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate": 0.4032697547683924,
+        "ci95_low": 0.27142782582761704,
+        "ci95_high": 0.5507260529891305
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate": 0.4032697547683924,
+        "ci95_low": 0.27142782582761704,
+        "ci95_high": 0.5507260529891305
+      },
+      "strict_silver_per_minute": {
+        "estimate": 8.230818855248815,
+        "ci95_low": 5.5041337733165765,
+        "ci95_high": 11.076937481118133
+      }
+    }
+  },
+  "derived_conclusions": {
+    "strict_silver_count_vs_best_baseline": {
+      "baseline": "B1",
+      "ratio": 2.96,
+      "relative_increase": 1.96
+    },
+    "silver_rate_over_normalized_vs_best_baseline": {
+      "baseline": "B2",
+      "absolute_percentage_point_gain": 8.368212590241303,
+      "relative_increase": 0.2618440713720666
+    }
+  },
+  "paired_ours_minus_baseline_ci95": {
+    "B0": {
+      "strict_silver": {
+        "estimate_delta": 148.0,
+        "ci95_low": 79.0,
+        "ci95_high": 231.0,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate_delta": 0.4032697547683924,
+        "ci95_low": 0.27142782582761704,
+        "ci95_high": 0.5507260529891305,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate_delta": 0.4032697547683924,
+        "ci95_low": 0.27142782582761704,
+        "ci95_high": 0.5507260529891305,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_per_minute": {
+        "estimate_delta": 8.230818855248815,
+        "ci95_low": 5.5041337733165765,
+        "ci95_high": 11.076937481118133,
+        "ci95_excludes_zero": true
+      }
+    },
+    "B1": {
+      "strict_silver": {
+        "estimate_delta": 98.0,
+        "ci95_low": 20.0,
+        "ci95_high": 191.0,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate_delta": 0.24301334451198212,
+        "ci95_low": 0.03870709723413993,
+        "ci95_high": 0.41583116959838606,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate_delta": 0.1315306243336098,
+        "ci95_low": -0.05442715060707827,
+        "ci95_high": 0.3065767027151453,
+        "ci95_excludes_zero": false
+      },
+      "strict_silver_per_minute": {
+        "estimate_delta": 4.560200564068454,
+        "ci95_low": 0.03925679334529886,
+        "ci95_high": 7.9790623299143615,
+        "ci95_excludes_zero": true
+      }
+    },
+    "B2": {
+      "strict_silver": {
+        "estimate_delta": 117.0,
+        "ci95_low": 43.0,
+        "ci95_high": 206.0,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate_delta": 0.26610161317547204,
+        "ci95_low": 0.06263809883035579,
+        "ci95_high": 0.4413153059199702,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate_delta": 0.08368212590241303,
+        "ci95_low": -0.09177432286610479,
+        "ci95_high": 0.27570284810267004,
+        "ci95_excludes_zero": false
+      },
+      "strict_silver_per_minute": {
+        "estimate_delta": 5.371488676402324,
+        "ci95_low": 1.166952135269503,
+        "ci95_high": 8.679069856007692,
+        "ci95_excludes_zero": true
+      }
+    },
+    "B3": {
+      "strict_silver": {
+        "estimate_delta": 116.0,
+        "ci95_low": 42.0,
+        "ci95_high": 205.0,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_raw": {
+        "estimate_delta": 0.27728550279988845,
+        "ci95_low": 0.10877818480834858,
+        "ci95_high": 0.43951862211816284,
+        "ci95_excludes_zero": true
+      },
+      "strict_silver_rate_over_normalized": {
+        "estimate_delta": 0.13660308810172572,
+        "ci95_low": -0.06878346434925141,
+        "ci95_high": 0.31942344680154017,
+        "ci95_excludes_zero": false
+      },
+      "strict_silver_per_minute": {
+        "estimate_delta": 5.555539274598889,
+        "ci95_low": 2.124117919902364,
+        "ci95_high": 8.619528017880533,
+        "ci95_excludes_zero": true
+      }
+    }
+  },
+  "interpretation_boundary": "structure_and_grounding_yield_not_fact_accuracy"
+}
