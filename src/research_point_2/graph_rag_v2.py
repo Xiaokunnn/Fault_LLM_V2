@@ -9,7 +9,14 @@ from collections import defaultdict
 
 from .dataset import EvidenceCandidate, SilverQuery
 from .dense_index import DenseEvidenceIndex, Encoder
-from .retrieval import RankedEvidence, RetrievalBudget, RetrievalIndex, RetrievalResult, _candidate_overlap
+from .retrieval import (
+    RankedEvidence,
+    RetrievalBudget,
+    RetrievalIndex,
+    RetrievalResult,
+    _candidate_overlap,
+    lexical_similarity,
+)
 
 
 SUPPORTED = {
@@ -21,6 +28,7 @@ SUPPORTED = {
     "dense_ours_no_graph",
     "dense_ours_no_source_family",
     "dense_ours_no_redundancy",
+    "dense_ours_v4",
 }
 
 
@@ -138,6 +146,8 @@ def retrieve_dense_graph(
     ours_graph_hops: int = 1,
     ours_graph_decay: float = 0.70,
     graph_score_weight: float = 0.12,
+    fault_affinity_weight: float = 0.0,
+    fault_affinity_floor: float = 0.0,
 ) -> RetrievalResult:
     if method not in SUPPORTED:
         raise ValueError(f"unknown dense GraphRAG method: {method}")
@@ -176,17 +186,37 @@ def retrieve_dense_graph(
         "dense_ours_no_graph",
         "dense_ours_no_source_family",
         "dense_ours_no_redundancy",
+        "dense_ours_v4",
     }:
         role_rows = [item for item in pool if item.role == query.role]
         if role_rows:
             pool = role_rows
+    if method == "dense_ours_v4" and fault_affinity_floor > 0.0:
+        pool = [
+            item
+            for item in pool
+            if max(
+                lexical_similarity(query.fault_name_zh, item.head_label_zh),
+                lexical_similarity(query.fault_name_zh, item.tail_label_zh),
+            ) >= fault_affinity_floor
+        ]
+        generation_mode += f"_visible_fault_floor_{fault_affinity_floor:g}"
     scored = sorted(
         (
             (
                 item,
                 score_by_id.get(item.evidence_id, 0.0)
                 + graph_score_weight * graph_score_by_id.get(item.evidence_id, 0.0)
-                + 0.10 * item.final_confidence,
+                + 0.10 * item.final_confidence
+                + (
+                    fault_affinity_weight
+                    * max(
+                        lexical_similarity(query.fault_name_zh, item.head_label_zh),
+                        lexical_similarity(query.fault_name_zh, item.tail_label_zh),
+                    )
+                    if method == "dense_ours_v4"
+                    else 0.0
+                ),
             )
             for item in pool
         ),

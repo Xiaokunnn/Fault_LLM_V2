@@ -5,15 +5,31 @@ from __future__ import annotations
 import json
 import math
 import statistics
+import time
 from typing import Protocol
 
 from .dataset import EvidenceCandidate, SilverQuery
+from .retrieval import lexical_similarity
 
 
 SYSTEM_PROMPT = """你是船舶机舱泵系故障辅助诊断模型。只能使用给出的证据，不得补入外部常识。
 当证据足以回答时，将status设为answered；每个answer_point必须引用至少一个给定的准确证据ID。
 当没有证据或证据不足时，将status设为insufficient_evidence，answer_points必须为空数组，summary只说明证据不足。
 禁止编造、改写或使用占位证据ID。输出严格JSON，不输出Markdown。"""
+
+CONSTRAINED_SYSTEM_PROMPT = """你是船舶机舱泵系的证据选择器。你的任务不是补充常识，而是从给定证据中选出直接回答问题的最小证据集。
+每个answer_point只引用一个证据ID；该证据必须同时匹配问题中的故障对象和required_role。
+不得删除原证据的否定、条件、可能性、范围和方向；不得将不同证据拼成一个新事实。
+证据不足时必须返回insufficient_evidence。输出严格JSON，不输出Markdown。"""
+
+GENERATION_STRATEGIES = {"freeform_v1", "evidence_constrained_v1"}
+FAITHFULNESS_GUARD_VERSION = "rp2_faithfulness_guard_v1"
+
+
+def system_prompt_for_strategy(strategy: str) -> str:
+    if strategy not in GENERATION_STRATEGIES:
+        raise ValueError(f"unknown generation strategy: {strategy}")
+    return CONSTRAINED_SYSTEM_PROMPT if strategy == "evidence_constrained_v1" else SYSTEM_PROMPT
 
 
 class JsonGenerator(Protocol):
@@ -46,7 +62,10 @@ def build_generation_prompt(
     max_answer_points: int = 2,
     max_point_chars: int = 80,
     max_summary_chars: int = 100,
+    strategy: str = "freeform_v1",
 ) -> str:
+    if strategy not in GENERATION_STRATEGIES:
+        raise ValueError(f"unknown generation strategy: {strategy}")
     payload = {
         "question": query.question_zh,
         "required_role": query.role,
@@ -78,6 +97,14 @@ def build_generation_prompt(
             "summary": "现有证据不足，无法回答。",
         },
     }
+    if strategy == "evidence_constrained_v1":
+        payload["selection_contract"] = {
+            "one_primary_evidence_per_point": True,
+            "must_match_required_role": True,
+            "must_directly_match_fault_object": True,
+            "do_not_merge_evidence_into_new_fact": True,
+            "answer_text_is_a_draft_and_will_be_checked_against_the_canonical_claim": True,
+        }
     return json.dumps(payload, ensure_ascii=False, indent=2)
 
 
@@ -86,6 +113,9 @@ def fit_prompt_budget(
     evidence: list[EvidenceCandidate],
     generator: TokenCountingGenerator,
     contract: dict,
+    *,
+    strategy: str = "freeform_v1",
+    system_prompt: str | None = None,
 ) -> tuple[str, list[EvidenceCandidate], int, int]:
     """Drop lowest-ranked evidence until the exact model prompt fits the shared budget."""
 
@@ -99,8 +129,10 @@ def fit_prompt_budget(
             max_answer_points=int(contract["max_answer_points"]),
             max_point_chars=int(contract["max_point_chars"]),
             max_summary_chars=int(contract["max_summary_chars"]),
+            strategy=strategy,
         )
-        token_count = generator.count_chat_tokens(SYSTEM_PROMPT, prompt)
+        active_system_prompt = system_prompt or system_prompt_for_strategy(strategy)
+        token_count = generator.count_chat_tokens(active_system_prompt, prompt)
         if token_count <= max_prompt_tokens:
             return prompt, kept, dropped, token_count
         if not kept:
@@ -109,6 +141,135 @@ def fit_prompt_budget(
             )
         kept.pop()
         dropped += 1
+
+
+_RELATION_RENDERERS = {
+    "manifests_as": lambda h, t: f"{h}表现为{t}。",
+    "indicates": lambda h, t: f"{h}提示{t}。",
+    "causes": lambda h, t: f"{h}可能导致{t}。",
+    "evolves_to": lambda h, t: f"{h}可能发展为{t}。",
+    "increases_risk_of": lambda h, t: f"{h}可能增加{t}的风险。",
+    "diagnosed_by": lambda h, t: f"可通过{t}诊断{h}。",
+    "inspected_by": lambda h, t: f"可通过{t}检查{h}。",
+    "mitigated_by": lambda h, t: f"可采用{t}缓解{h}。",
+    "prevented_by": lambda h, t: f"可采用{t}预防{h}。",
+    "maintained_by": lambda h, t: f"可采用{t}对{h}进行维护。",
+}
+
+
+def visible_fault_affinity(query: SilverQuery, evidence: EvidenceCandidate) -> float:
+    """Visible semantic affinity only; frozen Silver fault labels are never read."""
+
+    return max(
+        lexical_similarity(query.fault_name_zh, evidence.head_label_zh),
+        lexical_similarity(query.fault_name_zh, evidence.tail_label_zh),
+    )
+
+
+def _fit_complete_text(text: str, max_chars: int) -> str:
+    text = str(text or "").strip()
+    if len(text) <= max_chars:
+        return text
+    if max_chars <= 1:
+        return text[:max_chars]
+    return text[: max_chars - 1].rstrip("，,;；。 ") + "。"
+
+
+def render_canonical_claim(evidence: EvidenceCandidate, *, max_chars: int) -> str:
+    renderer = _RELATION_RENDERERS.get(evidence.relation)
+    if renderer is None:
+        text = f"{evidence.head_label_zh}与{evidence.tail_label_zh}存在{evidence.relation}关系。"
+    else:
+        text = renderer(evidence.head_label_zh, evidence.tail_label_zh)
+    return _fit_complete_text(text, max_chars)
+
+
+def apply_faithfulness_guard(
+    answer: dict,
+    query: SilverQuery,
+    evidence: list[EvidenceCandidate],
+    contract: dict,
+    *,
+    minimum_fault_affinity: float = 0.0,
+) -> tuple[dict, dict]:
+    """Conservatively render model-selected, role-matched canonical claims.
+
+    This adds no model call and never reads ``fault_class_ids`` or relevance labels.
+    Source-language evidence, page, URL and hashes remain untouched in the graph.
+    """
+
+    started = time.perf_counter_ns()
+    by_id = {item.evidence_id: item for item in evidence}
+    proposed_points = answer.get("answer_points", [])
+    if not isinstance(proposed_points, list):
+        proposed_points = []
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    used_evidence: set[str] = set()
+    max_points = int(contract["max_answer_points"])
+    max_point_chars = int(contract["max_point_chars"])
+
+    if str(answer.get("status")) == "answered":
+        for point_index, point in enumerate(proposed_points):
+            if len(kept) >= max_points:
+                dropped.append({"point_index": point_index, "reason": "point_budget_exceeded"})
+                continue
+            ids = point.get("evidence_ids", []) if isinstance(point, dict) else []
+            valid = [str(value) for value in ids if str(value) in by_id]
+            if not valid:
+                dropped.append({"point_index": point_index, "reason": "missing_allowed_evidence"})
+                continue
+            primary = by_id[valid[0]]
+            if primary.role != query.role:
+                dropped.append({"point_index": point_index, "reason": "required_role_mismatch"})
+                continue
+            affinity = visible_fault_affinity(query, primary)
+            if affinity < minimum_fault_affinity:
+                dropped.append({
+                    "point_index": point_index,
+                    "reason": "visible_fault_affinity_below_floor",
+                    "visible_fault_affinity": affinity,
+                })
+                continue
+            if primary.evidence_id in used_evidence:
+                dropped.append({"point_index": point_index, "reason": "duplicate_primary_evidence"})
+                continue
+            used_evidence.add(primary.evidence_id)
+            kept.append({
+                "text": render_canonical_claim(primary, max_chars=max_point_chars),
+                "evidence_ids": [primary.evidence_id],
+            })
+
+    if kept:
+        summary_parts: list[str] = []
+        summary_limit = int(contract["max_summary_chars"])
+        for point in kept:
+            candidate = "".join(summary_parts) + point["text"]
+            if len(candidate) <= summary_limit:
+                summary_parts.append(point["text"])
+        if not summary_parts:
+            summary_parts = [_fit_complete_text(kept[0]["text"], summary_limit)]
+        guarded = {"status": "answered", "answer_points": kept, "summary": "".join(summary_parts)}
+    else:
+        guarded = {
+            "status": "insufficient_evidence",
+            "answer_points": [],
+            "summary": "现有证据不足，无法回答。",
+        }
+    audit = {
+        "version": FAITHFULNESS_GUARD_VERSION,
+        "model_status": str(answer.get("status", "")),
+        "proposed_point_count": len(proposed_points),
+        "kept_point_count": len(kept),
+        "dropped_point_count": len(dropped),
+        "dropped_points": dropped,
+        "minimum_visible_fault_affinity": minimum_fault_affinity,
+        "used_hidden_fault_labels": False,
+        "used_relevance_labels": False,
+        "summary_policy": "concatenate_guarded_atomic_points_without_new_facts",
+        "elapsed_ms": (time.perf_counter_ns() - started) / 1_000_000,
+    }
+    return guarded, audit
 
 
 def validate_generated_answer(
@@ -281,6 +442,7 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
         for row in rows
     ]
     silver_scores = [row.get("silver_evaluation", {}) for row in rows]
+    guard_rows = [row["faithfulness_guard"] for row in rows if row.get("faithfulness_guard")]
     silver_precisions = [
         float(score["silver_citation_precision"])
         for score in silver_scores
@@ -354,6 +516,14 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
             [float(value) for value in json_parse_flags]
         ),
         "model_output_json_failure_count": sum(not value for value in json_parse_flags),
+        "faithfulness_guard_applied_rate": len(guard_rows) / len(rows),
+        "faithfulness_guard_latency_ms_mean": (
+            statistics.fmean(float(row.get("elapsed_ms", 0.0)) for row in guard_rows)
+            if guard_rows else None
+        ),
+        "faithfulness_guard_dropped_point_count": sum(
+            int(row.get("dropped_point_count", 0)) for row in guard_rows
+        ),
         "cuda_peak_memory_bytes_max": max(
             (int(row.get("model_metrics", {}).get("cuda_peak_memory_bytes", 0)) for row in rows),
             default=0,

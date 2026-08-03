@@ -20,10 +20,11 @@ from research_point_2.dataset import EvidenceCandidate, SilverQuery, _read_jsonl
 from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.evaluation import evaluate_results  # noqa: E402
 from research_point_2.generation import (  # noqa: E402
-    SYSTEM_PROMPT,
+    apply_faithfulness_guard,
     fit_prompt_budget,
     score_silver_response,
     summarize_generation_rows,
+    system_prompt_for_strategy,
     validate_generated_answer,
 )
 from research_point_2.graph_rag_v2 import retrieve_dense_graph  # noqa: E402
@@ -171,7 +172,6 @@ def main() -> int:
     done = 0
     run_started = time.perf_counter()
     generator_identity = None if args.skip_generation else model_file_manifest(generator_path)["structure_sha256"]
-    system_prompt_sha256 = hashlib.sha256(SYSTEM_PROMPT.encode("utf-8")).hexdigest()
     generation_contract = {
         "max_prompt_tokens": int(config.get("generation_contract", {}).get("max_prompt_tokens", 4096)),
         "max_answer_points": int(config.get("generation_contract", {}).get("max_answer_points", 2)),
@@ -181,6 +181,10 @@ def main() -> int:
     for scenario in scenarios:
         scenario_id = str(scenario["id"])
         retrieval_method = str(scenario["retrieval_method"])
+        generation_strategy = str(scenario.get("generation_strategy", "freeform_v1"))
+        active_system_prompt = system_prompt_for_strategy(generation_strategy)
+        system_prompt_sha256 = hashlib.sha256(active_system_prompt.encode("utf-8")).hexdigest()
+        use_faithfulness_guard = bool(scenario.get("faithfulness_guard", False))
         budget = RetrievalBudget(
             max_scored_candidates=int(scenario.get("max_scored_candidates", retrieval_cfg["max_scored_candidates"])),
             max_selected_evidence=int(scenario.get("max_selected_evidence", retrieval_cfg["max_selected_evidence"])),
@@ -205,6 +209,8 @@ def main() -> int:
                 ours_graph_hops=int(scenario.get("ours_graph_hops", retrieval_cfg.get("ours_graph_hops", 1))),
                 ours_graph_decay=float(scenario.get("ours_graph_decay", retrieval_cfg.get("ours_graph_decay", 0.70))),
                 graph_score_weight=float(scenario.get("graph_score_weight", retrieval_cfg.get("graph_score_weight", 0.12))),
+                fault_affinity_weight=float(scenario.get("fault_affinity_weight", retrieval_cfg.get("fault_affinity_weight", 0.0))),
+                fault_affinity_floor=float(scenario.get("fault_affinity_floor", retrieval_cfg.get("fault_affinity_floor", 0.0))),
             )
             result = replace(result, method=scenario_id)
             results.append(result)
@@ -212,7 +218,12 @@ def main() -> int:
             if generator is not None:
                 evidence = [by_id[row.evidence_id] for row in result.ranked if row.evidence_id in by_id]
                 prompt, evidence, prompt_budget_dropped, planned_prompt_tokens = fit_prompt_budget(
-                    query, evidence, generator, generation_contract
+                    query,
+                    evidence,
+                    generator,
+                    generation_contract,
+                    strategy=generation_strategy,
+                    system_prompt=active_system_prompt,
                 )
                 if prompt_budget_dropped:
                     kept_ids = {row.evidence_id for row in evidence}
@@ -241,28 +252,41 @@ def main() -> int:
                 if cache_path.exists() and not args.force_generation:
                     cached = json.loads(cache_path.read_text(encoding="utf-8"))
                     if "answer" in cached:
-                        answer = cached["answer"]
+                        raw_answer = cached["answer"]
                         generation_metrics = cached.get("generation_metrics", {})
                     else:
-                        answer = cached
+                        raw_answer = cached
                         generation_metrics = {}
                     generation_source = "CACHE"
                 else:
-                    answer = generator.generate_json(
-                        SYSTEM_PROMPT,
+                    raw_answer = generator.generate_json(
+                        active_system_prompt,
                         prompt,
                         max_new_tokens=int(scenario.get("max_new_tokens", config["generator"]["max_new_tokens"])),
                     )
                     generation_metrics = dict(generator.last_metrics)
                     cache_path.write_text(
                         json.dumps(
-                            {"answer": answer, "generation_metrics": generation_metrics},
+                            {"answer": raw_answer, "generation_metrics": generation_metrics},
                             ensure_ascii=False,
                             indent=2,
                         ),
                         encoding="utf-8",
                     )
                     generation_source = "MODEL"
+                guard_audit = None
+                if use_faithfulness_guard:
+                    answer, guard_audit = apply_faithfulness_guard(
+                        raw_answer,
+                        query,
+                        evidence,
+                        generation_contract,
+                        minimum_fault_affinity=float(
+                            scenario.get("minimum_visible_fault_affinity", 0.0)
+                        ),
+                    )
+                else:
+                    answer = raw_answer
                 validation = validate_generated_answer(
                     answer,
                     {row.evidence_id for row in evidence},
@@ -284,6 +308,9 @@ def main() -> int:
                     "retrieval_method": retrieval_method,
                     "scenario": scenario,
                     "answer": answer,
+                    "raw_model_answer": raw_answer if use_faithfulness_guard else None,
+                    "generation_strategy": generation_strategy,
+                    "faithfulness_guard": guard_audit,
                     "validation": validation,
                     "relevant_citation_recall": len(cited & relevant) / len(relevant) if relevant else None,
                     "silver_evaluation": silver_evaluation,
@@ -300,6 +327,7 @@ def main() -> int:
                         result.elapsed_ms
                         + float(generation_metrics.get("input_preparation_ms", 0.0))
                         + float(generation_metrics.get("elapsed_ms", 0.0))
+                        + float((guard_audit or {}).get("elapsed_ms", 0.0))
                         if generation_metrics.get("elapsed_ms") is not None else None
                     ),
                     "model_metrics": generation_metrics,
@@ -346,7 +374,12 @@ def main() -> int:
         "scenarios": scenarios,
         "generation_contract": generation_contract,
         "force_generation": bool(args.force_generation),
-        "system_prompt_sha256": system_prompt_sha256,
+        "system_prompt_sha256_by_scenario": {
+            str(row["id"]): hashlib.sha256(
+                system_prompt_for_strategy(str(row.get("generation_strategy", "freeform_v1"))).encode("utf-8")
+            ).hexdigest()
+            for row in scenarios
+        },
         "embedding_runtime": getattr(encoder, "runtime_manifest", {}),
         "embedding_device": getattr(encoder, "device", None),
         "generator_runtime": getattr(generator, "runtime_manifest", None),

@@ -32,6 +32,16 @@ SYSTEM_B = """你是拒绝优先的回答反证审计器。只能根据给出的
 每项必须给出引用原文中的连续短引文。输出严格JSON：
 {"judgments":[{"item_id":"...","verdict":"supported|partial|unsupported","confidence":0到1,"supporting_quote":"连续原文短引文","reason_code":"短代码"}]}。"""
 
+SYSTEM_A_V2 = """你是严格的回答—证据蕴含裁决器。只能使用每条记录中列出的引用原文，不使用外部知识。
+逐项检查否定、条件、对象、方向、范围和绝对化。supported表示原文直接支持完整表述；partial表示仅支持部分或回答扩大了范围；unsupported表示矛盾、无依据或引用无关。
+每个引文片段必须绑定一个evidence_id，quote必须是该证据verbatim中的单段连续原文，不得跨证据拼接。可返回多个片段。
+输出严格JSON：{"judgments":[{"item_id":"...","verdict":"supported|partial|unsupported","confidence":0到1,"evidence_spans":[{"evidence_id":"...","quote":"连续原文短引文"}],"reason_code":"短代码"}]}。"""
+
+SYSTEM_B_V2 = """你是拒绝优先的回答反证审计器。只能根据cited_evidence，主动寻找对象偷换、因果方向错误、条件删除、可能性绝对化、跨证据错误拼接、维护建议外推和摘要新增事实。
+只有排除这些风险后才判supported；局部支持但表述更强判partial；找不到直接支持或存在矛盾判unsupported。
+每个引文片段必须绑定一个evidence_id，quote必须是该证据verbatim中的单段连续原文，不得跨证据拼接。可返回多个片段。
+输出严格JSON：{"judgments":[{"item_id":"...","verdict":"supported|partial|unsupported","confidence":0到1,"evidence_spans":[{"evidence_id":"...","quote":"连续原文短引文"}],"reason_code":"短代码"}]}。"""
+
 
 def _read_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.open(encoding="utf-8") if line.strip()]
@@ -41,10 +51,40 @@ def _normalize(value: object) -> str:
     return " ".join(unicodedata.normalize("NFKC", str(value)).casefold().split())
 
 
+def _normalize_span(value: object) -> str:
+    normalized = unicodedata.normalize("NFKC", str(value)).casefold()
+    return "".join(character for character in normalized if not character.isspace() and character not in "|\u2502\u00a6")
+
+
 def _quote_verified(item: dict, vote: dict) -> bool:
     quote = _normalize(vote.get("supporting_quote", ""))
     evidence = _normalize("\n".join(row["verbatim"] for row in item["cited_evidence"]))
     return bool(len(quote) >= 8 and quote in evidence)
+
+
+def _spans_verified(item: dict, vote: dict, *, minimum_chars: int = 4) -> tuple[bool, list[dict]]:
+    evidence_by_id = {
+        str(row["evidence_id"]): _normalize_span(row["verbatim"])
+        for row in item["cited_evidence"]
+    }
+    spans = vote.get("evidence_spans", [])
+    if not isinstance(spans, list) or not spans:
+        return False, []
+    audits = []
+    for span in spans:
+        evidence_id = str(span.get("evidence_id", "")) if isinstance(span, dict) else ""
+        quote = _normalize_span(span.get("quote", "")) if isinstance(span, dict) else ""
+        verified = bool(
+            evidence_id in evidence_by_id
+            and len(quote) >= minimum_chars
+            and quote in evidence_by_id[evidence_id]
+        )
+        audits.append({
+            "evidence_id": evidence_id,
+            "normalized_quote_length": len(quote),
+            "verified": verified,
+        })
+    return all(row["verified"] for row in audits), audits
 
 
 def _build_items(config: dict) -> tuple[list[dict], dict[str, dict]]:
@@ -52,9 +92,10 @@ def _build_items(config: dict) -> tuple[list[dict], dict[str, dict]]:
     selected = set(config["selected_methods"])
     chosen = [row for row in generation_rows if row["method"] in selected]
     by_answer = {f"{row['method']}::{row['query_id']}": row for row in chosen}
-    if len(by_answer) != 40 * len(selected):
+    expected_query_count = int(config.get("expected_query_count", 40))
+    if len(by_answer) != expected_query_count * len(selected):
         raise RuntimeError(
-            f"Expected {40 * len(selected)} unique finalist answers, found {len(by_answer)}"
+            f"Expected {expected_query_count * len(selected)} unique finalist answers, found {len(by_answer)}"
         )
     benchmark = ROOT / config["benchmark_dir"]
     candidates = {row["evidence_id"]: row for row in _read_jsonl(benchmark / "evidence_candidates.jsonl")}
@@ -117,12 +158,22 @@ def _build_items(config: dict) -> tuple[list[dict], dict[str, dict]]:
 
 
 def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, dict], config: dict) -> dict:
+    quote_protocol = str(config.get("quote_protocol", "single_quote_v1"))
     item_rows = []
     for item in items:
         pair = votes.get(item["item_id"], {})
         vote_a, vote_b = pair.get("A", {}), pair.get("B", {})
         verdict_a, verdict_b = vote_a.get("verdict"), vote_b.get("verdict")
-        quote_a, quote_b = _quote_verified(item, vote_a), _quote_verified(item, vote_b)
+        if quote_protocol == "multi_span_v2":
+            quote_a, span_a = _spans_verified(
+                item, vote_a, minimum_chars=int(config.get("minimum_quote_chars", 4))
+            )
+            quote_b, span_b = _spans_verified(
+                item, vote_b, minimum_chars=int(config.get("minimum_quote_chars", 4))
+            )
+        else:
+            quote_a, quote_b = _quote_verified(item, vote_a), _quote_verified(item, vote_b)
+            span_a = span_b = []
         item_rows.append({
             **{key: item[key] for key in ("item_id", "answer_id", "method", "query_id", "item_kind")},
             "judge_a": vote_a,
@@ -130,6 +181,8 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
             "judge_agreement": verdict_a == verdict_b,
             "quote_verified_a": quote_a,
             "quote_verified_b": quote_b,
+            "span_audit_a": span_a,
+            "span_audit_b": span_b,
             "dual_strict_supported": verdict_a == verdict_b == "supported" and quote_a and quote_b,
             "dual_no_unsupported": verdict_a != "unsupported" and verdict_b != "unsupported",
         })
@@ -137,6 +190,7 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
     for method in config["selected_methods"]:
         rows = [row for row in item_rows if row["method"] == method]
         point_rows = [row for row in rows if row["item_kind"] == "answer_point"]
+        summary_rows = [row for row in rows if row["item_kind"] == "summary"]
         answer_ids = [key for key, value in by_answer.items() if value["method"] == method]
         answered_ids = {
             key for key in answer_ids
@@ -145,6 +199,12 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
         judged_by_answer = defaultdict(list)
         for row in rows:
             judged_by_answer[row["answer_id"]].append(row)
+        points_by_answer = defaultdict(list)
+        summaries_by_answer = defaultdict(list)
+        for row in point_rows:
+            points_by_answer[row["answer_id"]].append(row)
+        for row in summary_rows:
+            summaries_by_answer[row["answer_id"]].append(row)
         methods[method] = {
             "total_answers": len(answer_ids),
             "answered_answers": len(answered_ids),
@@ -156,6 +216,9 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
             "dual_non_unsupported_point_rate": statistics.fmean(
                 [float(row["dual_no_unsupported"]) for row in point_rows]
             ) if point_rows else None,
+            "dual_strict_summary_support_rate": statistics.fmean(
+                [float(row["dual_strict_supported"]) for row in summary_rows]
+            ) if summary_rows else None,
             "judge_agreement_rate": statistics.fmean(
                 [float(row["judge_agreement"]) for row in rows]
             ) if rows else None,
@@ -170,6 +233,22 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
                 ) / len(answered_ids)
                 if answered_ids else None
             ),
+            "all_atomic_claims_strictly_supported_answer_rate": (
+                sum(
+                    bool(points_by_answer[answer_id])
+                    and all(row["dual_strict_supported"] for row in points_by_answer[answer_id])
+                    for answer_id in answered_ids
+                ) / len(answered_ids)
+                if answered_ids else None
+            ),
+            "all_summaries_strictly_supported_answer_rate": (
+                sum(
+                    bool(summaries_by_answer[answer_id])
+                    and all(row["dual_strict_supported"] for row in summaries_by_answer[answer_id])
+                    for answer_id in answered_ids
+                ) / len(answered_ids)
+                if answered_ids else None
+            ),
         }
     return {
         "protocol_id": config["protocol_id"],
@@ -177,6 +256,7 @@ def _summarize(items: list[dict], votes: dict[str, dict], by_answer: dict[str, d
         "independent_models": 1,
         "independent_prompt_roles": 2,
         "selected_methods": config["selected_methods"],
+        "quote_protocol": quote_protocol,
         "answer_records": len(by_answer),
         "judged_items": len(item_rows),
         "methods": methods,
@@ -208,9 +288,13 @@ def main() -> int:
     started = time.perf_counter()
     total_calls = len(batches) * 2
     completed_calls = 0
+    if str(config.get("quote_protocol", "single_quote_v1")) == "multi_span_v2":
+        judge_prompts = (("A", SYSTEM_A_V2), ("B", SYSTEM_B_V2))
+    else:
+        judge_prompts = (("A", SYSTEM_A), ("B", SYSTEM_B))
     for batch_index, batch in enumerate(batches, start=1):
         prompt = json.dumps({"items": batch}, ensure_ascii=False, indent=2)
-        for judge_name, system_prompt in (("A", SYSTEM_A), ("B", SYSTEM_B)):
+        for judge_name, system_prompt in judge_prompts:
             cache_key = hashlib.sha256((system_prompt + "\n" + prompt).encode("utf-8")).hexdigest()
             cache_path = cache / f"{cache_key}.json"
             if args.dry_run:

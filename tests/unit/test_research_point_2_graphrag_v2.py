@@ -19,6 +19,7 @@ from research_point_2.dataset import (
 from research_point_2.budget_effectiveness import analyze_budget_effectiveness
 from research_point_2.dense_index import DenseEvidenceIndex, evidence_index_text
 from research_point_2.generation import (
+    apply_faithfulness_guard,
     build_generation_prompt,
     score_silver_response,
     summarize_generation_rows,
@@ -112,6 +113,64 @@ def test_generation_prompt_and_citation_validator() -> None:
     assert checked["valid_citation_count"] == 1
     assert checked["invalid_citation_count"] == 1
     assert checked["contract_valid"] is False
+
+
+def test_evidence_constrained_prompt_and_guard_use_only_visible_contract() -> None:
+    evidence = _candidate("E1", "A", "噪声")
+    prompt = json.loads(
+        build_generation_prompt(_query(), [evidence], strategy="evidence_constrained_v1")
+    )
+    assert prompt["selection_contract"]["one_primary_evidence_per_point"] is True
+    raw = {
+        "status": "answered",
+        "answer_points": [
+            {"text": "自由改写的文本", "evidence_ids": ["E1", "BAD"]},
+            {"text": "重复", "evidence_ids": ["E1"]},
+        ],
+        "summary": "可能增加了新事实的摘要",
+    }
+    guarded, audit = apply_faithfulness_guard(
+        raw,
+        _query(),
+        [replace(evidence, fault_class_ids=("deliberately_wrong_hidden_label",))],
+        {"max_answer_points": 2, "max_point_chars": 80, "max_summary_chars": 100},
+        minimum_fault_affinity=0.05,
+    )
+    assert guarded == {
+        "status": "answered",
+        "answer_points": [{"text": "汽蚀表现为噪声。", "evidence_ids": ["E1"]}],
+        "summary": "汽蚀表现为噪声。",
+    }
+    assert audit["dropped_points"][0]["reason"] == "duplicate_primary_evidence"
+    assert audit["used_hidden_fault_labels"] is False
+
+
+def test_dense_ours_v4_visible_affinity_does_not_use_hidden_fault_label() -> None:
+    relevant = replace(
+        _candidate("E1", "A", "噪声"),
+        fault_class_ids=("wrong_hidden_label",),
+    )
+    irrelevant = replace(
+        _candidate("E2", "B", "噪声"),
+        head_entity_id="F-BEARING",
+        head_label_zh="轴承故障",
+        fault_class_ids=("cavitation",),
+    )
+    candidates = [relevant, irrelevant]
+    result = retrieve_dense_graph(
+        _query(),
+        candidates,
+        RetrievalIndex(candidates),
+        DenseEvidenceIndex(["E1", "E2"], [[1.0, 0.0], [1.0, 0.0]]),
+        FakeEncoder(),
+        method="dense_ours_v4",
+        budget=RetrievalBudget(max_scored_candidates=2, max_selected_evidence=2),
+        dense_top_n=2,
+        fault_affinity_weight=0.35,
+        fault_affinity_floor=0.03,
+    )
+    assert result.ranked[0].evidence_id == "E1"
+    assert [row.evidence_id for row in result.ranked] == ["E1"]
 
 
 def test_abstention_is_not_counted_as_invalid_citation() -> None:

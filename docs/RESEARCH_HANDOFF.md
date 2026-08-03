@@ -10,6 +10,12 @@
 - 研究点二的最终实验报告见 [`research/RP2_FINAL_EXPERIMENT_REPORT_ZH.md`](research/RP2_FINAL_EXPERIMENT_REPORT_ZH.md)，投稿就绪度重审见 [`research/RP2_PAPER_SUBMISSION_READINESS_REVIEW.md`](research/RP2_PAPER_SUBMISSION_READINESS_REVIEW.md)。
 - MP010–MP013已在主图和研究点二协议冻结后进行一次隔离外部处理，仍不进入主图、不回流调参。本文档后文的“尚未解析”属于历史阶段记录。
 
+## 0B. 2026-08-04 研究点二 v4 开发复测
+
+- v3 的引用精确率、预算归一 F1 和双提示严格支持率未达投稿目标，不得通过事后换公式、删除难例或隐去已报告核心指标解决。
+- v4 重跑协议见 [`research/RP2_V4_FAITHFULNESS_RETEST_PROTOCOL.md`](research/RP2_V4_FAITHFULNESS_RETEST_PROTOCOL.md)，新增可见语义故障亲和度、证据约束生成、不调用第二次模型的轻量忠实性守卫，以及逐证据多片段原文对齐的 Judge v2。
+- v4 保留旧“全回答文本严格支持率”，并同时报告原子回答点、摘要和全原子主张支持率；可回答回答率、不可回答拒答率、合同合格率和p95时延一同进入门槛，防止靠过度拒答刷高忠实性。
+
 ## 0. 2026-07-30 当前状态快照
 
 本节是当前事实入口；后文较早的阶段性统计仅保留为研究演进记录，不得覆盖本节。
