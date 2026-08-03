@@ -22,3 +22,9 @@
 - 提示词哈希进入缓存键，提示词修改后不会误用旧回答。
 
 完整执行方式见 `docs/RUN_RP1_RP2_NEXT_EXPERIMENTS.md`。
+
+## v3核心假设实验
+
+v2主要用于证明全链路可运行及检索模块消融。论文的核心有效性实验升级为v3：在同一7B模型、2048输入Token、256输出Token和确定性回答契约下，比较最终Silver回答效用与端到端p95时延。只有回答效用提高且时延不超过Dense RAG的105%，才判定方法有效。
+
+协议见 `docs/research/RP2_BUDGET_EFFECTIVENESS_V3_PROTOCOL.md`，服务器入口为 `scripts/run_rp2_budget_effectiveness_v3_server.sh`。

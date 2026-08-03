@@ -11,9 +11,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
 from research_point_2.dataset import EvidenceCandidate, SilverQuery
+from research_point_2.budget_effectiveness import analyze_budget_effectiveness
 from research_point_2.dense_index import DenseEvidenceIndex, evidence_index_text
 from research_point_2.generation import (
     build_generation_prompt,
+    score_silver_response,
     summarize_generation_rows,
     validate_generated_answer,
 )
@@ -195,3 +197,54 @@ def test_generation_summary_separates_abstention_and_cached_model_latency() -> N
     assert summary["unanswerable_abstention_rate"] == 1.0
     assert summary["generation_model_latency_ms_mean"] == 150.0
     assert summary["generation_request_wall_ms_mean"] == 1.0
+
+
+def test_silver_response_utility_rewards_relevant_citations_and_correct_abstention() -> None:
+    answered = {"status": "answered", "answer_points": [{"text": "噪声", "evidence_ids": ["E1"]}]}
+    validation = validate_generated_answer(answered, {"E1"})
+    supported = score_silver_response(answered, validation, {"E1", "E2"})
+    assert supported["silver_citation_precision"] == 1.0
+    assert supported["silver_citation_recall"] == 0.5
+    assert supported["silver_citation_f1"] == 2 / 3
+    assert supported["silver_response_utility"] == 2 / 3
+
+    abstention = {"status": "insufficient_evidence", "answer_points": []}
+    abstention_validation = validate_generated_answer(abstention, set())
+    unanswerable = score_silver_response(abstention, abstention_validation, set())
+    assert unanswerable["correct_silver_abstention"] is True
+    assert unanswerable["silver_response_utility"] == 1.0
+
+
+def test_budget_effectiveness_requires_quality_gain_and_latency_noninferiority() -> None:
+    rows = []
+    for query_id in ("Q1", "Q2", "Q3"):
+        rows.extend(
+            [
+                {
+                    "query_id": query_id,
+                    "method": "dense",
+                    "silver_evaluation": {"silver_response_utility": 0.4},
+                    "end_to_end_inference_elapsed_ms": 100.0,
+                    "model_metrics": {"prompt_tokens": 100},
+                },
+                {
+                    "query_id": query_id,
+                    "method": "ours",
+                    "silver_evaluation": {"silver_response_utility": 0.6},
+                    "end_to_end_inference_elapsed_ms": 103.0,
+                    "model_metrics": {"prompt_tokens": 80},
+                },
+            ]
+        )
+    report = analyze_budget_effectiveness(
+        rows,
+        reference_id="dense",
+        proposed_ids=["ours"],
+        latency_noninferiority_margin=0.05,
+        bootstrap_iterations=50,
+    )
+    comparison = report["comparisons"][0]
+    assert comparison["quality_improvement_gate"] is True
+    assert comparison["latency_noninferiority_gate"] is True
+    assert comparison["joint_effectiveness_gate"] is True
+    assert "ours" in report["quality_latency_pareto_scenarios"]

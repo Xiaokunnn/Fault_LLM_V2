@@ -137,3 +137,43 @@ v2 的开发配置位于 `configs/rp2_graphrag_v2_development_v2.json`。旧 v1 
 4. 冻结后才对 MP010–MP013 生成外部 Silver 查询/证据，只报告一次外部结果，不回流调参。
 
 注：MP010–MP013 已做过机械性解析，因此对 GraphRAG v2 应称为“来源保留外部评价”，不声称为完全未触及的盲测。
+
+## 5. 研究点二v3回答效果—时延实验
+
+v2结果只作为开发记录。正式核心假设改为：固定本地7B和统一生成预算后，Ours必须提高最终Silver回答效用，同时端到端p95时延不高于同预算Dense RAG的105%。详细定义见 `docs/research/RP2_BUDGET_EFFECTIVENESS_V3_PROTOCOL.md`。
+
+两条查询联调：
+
+```bash
+cd ~/08-zxk/Fault_LLM_V2
+git switch main
+git pull --ff-only origin main
+source .venv/bin/activate
+
+bash scripts/run_rp2_budget_effectiveness_v3_server.sh \
+  --limit 2 \
+  --methods B1_dense_k3 B4_metapath_k3 Ours_k3 \
+  --force-generation
+```
+
+完整开发实验：
+
+```bash
+cd ~/08-zxk/Fault_LLM_V2
+git switch main
+git pull --ff-only origin main
+source .venv/bin/activate
+
+bash scripts/run_rp2_budget_effectiveness_v3_server.sh \
+  --force-generation
+```
+
+主实验为10个场景×40个查询，共400次真实生成。需要关键消融时再执行：
+
+```bash
+bash scripts/run_rp2_budget_effectiveness_v3_server.sh \
+  --include-ablations \
+  --force-generation
+```
+
+由于主场景缓存可复用，追加两个消融只新增80次模型调用。输出目录为 `results/experiments/research_point_2/graphrag_v3_budget_effectiveness/`。

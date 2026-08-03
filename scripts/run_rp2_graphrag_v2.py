@@ -6,22 +6,23 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import statistics
 import sys
 import time
 from collections import defaultdict
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
+from research_point_2.budget_effectiveness import analyze_budget_effectiveness  # noqa: E402
 from research_point_2.dataset import EvidenceCandidate, SilverQuery, _read_jsonl  # noqa: E402
 from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.evaluation import evaluate_results  # noqa: E402
 from research_point_2.generation import (  # noqa: E402
     SYSTEM_PROMPT,
     build_generation_prompt,
+    score_silver_response,
     summarize_generation_rows,
     validate_generated_answer,
 )
@@ -47,8 +48,56 @@ def _closed_book(query: SilverQuery) -> RetrievalResult:
     return RetrievalResult(query.query_id, "closed_book", (), 0.0, 0, 0, 0, 0, 0, "none", False, False)
 
 
-def _mean(rows: list[float]) -> float:
-    return statistics.fmean(rows) if rows else 0.0
+def _scenario_specs(config: dict, requested: list[str] | None, include_ablations: bool) -> list[dict]:
+    if config.get("scenarios"):
+        specs = [dict(row) for row in config["scenarios"]]
+        if include_ablations:
+            specs.extend(dict(row) for row in config.get("ablation_scenarios", []))
+        if requested:
+            allowed = set(requested)
+            specs = [
+                row for row in specs
+                if row["id"] in allowed or row["retrieval_method"] in allowed
+            ]
+        if not specs:
+            raise ValueError("No RP2 scenarios matched --methods")
+        return specs
+    methods = list(requested or config["methods"])
+    if include_ablations:
+        methods.extend(
+            method for method in config.get("ablation_methods", []) if method not in methods
+        )
+    return [{"id": method, "retrieval_method": method} for method in methods]
+
+
+def _fit_prompt_budget(
+    query: SilverQuery,
+    evidence: list[EvidenceCandidate],
+    generator: QwenLocalGenerator,
+    contract: dict,
+) -> tuple[str, list[EvidenceCandidate], int, int]:
+    """Drop lowest-ranked evidence until the exact Qwen prompt fits the shared budget."""
+
+    kept = list(evidence)
+    dropped = 0
+    max_prompt_tokens = int(contract["max_prompt_tokens"])
+    while True:
+        prompt = build_generation_prompt(
+            query,
+            kept,
+            max_answer_points=int(contract["max_answer_points"]),
+            max_point_chars=int(contract["max_point_chars"]),
+            max_summary_chars=int(contract["max_summary_chars"]),
+        )
+        token_count = generator.count_chat_tokens(SYSTEM_PROMPT, prompt)
+        if token_count <= max_prompt_tokens:
+            return prompt, kept, dropped, token_count
+        if not kept:
+            raise RuntimeError(
+                f"Prompt contract alone exceeds max_prompt_tokens={max_prompt_tokens}"
+            )
+        kept.pop()
+        dropped += 1
 
 
 def _plot_metrics(metrics: dict, output: Path) -> None:
@@ -57,19 +106,19 @@ def _plot_metrics(metrics: dict, output: Path) -> None:
 
     methods = list(metrics["methods"])
     recall = [metrics["methods"][method]["recall_at_budget_macro"] for method in methods]
-    citation = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("citation_id_validity_rate") or 0.0 for method in methods]
-    latency = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("end_to_end_model_latency_ms_mean") or 0.0 for method in methods]
+    citation = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("silver_response_utility_macro") or 0.0 for method in methods]
+    latency = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("end_to_end_inference_latency_ms_p95") or 0.0 for method in methods]
     x = np.arange(len(methods))
     figure, axis = plt.subplots(figsize=(11, 5), constrained_layout=True)
     axis.bar(x - 0.18, recall, 0.36, label="Retrieval recall")
-    axis.bar(x + 0.18, citation, 0.36, label="Citation-ID validity")
+    axis.bar(x + 0.18, citation, 0.36, label="Silver response utility")
     axis.set_ylim(0, 1.05)
     axis.set_xticks(x, methods, rotation=20, ha="right")
     axis.set_ylabel("Quality metric")
     axis.grid(axis="y", alpha=0.25)
     second = axis.twinx()
-    second.plot(x, latency, color="#c44e52", marker="o", label="Generation latency")
-    second.set_ylabel("Model end-to-end latency (ms)")
+    second.plot(x, latency, color="#c44e52", marker="o", label="End-to-end p95")
+    second.set_ylabel("End-to-end inference latency p95 (ms)")
     handles, labels = axis.get_legend_handles_labels()
     handles2, labels2 = second.get_legend_handles_labels()
     axis.legend(handles + handles2, labels + labels2, loc="upper left")
@@ -96,21 +145,21 @@ def main() -> int:
     embed_path = ROOT / config["embedding"]["model_path"]
     generator_path = ROOT / config["generator"]["model_path"]
     index_dir = ROOT / config["embedding"]["index_dir"]
-    methods = list(args.methods or config["methods"])
-    if args.include_ablations:
-        methods.extend(
-            method for method in config.get("ablation_methods", []) if method not in methods
-        )
+    scenarios = _scenario_specs(config, args.methods, args.include_ablations)
     candidates = [_candidate(row) for row in _read_jsonl(benchmark / "evidence_candidates.jsonl")]
     queries = [_query(row) for row in _read_jsonl(benchmark / "queries.jsonl")]
     if args.limit:
         queries = queries[: args.limit]
     if any(query.candidate_evidence_ids for query in queries):
         raise RuntimeError("RP2 v2 forbids positive-seeded candidate pools; use full-graph benchmark")
-    print(f"[RP2 v2] queries={len(queries)}, graph_candidates={len(candidates)}, methods={methods}", flush=True)
+    print(
+        f"[RP2] queries={len(queries)}, graph_candidates={len(candidates)}, "
+        f"scenarios={[row['id'] for row in scenarios]}",
+        flush=True,
+    )
     if args.dry_run:
         print(
-            f"[RP2 v2] dry-run: benchmark=True, index={index_dir.is_dir()}, "
+            f"[RP2] dry-run: benchmark=True, index={index_dir.is_dir()}, "
             f"BGE-M3={embed_path.is_dir()}, Qwen={generator_path.is_dir()}",
             flush=True,
         )
@@ -124,13 +173,6 @@ def main() -> int:
 
     retrieval_cfg = config["retrieval"]
     require_cuda = bool(args.require_cuda or config.get("runtime", {}).get("require_cuda"))
-    budget = RetrievalBudget(
-        max_scored_candidates=int(retrieval_cfg["max_scored_candidates"]),
-        max_selected_evidence=int(retrieval_cfg["max_selected_evidence"]),
-        max_per_source_family=int(retrieval_cfg["max_per_source_family"]),
-        source_family_bonus=float(retrieval_cfg["source_family_bonus"]),
-        redundancy_penalty=float(retrieval_cfg["redundancy_penalty"]),
-    )
     encoder = BgeM3Encoder(
         embed_path,
         batch_size=int(config["embedding"]["batch_size"]),
@@ -155,39 +197,65 @@ def main() -> int:
     cache_dir.mkdir(parents=True, exist_ok=True)
     results: list[RetrievalResult] = []
     generations: list[dict] = []
-    total = len(methods) * len(queries)
+    total = len(scenarios) * len(queries)
     done = 0
     run_started = time.perf_counter()
     generator_identity = None if args.skip_generation else model_file_manifest(generator_path)["structure_sha256"]
     system_prompt_sha256 = hashlib.sha256(SYSTEM_PROMPT.encode("utf-8")).hexdigest()
-    for method in methods:
+    generation_contract = {
+        "max_prompt_tokens": int(config.get("generation_contract", {}).get("max_prompt_tokens", 4096)),
+        "max_answer_points": int(config.get("generation_contract", {}).get("max_answer_points", 2)),
+        "max_point_chars": int(config.get("generation_contract", {}).get("max_point_chars", 80)),
+        "max_summary_chars": int(config.get("generation_contract", {}).get("max_summary_chars", 100)),
+    }
+    for scenario in scenarios:
+        scenario_id = str(scenario["id"])
+        retrieval_method = str(scenario["retrieval_method"])
+        budget = RetrievalBudget(
+            max_scored_candidates=int(scenario.get("max_scored_candidates", retrieval_cfg["max_scored_candidates"])),
+            max_selected_evidence=int(scenario.get("max_selected_evidence", retrieval_cfg["max_selected_evidence"])),
+            max_per_source_family=int(scenario.get("max_per_source_family", retrieval_cfg["max_per_source_family"])),
+            source_family_bonus=float(scenario.get("source_family_bonus", retrieval_cfg["source_family_bonus"])),
+            redundancy_penalty=float(scenario.get("redundancy_penalty", retrieval_cfg["redundancy_penalty"])),
+        )
         for query in queries:
             done += 1
             started = time.perf_counter()
-            result = _closed_book(query) if method == "closed_book" else retrieve_dense_graph(
+            result = _closed_book(query) if retrieval_method == "closed_book" else retrieve_dense_graph(
                 query,
                 candidates,
                 graph_index,
                 dense_index,
                 encoder,
-                method=method,
+                method=retrieval_method,
                 budget=budget,
-                dense_top_n=int(retrieval_cfg["dense_top_n"]),
-                anchor_evidence_count=int(retrieval_cfg["anchor_evidence_count"]),
-                fixed_hops=int(retrieval_cfg["fixed_hops"]),
-                ours_graph_hops=int(retrieval_cfg.get("ours_graph_hops", 1)),
-                ours_graph_decay=float(retrieval_cfg.get("ours_graph_decay", 0.70)),
-                graph_score_weight=float(retrieval_cfg.get("graph_score_weight", 0.12)),
+                dense_top_n=int(scenario.get("dense_top_n", retrieval_cfg["dense_top_n"])),
+                anchor_evidence_count=int(scenario.get("anchor_evidence_count", retrieval_cfg["anchor_evidence_count"])),
+                fixed_hops=int(scenario.get("fixed_hops", retrieval_cfg["fixed_hops"])),
+                ours_graph_hops=int(scenario.get("ours_graph_hops", retrieval_cfg.get("ours_graph_hops", 1))),
+                ours_graph_decay=float(scenario.get("ours_graph_decay", retrieval_cfg.get("ours_graph_decay", 0.70))),
+                graph_score_weight=float(scenario.get("graph_score_weight", retrieval_cfg.get("graph_score_weight", 0.12))),
             )
+            result = replace(result, method=scenario_id)
             results.append(result)
             generation_source = "SKIPPED"
             if generator is not None:
                 evidence = [by_id[row.evidence_id] for row in result.ranked if row.evidence_id in by_id]
-                prompt = build_generation_prompt(query, evidence)
+                prompt, evidence, prompt_budget_dropped, planned_prompt_tokens = _fit_prompt_budget(
+                    query, evidence, generator, generation_contract
+                )
+                if prompt_budget_dropped:
+                    kept_ids = {row.evidence_id for row in evidence}
+                    result = replace(
+                        result,
+                        ranked=tuple(row for row in result.ranked if row.evidence_id in kept_ids),
+                        selected_evidence=len(evidence),
+                    )
+                    results[-1] = result
                 cache_key = hashlib.sha256(
                     json.dumps(
                         {
-                            "method": method,
+                            "scenario": scenario,
                             "query": asdict(query),
                             "prompt": prompt,
                             "protocol": config["version"],
@@ -213,7 +281,7 @@ def main() -> int:
                     answer = generator.generate_json(
                         SYSTEM_PROMPT,
                         prompt,
-                        max_new_tokens=int(config["generator"]["max_new_tokens"]),
+                        max_new_tokens=int(scenario.get("max_new_tokens", config["generator"]["max_new_tokens"])),
                     )
                     generation_metrics = dict(generator.last_metrics)
                     cache_path.write_text(
@@ -225,25 +293,43 @@ def main() -> int:
                         encoding="utf-8",
                     )
                     generation_source = "MODEL"
-                validation = validate_generated_answer(answer, {row.evidence_id for row in evidence})
+                validation = validate_generated_answer(
+                    answer,
+                    {row.evidence_id for row in evidence},
+                    max_answer_points=generation_contract["max_answer_points"],
+                    max_point_chars=generation_contract["max_point_chars"],
+                    max_summary_chars=generation_contract["max_summary_chars"],
+                )
                 cited = {
                     str(eid)
                     for point in answer.get("answer_points", []) if isinstance(point, dict)
                     for eid in point.get("evidence_ids", [])
                 }
                 relevant = set(query.relevant_evidence_ids)
+                silver_evaluation = score_silver_response(answer, validation, relevant)
                 request_wall_ms = (time.perf_counter() - generation_started) * 1000
                 generations.append({
                     "query_id": query.query_id,
-                    "method": method,
+                    "method": scenario_id,
+                    "retrieval_method": retrieval_method,
+                    "scenario": scenario,
                     "answer": answer,
                     "validation": validation,
                     "relevant_citation_recall": len(cited & relevant) / len(relevant) if relevant else None,
+                    "silver_evaluation": silver_evaluation,
+                    "planned_prompt_tokens": planned_prompt_tokens,
+                    "prompt_budget_dropped_evidence": prompt_budget_dropped,
                     "retrieval_elapsed_ms": result.elapsed_ms,
                     "generation_request_wall_ms": request_wall_ms,
                     "generation_model_elapsed_ms": generation_metrics.get("elapsed_ms"),
                     "end_to_end_model_elapsed_ms": (
                         result.elapsed_ms + float(generation_metrics.get("elapsed_ms", 0.0))
+                        if generation_metrics.get("elapsed_ms") is not None else None
+                    ),
+                    "end_to_end_inference_elapsed_ms": (
+                        result.elapsed_ms
+                        + float(generation_metrics.get("input_preparation_ms", 0.0))
+                        + float(generation_metrics.get("elapsed_ms", 0.0))
                         if generation_metrics.get("elapsed_ms") is not None else None
                     ),
                     "model_metrics": generation_metrics,
@@ -252,7 +338,7 @@ def main() -> int:
             elapsed = time.perf_counter() - started
             eta = ((time.perf_counter() - run_started) / done) * (total - done) / 60
             print(
-                f"[RP2 v2][{done}/{total}] {method}:{query.query_id} "
+                f"[RP2][{done}/{total}] {scenario_id}:{query.query_id} "
                 f"evidence={len(result.ranked)}, generation={generation_source}, elapsed={elapsed:.1f}s, ETA={eta:.1f}m",
                 flush=True,
             )
@@ -264,10 +350,19 @@ def main() -> int:
             generation_groups[row["method"]].append(row)
         query_by_id = {query.query_id: query for query in queries}
         by_method = {}
+        by_method_role = {}
         for method, rows in generation_groups.items():
             by_method[method] = summarize_generation_rows(rows, query_by_id)
+            role_groups: dict[str, list[dict]] = defaultdict(list)
+            for row in rows:
+                role_groups[query_by_id[row["query_id"]].role].append(row)
+            by_method_role[method] = {
+                role: summarize_generation_rows(role_rows, query_by_id)
+                for role, role_rows in sorted(role_groups.items())
+            }
         metrics["generation"] = summarize_generation_rows(generations, query_by_id)
         metrics["generation"]["by_method"] = by_method
+        metrics["generation"]["by_method_and_role"] = by_method_role
         metrics["generation"]["latency_scope"] = (
             "model_metrics.elapsed_ms is reused for cached responses; request wall time is reported separately"
         )
@@ -278,6 +373,8 @@ def main() -> int:
         "generator_model": None if args.skip_generation else model_file_manifest(generator_path),
         "full_graph_candidate_count": len(candidates),
         "query_count": len(queries),
+        "scenarios": scenarios,
+        "generation_contract": generation_contract,
         "force_generation": bool(args.force_generation),
         "system_prompt_sha256": system_prompt_sha256,
         "embedding_runtime": getattr(encoder, "runtime_manifest", {}),
@@ -285,6 +382,36 @@ def main() -> int:
         "generator_runtime": getattr(generator, "runtime_manifest", None),
         "label_policy": "Silver only; never Gold",
     }
+    effectiveness_tests = config.get("effectiveness_tests", [])
+    if generations and effectiveness_tests:
+        available_scenarios = {str(row["method"]) for row in generations}
+        effectiveness_reports = {}
+        for test in effectiveness_tests:
+            reference_id = str(test["reference_id"])
+            proposed_ids = [
+                str(value) for value in test["proposed_ids"]
+                if str(value) in available_scenarios
+            ]
+            if reference_id not in available_scenarios or not proposed_ids:
+                effectiveness_reports[str(test["id"])] = {
+                    "status": "skipped_missing_scenarios",
+                    "required_reference": reference_id,
+                    "required_proposed": [str(value) for value in test["proposed_ids"]],
+                    "available_scenarios": sorted(available_scenarios),
+                }
+                continue
+            effectiveness_reports[str(test["id"])] = analyze_budget_effectiveness(
+                generations,
+                reference_id=reference_id,
+                proposed_ids=proposed_ids,
+                latency_noninferiority_margin=float(
+                    test.get("latency_noninferiority_margin", 0.05)
+                ),
+                minimum_quality_gain=float(test.get("minimum_quality_gain", 0.0)),
+                bootstrap_iterations=int(test.get("bootstrap_iterations", 2000)),
+                seed=int(test.get("seed", 20260803)),
+            )
+        metrics["budget_effectiveness"] = effectiveness_reports
     (output / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
     with (output / "retrieval_results.jsonl").open("w", encoding="utf-8") as handle:
         for row in results:
@@ -293,7 +420,7 @@ def main() -> int:
         for row in generations:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
     _plot_metrics(metrics, output)
-    print(f"[RP2 v2] completed: {output}", flush=True)
+    print(f"[RP2] completed: {output}", flush=True)
     return 0
 
 

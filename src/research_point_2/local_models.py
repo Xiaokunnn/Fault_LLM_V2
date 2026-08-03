@@ -170,12 +170,24 @@ class QwenLocalGenerator:
         )
         self.last_metrics: dict = {}
 
+    def count_chat_tokens(self, system_prompt: str, user_prompt: str) -> int:
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ]
+        text = self.tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        return int(self.tokenizer([text], return_tensors="pt").input_ids.shape[1])
+
     def generate_json(self, system_prompt: str, user_prompt: str, *, max_new_tokens: int = 768) -> dict:
         import torch
 
+        preparation_started = time.perf_counter()
         messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}]
         text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         inputs = self.tokenizer([text], return_tensors="pt").to(self.model.device)
+        preparation_elapsed = time.perf_counter() - preparation_started
         if torch.cuda.is_available():
             torch.cuda.reset_peak_memory_stats()
             torch.cuda.synchronize()
@@ -189,6 +201,7 @@ class QwenLocalGenerator:
         self.last_metrics = {
             "prompt_tokens": int(inputs.input_ids.shape[1]),
             "generated_tokens": int(generated.shape[0]),
+            "input_preparation_ms": preparation_elapsed * 1000,
             "elapsed_ms": elapsed * 1000,
             "tokens_per_second": float(generated.shape[0]) / elapsed if elapsed else 0.0,
             "cuda_peak_memory_bytes": int(torch.cuda.max_memory_allocated()) if torch.cuda.is_available() else 0,

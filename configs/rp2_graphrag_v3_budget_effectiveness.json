@@ -1,0 +1,151 @@
+{
+  "protocol_id": "marine_pump_rp2_budget_effectiveness_v3",
+  "version": "0.3.0-development-hypothesis-test",
+  "status": "development_retest_required_not_external_frozen",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {
+    "require_cuda": true
+  },
+  "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "output_dir": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness",
+  "embedding": {
+    "model_path": "data/model/BAAI-bge-m3",
+    "backend": "sentence_transformers",
+    "device": "cuda",
+    "normalize_embeddings": true,
+    "batch_size": 16,
+    "max_length": 8192,
+    "index_dir": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated"
+  },
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "temperature": 0.0,
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_budget_effectiveness_v3"
+  },
+  "generation_contract": {
+    "max_prompt_tokens": 2048,
+    "max_answer_points": 2,
+    "max_point_chars": 80,
+    "max_summary_chars": 100,
+    "latency_scope": "warm online inference; model loading and offline index construction excluded"
+  },
+  "retrieval": {
+    "dense_top_n": 32,
+    "anchor_evidence_count": 8,
+    "max_scored_candidates": 32,
+    "max_selected_evidence": 4,
+    "max_per_source_family": 3,
+    "source_family_bonus": 0.06,
+    "redundancy_penalty": 0.0,
+    "fixed_hops": 2,
+    "ours_graph_hops": 1,
+    "ours_graph_decay": 0.70,
+    "graph_score_weight": 0.24
+  },
+  "scenarios": [
+    {
+      "id": "B0_closed_book",
+      "retrieval_method": "closed_book",
+      "max_selected_evidence": 0
+    },
+    {
+      "id": "B1_dense_k3",
+      "retrieval_method": "dense_topk",
+      "max_selected_evidence": 3
+    },
+    {
+      "id": "B1_dense_k4",
+      "retrieval_method": "dense_topk",
+      "max_selected_evidence": 4
+    },
+    {
+      "id": "B2_fixed_k4",
+      "retrieval_method": "dense_fixed_hop",
+      "max_selected_evidence": 4
+    },
+    {
+      "id": "B3_adaptive_k4",
+      "retrieval_method": "dense_adaptive",
+      "max_selected_evidence": 4
+    },
+    {
+      "id": "B4_metapath_k3",
+      "retrieval_method": "dense_metapath",
+      "max_selected_evidence": 3
+    },
+    {
+      "id": "B4_metapath_k4",
+      "retrieval_method": "dense_metapath",
+      "max_selected_evidence": 4
+    },
+    {
+      "id": "Ours_k2",
+      "retrieval_method": "dense_ours",
+      "max_selected_evidence": 2
+    },
+    {
+      "id": "Ours_k3",
+      "retrieval_method": "dense_ours",
+      "max_selected_evidence": 3
+    },
+    {
+      "id": "Ours_k4",
+      "retrieval_method": "dense_ours",
+      "max_selected_evidence": 4
+    }
+  ],
+  "ablation_scenarios": [
+    {
+      "id": "A1_ours_k3_no_graph",
+      "retrieval_method": "dense_ours_no_graph",
+      "max_selected_evidence": 3
+    },
+    {
+      "id": "A2_ours_k3_no_source_family",
+      "retrieval_method": "dense_ours_no_source_family",
+      "max_selected_evidence": 3
+    }
+  ],
+  "effectiveness_tests": [
+    {
+      "id": "same_budget_vs_dense",
+      "reference_id": "B1_dense_k3",
+      "proposed_ids": ["Ours_k3"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260803
+    },
+    {
+      "id": "same_budget_vs_strong_graph",
+      "reference_id": "B4_metapath_k3",
+      "proposed_ids": ["Ours_k3"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260804
+    },
+    {
+      "id": "reduced_budget_vs_dense_k4",
+      "reference_id": "B1_dense_k4",
+      "proposed_ids": ["Ours_k2", "Ours_k3"],
+      "latency_noninferiority_margin": 0.0,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260805
+    }
+  ],
+  "anti_leakage": {
+    "online_forbidden_fields": ["fault_class_ids", "relevant_evidence_ids"],
+    "heldout_documents_forbidden_during_development": ["MP009", "MP010", "MP011", "MP012", "MP013"],
+    "full_graph_retrieval_required": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}
