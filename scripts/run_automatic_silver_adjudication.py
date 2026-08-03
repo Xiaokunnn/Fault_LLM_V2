@@ -123,6 +123,25 @@ def quote_verified(record: dict[str, object], vote: dict[str, object]) -> bool:
     return bool(quote and len(quote) >= 8 and quote in evidence)
 
 
+def external_evaluation_silver_eligible(record: dict[str, object]) -> bool:
+    """Release direct held-out evidence for isolated evaluation, never for the primary graph."""
+
+    evidence = record.get("evidence_validation", {}) or {}
+    entailment = record.get("relation_entailment_validation", {}) or {}
+    return bool(
+        record.get("document_split") in {"held_out_test", "heldout_test"}
+        and record.get("inferred_edge") is not True
+        and record.get("evidence_level") in {"E1", "E2"}
+        and evidence.get("valid") is True
+        and evidence.get("silver_eligible") is True
+        and record.get("relation_type_valid") is True
+        and entailment.get("status") == "entailed"
+        and entailment.get("silver_eligible") is True
+        and float(record.get("final_confidence", 0) or 0) >= 0.8
+        and record.get("decision") != "rejected"
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input-dir", required=True)
@@ -141,6 +160,14 @@ def main() -> None:
         action="append",
         default=[],
         help="Additional adjudication output directory whose cache may be reused.",
+    )
+    parser.add_argument(
+        "--external-silver-mode",
+        action="store_true",
+        help=(
+            "Mark directly supported held-out records as external_silver_candidate "
+            "without changing their primary-graph decision or graph eligibility."
+        ),
     )
     args = parser.parse_args()
 
@@ -332,6 +359,20 @@ def main() -> None:
             unresolved += 1
 
     deduplicated = deduplicate_triples(records)
+    external_silver = 0
+    if args.external_silver_mode:
+        for record in deduplicated.records:
+            is_external_silver = external_evaluation_silver_eligible(record)
+            record["external_silver_eligible"] = is_external_silver
+            record["external_evaluation_decision"] = (
+                "external_silver_candidate"
+                if is_external_silver
+                else "external_not_released"
+            )
+            record["external_evaluation_only"] = True
+            record["eligible_for_chinese_graph"] = False
+            record["must_not_enter_primary_graph"] = True
+            external_silver += int(is_external_silver)
     write_jsonl(
         output_dir / "candidate_triples.auto_adjudicated_silver.jsonl",
         list(deduplicated.records),
@@ -364,6 +405,7 @@ def main() -> None:
         "input_records": len(records),
         "eligible_for_adjudication": len(queue),
         "promoted_to_silver": promoted,
+        "external_silver_candidates": external_silver,
         "rejected_by_unanimous_adjudication": rejected,
         "unresolved": unresolved,
         "decisions": dict(decisions),
@@ -380,7 +422,8 @@ def main() -> None:
     )
     print(
         f"[Auto Silver] 完成：晋级Silver={promoted}，自动拒绝={rejected}，"
-        f"仍不确定={unresolved}，覆盖={summary['evidence_only_classes_passing']}/10",
+        f"仍不确定={unresolved}，外部Silver={external_silver}，"
+        f"覆盖={summary['evidence_only_classes_passing']}/10",
         flush=True,
     )
 

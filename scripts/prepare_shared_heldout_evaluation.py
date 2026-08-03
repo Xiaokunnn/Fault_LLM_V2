@@ -50,7 +50,21 @@ def main() -> int:
     output.mkdir(parents=True, exist_ok=True)
 
     decisions = Counter(str(row.get("decision")) for row in records)
-    silver = [row for row in records if row.get("decision") == "silver_candidate" and row.get("inferred_edge") is not True]
+    silver = [
+        row for row in records
+        if row.get("external_evaluation_decision") == "external_silver_candidate"
+        and row.get("external_silver_eligible") is True
+        and row.get("inferred_edge") is not True
+    ]
+    if not silver:
+        external_counts = Counter(
+            str(row.get("external_evaluation_decision") or "missing")
+            for row in records
+        )
+        raise RuntimeError(
+            "No external_silver_candidate records were released; "
+            f"external_decisions={dict(external_counts)}, primary_decisions={dict(decisions)}"
+        )
     provenance_fields = ("doc_id", "pdf_page_number", "source_url", "document_sha256", "page_text_sha256", "evidence_text")
     complete = sum(all(row.get(field) not in (None, "") for field in provenance_fields) for row in silver)
     page_grounded = sum(row.get("evidence_level") in {"E1", "E2"} for row in silver)
@@ -70,8 +84,6 @@ def main() -> int:
 
     candidates: list[EvidenceCandidate] = []
     for row in silver:
-        if row.get("eligible_for_chinese_graph") is not True:
-            continue
         head = str(row.get("head_canonical_zh") or row.get("head") or "")
         tail = str(row.get("tail_canonical_zh") or row.get("tail") or "")
         relation = str(row.get("relation") or "")
@@ -97,6 +109,8 @@ def main() -> int:
             evidence_level=str(row.get("evidence_level") or ""),
         ))
     cq = json.loads((ROOT / "configs/competency_questions_marine_pump_v1.json").read_text(encoding="utf-8"))
+    if not candidates:
+        raise RuntimeError("External Silver was released but no RP2 evidence candidates were created")
     queries = []
     fault_names = {str(item["fault_id"]): str(item["name_zh"]) for item in cq["fault_classes"]}
     role_templates = cq["role_templates"]
@@ -128,6 +142,7 @@ def main() -> int:
         "full_external_corpus_retrieval": True,
         "positive_seeded_candidate_pool": False,
         "rp2_v3_freeze_manifest_sha256": freeze_sha256,
+        "external_surface_policy": "use frozen Chinese canonical label when available; otherwise preserve source surface in isolated evaluation only",
     })
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[Shared heldout] RP1 Silver={len(silver)}; RP2 candidates={len(candidates)}, answerable queries={sum(bool(q.relevant_evidence_ids) for q in queries)}/40", flush=True)

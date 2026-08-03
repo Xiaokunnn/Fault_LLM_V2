@@ -35,6 +35,10 @@ def main() -> int:
         else load_evidence_candidates(graph_root)
     )
     print(f"[RP2 index] graph={graph_root}, candidates={len(candidates)}", flush=True)
+    if not candidates:
+        raise RuntimeError(
+            "RP2 evidence candidate corpus is empty; stop before building a dense index"
+        )
     if args.dry_run:
         print(f"[RP2 index] dry-run: model_exists={model_path.is_dir()}, output={output}", flush=True)
         return 0

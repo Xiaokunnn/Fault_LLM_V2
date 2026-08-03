@@ -46,7 +46,8 @@ echo "========== 3/7 Dual-pass external Silver adjudication =========="
   --config "$EXTRACTION_CONFIG" \
   --input-dir "$STRICT_DIR" \
   --output-dir "$FINAL_DIR" \
-  --allowed-splits held_out_test
+  --allowed-splits held_out_test \
+  --external-silver-mode
 
 unset DASHSCOPE_API_KEY
 

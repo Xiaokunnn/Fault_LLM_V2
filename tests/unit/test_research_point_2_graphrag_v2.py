@@ -26,6 +26,7 @@ from research_point_2.generation import (
 )
 from research_point_2.graph_rag_v2 import retrieve_dense_graph
 from research_point_2.retrieval import RetrievalBudget, RetrievalIndex
+from scripts.run_automatic_silver_adjudication import external_evaluation_silver_eligible
 
 
 def _candidate(eid: str, family: str, label: str) -> EvidenceCandidate:
@@ -276,3 +277,25 @@ def test_invalid_model_status_is_a_contract_failure_and_zero_utility() -> None:
     assert validation["status_valid"] is False
     assert validation["contract_valid"] is False
     assert score["silver_response_utility"] == 0.0
+
+
+def test_heldout_external_silver_does_not_change_primary_graph_eligibility() -> None:
+    record = {
+        "document_split": "held_out_test",
+        "inferred_edge": False,
+        "evidence_level": "E1",
+        "evidence_validation": {"valid": True, "silver_eligible": True},
+        "relation_type_valid": True,
+        "relation_entailment_validation": {
+            "status": "entailed",
+            "silver_eligible": True,
+        },
+        "final_confidence": 0.9,
+        "decision": "candidate_needs_review",
+        "eligible_for_chinese_graph": False,
+    }
+    assert external_evaluation_silver_eligible(record) is True
+    assert record["decision"] == "candidate_needs_review"
+    assert record["eligible_for_chinese_graph"] is False
+    record["relation_entailment_validation"]["status"] = "undetermined"
+    assert external_evaluation_silver_eligible(record) is False
