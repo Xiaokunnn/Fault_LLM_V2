@@ -247,6 +247,7 @@ def test_budget_effectiveness_requires_quality_gain_and_latency_noninferiority()
     assert comparison["quality_improvement_gate"] is True
     assert comparison["latency_noninferiority_gate"] is True
     assert comparison["joint_effectiveness_gate"] is True
+    assert comparison["point_estimate_joint_gate"] is True
     assert "ours" in report["quality_latency_pareto_scenarios"]
 
 

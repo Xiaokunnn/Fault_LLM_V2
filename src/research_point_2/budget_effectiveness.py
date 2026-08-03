@@ -125,27 +125,62 @@ def analyze_budget_effectiveness(
             iterations=bootstrap_iterations,
             seed=seed + 1000 + offset,
         )
-        quality_gate = utility_delta > minimum_quality_gain
-        latency_gate = latency_ratio <= 1.0 + latency_noninferiority_margin
+        quality_ci = [
+            _percentile(quality_bootstrap, 0.025),
+            _percentile(quality_bootstrap, 0.975),
+        ]
+        latency_ci = [
+            _percentile(latency_bootstrap, 0.025),
+            _percentile(latency_bootstrap, 0.975),
+        ]
+        point_quality_gate = utility_delta > minimum_quality_gain
+        point_latency_gate = latency_ratio <= 1.0 + latency_noninferiority_margin
+        quality_ci_gate = quality_ci[0] > minimum_quality_gain
+        allowed_latency_delta_ms = latency_noninferiority_margin * reference_p95
+        latency_ci_gate = latency_ci[1] <= allowed_latency_delta_ms
+        answerable_pairs = [
+            (
+                float(grouped[proposed_id][query_id]["silver_evaluation"]["silver_citation_f1"]),
+                float(reference_rows[query_id]["silver_evaluation"]["silver_citation_f1"]),
+            )
+            for query_id in common
+            if grouped[proposed_id][query_id].get("silver_evaluation", {}).get("silver_citation_f1") is not None
+            and reference_rows[query_id].get("silver_evaluation", {}).get("silver_citation_f1") is not None
+        ]
+        answerable_f1_delta = (
+            statistics.fmean(left for left, _ in answerable_pairs)
+            - statistics.fmean(right for _, right in answerable_pairs)
+            if answerable_pairs else None
+        )
+        answerable_f1_bootstrap = _bootstrap_paired_delta(
+            [left for left, _ in answerable_pairs],
+            [right for _, right in answerable_pairs],
+            statistic=statistics.fmean,
+            iterations=bootstrap_iterations,
+            seed=seed + 2000 + offset,
+        )
         comparisons.append(
             {
                 "reference_id": reference_id,
                 "proposed_id": proposed_id,
                 "paired_queries": len(common),
                 "silver_utility_delta": utility_delta,
-                "silver_utility_delta_bootstrap_95ci": [
-                    _percentile(quality_bootstrap, 0.025),
-                    _percentile(quality_bootstrap, 0.975),
-                ],
+                "silver_utility_delta_bootstrap_95ci": quality_ci,
+                "answerable_silver_citation_f1_delta": answerable_f1_delta,
+                "answerable_silver_citation_f1_delta_bootstrap_95ci": [
+                    _percentile(answerable_f1_bootstrap, 0.025),
+                    _percentile(answerable_f1_bootstrap, 0.975),
+                ] if answerable_f1_bootstrap else None,
                 "end_to_end_p95_latency_delta_ms": proposed_p95 - reference_p95,
-                "end_to_end_p95_latency_delta_bootstrap_95ci": [
-                    _percentile(latency_bootstrap, 0.025),
-                    _percentile(latency_bootstrap, 0.975),
-                ],
+                "end_to_end_p95_latency_delta_bootstrap_95ci": latency_ci,
                 "end_to_end_p95_latency_ratio": latency_ratio,
-                "quality_improvement_gate": quality_gate,
-                "latency_noninferiority_gate": latency_gate,
-                "joint_effectiveness_gate": quality_gate and latency_gate,
+                "allowed_latency_delta_ms": allowed_latency_delta_ms,
+                "point_estimate_quality_gate": point_quality_gate,
+                "point_estimate_latency_gate": point_latency_gate,
+                "point_estimate_joint_gate": point_quality_gate and point_latency_gate,
+                "quality_improvement_gate": quality_ci_gate,
+                "latency_noninferiority_gate": latency_ci_gate,
+                "joint_effectiveness_gate": quality_ci_gate and latency_ci_gate,
             }
         )
     pareto_ids = []

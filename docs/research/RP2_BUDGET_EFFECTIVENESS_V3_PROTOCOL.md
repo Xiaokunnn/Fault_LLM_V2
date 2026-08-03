@@ -76,7 +76,7 @@ T_q=T_q^{retrieval}+T_q^{tokenization}+T_q^{generation}.
 T_{ours}^{p95}\le (1+\delta)T_{dense}^{p95}.
 \]
 
-两项同时成立才称为“在同预算下有效”。代码使用5000次查询级配对Bootstrap报告 \(\Delta U\) 与p95时延差的95%置信区间。
+两项同时成立才称为“在同预算下有效”。代码使用5000次查询级配对Bootstrap报告 \(\Delta U\) 与p95时延差的95%置信区间。正式 `joint_effectiveness_gate` 采用置信区间保守判定：质量差下界必须大于0，时延差上界必须小于允许的非劣界；仅点估计通过时只能称为趋势，不能称为统计支持。
 
 进一步用 Ours K=2/3 对比 Dense K=4。只有 \(\Delta U>0\) 且Ours p95更低，才支持“以更小证据预算提高回答并降低时延”的强结论。
 
