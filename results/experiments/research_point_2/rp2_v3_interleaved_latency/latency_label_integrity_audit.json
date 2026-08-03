@@ -1,0 +1,61 @@
+{
+  "audit_id": "rp2_v3_interleaved_latency_method_label_integrity_v1",
+  "raw_latency_path": "results/experiments/research_point_2/rp2_v3_interleaved_latency/latency_replay.jsonl",
+  "raw_latency_sha256": "2daa13142a38bce578181ca611a8d90af4c6db6d9e966b4f96f2fcf83bd5dd5f",
+  "generation_reference_path": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/generation_results.jsonl",
+  "generation_reference_sha256": "7af8dcfec6a7454730e844499c65f40113a65ebd385c7655c794f22955477c01",
+  "frozen_config_path": "configs/rp2_graphrag_v3_budget_effectiveness.json",
+  "method_audits": {
+    "B1_dense_k4": {
+      "retrieval_method_from_frozen_config": "dense_topk",
+      "records": 200,
+      "prompt_token_exact_match_to_own_method": 200,
+      "prompt_token_exact_match_to_swapped_peer": 200,
+      "mean_online_wall_ms": 6282.3130122249495,
+      "mean_generated_tokens": 174.9,
+      "wall_time_generated_token_correlation": 0.9896263717505072,
+      "mean_wall_minus_model_ms": 38.25833593500647,
+      "order_position_counts": {
+        "0": 67,
+        "2": 67,
+        "1": 66
+      }
+    },
+    "B4_metapath_k3": {
+      "retrieval_method_from_frozen_config": "dense_metapath",
+      "records": 200,
+      "prompt_token_exact_match_to_own_method": 200,
+      "prompt_token_exact_match_to_swapped_peer": 90,
+      "mean_online_wall_ms": 4123.939047395033,
+      "mean_generated_tokens": 114.525,
+      "wall_time_generated_token_correlation": 0.9972972389730791,
+      "mean_wall_minus_model_ms": 39.88868897500652,
+      "order_position_counts": {
+        "1": 67,
+        "0": 67,
+        "2": 66
+      }
+    },
+    "Ours_k3": {
+      "retrieval_method_from_frozen_config": "dense_ours",
+      "records": 200,
+      "prompt_token_exact_match_to_own_method": 200,
+      "prompt_token_exact_match_to_swapped_peer": 90,
+      "mean_online_wall_ms": 4425.315117845039,
+      "mean_generated_tokens": 123.05,
+      "wall_time_generated_token_correlation": 0.9962008593252739,
+      "mean_wall_minus_model_ms": 38.02554569008862,
+      "order_position_counts": {
+        "2": 67,
+        "1": 67,
+        "0": 66
+      }
+    }
+  },
+  "label_swap_supported_by_evidence": false,
+  "raw_data_rewrite_authorized_by_audit": false,
+  "conclusion": "All latency records match their own method's deterministic prompt-token signature. The execution path times and writes the same scenario_id, and wall time closely tracks generated-token count. Swapping labels would contradict the recorded execution evidence.",
+  "all_records_match_own_method_signature": true,
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}
