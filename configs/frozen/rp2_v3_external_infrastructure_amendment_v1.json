@@ -1,0 +1,30 @@
+{
+  "amendment_id": "rp2_v3_external_infrastructure_amendment_v1",
+  "status": "scoped_bugfix_after_method_freeze_before_valid_external_result",
+  "created_at_utc": "2026-08-03T09:49:53.934331+00:00",
+  "git_head_with_bugfix_code": "912cbaa8455f698655f3ba72d8b4d392c38cc03f",
+  "original_freeze_path": "configs/frozen/rp2_v3_frozen_protocol.json",
+  "original_freeze_sha256": "e280f126fb22d8f0c015faa66606245222383e2c00c9c77aaaf54025942185e6",
+  "reason": "The primary-graph confidence policy correctly vetoes held_out_test records, but the external benchmark builder incorrectly required the primary-graph silver_candidate label, deterministically producing an empty external corpus.",
+  "allowed_infrastructure_replacements": {
+    "scripts/prepare_shared_heldout_evaluation.py": "ab8475dded944ebdd7d2bbb8084f6381382a4701f32a7c4bf73ae0ee983246a4",
+    "scripts/run_automatic_silver_adjudication.py": "6422848056a50aeb8af1a1ef7f63b9d12a09fd6e738bacbd65cde9e2d0e12294",
+    "scripts/build_rp2_dense_index.py": "0da7e03d317e4273917df15e8e756ef8657628fccc886b7c390fede5a42e4420",
+    "scripts/run_rp2_v3_external_source_heldout_secure.sh": "48e6a97e1ab6ead566483eb78d59489b6f33e00d33563cd4ef3fcb558e4eb3de"
+  },
+  "unchanged_method_claims": {
+    "retrieval_parameters_unchanged": true,
+    "generation_contract_unchanged": true,
+    "models_unchanged": true,
+    "development_results_unchanged": true,
+    "external_labels_remain_silver_only": true,
+    "heldout_records_still_forbidden_from_primary_graph": true
+  },
+  "external_result_state_at_bug_discovery": {
+    "external_silver_records": 0,
+    "rp2_candidates": 0,
+    "completed_external_graphrag_results": false
+  },
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}
