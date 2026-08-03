@@ -1,6 +1,8 @@
 -r requirements.txt
 numpy>=1.26,<3
-torch>=2.2
+# BGE-M3 is archived as pytorch_model.bin. Current Transformers blocks that
+# format on torch<2.6 because of CVE-2025-32434.
+torch==2.6.0
 transformers>=4.46,<5
 sentence-transformers>=3.0,<6
 accelerate>=0.34,<2

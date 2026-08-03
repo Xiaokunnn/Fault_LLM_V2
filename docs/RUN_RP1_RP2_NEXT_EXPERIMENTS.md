@@ -78,6 +78,16 @@ python -m pip install -r requirements-server.txt
 bash scripts/run_rp2_graphrag_v2_server.sh
 ```
 
+由于当前 BGE-M3 使用 `pytorch_model.bin`，Transformers 的安全门槛要求 `torch>=2.6`。服务器当前驱动环境建议显式安装 CUDA 11.8 版 PyTorch 2.6，再安装其余依赖：
+
+```bash
+python -m pip install --upgrade --force-reinstall \
+  torch==2.6.0 --index-url https://download.pytorch.org/whl/cu118
+python -m pip install -r requirements-server.txt
+```
+
+流水线的第0阶段会同时检查 CUDA 和 BGE 权重格式/torch版本；版本不符合时会立即停止，不再等到敏感性实验加载模型后才报错。
+
 该入口现在先执行 CUDA 强制检查，再依次构建开发基准、复用或建立 BGE-M3 索引、运行检索敏感性实验以及运行 Qwen 生成实验。正式入口禁止自动退回 CPU。
 
 先做两个查询的真实模型联调：
