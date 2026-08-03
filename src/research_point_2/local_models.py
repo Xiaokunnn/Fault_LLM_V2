@@ -198,6 +198,7 @@ class QwenLocalGenerator:
             torch.cuda.synchronize()
         generated = output[0][inputs.input_ids.shape[1] :]
         elapsed = time.perf_counter() - started
+        decoded = self.tokenizer.decode(generated, skip_special_tokens=True)
         self.last_metrics = {
             "prompt_tokens": int(inputs.input_ids.shape[1]),
             "generated_tokens": int(generated.shape[0]),
@@ -207,5 +208,21 @@ class QwenLocalGenerator:
             "cuda_peak_memory_bytes": int(torch.cuda.max_memory_allocated()) if torch.cuda.is_available() else 0,
             "cuda_allocated_memory_bytes": int(torch.cuda.memory_allocated()) if torch.cuda.is_available() else 0,
             "model_device": str(self.model.device),
+            "model_output_valid_json": True,
         }
-        return _extract_json(self.tokenizer.decode(generated, skip_special_tokens=True))
+        try:
+            return _extract_json(decoded)
+        except (ValueError, json.JSONDecodeError) as exc:
+            self.last_metrics.update(
+                {
+                    "model_output_valid_json": False,
+                    "model_output_parse_error": f"{type(exc).__name__}: {exc}",
+                }
+            )
+            return {
+                "status": "invalid_model_output",
+                "answer_points": [],
+                "summary": "模型输出无法解析为有效JSON。",
+                "raw_model_output": decoded,
+                "model_output_parse_error": f"{type(exc).__name__}: {exc}",
+            }

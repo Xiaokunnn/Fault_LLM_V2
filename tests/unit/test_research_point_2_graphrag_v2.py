@@ -248,3 +248,17 @@ def test_budget_effectiveness_requires_quality_gain_and_latency_noninferiority()
     assert comparison["latency_noninferiority_gate"] is True
     assert comparison["joint_effectiveness_gate"] is True
     assert "ours" in report["quality_latency_pareto_scenarios"]
+
+
+def test_invalid_model_status_is_a_contract_failure_and_zero_utility() -> None:
+    malformed = {
+        "status": "invalid_model_output",
+        "answer_points": [],
+        "summary": "模型输出无法解析为有效JSON。",
+        "raw_model_output": '{"status":"answered"',
+    }
+    validation = validate_generated_answer(malformed, {"E1"})
+    score = score_silver_response(malformed, validation, {"E1"})
+    assert validation["status_valid"] is False
+    assert validation["contract_valid"] is False
+    assert score["silver_response_utility"] == 0.0

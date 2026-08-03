@@ -242,6 +242,10 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
         float(row.get("model_metrics", {}).get("generated_tokens", 0.0))
         for row in rows
     ]
+    json_parse_flags = [
+        bool(row.get("model_metrics", {}).get("model_output_valid_json", True))
+        for row in rows
+    ]
     silver_scores = [row.get("silver_evaluation", {}) for row in rows]
     silver_precisions = [
         float(score["silver_citation_precision"])
@@ -312,6 +316,10 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
         "prompt_tokens_p95": _percentile(prompt_tokens, 0.95),
         "generated_tokens_mean": statistics.fmean(generated_tokens),
         "generated_tokens_p95": _percentile(generated_tokens, 0.95),
+        "model_output_valid_json_rate": statistics.fmean(
+            [float(value) for value in json_parse_flags]
+        ),
+        "model_output_json_failure_count": sum(not value for value in json_parse_flags),
         "cuda_peak_memory_bytes_max": max(
             (int(row.get("model_metrics", {}).get("cuda_peak_memory_bytes", 0)) for row in rows),
             default=0,
