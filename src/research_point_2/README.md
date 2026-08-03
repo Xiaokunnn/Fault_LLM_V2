@@ -28,3 +28,5 @@
 v2主要用于证明全链路可运行及检索模块消融。论文的核心有效性实验升级为v3：在同一7B模型、2048输入Token、256输出Token和确定性回答契约下，比较最终Silver回答效用与端到端p95时延。只有回答效用提高且时延不超过Dense RAG的105%，才判定方法有效。
 
 协议见 `docs/research/RP2_BUDGET_EFFECTIVENESS_V3_PROTOCOL.md`，服务器入口为 `scripts/run_rp2_budget_effectiveness_v3_server.sh`。
+
+开发实验完成后的交错重复时延、双提示词Silver语义Judge、冻结门和MP010–MP013隔离外部评价见 `docs/research/RP2_V3_FINALIZATION_AND_EXTERNAL_PROTOCOL.md`。外部脚本只有在冻结清单已经提交到Git且冻结文件哈希未变化时才允许运行。

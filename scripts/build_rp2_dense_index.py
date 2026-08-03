@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from research_point_2.dataset import load_evidence_candidates  # noqa: E402
+from research_point_2.dataset import load_benchmark_candidates, load_evidence_candidates  # noqa: E402
 from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.local_models import BgeM3Encoder, model_file_manifest  # noqa: E402
 
@@ -28,7 +28,12 @@ def main() -> int:
     graph_root = ROOT / config["graph_root"]
     model_path = ROOT / config["embedding"]["model_path"]
     output = ROOT / config["embedding"]["index_dir"]
-    candidates = load_evidence_candidates(graph_root)
+    index_source = config["embedding"].get("index_source", "primary_graph")
+    candidates = (
+        load_benchmark_candidates(ROOT / config["benchmark_dir"])
+        if index_source == "benchmark_candidates"
+        else load_evidence_candidates(graph_root)
+    )
     print(f"[RP2 index] graph={graph_root}, candidates={len(candidates)}", flush=True)
     if args.dry_run:
         print(f"[RP2 index] dry-run: model_exists={model_path.is_dir()}, output={output}", flush=True)
@@ -55,6 +60,8 @@ def main() -> int:
         metadata={
             "protocol_id": config["protocol_id"],
             "graph_root": config["graph_root"],
+            "index_source": index_source,
+            "benchmark_dir": config.get("benchmark_dir") if index_source == "benchmark_candidates" else None,
             "model_manifest": model_file_manifest(model_path),
             "runtime_manifest": encoder.runtime_manifest,
             "embedding_device": encoder.device,

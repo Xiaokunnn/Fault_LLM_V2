@@ -155,6 +155,18 @@ def load_evidence_candidates(graph_root: str | Path) -> list[EvidenceCandidate]:
     return candidates
 
 
+def load_benchmark_candidates(benchmark_dir: str | Path) -> list[EvidenceCandidate]:
+    """Load an isolated benchmark candidate corpus without touching the primary graph."""
+
+    rows = _read_jsonl(Path(benchmark_dir) / "evidence_candidates.jsonl")
+    candidates = []
+    for row in rows:
+        payload = dict(row)
+        payload["fault_class_ids"] = tuple(payload.get("fault_class_ids", []))
+        candidates.append(EvidenceCandidate(**payload))
+    return candidates
+
+
 def load_silver_queries(cq_evaluation_path: str | Path) -> list[SilverQuery]:
     data = json.loads(Path(cq_evaluation_path).read_text(encoding="utf-8"))
     queries: list[SilverQuery] = []

@@ -35,9 +35,14 @@ def _stable(prefix: str, *parts: object) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", default="data/interim/heldout_external/shared_silver_v1/candidate_triples.auto_adjudicated_silver.jsonl")
-    parser.add_argument("--output-root", default="results/experiments/heldout_external_v1")
+    parser.add_argument("--input", default="data/interim/heldout_external/shared_silver_v3/candidate_triples.auto_adjudicated_silver.jsonl")
+    parser.add_argument("--output-root", default="results/experiments/heldout_external_v3")
+    parser.add_argument("--freeze-manifest", default="configs/frozen/rp2_v3_frozen_protocol.json")
     args = parser.parse_args()
+    freeze_path = ROOT / args.freeze_manifest
+    if not freeze_path.is_file():
+        raise FileNotFoundError("RP2 v3 freeze manifest must exist before external preparation")
+    freeze_sha256 = hashlib.sha256(freeze_path.read_bytes()).hexdigest()
     records = _read_jsonl(ROOT / args.input)
     if any(row.get("document_split") != "held_out_test" for row in records):
         raise ValueError("External preparation accepts held_out_test records only")
@@ -50,7 +55,7 @@ def main() -> int:
     complete = sum(all(row.get(field) not in (None, "") for field in provenance_fields) for row in silver)
     page_grounded = sum(row.get("evidence_level") in {"E1", "E2"} for row in silver)
     rp1 = {
-        "scope": "MP010-MP013 strict external evaluation only",
+        "scope": "MP010-MP013 source-held-out external evaluation only",
         "label_policy": "Silver only; never Gold",
         "human_expert_reviewed": False,
         "records": len(records),
@@ -107,19 +112,22 @@ def main() -> int:
             fault_name_zh=fault_name,
             role=role,
             relevant_evidence_ids=relevant,
-            candidate_evidence_ids=tuple(item.evidence_id for item in candidates),
-            label_status="strict_external_silver" if relevant else "unanswerable_external_silver",
+            candidate_evidence_ids=(),
+            label_status="source_heldout_external_silver" if relevant else "unanswerable_external_silver",
         ))
     benchmark = output / "rp2_external_silver_benchmark"
     write_benchmark(queries, candidates, benchmark)
     manifest_path = benchmark / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     manifest.update({
-        "benchmark_id": "marine_pump_rp2_strict_external_silver_v1",
-        "scope": "MP010-MP013 only; created after RP2 protocol freeze",
+        "benchmark_id": "marine_pump_rp2_external_source_heldout_v3",
+        "scope": "MP010-MP013 isolated external candidate corpus; created after RP2 v3 freeze",
         "held_out_test": True,
         "must_not_tune": True,
         "must_not_enter_primary_graph": True,
+        "full_external_corpus_retrieval": True,
+        "positive_seeded_candidate_pool": False,
+        "rp2_v3_freeze_manifest_sha256": freeze_sha256,
     })
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[Shared heldout] RP1 Silver={len(silver)}; RP2 candidates={len(candidates)}, answerable queries={sum(bool(q.relevant_evidence_ids) for q in queries)}/40", flush=True)

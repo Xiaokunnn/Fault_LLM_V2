@@ -21,7 +21,7 @@ from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.evaluation import evaluate_results  # noqa: E402
 from research_point_2.generation import (  # noqa: E402
     SYSTEM_PROMPT,
-    build_generation_prompt,
+    fit_prompt_budget,
     score_silver_response,
     summarize_generation_rows,
     validate_generated_answer,
@@ -68,36 +68,6 @@ def _scenario_specs(config: dict, requested: list[str] | None, include_ablations
             method for method in config.get("ablation_methods", []) if method not in methods
         )
     return [{"id": method, "retrieval_method": method} for method in methods]
-
-
-def _fit_prompt_budget(
-    query: SilverQuery,
-    evidence: list[EvidenceCandidate],
-    generator: QwenLocalGenerator,
-    contract: dict,
-) -> tuple[str, list[EvidenceCandidate], int, int]:
-    """Drop lowest-ranked evidence until the exact Qwen prompt fits the shared budget."""
-
-    kept = list(evidence)
-    dropped = 0
-    max_prompt_tokens = int(contract["max_prompt_tokens"])
-    while True:
-        prompt = build_generation_prompt(
-            query,
-            kept,
-            max_answer_points=int(contract["max_answer_points"]),
-            max_point_chars=int(contract["max_point_chars"]),
-            max_summary_chars=int(contract["max_summary_chars"]),
-        )
-        token_count = generator.count_chat_tokens(SYSTEM_PROMPT, prompt)
-        if token_count <= max_prompt_tokens:
-            return prompt, kept, dropped, token_count
-        if not kept:
-            raise RuntimeError(
-                f"Prompt contract alone exceeds max_prompt_tokens={max_prompt_tokens}"
-            )
-        kept.pop()
-        dropped += 1
 
 
 def _plot_metrics(metrics: dict, output: Path) -> None:
@@ -241,7 +211,7 @@ def main() -> int:
             generation_source = "SKIPPED"
             if generator is not None:
                 evidence = [by_id[row.evidence_id] for row in result.ranked if row.evidence_id in by_id]
-                prompt, evidence, prompt_budget_dropped, planned_prompt_tokens = _fit_prompt_budget(
+                prompt, evidence, prompt_budget_dropped, planned_prompt_tokens = fit_prompt_budget(
                     query, evidence, generator, generation_contract
                 )
                 if prompt_budget_dropped:

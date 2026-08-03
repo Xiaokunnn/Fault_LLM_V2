@@ -10,7 +10,12 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
-from research_point_2.dataset import EvidenceCandidate, SilverQuery
+from research_point_2.dataset import (
+    EvidenceCandidate,
+    SilverQuery,
+    load_benchmark_candidates,
+    write_benchmark,
+)
 from research_point_2.budget_effectiveness import analyze_budget_effectiveness
 from research_point_2.dense_index import DenseEvidenceIndex, evidence_index_text
 from research_point_2.generation import (
@@ -66,6 +71,14 @@ def test_dense_index_preserves_chinese_contract_and_roundtrips(tmp_path: Path) -
     loaded = DenseEvidenceIndex.load(tmp_path)
     assert loaded.evidence_ids == ("E1", "E2")
     assert loaded.search("汽蚀症状", FakeEncoder(), top_n=1)[0].evidence_id == "E1"
+
+
+def test_isolated_benchmark_candidates_roundtrip_without_primary_graph(tmp_path: Path) -> None:
+    candidates = [_candidate("EXT-E1", "MAIB", "异常噪声")]
+    write_benchmark([_query()], candidates, tmp_path)
+    loaded = load_benchmark_candidates(tmp_path)
+    assert loaded == candidates
+    assert loaded[0].source_family_id == "MAIB"
 
 
 def test_dense_ours_enforces_source_family_cap() -> None:

@@ -22,6 +22,10 @@ class JsonGenerator(Protocol):
     ) -> dict: ...
 
 
+class TokenCountingGenerator(JsonGenerator, Protocol):
+    def count_chat_tokens(self, system_prompt: str, user_prompt: str) -> int: ...
+
+
 def _percentile(values: list[float], probability: float) -> float | None:
     if not values:
         return None
@@ -75,6 +79,36 @@ def build_generation_prompt(
         },
     }
     return json.dumps(payload, ensure_ascii=False, indent=2)
+
+
+def fit_prompt_budget(
+    query: SilverQuery,
+    evidence: list[EvidenceCandidate],
+    generator: TokenCountingGenerator,
+    contract: dict,
+) -> tuple[str, list[EvidenceCandidate], int, int]:
+    """Drop lowest-ranked evidence until the exact model prompt fits the shared budget."""
+
+    kept = list(evidence)
+    dropped = 0
+    max_prompt_tokens = int(contract["max_prompt_tokens"])
+    while True:
+        prompt = build_generation_prompt(
+            query,
+            kept,
+            max_answer_points=int(contract["max_answer_points"]),
+            max_point_chars=int(contract["max_point_chars"]),
+            max_summary_chars=int(contract["max_summary_chars"]),
+        )
+        token_count = generator.count_chat_tokens(SYSTEM_PROMPT, prompt)
+        if token_count <= max_prompt_tokens:
+            return prompt, kept, dropped, token_count
+        if not kept:
+            raise RuntimeError(
+                f"Prompt contract alone exceeds max_prompt_tokens={max_prompt_tokens}"
+            )
+        kept.pop()
+        dropped += 1
 
 
 def validate_generated_answer(

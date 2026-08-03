@@ -177,3 +177,55 @@ bash scripts/run_rp2_budget_effectiveness_v3_server.sh \
 ```
 
 由于主场景缓存可复用，追加两个消融只新增80次模型调用。输出目录为 `results/experiments/research_point_2/graphrag_v3_budget_effectiveness/`。
+
+## 6. 研究点二v3最终化与外部评价
+
+完整边界见 `docs/research/RP2_V3_FINALIZATION_AND_EXTERNAL_PROTOCOL.md`。
+
+先完成600次交错重复时延、120回答双提示词Silver语义Judge，并生成冻结清单：
+
+```bash
+cd ~/08-zxk/Fault_LLM_V2
+git switch main
+git pull --ff-only origin main
+source .venv/bin/activate
+
+bash scripts/run_rp2_v3_finalize_development_secure.sh
+```
+
+完成后必须先提交冻结结果：
+
+```bash
+git add \
+  results/experiments/research_point_2/rp2_v3_interleaved_latency \
+  results/experiments/research_point_2/rp2_v3_dual_prompt_semantic_judge \
+  configs/frozen/rp2_v3_frozen_protocol.json
+
+git commit -m "Freeze RP2 v3 before external evaluation"
+git push origin main
+```
+
+确认冻结提交已经位于Git `HEAD`后，才运行一次MP010–MP013外部来源评价：
+
+```bash
+cd ~/08-zxk/Fault_LLM_V2
+git switch main
+git pull --ff-only origin main
+source .venv/bin/activate
+
+bash scripts/run_rp2_v3_external_source_heldout_secure.sh
+```
+
+外部结果不回流调参。完成后只做保存与报告：
+
+```bash
+git add \
+  data/interim/heldout_external/rp1_extraction_v3 \
+  data/interim/heldout_external/rp1_strict_v3 \
+  data/interim/heldout_external/shared_silver_v3 \
+  results/experiments/heldout_external_v3 \
+  results/experiments/research_point_2/graphrag_v3_external_source_heldout
+
+git commit -m "Add frozen RP2 v3 external source-heldout results"
+git push origin main
+```
