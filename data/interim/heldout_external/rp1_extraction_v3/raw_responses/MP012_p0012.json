@@ -1,0 +1,113 @@
+{
+  "page_key": "MP012:p0012",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-52915320-3d3a-9d57-a2f1-5a50f938a16c",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 14733,
+  "attempt": 1,
+  "prompt_sha256": "6502077a366ffae2e1ead807e79a11d5e9bea1416d5d8dae3fdee1caa51f907b",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water levels on board had worsened",
+        "head_canonical_zh": "船上水位恶化",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "water levels had risen",
+        "tail_canonical_zh": "水位上升",
+        "tail_type": "Symptom",
+        "evidence_text": "At 1447, the skipper reported that water levels on board had worsened a little\n             but still believed that Freedom II could complete the estimated 4-hour journey to\n             Oban. Concerned about the risk that loose deck plates might hit pipes and risers,\n             the skipper managed to shut off some of the accessible valves. The skipper then\n             telephoned a local supplier to plan for the repair of Freedom II.\n                                                                                  \n             At 1457, the ALB’s coxswain spoke to the skipper and asked if they were content\n             to continue the tow away from the shelter of the Garvellach Islands. The skipper\n             agreed to the plan, though noted that water levels had risen.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loose deck plates might hit pipes and risers",
+        "head_canonical_zh": "松动甲板板撞击管路和立管",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "water levels on board had worsened",
+        "tail_canonical_zh": "船上水位恶化",
+        "tail_type": "Symptom",
+        "evidence_text": "Concerned about the risk that loose deck plates might hit pipes and risers,\n             the skipper managed to shut off some of the accessible valves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.55,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "loose deck plates might hit pipes and risers",
+        "head_canonical_zh": "松动甲板板撞击管路和立管",
+        "head_type": "Cause",
+        "relation": "mitigated_by",
+        "tail_surface": "shut off some of the accessible valves",
+        "tail_canonical_zh": "关闭部分可接近阀门",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Concerned about the risk that loose deck plates might hit pipes and risers,\n             the skipper managed to shut off some of the accessible valves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Freedom II was taking on more water",
+        "head_canonical_zh": "船舶进水量增加",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "fish hold ... was now almost full of water",
+        "tail_canonical_zh": "鱼舱几乎充满水",
+        "tail_type": "Symptom",
+        "evidence_text": "Freedom II was taking on more water and was rolling heavily. Deckhand 1\n             checked the fish hold and saw that it was now almost full of water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fish hold ... was now almost full of water",
+        "head_canonical_zh": "鱼舱几乎充满水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "checked the fish hold",
+        "tail_canonical_zh": "检查鱼舱",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Deckhand 1\n             checked the fish hold and saw that it was now almost full of water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

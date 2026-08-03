@@ -1,0 +1,94 @@
+{
+  "page_key": "MP010:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-7d83b451-d76a-9a61-adeb-f9f4e192a1a3",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 11794,
+  "attempt": 1,
+  "prompt_sha256": "87b23f5f95153809e901f4c32db7c2feeb8bd7016478a45476a472a08d86683c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "engine room was flooding",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "valve actuator gearbox on a sea water isolating valve in the ballast system was defective",
+        "tail_canonical_zh": "压载系统海水隔离阀执行器齿轮箱缺陷",
+        "tail_type": "Cause",
+        "evidence_text": "The MAIB investigation established that the valve actuator gearbox on a sea water isolating valve in the ballast system was defective such that someone operating the valve might believe the valve was shut when it was not. The valve position indicator was working but it had not been checked prior to work being started on the ballast pump. When the pump was removed the engine room flooded through the 15cm diameter ballast main.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "engine room flooded",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "water began to enter the space",
+        "tail_canonical_zh": "水开始进入该处所",
+        "tail_type": "Symptom",
+        "evidence_text": "A ballast pump in the vessel’s engine room was being maintained, when water began to enter the space.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "valve position indicator",
+        "head_canonical_zh": "阀门位置指示器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "checked",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The valve position indicator was working but it had not been checked prior to work being started on the ballast pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "actuator mechanism of ship's side valves",
+        "head_canonical_zh": "船侧阀执行机构",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "function test",
+        "tail_canonical_zh": "功能测试",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "propose to the International Association of Classification Societies that its requirements should be amended to include a function test of the actuator mechanism of ship's side valves during special surveys",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

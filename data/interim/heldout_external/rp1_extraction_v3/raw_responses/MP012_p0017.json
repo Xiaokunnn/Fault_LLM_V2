@@ -1,0 +1,130 @@
+{
+  "page_key": "MP012:p0017",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-074c9597-74d5-911b-9f0f-1362331bf767",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 19066,
+  "attempt": 1,
+  "prompt_sha256": "da00897a0c6fe709d8a6547ccb394f50fee8fb3f6f46779672b2a917f461f9b5",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "deck wash pump assembly",
+        "head_canonical_zh": "甲板冲洗泵组件",
+        "head_type": "Equipment",
+        "relation": "contains",
+        "tail_surface": "Strainer",
+        "tail_canonical_zh": "滤器",
+        "tail_type": "Component",
+        "evidence_text": "Deck wash pump\n\n                                           Strainer",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pipe assembly leading from the hull fitting to the engine-driven deck wash pump",
+        "head_canonical_zh": "从船体接头至发动机驱动甲板冲洗泵的管路组件",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "engine-driven deck wash pump",
+        "tail_canonical_zh": "发动机驱动甲板冲洗泵",
+        "tail_type": "Equipment",
+        "evidence_text": "the pipe assembly leading from the hull fitting to the engine-driven deck wash pump was unsupported",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "copper alloy suction pipework",
+        "head_canonical_zh": "铜合金吸入管路",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "relative movement of the deck wash pump assembly",
+        "tail_canonical_zh": "甲板冲洗泵组件的相对运动",
+        "tail_type": "Cause",
+        "evidence_text": "The copper alloy suction pipework did not contain a flexible coupling or bellows piece to allow for any relative movement of the deck wash pump assembly",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pipe assembly leading from the hull fitting to the engine-driven deck wash pump",
+        "head_canonical_zh": "从船体接头至发动机驱动甲板冲洗泵的管路组件",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "unsupported",
+        "tail_canonical_zh": "无支撑",
+        "tail_type": "Symptom",
+        "evidence_text": "the pipe assembly leading from the hull fitting to the engine-driven deck wash pump was unsupported",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "risk of flooding",
+        "head_canonical_zh": "进水风险",
+        "head_type": "Risk",
+        "relation": "mitigated_by",
+        "tail_surface": "modified most of the seawater inlet and discharge valves to enable them to be operated from above the engine room floor plates",
+        "tail_canonical_zh": "改装大部分海水进口和排放阀以便在机舱花钢板上方操作",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The skipper had assessed the risk of flooding and had modified most of the seawater inlet and discharge valves to enable them to be operated from above the engine room floor plates",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bilge pump pipework",
+        "head_canonical_zh": "舱底泵管路",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "rerouted the bilge pump pipework to discharge through a hose on deck instead of through-hull penetrations",
+        "tail_canonical_zh": "将舱底泵管路改道通过甲板软管排放而非穿过船体",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The skipper had also rerouted the bilge pump pipework to discharge through a hose on deck instead of through-hull penetrations",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "page_key": "MP012:p0027",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0ecf73c1-9372-9e25-bc2f-2964dea880c6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2868,
+    "prompt_tokens": 2270,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5138
+  },
+  "latency_ms": 33336,
+  "attempt": 1,
+  "prompt_sha256": "cb670fbe9ed70e2dcf4089469b988b0a26f4ff0445202b3b0438b3d8a07f695c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "lack of water from the deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵缺水",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "suction pipe had failed",
+        "tail_canonical_zh": "吸入管失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "The lack of water from the deck wash pump when the skipper first engaged the clutch and the lack of any observed spray from a failed discharge pipe further supports the conclusion that the suction pipe had failed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "fatigue failure of the engine-driven deck wash pump suction pipe",
+        "head_canonical_zh": "发动机驱动甲板冲洗泵吸入管疲劳失效",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "flooding",
+        "tail_canonical_zh": "进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The most likely source of the flooding was a fatigue failure of the engine-driven deck wash pump suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unsupported pipework",
+        "head_canonical_zh": "无支撑管路",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "vibration-induced stress",
+        "tail_canonical_zh": "振动诱导应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "The unsupported pipework was vulnerable to vibration-induced stress that increased the risk of failure and flooding of the vessel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration-induced stress",
+        "head_canonical_zh": "振动诱导应力",
+        "head_type": "FailureMechanism",
+        "relation": "increases_risk_of",
+        "tail_surface": "failure and flooding of the vessel",
+        "tail_canonical_zh": "船舶失效与进水",
+        "tail_type": "Risk",
+        "evidence_text": "vibration-induced stress that increased the risk of failure and flooding of the vessel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "automatic bilge pumps",
+        "head_canonical_zh": "自动舱底泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "rising level of water in the cabin space",
+        "tail_canonical_zh": "舱室水位上升",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "When the automatic bilge pumps started in response to the rising level of water in the cabin space",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "discharges were visible",
+        "head_canonical_zh": "排水可见",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "automatic bilge pumps",
+        "tail_canonical_zh": "自动舱底泵",
+        "tail_type": "Equipment",
+        "evidence_text": "the discharges were visible to the crew and the pumps could be heard operating",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pumps could be heard operating",
+        "head_canonical_zh": "可听到泵运行声",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "automatic bilge pumps",
+        "tail_canonical_zh": "自动舱底泵",
+        "tail_type": "Equipment",
+        "evidence_text": "the discharges were visible to the crew and the pumps could be heard operating",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "self-priming bilge pump",
+        "head_canonical_zh": "自吸式舱底泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "inoperable",
+        "tail_canonical_zh": "无法运行",
+        "tail_type": "Symptom",
+        "evidence_text": "This rendered the self-priming bilge pump and submersible pump inoperable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "submersible pump",
+        "head_canonical_zh": "潜水泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "inoperable",
+        "tail_canonical_zh": "无法运行",
+        "tail_type": "Symptom",
+        "evidence_text": "This rendered the self-priming bilge pump and submersible pump inoperable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rising level of water was picked up by the main engine’s flywheel and sprayed onto its control panel",
+        "head_canonical_zh": "主发动机飞轮卷起水位上升的水并喷溅到控制面板",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "auxiliary generator could not be started",
+        "tail_canonical_zh": "辅助发电机无法启动",
+        "tail_type": "FaultMode",
+        "evidence_text": "The auxiliary generator could not be started when the rising level of water was picked up by the main engine’s flywheel and sprayed onto its control panel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "auxiliary generator could not be started",
+        "head_canonical_zh": "辅助发电机无法启动",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "self-priming bilge pump and submersible pump inoperable",
+        "tail_canonical_zh": "自吸式舱底泵和潜水泵无法运行",
+        "tail_type": "FaultMode",
+        "evidence_text": "The auxiliary generator could not be started when the rising level of water was picked up by the main engine’s flywheel and sprayed onto its control panel. This rendered the self-priming bilge pump and submersible pump inoperable.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "portable salvage pump",
+        "head_canonical_zh": "便携式救助泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "unable to restart",
+        "tail_canonical_zh": "无法重启",
+        "tail_type": "Symptom",
+        "evidence_text": "the crew were unable to restart the portable salvage pump after it was repositioned",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bilge pumps and emergency bilge pumps",
+        "head_canonical_zh": "舱底泵和应急舱底泵",
+        "head_type": "Equipment",
+        "relation": "specified_by",
+        "tail_surface": "MSN 1872 (F) Amendment 1",
+        "tail_canonical_zh": "MSN 1872 (F) 修正案1",
+        "tail_type": "Standard",
+        "evidence_text": "Freedom II was fitted with bilge pumps and emergency bilge pumps that exceeded the requirements stated in MSN 1872 (F) Amendment 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

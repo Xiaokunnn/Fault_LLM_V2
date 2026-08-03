@@ -1,0 +1,208 @@
+{
+  "page_key": "MP010:p0031",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-c013e1a2-727a-9c0e-b41d-03fcbb5c99ab",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 26720,
+  "attempt": 1,
+  "prompt_sha256": "d6d56444ed161e73e8df7be097c1417c138bf2b2bb550755c7c97374ba4434cb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "valve A104 port",
+        "head_canonical_zh": "左舷A104阀",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "engine room on Sea Breeze flooded",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The engine room on Sea Breeze flooded because valve A104 port, the single isolating butterfly valve between the port sea chest and the port ballast pump that was undergoing maintenance, was not fully closed prior to work commencing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "valve A104 port ... was not fully closed",
+        "head_canonical_zh": "阀门未完全关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "sea water entered the engine room through the exposed 15cm diameter ballast main",
+        "tail_canonical_zh": "海水经暴露的压载总管进入机舱",
+        "tail_type": "Symptom",
+        "evidence_text": "valve A104 port, the single isolating butterfly valve between the port sea chest and the port ballast pump that was undergoing maintenance, was not fully closed prior to work commencing. ... When the pump body was lifted clear of the pipe flanges, sea water entered the engine room through the exposed 15cm diameter ballast main.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "chief engineer ... had not checked the valve position indicator",
+        "head_canonical_zh": "轮机长未检查阀位指示器",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "engine room on Sea Breeze flooded",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The chief engineer had attempted to close the valve and believed that it was closed, although he had not checked the valve position indicator before permitting work on removing the ballast pump to start.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "worm and quadrant gearing ... could jam intermittently",
+        "head_canonical_zh": "蜗轮扇形齿轮间歇卡滞",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "hand wheel to become tight",
+        "tail_canonical_zh": "手轮变紧",
+        "tail_type": "Symptom",
+        "evidence_text": "the condition of the worm and quadrant gearing was such that it could jam intermittently. Such jamming caused the hand wheel to become tight, thereby giving the impression that the valve was closed when it was not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hand wheel to become tight",
+        "head_canonical_zh": "手轮变紧",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "valve was closed when it was not",
+        "tail_canonical_zh": "阀门假关指示",
+        "tail_type": "FaultMode",
+        "evidence_text": "Such jamming caused the hand wheel to become tight, thereby giving the impression that the valve was closed when it was not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "valve A104 port",
+        "head_canonical_zh": "左舷A104阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "position indicator",
+        "tail_canonical_zh": "阀位指示器",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "As required by SOLAS the valve was equipped with a position indicator, showing whether it was open or closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ship side valves",
+        "head_canonical_zh": "船侧阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "LR’s Machinery Surveys, General Requirements",
+        "tail_canonical_zh": "劳氏机械检验通用要求",
+        "tail_type": "Standard",
+        "evidence_text": "Ship side valves are required to be examined under the LR’s Machinery Surveys, General Requirements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "sea connections and attached valves",
+        "head_canonical_zh": "海水接头及附属阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "Docking Survey, Hull and machinery requirements",
+        "tail_canonical_zh": "坞检船体与机械要求",
+        "tail_type": "Standard",
+        "evidence_text": "There is also a requirement to examine all sea connections and attached valves during docking surveys under Docking Survey, Hull and machinery requirements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "serious flooding of engine spaces",
+        "head_canonical_zh": "机舱严重进水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "ensure that these valves are fully reconditioned at this time and correctly assembled",
+        "tail_canonical_zh": "确保阀门全面翻新并正确装配",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The inability to fully close sea connections has resulted in serious flooding of engine spaces. Surveyors must therefore ensure that these valves are fully reconditioned at this time and correctly assembled.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "inability to fully close sea connections",
+        "head_canonical_zh": "海水接头无法完全关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "serious flooding of engine spaces",
+        "tail_canonical_zh": "机舱严重进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The inability to fully close sea connections has resulted in serious flooding of engine spaces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "page_key": "MP012:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-af7cbba3-3ab2-9ef5-a53f-aecb4ca157d9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1080,
+    "prompt_tokens": 2373,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3453
+  },
+  "latency_ms": 12215,
+  "attempt": 1,
+  "prompt_sha256": "1430c0094d31be1800876372155703d729898f9080f41987aa57619817468279",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "secondary bilge pump",
+        "head_canonical_zh": "备用舱底泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "water was being splashed up onto the generator’s control panel",
+        "tail_canonical_zh": "水溅到发电机控制面板上",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The skipper tried to start the generator to provide power to a secondary bilge pump but water was being splashed up onto the generator’s control panel and it would not start.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "generator",
+        "head_canonical_zh": "发电机",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "would not start",
+        "tail_canonical_zh": "无法启动",
+        "tail_type": "Symptom",
+        "evidence_text": "water was being splashed up onto the generator’s control panel and it would not start",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "salvage pump",
+        "head_canonical_zh": "救助泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "starting cord snapped",
+        "tail_canonical_zh": "启动绳断裂",
+        "tail_type": "Symptom",
+        "evidence_text": "When the crew tried to restart the salvage pump in its new position its starting cord snapped, putting the pump out of action.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "salvage pump",
+        "head_canonical_zh": "救助泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "putting the pump out of action",
+        "tail_canonical_zh": "泵失效",
+        "tail_type": "Symptom",
+        "evidence_text": "its starting cord snapped, putting the pump out of action",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sea inlet and discharge valves",
+        "head_canonical_zh": "海水进口和排放阀",
+        "head_type": "Component",
+        "relation": "operates_under",
+        "tail_surface": "remained open",
+        "tail_canonical_zh": "保持开启",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "no seawater system isolations were made and the sea inlet and discharge valves remained open",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

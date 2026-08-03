@@ -1,0 +1,94 @@
+{
+  "page_key": "MP010:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-47ea462a-8fd4-9723-9423-1367af16220b",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 12926,
+  "attempt": 1,
+  "prompt_sha256": "cc25045feaff15b6dea0bd60fe357920ea502e5994ffd859cdfb0ff76cd211c0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "full bore torrent of water from the pump’s suction pipe",
+        "head_canonical_zh": "泵吸入管全流量喷水",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "engine room began to flood quickly",
+        "tail_canonical_zh": "机舱快速进水",
+        "tail_type": "Symptom",
+        "evidence_text": "when the pump was lifted clear of the pipework this became a full bore torrent of water from the pump’s suction pipe. Initially the three crew tried to stem this flow of water using rags and wooden chocks, but this action had little effect. None of the crew inspected the position indicator on valve A104 port (Figure 2) or made any attempt to confirm that this or any of the other valves were fully closed. The engine room began to flood quickly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "position indicator on valve A104 port",
+        "head_canonical_zh": "A104左舷阀位置指示器",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "None of the crew inspected",
+        "tail_canonical_zh": "船员未检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "None of the crew inspected the position indicator on valve A104 port (Figure 2) or made any attempt to confirm that this or any of the other valves were fully closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "stem this flow of water using rags and wooden chocks",
+        "head_canonical_zh": "用破布和木楔堵水",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "full bore torrent of water from the pump’s suction pipe",
+        "tail_canonical_zh": "泵吸入管全流量喷水",
+        "tail_type": "Symptom",
+        "evidence_text": "Initially the three crew tried to stem this flow of water using rags and wooden chocks, but this action had little effect.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rising bilge water coming into contact with the running, port generator’s flywheel",
+        "head_canonical_zh": "上升的舱底水接触运行中的左舷发电机飞轮",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "engine room began to flood quickly",
+        "tail_canonical_zh": "机舱快速进水",
+        "tail_type": "Symptom",
+        "evidence_text": "he was distracted by the rising bilge water coming into contact with the running, port generator’s flywheel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

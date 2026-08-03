@@ -1,0 +1,101 @@
+{
+  "page_key": "MP010:p0017",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-820439a6-bc27-9124-b769-e6f12bc36db9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 825,
+    "prompt_tokens": 2027,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2852
+  },
+  "latency_ms": 10865,
+  "attempt": 1,
+  "prompt_sha256": "81ca760803dc6cdd12c91ce7af73c965a5aa3740e77b1aaad18634651f8a61bf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "mechanical seals",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "leaking",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "the mechanical seals for both ballast pumps had been leaking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seals for both ballast pumps had been leaking",
+        "head_canonical_zh": "压载泵机械密封泄漏",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "pumping rates were poor",
+        "tail_canonical_zh": "泵送速率差",
+        "tail_type": "Symptom",
+        "evidence_text": "the mechanical seals for both ballast pumps had been leaking and, as a result, pumping rates were poor",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ballast pumps",
+        "head_canonical_zh": "压载泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "repairing the pumps",
+        "tail_canonical_zh": "修理泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The chief engineer had prioritised repairing the pumps",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seals",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replacement mechanical seals",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "requested and received replacement mechanical seals from Shipmar",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

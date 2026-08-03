@@ -1,0 +1,147 @@
+{
+  "page_key": "MP013:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-609a65d5-faa8-9b2c-9490-6919979807f0",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 19694,
+  "attempt": 1,
+  "prompt_sha256": "0433417288bdcfbae9e28e8b7850df3c0d478a5d7c765d9cdde0e15b1fba642f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bilge alarm",
+        "head_canonical_zh": "舱底水报警器",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "No problems were reported with the vessel’s exhaust system or the bilge alarm in the engine room",
+        "tail_canonical_zh": "未报告问题",
+        "tail_type": "InspectionAction",
+        "evidence_text": "No problems were reported with the vessel’s exhaust system or the bilge alarm in the engine room.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "Speedwell",
+        "head_canonical_zh": "Speedwell号渔船",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "sector manager of the Maritime and Coastguard Agency (MCA)",
+        "tail_canonical_zh": "海事与海岸警卫署部门经理",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Speedwell was last inspected by a sector manager of the Maritime and Coastguard Agency (MCA) in June 2009.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lack of securing arrangements",
+        "head_canonical_zh": "缺乏固定装置",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "inspection",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The deficiencies identified during the inspection included the lack of securing arrangements and the lack of a watertight seal on the forward hatch",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lack of a watertight seal on the forward hatch",
+        "head_canonical_zh": "前舱口盖缺乏水密密封",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "inspection",
+        "tail_canonical_zh": "检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The deficiencies identified during the inspection included the lack of securing arrangements and the lack of a watertight seal on the forward hatch",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lack of a watertight seal on the forward hatch",
+        "head_canonical_zh": "前舱口盖缺乏水密密封",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "sealing the hatch shut",
+        "tail_canonical_zh": "将舱口盖密封关闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the lack of a watertight seal on the forward hatch, which were corrected by sealing the hatch shut",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "sea water to a depth of approximately 1m had to be bailed out of the aft store with a bucket",
+        "tail_canonical_zh": "需用桶从后储藏室舀出约1米深的海水",
+        "tail_type": "Symptom",
+        "evidence_text": "On two occasions, sea water to a depth of approximately 1m had to be bailed out of the aft store with a bucket. The skipper and his crewman identified that the water had drained into the store from the deck above through the deck hatch. Although a rubber matt placed over the hatch appeared to slow down the rate of water ingress, it did not prevent it.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "deck hatch",
+        "head_canonical_zh": "甲板舱口盖",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "water ingress",
+        "tail_canonical_zh": "进水",
+        "tail_type": "Symptom",
+        "evidence_text": "the water had drained into the store from the deck above through the deck hatch",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

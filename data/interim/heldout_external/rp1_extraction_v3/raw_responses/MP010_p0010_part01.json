@@ -1,0 +1,157 @@
+{
+  "page_key": "MP010:p0010",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ddfd40eb-45f5-9cca-a340-0cc09da9289e",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1585,
+    "prompt_tokens": 2782,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4367
+  },
+  "latency_ms": 18018,
+  "attempt": 1,
+  "prompt_sha256": "c8c79c80b63fc1a8cec7981ebb4e35c4c208a1126d16ab5fd6de20c3b4860a27",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "port main ballast pump",
+        "head_canonical_zh": "左舷主压载泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "change the mechanical seal",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "went to the engine room to change the mechanical seal on the port main ballast pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "mechanical seals",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "leaking",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "The mechanical seals of both of the vessel’s main ballast pumps had been leaking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.98,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "port main ballast pump",
+        "head_canonical_zh": "左舷主压载泵",
+        "head_type": "Equipment",
+        "relation": "located_in",
+        "tail_surface": "forward of the main engine below the engine room bottom plates",
+        "tail_canonical_zh": "主机前方机舱底板下方",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "port main ballast pump, which was situated forward of the main engine below the engine room bottom plates",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "ballast pump",
+        "head_canonical_zh": "压载泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "isolated the electrical breaker",
+        "tail_canonical_zh": "隔离电气断路器",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Having isolated the electrical breaker for the ballast pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pump",
+        "head_canonical_zh": "泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "closing the bilge and ballast manifold suction valves, the ballast pump’s discharge valve and the single isolating butterfly valve",
+        "tail_canonical_zh": "关闭舱底和压载总管吸入阀、压载泵排出阀及单个隔离蝶阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "isolate the pump from the ballast system and the sea water inlet. This involved closing the bilge and ballast manifold suction valves, the ballast pump’s discharge valve and the single isolating butterfly valve",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electric motor",
+        "head_canonical_zh": "电动机",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "removed the horizontally mounted electric motor from the ballast pump",
+        "tail_canonical_zh": "从压载泵上拆卸水平安装的电动机",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "removed the horizontally mounted electric motor from the ballast pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pump_motor_misalignment",
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.94,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "slackened and removed the pump’s suction and discharge flange bolts to enable the pump to be lifted onto the bottom plates so as to facilitate access to the mechanical seal",
+        "tail_canonical_zh": "松开并拆除泵吸排法兰螺栓以便将泵吊至底板上从而接近机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "slackened and removed the pump’s suction and discharge flange bolts to enable the pump to be lifted onto the bottom plates so as to facilitate access to the mechanical seal",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.96,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "page_key": "MP012:p0028",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-e6936f2c-20d2-9e08-8907-d7c3a6d9bf93",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 9007,
+  "attempt": 1,
+  "prompt_sha256": "a83f1c54393660460f91c5b790d4ed6478563f9ee64a8414193a860163d89907",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check of the vessel’s compartments",
+        "tail_canonical_zh": "舱室检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Freedom II’s crew conducted a check of the vessel’s compartments shortly after being alerted to the flooding and found the fish hold to be free of water.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Progressive flooding into the fish hold",
+        "head_canonical_zh": "鱼舱渐进式进水",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "change in the motion of the vessel",
+        "tail_canonical_zh": "船舶运动变化",
+        "tail_type": "Symptom",
+        "evidence_text": "Although the two crew who remained on board Freedom II could feel the change in the motion of the vessel, they associated it with entering rougher waters. This meant that the progressive flooding entering the fish hold was not identified until shortly before Freedom II foundered",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "transfer the ALB’s portable salvage pump to Freedom II",
+        "tail_canonical_zh": "转移ALB便携式救助泵至Freedom II",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "This resulted in a missed opportunity to transfer the ALB’s portable salvage pump to Freedom II when both vessels reached more sheltered waters. With the ability to discharge up to 47m³ per hour, it is possible that the use of this pump may have affected the outcome of this accident.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

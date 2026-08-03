@@ -1,0 +1,66 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-b1942cad-2166-9686-93db-80389450aaa3",
+  "latency_ms": 9421,
+  "prompt_sha256": "44ea692c7165090dd3b0ad102136861d4c986372d2ce68309e524ba61aa944d9",
+  "response_json": {
+    "judgments": [
+      {
+        "id": "MPT-9a56df6b40b2a020951b",
+        "verdict": "entailed",
+        "confidence": 0.95,
+        "supporting_quote": "The most likely source of the flooding was a fatigue failure of the engine-driven deck wash pump suction pipe.",
+        "reason_code": "direct_causal_statement"
+      },
+      {
+        "id": "MPT-9fc39311a57eb2bb79f9",
+        "verdict": "entailed",
+        "confidence": 0.98,
+        "supporting_quote": "The absence of top hat bearings on the worm wheel allowed it to come into contact with the casing during operation, jamming the actuator gearbox",
+        "reason_code": "direct_causal_chain"
+      },
+      {
+        "id": "MPT-9fd49e78cae2754c42c3",
+        "verdict": "entailed",
+        "confidence": 0.99,
+        "supporting_quote": "mechanical seals for both ballast pumps had been leaking and, as a result, pumping rates were poor",
+        "reason_code": "explicit_result_connector"
+      },
+      {
+        "id": "MPT-a06a9455525b4a760fbe",
+        "verdict": "not_entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Ensuring that all pressure was safely released from the suction side of the pump by using the bleed nut on the suction strainer prior to slackening the flange bolts.",
+        "reason_code": "missing_maintenance_predicate"
+      },
+      {
+        "id": "MPT-a0cc24563a3c1192caa6",
+        "verdict": "entailed",
+        "confidence": 0.92,
+        "supporting_quote": "isolate the pump from the ballast system and the sea water inlet. This involved closing the bilge and ballast manifold suction valves, the ballast pump’s discharge valve and the single isolating butterfly valve",
+        "reason_code": "procedural_isolation_action"
+      },
+      {
+        "id": "MPT-a9d5fb7a8026a5d7513d",
+        "verdict": "not_entailed",
+        "confidence": 0.95,
+        "supporting_quote": "No problems were reported with the vessel’s exhaust system or the bilge alarm in the engine room.",
+        "reason_code": "absence_of_inspection_action"
+      },
+      {
+        "id": "MPT-ad4146188465092d5f52",
+        "verdict": "entailed",
+        "confidence": 0.9,
+        "supporting_quote": "Close the sea suction after any priming of bilge pumps.",
+        "reason_code": "imperative_maintenance_instruction"
+      },
+      {
+        "id": "MPT-ae3bcdffe3ed4379e632",
+        "verdict": "not_entailed",
+        "confidence": 0.98,
+        "supporting_quote": "There were no written procedures on board Sea Breeze that covered the removal of a ballast pump",
+        "reason_code": "negation_of_procedure_existence"
+      }
+    ]
+  }
+}

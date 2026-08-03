@@ -1,0 +1,108 @@
+{
+  "page_key": "MP012:p0019",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-567d3450-fe09-99a7-b4a2-6c18467fb2f4",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1037,
+    "prompt_tokens": 2310,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3347
+  },
+  "latency_ms": 13619,
+  "attempt": 1,
+  "prompt_sha256": "8130a5c27199b4136d60896aeed2709852c063ee924b8a09736adca637b5f948",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "salvage pump",
+        "head_canonical_zh": "救助泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "use of the salvage pump",
+        "tail_canonical_zh": "使用救助泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the use of the salvage pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.45,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "floods",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "check the casualty vessel regularly for any warning signs of sinking",
+        "tail_canonical_zh": "定期检查遇险船舶是否有沉没迹象",
+        "tail_type": "InspectionAction",
+        "evidence_text": "check the casualty vessel regularly for any warning signs of sinking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Free surface effect",
+        "head_canonical_zh": "自由液面效应",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "reduce the vessel’s stability",
+        "tail_canonical_zh": "降低船舶稳性",
+        "tail_type": "Symptom",
+        "evidence_text": "Any incline of the vessel causes the liquid to move and acts to reduce the vessel’s stability",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Free surface effect",
+        "head_canonical_zh": "自由液面效应",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "capsizes",
+        "tail_canonical_zh": "倾覆",
+        "tail_type": "FaultMode",
+        "evidence_text": "It is possible for a free surface effect to reduce the vessel’s stability to the extent that it capsizes",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": [
+      "页面主要涉及拖带政策、冷水浸泡及自由液面效应等通用安全内容，与船舶机舱泵系直接相关的技术事实极少。仅抽取到与floods和salvage pump间接相关的条目以及自由液面效应作为进水相关机理的候选。",
+      "未找到针对target_fault_classes中cavitation、mechanical_seal_failure、bearing_or_lubrication_failure、pump_motor_misalignment、motor_electrical_drive_failure、dry_running_or_maintenance_induced_failure等类别的明确证据。",
+      "salvage pump的mitigated_by关系基于上下文推断其用于应对floods，但原文未在同一跨度内显式写出被缓解的具体故障模式，置信度较低。"
+    ]
+  }
+}

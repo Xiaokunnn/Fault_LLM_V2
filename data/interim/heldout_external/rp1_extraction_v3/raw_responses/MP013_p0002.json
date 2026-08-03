@@ -1,0 +1,60 @@
+{
+  "page_key": "MP013:p0002",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-915143c1-3154-90fd-8859-fb8e1d926b31",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 8025,
+  "attempt": 1,
+  "prompt_sha256": "64dccb9376dae5bd8a0d7a38baf5204081b621accafa915442095ad5169ffd1c",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water coming in through the hatches",
+        "head_canonical_zh": "舱盖进水",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "the boat is sinking",
+        "tail_canonical_zh": "船舶沉没",
+        "tail_type": "FaultMode",
+        "evidence_text": "it’s not good, there’s water coming in through the hatches; the boat is sinking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Going down fast",
+        "head_canonical_zh": "快速下沉",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "water coming in through the hatches",
+        "tail_canonical_zh": "舱盖进水",
+        "tail_type": "Cause",
+        "evidence_text": "there’s water coming in through the hatches; the boat is sinking and the owner needs to sort it out” He also said that he was off Easdale and was heading home. ... Going down fast off the point of Easdale.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": [
+      "Page content is primarily a distress communication transcript and narrative of sinking event; lacks specific technical details on pump system faults, inspection methods, or maintenance actions required by target_fault_classes.",
+      "Only general flooding/sinking symptoms extracted; no evidence found for cavitation, air_ingress, hydraulic_blockage, impeller_damage, mechanical_seal_failure, bearing_failure, misalignment, motor_electrical_failure, or dry_running.",
+      "Evidence for 'water coming in through the hatches' links to hull integrity rather than pump system specific failure mechanisms, but retained as it relates to bilge/flooding context."
+    ]
+  }
+}

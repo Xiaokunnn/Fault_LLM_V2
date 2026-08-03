@@ -1,0 +1,139 @@
+{
+  "page_key": "MP010:p0015",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3b6350d9-66bd-9877-98d4-7b39fb97b537",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1568,
+    "prompt_tokens": 2334,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3902
+  },
+  "latency_ms": 18187,
+  "attempt": 1,
+  "prompt_sha256": "db9b56b193e7692e646aafe5860b0f18f11bf3c24c5535c1704c98674181d0c3",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "rigged four portable, electrically-driven pumps... and a larger, diesel-driven pump",
+        "tail_canonical_zh": "安装便携式电动泵及柴油驱动泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The KML salvage crew on board Sea Breeze rigged four portable, electrically-driven pumps, each with a maximum pumping rate of 200 litres per minute (l/m) and a larger, diesel-driven pump capable of a maximum of 500l/m to take suction from the engine room forward emergency escape hatch.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water level in Sea Breeze’s engine room failed to drop",
+        "head_canonical_zh": "机舱水位未下降",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "a further salvage pump with a maximum capacity of 5400l/m was rigged",
+        "tail_canonical_zh": "安装大容量救助泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Despite the pumping, the water level in Sea Breeze’s engine room failed to drop until a further salvage pump with a maximum capacity of 5400l/m was rigged just after midnight.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "source of the water ingress",
+        "head_canonical_zh": "进水源",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "checked all the valves to ensure they were closed",
+        "tail_canonical_zh": "检查所有阀门确保关闭",
+        "tail_type": "InspectionAction",
+        "evidence_text": "They made their way to the ballast main at the forward end of the engine room and, working from starboard to port across the ballast main, they checked all the valves to ensure they were closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "extended spindle valve",
+        "head_canonical_zh": "加长阀杆阀",
+        "head_type": "Component",
+        "relation": "indicates",
+        "tail_surface": "water level in the engine room began to drop more rapidly",
+        "tail_canonical_zh": "机舱水位开始更快下降",
+        "tail_type": "Symptom",
+        "evidence_text": "At the port end of the ballast main the salvors located an extended spindle valve (Figure 5), subsequently identified as valve A104 port. The valve wheel was initially stiff to turn but, with a little effort, it freed up and was turned until it felt fully closed. The salvors immediately noted that the water level in the engine room began to drop more rapidly.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "divers used a canvas fothering patch to cover the port side sea suction inlet",
+        "tail_canonical_zh": "潜水员使用帆布堵漏垫覆盖左舷海水吸入口",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "While at anchor, divers used a canvas fothering patch to cover the port side sea suction inlet, and the remaining water in the engine room was pumped into the port side aft wing ballast tank to minimise pollution.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "structural integrity of Sea Breeze",
+        "head_canonical_zh": "船舶结构完整性",
+        "head_type": "Risk",
+        "relation": "inspected_by",
+        "tail_surface": "condition survey",
+        "tail_canonical_zh": "状况检验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "KML commissioned a surveyor from R Pearce & Co to carry out a condition survey of the vessel on 13 March and the SOSREP also arranged for an MCA Marine Casualty Officer to attend and survey the vessel on 19 March. Both these surveys raised concerns about the structural integrity of Sea Breeze.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "page_key": "MP011:p0010",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-f3c7fa50-8129-937c-8ea5-97764e1c7477",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1751,
+    "prompt_tokens": 2390,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4141
+  },
+  "latency_ms": 19579,
+  "attempt": 1,
+  "prompt_sha256": "842b6e0c2c1e74c1992200f76352fe880c83e86bd413d17e75a0b88a8e997a99",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "water welling up underneath the main engine",
+        "tail_canonical_zh": "主机下方涌水",
+        "tail_type": "Symptom",
+        "evidence_text": "observation of water welling up underneath the main engine",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge alarm",
+        "head_canonical_zh": "舱底水报警",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "flooding",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The bilge alarm sounded soon after the main engine had been started and ahead gear selected, suggesting that the ingress coincided with the engine start",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Main engine vibration",
+        "head_canonical_zh": "主机振动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "hull plating fracture",
+        "tail_canonical_zh": "船壳板破裂",
+        "tail_type": "FaultMode",
+        "evidence_text": "Main engine vibration was transmitted directly to the hull through the engine’s bedplate, and it is possible that this event triggered a hull plating fracture",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Hull thickness surveys",
+        "head_canonical_zh": "船体测厚检查",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "shell plating erosion",
+        "tail_canonical_zh": "船壳板腐蚀",
+        "tail_type": "FaultMode",
+        "evidence_text": "Hull thickness surveys provide an indication of shell plating erosion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sea water valves",
+        "head_canonical_zh": "海水阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "removed, cleaned and replaced",
+        "tail_canonical_zh": "拆卸、清洁和更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "all the engine room sea water valves had been removed, cleaned and replaced as part of a maintenance package just prior to the accident",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge pumps",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "sighting the discharges over the vessel’s side",
+        "tail_canonical_zh": "观察舷外排水",
+        "tail_type": "InspectionAction",
+        "evidence_text": "the skipper had checked that both bilge pumps were working by sighting the discharges over the vessel’s side",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "running dry",
+        "head_canonical_zh": "干转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "open the sea suction as well as the bilge suction when pumping bilges",
+        "tail_canonical_zh": "抽排舱底水时同时开启海水吸口和舱底吸口",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "The purpose of this was to protect the pump and system from running dry when pumping out relatively small volumes of water",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bilge pump",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "shutting the sea suction",
+        "tail_canonical_zh": "关闭海水吸口",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "once the bilge pump was running, shutting the sea suction would have ensured maximum emergency pumping capacity",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

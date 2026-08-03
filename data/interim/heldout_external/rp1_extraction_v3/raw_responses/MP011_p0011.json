@@ -1,0 +1,131 @@
+{
+  "page_key": "MP011:p0011",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-2d0f1e8c-c8e3-9aa3-9eac-b981087dc07e",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 15905,
+  "attempt": 1,
+  "prompt_sha256": "fe49c8a328224f81a57104d14debe4edcac7f3e4006e227722e917607ed37422",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "engine room flooding",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "Ocean Quest flooded and foundered",
+        "tail_canonical_zh": "船舶进水并沉没",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ocean Quest flooded and foundered because of engine room flooding that could not be brought under control.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "failure of shell plating or welds beneath the main engine",
+        "head_canonical_zh": "主机下方船壳板或焊缝失效",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "engine room flooding",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "It is almost certain that the cause of the flood was a failure of shell plating or welds beneath the main engine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leaving the sea suction valves partly open",
+        "head_canonical_zh": "海水吸入阀保持部分开启",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "effectiveness of the general service pumps to remove the floodwater would have been degraded",
+        "tail_canonical_zh": "通用泵排水有效性降低",
+        "tail_type": "Symptom",
+        "evidence_text": "The effectiveness of the general service pumps to remove the floodwater would have been degraded by leaving the sea suction valves partly open",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "backflooding",
+        "head_canonical_zh": "倒灌",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "closing all bilge valves when not in use",
+        "tail_canonical_zh": "不使用时关闭所有舱底阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "MGN 165(F) also recommends closing all bilge valves when not in use, primarily to prevent backflooding",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "general service pumps",
+        "head_canonical_zh": "通用泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "maintain all their own equipment in good working order",
+        "tail_canonical_zh": "保持自有设备处于良好工作状态",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Fishing vessel crews should therefore maintain all their own equipment in good working order for use in the event of a flood.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shell plating erosion",
+        "head_canonical_zh": "船壳板腐蚀",
+        "head_type": "FailureMechanism",
+        "relation": "diagnosed_by",
+        "tail_surface": "hull thickness surveys",
+        "tail_canonical_zh": "船体厚度测量",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ocean Quest had been subject to repairs where hull thickness surveys had previously detected shell plating erosion.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

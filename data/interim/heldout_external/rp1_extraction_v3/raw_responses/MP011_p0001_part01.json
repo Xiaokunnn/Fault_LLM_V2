@@ -1,0 +1,123 @@
+{
+  "page_key": "MP011:p0001",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-3a76ade5-1fa9-9f87-bc57-db9f145c4d57",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1224,
+    "prompt_tokens": 2975,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4199
+  },
+  "latency_ms": 14906,
+  "attempt": 1,
+  "prompt_sha256": "d64aeb67b7872f730d022bac9b4e6ff5740145d2ae45650a519c19536ad74770",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "flooding in the engine room",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "foundered",
+        "tail_canonical_zh": "沉没",
+        "tail_type": "FaultMode",
+        "evidence_text": "Ocean Quest was lost after flooding in the engine room.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shell plating or hull weld failure beneath the main engine",
+        "head_canonical_zh": "主机下方船壳板或焊缝失效",
+        "head_type": "FailureMechanism",
+        "relation": "causes",
+        "tail_surface": "flooding in the engine room",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The source of the flooding has not been determined, but was almost certainly the result of a shell plating or hull weld failure beneath the main engine.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sea water suctions had been left partly open after pumping started",
+        "head_canonical_zh": "泵启动后海水吸口未完全关闭",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "onboard pumping effort was not fully optimised",
+        "tail_canonical_zh": "船上排水努力未充分优化",
+        "tail_type": "FaultMode",
+        "evidence_text": "the onboard pumping effort was not fully optimised as the sea water suctions had been left partly open after pumping started",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "pumps to continue drawing in sea water while they were trying to drain the engine room bilge",
+        "head_canonical_zh": "泵在排机舱污水时持续吸入海水",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "sea water suctions had been left partly open after pumping started",
+        "tail_canonical_zh": "泵启动后海水吸口未完全关闭",
+        "tail_type": "Cause",
+        "evidence_text": "the sea water suctions had been left partly open after pumping started, which allowed the pumps to continue drawing in sea water while they were trying to drain the engine room bilge",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "none of the three additional portable pumps passed across by other fishing vessels could be made to work",
+        "head_canonical_zh": "三台额外便携式泵均无法工作",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "could be made to work",
+        "tail_canonical_zh": "无法运行",
+        "tail_type": "Symptom",
+        "evidence_text": "none of the three additional portable pumps passed across by other fishing vessels could be made to work",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

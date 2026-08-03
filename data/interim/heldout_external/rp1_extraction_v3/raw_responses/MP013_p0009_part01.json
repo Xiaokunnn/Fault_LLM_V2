@@ -1,0 +1,102 @@
+{
+  "page_key": "MP013:p0009",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cde81adc-3f30-9379-bde4-442f8e1802b0",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 901,
+    "prompt_tokens": 2498,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3399
+  },
+  "latency_ms": 11349,
+  "attempt": 1,
+  "prompt_sha256": "f1197ad2154403766cf7b0708c261a09e649a499a274acb3da3704bc8d7f87ef",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bilge pumping and alarm arrangements",
+        "head_canonical_zh": "舱底泵及报警装置",
+        "head_type": "Equipment",
+        "relation": "mitigated_by",
+        "tail_surface": "installation of a bilge alarm and pump",
+        "tail_canonical_zh": "安装舱底报警器和泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the risk of flooding in the aft store had been recognised by the vessel’s previous owner and had been mitigated by the installation of a bilge alarm and pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "defective pump and alarm",
+        "head_canonical_zh": "故障的泵和报警器",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "repaired or replaced",
+        "tail_canonical_zh": "修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the defective pump and alarm had not been repaired or replaced",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure",
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge pumping and alarm arrangements",
+        "head_canonical_zh": "舱底泵及报警装置",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "repaired or replaced",
+        "tail_canonical_zh": "修理或更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the defective pump and alarm had not been repaired or replaced",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hose",
+        "head_canonical_zh": "软管",
+        "head_type": "Component",
+        "relation": "indicates",
+        "tail_surface": "attempting to pump water from the engine space",
+        "tail_canonical_zh": "试图从机舱抽水",
+        "tail_type": "Symptom",
+        "evidence_text": "the hose found by the diver, protruding from the engine room hatch, possibly indicates that the skipper was attempting to pump water from the engine space",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

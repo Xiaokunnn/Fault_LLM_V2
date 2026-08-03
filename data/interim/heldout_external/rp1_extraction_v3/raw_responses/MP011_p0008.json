@@ -1,0 +1,111 @@
+{
+  "page_key": "MP011:p0008",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-2285fad1-5d3d-986a-9a3b-4d0859b15b37",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 14858,
+  "attempt": 1,
+  "prompt_sha256": "eb6cda258d1a242a71360de8f3d668d2d70891e150e89242c8260f81ab66a5cd",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "starboard pump",
+        "head_canonical_zh": "右舷通用泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "partially open the sea suction valve prior to starting the pump to prime the system",
+        "tail_canonical_zh": "启动泵前部分打开海水吸入阀以引水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The normal practice on board when pumping bilges was to partially open the sea suction valve prior to starting the pump to prime the system, then leave it open while the pump was running. The crew did this to protect the pump and system from running dry when pumping out relatively small volumes of water from the bilges.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "running dry",
+        "head_canonical_zh": "干运转",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "partially open the sea suction valve prior to starting the pump to prime the system, then leave it open while the pump was running",
+        "tail_canonical_zh": "启动泵前部分打开海水吸入阀引水并在运行时保持开启",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The normal practice on board when pumping bilges was to partially open the sea suction valve prior to starting the pump to prime the system, then leave it open while the pump was running. The crew did this to protect the pump and system from running dry when pumping out relatively small volumes of water from the bilges.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hull thickness determination survey",
+        "head_canonical_zh": "船体厚度测定检验",
+        "head_type": "InspectionMethod",
+        "relation": "inspected_by",
+        "tail_surface": "ultrasonic equipment",
+        "tail_canonical_zh": "超声波设备",
+        "tail_type": "Equipment",
+        "evidence_text": "Hull thickness surveys used ultrasonic equipment to identify any areas of hull erosion",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "hull plating wastage",
+        "head_canonical_zh": "船体板材损耗",
+        "head_type": "FaultMode",
+        "relation": "diagnosed_by",
+        "tail_surface": "hull thickness determination survey",
+        "tail_canonical_zh": "船体厚度测定检验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Ocean Quest’s 2017 survey revealed areas of hull plating wastage of over 50% in the fish room slush well and forward engine room bilge well.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "hull plating wastage",
+        "head_canonical_zh": "船体板材损耗",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "cut out and replaced",
+        "tail_canonical_zh": "切除并更换",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The affected areas of eroded hull were cut out and replaced.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "page_key": "MP013:p0011",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-42e44741-e370-9e5f-b1fd-1fa531e1960f",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 537,
+    "prompt_tokens": 1934,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2471
+  },
+  "latency_ms": 7764,
+  "attempt": 1,
+  "prompt_sha256": "40501e37c5cdccbcf3d5421e4ab77c5f378d5763e6441a30de1de6858f624806",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "bilge alarm and pumping arrangements",
+        "head_canonical_zh": "舱底报警及泵送装置",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "fitting and operation",
+        "tail_canonical_zh": "安装与操作检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The fitting and operation of bilge alarm and pumping arrangements.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bilge alarm and pumping arrangements",
+        "head_canonical_zh": "舱底报警及泵送装置",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "serviced",
+        "tail_canonical_zh": "定期保养",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The provision of serviced and ‘in date’ lifesaving and other safety equipment.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": [
+      "Page text primarily discusses hull integrity (hatch) and general safety management rather than specific pump system technical faults or mechanisms listed in target_fault_classes.",
+      "No explicit symptoms, causes, or specific maintenance actions for the bilge pump system itself were found in the contiguous text spans; only general recommendations regarding 'fitting and operation' and 'serviced' equipment were extracted as inspection/maintenance candidates.",
+      "The mention of 'bilge alarm and pumping arrangements were inadequate' is a conclusion on past state, not a diagnostic relation or specific fault mode from the target list supported by a mechanism/symptom span."
+    ]
+  }
+}

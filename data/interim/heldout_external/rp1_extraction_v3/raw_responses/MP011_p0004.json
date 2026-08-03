@@ -1,0 +1,188 @@
+{
+  "page_key": "MP011:p0004",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-c38a8550-f59c-95be-a2c0-e56fe52f3ab5",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 23274,
+  "attempt": 1,
+  "prompt_sha256": "d1f8489184e043ccc7078971dcf908410640331589ef744d12eef8e678658006",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "general service pumps",
+        "head_canonical_zh": "通用泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "electrical power",
+        "tail_canonical_zh": "电力供应",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "connected its generator to the vessel’s switchboard to supply electrical power to the general service pumps",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "petrol-engine driven portable salvage pump",
+        "head_canonical_zh": "汽油机驱动便携式救险泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "could not start it",
+        "tail_canonical_zh": "无法启动",
+        "tail_type": "Symptom",
+        "evidence_text": "Ocean Quest’s crew were not familiar with the pump’s controls and could not start it",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "electric submersible pump",
+        "head_canonical_zh": "电动潜水泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "could not be used",
+        "tail_canonical_zh": "无法使用",
+        "tail_type": "Symptom",
+        "evidence_text": "an electric submersible pump was passed across, but it could not be used as there was no compatible discharge hose to extract the floodwater",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "no compatible discharge hose",
+        "head_canonical_zh": "无兼容排放软管",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "could not be used",
+        "tail_canonical_zh": "无法使用",
+        "tail_type": "Symptom",
+        "evidence_text": "it could not be used as there was no compatible discharge hose to extract the floodwater",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "petrol-engine driven portable salvage pump",
+        "head_canonical_zh": "汽油机驱动便携式救险泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "inoperable",
+        "tail_canonical_zh": "无法操作",
+        "tail_type": "Symptom",
+        "evidence_text": "this was immersed in sea water during the transfer, rendering it inoperable",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "immersed in sea water during the transfer",
+        "head_canonical_zh": "转运过程中浸入海水",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "inoperable",
+        "tail_canonical_zh": "无法操作",
+        "tail_type": "Symptom",
+        "evidence_text": "this was immersed in sea water during the transfer, rendering it inoperable",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "port auxiliary engine",
+        "head_canonical_zh": "左舷辅机",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "stopped",
+        "tail_canonical_zh": "停机",
+        "tail_type": "Symptom",
+        "evidence_text": "When the rising floodwater covered the port auxiliary engine, it stopped",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "rising floodwater covered the port auxiliary engine",
+        "head_canonical_zh": "上涨洪水淹没左舷辅机",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "stopped",
+        "tail_canonical_zh": "停机",
+        "tail_type": "Symptom",
+        "evidence_text": "When the rising floodwater covered the port auxiliary engine, it stopped",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "salvage pump",
+        "head_canonical_zh": "救险泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "having little effect",
+        "tail_canonical_zh": "效果甚微",
+        "tail_type": "Symptom",
+        "evidence_text": "Although the helicopter’s salvage pump was working effectively, it was apparent to the skipper and helicopter winchman that it was having little effect",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

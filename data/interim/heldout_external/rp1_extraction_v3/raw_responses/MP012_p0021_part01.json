@@ -1,0 +1,269 @@
+{
+  "page_key": "MP012:p0021",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-ddf95ea1-1819-9ddf-aafa-4795c8b7b4cb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 2702,
+    "prompt_tokens": 6835,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9537
+  },
+  "latency_ms": 30522,
+  "attempt": 1,
+  "prompt_sha256": "d14f50c54951d7e4d9515f690acac2238914a8c2367839501aaa362ccc8fb91f",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "premature pipe failure",
+        "head_canonical_zh": "管路早期失效",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "catastrophic flooding",
+        "tail_canonical_zh": "灾难性进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The risk of catastrophic flooding was also highlighted in MGN 190 (F)5, which advised the possibility of premature pipe failure due to ‘in service’ vibration or similar cyclical loading in seawater systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "‘in service’ vibration or similar cyclical loading",
+        "head_canonical_zh": "运行振动或类似循环载荷",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "premature pipe failure",
+        "tail_canonical_zh": "管路早期失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "premature pipe failure due to ‘in service’ vibration or similar cyclical loading in seawater systems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.85,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "premature pipe failure",
+        "head_canonical_zh": "管路早期失效",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "appropriate positioning, and lining with rubber, of a sufficient number of pipe supports",
+        "tail_canonical_zh": "足够数量管支架的合理布置及橡胶衬垫",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "recommending the appropriate positioning, and lining with rubber, of a sufficient number of pipe supports",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check for water ingress",
+        "tail_canonical_zh": "检查进水情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check for water ingress",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r002:c00"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Check location and amount of water ingress",
+        "tail_canonical_zh": "检查进水位置和水量",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Check location and amount of water ingress",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water ingress",
+        "head_canonical_zh": "进水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "Take tank soundings",
+        "tail_canonical_zh": "测量液舱液位",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Take tank soundings, it might be a fore peak tank breach rather than a hold",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r002:c01"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bilge pumps",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "Monitor bilge pumps and alarms",
+        "tail_canonical_zh": "监测舱底泵和报警",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Monitor bilge pumps and alarms",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r002:c02"
+        ],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.93,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水淹没",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Prepare to fight flooding",
+        "tail_canonical_zh": "准备抗沉堵漏",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Prepare to fight flooding",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r004:c00"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水淹没",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Consider if bailer/ bucket will remove water",
+        "tail_canonical_zh": "评估是否可用舀水斗或水桶排水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Consider if bailer/ bucket will remove water",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水淹没",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Consider if pumps will cope",
+        "tail_canonical_zh": "评估泵能否应对进水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Consider if pumps will cope",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水淹没",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Consider if additional pumps will help",
+        "tail_canonical_zh": "评估额外泵是否有帮助",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Consider if additional pumps will help",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.82,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水淹没",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Request portable pumps",
+        "tail_canonical_zh": "请求便携式泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Request portable pumps",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP012:p0021:t00:r004:c02"
+        ],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

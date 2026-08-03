@@ -1,0 +1,116 @@
+{
+  "page_key": "MP011:p0006",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-59e8732c-18e9-96cf-83bd-ab76b23683d9",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 14185,
+  "attempt": 1,
+  "prompt_sha256": "06e6adb4734473bc3324e7db5177a1c8f0d5d9e9fbf969a03ebe6579ff626cae",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "general service pumps",
+        "head_canonical_zh": "通用泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "removed for cleaning",
+        "tail_canonical_zh": "拆卸清洗",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "All the sea water valves were removed for cleaning and no evidence of wastage of the pipework or hull fittings was found.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "pipework",
+        "head_canonical_zh": "管路",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "removed for cleaning",
+        "tail_canonical_zh": "拆卸清洗检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All the sea water valves were removed for cleaning and no evidence of wastage of the pipework or hull fittings was found.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "hull fittings",
+        "head_canonical_zh": "船体附件",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "removed for cleaning",
+        "tail_canonical_zh": "拆卸清洗检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "All the sea water valves were removed for cleaning and no evidence of wastage of the pipework or hull fittings was found.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      },
+      {
+        "head_surface": "bilge level float switches",
+        "head_canonical_zh": "舱底液位浮球开关",
+        "head_type": "Component",
+        "relation": "indicates",
+        "tail_surface": "alarm",
+        "tail_canonical_zh": "报警",
+        "tail_type": "Symptom",
+        "evidence_text": "In the engine room, there were two bilge level float switches that activated an alarm in the wheelhouse.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "strainer",
+        "head_canonical_zh": "滤器",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "suction line",
+        "tail_canonical_zh": "吸入管路",
+        "tail_type": "Component",
+        "evidence_text": "Each suction line was fitted with a strainer.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": [
+      "Page contains primarily descriptive configuration and maintenance history; limited explicit fault-symptom-cause triples available for target fault classes.",
+      "Triple 1 (general service pumps -> maintained_by -> removed for cleaning) has low confidence because the evidence text explicitly refers to sea water valves being removed, not the pumps directly; included only as a weak candidate due to system context."
+    ]
+  }
+}

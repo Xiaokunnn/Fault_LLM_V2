@@ -1,0 +1,140 @@
+{
+  "page_key": "MP010:p0012",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-6d58d075-1686-90d5-8233-0b87e0ec2f57",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1342,
+    "prompt_tokens": 2359,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3701
+  },
+  "latency_ms": 15785,
+  "attempt": 1,
+  "prompt_sha256": "c6aa7244354209e4681fb8b6bf880677cba64a543846a27ae58f9faf8e8a7b40",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "submersible pump",
+        "head_canonical_zh": "潜水泵",
+        "head_type": "Equipment",
+        "relation": "operates_under",
+        "tail_surface": "electrical power was being provided by the emergency generator, which did not supply the socket to which he had connected the pump",
+        "tail_canonical_zh": "应急发电机未向泵连接插座供电",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "electrical power was being provided by the emergency generator, which did not supply the socket to which he had connected the pump, so he was not able to operate the pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "engine room was flooding",
+        "head_canonical_zh": "机舱进水",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "vessel was in danger of sinking",
+        "tail_canonical_zh": "船舶有沉没危险",
+        "tail_type": "Symptom",
+        "evidence_text": "Sea Breeze’s engine room was flooding and that the vessel was in danger of sinking",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "salvage pumps",
+        "head_canonical_zh": "救助泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "rigging salvage pumps",
+        "tail_canonical_zh": "安装救助泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "began rigging salvage pumps they had brought with them",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "three salvage pumps",
+        "head_canonical_zh": "三台救助泵",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "pump from the engine room forward emergency escape hatch",
+        "tail_canonical_zh": "通过机舱前部应急逃生口抽水",
+        "tail_type": "InspectionAction",
+        "evidence_text": "three salvage pumps had been rigged on board Sea Breeze to pump from the engine room forward emergency escape hatch",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "three salvage pumps proved ineffective",
+        "head_canonical_zh": "三台救助泵无效",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "engine room water level continued to rise",
+        "tail_canonical_zh": "机舱水位持续上升",
+        "tail_type": "Symptom",
+        "evidence_text": "The three salvage pumps proved ineffective and the engine room water level continued to rise",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage",
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "engine room water level continued to rise",
+        "head_canonical_zh": "机舱水位持续上升",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "vessel settling by the stern",
+        "tail_canonical_zh": "船舶尾倾",
+        "tail_type": "Symptom",
+        "evidence_text": "engine room water level continued to rise, with the vessel settling by the stern",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "page_key": "MP010:p0037",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-21d3e70e-4588-9b73-ad8f-d2429c56cc03",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 9655,
+  "attempt": 1,
+  "prompt_sha256": "1d7af79386cbb778e4b2249079d9774c49dfde2de42647ddfdb820bb5d7203d1",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "single isolating butterfly valve between the port sea chest and the port ballast pump",
+        "head_canonical_zh": "左舷海水箱与左舷压载泵之间的隔离蝶阀",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "engine room on Sea Breeze flooded",
+        "tail_canonical_zh": "机舱进水",
+        "tail_type": "FaultMode",
+        "evidence_text": "The engine room on Sea Breeze flooded because the single isolating butterfly valve between the port sea chest and the port ballast pump that was undergoing maintenance, was not fully closed prior to work commencing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "worm and quadrant gearing in the actuator of valve A104 port",
+        "head_canonical_zh": "A104左舷阀执行机构中的蜗轮扇形齿轮",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "jam intermittently, giving the impression that the valve was closed when it was not",
+        "tail_canonical_zh": "间歇性卡滞导致阀门假关指示",
+        "tail_type": "Symptom",
+        "evidence_text": "The condition of the worm and quadrant gearing in the actuator of valve A104 port was such that it could jam intermittently, giving the impression that the valve was closed when it was not.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.88,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "port ballast pump",
+        "head_canonical_zh": "左舷压载泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "maintenance",
+        "tail_canonical_zh": "维护作业",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the port ballast pump that was undergoing maintenance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

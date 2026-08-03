@@ -1,0 +1,132 @@
+{
+  "page_key": "MP010:p0018",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-df91f30c-cd61-906b-91c8-46d8d9cabc16",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 15817,
+  "attempt": 1,
+  "prompt_sha256": "662fc67e202abc9259163c8067be0a04958cd4b9231a1e034ee8e04419ab0f2d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "mechanical seal",
+        "head_canonical_zh": "机械密封",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "replaced the mechanical seal",
+        "tail_canonical_zh": "更换机械密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the chief engineer, motorman and AB had replaced the mechanical seal on the starboard ballast pump",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "leakage",
+        "head_canonical_zh": "泄漏",
+        "head_type": "Symptom",
+        "relation": "mitigated_by",
+        "tail_surface": "replacement of the seal",
+        "tail_canonical_zh": "更换密封",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "the replacement of the seal on the starboard pump had successfully stopped the leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "shafts were known to be worn in way of their mechanical seals",
+        "head_canonical_zh": "轴在机械密封处磨损",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "leakage",
+        "tail_canonical_zh": "泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Both pump’s shafts were known to be worn in way of their mechanical seals but the replacement of the seal on the starboard pump had successfully stopped the leakage",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "mechanical_seal_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bleed nut",
+        "head_canonical_zh": "放气螺母",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "bleeding air out of the strainer following maintenance",
+        "tail_canonical_zh": "维护后从滤器放气",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "These nuts not only facilitated bleeding air out of the strainer following maintenance",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bleed nut",
+        "head_canonical_zh": "放气螺母",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "water pressure at the strainer to be released prior to maintenance",
+        "tail_canonical_zh": "维护前释放滤器水压",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "enabled water pressure at the strainer to be released prior to maintenance on the system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "flange between the ballast pump and the sea water inlet pipe from the sea chest had been separated",
+        "head_canonical_zh": "压载泵与海水吸入管法兰分离",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "water began to enter the engine room",
+        "tail_canonical_zh": "水开始进入机舱",
+        "tail_type": "Symptom",
+        "evidence_text": "Once the flange between the ballast pump and the sea water inlet pipe from the sea chest had been separated, water began to enter the engine room",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

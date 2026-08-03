@@ -1,0 +1,94 @@
+{
+  "page_key": "MP012:p0024",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-c1d71ade-e4f9-9338-ab1d-a4ad77ebac62",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 11151,
+  "attempt": 1,
+  "prompt_sha256": "02a078e5410263c7810b493c8769b9dd35cc8b62ef96bd48c1094ba6803981ce",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "flood",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "rate of floodwater ingress exceeded the capacity of the vessel’s pumps",
+        "tail_canonical_zh": "进水速率超过泵容量",
+        "tail_type": "Cause",
+        "evidence_text": "The flood could not be contained because the rate of floodwater ingress exceeded the capacity of the vessel’s pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "uncontrolled flood",
+        "head_canonical_zh": "失控进水",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "foundered",
+        "tail_canonical_zh": "沉没",
+        "tail_type": "Symptom",
+        "evidence_text": "the fishing vessel Piedras experienced an uncontrolled flood and subsequently foundered",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "water flooded the aft compartment",
+        "head_canonical_zh": "尾部舱室进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "pump out the floodwater",
+        "tail_canonical_zh": "排出积水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "water flooded the aft compartment. The crew attempted to pump out the floodwater but were unsuccessful",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.88,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "rapid and uncontrolled engine room flood",
+        "head_canonical_zh": "机舱快速失控进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "foundered",
+        "tail_canonical_zh": "沉没",
+        "tail_type": "Symptom",
+        "evidence_text": "Opportune foundered due to a rapid and uncontrolled engine room flood",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

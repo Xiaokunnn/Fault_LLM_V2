@@ -1,0 +1,73 @@
+{
+  "page_key": "MP013:p0007",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-a23323e7-4b58-9602-93ce-3bde2f207b3a",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 7972,
+  "attempt": 1,
+  "prompt_sha256": "b0cf99e0de13f70cd43105fed5fef617bb7b3f3e225a2b3d4cfb45ebc0a49da2",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "electric bilge pump",
+        "head_canonical_zh": "电动舱底泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "replace the bilge pump",
+        "tail_canonical_zh": "更换舱底泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The new pump was bought to replace the bilge pump in the engine room",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "electric bilge pump operated by a float switch",
+        "head_canonical_zh": "浮球开关控制的电动舱底泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "not working",
+        "tail_canonical_zh": "不工作",
+        "tail_type": "Symptom",
+        "evidence_text": "An electric bilge pump operated by a float switch, which was not working",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "air switch activated bilge level alarm",
+        "head_canonical_zh": "气动开关触发的舱底水位报警器",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "defective",
+        "tail_canonical_zh": "缺陷/故障",
+        "tail_type": "Symptom",
+        "evidence_text": "An air switch activated bilge level alarm, which also was defective",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

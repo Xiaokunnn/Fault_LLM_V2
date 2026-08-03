@@ -1,0 +1,331 @@
+{
+  "page_key": "MP011:p0009",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-9f7f6391-d349-9eb0-9dfa-b80ac16f5fd8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 3427,
+    "prompt_tokens": 2294,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 5721
+  },
+  "latency_ms": 40287,
+  "attempt": 1,
+  "prompt_sha256": "d2959bfc2fd6b8cd01a1c21e83ee0c99a8d71e9ea3a54cab0eb83212f5bd5eb4",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "high bilge alarms",
+        "head_canonical_zh": "高水位舱底报警",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "investigate immediately the cause",
+        "tail_canonical_zh": "立即调查原因",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Always investigate immediately the cause of high bilge alarms.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "hydraulic_blockage",
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge pumps and bilge system",
+        "head_canonical_zh": "舱底泵及舱底系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Regularly (at least weekly) test",
+        "tail_canonical_zh": "定期（至少每周）测试",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Regularly (at least weekly) test the bilge pumps and bilge system.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge alarms",
+        "head_canonical_zh": "舱底报警",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Test bilge alarms daily",
+        "tail_canonical_zh": "每日测试舱底报警",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Test bilge alarms daily.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "Keep sea water valves closed when not in use",
+        "tail_canonical_zh": "不使用时保持海水阀关闭",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "For reducing the risk of flooding, advice in MGN 165 (F) included, inter alia: ... Keep sea water valves closed when not in use.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "sea water side valves and bilge systems",
+        "head_canonical_zh": "海水侧阀门及舱底系统",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Ensure crew members are familiar with",
+        "tail_canonical_zh": "确保船员熟悉",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Ensure crew members are familiar with sea water side valves and bilge systems.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure",
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "sea inlet valves",
+        "head_canonical_zh": "海水进口阀",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "keep a plan at the engine room entrance, identifying the position",
+        "tail_canonical_zh": "在机舱入口保留标识位置的图纸",
+        "tail_type": "InspectionAction",
+        "evidence_text": "As a reminder, keep a plan at the engine room entrance, identifying the position of sea inlet valves.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "bilge pumps",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Close the sea suction after any priming",
+        "tail_canonical_zh": "引水后关闭海水吸入阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Close the sea suction after any priming of bilge pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "air_ingress_or_loss_of_prime"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge pump",
+        "head_canonical_zh": "舱底泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Stop the bilge pump when pumping bilges is finished",
+        "tail_canonical_zh": "排完舱底水后停止舱底泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Stop the bilge pump when pumping bilges is finished.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "bilge valves",
+        "head_canonical_zh": "舱底阀",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "Close all bilge valves when not in use",
+        "tail_canonical_zh": "不使用时关闭所有舱底阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Close all bilge valves when not in use.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "inspected_by",
+        "tail_surface": "Immediately try to find the cause of the flooding",
+        "tail_canonical_zh": "立即尝试查找进水原因",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Immediately try to find the cause of the flooding and shut the right sea valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "shut the right sea valve",
+        "tail_canonical_zh": "关闭正确的海水阀",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Immediately try to find the cause of the flooding and shut the right sea valve.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "close all sea valves until the flooding stops",
+        "tail_canonical_zh": "关闭所有海水阀直至进水停止",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "If in doubt, close all sea valves until the flooding stops.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "flooding",
+        "head_canonical_zh": "进水",
+        "head_type": "FaultMode",
+        "relation": "mitigated_by",
+        "tail_surface": "Start pumping the bilge as soon as possible",
+        "tail_canonical_zh": "尽快启动舱底排水",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Start pumping the bilge as soon as possible.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unidentified flooding",
+        "head_canonical_zh": "不明来源进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "foundered",
+        "tail_canonical_zh": "沉没",
+        "tail_type": "Risk",
+        "evidence_text": "the 16m potter Majestic foundered as a result of unidentified flooding in its engine room",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "breach of the sea water system",
+        "head_canonical_zh": "海水系统破损",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "loss",
+        "tail_canonical_zh": "船舶灭失",
+        "tail_type": "Risk",
+        "evidence_text": "The MAIB investigation report stated that the loss was probably caused by a breach of the sea water system",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "uncontrolled flooding",
+        "head_canonical_zh": "失控进水",
+        "head_type": "FaultMode",
+        "relation": "causes",
+        "tail_surface": "foundered",
+        "tail_canonical_zh": "沉没",
+        "tail_type": "Risk",
+        "evidence_text": "the 23m trawler Ocean Way foundered after uncontrolled flooding in the aft compartment",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

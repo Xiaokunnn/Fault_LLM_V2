@@ -1,0 +1,120 @@
+{
+  "page_key": "MP012:p0030",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-23d75cfc-cf4b-95cf-a7c4-5825c60f4612",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1138,
+    "prompt_tokens": 2217,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3355
+  },
+  "latency_ms": 14274,
+  "attempt": 1,
+  "prompt_sha256": "b68f8b9dc21f7839ae66446932b6d4eeab85e696e86cc4d941ab319070abffd0",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "copper alloy pipework in seawater systems",
+        "head_canonical_zh": "海水系统铜合金管路",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "failure of copper alloy pipework in seawater systems when subjected to vibration",
+        "tail_canonical_zh": "海水系统铜合金管路振动失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "The MCA’s MGN 190 (F) and MSIS 27 highlighted the risks of the failure of copper alloy pipework in seawater systems when subjected to vibration.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "failure of copper alloy pipework in seawater systems",
+        "tail_canonical_zh": "海水系统铜合金管路失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "failure of copper alloy pipework in seawater systems when subjected to vibration",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.98,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "SAN 29",
+        "head_canonical_zh": "SAN 29指南",
+        "head_type": "Standard",
+        "relation": "specified_by",
+        "tail_surface": "inspection of seawater piping systems",
+        "tail_canonical_zh": "海水管系检查",
+        "tail_type": "InspectionAction",
+        "evidence_text": "SAN 29 augmented this guidance to MCA surveyors on the inspection of seawater piping systems",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "pipe failure due to vibration",
+        "head_canonical_zh": "振动导致的管路失效",
+        "head_type": "FaultMode",
+        "relation": "prevented_by",
+        "tail_surface": "copper alloy pipework to be suitably supported",
+        "tail_canonical_zh": "铜合金管路适当支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "highlighted the same risk of pipe failure due to vibration and the need for copper alloy pipework to be suitably supported",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "lack of support to the deck wash pump suction pipe",
+        "head_canonical_zh": "甲板冲洗泵吸入管缺乏支撑",
+        "head_type": "Cause",
+        "relation": "increases_risk_of",
+        "tail_surface": "hazard",
+        "tail_canonical_zh": "危险隐患",
+        "tail_type": "Risk",
+        "evidence_text": "the lack of support to the deck wash pump suction pipe might not have been identified as a hazard",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      }
+    ],
+    "warnings": []
+  }
+}

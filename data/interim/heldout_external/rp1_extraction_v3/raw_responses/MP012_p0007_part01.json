@@ -1,0 +1,84 @@
+{
+  "page_key": "MP012:p0007",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-13dfa773-fb79-9a8c-abe6-28de5ea1fcad",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 754,
+    "prompt_tokens": 2189,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2943
+  },
+  "latency_ms": 9472,
+  "attempt": 1,
+  "prompt_sha256": "c2f754f0b393e4f44ad89c5460079fc8b0c5ab9c5cc7b4fcab2350f6fa7b33d8",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "excessive vibration",
+        "head_canonical_zh": "过度振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "vibration-induced fracture of the seawater suction pipe for the deck wash pump",
+        "tail_canonical_zh": "甲板冲洗泵海水吸入管振动断裂",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "The investigation established that the most likely source for the flood was a vibration-induced fracture of the seawater suction pipe for the deck wash pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration-induced fracture of the seawater suction pipe for the deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵海水吸入管振动断裂",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "flooding",
+        "tail_canonical_zh": "进水",
+        "tail_type": "Symptom",
+        "evidence_text": "The investigation established that the most likely source for the flood was a vibration-induced fracture of the seawater suction pipe for the deck wash pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "operational bilge pumps",
+        "head_canonical_zh": "运行中的舱底泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Additional pumps either failed or could not be used",
+        "tail_canonical_zh": "附加泵故障或无法使用",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The rate of flooding overwhelmed the operational bilge pumps. Additional pumps either failed or could not be used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "dry_running_or_maintenance_induced_failure"
+        ],
+        "model_confidence": 0.4,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": [
+      "Triple 3 relation 'maintained_by' is semantically weak as tail is a failure state rather than a maintenance action; extracted strictly based on textual proximity and limited maintenance evidence role availability in synopsis."
+    ]
+  }
+}

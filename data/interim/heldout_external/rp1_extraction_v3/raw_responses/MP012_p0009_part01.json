@@ -1,0 +1,137 @@
+{
+  "page_key": "MP012:p0009",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-cc2f906d-211e-9109-9436-25bcbff4c7e6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1371,
+    "prompt_tokens": 2461,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3832
+  },
+  "latency_ms": 15846,
+  "attempt": 1,
+  "prompt_sha256": "3a76944fd1c7e722cb027910f2a08f5463ee1fb81a8d350d8efabcc059eebadf",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "propeller shaft stern seal",
+        "head_canonical_zh": "螺旋桨轴艉密封",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "water level with the top of the bilges",
+        "tail_canonical_zh": "舱底水位达到舱顶",
+        "tail_type": "Symptom",
+        "evidence_text": "The skipper believed the source of the water to be the propeller shaft stern seal.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.65,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "low-level and mid-level bilge alarms for the engine room were activated",
+        "head_canonical_zh": "机舱低位和中位舱底报警激活",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "water level with the top of the bilges",
+        "tail_canonical_zh": "舱底水位达到舱顶",
+        "tail_type": "Symptom",
+        "evidence_text": "the low-level and mid-level bilge alarms for the engine room were activated and that the bilge pump was running",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.7,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "bilge pump was running",
+        "head_canonical_zh": "舱底泵运行",
+        "head_type": "Equipment",
+        "relation": "inspected_by",
+        "tail_surface": "checked that the automatic bilge pumps were running and that the engine-driven bilge pump was also switched on",
+        "tail_canonical_zh": "检查自动舱底泵运行及发动机驱动舱底泵已开启",
+        "tail_type": "InspectionAction",
+        "evidence_text": "The skipper returned to the wheelhouse and checked that the automatic bilge pumps were running and that the engine-driven bilge pump was also switched on.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "water being discharged from the hose connected to the automatic bilge pumps",
+        "head_canonical_zh": "自动舱底泵连接软管排水",
+        "head_type": "Symptom",
+        "relation": "inspected_by",
+        "tail_surface": "They could see water being discharged from the hose connected to the automatic bilge pumps",
+        "tail_canonical_zh": "观察自动舱底泵连接软管排水情况",
+        "tail_type": "InspectionAction",
+        "evidence_text": "They could see water being discharged from the hose connected to the automatic bilge pumps.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "operated the switch on the control panel in the wheelhouse to start the pump",
+        "tail_canonical_zh": "操作驾驶台控制面板开关启动泵",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The skipper operated the switch on the control panel in the wheelhouse to start the pump.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.6,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵",
+        "head_type": "Equipment",
+        "relation": "manifests_as",
+        "tail_surface": "heard nothing",
+        "tail_canonical_zh": "听不到声音",
+        "tail_type": "Symptom",
+        "evidence_text": "The skipper listened for the pump to start but heard nothing.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "motor_electrical_drive_failure"
+        ],
+        "model_confidence": 0.75,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.8
+      }
+    ],
+    "warnings": []
+  }
+}

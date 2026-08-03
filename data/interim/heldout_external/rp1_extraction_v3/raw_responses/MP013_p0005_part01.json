@@ -1,0 +1,63 @@
+{
+  "page_key": "MP013:p0005",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-0e3bc2de-7784-9e19-9052-ed76f845941b",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 459,
+    "prompt_tokens": 2210,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2669
+  },
+  "latency_ms": 6363,
+  "attempt": 1,
+  "prompt_sha256": "22305d5dc465977036dc633d93f28cda660aa7847fedc8c86ed81d8f811d75aa",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "drain pipes",
+        "head_canonical_zh": "排水管",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "water in the channels to drain into the store below",
+        "tail_canonical_zh": "通道积水排入下方储藏室",
+        "tail_type": "FaultMode",
+        "evidence_text": "The drain pipes were reported to easily become blocked with debris, causing water in the channels to drain into the store below.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "blocked with debris",
+        "head_canonical_zh": "杂物堵塞",
+        "head_type": "FailureMechanism",
+        "relation": "manifests_as",
+        "tail_surface": "water in the channels to drain into the store below",
+        "tail_canonical_zh": "通道积水排入下方储藏室",
+        "tail_type": "Symptom",
+        "evidence_text": "The drain pipes were reported to easily become blocked with debris, causing water in the channels to drain into the store below.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "hydraulic_blockage"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

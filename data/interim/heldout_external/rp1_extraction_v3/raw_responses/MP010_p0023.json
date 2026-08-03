@@ -1,0 +1,56 @@
+{
+  "page_key": "MP010:p0023",
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chunked:chatcmpl-ca808f1c-499d-918f-aa81-4295ad867eaf",
+  "finish_reason": "merged_chunks",
+  "usage": {
+    "request_parts": 1
+  },
+  "latency_ms": 5364,
+  "attempt": 1,
+  "prompt_sha256": "f1f162314eb2809ab6dc9010290934f22022c0b1dce58142889adbff4b51d0eb",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "ballast pumps",
+        "head_canonical_zh": "压载泵",
+        "head_type": "Equipment",
+        "relation": "maintained_by",
+        "tail_surface": "Replacement of some of their parts and repair of shafts (excessive corrosion) – 2 pieces",
+        "tail_canonical_zh": "更换部分部件及修复轴（严重腐蚀）",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Repair of ballast pumps. Replacement of some of their parts and repair of shafts (excessive corrosion) – 2 pieces.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "shafts",
+        "head_canonical_zh": "泵轴",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "excessive corrosion",
+        "tail_canonical_zh": "严重腐蚀",
+        "tail_type": "Symptom",
+        "evidence_text": "repair of shafts (excessive corrosion)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "impeller_or_wear_part_damage"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  }
+}

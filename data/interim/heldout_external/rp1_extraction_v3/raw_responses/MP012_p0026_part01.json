@@ -1,0 +1,137 @@
+{
+  "page_key": "MP012:p0026",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-8b078aae-cf15-9f5d-acc2-bd1f88c3ed35",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 1439,
+    "prompt_tokens": 2230,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3669
+  },
+  "latency_ms": 16524,
+  "attempt": 1,
+  "prompt_sha256": "a253c01b4e900d96ef211356f2895151a7745c8acdf65c486eb1dd7587e5280d",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "copper alloy pipe leading from the hull fitting to the deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵铜合金管",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "fatigue",
+        "tail_canonical_zh": "疲劳",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "The evidence indicated that the copper alloy pipe leading from the hull fitting to the deck wash pump was neither secured nor fitted with a flexible connection as a means to allow for relative movement between the pump, which was mounted on the flexibly mounted engine, and the rigidly mounted hull fitting. This made the pipe susceptible to fatigue",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "causes",
+        "tail_surface": "failure",
+        "tail_canonical_zh": "失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "Any cyclic stresses in the pipework caused by the movement of the pump were exacerbated by the vibration experienced and likely resulted in its failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "movement of the pump",
+        "head_canonical_zh": "泵体运动",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "cyclic stresses in the pipework",
+        "tail_canonical_zh": "管路循环应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "Any cyclic stresses in the pipework caused by the movement of the pump were exacerbated by the vibration experienced and likely resulted in its failure.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "copper alloy pipe leading from the hull fitting to the deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵铜合金管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "fitted with a flexible connection",
+        "tail_canonical_zh": "安装柔性连接",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The evidence indicated that the copper alloy pipe leading from the hull fitting to the deck wash pump was neither secured nor fitted with a flexible connection as a means to allow for relative movement between the pump, which was mounted on the flexibly mounted engine, and the rigidly mounted hull fitting.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "copper alloy pipe leading from the hull fitting to the deck wash pump",
+        "head_canonical_zh": "甲板冲洗泵铜合金管",
+        "head_type": "Component",
+        "relation": "maintained_by",
+        "tail_surface": "secured",
+        "tail_canonical_zh": "固定支撑",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "The evidence indicated that the copper alloy pipe leading from the hull fitting to the deck wash pump was neither secured nor fitted with a flexible connection as a means to allow for relative movement between the pump, which was mounted on the flexibly mounted engine, and the rigidly mounted hull fitting.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration",
+        "head_canonical_zh": "振动",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "fouling of the propeller",
+        "tail_canonical_zh": "螺旋桨缠绕",
+        "tail_type": "Cause",
+        "evidence_text": "Vibrations caused by fouling of the propeller, either by entrapment of the fishing gear or floating debris, were reportedly not uncommon.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.8,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}

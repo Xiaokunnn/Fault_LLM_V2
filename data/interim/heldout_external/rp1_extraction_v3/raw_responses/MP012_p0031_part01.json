@@ -1,0 +1,101 @@
+{
+  "page_key": "MP012:p0031",
+  "request_part": 1,
+  "request_part_count": 1,
+  "model_requested": "qwen3.7-max",
+  "model_returned": "qwen3.7-max",
+  "request_id": "chatcmpl-750b8a84-20d5-9a40-a9c2-88a32cffcf71",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 881,
+    "prompt_tokens": 2234,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3115
+  },
+  "latency_ms": 10606,
+  "attempt": 1,
+  "prompt_sha256": "639f40a16abd78067892be049249e631dd32391bd6041fcb99c3f5fd302a1015",
+  "response_json": {
+    "triples": [
+      {
+        "head_surface": "engine-driven deck wash pump suction pipe",
+        "head_canonical_zh": "发动机驱动甲板冲洗泵吸入管",
+        "head_type": "Component",
+        "relation": "manifests_as",
+        "tail_surface": "fatigue failure",
+        "tail_canonical_zh": "疲劳失效",
+        "tail_type": "FaultMode",
+        "evidence_text": "The most likely source of the flood was a fatigue failure of the engine-driven deck wash pump suction pipe.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "unsupported pipework",
+        "head_canonical_zh": "无支撑管路",
+        "head_type": "Cause",
+        "relation": "causes",
+        "tail_surface": "vibration-induced stress",
+        "tail_canonical_zh": "振动诱导应力",
+        "tail_type": "FailureMechanism",
+        "evidence_text": "The unsupported pipework was vulnerable to vibration-induced stress that increased the risk of failure and flooding of the vessel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.92,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "vibration-induced stress",
+        "head_canonical_zh": "振动诱导应力",
+        "head_type": "FailureMechanism",
+        "relation": "increases_risk_of",
+        "tail_surface": "failure and flooding of the vessel",
+        "tail_canonical_zh": "船舶失效与进水",
+        "tail_type": "Risk",
+        "evidence_text": "vibration-induced stress that increased the risk of failure and flooding of the vessel",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.85
+      },
+      {
+        "head_surface": "lack of support to the deck wash pump suction pipe",
+        "head_canonical_zh": "甲板冲洗泵吸入管缺乏支撑",
+        "head_type": "Cause",
+        "relation": "inspected_by",
+        "tail_surface": "inspections or surveys",
+        "tail_canonical_zh": "检查或检验",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "the lack of support to the deck wash pump suction pipe might not have been identified as a hazard during inspections or surveys",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "pipe_or_valve_integrity_failure"
+        ],
+        "model_confidence": 0.85,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  }
+}
