@@ -58,8 +58,10 @@ def _plot(rows: list[dict], output: Path) -> None:
         ("family_cap=", "Source-family cap"),
         ("source_bonus=", "Source-family bonus"),
         ("redundancy_penalty=", "Redundancy penalty"),
+        ("graph_hops=", "Graph expansion hops"),
+        ("graph_weight=", "Graph score weight"),
     )
-    figure, axes = plt.subplots(2, 2, figsize=(10, 7), constrained_layout=True)
+    figure, axes = plt.subplots(2, 3, figsize=(14, 7), constrained_layout=True)
     for axis, (prefix, title) in zip(axes.flat, groups):
         selected = [row for row in rows if row["setting_id"].startswith(prefix)]
         labels = [row["setting_id"].split("=", 1)[1] for row in selected]
@@ -79,7 +81,10 @@ def main() -> int:
     parser.add_argument("--config", default="configs/rp2_graphrag_v2_development.json")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--skip-generation", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--force-generation", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--require-cuda", action="store_true")
     parser.add_argument("--methods", nargs="*", help=argparse.SUPPRESS)
+    parser.add_argument("--include-ablations", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
     config = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
     benchmark = ROOT / config["benchmark_dir"]
@@ -96,6 +101,10 @@ def main() -> int:
             ROOT / embedding["model_path"],
             batch_size=int(embedding["batch_size"]),
             max_length=int(embedding["max_length"]),
+            device=embedding.get("device"),
+            require_cuda=bool(
+                args.require_cuda or config.get("runtime", {}).get("require_cuda")
+            ),
         )
     )
     dense = DenseEvidenceIndex.load(ROOT / embedding["index_dir"])
@@ -108,6 +117,8 @@ def main() -> int:
         "family_cap": int(retrieval["max_per_source_family"]),
         "source_bonus": float(retrieval["source_family_bonus"]),
         "redundancy_penalty": float(retrieval["redundancy_penalty"]),
+        "graph_hops": int(retrieval.get("ours_graph_hops", 1)),
+        "graph_weight": float(retrieval.get("graph_score_weight", 0.12)),
     }
     settings = []
     for value in (2, 4, 6, 8):
@@ -118,6 +129,10 @@ def main() -> int:
         settings.append((f"source_bonus={value}", {**base, "source_bonus": value}))
     for value in (0.0, 0.16, 0.32, 0.48):
         settings.append((f"redundancy_penalty={value}", {**base, "redundancy_penalty": value}))
+    for value in (0, 1, 2, 3):
+        settings.append((f"graph_hops={value}", {**base, "graph_hops": value}))
+    for value in (0.0, 0.06, 0.12, 0.24):
+        settings.append((f"graph_weight={value}", {**base, "graph_weight": value}))
     rows = []
     for position, (setting_id, values) in enumerate(settings, start=1):
         budget = RetrievalBudget(
@@ -139,6 +154,9 @@ def main() -> int:
                 dense_top_n=int(retrieval["dense_top_n"]),
                 anchor_evidence_count=int(retrieval["anchor_evidence_count"]),
                 fixed_hops=int(retrieval["fixed_hops"]),
+                ours_graph_hops=values["graph_hops"],
+                ours_graph_decay=float(retrieval.get("ours_graph_decay", 0.70)),
+                graph_score_weight=values["graph_weight"],
             )
             for query in queries
         ]
@@ -151,7 +169,10 @@ def main() -> int:
             f"latency_p95={metrics['latency_ms_p95']:.3f}ms",
             flush=True,
         )
-    output = ROOT / "results/experiments/research_point_2/graphrag_v2_sensitivity"
+    output = ROOT / config.get(
+        "sensitivity_output_dir",
+        "results/experiments/research_point_2/graphrag_v2_sensitivity",
+    )
     output.mkdir(parents=True, exist_ok=True)
     (output / "sensitivity_metrics.json").write_text(
         json.dumps(
@@ -162,6 +183,8 @@ def main() -> int:
                 "query_count": len(queries),
                 "full_graph_candidate_count": len(candidates),
                 "latency_scope": "retrieval_after_offline_query_embedding_cache",
+                "embedding_runtime": getattr(encoder.base, "runtime_manifest", {}),
+                "embedding_device": getattr(encoder.base, "device", None),
                 "rows": rows,
             },
             ensure_ascii=False,

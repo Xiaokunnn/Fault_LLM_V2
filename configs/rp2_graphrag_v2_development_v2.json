@@ -1,0 +1,64 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v2",
+  "version": "0.2.0-development",
+  "status": "development_tuning_required_not_external_frozen",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {
+    "require_cuda": true
+  },
+  "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "output_dir": "results/experiments/research_point_2/graphrag_v2_development_v2",
+  "sensitivity_output_dir": "results/experiments/research_point_2/graphrag_v2_sensitivity_v2",
+  "embedding": {
+    "model_path": "data/model/BAAI-bge-m3",
+    "backend": "sentence_transformers",
+    "device": "cuda",
+    "normalize_embeddings": true,
+    "batch_size": 16,
+    "max_length": 8192,
+    "index_dir": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated"
+  },
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "temperature": 0.0,
+    "do_sample": false,
+    "max_new_tokens": 768,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_graphrag_v2_v2"
+  },
+  "retrieval": {
+    "dense_top_n": 64,
+    "anchor_evidence_count": 8,
+    "max_scored_candidates": 64,
+    "max_selected_evidence": 4,
+    "max_per_source_family": 3,
+    "source_family_bonus": 0.12,
+    "redundancy_penalty": 0.0,
+    "fixed_hops": 2,
+    "ours_graph_hops": 1,
+    "ours_graph_decay": 0.70,
+    "graph_score_weight": 0.12
+  },
+  "methods": [
+    "closed_book",
+    "dense_topk",
+    "dense_fixed_hop",
+    "dense_adaptive",
+    "dense_metapath",
+    "dense_ours"
+  ],
+  "ablation_methods": [
+    "dense_ours_no_graph",
+    "dense_ours_no_source_family"
+  ],
+  "anti_leakage": {
+    "online_forbidden_fields": ["fault_class_ids", "relevant_evidence_ids"],
+    "heldout_documents_forbidden_during_development": ["MP009", "MP010", "MP011", "MP012", "MP013"],
+    "full_graph_retrieval_required": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}

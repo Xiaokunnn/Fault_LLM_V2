@@ -5,6 +5,7 @@ from __future__ import annotations
 import math
 import statistics
 from collections import defaultdict
+from itertools import combinations
 from typing import Iterable
 
 from .dataset import EvidenceCandidate, SilverQuery
@@ -42,6 +43,7 @@ def evaluate_results(
         ndcgs: list[float] = []
         family_coverages: list[int] = []
         redundancies: list[float] = []
+        endpoint_overlaps: list[float] = []
         latencies: list[float] = []
         scored_counts: list[int] = []
         selected_counts: list[int] = []
@@ -85,6 +87,22 @@ def evaluate_results(
                 if evidence_id in candidate_by_id
             ]
             redundancies.append(1.0 - len(set(claims)) / len(claims) if claims else 0.0)
+            selected_candidates = [
+                candidate_by_id[evidence_id]
+                for evidence_id in ranked_ids
+                if evidence_id in candidate_by_id
+            ]
+            pair_overlaps = []
+            for left, right in combinations(selected_candidates, 2):
+                left_endpoints = {left.head_entity_id, left.tail_entity_id} - {""}
+                right_endpoints = {right.head_entity_id, right.tail_entity_id} - {""}
+                pair_overlaps.append(
+                    len(left_endpoints & right_endpoints)
+                    / max(1, len(left_endpoints | right_endpoints))
+                )
+            endpoint_overlaps.append(
+                statistics.fmean(pair_overlaps) if pair_overlaps else 0.0
+            )
         methods[method] = {
             "evaluated_answerable_queries": len(recalls),
             "latency_samples": len(latencies),
@@ -93,6 +111,7 @@ def evaluate_results(
             "ndcg_at_budget_macro": statistics.fmean(ndcgs) if ndcgs else 0.0,
             "mean_source_family_coverage": statistics.fmean(family_coverages) if family_coverages else 0.0,
             "mean_exact_claim_redundancy": statistics.fmean(redundancies) if redundancies else 0.0,
+            "mean_pairwise_endpoint_overlap": statistics.fmean(endpoint_overlaps) if endpoint_overlaps else 0.0,
             "latency_ms_p50": _percentile(latencies, 0.50),
             "latency_ms_p95": _percentile(latencies, 0.95),
             "mean_scored_candidates": statistics.fmean(scored_counts) if scored_counts else 0.0,

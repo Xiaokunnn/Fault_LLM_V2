@@ -1,6 +1,6 @@
 # 研究点一与研究点二下一阶段实验执行说明
 
-更新日期：2026-08-01
+更新日期：2026-08-03
 
 ## 1. 当前边界
 
@@ -78,10 +78,24 @@ python -m pip install -r requirements-server.txt
 bash scripts/run_rp2_graphrag_v2_server.sh
 ```
 
+该入口现在先执行 CUDA 强制检查，再依次构建开发基准、复用或建立 BGE-M3 索引、运行检索敏感性实验以及运行 Qwen 生成实验。正式入口禁止自动退回 CPU。
+
 先做两个查询的真实模型联调：
 
 ```bash
 bash scripts/run_rp2_graphrag_v2_server.sh --limit 2
+```
+
+建议联调时强制进行真实生成，避免旧缓存掩盖提示词或指标修改：
+
+```bash
+bash scripts/run_rp2_graphrag_v2_server.sh --limit 2 --methods dense_ours --force-generation
+```
+
+联调通过后执行完整主对照和两个关键模块消融：
+
+```bash
+bash scripts/run_rp2_graphrag_v2_server.sh --include-ablations --force-generation
 ```
 
 只测试检索、暂不加载 Qwen：
@@ -95,13 +109,15 @@ bash scripts/run_rp2_graphrag_v2_server.sh --skip-generation
 ### 3.4 输出与预计时间
 
 - 索引：`data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated/`
-- 生成缓存：`data/interim/rp2_model_cache/qwen2_5_7b_graphrag_v2/`
-- 指标：`results/experiments/research_point_2/graphrag_v2_development/metrics.json`
-- 方法对照图：`results/experiments/research_point_2/graphrag_v2_development/method_comparison.png`
-- 敏感性数据与图：`results/experiments/research_point_2/graphrag_v2_sensitivity/`
+- 生成缓存：`data/interim/rp2_model_cache/qwen2_5_7b_graphrag_v2_v2/`
+- 指标：`results/experiments/research_point_2/graphrag_v2_development_v2/metrics.json`
+- 方法对照图：`results/experiments/research_point_2/graphrag_v2_development_v2/method_comparison.png`
+- 敏感性数据与图：`results/experiments/research_point_2/graphrag_v2_sensitivity_v2/`
 - 逐查询检索与回答记录位于同一结果目录。
 
-当前 208 条中文发布证据规模下，BGE 建索引通常是分钟级；6 种方法×40 个查询共 240 次生成，在 48GB 显存的单卡服务器上预估约 20–60 分钟。真实时间取决于生成长度和服务器负载，终端会打印进度和预估剩余时间。
+当前 208 条中文发布证据规模下，BGE 建索引通常是分钟级；主对照为6种方法×40个查询，共240次生成。加入两个消融后为320次生成。真实时间取决于生成长度和服务器负载，终端会打印进度和预估剩余时间。
+
+v2 的开发配置位于 `configs/rp2_graphrag_v2_development_v2.json`。旧 v1 配置和结果保留用于审计，不覆盖、不删除。冗余惩罚在既有开发敏感性中以0取得更好的召回与nDCG，因此 v2 主配置将其设为0，并将“端点重叠率”保留为观测指标，而不把无效模块包装成贡献。
 
 ## 4. 冻结与外部评价顺序
 

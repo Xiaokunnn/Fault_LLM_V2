@@ -19,7 +19,12 @@ sys.path.insert(0, str(ROOT / "src"))
 from research_point_2.dataset import EvidenceCandidate, SilverQuery, _read_jsonl  # noqa: E402
 from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.evaluation import evaluate_results  # noqa: E402
-from research_point_2.generation import SYSTEM_PROMPT, build_generation_prompt, validate_generated_answer  # noqa: E402
+from research_point_2.generation import (  # noqa: E402
+    SYSTEM_PROMPT,
+    build_generation_prompt,
+    summarize_generation_rows,
+    validate_generated_answer,
+)
 from research_point_2.graph_rag_v2 import retrieve_dense_graph  # noqa: E402
 from research_point_2.local_models import BgeM3Encoder, QwenLocalGenerator, model_file_manifest  # noqa: E402
 from research_point_2.retrieval import RetrievalBudget, RetrievalIndex, RetrievalResult  # noqa: E402
@@ -52,19 +57,19 @@ def _plot_metrics(metrics: dict, output: Path) -> None:
 
     methods = list(metrics["methods"])
     recall = [metrics["methods"][method]["recall_at_budget_macro"] for method in methods]
-    citation = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("citation_validity_rate", 0.0) for method in methods]
-    latency = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("latency_ms_mean", 0.0) for method in methods]
+    citation = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("citation_id_validity_rate") or 0.0 for method in methods]
+    latency = [metrics.get("generation", {}).get("by_method", {}).get(method, {}).get("end_to_end_model_latency_ms_mean") or 0.0 for method in methods]
     x = np.arange(len(methods))
     figure, axis = plt.subplots(figsize=(11, 5), constrained_layout=True)
     axis.bar(x - 0.18, recall, 0.36, label="Retrieval recall")
-    axis.bar(x + 0.18, citation, 0.36, label="Citation validity")
+    axis.bar(x + 0.18, citation, 0.36, label="Citation-ID validity")
     axis.set_ylim(0, 1.05)
     axis.set_xticks(x, methods, rotation=20, ha="right")
     axis.set_ylabel("Quality metric")
     axis.grid(axis="y", alpha=0.25)
     second = axis.twinx()
     second.plot(x, latency, color="#c44e52", marker="o", label="Generation latency")
-    second.set_ylabel("Generation latency (ms)")
+    second.set_ylabel("Model end-to-end latency (ms)")
     handles, labels = axis.get_legend_handles_labels()
     handles2, labels2 = second.get_legend_handles_labels()
     axis.legend(handles + handles2, labels + labels2, loc="upper left")
@@ -79,6 +84,9 @@ def main() -> int:
     parser.add_argument("--config", default="configs/rp2_graphrag_v2_development.json")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--skip-generation", action="store_true")
+    parser.add_argument("--force-generation", action="store_true")
+    parser.add_argument("--require-cuda", action="store_true")
+    parser.add_argument("--include-ablations", action="store_true")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--methods", nargs="*")
     args = parser.parse_args()
@@ -88,7 +96,11 @@ def main() -> int:
     embed_path = ROOT / config["embedding"]["model_path"]
     generator_path = ROOT / config["generator"]["model_path"]
     index_dir = ROOT / config["embedding"]["index_dir"]
-    methods = args.methods or config["methods"]
+    methods = list(args.methods or config["methods"])
+    if args.include_ablations:
+        methods.extend(
+            method for method in config.get("ablation_methods", []) if method not in methods
+        )
     candidates = [_candidate(row) for row in _read_jsonl(benchmark / "evidence_candidates.jsonl")]
     queries = [_query(row) for row in _read_jsonl(benchmark / "queries.jsonl")]
     if args.limit:
@@ -111,6 +123,7 @@ def main() -> int:
         raise FileNotFoundError(f"Qwen model missing: {generator_path}")
 
     retrieval_cfg = config["retrieval"]
+    require_cuda = bool(args.require_cuda or config.get("runtime", {}).get("require_cuda"))
     budget = RetrievalBudget(
         max_scored_candidates=int(retrieval_cfg["max_scored_candidates"]),
         max_selected_evidence=int(retrieval_cfg["max_selected_evidence"]),
@@ -122,6 +135,8 @@ def main() -> int:
         embed_path,
         batch_size=int(config["embedding"]["batch_size"]),
         max_length=int(config["embedding"]["max_length"]),
+        device=config["embedding"].get("device"),
+        require_cuda=require_cuda,
     )
     dense_index = DenseEvidenceIndex.load(index_dir)
     graph_index = RetrievalIndex(candidates)
@@ -130,8 +145,11 @@ def main() -> int:
         generator_path,
         device_map=config["generator"]["device_map"],
         dtype=config["generator"]["dtype"],
+        require_cuda=require_cuda,
     )
-    output = ROOT / "results/experiments/research_point_2/graphrag_v2_development"
+    output = ROOT / config.get(
+        "output_dir", "results/experiments/research_point_2/graphrag_v2_development"
+    )
     cache_dir = ROOT / config["generator"]["cache_dir"]
     output.mkdir(parents=True, exist_ok=True)
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -141,6 +159,7 @@ def main() -> int:
     done = 0
     run_started = time.perf_counter()
     generator_identity = None if args.skip_generation else model_file_manifest(generator_path)["structure_sha256"]
+    system_prompt_sha256 = hashlib.sha256(SYSTEM_PROMPT.encode("utf-8")).hexdigest()
     for method in methods:
         for query in queries:
             done += 1
@@ -156,6 +175,9 @@ def main() -> int:
                 dense_top_n=int(retrieval_cfg["dense_top_n"]),
                 anchor_evidence_count=int(retrieval_cfg["anchor_evidence_count"]),
                 fixed_hops=int(retrieval_cfg["fixed_hops"]),
+                ours_graph_hops=int(retrieval_cfg.get("ours_graph_hops", 1)),
+                ours_graph_decay=float(retrieval_cfg.get("ours_graph_decay", 0.70)),
+                graph_score_weight=float(retrieval_cfg.get("graph_score_weight", 0.12)),
             )
             results.append(result)
             generation_source = "SKIPPED"
@@ -170,6 +192,7 @@ def main() -> int:
                             "prompt": prompt,
                             "protocol": config["version"],
                             "generator_structure_sha256": generator_identity,
+                            "system_prompt_sha256": system_prompt_sha256,
                         },
                         ensure_ascii=False,
                         sort_keys=True,
@@ -177,7 +200,7 @@ def main() -> int:
                 ).hexdigest()
                 cache_path = cache_dir / f"{cache_key}.json"
                 generation_started = time.perf_counter()
-                if cache_path.exists():
+                if cache_path.exists() and not args.force_generation:
                     cached = json.loads(cache_path.read_text(encoding="utf-8"))
                     if "answer" in cached:
                         answer = cached["answer"]
@@ -209,13 +232,20 @@ def main() -> int:
                     for eid in point.get("evidence_ids", [])
                 }
                 relevant = set(query.relevant_evidence_ids)
+                request_wall_ms = (time.perf_counter() - generation_started) * 1000
                 generations.append({
                     "query_id": query.query_id,
                     "method": method,
                     "answer": answer,
                     "validation": validation,
                     "relevant_citation_recall": len(cited & relevant) / len(relevant) if relevant else None,
-                    "generation_elapsed_ms": (time.perf_counter() - generation_started) * 1000,
+                    "retrieval_elapsed_ms": result.elapsed_ms,
+                    "generation_request_wall_ms": request_wall_ms,
+                    "generation_model_elapsed_ms": generation_metrics.get("elapsed_ms"),
+                    "end_to_end_model_elapsed_ms": (
+                        result.elapsed_ms + float(generation_metrics.get("elapsed_ms", 0.0))
+                        if generation_metrics.get("elapsed_ms") is not None else None
+                    ),
                     "model_metrics": generation_metrics,
                     "source": generation_source,
                 })
@@ -232,27 +262,15 @@ def main() -> int:
         generation_groups: dict[str, list[dict]] = defaultdict(list)
         for row in generations:
             generation_groups[row["method"]].append(row)
+        query_by_id = {query.query_id: query for query in queries}
         by_method = {}
         for method, rows in generation_groups.items():
-            by_method[method] = {
-                "samples": len(rows),
-                "citation_validity_rate": _mean([row["validation"]["citation_validity_rate"] for row in rows]),
-                "uncited_answer_point_rate": _mean([row["validation"]["uncited_answer_point_rate"] for row in rows]),
-                "relevant_citation_recall": _mean([row["relevant_citation_recall"] for row in rows if row["relevant_citation_recall"] is not None]),
-                "latency_ms_mean": _mean([row["generation_elapsed_ms"] for row in rows]),
-                "tokens_per_second_mean": _mean([float(row["model_metrics"].get("tokens_per_second", 0)) for row in rows if row["model_metrics"]]),
-            }
-        metrics["generation"] = {
-            "samples": len(generations),
-            "citation_validity_rate": _mean([row["validation"]["citation_validity_rate"] for row in generations]),
-            "uncited_answer_point_rate": _mean([row["validation"]["uncited_answer_point_rate"] for row in generations]),
-            "relevant_citation_recall": _mean([row["relevant_citation_recall"] for row in generations if row["relevant_citation_recall"] is not None]),
-            "latency_ms_mean": _mean([row["generation_elapsed_ms"] for row in generations]),
-            "generated_tokens_mean": _mean([float(row["model_metrics"].get("generated_tokens", 0)) for row in generations]),
-            "tokens_per_second_mean": _mean([float(row["model_metrics"].get("tokens_per_second", 0)) for row in generations if row["model_metrics"]]),
-            "cuda_peak_memory_bytes_max": max((int(row["model_metrics"].get("cuda_peak_memory_bytes", 0)) for row in generations), default=0),
-            "by_method": by_method,
-        }
+            by_method[method] = summarize_generation_rows(rows, query_by_id)
+        metrics["generation"] = summarize_generation_rows(generations, query_by_id)
+        metrics["generation"]["by_method"] = by_method
+        metrics["generation"]["latency_scope"] = (
+            "model_metrics.elapsed_ms is reused for cached responses; request wall time is reported separately"
+        )
     metrics["run_manifest"] = {
         "protocol_id": config["protocol_id"],
         "protocol_version": config["version"],
@@ -260,6 +278,11 @@ def main() -> int:
         "generator_model": None if args.skip_generation else model_file_manifest(generator_path),
         "full_graph_candidate_count": len(candidates),
         "query_count": len(queries),
+        "force_generation": bool(args.force_generation),
+        "system_prompt_sha256": system_prompt_sha256,
+        "embedding_runtime": getattr(encoder, "runtime_manifest", {}),
+        "embedding_device": getattr(encoder, "device", None),
+        "generator_runtime": getattr(generator, "runtime_manifest", None),
         "label_policy": "Silver only; never Gold",
     }
     (output / "metrics.json").write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")

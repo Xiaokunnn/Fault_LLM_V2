@@ -12,7 +12,16 @@ from .dense_index import DenseEvidenceIndex, Encoder
 from .retrieval import RankedEvidence, RetrievalBudget, RetrievalIndex, RetrievalResult, _candidate_overlap
 
 
-SUPPORTED = {"dense_topk", "dense_fixed_hop", "dense_adaptive", "dense_metapath", "dense_ours"}
+SUPPORTED = {
+    "dense_topk",
+    "dense_fixed_hop",
+    "dense_adaptive",
+    "dense_metapath",
+    "dense_ours",
+    "dense_ours_no_graph",
+    "dense_ours_no_source_family",
+    "dense_ours_no_redundancy",
+}
 
 
 def _graph_pool(index: RetrievalIndex, seeds: list[tuple[str, float]], method: str, hops: int) -> tuple[set[str], int, int]:
@@ -60,6 +69,60 @@ def _graph_pool(index: RetrievalIndex, seeds: list[tuple[str, float]], method: s
     return evidence, len(energy), edges
 
 
+def _budgeted_hop_pool(
+    index: RetrievalIndex,
+    seeds: list[tuple[str, float]],
+    *,
+    hops: int,
+    decay: float,
+) -> tuple[set[str], dict[str, float], int, int]:
+    """Expand dense anchors over the graph and retain auditable proximity scores."""
+
+    if hops <= 0:
+        seed_scores = {evidence_id: max(float(score), 0.0) for evidence_id, score in seeds}
+        return set(seed_scores), seed_scores, 0, 0
+    node_scores: dict[str, float] = defaultdict(float)
+    frontier: dict[str, float] = {}
+    for evidence_id, score in seeds:
+        item = index.by_id[evidence_id]
+        value = max(float(score), 0.0)
+        for node in (item.head_entity_id, item.tail_entity_id):
+            if node:
+                node_scores[node] = max(node_scores[node], value)
+                frontier[node] = max(frontier.get(node, 0.0), value)
+    visited = set(frontier)
+    edge_visits = 0
+    for _ in range(max(0, hops)):
+        following: dict[str, float] = {}
+        for node, score in frontier.items():
+            neighbors = index.adjacency.get(node, ())
+            edge_visits += len(neighbors)
+            propagated = score * decay
+            for neighbor in neighbors:
+                if propagated > node_scores.get(neighbor, -math.inf):
+                    node_scores[neighbor] = propagated
+                if neighbor not in visited:
+                    following[neighbor] = max(following.get(neighbor, 0.0), propagated)
+        if not following:
+            break
+        visited.update(following)
+        frontier = following
+    evidence_ids = {
+        evidence_id
+        for node in visited
+        for evidence_id in index.incident_evidence.get(node, ())
+    }
+    evidence_scores = {
+        evidence_id: max(
+            node_scores.get(index.by_id[evidence_id].head_entity_id, 0.0),
+            node_scores.get(index.by_id[evidence_id].tail_entity_id, 0.0),
+        )
+        for evidence_id in evidence_ids
+        if evidence_id in index.by_id
+    }
+    return evidence_ids, evidence_scores, len(visited), edge_visits
+
+
 def retrieve_dense_graph(
     query: SilverQuery,
     candidates: list[EvidenceCandidate],
@@ -72,6 +135,9 @@ def retrieve_dense_graph(
     dense_top_n: int = 64,
     anchor_evidence_count: int = 8,
     fixed_hops: int = 2,
+    ours_graph_hops: int = 1,
+    ours_graph_decay: float = 0.70,
+    graph_score_weight: float = 0.12,
 ) -> RetrievalResult:
     if method not in SUPPORTED:
         raise ValueError(f"unknown dense GraphRAG method: {method}")
@@ -79,6 +145,7 @@ def retrieve_dense_graph(
     hits = dense_index.search(query.question_zh, encoder, top_n=dense_top_n)
     score_by_id = {hit.evidence_id: hit.score for hit in hits}
     visited_nodes = visited_edges = 0
+    graph_score_by_id: dict[str, float] = {}
     if method in {"dense_fixed_hop", "dense_adaptive"}:
         evidence_ids, visited_nodes, visited_edges = _graph_pool(
             graph_index,
@@ -88,19 +155,45 @@ def retrieve_dense_graph(
         )
         pool = [graph_index.by_id[eid] for eid in evidence_ids if eid in graph_index.by_id]
         generation_mode = method
+    elif method.startswith("dense_ours") and method != "dense_ours_no_graph":
+        evidence_ids, graph_score_by_id, visited_nodes, visited_edges = _budgeted_hop_pool(
+            graph_index,
+            [(hit.evidence_id, hit.score) for hit in hits[:anchor_evidence_count]],
+            hops=ours_graph_hops,
+            decay=ours_graph_decay,
+        )
+        evidence_ids.update(score_by_id)
+        pool = [graph_index.by_id[eid] for eid in evidence_ids if eid in graph_index.by_id]
+        generation_mode = f"dense_budgeted_graph_h{ours_graph_hops}"
     else:
         pool = [graph_index.by_id[hit.evidence_id] for hit in hits if hit.evidence_id in graph_index.by_id]
         generation_mode = "dense_full_graph"
-    if method in {"dense_metapath", "dense_ours", "dense_fixed_hop", "dense_adaptive"}:
+    if method in {
+        "dense_metapath",
+        "dense_fixed_hop",
+        "dense_adaptive",
+        "dense_ours",
+        "dense_ours_no_graph",
+        "dense_ours_no_source_family",
+        "dense_ours_no_redundancy",
+    }:
         role_rows = [item for item in pool if item.role == query.role]
         if role_rows:
             pool = role_rows
     scored = sorted(
-        ((item, score_by_id.get(item.evidence_id, 0.0) + 0.10 * item.final_confidence) for item in pool),
+        (
+            (
+                item,
+                score_by_id.get(item.evidence_id, 0.0)
+                + graph_score_weight * graph_score_by_id.get(item.evidence_id, 0.0)
+                + 0.10 * item.final_confidence,
+            )
+            for item in pool
+        ),
         key=lambda row: (row[1], row[0].evidence_id),
         reverse=True,
     )[: budget.max_scored_candidates]
-    if method != "dense_ours":
+    if not method.startswith("dense_ours"):
         selected = scored[: budget.max_selected_evidence]
     else:
         selected, remaining, family_counts = [], list(scored), {}
@@ -108,11 +201,15 @@ def retrieve_dense_graph(
             best_index, best_gain = -1, -math.inf
             for position, (item, base) in enumerate(remaining):
                 family = item.source_family_id or "UNKNOWN"
-                if family_counts.get(family, 0) >= budget.max_per_source_family:
+                use_source_family = method != "dense_ours_no_source_family"
+                if use_source_family and family_counts.get(family, 0) >= budget.max_per_source_family:
                     continue
-                novelty = 1.0 if family not in family_counts else 0.0
+                novelty = 1.0 if use_source_family and family not in family_counts else 0.0
                 redundancy = max((_candidate_overlap(item, old) for old, _ in selected), default=0.0)
-                gain = base + budget.source_family_bonus * novelty - budget.redundancy_penalty * redundancy
+                redundancy_weight = (
+                    0.0 if method == "dense_ours_no_redundancy" else budget.redundancy_penalty
+                )
+                gain = base + budget.source_family_bonus * novelty - redundancy_weight * redundancy
                 if gain > best_gain:
                     best_index, best_gain = position, gain
             if best_index < 0:

@@ -22,6 +22,7 @@ def main() -> int:
     parser.add_argument("--config", default="configs/rp2_graphrag_v2_development.json")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--require-cuda", action="store_true")
     args = parser.parse_args()
     config = json.loads((ROOT / args.config).read_text(encoding="utf-8"))
     graph_root = ROOT / config["graph_root"]
@@ -42,6 +43,10 @@ def main() -> int:
         model_path,
         batch_size=int(config["embedding"]["batch_size"]),
         max_length=int(config["embedding"]["max_length"]),
+        device=config["embedding"].get("device"),
+        require_cuda=bool(
+            args.require_cuda or config.get("runtime", {}).get("require_cuda")
+        ),
     )
     print("[RP2 index] loading BGE-M3 and encoding evidence ...", flush=True)
     index = DenseEvidenceIndex.build(candidates, encoder)
@@ -51,6 +56,8 @@ def main() -> int:
             "protocol_id": config["protocol_id"],
             "graph_root": config["graph_root"],
             "model_manifest": model_file_manifest(model_path),
+            "runtime_manifest": encoder.runtime_manifest,
+            "embedding_device": encoder.device,
             "label_policy": "Silver only; never Gold",
         },
     )
