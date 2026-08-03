@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-3d6381c7-06db-9c96-be68-465fee382100",
+  "latency_ms": 8050,
+  "usage": {
+    "completion_tokens": 626,
+    "prompt_tokens": 2017,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2643
+  },
+  "prompt_sha256": "9097fc94d457287a2734040237e30f92faf7f25aef2437478f73b1b148b6806c",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B4_metapath_k3::CQ-F05-SYM::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In case of shaft seal leakage, the media will drip from the slot in the bottom of the adaptor.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F06-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nInsufficient grease; Hot bearings\n--- CELL ---\nExcess lubricant; Hot bearings\n--- CELL ---\nOverloaded bearing",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F06-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nInsufficient grease; Hot bearings\n--- CELL ---\nExcess lubricant; Hot bearings\n--- CELL ---\nOverloaded bearing",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F06-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Check the bearing and stuffing box for proper\n       lubrication",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F06-INS::point::1",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Time waveform analysis can identify a wide range of mechanical instabilities, including problems such as\n            chipped, cracked, or broken teeth; misalignment; looseness",
+        "reason_code": "scope_expansion"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F06-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Check the bearing and stuffing box for proper\n       lubrication; Time waveform analysis can identify a wide range of mechanical instabilities, including problems such as\n            chipped, cracked, or broken teeth; misalignment; looseness",
+        "reason_code": "scope_expansion"
+      }
+    ]
+  }
+}

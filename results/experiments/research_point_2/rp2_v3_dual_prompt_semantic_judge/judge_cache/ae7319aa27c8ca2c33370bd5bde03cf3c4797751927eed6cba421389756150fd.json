@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-9f852b12-a3dd-94eb-ba8c-ad17dd6537c8",
+  "latency_ms": 7645,
+  "usage": {
+    "completion_tokens": 551,
+    "prompt_tokens": 1936,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2487
+  },
+  "prompt_sha256": "ae7319aa27c8ca2c33370bd5bde03cf3c4797751927eed6cba421389756150fd",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "This high heat on a bearing beside a coupler usually indicates a slight misalignment in these shafts.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::point::1",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate",
+        "reason_code": "missing_causal_link"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.5,
+        "supporting_quote": "This high heat on a bearing beside a coupler usually indicates a slight misalignment in these shafts.",
+        "reason_code": "overgeneralization"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "Motor fails to start\n--- CELL ---\nOverload trips",
+        "reason_code": "causal_direction_mismatch"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::point::1",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "Motor stalls\n--- CELL ---\nOverload",
+        "reason_code": "unsupported_extension"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "Motor fails to start\n--- CELL ---\nOverload trips",
+        "reason_code": "no_evidence_for_claim"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-eb9e2110-e378-9ec8-9142-e09da583ffbb",
+  "latency_ms": 6789,
+  "usage": {
+    "completion_tokens": 550,
+    "prompt_tokens": 2026,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2576
+  },
+  "prompt_sha256": "47a0762d3d3b9ac86226d51339150dc8d891635cd3869cc7563a02e6a8f95a97",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F02-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Change direction of rotation; Suction lines should be free of air leaks, and arranged so there are no loops or high spots",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F03-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "the pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F03-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F03-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "the pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F03-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "suction piping and pump should be inspected internally for foreign matter that might be drawn into impeller passages and clog them",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F03-INS::point::1",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "Dismantle pipe (58). The top piece can now be lifted up allowing inspection of the impeller",
+        "reason_code": "over_inference"
+      }
+    ]
+  }
+}

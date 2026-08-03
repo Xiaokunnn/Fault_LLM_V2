@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-90f79c12-8099-9c2e-a3a0-8a919dfdbcba",
+  "latency_ms": 6502,
+  "usage": {
+    "completion_tokens": 532,
+    "prompt_tokens": 2520,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3052
+  },
+  "prompt_sha256": "4619f77e678780db5d5db2a67abc960372ac494edf44c6192c3cf41f48f4613e",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Improper seal water conditions can cause... excessive seepage out of the pump",
+        "reason_code": "over_inference"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Improper seal water conditions can cause... excessive seepage; A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "new_fact_in_summary"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "The pump has no or too low capacity... Check data sheet Q/H curve",
+        "reason_code": "condition_deleted"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "Check data sheet Q/H curve... checked for leakage... inspected internally for foreign matter",
+        "reason_code": "condition_deleted"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-MAINT::point::0",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "The pump has no or too low capacity... Find the leakage, repair the fault, non-return valve not submerged",
+        "reason_code": "condition_deleted"
+      }
+    ]
+  }
+}

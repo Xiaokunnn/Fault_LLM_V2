@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-bb88bad1-e93a-9637-81d8-093f4f0cb11b",
+  "latency_ms": 7435,
+  "usage": {
+    "completion_tokens": 561,
+    "prompt_tokens": 2515,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3076
+  },
+  "prompt_sha256": "d10127dd46a776ee649565e47a02850b5e54ab693f8b842112b5944ad844a3e9",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Improper seal water conditions can cause... excessive seepage out of the pump",
+        "reason_code": "scope_expansion"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "no_evidence_for_claim"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Improper seal water conditions can cause... excessive seepage out of the pump; A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "no_evidence_for_claim"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-INS::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Check data sheet Q/H curve and NPSH or contact DESMI; All piping systems are to be tested... and checked for leakage; suction piping and pump should be inspected internally for foreign matter",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-INS::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Check data sheet Q/H curve; checked for leakage; suction piping and pump should be inspected internally",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Find the leakage, repair the fault, non-return valve not submerged",
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

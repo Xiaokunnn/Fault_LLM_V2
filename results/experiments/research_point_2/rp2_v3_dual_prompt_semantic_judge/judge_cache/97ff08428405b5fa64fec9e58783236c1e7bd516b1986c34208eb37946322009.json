@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-b5d0986b-abd8-9486-918a-b5280184a213",
+  "latency_ms": 6429,
+  "usage": {
+    "completion_tokens": 509,
+    "prompt_tokens": 3162,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3671
+  },
+  "prompt_sha256": "97ff08428405b5fa64fec9e58783236c1e7bd516b1986c34208eb37946322009",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F09-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "evidence_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump",
+        "reason_code": "over_generalization"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Find the leakage, repair the fault, non-return valve not submerged",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Clean the pump",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Find the leakage, repair the fault... Clean the pump",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-MAINT::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "The pump has no or too low capacity --- CELL --- ... non-return valve not submerged",
+        "reason_code": "false_causal_mapping"
+      }
+    ]
+  }
+}

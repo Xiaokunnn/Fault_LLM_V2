@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-3db8f52f-5f65-94f2-b271-8b8aa463dbfc",
+  "latency_ms": 6773,
+  "usage": {
+    "completion_tokens": 528,
+    "prompt_tokens": 2111,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2639
+  },
+  "prompt_sha256": "af502697ac73bd843ae84aed674b9683581c4ce70990775e0d0a9fa452cc8e66",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F01-SYM::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "impeller may show signs of heavy erosion caused by cavitation; low performance, noise",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F02-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Air is drawn in because of too little liquid or leaking suction line",
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F02-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Reduced performance --- CELL --- Air pockets or small air leaks in suction line",
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F02-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "Air is drawn in because of too little liquid or leaking suction line; Reduced performance --- CELL --- Air pockets or small air leaks",
+        "reason_code": "different_evidence_splicing"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F02-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "The pump does not prime --- CELL --- Change direction of rotation",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F02-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "arranged so there are no loops or high spots in which air can be trapped",
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

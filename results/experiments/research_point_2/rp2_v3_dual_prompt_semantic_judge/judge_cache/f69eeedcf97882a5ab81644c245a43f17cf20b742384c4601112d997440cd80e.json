@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-153e6cfe-1242-9d9a-aebb-f4e09dc35da8",
+  "latency_ms": 6678,
+  "usage": {
+    "completion_tokens": 511,
+    "prompt_tokens": 3157,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3668
+  },
+  "prompt_sha256": "f69eeedcf97882a5ab81644c245a43f17cf20b742384c4601112d997440cd80e",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F09-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "A clogged shaft seal leak hole can lead to premature bearing failure",
+        "reason_code": "causal_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.9,
+        "supporting_quote": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Find the leakage, repair the fault, non-return valve not submerged",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Clean the pump",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-INS::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Find the leakage, repair the fault... Clean the pump",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-MAINT::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.85,
+        "supporting_quote": "non-return valve not submerged",
+        "reason_code": "fabricated_causality"
+      }
+    ]
+  }
+}

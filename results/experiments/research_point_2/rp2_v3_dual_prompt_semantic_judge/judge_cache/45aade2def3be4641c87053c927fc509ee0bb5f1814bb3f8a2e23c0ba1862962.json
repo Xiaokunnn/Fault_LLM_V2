@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-be0e3e0f-3c76-94bd-a6ea-f5ac55f57e5f",
+  "latency_ms": 7336,
+  "usage": {
+    "completion_tokens": 570,
+    "prompt_tokens": 2580,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3150
+  },
+  "prompt_sha256": "45aade2def3be4641c87053c927fc509ee0bb5f1814bb3f8a2e23c0ba1862962",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F01-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).",
+        "reason_code": "missing_evidence_for_inlet_pressure_prevention"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion) which may at times render an impeller unfit for use in a very short time.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-SYM::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Air is drawn in because of too little liquid or leaking suction line",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Wrong direction of rotation",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "The pump does not prime --- CELL --- 3. Wrong direction of rotation 4. Air is drawn in because of too little liquid or leaking suction line",
+        "reason_code": "direct_match"
+      }
+    ]
+  }
+}

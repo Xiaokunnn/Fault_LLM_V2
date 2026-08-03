@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-cbe0759b-050f-98ea-aaf2-30a8ade46af5",
+  "latency_ms": 7423,
+  "usage": {
+    "completion_tokens": 596,
+    "prompt_tokens": 1989,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2585
+  },
+  "prompt_sha256": "406c458a01b3419d1b48293822d1d6f688f7cf20bfa746164e066718e5c0110d",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::point::1",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "vibrations indicating imminent bearing failure",
+        "reason_code": "missing_cause_link"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged; vibrations indicating imminent bearing failure",
+        "reason_code": "full_evidence_coverage"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "supporting_quote": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Operation of the pump under conditions differing widely from those... may result in cavitation or shortened life... Insufficient inlet pressure will cause the pump to cavitate leading to low performance",
+        "reason_code": "synthesis_supported"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).",
+        "reason_code": "direct_match"
+      }
+    ]
+  }
+}

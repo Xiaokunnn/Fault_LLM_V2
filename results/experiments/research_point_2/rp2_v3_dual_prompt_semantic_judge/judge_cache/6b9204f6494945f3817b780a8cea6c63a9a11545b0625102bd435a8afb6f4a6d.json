@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-a033e933-38b4-93cd-bdae-fcdb6bdf4053",
+  "latency_ms": 8116,
+  "usage": {
+    "completion_tokens": 624,
+    "prompt_tokens": 2161,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2785
+  },
+  "prompt_sha256": "6b9204f6494945f3817b780a8cea6c63a9a11545b0625102bd435a8afb6f4a6d",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F01-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "may result in cavitation; might be damaged due to cavitation and/or deliver less flow and/or less differential pressure",
+        "reason_code": "possibility_as_certainty"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "may result in cavitation; might be damaged due to cavitation and/or deliver less flow and/or less differential pressure",
+        "reason_code": "possibility_as_certainty"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-INS::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent... cavitation damage...); A crackling noise can indicate cavitation; might be damaged due to cavitation and/or deliver less flow and/or less differential pressure",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-INS::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent... cavitation damage...); A crackling noise can indicate cavitation; might be damaged due to cavitation and/or deliver less flow and/or less differential pressure",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent... cavitation damage...)",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F01-MAINT::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "reason_code": "causal_direction_error"
+      }
+    ]
+  }
+}

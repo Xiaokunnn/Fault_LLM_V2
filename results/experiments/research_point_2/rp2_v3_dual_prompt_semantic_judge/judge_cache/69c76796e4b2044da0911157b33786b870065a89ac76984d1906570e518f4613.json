@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-2d2949b6-416f-9573-86fa-c4805ca066fb",
+  "latency_ms": 6882,
+  "usage": {
+    "completion_tokens": 564,
+    "prompt_tokens": 1941,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2505
+  },
+  "prompt_sha256": "69c76796e4b2044da0911157b33786b870065a89ac76984d1906570e518f4613",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "This high heat on a bearing beside a coupler usually indicates a slight misalignment in these shafts.",
+        "reason_code": "evidence_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate",
+        "reason_code": "new_fact_added"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F07-SYM::summary",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate",
+        "reason_code": "different_evidence_splice"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start\n--- CELL ---\nOverload trips",
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::point::1",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Motor stalls\n--- CELL ---\nOverload",
+        "reason_code": "over_inference"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F08-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start\n--- CELL ---\nOverload trips",
+        "reason_code": "causal_direction_error"
+      }
+    ]
+  }
+}

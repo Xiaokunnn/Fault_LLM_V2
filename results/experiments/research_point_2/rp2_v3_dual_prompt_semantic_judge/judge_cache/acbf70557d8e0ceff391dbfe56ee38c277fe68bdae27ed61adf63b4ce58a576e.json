@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-ec50ae16-94c2-9fcc-8e8e-2f241aba15ab",
+  "latency_ms": 7588,
+  "usage": {
+    "completion_tokens": 613,
+    "prompt_tokens": 2491,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3104
+  },
+  "prompt_sha256": "acbf70557d8e0ceff391dbfe56ee38c277fe68bdae27ed61adf63b4ce58a576e",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F05-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Observe the mechanical seal to see if leakage stops, if not it could be enough to dismantle the mechanical seal and clean it properly to stop the leakage.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F05-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F05-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Observe the mechanical seal to see if leakage stops... The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "synthesis_supported"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F05-SYM::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "reason_code": "causal_direction_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F05-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Improper seal water conditions can cause air leakage into the pump, excessive seepage out of the pump, overheating of packing and premature failure of packing and scoring of shaft sleeve.",
+        "reason_code": "causal_direction_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Hot bearings --- CELL --- Insufficient grease; Hot bearings --- CELL --- Excess lubricant",
+        "reason_code": "direct_match"
+      }
+    ]
+  }
+}

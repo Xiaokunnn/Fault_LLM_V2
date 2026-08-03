@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-2fdfb36d-5de9-9406-9291-0cf27da6ce3e",
+  "latency_ms": 7354,
+  "usage": {
+    "completion_tokens": 588,
+    "prompt_tokens": 2196,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2784
+  },
+  "prompt_sha256": "88defa107a3b0ff8884f03deb40aab95809d161ef5949987b4d0be620c7f9a3b",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F08-MAINT::point::0",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Motor may be overloaded; Too high density of the fluid pumped could lead to motor overload, which could damage the motor.",
+        "reason_code": "maintenance_advice_unsupported"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Motor may be overloaded; The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "maintenance_advice_unsupported"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-SYM::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Motor fails to start --- CELL --- Motor may be overloaded",
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-SYM::point::1",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "Motor overheats while running --- CELL --- Unbalanced terminal voltage",
+        "reason_code": "evidence_missing_for_claim_part"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-SYM::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Motor fails to start --- CELL --- Motor may be overloaded; Motor overheats while running --- CELL --- Unbalanced terminal voltage",
+        "reason_code": "object_substitution"
+      }
+    ]
+  }
+}

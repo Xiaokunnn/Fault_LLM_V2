@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-e3b1f5d3-c060-974d-9859-520e6f6ffd64",
+  "latency_ms": 8744,
+  "usage": {
+    "completion_tokens": 652,
+    "prompt_tokens": 2629,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3281
+  },
+  "prompt_sha256": "746ce2bbc28bc754cddea635837edc7ccba01696ab59b899374bb3f16b680c04",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F04-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "supporting_quote": "Check Impeller for signs of wear or damage; Reduced performance --- CELL --- Excessively worn impeller or wear ring; the pump from getting jammed due to corrosion in the seal clearances around the impeller",
+        "reason_code": "evidence_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F04-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "Check Impeller for signs of wear or damage, replace if required.; Measure OD of impeller hub or impeller wear rings and ID of casing wear rings.",
+        "reason_code": "scope_expansion"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F04-INS::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Check Impeller for signs of wear or damage; Measure OD of impeller hub or impeller wear rings and ID of casing wear rings. Compute diametral clearance",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F04-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Check Impeller for signs of wear or damage, replace if required.; 7.6.2 Measuring clearance between impeller and wear plate",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F04-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Check Impeller for signs of wear or damage, replace if required.; 7.6.2 Measuring clearance between impeller and wear plate",
+        "reason_code": "hallucinated_modifier"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F04-SYM::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "If there is a decline in the performance characteristics of the pump this can be an indication of wear of the impeller and in the wear plate; Check Impeller for signs of wear or damage; 7.6.2 Measuring clearance between impeller and wear plate",
+        "reason_code": "category_mix"
+      }
+    ]
+  }
+}

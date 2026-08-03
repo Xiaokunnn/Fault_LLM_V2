@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-3c851d33-11de-90f2-8646-714eaf94a6bc",
+  "latency_ms": 7163,
+  "usage": {
+    "completion_tokens": 599,
+    "prompt_tokens": 1809,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2408
+  },
+  "prompt_sha256": "ae30d0c739ab858669cf149d9fe7cfc3fbf2c31b152b8c25d8724d05f9fc83ca",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Observe the information on minimum flow rates specified in the product literature (to prevent overheating, bearing damage, etc.)",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings; Observe the information on minimum flow rates specified in the product literature (to prevent overheating, bearing damage, etc.)",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-SYM::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "vibrations indicating imminent bearing failure",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-SYM::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged; vibrations indicating imminent bearing failure",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F01-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft",
+        "reason_code": "causal_chain_inference"
+      }
+    ]
+  }
+}

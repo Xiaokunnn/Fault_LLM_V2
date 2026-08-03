@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-8e3b943f-13fd-9b08-97c9-ed5f89524a44",
+  "latency_ms": 6553,
+  "usage": {
+    "completion_tokens": 533,
+    "prompt_tokens": 2630,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3163
+  },
+  "prompt_sha256": "99cce52b7c7b1befaf83ffac85bb5612a01bcafa79e2db35d68291f4827aff57",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F09-MAINT::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Find the leakage, repair the fault... Clean the pump... Clean or replace",
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-SYM::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "loss of steering capability due to a single failure of any part of the piping system",
+        "reason_code": "over_inference"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-SYM::point::1",
+        "verdict": "supported",
+        "confidence": 0.9,
+        "supporting_quote": "The pump has no or too low capacity... Find the leakage, repair the fault",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F09-SYM::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "loss of steering capability due to a single failure... Find the leakage, repair the fault",
+        "reason_code": "evidence_splicing"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged... failures introduced by maintenance errors",
+        "reason_code": "new_fact_in_summary"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "pump bearing and shaft seal will be damaged... identifying impending equipment failures",
+        "reason_code": "over_inference"
+      }
+    ]
+  }
+}

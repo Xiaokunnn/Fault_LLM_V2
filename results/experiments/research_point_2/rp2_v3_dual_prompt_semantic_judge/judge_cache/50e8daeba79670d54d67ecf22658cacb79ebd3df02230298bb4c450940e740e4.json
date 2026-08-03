@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-dc8c679b-dc4c-9ed2-aeeb-98cde3588924",
+  "latency_ms": 6682,
+  "usage": {
+    "completion_tokens": 556,
+    "prompt_tokens": 1771,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2327
+  },
+  "prompt_sha256": "50e8daeba79670d54d67ecf22658cacb79ebd3df02230298bb4c450940e740e4",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F08-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Electric motor failure --- CELL --- High or low voltage",
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F08-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Too high density of the fluid pumped could lead to motor overload, which could damage the motor.",
+        "reason_code": "causal_chain_fabrication"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F08-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Electric motor failure --- CELL --- High or low voltage; Too high density of the fluid pumped could lead to motor overload, which could damage the motor.",
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F08-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Motor may be overloaded --- CELL --- Reduce load.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F08-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F08-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Motor may be overloaded --- CELL --- Reduce load.; The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

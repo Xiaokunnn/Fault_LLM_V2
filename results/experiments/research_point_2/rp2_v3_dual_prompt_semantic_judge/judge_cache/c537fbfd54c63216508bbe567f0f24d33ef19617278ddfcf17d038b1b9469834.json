@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-f209d6ad-0aff-97a8-b173-2895e2a327fd",
+  "latency_ms": 7969,
+  "usage": {
+    "completion_tokens": 639,
+    "prompt_tokens": 3021,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3660
+  },
+  "prompt_sha256": "c537fbfd54c63216508bbe567f0f24d33ef19617278ddfcf17d038b1b9469834",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/ cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; Power signature analysis can be used to detect motor problems such as broken rotor bars",
+        "reason_code": "over_generalization"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; mitigating main engine bearing damage caused by no or low lube oil flow by adding a low pressure sensor...; On pumps not running, the shaft shall be rotated at least 2-3 times monthly...; Observe the information on minimum flow rates specified in the product literature",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.75,
+        "supporting_quote": "mitigating main engine bearing damage caused by no or low lube oil flow...; avoid standstill damage to shaft seal and bearings; prevent overheating, bearing damage, etc.",
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged.",
+        "reason_code": "inference_added"
+      }
+    ]
+  }
+}

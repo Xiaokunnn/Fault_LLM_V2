@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-cfaf6a4f-c8d4-901e-af92-143cce176506",
+  "latency_ms": 7395,
+  "usage": {
+    "completion_tokens": 598,
+    "prompt_tokens": 1994,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2592
+  },
+  "prompt_sha256": "a31120ad8d198ebcf0a54bf4647cd7173e1c69d0fe9ccdb8545ae5e502a83cfd",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "vibrations indicating imminent bearing failure",
+        "reason_code": "new_fact_in_answer"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation",
+        "reason_code": "over_inference_causality"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.9,
+        "supporting_quote": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft.",
+        "reason_code": "possibility_to_certainty"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+        "reason_code": "exact_match"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "supporting_quote": "Operation of the pump under conditions differing widely from those, on which the pump selection was based, may result in cavitation or shortened life of bearings, seals, packing, and shaft.",
+        "reason_code": "valid_synthesis"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F01-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).",
+        "reason_code": "exact_match"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-0a99a039-c675-944a-bfba-23408b013b4a",
+  "latency_ms": 9643,
+  "usage": {
+    "completion_tokens": 785,
+    "prompt_tokens": 3016,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3801
+  },
+  "prompt_sha256": "962c4f3aa829fb9aafe6eb72bdb45b3b8108be88368b40c07911ef375beea09a",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation",
+        "reason_code": "exact_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/ cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "reason_code": "exact_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-INS::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/ cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "reason_code": "synthesis_supported"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; mitigating main engine bearing damage caused by no or low lube oil flow by adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings; On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.; Observe the information on minimum flow rates specified in the product literature (to prevent overheating, bearing damage, etc.).",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; mitigating main engine bearing damage caused by no or low lube oil flow by adding a low pressure sensor in the lubricating oil pump outlet that would start a standby pump to maintain lube oil flow to the main engine bearings; On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.; Observe the information on minimum flow rates specified in the product literature (to prevent overheating, bearing damage, etc.).",
+        "reason_code": "multi_evidence_synthesis"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F10-SYM::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged.",
+        "reason_code": "missing_cause_link"
+      }
+    ]
+  }
+}

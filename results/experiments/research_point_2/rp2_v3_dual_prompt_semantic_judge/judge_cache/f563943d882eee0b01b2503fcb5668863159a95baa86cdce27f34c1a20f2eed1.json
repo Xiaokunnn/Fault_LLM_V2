@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-159402ff-e1e8-9db3-8b81-840c9140f95f",
+  "latency_ms": 7724,
+  "usage": {
+    "completion_tokens": 655,
+    "prompt_tokens": 2098,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2753
+  },
+  "prompt_sha256": "f563943d882eee0b01b2503fcb5668863159a95baa86cdce27f34c1a20f2eed1",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F06-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nOverloaded bearing",
+        "reason_code": "direct_causal_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nInsufficient grease; Hot bearings\n--- CELL ---\nExcess lubricant; Hot bearings\n--- CELL ---\nOverloaded bearing",
+        "reason_code": "complete_evidence_coverage"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nInsufficient grease; Hot bearings\n--- CELL ---\nExcess lubricant; Excessive temperature as a result of bearings running hot or defective bearing seals",
+        "reason_code": "inference_from_cause_to_inspection"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Hot bearings\n--- CELL ---\nInsufficient grease; Hot bearings\n--- CELL ---\nExcess lubricant; Excessive temperature as a result of bearings running hot or defective bearing seals",
+        "reason_code": "inference_from_cause_to_diagnosis"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "3. Slowly introduce recommended grease, per Table II into the bearings. DO NOT over\n               lubricate.",
+        "reason_code": "direct_maintenance_instruction"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F06-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Observe the information on maximum flow rates specified in the product literature (to prevent\n        overheating, mechanical seal damage, cavitation damage, bearing damage, etc.).; Observe the information on minimum flow rates specified in the product literature (to prevent\n        overheating, bearing damage, etc.).",
+        "reason_code": "direct_prevention_instruction"
+      }
+    ]
+  }
+}

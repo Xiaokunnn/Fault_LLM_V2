@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-7b60f7e8-bde1-946c-9f9d-f6676377cfe0",
+  "latency_ms": 6970,
+  "usage": {
+    "completion_tokens": 560,
+    "prompt_tokens": 2148,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2708
+  },
+  "prompt_sha256": "707e0560384f70ad7b83591cf4225519e334949de180243568f9d8e2436f74d7",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F07-SYM::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Misalignment may be the cause of noisy pump operation, vibration, premature bearing failure, or excessive coupling wear.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Motor fails to start --- CELL --- Motor may be overloaded",
+        "reason_code": "causal_direction_reversed"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Motor fails to start --- CELL --- Motor may be overloaded",
+        "reason_code": "causal_direction_reversed"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Motor fails to start --- CELL --- Motor may be overloaded",
+        "reason_code": "added_external_details"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-INS::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Power signature analysis can be used to detect motor problems such as ... machinery misalignment.",
+        "reason_code": "direct_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F08-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "Motor fails to start --- CELL --- Overload trips; Power signature analysis can be used to detect motor problems",
+        "reason_code": "overgeneralized_diagnostic_scope"
+      }
+    ]
+  }
+}

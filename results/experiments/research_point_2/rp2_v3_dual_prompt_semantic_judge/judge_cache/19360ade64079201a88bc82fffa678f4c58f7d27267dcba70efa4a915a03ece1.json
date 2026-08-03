@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-d4d71676-df84-9767-97f2-c2e8939732d2",
+  "latency_ms": 6613,
+  "usage": {
+    "completion_tokens": 543,
+    "prompt_tokens": 1963,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2506
+  },
+  "prompt_sha256": "19360ade64079201a88bc82fffa678f4c58f7d27267dcba70efa4a915a03ece1",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_k3::CQ-F09-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into the motor space resulting in motor failure.",
+        "reason_code": "exact_match"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F09-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "Find the leakage, repair the fault... The interface between the stator and rotor must maintain a water seal",
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F10-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged... Leaking shaft seal - Running dry",
+        "reason_code": "exact_match"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F10-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.9,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged",
+        "reason_code": "unsupported_modifier"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F10-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation",
+        "reason_code": "missing_category"
+      },
+      {
+        "item_id": "Ours_k3::CQ-F10-INS::point::1",
+        "verdict": "unsupported",
+        "confidence": 1.0,
+        "supporting_quote": "Power failure --- CELL --- Check for loose connections to line, to fuses and to control.",
+        "reason_code": "irrelevant_evidence"
+      }
+    ]
+  }
+}

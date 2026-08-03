@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-a123f350-0aed-95c1-86b5-0d834ad71d53",
+  "latency_ms": 8987,
+  "usage": {
+    "completion_tokens": 587,
+    "prompt_tokens": 3823,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 4410
+  },
+  "prompt_sha256": "b27fcf9a352b55dd0730dd9f74e642bd112e3f58af52a4fe78d523973e5e721d",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4::CQ-F02-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Ventilate the system; Change direction of rotation; Remove foreign body in pump/Remove any coating on mating faces; Lower suction pipe/Tighten suction line",
+        "reason_code": "evidence_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-INS::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Ventilate the system; Change direction of rotation; Remove foreign body in pump/Remove any coating on mating faces; Lower suction pipe/Tighten suction line",
+        "reason_code": "evidence_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Change direction of rotation; Ventilate the system; Lower suction pipe/Tighten suction line; Remove foreign body in pump/Remove any coating on mating faces",
+        "reason_code": "evidence_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Change direction of rotation; Ventilate the system; Lower suction pipe/Tighten suction line; Remove foreign body in pump/Remove any coating on mating faces",
+        "reason_code": "evidence_match"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-SYM::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Reduced performance --- CELL --- Air pockets or small air leaks in suction line",
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "B1_dense_k4::CQ-F02-SYM::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "supporting_quote": "Air is drawn in because of too little liquid or leaking suction line",
+        "reason_code": "causal_direction_error"
+      }
+    ]
+  }
+}

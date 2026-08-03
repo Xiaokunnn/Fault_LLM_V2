@@ -1,0 +1,60 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-a8cc041e-9640-9358-8bb6-0c6b2ca73d3c",
+  "latency_ms": 6934,
+  "usage": {
+    "completion_tokens": 588,
+    "prompt_tokens": 2126,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2714
+  },
+  "prompt_sha256": "7e775fe63c2ee079406a412e985f2c7542a0e8ea510f3be349b65c4569da2137",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged.; Leaking shaft seal     - Running dry",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "supporting_quote": "In case of dry running, pump bearing and shaft seal will be damaged.",
+        "reason_code": "unsupported_modifier"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-INS::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "Power signature analysis can be used to detect motor problems such as broken rotor bars, broken/ cracked end rings, flow or machine output restrictions, and machinery misalignment.",
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "supporting_quote": "condition-monitoring tasks may aid in identifying impending equipment failures introduced by maintenance errors or machinery degradation; Power signature analysis can be used to detect motor problems such as broken rotor bars",
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "B4_metapath_k3::CQ-F10-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "supporting_quote": "On pumps not running, the shaft shall be rotated at least 2-3 times monthly to avoid standstill damage to shaft seal and bearings.",
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}
