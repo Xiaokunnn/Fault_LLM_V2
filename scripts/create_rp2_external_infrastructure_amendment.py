@@ -20,8 +20,9 @@ ALLOWED_FILES = (
 )
 
 
-def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def _git_sha(relative_path: str) -> str:
+    content = subprocess.check_output(["git", "show", f"HEAD:{relative_path}"], cwd=ROOT)
+    return hashlib.sha256(content).hexdigest()
 
 
 def main() -> int:
@@ -31,8 +32,7 @@ def main() -> int:
         path = str(entry["path"])
         if path in allowed:
             continue
-        current = ROOT / path
-        if not current.is_file() or _sha(current) != entry["sha256"]:
+        if _git_sha(path) != entry["sha256"]:
             raise RuntimeError(f"Frozen core artifact changed; amendment forbidden: {path}")
     amendment = {
         "amendment_id": "rp2_v3_external_infrastructure_amendment_v1",
@@ -42,14 +42,16 @@ def main() -> int:
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
         "original_freeze_path": str(FREEZE.relative_to(ROOT)).replace("\\", "/"),
-        "original_freeze_sha256": _sha(FREEZE),
+        "original_freeze_sha256": _git_sha(
+            str(FREEZE.relative_to(ROOT)).replace("\\", "/")
+        ),
         "reason": (
             "The primary-graph confidence policy correctly vetoes held_out_test records, "
             "but the external benchmark builder incorrectly required the primary-graph "
             "silver_candidate label, deterministically producing an empty external corpus."
         ),
         "allowed_infrastructure_replacements": {
-            path: _sha(ROOT / path) for path in ALLOWED_FILES
+            path: _git_sha(path) for path in ALLOWED_FILES
         },
         "unchanged_method_claims": {
             "retrieval_parameters_unchanged": True,

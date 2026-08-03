@@ -12,8 +12,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+def _git_sha(relative_path: str) -> str:
+    content = subprocess.check_output(["git", "show", f"HEAD:{relative_path}"], cwd=ROOT)
+    return hashlib.sha256(content).hexdigest()
+
+
+def _require_clean(relative_path: str) -> None:
+    result = subprocess.run(
+        ["git", "diff", "--quiet", "--", relative_path], cwd=ROOT
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"Working tree differs from committed Git version: {relative_path}")
 
 
 def main() -> int:
@@ -34,11 +43,7 @@ def main() -> int:
     )
     if tracked.returncode != 0:
         raise RuntimeError("Freeze manifest must be committed before external evaluation")
-    committed_freeze = subprocess.check_output(
-        ["git", "show", f"HEAD:{args.freeze}"], cwd=ROOT
-    )
-    if hashlib.sha256(committed_freeze).hexdigest() != _sha(freeze_path):
-        raise RuntimeError("Working-tree freeze manifest differs from the committed Git version")
+    _require_clean(args.freeze)
     freeze = json.loads(freeze_path.read_text(encoding="utf-8"))
     if freeze.get("status") != "frozen_before_external_source_heldout_v3":
         raise RuntimeError("Unexpected RP2 freeze status")
@@ -51,21 +56,18 @@ def main() -> int:
         )
         if amendment_tracked.returncode != 0:
             raise RuntimeError("External infrastructure amendment exists but is not committed")
-        committed_amendment = subprocess.check_output(
-            ["git", "show", f"HEAD:{args.amendment}"], cwd=ROOT
-        )
-        if hashlib.sha256(committed_amendment).hexdigest() != _sha(amendment_path):
-            raise RuntimeError("Working-tree amendment differs from committed Git version")
+        _require_clean(args.amendment)
         amendment = json.loads(amendment_path.read_text(encoding="utf-8"))
-        if amendment.get("original_freeze_sha256") != _sha(freeze_path):
+        if amendment.get("original_freeze_sha256") != _git_sha(args.freeze):
             raise RuntimeError("External amendment does not reference the committed freeze")
     replacements = (
         amendment.get("allowed_infrastructure_replacements", {})
         if amendment else {}
     )
     for entry in freeze["artifact_sha256"].values():
-        path = ROOT / entry["path"]
-        current_sha = _sha(path) if path.is_file() else ""
+        relative_path = entry["path"]
+        _require_clean(relative_path)
+        current_sha = _git_sha(relative_path)
         if current_sha == entry["sha256"]:
             continue
         if replacements.get(entry["path"]) == current_sha:
