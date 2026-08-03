@@ -4,6 +4,12 @@
 项目目录：`Fault_llm_v2/`  
 原型项目：同级目录 `Edge_Fault_LLM/`
 
+## 0A. 2026-08-03 论文撰写会话入口
+
+- 研究点一的最新论文写作上下文见 [`research/RP1_PAPER_WRITING_HANDOFF.md`](research/RP1_PAPER_WRITING_HANDOFF.md)。该文档汇总全量构图、固定页真实API对照、来源族压力、CQ、约束和冻结后MP010–MP013外部Silver处理。
+- 研究点二的最终实验报告见 [`research/RP2_FINAL_EXPERIMENT_REPORT_ZH.md`](research/RP2_FINAL_EXPERIMENT_REPORT_ZH.md)，投稿就绪度重审见 [`research/RP2_PAPER_SUBMISSION_READINESS_REVIEW.md`](research/RP2_PAPER_SUBMISSION_READINESS_REVIEW.md)。
+- MP010–MP013已在主图和研究点二协议冻结后进行一次隔离外部处理，仍不进入主图、不回流调参。本文档后文的“尚未解析”属于历史阶段记录。
+
 ## 0. 2026-07-30 当前状态快照
 
 本节是当前事实入口；后文较早的阶段性统计仅保留为研究演进记录，不得覆盖本节。

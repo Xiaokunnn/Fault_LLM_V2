@@ -133,6 +133,12 @@ Ours K3相对Dense K4的外部Silver回答效用提高0.219，95%置信区间为
 
 ## 9. 结论与可声明边界
 
+### 9.1 绝对质量而非仅横向增益
+
+Ours K3的Silver引用Precision、Recall和F1分别为0.742、0.307和0.354，可回答回答率为91.2%，不可回答正确拒答率为100%，输出契约通过率为97.5%。开发集34个可回答查询平均有7.24条Silver相关证据，K=3条件下的理论宏F1上限约为0.704，因此当前预算归一化F1约为0.503。Silver回答效用0.437对应的K3理论上限约为0.749，当前达到上限的58.4%。
+
+这些结果表明，引用的准确性尚可，但对全部Silver相关证据的覆盖和综合效用仍为中等水平。更严格的双提示语义审计中，Ours的点级严格支持率为42.9%，整条回答全部严格支持率为9.7%。因此本研究只能声称相对Dense RAG的证据预算—质量—时延优化，不能将当前系统表述为已达到高可靠故障诊断水平。详细投稿门槛见`docs/research/RP2_PAPER_SUBMISSION_READINESS_REVIEW.md`。
+
 实验支持以下结论：
 
 1. 在相同的本地7B生成模型下，Ours K3相对Dense K4能以更小的证据预算获得更高的Silver回答效用和引用F1。
@@ -159,4 +165,3 @@ Ours K3相对Dense K4的外部Silver回答效用提高0.219，95%置信区间为
 - 外部评价：`results/experiments/research_point_2/graphrag_v3_external_source_heldout/metrics.json`
 - 外部Silver质量：`results/experiments/heldout_external_v3/rp1_external_quality.json`
 - 冻结协议：`configs/frozen/rp2_v3_frozen_protocol.json`
-

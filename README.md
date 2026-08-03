@@ -4,6 +4,8 @@
 
 后续唯一有效的三研究点主规划见 [`docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)。旧规划仅保留研究演变记录；当前基础和迁移说明见 [`docs/RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md)。
 
+研究点一的新论文撰写对话应先读 [`docs/research/RP1_PAPER_WRITING_HANDOFF.md`](docs/research/RP1_PAPER_WRITING_HANDOFF.md)；该文档包含2026-08-03之后的冻结数据、实验结论、禁止声明和初稿修订任务，优先于本README中保留的早期阶段性记录。
+
 该项目是重新构建的独立主数据线。旧轴承图谱、旧图片和既有实验继续保留在同级 `Edge_Fault_LLM`，不迁入本目录。旧项目只作为算法原型参考，v2 的图谱、数据划分和实验结论必须独立生成。
 
 ## 当前状态
