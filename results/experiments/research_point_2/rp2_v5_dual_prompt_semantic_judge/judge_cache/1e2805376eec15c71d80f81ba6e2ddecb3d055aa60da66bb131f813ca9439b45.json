@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-ad49adbb-9823-9299-b116-6607c3ecee0c",
+  "latency_ms": 10528,
+  "usage": {
+    "completion_tokens": 872,
+    "prompt_tokens": 1665,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2537
+  },
+  "prompt_sha256": "1e2805376eec15c71d80f81ba6e2ddecb3d055aa60da66bb131f813ca9439b45",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4_coverage_guard::CQ-F10-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-7bdaab4344122a94d3d4",
+            "quote": "Leaking shaft seal     - Running dry"
+          }
+        ],
+        "reason_code": "direct_causal_support"
+      },
+      {
+        "item_id": "B1_dense_k4_coverage_guard::CQ-F10-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e6ff926837f6d592f3a1",
+            "quote": "In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          },
+          {
+            "evidence_id": "MPA-7bdaab4344122a94d3d4",
+            "quote": "Leaking shaft seal     - Running dry"
+          }
+        ],
+        "reason_code": "multi_evidence_conjunction"
+      },
+      {
+        "item_id": "B1_dense_k4_coverage_guard::CQ-F10-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-1532e7e26c34d006dc42",
+            "quote": "In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "symptom_as_damage_state"
+      },
+      {
+        "item_id": "B1_dense_k4_coverage_guard::CQ-F10-SYM::summary",
+        "verdict": "supported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-1532e7e26c34d006dc42",
+            "quote": "In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "symptom_as_damage_state"
+      },
+      {
+        "item_id": "B4_role_k3_coverage_guard::CQ-F04-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "troubleshooting_table_causality"
+      },
+      {
+        "item_id": "B4_role_k3_coverage_guard::CQ-F04-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4ccff5b0e877c2077f53",
+            "quote": "lack of liquid will damage the Impeller"
+          }
+        ],
+        "reason_code": "direct_causal_support"
+      }
+    ]
+  }
+}

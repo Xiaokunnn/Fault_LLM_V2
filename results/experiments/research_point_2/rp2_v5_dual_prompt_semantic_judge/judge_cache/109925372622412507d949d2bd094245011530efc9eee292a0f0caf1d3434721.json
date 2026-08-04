@@ -1,0 +1,85 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-9707e53f-ebfd-94b9-97e2-92c1c926e300",
+  "latency_ms": 9507,
+  "usage": {
+    "completion_tokens": 799,
+    "prompt_tokens": 1706,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2505
+  },
+  "prompt_sha256": "109925372622412507d949d2bd094245011530efc9eee292a0f0caf1d3434721",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F01-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-fce4a35a32f4c0a1bf5d",
+            "quote": "Observe the information on maximum flow rates specified in the product literature (to prevent\n        overheating, mechanical seal damage, cavitation damage, bearing damage, etc.)."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F01-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-fce4a35a32f4c0a1bf5d",
+            "quote": "Observe the information on maximum flow rates specified in the product literature (to prevent\n        overheating, mechanical seal damage, cavitation damage, bearing damage, etc.)."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F03-CAUSE::point::0",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "causal_mechanism_simplified"
+      },
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F03-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support_with_hedging"
+      },
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F04-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "evidence_spans": [],
+        "reason_code": "reverse_causality"
+      },
+      {
+        "item_id": "A_ours_v5_k3_coverage_no_guard::CQ-F04-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4ccff5b0e877c2077f53",
+            "quote": "lack of liquid will damage the Impeller"
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}
