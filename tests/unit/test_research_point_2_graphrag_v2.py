@@ -19,6 +19,7 @@ from research_point_2.dataset import (
 from research_point_2.budget_effectiveness import analyze_budget_effectiveness
 from research_point_2.dense_index import DenseEvidenceIndex, evidence_index_text
 from research_point_2.generation import (
+    apply_evidence_coverage_guard,
     apply_faithfulness_guard,
     build_generation_prompt,
     score_silver_response,
@@ -28,6 +29,7 @@ from research_point_2.generation import (
 from research_point_2.graph_rag_v2 import retrieve_dense_graph
 from research_point_2.retrieval import RetrievalBudget, RetrievalIndex
 from scripts.run_automatic_silver_adjudication import external_evaluation_silver_eligible
+from scripts.run_rp2_graphrag_v2 import _retrieval_result
 
 
 def _candidate(eid: str, family: str, label: str) -> EvidenceCandidate:
@@ -143,6 +145,66 @@ def test_evidence_constrained_prompt_and_guard_use_only_visible_contract() -> No
     }
     assert audit["dropped_points"][0]["reason"] == "duplicate_primary_evidence"
     assert audit["used_hidden_fault_labels"] is False
+
+
+def test_evidence_coverage_guard_uses_complementary_direct_candidates() -> None:
+    first = _candidate("E1", "A", "噪声")
+    second = _candidate("E2", "B", "振动")
+    duplicate = replace(_candidate("E3", "C", "重复噪声"), claim_id=first.claim_id)
+    prompt = json.loads(
+        build_generation_prompt(
+            _query(), [first, second, duplicate], strategy="evidence_coverage_v2"
+        )
+    )
+    assert prompt["coverage_contract"]["assess_every_candidate_once"] is True
+    raw = {
+        "evidence_assessments": [
+            {"evidence_id": "E1", "verdict": "direct", "aspect": "噪声"},
+            {"evidence_id": "E2", "verdict": "direct", "aspect": "振动"},
+            {"evidence_id": "E3", "verdict": "direct", "aspect": "重复"},
+        ],
+        "status": "answered",
+        "answer_points": [],
+        "summary": "",
+    }
+    guarded, audit = apply_evidence_coverage_guard(
+        raw,
+        _query(),
+        [first, second, duplicate],
+        {"max_answer_points": 3, "max_point_chars": 80, "max_summary_chars": 100},
+    )
+    assert guarded["status"] == "answered"
+    assert [row["evidence_ids"] for row in guarded["answer_points"]] == [["E1"], ["E2"]]
+    assert audit["assessment_contract_valid"] is True
+    assert audit["dropped_points"][0]["reason"] == "duplicate_claim"
+    assert audit["used_relevance_labels"] is False
+
+
+def test_frozen_retrieval_row_roundtrips() -> None:
+    row = {
+        "query_id": "Q1",
+        "method": "Ours_v4_k3",
+        "ranked": [{
+            "evidence_id": "E1",
+            "score": 0.9,
+            "source_family_id": "A",
+            "claim_id": "C1",
+            "role": "symptom",
+            "fault_match": True,
+            "role_match": True,
+        }],
+        "elapsed_ms": 12.5,
+        "scored_candidates": 32,
+        "selected_evidence": 1,
+        "visited_evidence": 4,
+        "visited_nodes": 3,
+        "visited_edges": 2,
+        "generation_mode": "adaptive_graph",
+        "timed_out": False,
+        "early_stopped": True,
+    }
+    restored = _retrieval_result(row)
+    assert restored.to_dict() == row
 
 
 def test_dense_ours_v4_visible_affinity_does_not_use_hidden_fault_label() -> None:

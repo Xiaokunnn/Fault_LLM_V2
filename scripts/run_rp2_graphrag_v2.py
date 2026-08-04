@@ -20,16 +20,23 @@ from research_point_2.dataset import EvidenceCandidate, SilverQuery, _read_jsonl
 from research_point_2.dense_index import DenseEvidenceIndex  # noqa: E402
 from research_point_2.evaluation import evaluate_results  # noqa: E402
 from research_point_2.generation import (  # noqa: E402
+    apply_evidence_coverage_guard,
     apply_faithfulness_guard,
     fit_prompt_budget,
     score_silver_response,
     summarize_generation_rows,
     system_prompt_for_strategy,
+    validate_candidate_assessment_contract,
     validate_generated_answer,
 )
 from research_point_2.graph_rag_v2 import retrieve_dense_graph  # noqa: E402
 from research_point_2.local_models import BgeM3Encoder, QwenLocalGenerator, model_file_manifest  # noqa: E402
-from research_point_2.retrieval import RetrievalBudget, RetrievalIndex, RetrievalResult  # noqa: E402
+from research_point_2.retrieval import (  # noqa: E402
+    RankedEvidence,
+    RetrievalBudget,
+    RetrievalIndex,
+    RetrievalResult,
+)
 
 
 def _candidate(row: dict) -> EvidenceCandidate:
@@ -47,6 +54,33 @@ def _query(row: dict) -> SilverQuery:
 
 def _closed_book(query: SilverQuery) -> RetrievalResult:
     return RetrievalResult(query.query_id, "closed_book", (), 0.0, 0, 0, 0, 0, 0, "none", False, False)
+
+
+def _retrieval_result(row: dict) -> RetrievalResult:
+    """Restore a frozen retrieval row without recomputing embeddings or graph search."""
+    ranked = tuple(RankedEvidence(**item) for item in row.get("ranked", []))
+    return RetrievalResult(
+        query_id=str(row["query_id"]),
+        method=str(row["method"]),
+        ranked=ranked,
+        elapsed_ms=float(row.get("elapsed_ms", 0.0)),
+        scored_candidates=int(row.get("scored_candidates", 0)),
+        selected_evidence=int(row.get("selected_evidence", len(ranked))),
+        visited_evidence=int(row.get("visited_evidence", 0)),
+        visited_nodes=int(row.get("visited_nodes", 0)),
+        visited_edges=int(row.get("visited_edges", 0)),
+        generation_mode=str(row.get("generation_mode", "frozen_replay")),
+        timed_out=bool(row.get("timed_out", False)),
+        early_stopped=bool(row.get("early_stopped", False)),
+    )
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _scenario_specs(config: dict, requested: list[str] | None, include_ablations: bool) -> list[dict]:
@@ -116,6 +150,10 @@ def main() -> int:
     embed_path = ROOT / config["embedding"]["model_path"]
     generator_path = ROOT / config["generator"]["model_path"]
     index_dir = ROOT / config["embedding"]["index_dir"]
+    frozen_retrieval_path = (
+        ROOT / config["frozen_retrieval_results"]
+        if config.get("frozen_retrieval_results") else None
+    )
     scenarios = _scenario_specs(config, args.methods, args.include_ablations)
     candidates = [_candidate(row) for row in _read_jsonl(benchmark / "evidence_candidates.jsonl")]
     queries = [_query(row) for row in _read_jsonl(benchmark / "queries.jsonl")]
@@ -125,34 +163,51 @@ def main() -> int:
         raise RuntimeError("RP2 v2 forbids positive-seeded candidate pools; use full-graph benchmark")
     print(
         f"[RP2] queries={len(queries)}, graph_candidates={len(candidates)}, "
-        f"scenarios={[row['id'] for row in scenarios]}",
+        f"scenarios={[row['id'] for row in scenarios]}, "
+        f"retrieval={'FROZEN_REPLAY' if frozen_retrieval_path else 'ONLINE'}",
         flush=True,
     )
     if args.dry_run:
         print(
-            f"[RP2] dry-run: benchmark=True, index={index_dir.is_dir()}, "
+            f"[RP2] dry-run: benchmark=True, "
+            f"frozen_retrieval={bool(frozen_retrieval_path and frozen_retrieval_path.is_file())}, "
+            f"index={index_dir.is_dir()}, "
             f"BGE-M3={embed_path.is_dir()}, Qwen={generator_path.is_dir()}",
             flush=True,
         )
         return 0
-    if not index_dir.is_dir():
+    if frozen_retrieval_path and not frozen_retrieval_path.is_file():
+        raise FileNotFoundError(f"Frozen retrieval results missing: {frozen_retrieval_path}")
+    if not frozen_retrieval_path and not index_dir.is_dir():
         raise FileNotFoundError(f"Dense index missing: {index_dir}; run build_rp2_dense_index.py")
-    if not embed_path.is_dir():
+    if not frozen_retrieval_path and not embed_path.is_dir():
         raise FileNotFoundError(f"BGE-M3 model missing: {embed_path}")
     if not args.skip_generation and not generator_path.is_dir():
         raise FileNotFoundError(f"Qwen model missing: {generator_path}")
 
     retrieval_cfg = config["retrieval"]
     require_cuda = bool(args.require_cuda or config.get("runtime", {}).get("require_cuda"))
-    encoder = BgeM3Encoder(
-        embed_path,
-        batch_size=int(config["embedding"]["batch_size"]),
-        max_length=int(config["embedding"]["max_length"]),
-        device=config["embedding"].get("device"),
-        require_cuda=require_cuda,
-    )
-    dense_index = DenseEvidenceIndex.load(index_dir)
-    graph_index = RetrievalIndex(candidates)
+    encoder = None
+    dense_index = None
+    graph_index = None
+    frozen_retrieval: dict[tuple[str, str], RetrievalResult] = {}
+    if frozen_retrieval_path:
+        for row in _read_jsonl(frozen_retrieval_path):
+            restored = _retrieval_result(row)
+            key = (restored.method, restored.query_id)
+            if key in frozen_retrieval:
+                raise RuntimeError(f"Duplicate frozen retrieval key: {key}")
+            frozen_retrieval[key] = restored
+    else:
+        encoder = BgeM3Encoder(
+            embed_path,
+            batch_size=int(config["embedding"]["batch_size"]),
+            max_length=int(config["embedding"]["max_length"]),
+            device=config["embedding"].get("device"),
+            require_cuda=require_cuda,
+        )
+        dense_index = DenseEvidenceIndex.load(index_dir)
+        graph_index = RetrievalIndex(candidates)
     by_id = {row.evidence_id: row for row in candidates}
     generator = None if args.skip_generation else QwenLocalGenerator(
         generator_path,
@@ -181,6 +236,7 @@ def main() -> int:
     for scenario in scenarios:
         scenario_id = str(scenario["id"])
         retrieval_method = str(scenario["retrieval_method"])
+        source_retrieval_method = str(scenario.get("source_retrieval_method", retrieval_method))
         generation_strategy = str(scenario.get("generation_strategy", "freeform_v1"))
         active_system_prompt = system_prompt_for_strategy(generation_strategy)
         system_prompt_sha256 = hashlib.sha256(active_system_prompt.encode("utf-8")).hexdigest()
@@ -195,27 +251,40 @@ def main() -> int:
         for query in queries:
             done += 1
             started = time.perf_counter()
-            result = _closed_book(query) if retrieval_method == "closed_book" else retrieve_dense_graph(
-                query,
-                candidates,
-                graph_index,
-                dense_index,
-                encoder,
-                method=retrieval_method,
-                budget=budget,
-                dense_top_n=int(scenario.get("dense_top_n", retrieval_cfg["dense_top_n"])),
-                anchor_evidence_count=int(scenario.get("anchor_evidence_count", retrieval_cfg["anchor_evidence_count"])),
-                fixed_hops=int(scenario.get("fixed_hops", retrieval_cfg["fixed_hops"])),
-                ours_graph_hops=int(scenario.get("ours_graph_hops", retrieval_cfg.get("ours_graph_hops", 1))),
-                ours_graph_decay=float(scenario.get("ours_graph_decay", retrieval_cfg.get("ours_graph_decay", 0.70))),
-                graph_score_weight=float(scenario.get("graph_score_weight", retrieval_cfg.get("graph_score_weight", 0.12))),
-                fault_affinity_weight=float(scenario.get("fault_affinity_weight", retrieval_cfg.get("fault_affinity_weight", 0.0))),
-                fault_affinity_floor=float(scenario.get("fault_affinity_floor", retrieval_cfg.get("fault_affinity_floor", 0.0))),
-            )
+            if frozen_retrieval_path:
+                key = (source_retrieval_method, query.query_id)
+                if key not in frozen_retrieval:
+                    raise RuntimeError(f"Frozen retrieval row missing: {key}")
+                result = frozen_retrieval[key]
+            else:
+                result = _closed_book(query) if retrieval_method == "closed_book" else retrieve_dense_graph(
+                    query,
+                    candidates,
+                    graph_index,
+                    dense_index,
+                    encoder,
+                    method=retrieval_method,
+                    budget=budget,
+                    dense_top_n=int(scenario.get("dense_top_n", retrieval_cfg["dense_top_n"])),
+                    anchor_evidence_count=int(scenario.get("anchor_evidence_count", retrieval_cfg["anchor_evidence_count"])),
+                    fixed_hops=int(scenario.get("fixed_hops", retrieval_cfg["fixed_hops"])),
+                    ours_graph_hops=int(scenario.get("ours_graph_hops", retrieval_cfg.get("ours_graph_hops", 1))),
+                    ours_graph_decay=float(scenario.get("ours_graph_decay", retrieval_cfg.get("ours_graph_decay", 0.70))),
+                    graph_score_weight=float(scenario.get("graph_score_weight", retrieval_cfg.get("graph_score_weight", 0.12))),
+                    fault_affinity_weight=float(scenario.get("fault_affinity_weight", retrieval_cfg.get("fault_affinity_weight", 0.0))),
+                    fault_affinity_floor=float(scenario.get("fault_affinity_floor", retrieval_cfg.get("fault_affinity_floor", 0.0))),
+                )
             result = replace(result, method=scenario_id)
             results.append(result)
             generation_source = "SKIPPED"
             if generator is not None:
+                missing_evidence = [
+                    row.evidence_id for row in result.ranked if row.evidence_id not in by_id
+                ]
+                if missing_evidence:
+                    raise RuntimeError(
+                        f"Frozen retrieval references unknown benchmark evidence: {missing_evidence}"
+                    )
                 evidence = [by_id[row.evidence_id] for row in result.ranked if row.evidence_id in by_id]
                 prompt, evidence, prompt_budget_dropped, planned_prompt_tokens = fit_prompt_budget(
                     query,
@@ -276,7 +345,12 @@ def main() -> int:
                     generation_source = "MODEL"
                 guard_audit = None
                 if use_faithfulness_guard:
-                    answer, guard_audit = apply_faithfulness_guard(
+                    guard = (
+                        apply_evidence_coverage_guard
+                        if generation_strategy == "evidence_coverage_v2"
+                        else apply_faithfulness_guard
+                    )
+                    answer, guard_audit = guard(
                         raw_answer,
                         query,
                         evidence,
@@ -294,6 +368,14 @@ def main() -> int:
                     max_point_chars=generation_contract["max_point_chars"],
                     max_summary_chars=generation_contract["max_summary_chars"],
                 )
+                if generation_strategy == "evidence_coverage_v2":
+                    assessment_contract_valid = validate_candidate_assessment_contract(
+                        raw_answer, {row.evidence_id for row in evidence}
+                    )
+                    validation["candidate_assessment_contract_valid"] = assessment_contract_valid
+                    validation["contract_valid"] = bool(
+                        validation["contract_valid"] and assessment_contract_valid
+                    )
                 cited = {
                     str(eid)
                     for point in answer.get("answer_points", []) if isinstance(point, dict)
@@ -306,6 +388,7 @@ def main() -> int:
                     "query_id": query.query_id,
                     "method": scenario_id,
                     "retrieval_method": retrieval_method,
+                    "source_retrieval_method": source_retrieval_method,
                     "scenario": scenario,
                     "answer": answer,
                     "raw_model_answer": raw_answer if use_faithfulness_guard else None,
@@ -367,13 +450,20 @@ def main() -> int:
     metrics["run_manifest"] = {
         "protocol_id": config["protocol_id"],
         "protocol_version": config["version"],
-        "embedding_model": model_file_manifest(embed_path),
+        "embedding_model": model_file_manifest(embed_path) if embed_path.is_dir() else None,
         "generator_model": None if args.skip_generation else model_file_manifest(generator_path),
         "full_graph_candidate_count": len(candidates),
         "query_count": len(queries),
         "scenarios": scenarios,
         "generation_contract": generation_contract,
         "force_generation": bool(args.force_generation),
+        "retrieval_replay": bool(frozen_retrieval_path),
+        "frozen_retrieval_results": (
+            str(frozen_retrieval_path.relative_to(ROOT)) if frozen_retrieval_path else None
+        ),
+        "frozen_retrieval_file_sha256": (
+            _sha256(frozen_retrieval_path) if frozen_retrieval_path else None
+        ),
         "system_prompt_sha256_by_scenario": {
             str(row["id"]): hashlib.sha256(
                 system_prompt_for_strategy(str(row.get("generation_strategy", "freeform_v1"))).encode("utf-8")

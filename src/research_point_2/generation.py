@@ -22,14 +22,26 @@ CONSTRAINED_SYSTEM_PROMPT = """你是船舶机舱泵系的证据选择器。你�
 不得删除原证据的否定、条件、可能性、范围和方向；不得将不同证据拼成一个新事实。
 证据不足时必须返回insufficient_evidence。输出严格JSON，不输出Markdown。"""
 
-GENERATION_STRATEGIES = {"freeform_v1", "evidence_constrained_v1"}
+COVERAGE_SYSTEM_PROMPT = """你是船舶机舱泵系的逐证据支持裁决器。必须独立审查每个候选，不得只选最小证据集。
+对每个evidence_id必须输出且只输出一个verdict：direct、indirect或irrelevant。
+direct要求证据同时匹配问题的故障对象、required_role和关系方向，并可直接支持一个回答点；indirect表示仅背景相关或需要额外推断；irrelevant表示对象或角色不匹配。
+若有2至3条互补的direct证据，必须分别引用它们生成2至3个原子回答点；不得因为已有一条可回答证据而停止审查其余候选。
+不得删除否定、条件、可能性、范围和方向；不得拼接跨证据新事实。没有direct证据时返回insufficient_evidence。
+输出严格JSON，不输出Markdown。"""
+
+GENERATION_STRATEGIES = {"freeform_v1", "evidence_constrained_v1", "evidence_coverage_v2"}
 FAITHFULNESS_GUARD_VERSION = "rp2_faithfulness_guard_v1"
+COVERAGE_GUARD_VERSION = "rp2_evidence_coverage_guard_v2"
 
 
 def system_prompt_for_strategy(strategy: str) -> str:
     if strategy not in GENERATION_STRATEGIES:
         raise ValueError(f"unknown generation strategy: {strategy}")
-    return CONSTRAINED_SYSTEM_PROMPT if strategy == "evidence_constrained_v1" else SYSTEM_PROMPT
+    if strategy == "evidence_constrained_v1":
+        return CONSTRAINED_SYSTEM_PROMPT
+    if strategy == "evidence_coverage_v2":
+        return COVERAGE_SYSTEM_PROMPT
+    return SYSTEM_PROMPT
 
 
 class JsonGenerator(Protocol):
@@ -104,6 +116,32 @@ def build_generation_prompt(
             "must_directly_match_fault_object": True,
             "do_not_merge_evidence_into_new_fact": True,
             "answer_text_is_a_draft_and_will_be_checked_against_the_canonical_claim": True,
+        }
+    elif strategy == "evidence_coverage_v2":
+        for row, item in zip(payload["evidence"], evidence):
+            row["evidence_role"] = item.role
+        payload["output_schema"] = {
+            "evidence_assessments": [
+                {
+                    "evidence_id": "候选证据ID",
+                    "verdict": "direct|indirect|irrelevant",
+                    "aspect": "该证据直接支持的简短方面，非direct时为空字符串",
+                }
+            ],
+            "status": "answered|insufficient_evidence",
+            "answer_points": [
+                {"text": "中文原子结论", "evidence_ids": ["唯一的direct证据ID"]}
+            ],
+            "summary": "只概括answer_points的简短中文回答",
+        }
+        payload["coverage_contract"] = {
+            "assessment_count_must_equal_candidate_count": len(evidence),
+            "assess_every_candidate_once": True,
+            "allowed_verdicts": ["direct", "indirect", "irrelevant"],
+            "one_primary_evidence_per_point": True,
+            "use_all_complementary_direct_evidence_up_to_budget": max_answer_points,
+            "do_not_stop_after_first_direct_evidence": True,
+            "do_not_use_external_knowledge": True,
         }
     return json.dumps(payload, ensure_ascii=False, indent=2)
 
@@ -184,6 +222,28 @@ def render_canonical_claim(evidence: EvidenceCandidate, *, max_chars: int) -> st
     return _fit_complete_text(text, max_chars)
 
 
+def validate_candidate_assessment_contract(
+    answer: dict, allowed_evidence_ids: set[str]
+) -> bool:
+    assessments = answer.get("evidence_assessments", [])
+    if not isinstance(assessments, list) or len(assessments) != len(allowed_evidence_ids):
+        return False
+    seen: set[str] = set()
+    for assessment in assessments:
+        if not isinstance(assessment, dict):
+            return False
+        evidence_id = str(assessment.get("evidence_id", ""))
+        verdict = str(assessment.get("verdict", "")).lower()
+        if (
+            evidence_id not in allowed_evidence_ids
+            or evidence_id in seen
+            or verdict not in {"direct", "indirect", "irrelevant"}
+        ):
+            return False
+        seen.add(evidence_id)
+    return seen == allowed_evidence_ids
+
+
 def apply_faithfulness_guard(
     answer: dict,
     query: SilverQuery,
@@ -259,6 +319,142 @@ def apply_faithfulness_guard(
     audit = {
         "version": FAITHFULNESS_GUARD_VERSION,
         "model_status": str(answer.get("status", "")),
+        "proposed_point_count": len(proposed_points),
+        "kept_point_count": len(kept),
+        "dropped_point_count": len(dropped),
+        "dropped_points": dropped,
+        "minimum_visible_fault_affinity": minimum_fault_affinity,
+        "used_hidden_fault_labels": False,
+        "used_relevance_labels": False,
+        "summary_policy": "concatenate_guarded_atomic_points_without_new_facts",
+        "elapsed_ms": (time.perf_counter_ns() - started) / 1_000_000,
+    }
+    return guarded, audit
+
+
+def apply_evidence_coverage_guard(
+    answer: dict,
+    query: SilverQuery,
+    evidence: list[EvidenceCandidate],
+    contract: dict,
+    *,
+    minimum_fault_affinity: float = 0.0,
+) -> tuple[dict, dict]:
+    """Render every model-adjudicated direct candidate up to the evidence budget.
+
+    Candidate assessment is performed by the same local 7B generation call. The
+    deterministic guard never reads Silver relevance labels or fault-class IDs.
+    """
+
+    started = time.perf_counter_ns()
+    by_id = {item.evidence_id: item for item in evidence}
+    assessments = answer.get("evidence_assessments", [])
+    if not isinstance(assessments, list):
+        assessments = []
+    assessment_by_id: dict[str, dict] = {}
+    assessment_issues: list[dict] = []
+    for index, assessment in enumerate(assessments):
+        if not isinstance(assessment, dict):
+            assessment_issues.append({"assessment_index": index, "reason": "not_an_object"})
+            continue
+        evidence_id = str(assessment.get("evidence_id", ""))
+        verdict = str(assessment.get("verdict", "")).lower()
+        if evidence_id not in by_id:
+            assessment_issues.append({
+                "assessment_index": index,
+                "evidence_id": evidence_id,
+                "reason": "unknown_evidence_id",
+            })
+            continue
+        if evidence_id in assessment_by_id:
+            assessment_issues.append({
+                "assessment_index": index,
+                "evidence_id": evidence_id,
+                "reason": "duplicate_assessment",
+            })
+            continue
+        if verdict not in {"direct", "indirect", "irrelevant"}:
+            assessment_issues.append({
+                "assessment_index": index,
+                "evidence_id": evidence_id,
+                "reason": "invalid_verdict",
+            })
+            continue
+        assessment_by_id[evidence_id] = dict(assessment, verdict=verdict)
+
+    direct_ids = {
+        evidence_id
+        for evidence_id, assessment in assessment_by_id.items()
+        if assessment["verdict"] == "direct"
+    }
+    proposed_points = answer.get("answer_points", [])
+    if not isinstance(proposed_points, list):
+        proposed_points = []
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    seen_claims: set[str] = set()
+    max_points = int(contract["max_answer_points"])
+    max_point_chars = int(contract["max_point_chars"])
+    for item in evidence:
+        if item.evidence_id not in direct_ids:
+            continue
+        if len(kept) >= max_points:
+            dropped.append({"evidence_id": item.evidence_id, "reason": "point_budget_exceeded"})
+            continue
+        if item.role != query.role:
+            dropped.append({"evidence_id": item.evidence_id, "reason": "required_role_mismatch"})
+            continue
+        affinity = visible_fault_affinity(query, item)
+        if affinity < minimum_fault_affinity:
+            dropped.append({
+                "evidence_id": item.evidence_id,
+                "reason": "visible_fault_affinity_below_floor",
+                "visible_fault_affinity": affinity,
+            })
+            continue
+        if item.claim_id and item.claim_id in seen_claims:
+            dropped.append({"evidence_id": item.evidence_id, "reason": "duplicate_claim"})
+            continue
+        if item.claim_id:
+            seen_claims.add(item.claim_id)
+        kept.append({
+            "text": render_canonical_claim(item, max_chars=max_point_chars),
+            "evidence_ids": [item.evidence_id],
+        })
+
+    if kept:
+        summary_limit = int(contract["max_summary_chars"])
+        summary_parts: list[str] = []
+        for point in kept:
+            candidate = "".join(summary_parts) + point["text"]
+            if len(candidate) <= summary_limit:
+                summary_parts.append(point["text"])
+        if not summary_parts:
+            summary_parts = [_fit_complete_text(kept[0]["text"], summary_limit)]
+        guarded = {"status": "answered", "answer_points": kept, "summary": "".join(summary_parts)}
+    else:
+        guarded = {
+            "status": "insufficient_evidence",
+            "answer_points": [],
+            "summary": "现有证据不足，无法回答。",
+        }
+    missing_assessments = [
+        item.evidence_id for item in evidence if item.evidence_id not in assessment_by_id
+    ]
+    audit = {
+        "version": COVERAGE_GUARD_VERSION,
+        "model_status": str(answer.get("status", "")),
+        "candidate_count": len(evidence),
+        "valid_assessment_count": len(assessment_by_id),
+        "assessment_contract_valid": (
+            len(assessment_by_id) == len(evidence) and not assessment_issues
+        ),
+        "missing_assessment_ids": missing_assessments,
+        "assessment_issues": assessment_issues,
+        "verdict_counts": {
+            verdict: sum(row["verdict"] == verdict for row in assessment_by_id.values())
+            for verdict in ("direct", "indirect", "irrelevant")
+        },
         "proposed_point_count": len(proposed_points),
         "kept_point_count": len(kept),
         "dropped_point_count": len(dropped),
@@ -395,6 +591,9 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
     answerable = [row for row in rows if query_by_id[row["query_id"]].relevant_evidence_ids]
     unanswerable = [row for row in rows if not query_by_id[row["query_id"]].relevant_evidence_ids]
     answered = [row for row in rows if row["validation"].get("status") == "answered"]
+    answered_citation_counts = [
+        int(row["validation"].get("citation_count", 0)) for row in answered
+    ]
     relevant_recalls = [
         float(row["relevant_citation_recall"])
         for row in rows
@@ -457,6 +656,19 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
     return {
         "samples": len(rows),
         "answered_queries": len(answered),
+        "citations_per_answered_query_mean": (
+            statistics.fmean(answered_citation_counts)
+            if answered_citation_counts else None
+        ),
+        "answered_query_citation_count_distribution": {
+            str(count): answered_citation_counts.count(count)
+            for count in sorted(set(answered_citation_counts))
+        },
+        "multi_citation_answer_rate": (
+            sum(count >= 2 for count in answered_citation_counts)
+            / len(answered_citation_counts)
+            if answered_citation_counts else None
+        ),
         "insufficient_evidence_queries": sum(
             row["validation"].get("status") == "insufficient_evidence" for row in rows
         ),
@@ -523,6 +735,18 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
         ),
         "faithfulness_guard_dropped_point_count": sum(
             int(row.get("dropped_point_count", 0)) for row in guard_rows
+        ),
+        "candidate_assessment_contract_rate": (
+            statistics.fmean(
+                float(bool(row["validation"].get("candidate_assessment_contract_valid")))
+                for row in rows
+                if "candidate_assessment_contract_valid" in row["validation"]
+            )
+            if any(
+                "candidate_assessment_contract_valid" in row["validation"]
+                for row in rows
+            )
+            else None
         ),
         "cuda_peak_memory_bytes_max": max(
             (int(row.get("model_metrics", {}).get("cuda_peak_memory_bytes", 0)) for row in rows),

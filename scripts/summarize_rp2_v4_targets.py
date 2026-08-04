@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Summarize preregistered RP2 v4 paper-readiness gates without relabeling data."""
+"""Summarize configured RP2 paper-readiness gates without relabeling data."""
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ def main() -> int:
     parser.add_argument("--config", default="configs/rp2_graphrag_v4_faithfulness.json")
     parser.add_argument(
         "--judge",
-        default="results/experiments/research_point_2/rp2_v4_dual_prompt_semantic_judge/semantic_judge_summary.json",
+        default=None,
     )
     args = parser.parse_args()
     config = _json(ROOT / args.config)
@@ -41,7 +41,13 @@ def main() -> int:
     if not metrics_path.is_file():
         raise FileNotFoundError(f"Missing v4 metrics: {metrics_path}")
     metrics = _json(metrics_path)
-    judge_path = ROOT / args.judge
+    judge_path = ROOT / (
+        args.judge
+        or config.get(
+            "paper_readiness_judge_summary",
+            "results/experiments/research_point_2/rp2_v4_dual_prompt_semantic_judge/semantic_judge_summary.json",
+        )
+    )
     judge = _json(judge_path) if judge_path.is_file() else {}
     benchmark = ROOT / config["benchmark_dir"] / "queries.jsonl"
     queries = [json.loads(line) for line in benchmark.open(encoding="utf-8") if line.strip()]
@@ -76,11 +82,22 @@ def main() -> int:
             "answerable_answer_rate": values.get("answerable_answer_rate"),
             "unanswerable_abstention_rate": values.get("unanswerable_abstention_rate"),
             "strict_contract_rate": values.get("strict_contract_rate"),
+            "candidate_assessment_contract_rate": values.get(
+                "candidate_assessment_contract_rate"
+            ),
+            "citations_per_answered_query_mean": values.get(
+                "citations_per_answered_query_mean"
+            ),
+            "multi_citation_answer_rate": values.get("multi_citation_answer_rate"),
             "end_to_end_inference_latency_ms_p95": latency,
         })
     by_method = {row["method"]: row for row in rows}
-    proposed = by_method.get("Ours_v4_k3", {})
-    reference = by_method.get("B1_dense_k4_guard", {})
+    selected_method = str(config.get("paper_readiness_selected_method", "Ours_v4_k3"))
+    latency_reference = str(
+        config.get("paper_readiness_latency_reference", "B1_dense_k4_guard")
+    )
+    proposed = by_method.get(selected_method, {})
+    reference = by_method.get(latency_reference, {})
     latency_ratio = (
         float(proposed["end_to_end_inference_latency_ms_p95"])
         / float(reference["end_to_end_inference_latency_ms_p95"])
@@ -113,7 +130,8 @@ def main() -> int:
         }
     report = {
         "protocol_id": config["protocol_id"],
-        "selected_method": "Ours_v4_k3",
+        "selected_method": selected_method,
+        "latency_reference_method": latency_reference,
         "methods": rows,
         "paper_readiness_gates": gate_results,
         "all_available_gates_passed": (
@@ -133,32 +151,35 @@ def main() -> int:
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     lines = [
-        "# RP2 v4 论文就绪门槛",
+        f"# RP2 论文就绪门槛：{config['protocol_id']}",
         "",
         "所有证据与语义标签均为 Silver，未经领域专家审核。",
         "",
-        "| 方法 | P | F1 | 预算归一F1 | 严格点支持 | 全原子主张支持 | 可回答回答率 | 不可回答拒答率 | p95 ms |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| 方法 | P | F1 | 预算归一F1 | 平均引用 | 多引用率 | 逐候选契约 | 严格点支持 | 全原子主张支持 | 可回答回答率 | 不可回答拒答率 | p95 ms |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
         lines.append(
             f"| {row['method']} | {_fmt(row['silver_citation_precision_macro'])} | "
             f"{_fmt(row['silver_citation_f1_macro_answerable'])} | "
             f"{_fmt(row['budget_normalized_silver_citation_f1'])} | "
+            f"{_fmt(row['citations_per_answered_query_mean'])} | "
+            f"{_fmt(row['multi_citation_answer_rate'])} | "
+            f"{_fmt(row['candidate_assessment_contract_rate'])} | "
             f"{_fmt(row['dual_strict_point_support_rate'])} | "
             f"{_fmt(row['all_atomic_claims_strictly_supported_answer_rate'])} | "
             f"{_fmt(row['answerable_answer_rate'])} | {_fmt(row['unanswerable_abstention_rate'])} | "
             f"{_fmt(row['end_to_end_inference_latency_ms_p95'])} |"
         )
-    lines.extend(["", "## Ours v4 门槛", ""])
+    lines.extend(["", f"## {selected_method} 门槛", ""])
     for name, gate in gate_results.items():
         state = "PENDING" if gate["passed"] is None else ("PASS" if gate["passed"] else "FAIL")
         lines.append(
             f"- {name}: {_fmt(gate['value'])} {gate['operator']} {gate['target']:.3f} — {state}"
         )
     (output / "paper_readiness_targets.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"[RP2 v4 targets] completed: {output / 'paper_readiness_targets.md'}")
-    print(f"[RP2 v4 targets] all gates passed={report['all_available_gates_passed']}")
+    print(f"[RP2 targets] completed: {output / 'paper_readiness_targets.md'}")
+    print(f"[RP2 targets] selected={selected_method}, all gates passed={report['all_available_gates_passed']}")
     return 0
 
 
