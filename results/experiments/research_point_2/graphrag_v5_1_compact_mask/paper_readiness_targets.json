@@ -1,0 +1,127 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v5_1_compact_mask",
+  "selected_method": "Ours_v5_1_k3_compact",
+  "latency_reference_method": "B1_dense_k4_compact",
+  "methods": [
+    {
+      "method": "B1_dense_k4_compact",
+      "budget": 4,
+      "silver_citation_precision_macro": 0.856060606060606,
+      "silver_citation_f1_macro_answerable": 0.2331430496354522,
+      "budget_oracle_f1_macro": 0.7779648143842518,
+      "budget_normalized_silver_citation_f1": 0.2996832830029487,
+      "dual_strict_point_support_rate": 0.9459459459459459,
+      "all_atomic_claims_strictly_supported_answer_rate": 0.9545454545454546,
+      "all_text_strictly_supported_answer_rate": 0.9545454545454546,
+      "answerable_answer_rate": 0.6470588235294118,
+      "unanswerable_abstention_rate": 1.0,
+      "strict_contract_rate": 1.0,
+      "candidate_assessment_contract_rate": 1.0,
+      "citations_per_answered_query_mean": 1.6818181818181819,
+      "multi_citation_answer_rate": 0.5,
+      "end_to_end_inference_latency_ms_p95": 579.3858185322581
+    },
+    {
+      "method": "B4_role_k3_compact",
+      "budget": 3,
+      "silver_citation_precision_macro": 0.8392857142857143,
+      "silver_citation_f1_macro_answerable": 0.31178091503802347,
+      "budget_oracle_f1_macro": 0.7042345604769887,
+      "budget_normalized_silver_citation_f1": 0.4427231103609137,
+      "dual_strict_point_support_rate": 0.926829268292683,
+      "all_atomic_claims_strictly_supported_answer_rate": 0.8928571428571429,
+      "all_text_strictly_supported_answer_rate": 0.8928571428571429,
+      "answerable_answer_rate": 0.8235294117647058,
+      "unanswerable_abstention_rate": 1.0,
+      "strict_contract_rate": 1.0,
+      "candidate_assessment_contract_rate": 1.0,
+      "citations_per_answered_query_mean": 1.4642857142857142,
+      "multi_citation_answer_rate": 0.35714285714285715,
+      "end_to_end_inference_latency_ms_p95": 459.3796949416329
+    },
+    {
+      "method": "Ours_v5_1_k3_compact",
+      "budget": 3,
+      "silver_citation_precision_macro": 0.8181818181818182,
+      "silver_citation_f1_macro_answerable": 0.36983278159748745,
+      "budget_oracle_f1_macro": 0.7042345604769887,
+      "budget_normalized_silver_citation_f1": 0.5251556829971453,
+      "dual_strict_point_support_rate": 0.8888888888888888,
+      "all_atomic_claims_strictly_supported_answer_rate": 0.8484848484848485,
+      "all_text_strictly_supported_answer_rate": 0.8484848484848485,
+      "answerable_answer_rate": 0.9705882352941176,
+      "unanswerable_abstention_rate": 1.0,
+      "strict_contract_rate": 1.0,
+      "candidate_assessment_contract_rate": 1.0,
+      "citations_per_answered_query_mean": 1.6363636363636365,
+      "multi_citation_answer_rate": 0.45454545454545453,
+      "end_to_end_inference_latency_ms_p95": 490.81111318254733,
+      "p95_latency_ratio_vs_dense_k4": 0.8471231043001801
+    }
+  ],
+  "paper_readiness_gates": {
+    "silver_citation_precision_macro": {
+      "value": 0.8181818181818182,
+      "target": 0.8,
+      "operator": ">=",
+      "passed": true
+    },
+    "budget_normalized_silver_citation_f1": {
+      "value": 0.5251556829971453,
+      "target": 0.65,
+      "operator": ">=",
+      "passed": false
+    },
+    "dual_strict_point_support_rate": {
+      "value": 0.8888888888888888,
+      "target": 0.6,
+      "operator": ">=",
+      "passed": true
+    },
+    "all_atomic_claims_strictly_supported_answer_rate": {
+      "value": 0.8484848484848485,
+      "target": 0.3,
+      "operator": ">=",
+      "passed": true
+    },
+    "all_text_strictly_supported_answer_rate": {
+      "value": 0.8484848484848485,
+      "target": 0.3,
+      "operator": ">=",
+      "passed": true
+    },
+    "answerable_answer_rate": {
+      "value": 0.9705882352941176,
+      "target": 0.85,
+      "operator": ">=",
+      "passed": true
+    },
+    "unanswerable_abstention_rate": {
+      "value": 1.0,
+      "target": 0.95,
+      "operator": ">=",
+      "passed": true
+    },
+    "strict_contract_rate": {
+      "value": 1.0,
+      "target": 0.95,
+      "operator": ">=",
+      "passed": true
+    },
+    "p95_latency_ratio_vs_dense_k4_max": {
+      "value": 0.8471231043001801,
+      "target": 1.05,
+      "operator": "<=",
+      "passed": true
+    }
+  },
+  "all_available_gates_passed": false,
+  "metric_policy": {
+    "budget_normalized_f1": "macro Silver citation F1 divided by the per-query ideal F1 achievable under the same evidence budget",
+    "semantic_support": "dual prompts of one qwen3.7-max model; Silver semantic audit, not human expert verification",
+    "no_posthoc_relabeling": true,
+    "unanswerable_and_contract_gates_prevent_abstention_gaming": true
+  },
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

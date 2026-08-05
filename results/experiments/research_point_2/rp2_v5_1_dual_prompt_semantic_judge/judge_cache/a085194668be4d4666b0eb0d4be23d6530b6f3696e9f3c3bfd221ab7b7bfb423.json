@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-fc5d856b-6380-968e-8f47-6ba7c9ac40b9",
+  "latency_ms": 10845,
+  "usage": {
+    "completion_tokens": 901,
+    "prompt_tokens": 2157,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3058
+  },
+  "prompt_sha256": "a085194668be4d4666b0eb0d4be23d6530b6f3696e9f3c3bfd221ab7b7bfb423",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "The pump does not\nprime\n--- CELL ---\n1. The pump is not filled\nwith liquid\n2. Leaking non-return\nvalve in pump\n3. Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "4. Air is drawn in because\nof too little liquid or\nleaking suction line"
+          },
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "3. Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "Lower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "Lower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      }
+    ]
+  }
+}

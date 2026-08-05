@@ -1,0 +1,98 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-cc12f911-8ef1-91d2-b23b-f39542c48e59",
+  "latency_ms": 13111,
+  "usage": {
+    "completion_tokens": 1043,
+    "prompt_tokens": 2027,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3070
+  },
+  "prompt_sha256": "209438c73ee2c14f62db8886f977d0fb8f7d83fb555a5434b18331ef4fb7f367",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-MAINT::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b9b7fad781ef2e3e035f",
+            "quote": "Piping is to be arranged to\n                 prevent pooling of oil condensate which may cause a blockage of the sampling pipe over time."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-MAINT::point::2",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "The pump does not\nprime\n--- CELL ---\nFill pump casing with liquid\nRemove foreign body in\npump/Remove any coating\non mating faces\nChange direction of rotation\nLower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-MAINT::summary",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-dcc1a886d9f48fcb8c78",
+            "quote": "Check Impeller for signs of wear or damage, replace if\n     required."
+          },
+          {
+            "evidence_id": "MPA-b9b7fad781ef2e3e035f",
+            "quote": "Piping is to be arranged to\n                 prevent pooling of oil condensate which may cause a blockage of the sampling pipe over time."
+          },
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "The pump does not\nprime\n--- CELL ---\nFill pump casing with liquid\nRemove foreign body in\npump/Remove any coating\non mating faces\nChange direction of rotation\nLower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "object_substitution_in_aggregation"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F04-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F04-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F04-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c06f09d4417784779d15",
+            "quote": "Check Impeller for signs of wear or damage, replace if\n     required."
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

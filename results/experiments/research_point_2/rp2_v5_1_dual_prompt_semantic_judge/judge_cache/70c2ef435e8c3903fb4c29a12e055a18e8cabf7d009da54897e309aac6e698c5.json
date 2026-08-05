@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-470e39da-1516-9dea-8d01-56f0b27594b4",
+  "latency_ms": 12661,
+  "usage": {
+    "completion_tokens": 1058,
+    "prompt_tokens": 2150,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 3208
+  },
+  "prompt_sha256": "70c2ef435e8c3903fb4c29a12e055a18e8cabf7d009da54897e309aac6e698c5",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "The pump does not\nprime\n--- CELL ---\n1. The pump is not filled\nwith liquid\n2. Leaking non-return\nvalve in pump\n3. Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "The pump does not\nprime\n--- CELL ---\n1. The pump is not filled\nwith liquid\n2. Leaking non-return\nvalve in pump\n3. Wrong direction of\nrotation\n4. Air is drawn in because\nof too little liquid or\nleaking suction line"
+          },
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "The pump does not\nprime\n--- CELL ---\n1. The pump is not filled\nwith liquid\n2. Leaking non-return\nvalve in pump\n3. Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "The pump does not\nprime\n--- CELL ---\nFill pump casing with liquid\nRemove foreign body in\npump/Remove any coating\non mating faces\nChange direction of rotation\nLower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F02-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f8105520e81e0b060c23",
+            "quote": "The pump does not\nprime\n--- CELL ---\nFill pump casing with liquid\nRemove foreign body in\npump/Remove any coating\non mating faces\nChange direction of rotation\nLower suction pipe/Tighten\nsuction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F03-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "contradiction_or_no_basis"
+      }
+    ]
+  }
+}

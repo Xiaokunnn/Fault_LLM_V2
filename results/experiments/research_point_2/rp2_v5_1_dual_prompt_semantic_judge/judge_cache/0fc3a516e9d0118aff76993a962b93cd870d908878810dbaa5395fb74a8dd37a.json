@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-dcad9065-139b-99ac-8584-a6f4016459bd",
+  "latency_ms": 10660,
+  "usage": {
+    "completion_tokens": 889,
+    "prompt_tokens": 1749,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2638
+  },
+  "prompt_sha256": "0fc3a516e9d0118aff76993a962b93cd870d908878810dbaa5395fb74a8dd37a",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8b493c0ffd607a3a1dac",
+            "quote": "Hot bearings\n--- CELL ---\nInsufficient grease"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-3af53607169f97a8540e",
+            "quote": "Hot bearings\n--- CELL ---\nExcess lubricant"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8b493c0ffd607a3a1dac",
+            "quote": "Hot bearings\n--- CELL ---\nInsufficient grease"
+          },
+          {
+            "evidence_id": "MPA-3af53607169f97a8540e",
+            "quote": "Hot bearings\n--- CELL ---\nExcess lubricant"
+          }
+        ],
+        "reason_code": "aggregation_supported"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-520b464cdc80017039af",
+            "quote": "Check the bearing and stuffing box for proper\n       lubrication"
+          }
+        ],
+        "reason_code": "direct_inspection_method"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-INS::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-520b464cdc80017039af",
+            "quote": "Check the bearing and stuffing box for proper\n       lubrication"
+          }
+        ],
+        "reason_code": "direct_inspection_method"
+      },
+      {
+        "item_id": "Ours_v5_1_k3_compact::CQ-F06-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-630121f09342d1a9206a",
+            "quote": "Observe the information on maximum flow rates specified in the product literature (to prevent\n        overheating, mechanical seal damage, cavitation damage, bearing damage, etc.)."
+          }
+        ],
+        "reason_code": "explicit_prevention_measure"
+      }
+    ]
+  }
+}
