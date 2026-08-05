@@ -22,6 +22,7 @@ from research_point_2.evaluation import evaluate_results  # noqa: E402
 from research_point_2.generation import (  # noqa: E402
     apply_evidence_coverage_guard,
     apply_faithfulness_guard,
+    expand_compact_evidence_mask,
     fit_prompt_budget,
     score_silver_response,
     summarize_generation_rows,
@@ -318,17 +319,31 @@ def main() -> int:
                 ).hexdigest()
                 cache_path = cache_dir / f"{cache_key}.json"
                 generation_started = time.perf_counter()
-                if cache_path.exists() and not args.force_generation:
+                if generation_strategy == "evidence_mask_v3" and not evidence:
+                    model_payload = {"direct": []}
+                    generation_metrics = {
+                        "prompt_tokens": 0,
+                        "generated_tokens": 0,
+                        "input_preparation_ms": 0.0,
+                        "elapsed_ms": 0.0,
+                        "tokens_per_second": 0.0,
+                        "cuda_peak_memory_bytes": 0,
+                        "cuda_allocated_memory_bytes": 0,
+                        "model_output_valid_json": True,
+                        "deterministic_empty_short_circuit": True,
+                    }
+                    generation_source = "DETERMINISTIC_EMPTY"
+                elif cache_path.exists() and not args.force_generation:
                     cached = json.loads(cache_path.read_text(encoding="utf-8"))
                     if "answer" in cached:
-                        raw_answer = cached["answer"]
+                        model_payload = cached["answer"]
                         generation_metrics = cached.get("generation_metrics", {})
                     else:
-                        raw_answer = cached
+                        model_payload = cached
                         generation_metrics = {}
                     generation_source = "CACHE"
                 else:
-                    raw_answer = generator.generate_json(
+                    model_payload = generator.generate_json(
                         active_system_prompt,
                         prompt,
                         max_new_tokens=int(scenario.get("max_new_tokens", config["generator"]["max_new_tokens"])),
@@ -336,18 +351,25 @@ def main() -> int:
                     generation_metrics = dict(generator.last_metrics)
                     cache_path.write_text(
                         json.dumps(
-                            {"answer": raw_answer, "generation_metrics": generation_metrics},
+                            {"answer": model_payload, "generation_metrics": generation_metrics},
                             ensure_ascii=False,
                             indent=2,
                         ),
                         encoding="utf-8",
                     )
                     generation_source = "MODEL"
+                compact_mask_audit = None
+                if generation_strategy == "evidence_mask_v3":
+                    raw_answer, compact_mask_audit = expand_compact_evidence_mask(
+                        model_payload, evidence
+                    )
+                else:
+                    raw_answer = model_payload
                 guard_audit = None
                 if use_faithfulness_guard:
                     guard = (
                         apply_evidence_coverage_guard
-                        if generation_strategy == "evidence_coverage_v2"
+                        if generation_strategy in {"evidence_coverage_v2", "evidence_mask_v3"}
                         else apply_faithfulness_guard
                     )
                     answer, guard_audit = guard(
@@ -368,7 +390,7 @@ def main() -> int:
                     max_point_chars=generation_contract["max_point_chars"],
                     max_summary_chars=generation_contract["max_summary_chars"],
                 )
-                if generation_strategy == "evidence_coverage_v2":
+                if generation_strategy in {"evidence_coverage_v2", "evidence_mask_v3"}:
                     assessment_contract_valid = validate_candidate_assessment_contract(
                         raw_answer, {row.evidence_id for row in evidence}
                     )
@@ -392,6 +414,10 @@ def main() -> int:
                     "scenario": scenario,
                     "answer": answer,
                     "raw_model_answer": raw_answer if use_faithfulness_guard else None,
+                    "raw_model_payload": (
+                        model_payload if generation_strategy == "evidence_mask_v3" else None
+                    ),
+                    "compact_mask_audit": compact_mask_audit,
                     "generation_strategy": generation_strategy,
                     "faithfulness_guard": guard_audit,
                     "validation": validation,

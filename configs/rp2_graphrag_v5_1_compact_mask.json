@@ -1,0 +1,124 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v5_1_compact_mask",
+  "version": "0.5.1-development-final-compact-generation-retest",
+  "status": "final_compact_generation_retest_before_protocol_freeze",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {"require_cuda": true},
+  "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "frozen_retrieval_results": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+  "output_dir": "results/experiments/research_point_2/graphrag_v5_1_compact_mask",
+  "embedding": {
+    "model_path": "data/model/BAAI-bge-m3",
+    "backend": "frozen_retrieval_replay_only",
+    "device": "not_loaded",
+    "batch_size": 16,
+    "max_length": 8192,
+    "index_dir": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated"
+  },
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "temperature": 0.0,
+    "do_sample": false,
+    "max_new_tokens": 64,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_compact_mask_v5_1"
+  },
+  "generation_contract": {
+    "max_prompt_tokens": 1536,
+    "max_answer_points": 3,
+    "max_point_chars": 80,
+    "max_summary_chars": 100,
+    "latency_scope": "frozen v4 retrieval latency plus warm local compact-mask generation and deterministic evidence rendering; model loading excluded"
+  },
+  "retrieval": {
+    "dense_top_n": 32,
+    "anchor_evidence_count": 8,
+    "max_scored_candidates": 32,
+    "max_selected_evidence": 4,
+    "max_per_source_family": 3,
+    "source_family_bonus": 0.06,
+    "redundancy_penalty": 0.0,
+    "fixed_hops": 2,
+    "ours_graph_hops": 1,
+    "ours_graph_decay": 0.70,
+    "graph_score_weight": 0.24,
+    "fault_affinity_weight": 0.35,
+    "fault_affinity_floor": 0.03
+  },
+  "scenarios": [
+    {
+      "id": "B1_dense_k4_compact",
+      "retrieval_method": "dense_topk",
+      "source_retrieval_method": "B1_dense_k4_guard",
+      "max_selected_evidence": 4,
+      "generation_strategy": "evidence_mask_v3",
+      "faithfulness_guard": true,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "B4_role_k3_compact",
+      "retrieval_method": "dense_metapath",
+      "source_retrieval_method": "B4_metapath_k3_guard",
+      "max_selected_evidence": 3,
+      "generation_strategy": "evidence_mask_v3",
+      "faithfulness_guard": true,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "Ours_v5_1_k3_compact",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v4_k3",
+      "max_selected_evidence": 3,
+      "generation_strategy": "evidence_mask_v3",
+      "faithfulness_guard": true,
+      "minimum_visible_fault_affinity": 0.05
+    }
+  ],
+  "effectiveness_tests": [
+    {
+      "id": "compact_ours_vs_dense_k4",
+      "reference_id": "B1_dense_k4_compact",
+      "proposed_ids": ["Ours_v5_1_k3_compact"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260810
+    },
+    {
+      "id": "compact_same_budget_vs_role_k3",
+      "reference_id": "B4_role_k3_compact",
+      "proposed_ids": ["Ours_v5_1_k3_compact"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260811
+    }
+  ],
+  "paper_readiness_selected_method": "Ours_v5_1_k3_compact",
+  "paper_readiness_latency_reference": "B1_dense_k4_compact",
+  "paper_readiness_judge_summary": "results/experiments/research_point_2/rp2_v5_1_dual_prompt_semantic_judge/semantic_judge_summary.json",
+  "paper_readiness_targets": {
+    "silver_citation_precision_macro": 0.80,
+    "budget_normalized_silver_citation_f1": 0.65,
+    "dual_strict_point_support_rate": 0.60,
+    "all_atomic_claims_strictly_supported_answer_rate": 0.30,
+    "all_text_strictly_supported_answer_rate": 0.30,
+    "answerable_answer_rate": 0.85,
+    "unanswerable_abstention_rate": 0.95,
+    "strict_contract_rate": 0.95,
+    "p95_latency_ratio_vs_dense_k4_max": 1.05
+  },
+  "anti_leakage": {
+    "online_forbidden_fields": ["fault_class_ids", "relevant_evidence_ids"],
+    "visible_fault_affinity_fields": ["query.fault_name_zh", "candidate.head_label_zh", "candidate.tail_label_zh"],
+    "heldout_documents_forbidden_during_development": ["MP009", "MP010", "MP011", "MP012", "MP013"],
+    "frozen_retrieval_reused_without_reranking": true,
+    "compact_mask_uses_candidate_order_only": true,
+    "zero_candidate_queries_short_circuit_without_model": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}

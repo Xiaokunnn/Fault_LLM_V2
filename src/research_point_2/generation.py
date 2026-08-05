@@ -29,7 +29,16 @@ direct要求证据同时匹配问题的故障对象、required_role和关系方�
 不得删除否定、条件、可能性、范围和方向；不得拼接跨证据新事实。没有direct证据时返回insufficient_evidence。
 输出严格JSON，不输出Markdown。"""
 
-GENERATION_STRATEGIES = {"freeform_v1", "evidence_constrained_v1", "evidence_coverage_v2"}
+COMPACT_MASK_SYSTEM_PROMPT = """你是船舶机舱泵系证据的逐候选二分类器。按输入顺序判断每条候选能否直接回答问题。
+只有候选本身同时匹配故障对象、required_role和关系方向时标1；背景相关、需要推断、对象不符或角色不符均标0。问题中的故障名称可能是并列组合类别；候选若明确描述其中一个列举成员、部件或子类型，应视为故障对象匹配。规范化claim是主要语义，verbatim用于核对其有原文依据。每条候选独立判断，不得因已有一个1而停止或压缩其余有效证据。
+必须检查全部候选。只输出一个JSON对象：{\"direct\":[0或1,...]}。数组长度必须等于候选数；禁止输出证据ID、解释、回答文本、Markdown或其他字段。"""
+
+GENERATION_STRATEGIES = {
+    "freeform_v1",
+    "evidence_constrained_v1",
+    "evidence_coverage_v2",
+    "evidence_mask_v3",
+}
 FAITHFULNESS_GUARD_VERSION = "rp2_faithfulness_guard_v1"
 COVERAGE_GUARD_VERSION = "rp2_evidence_coverage_guard_v2"
 
@@ -41,6 +50,8 @@ def system_prompt_for_strategy(strategy: str) -> str:
         return CONSTRAINED_SYSTEM_PROMPT
     if strategy == "evidence_coverage_v2":
         return COVERAGE_SYSTEM_PROMPT
+    if strategy == "evidence_mask_v3":
+        return COMPACT_MASK_SYSTEM_PROMPT
     return SYSTEM_PROMPT
 
 
@@ -78,6 +89,32 @@ def build_generation_prompt(
 ) -> str:
     if strategy not in GENERATION_STRATEGIES:
         raise ValueError(f"unknown generation strategy: {strategy}")
+    if strategy == "evidence_mask_v3":
+        return json.dumps(
+            {
+                "question": query.question_zh,
+                "required_role": query.role,
+                "candidates": [
+                    {
+                        "candidate": index,
+                        "role": item.role,
+                        "claim": (
+                            f"{item.head_label_zh} --{item.relation}--> "
+                            f"{item.tail_label_zh}"
+                        ),
+                        "verbatim": item.evidence_text,
+                    }
+                    for index, item in enumerate(evidence, start=1)
+                ],
+                "output": {
+                    "direct": [
+                        "按候选顺序输出0或1；长度必须与candidates相同"
+                    ]
+                },
+            },
+            ensure_ascii=False,
+            separators=(",", ":"),
+        )
     payload = {
         "question": query.question_zh,
         "required_role": query.role,
@@ -242,6 +279,66 @@ def validate_candidate_assessment_contract(
             return False
         seen.add(evidence_id)
     return seen == allowed_evidence_ids
+
+
+def expand_compact_evidence_mask(
+    answer: dict, evidence: list[EvidenceCandidate]
+) -> tuple[dict, dict]:
+    """Map a short ordered 0/1 mask back to immutable evidence IDs.
+
+    The model never has to reproduce long IDs. Invalid or incomplete masks fail
+    closed and are never repaired with Silver relevance labels.
+    """
+
+    values = answer.get("direct", []) if isinstance(answer, dict) else []
+    normalized: list[int] = []
+    issues: list[str] = []
+    if not isinstance(values, list):
+        issues.append("direct_is_not_a_list")
+        values = []
+    for value in values:
+        if value in (0, False, "0"):
+            normalized.append(0)
+        elif value in (1, True, "1"):
+            normalized.append(1)
+        else:
+            issues.append("non_binary_value")
+    if len(normalized) != len(evidence):
+        issues.append("mask_length_mismatch")
+    contract_valid = not issues
+    assessments = []
+    if contract_valid:
+        assessments = [
+            {
+                "evidence_id": item.evidence_id,
+                "verdict": "direct" if verdict else "irrelevant",
+                "aspect": "",
+            }
+            for item, verdict in zip(evidence, normalized)
+        ]
+    expanded = {
+        "evidence_assessments": assessments,
+        "status": (
+            "answered"
+            if contract_valid and any(normalized)
+            else "insufficient_evidence"
+            if contract_valid
+            else "invalid_model_output"
+        ),
+        "answer_points": [],
+        "summary": "",
+    }
+    audit = {
+        "version": "rp2_compact_evidence_mask_v3",
+        "candidate_count": len(evidence),
+        "raw_mask_length": len(values),
+        "normalized_mask": normalized if contract_valid else None,
+        "mask_contract_valid": contract_valid,
+        "issues": issues,
+        "used_hidden_fault_labels": False,
+        "used_relevance_labels": False,
+    }
+    return expanded, audit
 
 
 def apply_faithfulness_guard(
@@ -754,5 +851,8 @@ def summarize_generation_rows(rows: list[dict], query_by_id: dict[str, SilverQue
         ),
         "cache_hits": sum(row.get("source") == "CACHE" for row in rows),
         "model_calls": sum(row.get("source") == "MODEL" for row in rows),
+        "deterministic_empty_short_circuits": sum(
+            row.get("source") == "DETERMINISTIC_EMPTY" for row in rows
+        ),
         "metric_boundary": "citation ID validity is not semantic entailment or expert factual accuracy",
     }

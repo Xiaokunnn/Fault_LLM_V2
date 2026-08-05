@@ -22,6 +22,7 @@ from research_point_2.generation import (
     apply_evidence_coverage_guard,
     apply_faithfulness_guard,
     build_generation_prompt,
+    expand_compact_evidence_mask,
     score_silver_response,
     summarize_generation_rows,
     validate_generated_answer,
@@ -178,6 +179,35 @@ def test_evidence_coverage_guard_uses_complementary_direct_candidates() -> None:
     assert audit["assessment_contract_valid"] is True
     assert audit["dropped_points"][0]["reason"] == "duplicate_claim"
     assert audit["used_relevance_labels"] is False
+
+
+def test_compact_evidence_mask_uses_order_and_expands_to_immutable_ids() -> None:
+    evidence = [_candidate("E1", "A", "噪声"), _candidate("E2", "B", "振动")]
+    prompt = json.loads(
+        build_generation_prompt(_query(), evidence, strategy="evidence_mask_v3")
+    )
+    assert [row["candidate"] for row in prompt["candidates"]] == [1, 2]
+    assert "evidence_id" not in prompt["candidates"][0]
+    expanded, audit = expand_compact_evidence_mask({"direct": [1, 0]}, evidence)
+    assert expanded["evidence_assessments"] == [
+        {"evidence_id": "E1", "verdict": "direct", "aspect": ""},
+        {"evidence_id": "E2", "verdict": "irrelevant", "aspect": ""},
+    ]
+    assert expanded["status"] == "answered"
+    assert audit["mask_contract_valid"] is True
+    assert audit["used_relevance_labels"] is False
+
+
+def test_compact_evidence_mask_fails_closed_and_accepts_empty_candidates() -> None:
+    evidence = [_candidate("E1", "A", "噪声"), _candidate("E2", "B", "振动")]
+    malformed, audit = expand_compact_evidence_mask({"direct": [1]}, evidence)
+    assert malformed["status"] == "invalid_model_output"
+    assert malformed["evidence_assessments"] == []
+    assert audit["issues"] == ["mask_length_mismatch"]
+
+    empty, empty_audit = expand_compact_evidence_mask({"direct": []}, [])
+    assert empty["status"] == "insufficient_evidence"
+    assert empty_audit["mask_contract_valid"] is True
 
 
 def test_frozen_retrieval_row_roundtrips() -> None:
