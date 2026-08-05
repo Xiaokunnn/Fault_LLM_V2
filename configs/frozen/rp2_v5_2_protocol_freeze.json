@@ -1,0 +1,227 @@
+{
+  "freeze_id": "marine_pump_rp2_v5_2_paper_freeze",
+  "frozen_at_utc": "2026-08-05T11:57:45.919228+00:00",
+  "source_commit": "8a48e5f35b33833232f04d344cf7bd398dc12e43",
+  "protocol_id": "marine_pump_rp2_graphrag_v5_2_recall_cascade",
+  "status": "frozen_for_paper_writing_no_further_development_tuning",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "development_scope": {
+    "queries": 40,
+    "answerable_queries": 34,
+    "unanswerable_queries": 6,
+    "candidate_evidence": 208,
+    "heldout_documents_used_for_tuning": false
+  },
+  "external_evaluation_scope": {
+    "documents": [
+      "MP010",
+      "MP011",
+      "MP012",
+      "MP013"
+    ],
+    "answerable_queries": 7,
+    "interpretation": "descriptive generalization only; no strong significance claim and no feedback to tuning"
+  },
+  "paper_claim_boundary": {
+    "allowed": [
+      "significant Silver utility and latency improvement over Dense K4 on the development CQ set",
+      "quality point estimate comparable to Role K3 with lower p95 latency",
+      "descriptive external-source behavior without tuning feedback"
+    ],
+    "forbidden": [
+      "Gold or expert-verified correctness",
+      "significant superiority over Role K3 in answer quality",
+      "strong statistical generalization from seven answerable external queries",
+      "all internal readiness gates passed"
+    ]
+  },
+  "integrity": {
+    "algorithm_or_prompt_changes_after_freeze": "forbidden for reported v5.2 results",
+    "result_file_rewriting": "forbidden",
+    "derived_tables_and_figures": "must be reproducible from hashed artifacts"
+  },
+  "artifact_count": 36,
+  "artifacts": [
+    {
+      "path": "configs/frozen/rp2_v3_external_infrastructure_amendment_v1.json",
+      "bytes": 1784,
+      "sha256": "115a5b224c2ac7e8daed92709f00a3c3a3ddbbc5678f55f63cdf29cbf4026db9"
+    },
+    {
+      "path": "configs/frozen/rp2_v3_frozen_protocol.json",
+      "bytes": 42231,
+      "sha256": "236e8804885f0ace997e56dddcd31ea1548ebdbc0bdf97fa1a85b6a08de5bde2"
+    },
+    {
+      "path": "configs/rp2_graphrag_v3_external_source_heldout.json",
+      "bytes": 3029,
+      "sha256": "36ebb3d5486970d938151a71396c5997c67a7446fd6aafcdd3b88502157ea0bd"
+    },
+    {
+      "path": "configs/rp2_graphrag_v5_2_recall_cascade.json",
+      "bytes": 4085,
+      "sha256": "ad23b19972843100c6fc300808c60540e40e27c11a7115d180eeb69099fe2013"
+    },
+    {
+      "path": "configs/rp2_semantic_judge_qwen3_7_max_v5_cascade.json",
+      "bytes": 1034,
+      "sha256": "4609ac3401697175395a2ce5801e41c20bd9f22babb6cffdef745a9ce4b9fe90"
+    },
+    {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/evidence_candidates.jsonl",
+      "bytes": 170198,
+      "sha256": "0506f3818830d928bd6adde61ee87db551bd59cb26f6de87ce07cb142b0865b4"
+    },
+    {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/manifest.json",
+      "bytes": 554,
+      "sha256": "161dea5295f9543c17dec87d0e4810640a4bdee7d1b5465ec7674062ce7bc4b3"
+    },
+    {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+      "bytes": 21876,
+      "sha256": "2a812abfd9e8524a41f576390a4989ab7ca843c0988a9d8d6582fc964641bea0"
+    },
+    {
+      "path": "results/experiments/research_point_2/graph_ablation_v1/metrics.json",
+      "bytes": 5386,
+      "sha256": "8ebf68605ef138977c754b32ee2d978eb7b2b189653672f839c4c19e6c2f5502"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v2_sensitivity_v2/sensitivity_metrics.json",
+      "bytes": 21811,
+      "sha256": "e17605f773144f607579aae3d7740b2c1c640bb55ccf4d41c88cc78ff3b94fa0"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v3_external_source_heldout/generation_results.jsonl",
+      "bytes": 221544,
+      "sha256": "118aa4897d9255a5cdfcfc903efb5e7e0cd226e4ded068654f8e906058a4be5e"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v3_external_source_heldout/metrics.json",
+      "bytes": 50812,
+      "sha256": "0866e6ae4fcf5df0ede52c3c80c9d8dbf695e951d25c5e11e7f78f3980fcf5be"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v3_external_source_heldout/retrieval_results.jsonl",
+      "bytes": 116812,
+      "sha256": "031e6bc02d3c1fea85e1122bea8f611e6689e109f702aaf63a35b3d9c8aaade6"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/generation_results.jsonl",
+      "bytes": 948036,
+      "sha256": "6a47a5c72d0d89037b4f99545d3dd3f081fb009fd27d26044c86ae82a2bffe19"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/method_comparison.png",
+      "bytes": 121159,
+      "sha256": "98ca5c70a1bfc0497138db7ef2519513b00bff3581ccf0e964d30f2c806a75c4"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/method_comparison.svg",
+      "bytes": 52367,
+      "sha256": "784bbcdf4d3de4685e55f34203443a0b25e34f2dda53bde3356068fdace80eac"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/metrics.json",
+      "bytes": 57292,
+      "sha256": "a1159b55d1837e849f0f3547712189644a52125b57374fbedccc94f700d0827f"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/paper_readiness_targets.json",
+      "bytes": 5140,
+      "sha256": "35f2dacec52fd1bb104ce75995bad68558ce67c198699936b4d7d321f20a3367"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/paper_readiness_targets.md",
+      "bytes": 1396,
+      "sha256": "ec2377314a4c98717a94fc3041de7ef2b14bd32ec616b1425759ab168596ddb2"
+    },
+    {
+      "path": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/retrieval_results.jsonl",
+      "bytes": 114534,
+      "sha256": "7e18bc0af71d298ace21d3cf81f6f83b6841e2a0d3d55137b7c8fa4c4e7e3b2f"
+    },
+    {
+      "path": "results/experiments/research_point_2/rp2_v5_2_dual_prompt_semantic_judge/semantic_judge_summary.json",
+      "bytes": 483348,
+      "sha256": "51276305ad136ed08b242653d32364841106a24c4e3e66c09e54c3c536fbb744"
+    },
+    {
+      "path": "scripts/run_rp2_dual_prompt_semantic_judge.py",
+      "bytes": 19377,
+      "sha256": "77e700d9b85e54701c2a31615d95323a573f9d718e58cce27f94457ca25a4cc9"
+    },
+    {
+      "path": "scripts/run_rp2_recall_cascade_v5_2.py",
+      "bytes": 24029,
+      "sha256": "72eae88f29fd3984a54885a5cd2bc59fe08fe5adbad3f018dca285544f6bd15b"
+    },
+    {
+      "path": "scripts/run_rp2_recall_cascade_v5_2_server.sh",
+      "bytes": 1302,
+      "sha256": "a8365912e0d2b310b5ecd3a55495c460ca28dd29937a3ad14326710e40adf2f6"
+    },
+    {
+      "path": "scripts/run_rp2_semantic_judge_v2_secure.sh",
+      "bytes": 700,
+      "sha256": "a503a3bdbf9a49dda4dbaf3afb015a762f8a796e61146c4921adedf5ce40fba2"
+    },
+    {
+      "path": "scripts/summarize_rp2_v4_targets.py",
+      "bytes": 8983,
+      "sha256": "68ec03c95a5e6df3bd9423fb0db046f2283295437935f63e4241250261003d0d"
+    },
+    {
+      "path": "src/research_point_2/__init__.py",
+      "bytes": 459,
+      "sha256": "98c5c6eea62174300e93a2dbedbb2ded78ba3da14c8664ae6cc86cd17d5efbeb"
+    },
+    {
+      "path": "src/research_point_2/budget_effectiveness.py",
+      "bytes": 9505,
+      "sha256": "34161644e0c7b01fbbee79036d8b6eb5d1b7877b70fe96f6f3b82bcd94d4a9bc"
+    },
+    {
+      "path": "src/research_point_2/dataset.py",
+      "bytes": 9714,
+      "sha256": "2e7f89c155255cdce8ccc3bc537f4da94f6561e859a9ca8f0b14dcb6289dd0be"
+    },
+    {
+      "path": "src/research_point_2/dense_index.py",
+      "bytes": 3104,
+      "sha256": "92ad44e7b758d6808129a8c1dd866ab30f8e00ce5e00d4ecbeff3d5f72f3b3bd"
+    },
+    {
+      "path": "src/research_point_2/evaluation.py",
+      "bytes": 6156,
+      "sha256": "10504e262734a2bd399dc624064b73c8f019d20dd0a218ab7090d23487799982"
+    },
+    {
+      "path": "src/research_point_2/generation.py",
+      "bytes": 39985,
+      "sha256": "df9d8ced1d59ffa03d44dc84e777f9cac6cb475043b2460b06b5155664e5db30"
+    },
+    {
+      "path": "src/research_point_2/graph_rag_v2.py",
+      "bytes": 11081,
+      "sha256": "8833aab5e99ec53e411ac7c3a9ec8e85e53cb044739b2e1fea0a0d3d5b47a930"
+    },
+    {
+      "path": "src/research_point_2/local_models.py",
+      "bytes": 9630,
+      "sha256": "1c737271b48da9b0b846eccacebd8a9c8f6fe3147d848d7ac9c7414c77642245"
+    },
+    {
+      "path": "src/research_point_2/README.md",
+      "bytes": 2653,
+      "sha256": "2b930d6db51cd7566912f3ae09365d2d83b59fef7faf04dc18ab5f0e93f6700f"
+    },
+    {
+      "path": "src/research_point_2/retrieval.py",
+      "bytes": 17711,
+      "sha256": "5468688ad94708f6d5079164a230cc93918c3f08096555221b76e2f39b4fe690"
+    }
+  ]
+}
