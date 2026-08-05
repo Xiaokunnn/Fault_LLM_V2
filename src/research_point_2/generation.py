@@ -33,6 +33,11 @@ COMPACT_MASK_SYSTEM_PROMPT = """你是船舶机舱泵系证据的逐候选二分
 只有候选本身同时匹配故障对象、required_role和关系方向时标1；背景相关、需要推断、对象不符或角色不符均标0。问题中的故障名称可能是并列组合类别；候选若明确描述其中一个列举成员、部件或子类型，应视为故障对象匹配。规范化claim是主要语义，verbatim用于核对其有原文依据。每条候选独立判断，不得因已有一个1而停止或压缩其余有效证据。
 必须检查全部候选。只输出一个JSON对象：{\"direct\":[0或1,...]}。数组长度必须等于候选数；禁止输出证据ID、解释、回答文本、Markdown或其他字段。"""
 
+RECALL_REVIEW_SYSTEM_PROMPT = """你是船舶机舱泵系证据的独立召回复核器。当前只复核一条候选，不得参考或猜测第一次判定。
+若规范化claim及verbatim能够直接提供问题要求的症状、因果机理、检查方法或维护措施，输出1，否则输出0。
+问题中的故障对象可能是并列组合类别：候选明确描述任一列举成员、其部件、子类型、直接故障后果或直接纠正措施时，均视为对象匹配；但仅共享“泵、电机、管路”等泛化词、需要跨证据推断或required_role不符时必须输出0。
+必须保留claim中的关系方向、条件、否定和可能性。只输出一个JSON对象：{\"direct\":0或1}。禁止解释、回答文本、证据ID、Markdown或其他字段。"""
+
 GENERATION_STRATEGIES = {
     "freeform_v1",
     "evidence_constrained_v1",
@@ -339,6 +344,56 @@ def expand_compact_evidence_mask(
         "used_relevance_labels": False,
     }
     return expanded, audit
+
+
+def build_recall_review_prompt(
+    query: SilverQuery, evidence: EvidenceCandidate
+) -> str:
+    """Build a label-free, single-candidate second-pass review prompt."""
+
+    return json.dumps(
+        {
+            "question": query.question_zh,
+            "fault_scope": query.fault_name_zh,
+            "required_role": query.role,
+            "candidate": {
+                "role": evidence.role,
+                "head": evidence.head_label_zh,
+                "relation": evidence.relation,
+                "tail": evidence.tail_label_zh,
+                "claim": (
+                    f"{evidence.head_label_zh} --{evidence.relation}--> "
+                    f"{evidence.tail_label_zh}"
+                ),
+                "verbatim": evidence.evidence_text,
+            },
+            "output": {"direct": "0或1"},
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
+
+
+def parse_single_recall_review(answer: dict) -> tuple[int, dict]:
+    """Parse one compact recall decision; malformed responses fail closed."""
+
+    value = answer.get("direct") if isinstance(answer, dict) else None
+    if value in (0, False, "0"):
+        decision = 0
+        valid = True
+    elif value in (1, True, "1"):
+        decision = 1
+        valid = True
+    else:
+        decision = 0
+        valid = False
+    return decision, {
+        "version": "rp2_single_candidate_recall_review_v1",
+        "contract_valid": valid,
+        "decision": decision,
+        "used_hidden_fault_labels": False,
+        "used_relevance_labels": False,
+    }
 
 
 def apply_faithfulness_guard(

@@ -21,8 +21,10 @@ from research_point_2.dense_index import DenseEvidenceIndex, evidence_index_text
 from research_point_2.generation import (
     apply_evidence_coverage_guard,
     apply_faithfulness_guard,
+    build_recall_review_prompt,
     build_generation_prompt,
     expand_compact_evidence_mask,
+    parse_single_recall_review,
     score_silver_response,
     summarize_generation_rows,
     validate_generated_answer,
@@ -31,6 +33,7 @@ from research_point_2.graph_rag_v2 import retrieve_dense_graph
 from research_point_2.retrieval import RetrievalBudget, RetrievalIndex
 from scripts.run_automatic_silver_adjudication import external_evaluation_silver_eligible
 from scripts.run_rp2_graphrag_v2 import _retrieval_result
+from scripts.run_rp2_recall_cascade_v5_2 import _rotated
 
 
 def _candidate(eid: str, family: str, label: str) -> EvidenceCandidate:
@@ -208,6 +211,26 @@ def test_compact_evidence_mask_fails_closed_and_accepts_empty_candidates() -> No
     empty, empty_audit = expand_compact_evidence_mask({"direct": []}, [])
     assert empty["status"] == "insufficient_evidence"
     assert empty_audit["mask_contract_valid"] is True
+
+
+def test_single_candidate_recall_review_is_compact_and_fails_closed() -> None:
+    evidence = _candidate("E1", "A", "噪声")
+    prompt = json.loads(build_recall_review_prompt(_query(), evidence))
+    assert prompt["fault_scope"]
+    assert prompt["candidate"]["role"] == "symptom"
+    assert "evidence_id" not in prompt["candidate"]
+    assert parse_single_recall_review({"direct": 1})[0] == 1
+    assert parse_single_recall_review({"direct": "0"})[0] == 0
+    decision, audit = parse_single_recall_review({"direct": "maybe"})
+    assert decision == 0
+    assert audit["contract_valid"] is False
+    assert audit["used_relevance_labels"] is False
+
+
+def test_rotating_interleaved_schedule_balances_method_order() -> None:
+    scenarios = [{"id": "A"}, {"id": "B"}, {"id": "C"}]
+    orders = [[row["id"] for row in _rotated(scenarios, offset)] for offset in range(3)]
+    assert orders == [["A", "B", "C"], ["B", "C", "A"], ["C", "A", "B"]]
 
 
 def test_frozen_retrieval_row_roundtrips() -> None:

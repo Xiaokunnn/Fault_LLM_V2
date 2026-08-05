@@ -1,0 +1,102 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v5_2_recall_cascade",
+  "version": "0.5.2-development-final-recall-cascade-retest",
+  "status": "final_recall_cascade_retest_before_protocol_freeze",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {"require_cuda": true},
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "frozen_retrieval_results": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+  "output_dir": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade",
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "stage1_max_new_tokens": 64,
+    "review_max_new_tokens": 48,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_recall_cascade_v5_2"
+  },
+  "generation_contract": {
+    "max_prompt_tokens": 1536,
+    "max_answer_points": 3,
+    "max_point_chars": 80,
+    "max_summary_chars": 100,
+    "latency_scope": "median of three rotating-interleaved warm stage-1 plus independent stage-2 review runs; frozen retrieval latency added"
+  },
+  "cascade": {
+    "stage1": "unchanged evidence_mask_v3 precision mask",
+    "stage2": "independent single-candidate recall review for every stage-1 zero",
+    "decision_fusion": "stage1 OR majority(stage2 across repeated runs)",
+    "interleaved_repeats": 3,
+    "method_order": "rotate by query_index plus repeat",
+    "latency_statistic": "per-query median then method p95",
+    "online_silver_labels_used": false
+  },
+  "scenarios": [
+    {
+      "id": "B1_dense_k4_cascade",
+      "retrieval_method": "dense_topk",
+      "source_retrieval_method": "B1_dense_k4_guard",
+      "max_selected_evidence": 4,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "B4_role_k3_cascade",
+      "retrieval_method": "dense_metapath",
+      "source_retrieval_method": "B4_metapath_k3_guard",
+      "max_selected_evidence": 3,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "Ours_v5_2_k3_cascade",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v4_k3",
+      "max_selected_evidence": 3,
+      "minimum_visible_fault_affinity": 0.05
+    }
+  ],
+  "effectiveness_tests": [
+    {
+      "id": "cascade_ours_vs_dense_k4",
+      "reference_id": "B1_dense_k4_cascade",
+      "proposed_ids": ["Ours_v5_2_k3_cascade"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260812
+    },
+    {
+      "id": "cascade_same_budget_vs_role_k3",
+      "reference_id": "B4_role_k3_cascade",
+      "proposed_ids": ["Ours_v5_2_k3_cascade"],
+      "latency_noninferiority_margin": 0.05,
+      "minimum_quality_gain": 0.0,
+      "bootstrap_iterations": 5000,
+      "seed": 20260813
+    }
+  ],
+  "paper_readiness_selected_method": "Ours_v5_2_k3_cascade",
+  "paper_readiness_latency_reference": "B1_dense_k4_cascade",
+  "paper_readiness_judge_summary": "results/experiments/research_point_2/rp2_v5_2_dual_prompt_semantic_judge/semantic_judge_summary.json",
+  "paper_readiness_targets": {
+    "silver_citation_precision_macro": 0.80,
+    "budget_normalized_silver_citation_f1": 0.65,
+    "dual_strict_point_support_rate": 0.60,
+    "all_atomic_claims_strictly_supported_answer_rate": 0.30,
+    "all_text_strictly_supported_answer_rate": 0.30,
+    "answerable_answer_rate": 0.85,
+    "unanswerable_abstention_rate": 0.95,
+    "strict_contract_rate": 0.95,
+    "p95_latency_ratio_vs_dense_k4_max": 1.05,
+    "cascade_silver_relevant_promoted_count_min": 8
+  },
+  "anti_leakage": {
+    "online_forbidden_fields": ["fault_class_ids", "relevant_evidence_ids"],
+    "heldout_documents_forbidden_during_development": ["MP009", "MP010", "MP011", "MP012", "MP013"],
+    "frozen_retrieval_reused_without_reranking": true,
+    "same_reviewer_for_all_methods": true,
+    "review_only_stage1_zero_candidates": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "protocol_id": "marine_pump_rp2_dual_prompt_semantic_judge_v5_cascade",
+  "status": "development_v5_2_answer_audit",
+  "model": "qwen3.7-max",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "temperature": 0,
+  "enable_thinking": false,
+  "response_format": {"type": "json_object"},
+  "timeout_seconds": 600,
+  "max_retries": 5,
+  "batch_size": 6,
+  "expected_query_count": 40,
+  "quote_protocol": "multi_span_v2",
+  "minimum_quote_chars": 4,
+  "selected_methods": [
+    "B1_dense_k4_cascade",
+    "B4_role_k3_cascade",
+    "Ours_v5_2_k3_cascade"
+  ],
+  "source_generation_results": "results/experiments/research_point_2/graphrag_v5_2_recall_cascade/generation_results.jsonl",
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "output_dir": "results/experiments/research_point_2/rp2_v5_2_dual_prompt_semantic_judge",
+  "api_key_source": "DASHSCOPE_API_KEY environment variable only",
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

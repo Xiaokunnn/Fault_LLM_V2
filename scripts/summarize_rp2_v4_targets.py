@@ -89,6 +89,9 @@ def main() -> int:
                 "citations_per_answered_query_mean"
             ),
             "multi_citation_answer_rate": values.get("multi_citation_answer_rate"),
+            "cascade_silver_relevant_promoted_count": values.get(
+                "cascade_silver_relevant_promoted_count"
+            ),
             "end_to_end_inference_latency_ms_p95": latency,
         })
     by_method = {row["method"]: row for row in rows}
@@ -117,9 +120,13 @@ def main() -> int:
         "strict_contract_rate": ">=",
         "p95_latency_ratio_vs_dense_k4_max": "<=",
     }
+    if "cascade_silver_relevant_promoted_count_min" in targets:
+        gate_map["cascade_silver_relevant_promoted_count_min"] = ">="
     gate_results = {}
     for name, operator in gate_map.items():
-        value_key = "p95_latency_ratio_vs_dense_k4" if name.endswith("_max") else name
+        value_key = (
+            name[:-4] if name.endswith("_max") or name.endswith("_min") else name
+        )
         value = proposed.get(value_key)
         target = float(targets[name])
         gate_results[name] = {
