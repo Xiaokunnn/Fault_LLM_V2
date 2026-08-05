@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-b9a9a629-7f43-9ddf-9f90-9195c0450924",
+  "latency_ms": 10173,
+  "usage": {
+    "completion_tokens": 914,
+    "prompt_tokens": 1843,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2757
+  },
+  "prompt_sha256": "1b117f125afd442666b747b6477417108f5b087003fdc1e265211a541a19569a",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          },
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-25a535a4309cb981b8c9",
+            "quote": "suction piping and pump should be inspected internally for foreign matter\n       that might be drawn into impeller passages and clog them"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-INS::point::1",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c06f09d4417784779d15",
+            "quote": "Check Impeller for signs of wear or damage"
+          }
+        ],
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "Ours_v5_2_k3_cascade::CQ-F03-INS::point::2",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ff2fc306ca23a27f8ba5",
+            "quote": "Dismantle pipe (58). The top piece can now be                       \n             lifted up allowing inspection of the impeller."
+          }
+        ],
+        "reason_code": "object_substitution"
+      }
+    ]
+  }
+}

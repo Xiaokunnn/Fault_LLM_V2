@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-4b8aafe1-463c-9899-be42-f6f8991b52f3",
+  "latency_ms": 10168,
+  "usage": {
+    "completion_tokens": 909,
+    "prompt_tokens": 1963,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2872
+  },
+  "prompt_sha256": "265884d6c14eac794176fbb31eaff3d2544517c36b8469bb5230e11f417bdb9b",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F03-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F03-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-25a535a4309cb981b8c9",
+            "quote": "suction piping and pump should be inspected internally for foreign matter\n       that might be drawn into impeller passages and clog them"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F03-INS::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c06f09d4417784779d15",
+            "quote": "Check Impeller for signs of wear or damage"
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F03-INS::point::2",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-591a18698146a22f6da7",
+            "quote": "Measure OD of impeller hub or impeller wear rings and ID of casing wear rings. Compute\n       diametral clearance (ID minus OD) and compare with clearance given under Section entitled Wear Ring\n       Clearance"
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F03-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-25a535a4309cb981b8c9",
+            "quote": "suction piping and pump should be inspected internally for foreign matter\n       that might be drawn into impeller passages and clog them"
+          },
+          {
+            "evidence_id": "MPA-c06f09d4417784779d15",
+            "quote": "Check Impeller for signs of wear or damage"
+          }
+        ],
+        "reason_code": "mixed_validity"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F04-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

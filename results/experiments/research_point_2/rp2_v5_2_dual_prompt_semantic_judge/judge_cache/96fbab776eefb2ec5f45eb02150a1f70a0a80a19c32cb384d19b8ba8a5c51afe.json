@@ -1,0 +1,98 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-bc7c813a-4bb9-902a-894b-00b50e95507a",
+  "latency_ms": 10337,
+  "usage": {
+    "completion_tokens": 955,
+    "prompt_tokens": 1825,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2780
+  },
+  "prompt_sha256": "96fbab776eefb2ec5f45eb02150a1f70a0a80a19c32cb384d19b8ba8a5c51afe",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F08-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F08-CAUSE::point::2",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-db3f485bd0d5666124b1",
+            "quote": "Motor overheats while\nrunning\n--- CELL ---\nUnbalanced terminal voltage"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F08-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-d7df6bc52d67a6b21241",
+            "quote": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+          },
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          },
+          {
+            "evidence_id": "MPA-db3f485bd0d5666124b1",
+            "quote": "Motor overheats while\nrunning\n--- CELL ---\nUnbalanced terminal voltage"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F08-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8e947ac6c11836ceff20",
+            "quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into\n                 the motor space resulting in motor failure."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F08-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8e947ac6c11836ceff20",
+            "quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into\n                 the motor space resulting in motor failure."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_cascade::CQ-F09-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-68183fc221936c37fc37",
+            "quote": "Improper seal water conditions can cause air leakage into the pump,\n                      excessive seepage out of the pump, overheating of packing and premature failure\n                      of packing and scoring of shaft sleeve."
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}
