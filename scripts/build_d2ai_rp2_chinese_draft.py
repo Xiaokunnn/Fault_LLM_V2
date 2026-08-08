@@ -10,18 +10,18 @@ from pathlib import Path
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_LINE_SPACING
+from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v1.md"
-DEFAULT_OUTPUT = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v1.docx"
+DEFAULT_SOURCE = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v2.md"
+DEFAULT_OUTPUT = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v2.docx"
 
 LATIN_FONT = "Times New Roman"
-CN_FONT = "SimSun"
+CN_FONT = "Noto Serif SC"
 MATH_FONT = "Cambria Math"
 
 
@@ -112,16 +112,17 @@ def add_inline(paragraph, text: str, size: float, *, default_bold: bool = False,
 
 
 def normalize_math(text: str) -> str:
+    text = re.sub(r"\\tag\{([^{}]+)\}", r"(\1)", text)
     replacements = {
         r"\(": "", r"\)": "", r"\[": "", r"\]": "",
         r"\mathcal G": "G", r"\mathcal V": "V", r"\mathcal C": "C",
-        r"\mathcal A": "A", r"\mathcal P": "P", r"\in": "∈",
+        r"\mathcal A": "A", r"\mathcal S": "S", r"\mathcal P": "P", r"\in": "∈",
         r"\notin": "∉", r"\leq": "≤", r"\geq": "≥",
         r"\le": "≤", r"\ge": "≥", r"\cap": "∩",
         r"\lambda_o": "λ_o", r"\Delta": "Δ", r"\mid": "|",
         r"\Phi": "Φ", r"\phi": "φ", r"\min": "min",
         r"\mathrm": "", r"\mathbb I": "I", r"\text": "", r"\quad": " ", r"\,": " ",
-        r"\\": " ", r"\tag": "",
+        r"\\": " ",
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
@@ -242,7 +243,12 @@ def add_markdown_table(doc: Document, rows: list[list[str]]) -> None:
     if not rows:
         return
     cols = len(rows[0])
-    widths = [0.72, 0.50, 0.52, 0.62, 0.48, 0.66] if cols == 6 else [3.48 / cols] * cols
+    if cols == 6:
+        widths = [0.66, 0.36, 0.36, 0.84, 0.72, 0.54]
+    elif cols == 5:
+        widths = [0.91, 0.62, 0.76, 0.45, 0.74]
+    else:
+        widths = [3.48 / cols] * cols
     table = doc.add_table(rows=len(rows), cols=cols)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
@@ -281,7 +287,10 @@ def add_figure(doc: Document, image_path: Path, caption: str | None = None) -> N
     paragraph.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
     paragraph.paragraph_format.line_spacing = 1.0
     run = paragraph.add_run()
-    run.add_picture(str(image_path), width=Inches(3.34))
+    picture = run.add_picture(str(image_path), width=Inches(3.34))
+    alt_text = (caption or image_path.stem).replace("**", "").strip()
+    picture._inline.docPr.set("descr", alt_text)
+    picture._inline.docPr.set("title", alt_text)
     if caption:
         cap = doc.add_paragraph()
         cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -309,10 +318,10 @@ def parse_table(lines: list[str], start: int) -> tuple[list[list[str]], int]:
 def build(source: Path, output: Path) -> None:
     lines = source.read_text(encoding="utf-8").splitlines()
     doc = Document()
-    doc.core_properties.title = "面向本地7B模型低时延故障问答的预算约束证据型GraphRAG"
+    doc.core_properties.title = lines[0].removeprefix("# ").strip()
     doc.core_properties.subject = "D2AI 2026 Chinese review draft"
     doc.core_properties.author = "Author information pending"
-    doc.core_properties.comments = "All evaluation labels are Silver; no domain-expert review."
+    doc.core_properties.comments = "RP2 v6 Chinese review draft. All evaluation labels are Silver; no domain-expert review."
 
     normal = doc.styles["Normal"]
     set_style_font(normal, 9.3)
@@ -391,11 +400,6 @@ def build(source: Path, output: Path) -> None:
                     add_inline(p, lines[idx].strip(), 8.3)
                     idx += 1
                 continue
-            if heading == "参考文献":
-                breaker = doc.add_paragraph()
-                breaker.paragraph_format.space_before = Pt(0)
-                breaker.paragraph_format.space_after = Pt(0)
-                breaker.add_run().add_break(WD_BREAK.COLUMN)
             add_section_heading(doc, heading)
             idx += 1
             continue
