@@ -1,0 +1,98 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-4ac1c735-f2ab-9230-b2ea-7eec5de54c21",
+  "latency_ms": 12250,
+  "usage": {
+    "completion_tokens": 971,
+    "prompt_tokens": 1942,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2913
+  },
+  "prompt_sha256": "2cba32932aa6ec7ddbb9152da6f4e29c230c345f3b41928d987a72a70b0a2b27",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F01-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c188da72b4391a4f5466",
+            "quote": "impeller may show signs of heavy erosion caused by cavitation"
+          }
+        ],
+        "reason_code": "missing_symptoms_in_evidence"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F02-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          },
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "The pump does not\nprime"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters\n            and increased corrosion in the equipment thereby leading to system malfunctions."
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "contradictory_direction"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters\n            and increased corrosion in the equipment thereby leading to system malfunctions."
+          },
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "mixed_support_contradiction"
+      }
+    ]
+  }
+}

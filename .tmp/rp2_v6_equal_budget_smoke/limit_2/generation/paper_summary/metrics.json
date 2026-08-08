@@ -1,0 +1,1104 @@
+{
+  "protocol_id": "rp2_equal_budget_paper_summary_v1",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "quality_decision": "canonical measurement repeat 0; interleaved repeats are timing measurements only and are not fused",
+  "latency_policy": "Fresh retrieval timings are paired with generation-only timings by (repeat, method, query_id). Archived retrieval_elapsed_ms values are never used. E2E is null when fresh timing is incomplete.",
+  "latency_pairing": {
+    "method_query_rows": 10,
+    "complete_method_query_rows": 10,
+    "pending_method_query_rows": 0,
+    "status": "complete"
+  },
+  "metric_boundary": "Retrieval and citation metrics measure agreement with the frozen Silver evidence benchmark, not expert factual correctness.",
+  "bootstrap": {
+    "unit": "fault_class",
+    "method": "paired percentile cluster bootstrap",
+    "seed": 20260808,
+    "requested_replicates": 5000,
+    "confidence": 0.95,
+    "intervals": {
+      "B1_dense_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.30952380952380953,
+          "ci_low": 0.30952380952380953,
+          "ci_high": 0.30952380952380953,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.6480409554829325,
+          "ci_low": 0.6480409554829325,
+          "ci_high": 0.6480409554829325,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_precision_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_recall_macro": {
+          "point": 0.30952380952380953,
+          "ci_low": 0.30952380952380953,
+          "ci_high": 0.30952380952380953,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_f1_macro": {
+          "point": 0.4722222222222222,
+          "ci_low": 0.4722222222222222,
+          "ci_high": 0.4722222222222222,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "abstention_precision": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "abstention_recall": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 596.1013150451837,
+          "ci_low": 596.1013150451837,
+          "ci_high": 596.1013150451837,
+          "replicates": 5000,
+          "clusters": 1
+        }
+      },
+      "B4_role_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "retrieval_ndcg_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_precision_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_f1_macro": {
+          "point": 0.6333333333333333,
+          "ci_low": 0.6333333333333333,
+          "ci_high": 0.6333333333333333,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "abstention_precision": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "abstention_recall": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 426.300509996625,
+          "ci_low": 426.300509996625,
+          "ci_high": 426.300509996625,
+          "replicates": 5000,
+          "clusters": 1
+        }
+      },
+      "A2_role_graph_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "retrieval_ndcg_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_precision_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_f1_macro": {
+          "point": 0.6333333333333333,
+          "ci_low": 0.6333333333333333,
+          "ci_high": 0.6333333333333333,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "abstention_precision": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "abstention_recall": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 377.8874020506976,
+          "ci_low": 377.8874020506976,
+          "ci_high": 377.8874020506976,
+          "replicates": 5000,
+          "clusters": 1
+        }
+      },
+      "Ours_v6_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "retrieval_ndcg_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_precision_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_recall_macro": {
+          "point": 0.4642857142857143,
+          "ci_low": 0.4642857142857143,
+          "ci_high": 0.4642857142857143,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_f1_macro": {
+          "point": 0.6333333333333333,
+          "ci_low": 0.6333333333333333,
+          "ci_high": 0.6333333333333333,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "abstention_precision": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "abstention_recall": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 485.94010997326336,
+          "ci_low": 485.94010997326336,
+          "ci_high": 485.94010997326336,
+          "replicates": 5000,
+          "clusters": 1
+        }
+      },
+      "B1_dense_k4_secondary": {
+        "retrieval_recall_macro": {
+          "point": 0.39285714285714285,
+          "ci_low": 0.39285714285714285,
+          "ci_high": 0.39285714285714285,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.623151194370365,
+          "ci_low": 0.623151194370365,
+          "ci_high": 0.623151194370365,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_precision_macro": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_recall_macro": {
+          "point": 0.39285714285714285,
+          "ci_low": 0.39285714285714285,
+          "ci_high": 0.39285714285714285,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "citation_f1_macro": {
+          "point": 0.5555555555555556,
+          "ci_low": 0.5555555555555556,
+          "ci_high": 0.5555555555555556,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 1
+        },
+        "abstention_precision": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "abstention_recall": {
+          "point": null,
+          "ci_low": null,
+          "ci_high": null,
+          "replicates": 0,
+          "clusters": 1
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 836.8652785064539,
+          "ci_low": 836.8652785064539,
+          "ci_high": 836.8652785064539,
+          "replicates": 5000,
+          "clusters": 1
+        }
+      }
+    },
+    "paired_comparisons": {
+      "Full_vs_Dense_K3": {
+        "reference": "B1_dense_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.15476190476190477,
+            "ci_low": 0.15476190476190477,
+            "ci_high": 0.15476190476190477,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.3519590445170675,
+            "ci_low": 0.3519590445170675,
+            "ci_high": 0.3519590445170675,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.1611111111111111,
+            "ci_low": 0.1611111111111111,
+            "ci_high": 0.1611111111111111,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": -110.16120507192034,
+            "ci_low": -110.16120507192034,
+            "ci_high": -110.16120507192034,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 1
+          }
+        }
+      },
+      "Full_vs_Role_K3": {
+        "reference": "B4_role_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": 59.63959997663835,
+            "ci_low": 59.63959997663835,
+            "ci_high": 59.63959997663835,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          }
+        }
+      },
+      "Full_vs_RoleGraph_K3": {
+        "reference": "A2_role_graph_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": 108.05270792256579,
+            "ci_low": 108.05270792256579,
+            "ci_high": 108.05270792256579,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          }
+        }
+      },
+      "RoleGraph_vs_Role_K3": {
+        "reference": "B4_role_k3_equal",
+        "proposed": "A2_role_graph_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.0,
+            "replicates": 5000,
+            "clusters": 1
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": -48.413107945927436,
+            "ci_low": -48.413107945927436,
+            "ci_high": -48.413107945927436,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 1
+          }
+        }
+      }
+    }
+  },
+  "method_specs": [
+    {
+      "id": "B1_dense_k3_equal",
+      "label": "Dense K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": false,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "B4_role_k3_equal",
+      "label": "Role K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "A2_role_graph_k3_equal",
+      "label": "Role + Graph K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": true,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "Ours_v6_k3_equal",
+      "label": "Full K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": true,
+      "fault_affinity": true,
+      "source_novelty": true
+    },
+    {
+      "id": "B1_dense_k4_secondary",
+      "label": "Dense K4",
+      "budget": 4,
+      "group": "cross_budget_secondary",
+      "role": false,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    }
+  ],
+  "methods": {
+    "B1_dense_k3_equal": {
+      "queries": 2,
+      "fault_classes": 1,
+      "answerable_queries": 2,
+      "unanswerable_queries": 0,
+      "valid_answered_queries": 2,
+      "valid_abstained_queries": 0,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.30952380952380953,
+      "retrieval_ndcg_macro": 0.6480409554829325,
+      "citation_precision_macro": 1.0,
+      "citation_recall_macro": 0.30952380952380953,
+      "citation_f1_macro": 0.4722222222222222,
+      "source_family_coverage_mean": 2.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": null,
+      "abstention_recall": null,
+      "model_calls": {
+        "samples": 2,
+        "mean": 2.0,
+        "p50": 2.0,
+        "p95": 2.0
+      },
+      "prompt_tokens": {
+        "samples": 2,
+        "mean": 707.0,
+        "p50": 707.0,
+        "p95": 717.8
+      },
+      "generated_tokens": {
+        "samples": 2,
+        "mean": 16.0,
+        "p50": 16.0,
+        "p95": 16.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 2,
+          "mean_ms": 27.339240500000002,
+          "p50_ms": 27.339240500000002,
+          "p95_ms": 27.81846035
+        },
+        "prompt_build": {
+          "samples": 2,
+          "mean_ms": 1.6241355,
+          "p50_ms": 1.6241355,
+          "p95_ms": 1.6407634500000001
+        },
+        "stage1_verifier": {
+          "samples": 2,
+          "mean_ms": 347.68491800059564,
+          "p50_ms": 347.68491800059564,
+          "p95_ms": 351.16934542602394
+        },
+        "stage2_review": {
+          "samples": 2,
+          "mean_ms": 214.35276998090558,
+          "p50_ms": 214.35276998090558,
+          "p95_ms": 216.5921031992184
+        },
+        "render": {
+          "samples": 2,
+          "mean_ms": 0.066291,
+          "p50_ms": 0.066291,
+          "p95_ms": 0.0666267
+        },
+        "input_preparation": {
+          "samples": 2,
+          "mean_ms": 2.712329034693539,
+          "p50_ms": 2.712329034693539,
+          "p95_ms": 2.7413135510869324
+        },
+        "model_inference": {
+          "samples": 2,
+          "mean_ms": 559.3035929778125,
+          "p50_ms": 559.3035929778125,
+          "p95_ms": 565.0759275100427
+        },
+        "generation_pipeline": {
+          "samples": 2,
+          "mean_ms": 563.7310344815012,
+          "p50_ms": 563.7310344815012,
+          "p95_ms": 569.4343376752423
+        },
+        "end_to_end": {
+          "samples": 2,
+          "mean_ms": 596.1013150451837,
+          "p50_ms": 596.1013150451837,
+          "p95_ms": 597.1082323316106
+        }
+      },
+      "end_to_end_latency_ms_mean": 596.1013150451837,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "B4_role_k3_equal": {
+      "queries": 2,
+      "fault_classes": 1,
+      "answerable_queries": 2,
+      "unanswerable_queries": 0,
+      "valid_answered_queries": 2,
+      "valid_abstained_queries": 0,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4642857142857143,
+      "retrieval_ndcg_macro": 1.0,
+      "citation_precision_macro": 1.0,
+      "citation_recall_macro": 0.4642857142857143,
+      "citation_f1_macro": 0.6333333333333333,
+      "source_family_coverage_mean": 2.5,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": null,
+      "abstention_recall": null,
+      "model_calls": {
+        "samples": 2,
+        "mean": 1.0,
+        "p50": 1.0,
+        "p95": 1.0
+      },
+      "prompt_tokens": {
+        "samples": 2,
+        "mean": 402.5,
+        "p50": 402.5,
+        "p95": 429.05
+      },
+      "generated_tokens": {
+        "samples": 2,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 2,
+          "mean_ms": 27.6022495,
+          "p50_ms": 27.6022495,
+          "p95_ms": 27.79299955
+        },
+        "prompt_build": {
+          "samples": 2,
+          "mean_ms": 1.6062889999999999,
+          "p50_ms": 1.6062889999999999,
+          "p95_ms": 1.7024981
+        },
+        "stage1_verifier": {
+          "samples": 2,
+          "mean_ms": 397.093795996625,
+          "p50_ms": 397.093795996625,
+          "p95_ms": 435.47416731598787
+        },
+        "stage2_review": {
+          "samples": 2,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "render": {
+          "samples": 2,
+          "mean_ms": 0.07027,
+          "p50_ms": 0.07027,
+          "p95_ms": 0.07153989999999999
+        },
+        "input_preparation": {
+          "samples": 2,
+          "mean_ms": 1.5041840088088065,
+          "p50_ms": 1.5041840088088065,
+          "p95_ms": 1.5078488126164302
+        },
+        "model_inference": {
+          "samples": 2,
+          "mean_ms": 386.72560700797476,
+          "p50_ms": 386.72560700797476,
+          "p95_ms": 433.02164119959343
+        },
+        "generation_pipeline": {
+          "samples": 2,
+          "mean_ms": 398.830833496625,
+          "p50_ms": 398.830833496625,
+          "p95_ms": 437.2597044659879
+        },
+        "end_to_end": {
+          "samples": 2,
+          "mean_ms": 426.300509996625,
+          "p50_ms": 426.300509996625,
+          "p95_ms": 465.45057481598786
+        }
+      },
+      "end_to_end_latency_ms_mean": 426.300509996625,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "A2_role_graph_k3_equal": {
+      "queries": 2,
+      "fault_classes": 1,
+      "answerable_queries": 2,
+      "unanswerable_queries": 0,
+      "valid_answered_queries": 2,
+      "valid_abstained_queries": 0,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4642857142857143,
+      "retrieval_ndcg_macro": 1.0,
+      "citation_precision_macro": 1.0,
+      "citation_recall_macro": 0.4642857142857143,
+      "citation_f1_macro": 0.6333333333333333,
+      "source_family_coverage_mean": 2.5,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": null,
+      "abstention_recall": null,
+      "model_calls": {
+        "samples": 2,
+        "mean": 1.0,
+        "p50": 1.0,
+        "p95": 1.0
+      },
+      "prompt_tokens": {
+        "samples": 2,
+        "mean": 402.5,
+        "p50": 402.5,
+        "p95": 429.05
+      },
+      "generated_tokens": {
+        "samples": 2,
+        "mean": 10.0,
+        "p50": 10.0,
+        "p95": 10.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 2,
+          "mean_ms": 27.3082255,
+          "p50_ms": 27.3082255,
+          "p95_ms": 27.503152449999998
+        },
+        "prompt_build": {
+          "samples": 2,
+          "mean_ms": 1.582658,
+          "p50_ms": 1.582658,
+          "p95_ms": 1.6576946000000001
+        },
+        "stage1_verifier": {
+          "samples": 2,
+          "mean_ms": 348.7984725506976,
+          "p50_ms": 348.7984725506976,
+          "p95_ms": 354.08046320662834
+        },
+        "stage2_review": {
+          "samples": 2,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "render": {
+          "samples": 2,
+          "mean_ms": 0.0722525,
+          "p50_ms": 0.0722525,
+          "p95_ms": 0.07562975
+        },
+        "input_preparation": {
+          "samples": 2,
+          "mean_ms": 1.4475539792329073,
+          "p50_ms": 1.4475539792329073,
+          "p95_ms": 1.5540509833954275
+        },
+        "model_inference": {
+          "samples": 2,
+          "mean_ms": 347.316525032511,
+          "p50_ms": 347.316525032511,
+          "p95_ms": 352.5975810276577
+        },
+        "generation_pipeline": {
+          "samples": 2,
+          "mean_ms": 350.4550520506976,
+          "p50_ms": 350.4550520506976,
+          "p95_ms": 355.76459575662835
+        },
+        "end_to_end": {
+          "samples": 2,
+          "mean_ms": 377.8874020506976,
+          "p50_ms": 377.8874020506976,
+          "p95_ms": 382.9549663566283
+        }
+      },
+      "end_to_end_latency_ms_mean": 377.8874020506976,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "Ours_v6_k3_equal": {
+      "queries": 2,
+      "fault_classes": 1,
+      "answerable_queries": 2,
+      "unanswerable_queries": 0,
+      "valid_answered_queries": 2,
+      "valid_abstained_queries": 0,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4642857142857143,
+      "retrieval_ndcg_macro": 1.0,
+      "citation_precision_macro": 1.0,
+      "citation_recall_macro": 0.4642857142857143,
+      "citation_f1_macro": 0.6333333333333333,
+      "source_family_coverage_mean": 3.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": null,
+      "abstention_recall": null,
+      "model_calls": {
+        "samples": 2,
+        "mean": 1.5,
+        "p50": 1.5,
+        "p95": 1.95
+      },
+      "prompt_tokens": {
+        "samples": 2,
+        "mean": 529.5,
+        "p50": 529.5,
+        "p95": 617.25
+      },
+      "generated_tokens": {
+        "samples": 2,
+        "mean": 13.0,
+        "p50": 13.0,
+        "p95": 15.7
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 2,
+          "mean_ms": 27.557176499999997,
+          "p50_ms": 27.557176499999997,
+          "p95_ms": 27.79043175
+        },
+        "prompt_build": {
+          "samples": 2,
+          "mean_ms": 1.597217,
+          "p50_ms": 1.597217,
+          "p95_ms": 1.7294837
+        },
+        "stage1_verifier": {
+          "samples": 2,
+          "mean_ms": 348.758751002606,
+          "p50_ms": 348.758751002606,
+          "p95_ms": 349.96209783130325
+        },
+        "stage2_review": {
+          "samples": 2,
+          "mean_ms": 105.71494451141916,
+          "p50_ms": 105.71494451141916,
+          "p95_ms": 200.8583945716964
+        },
+        "render": {
+          "samples": 2,
+          "mean_ms": 0.07025999999999999,
+          "p50_ms": 0.07025999999999999,
+          "p95_ms": 0.0713157
+        },
+        "input_preparation": {
+          "samples": 2,
+          "mean_ms": 2.0652100211009383,
+          "p50_ms": 2.0652100211009383,
+          "p95_ms": 2.5239553535357118
+        },
+        "model_inference": {
+          "samples": 2,
+          "mean_ms": 454.4425324711483,
+          "p50_ms": 454.4425324711483,
+          "p95_ms": 549.8718845861731
+        },
+        "generation_pipeline": {
+          "samples": 2,
+          "mean_ms": 458.1852839732634,
+          "p50_ms": 458.1852839732634,
+          "p95_ms": 553.8105683181578
+        },
+        "end_to_end": {
+          "samples": 2,
+          "mean_ms": 485.94010997326336,
+          "p50_ms": 485.94010997326336,
+          "p95_ms": 581.5617349181578
+        }
+      },
+      "end_to_end_latency_ms_mean": 485.94010997326336,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "B1_dense_k4_secondary": {
+      "queries": 2,
+      "fault_classes": 1,
+      "answerable_queries": 2,
+      "unanswerable_queries": 0,
+      "valid_answered_queries": 2,
+      "valid_abstained_queries": 0,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.39285714285714285,
+      "retrieval_ndcg_macro": 0.623151194370365,
+      "citation_precision_macro": 1.0,
+      "citation_recall_macro": 0.39285714285714285,
+      "citation_f1_macro": 0.5555555555555556,
+      "source_family_coverage_mean": 2.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": null,
+      "abstention_recall": null,
+      "model_calls": {
+        "samples": 2,
+        "mean": 2.5,
+        "p50": 2.5,
+        "p95": 2.9499999999999997
+      },
+      "prompt_tokens": {
+        "samples": 2,
+        "mean": 902.0,
+        "p50": 902.0,
+        "p95": 1043.3
+      },
+      "generated_tokens": {
+        "samples": 2,
+        "mean": 21.0,
+        "p50": 21.0,
+        "p95": 23.7
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 2,
+          "mean_ms": 27.7175915,
+          "p50_ms": 27.7175915,
+          "p95_ms": 28.19070665
+        },
+        "prompt_build": {
+          "samples": 2,
+          "mean_ms": 1.7726605000000002,
+          "p50_ms": 1.7726605000000002,
+          "p95_ms": 1.84391305
+        },
+        "stage1_verifier": {
+          "samples": 2,
+          "mean_ms": 428.1041535141412,
+          "p50_ms": 428.1041535141412,
+          "p95_ms": 428.54974489018787
+        },
+        "stage2_review": {
+          "samples": 2,
+          "mean_ms": 374.82859499868937,
+          "p50_ms": 374.82859499868937,
+          "p95_ms": 424.80163862055633
+        },
+        "render": {
+          "samples": 2,
+          "mean_ms": 0.072046,
+          "p50_ms": 0.072046,
+          "p95_ms": 0.07540480000000001
+        },
+        "input_preparation": {
+          "samples": 2,
+          "mean_ms": 3.5183755098842084,
+          "p50_ms": 3.5183755098842084,
+          "p95_ms": 4.126722883665934
+        },
+        "model_inference": {
+          "samples": 2,
+          "mean_ms": 803.7727274931967,
+          "p50_ms": 803.7727274931967,
+          "p95_ms": 848.76931332401
+        },
+        "generation_pipeline": {
+          "samples": 2,
+          "mean_ms": 809.1476870064539,
+          "p50_ms": 809.1476870064539,
+          "p95_ms": 854.8442132080132
+        },
+        "end_to_end": {
+          "samples": 2,
+          "mean_ms": 836.8652785064539,
+          "p50_ms": 836.8652785064539,
+          "p95_ms": 883.0349198580133
+        }
+      },
+      "end_to_end_latency_ms_mean": 836.8652785064539,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    }
+  },
+  "warnings": [],
+  "inputs": {
+    "queries": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+    "retrieval_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+    "generation_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/.tmp/rp2_v6_equal_budget_smoke/limit_2/generation/generation_results.jsonl",
+    "fresh_retrieval_latency": "/home/hengshan10/08-zxk/Fault_LLM_V2/.tmp/rp2_v6_equal_budget_smoke/limit_2/retrieval_latency/retrieval_latency_runs.jsonl"
+  }
+}

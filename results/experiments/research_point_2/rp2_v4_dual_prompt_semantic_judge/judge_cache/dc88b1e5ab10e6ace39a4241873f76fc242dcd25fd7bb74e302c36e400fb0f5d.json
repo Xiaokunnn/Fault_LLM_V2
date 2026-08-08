@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-378eb98f-3325-9978-a821-aa8756a8adcc",
+  "latency_ms": 10399,
+  "usage": {
+    "completion_tokens": 852,
+    "prompt_tokens": 1993,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2845
+  },
+  "prompt_sha256": "dc88b1e5ab10e6ace39a4241873f76fc242dcd25fd7bb74e302c36e400fb0f5d",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F01-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-9aa6946a535d2ca0cf5f",
+            "quote": "Insufficient inlet pressure will cause the pump to cavitate leading\n                             to low performance, noise and short pump life."
+          }
+        ],
+        "reason_code": "condition_deletion"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F02-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F02-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          },
+          {
+            "evidence_id": "MPA-4681ee710f33f83dc8a6",
+            "quote": "Wrong direction of\nrotation"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F03-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "object_substitution"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F03-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

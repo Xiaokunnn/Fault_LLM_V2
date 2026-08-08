@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-ca7f2eec-950c-9681-aa60-3d0afb181774",
+  "latency_ms": 12502,
+  "usage": {
+    "completion_tokens": 932,
+    "prompt_tokens": 1821,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2753
+  },
+  "prompt_sha256": "df092869e6daa2c8c05ac741083792d2e6f87a9567e93acd7b2247e0ecdbd7ec",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-INS::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-25a535a4309cb981b8c9",
+            "quote": "suction piping and pump should be inspected internally for foreign matter\n       that might be drawn into impeller passages and clog them."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-INS::point::1",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ff2fc306ca23a27f8ba5",
+            "quote": "Dismantle pipe (58). The top piece can now be                       \n             lifted up allowing inspection of the impeller."
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.8,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-25a535a4309cb981b8c9",
+            "quote": "suction piping and pump should be inspected internally for foreign matter\n       that might be drawn into impeller passages and clog them."
+          },
+          {
+            "evidence_id": "MPA-ff2fc306ca23a27f8ba5",
+            "quote": "Dismantle pipe (58). The top piece can now be                       \n             lifted up allowing inspection of the impeller."
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-MAINT::point::0",
+        "verdict": "partial",
+        "confidence": 0.7,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-dcc1a886d9f48fcb8c78",
+            "quote": "Check Impeller for signs of wear or damage, replace if\n     required."
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-MAINT::summary",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-dcc1a886d9f48fcb8c78",
+            "quote": "Check Impeller for signs of wear or damage, replace if\n     required."
+          }
+        ],
+        "reason_code": "summary_added_fact"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F04-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "question_answer_mismatch"
+      }
+    ]
+  }
+}

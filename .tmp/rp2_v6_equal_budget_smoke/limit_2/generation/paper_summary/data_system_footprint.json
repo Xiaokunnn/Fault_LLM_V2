@@ -1,0 +1,192 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v6_equal_budget",
+  "data_model": "Entity--Claim--Evidence Assertion--Source Family--Provenance",
+  "graph": {
+    "path": "data/kg/marine_pump/triples/KG_v1_validated",
+    "total_bytes": 2000273,
+    "files": {
+      "entities.jsonl": {
+        "records": 281,
+        "bytes": 91157
+      },
+      "claims.jsonl": {
+        "records": 203,
+        "bytes": 51350
+      },
+      "evidence_assertions.jsonl": {
+        "records": 208,
+        "bytes": 146010
+      },
+      "claim_evidence_links.jsonl": {
+        "records": 208,
+        "bytes": 67007
+      },
+      "source_records.jsonl": {
+        "records": 208,
+        "bytes": 1644749
+      }
+    }
+  },
+  "retrieval_corpus": {
+    "evidence_assertions": 208,
+    "source_documents": 14,
+    "source_families": 10,
+    "provenance_complete_records": 208,
+    "provenance_complete_rate": 1.0,
+    "required_provenance_fields": [
+      "evidence_text",
+      "doc_id",
+      "pdf_page_number",
+      "source_url",
+      "source_family_id"
+    ]
+  },
+  "vector_index": {
+    "path": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated",
+    "exists": true,
+    "total_bytes": 860826,
+    "manifest": {
+      "record_count": 208,
+      "dimension": 1024,
+      "embeddings_sha256": "e22d3e645862efeb08dee19d6e215a03f1e96f7c69bcd6fa57848bb9803dd103",
+      "protocol_id": "marine_pump_rp2_graphrag_v2",
+      "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+      "model_manifest": {
+        "path": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/mode/BAAI-bge-m3",
+        "file_count": 30,
+        "total_bytes": 4587311333,
+        "structure_sha256": "7b99c8d196a71d863dbdfbeab151d047533e897bbb5ce6c996fd36619ccf9c99",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1627
+          },
+          {
+            "path": "1_Pooling/config.json",
+            "bytes": 191
+          },
+          {
+            "path": "README.md",
+            "bytes": 15822
+          },
+          {
+            "path": "colbert_linear.pt",
+            "bytes": 2100674
+          },
+          {
+            "path": "config.json",
+            "bytes": 687
+          },
+          {
+            "path": "config_sentence_transformers.json",
+            "bytes": 123
+          },
+          {
+            "path": "configuration.json",
+            "bytes": 77
+          },
+          {
+            "path": "imgs/bm25.jpg",
+            "bytes": 131849
+          },
+          {
+            "path": "imgs/long.jpg",
+            "bytes": 485432
+          },
+          {
+            "path": "imgs/miracl.jpg",
+            "bytes": 576482
+          },
+          {
+            "path": "imgs/mkqa.jpg",
+            "bytes": 608027
+          },
+          {
+            "path": "imgs/nqa.jpg",
+            "bytes": 158358
+          },
+          {
+            "path": "imgs/others.webp",
+            "bytes": 20984
+          },
+          {
+            "path": "long.jpg",
+            "bytes": 126894
+          },
+          {
+            "path": "modules.json",
+            "bytes": 349
+          },
+          {
+            "path": "onnx/Constant_7_attr__value",
+            "bytes": 65552
+          },
+          {
+            "path": "onnx/config.json",
+            "bytes": 698
+          },
+          {
+            "path": "onnx/model.onnx",
+            "bytes": 724923
+          },
+          {
+            "path": "onnx/model.onnx_data",
+            "bytes": 2266820608
+          },
+          {
+            "path": "onnx/sentencepiece.bpe.model",
+            "bytes": 5069051
+          },
+          {
+            "path": "onnx/special_tokens_map.json",
+            "bytes": 964
+          },
+          {
+            "path": "onnx/tokenizer.json",
+            "bytes": 17082821
+          },
+          {
+            "path": "onnx/tokenizer_config.json",
+            "bytes": 1173
+          },
+          {
+            "path": "pytorch_model.bin",
+            "bytes": 2271145830
+          },
+          {
+            "path": "sentence_bert_config.json",
+            "bytes": 54
+          },
+          {
+            "path": "sentencepiece.bpe.model",
+            "bytes": 5069051
+          },
+          {
+            "path": "sparse_linear.pt",
+            "bytes": 3516
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 964
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 17098108
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 444
+          }
+        ]
+      },
+      "label_policy": "Silver only; never Gold"
+    },
+    "build_time_status": "not_recorded_for_existing_index; rebuild once with the updated builder if required"
+  },
+  "online_query_interface": {
+    "input": "q=(natural-language text x, fault scope f, evidence role r)",
+    "natural_language_fault_role_parser_evaluated": false
+  },
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

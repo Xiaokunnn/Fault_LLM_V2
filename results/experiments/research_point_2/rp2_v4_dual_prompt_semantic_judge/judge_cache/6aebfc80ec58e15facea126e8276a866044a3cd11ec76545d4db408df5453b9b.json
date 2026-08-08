@@ -1,0 +1,90 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-6295cea4-8532-9313-8c12-ac554e351f45",
+  "latency_ms": 10131,
+  "usage": {
+    "completion_tokens": 834,
+    "prompt_tokens": 1949,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2783
+  },
+  "prompt_sha256": "6aebfc80ec58e15facea126e8276a866044a3cd11ec76545d4db408df5453b9b",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F01-SYM::summary",
+        "verdict": "partial",
+        "confidence": 0.6,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c188da72b4391a4f5466",
+            "quote": "impeller may show signs of heavy erosion caused by cavitation"
+          }
+        ],
+        "reason_code": "summary_added_fact"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F02-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F02-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e07064dfbeb424f07d1c",
+            "quote": "Air is drawn in because\nof too little liquid or\nleaking suction line"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b963bb9fb9f624bc0064",
+            "quote": "These micro-organisms can degrade the lubricant’s properties causing blocked filters"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::point::1",
+        "verdict": "unsupported",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F03-CAUSE::summary",
+        "verdict": "unsupported",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-071121ae17b49c3a80d6",
+            "quote": "the pump from getting jammed\n                       due to corrosion in the seal clearances around the impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      }
+    ]
+  }
+}

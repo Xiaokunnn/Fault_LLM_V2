@@ -1,0 +1,90 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-642a11c2-c50e-9075-af1d-744f86127cd7",
+  "latency_ms": 11886,
+  "usage": {
+    "completion_tokens": 873,
+    "prompt_tokens": 1733,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2606
+  },
+  "prompt_sha256": "479cf41d242b6511c4be28c4d2c1a7ee8704a0a7d4a259da8eada9685e892959",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-e6ff926837f6d592f3a1",
+            "quote": "In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-INS::point::0",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-dd36f93f3d58e47cbe8d",
+            "quote": "condition-monitoring tasks may aid in identifying impending equipment\n            failures introduced by maintenance errors or machinery degradation"
+          }
+        ],
+        "reason_code": "modality_weakening"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-INS::summary",
+        "verdict": "partial",
+        "confidence": 0.85,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-dd36f93f3d58e47cbe8d",
+            "quote": "condition-monitoring tasks may aid in identifying impending equipment\n            failures introduced by maintenance errors or machinery degradation"
+          }
+        ],
+        "reason_code": "modality_weakening"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-37fd823eb74bfda257bb",
+            "quote": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "inferred_prevention"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-37fd823eb74bfda257bb",
+            "quote": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "inferred_prevention"
+      },
+      {
+        "item_id": "A_guard_ours_v4_k3_no_guard::CQ-F10-SYM::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-1532e7e26c34d006dc42",
+            "quote": "In case of dry running,\n                pump bearing and shaft seal will be damaged."
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

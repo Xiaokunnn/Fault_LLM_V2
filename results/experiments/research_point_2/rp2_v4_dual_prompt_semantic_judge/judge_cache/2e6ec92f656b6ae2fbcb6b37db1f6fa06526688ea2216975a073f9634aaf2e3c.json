@@ -1,0 +1,98 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-299c23ec-2d4d-9058-84f3-b568aa97122f",
+  "latency_ms": 12670,
+  "usage": {
+    "completion_tokens": 913,
+    "prompt_tokens": 1733,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2646
+  },
+  "prompt_sha256": "2e6ec92f656b6ae2fbcb6b37db1f6fa06526688ea2216975a073f9634aaf2e3c",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8b493c0ffd607a3a1dac",
+            "quote": "Hot bearings\n--- CELL ---\nInsufficient grease"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-b29b9c328a7bc65bbd73",
+            "quote": "Hot bearings\n--- CELL ---\nOverloaded bearing"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-CAUSE::point::2",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-a5760e53517eb647e7f1",
+            "quote": "Excessive temperature as a result of bearings running hot or defective bearing seals"
+          }
+        ],
+        "reason_code": "direct_causal_link"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8b493c0ffd607a3a1dac",
+            "quote": "Hot bearings\n--- CELL ---\nInsufficient grease"
+          },
+          {
+            "evidence_id": "MPA-b29b9c328a7bc65bbd73",
+            "quote": "Hot bearings\n--- CELL ---\nOverloaded bearing"
+          },
+          {
+            "evidence_id": "MPA-a5760e53517eb647e7f1",
+            "quote": "Excessive temperature as a result of bearings running hot or defective bearing seals"
+          }
+        ],
+        "reason_code": "aggregate_supported"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ecd747ca6409f0993be9",
+            "quote": "3. Slowly introduce recommended grease, per Table II into the bearings. DO NOT over\n               lubricate."
+          }
+        ],
+        "reason_code": "direct_procedure_match"
+      },
+      {
+        "item_id": "B1_dense_k4_guard::CQ-F06-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ecd747ca6409f0993be9",
+            "quote": "3. Slowly introduce recommended grease, per Table II into the bearings. DO NOT over\n               lubricate."
+          }
+        ],
+        "reason_code": "direct_procedure_match"
+      }
+    ]
+  }
+}
