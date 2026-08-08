@@ -1,0 +1,76 @@
+{
+  "report_schema": "rp2_silver_evidence_integrity_v1",
+  "definition": "Integrity(t)=SchemaLegal AND EntityAnchor AND DirectRelationSupport AND DirectionConsistent AND NonInferred AND PageGrounded AND ProvenanceComplete",
+  "scope": "KG_v1_validated release source records",
+  "interpretation": "Deterministic structural, grounding, and provenance integrity of Silver records; not human-expert factual correctness.",
+  "direction_check_boundary": "Consistency of the released normalized relation direction with the validated claim and relation registry; not an independent expert judgment.",
+  "hash_check_boundary": "This report validates SHA-256 field presence and format. It does not recompute copyrighted source-PDF or page-text hashes.",
+  "records": 208,
+  "documents": 14,
+  "source_families": 10,
+  "metrics": [
+    {
+      "id": "schema_legal",
+      "name": "Schema legality",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "entity_anchor",
+      "name": "Chinese canonical entity anchoring",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "direct_relation_support",
+      "name": "Direct relation support",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "direction_consistent",
+      "name": "Normalized direction consistency",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "non_inferred",
+      "name": "Non-inferred release edge",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "page_grounded",
+      "name": "Page-grounded evidence span",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "provenance_complete",
+      "name": "Provenance completeness",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    },
+    {
+      "id": "integrity_conjunction",
+      "name": "All seven deterministic release checks",
+      "passed": 208,
+      "evaluated": 208,
+      "rate": 1.0
+    }
+  ],
+  "all_checks_pass_rate": 1.0,
+  "input": {
+    "path": "data/kg/marine_pump/triples/KG_v1_validated/source_records.jsonl",
+    "sha256": "85e0fc2782c21034a8e292f83cf0a9b529fc19f3348e77521f6d847484a60a6f"
+  },
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

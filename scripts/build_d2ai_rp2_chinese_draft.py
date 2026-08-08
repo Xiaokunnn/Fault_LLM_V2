@@ -17,8 +17,8 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SOURCE = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v2.md"
-DEFAULT_OUTPUT = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v2.docx"
+DEFAULT_SOURCE = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v3.md"
+DEFAULT_OUTPUT = ROOT / "papers/D2AI_ICDM_2026/RP2_D2AI2026_中文初稿_v3.docx"
 
 LATIN_FONT = "Times New Roman"
 CN_FONT = "Noto Serif SC"

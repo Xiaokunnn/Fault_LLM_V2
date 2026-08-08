@@ -948,7 +948,11 @@ def summarize(
     bootstrap_replicates: int,
     seed: int,
     confidence: float,
+    method_specs: Sequence[Mapping[str, Any]] | None = None,
+    paired_comparisons: Sequence[tuple[str, str, str]] | None = None,
 ) -> dict[str, Any]:
+    active_specs = [dict(spec) for spec in (method_specs or METHOD_SPECS)]
+    active_comparisons = tuple(paired_comparisons or PAIRED_COMPARISONS)
     query_by_id = {str(row["query_id"]): row for row in queries}
     retrieval_by_key: dict[tuple[str, str], Mapping[str, Any]] = {}
     for row in retrieval_rows:
@@ -980,7 +984,7 @@ def summarize(
     records_by_method: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for key, generation in generation_by_key.items():
         method, query_id = key
-        if method not in {str(spec["id"]) for spec in METHOD_SPECS}:
+        if method not in {str(spec["id"]) for spec in active_specs}:
             warnings.append(f"Ignored unregistered method: {method}")
             continue
         if query_id not in query_by_id:
@@ -1027,9 +1031,9 @@ def summarize(
         )
 
     present_specs = [
-        dict(spec) for spec in METHOD_SPECS if spec["id"] in records_by_method
+        dict(spec) for spec in active_specs if spec["id"] in records_by_method
     ]
-    missing = [spec["id"] for spec in METHOD_SPECS if spec["id"] not in records_by_method]
+    missing = [spec["id"] for spec in active_specs if spec["id"] not in records_by_method]
     if missing:
         warnings.append("Missing expected methods: " + ", ".join(missing))
     summaries = {
@@ -1043,7 +1047,7 @@ def summarize(
     )
     paired_effects = _paired_cluster_bootstrap(
         records_by_method,
-        comparisons=PAIRED_COMPARISONS,
+        comparisons=active_comparisons,
         replicates=bootstrap_replicates,
         seed=seed,
         confidence=confidence,
@@ -1179,6 +1183,10 @@ def main() -> int:
     parser.add_argument("--bootstrap-replicates", type=int, default=5000)
     parser.add_argument("--seed", type=int, default=20260808)
     parser.add_argument("--confidence", type=float, default=0.95)
+    parser.add_argument(
+        "--config",
+        help="Optional protocol config used to register non-default scenario IDs.",
+    )
     args = parser.parse_args()
 
     experiment = Path(args.experiment_dir).resolve()
@@ -1211,6 +1219,35 @@ def main() -> int:
     if not 0.0 < args.confidence < 1.0:
         raise ValueError("--confidence must be between 0 and 1")
 
+    method_specs = None
+    paired_comparisons = None
+    if args.config:
+        config = json.loads(Path(args.config).resolve().read_text(encoding="utf-8"))
+        method_specs = []
+        for scenario in config["scenarios"]:
+            components = scenario.get("components", {})
+            method_specs.append(
+                {
+                    "id": str(scenario["id"]),
+                    "label": str(scenario.get("display_name", scenario["id"])),
+                    "budget": int(scenario["max_selected_evidence"]),
+                    "group": str(scenario.get("comparison_tier", "configured")),
+                    "role": bool(components.get("role_filter")),
+                    "graph": bool(components.get("graph_expansion")),
+                    "fault_affinity": bool(components.get("fault_affinity")),
+                    "source_novelty": bool(components.get("source_family_novelty")),
+                }
+            )
+        primary = config.get("primary_comparison", {})
+        if primary.get("reference") and primary.get("proposed"):
+            paired_comparisons = (
+                (
+                    "Configured_primary_comparison",
+                    str(primary["reference"]),
+                    str(primary["proposed"]),
+                ),
+            )
+
     report = summarize(
         queries=_read_jsonl(queries_path),
         retrieval_rows=_read_jsonl(retrieval_path),
@@ -1223,6 +1260,8 @@ def main() -> int:
         bootstrap_replicates=args.bootstrap_replicates,
         seed=args.seed,
         confidence=args.confidence,
+        method_specs=method_specs,
+        paired_comparisons=paired_comparisons,
     )
     report["inputs"] = {
         "queries": str(queries_path),

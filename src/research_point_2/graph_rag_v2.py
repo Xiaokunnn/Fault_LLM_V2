@@ -29,7 +29,11 @@ SUPPORTED = {
     "dense_ours_no_source_family",
     "dense_ours_no_redundancy",
     "dense_ours_v4",
+    "dense_ours_v4_no_graph",
 }
+
+NO_GRAPH_OURS_METHODS = {"dense_ours_no_graph", "dense_ours_v4_no_graph"}
+FAULT_AFFINITY_METHODS = {"dense_ours_v4", "dense_ours_v4_no_graph"}
 
 
 def _graph_pool(index: RetrievalIndex, seeds: list[tuple[str, float]], method: str, hops: int) -> tuple[set[str], int, int]:
@@ -165,7 +169,7 @@ def retrieve_dense_graph(
         )
         pool = [graph_index.by_id[eid] for eid in evidence_ids if eid in graph_index.by_id]
         generation_mode = method
-    elif method.startswith("dense_ours") and method != "dense_ours_no_graph":
+    elif method.startswith("dense_ours") and method not in NO_GRAPH_OURS_METHODS:
         evidence_ids, graph_score_by_id, visited_nodes, visited_edges = _budgeted_hop_pool(
             graph_index,
             [(hit.evidence_id, hit.score) for hit in hits[:anchor_evidence_count]],
@@ -177,7 +181,11 @@ def retrieve_dense_graph(
         generation_mode = f"dense_budgeted_graph_h{ours_graph_hops}"
     else:
         pool = [graph_index.by_id[hit.evidence_id] for hit in hits if hit.evidence_id in graph_index.by_id]
-        generation_mode = "dense_full_graph"
+        generation_mode = (
+            "dense_no_graph_same_constraints"
+            if method == "dense_ours_v4_no_graph"
+            else "dense_full_graph"
+        )
     if method in {
         "dense_metapath",
         "dense_fixed_hop",
@@ -187,11 +195,12 @@ def retrieve_dense_graph(
         "dense_ours_no_source_family",
         "dense_ours_no_redundancy",
         "dense_ours_v4",
+        "dense_ours_v4_no_graph",
     }:
         role_rows = [item for item in pool if item.role == query.role]
         if role_rows:
             pool = role_rows
-    if method == "dense_ours_v4" and fault_affinity_floor > 0.0:
+    if method in FAULT_AFFINITY_METHODS and fault_affinity_floor > 0.0:
         pool = [
             item
             for item in pool
@@ -214,7 +223,7 @@ def retrieve_dense_graph(
                         lexical_similarity(query.fault_name_zh, item.head_label_zh),
                         lexical_similarity(query.fault_name_zh, item.tail_label_zh),
                     )
-                    if method == "dense_ours_v4"
+                    if method in FAULT_AFFINITY_METHODS
                     else 0.0
                 ),
             )

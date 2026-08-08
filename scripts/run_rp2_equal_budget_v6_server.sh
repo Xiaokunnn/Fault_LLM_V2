@@ -88,6 +88,19 @@ BENCHMARK_DIR="$(read_config_value benchmark_dir)"
 REPLAY_PATH="$(read_config_value frozen_retrieval_results)"
 FORMAL_GENERATION_DIR="$(read_config_value output_dir)"
 FORMAL_RETRIEVAL_DIR="$(read_config_value retrieval_latency_output_dir)"
+PREPARE_SCRIPT="$($PYTHON - "$BASE_CONFIG" <<'PY'
+import json
+import sys
+from pathlib import Path
+payload = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+print(payload.get("replay_preparation_script", "scripts/prepare_rp2_v6_equal_budget_replay.py"))
+PY
+)"
+
+if [[ ! -f "$PREPARE_SCRIPT" ]]; then
+  echo "Missing replay preparation script: $PREPARE_SCRIPT" >&2
+  exit 2
+fi
 
 RUN_CONFIG="$BASE_CONFIG"
 GENERATION_DIR="$FORMAL_GENERATION_DIR"
@@ -128,8 +141,8 @@ fi
 echo "[RP2 v6] quality=repeat0 only; timing=3 independent interleaved repeats; quality fusion=NONE"
 
 echo "========== 1/6 Prepare and verify immutable retrieval replay =========="
-"$PYTHON" -u scripts/prepare_rp2_v6_equal_budget_replay.py --config "$BASE_CONFIG"
-"$PYTHON" -u scripts/prepare_rp2_v6_equal_budget_replay.py \
+"$PYTHON" -u "$PREPARE_SCRIPT" --config "$BASE_CONFIG"
+"$PYTHON" -u "$PREPARE_SCRIPT" \
   --config "$BASE_CONFIG" \
   --verify-only
 
@@ -213,6 +226,7 @@ fi
 
 echo "========== 5/6 Paper-ready Silver summary =========="
 "$PYTHON" -u scripts/summarize_rp2_equal_budget_v6.py \
+  --config "$RUN_CONFIG" \
   --experiment-dir "$GENERATION_DIR" \
   --retrieval-results "$REPLAY_PATH" \
   --retrieval-latency-results "$RETRIEVAL_DIR/retrieval_latency_runs.jsonl" \

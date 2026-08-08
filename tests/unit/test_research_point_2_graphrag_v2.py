@@ -288,6 +288,36 @@ def test_dense_ours_v4_visible_affinity_does_not_use_hidden_fault_label() -> Non
     assert [row.evidence_id for row in result.ranked] == ["E1"]
 
 
+def test_dense_ours_v4_no_graph_keeps_all_full_constraints_except_propagation() -> None:
+    relevant = replace(
+        _candidate("E1", "A", "噪声"),
+        fault_class_ids=("wrong_hidden_label",),
+    )
+    graph_neighbor = replace(
+        _candidate("E2", "B", "振动"),
+        head_entity_id=relevant.tail_entity_id,
+        tail_entity_id="GRAPH-ONLY",
+    )
+    candidates = [relevant, graph_neighbor]
+    result = retrieve_dense_graph(
+        _query(),
+        candidates,
+        RetrievalIndex(candidates),
+        DenseEvidenceIndex(["E1", "E2"], [[1.0, 0.0], [0.0, 1.0]]),
+        FakeEncoder(),
+        method="dense_ours_v4_no_graph",
+        budget=RetrievalBudget(max_scored_candidates=2, max_selected_evidence=2),
+        dense_top_n=1,
+        anchor_evidence_count=1,
+        fault_affinity_weight=0.35,
+        fault_affinity_floor=0.03,
+    )
+    assert [row.evidence_id for row in result.ranked] == ["E1"]
+    assert result.visited_nodes == 0
+    assert result.visited_edges == 0
+    assert result.generation_mode.startswith("dense_no_graph_same_constraints")
+
+
 def test_abstention_is_not_counted_as_invalid_citation() -> None:
     checked = validate_generated_answer(
         {
