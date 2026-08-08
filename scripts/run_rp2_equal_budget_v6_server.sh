@@ -85,6 +85,7 @@ PY
 }
 
 BENCHMARK_DIR="$(read_config_value benchmark_dir)"
+PROTOCOL_ID="$(read_config_value protocol_id)"
 REPLAY_PATH="$(read_config_value frozen_retrieval_results)"
 FORMAL_GENERATION_DIR="$(read_config_value output_dir)"
 FORMAL_RETRIEVAL_DIR="$(read_config_value retrieval_latency_output_dir)"
@@ -101,6 +102,10 @@ if [[ ! -f "$PREPARE_SCRIPT" ]]; then
   echo "Missing replay preparation script: $PREPARE_SCRIPT" >&2
   exit 2
 fi
+if [[ ! "$PROTOCOL_ID" =~ ^[A-Za-z0-9._-]+$ ]]; then
+  echo "Unsafe protocol_id for isolated output path: $PROTOCOL_ID" >&2
+  exit 2
+fi
 
 RUN_CONFIG="$BASE_CONFIG"
 GENERATION_DIR="$FORMAL_GENERATION_DIR"
@@ -108,7 +113,9 @@ RETRIEVAL_DIR="$FORMAL_RETRIEVAL_DIR"
 LIMIT_ARGS=()
 
 if [[ "$LIMIT" -gt 0 ]]; then
-  SMOKE_ROOT=".tmp/rp2_v6_equal_budget_smoke/limit_${LIMIT}"
+  # Keep smoke artifacts isolated by protocol so a frozen v6 run cannot be
+  # mistaken for a compatible v6.1 result (or vice versa).
+  SMOKE_ROOT=".tmp/${PROTOCOL_ID}_smoke/limit_${LIMIT}"
   RUN_CONFIG="$SMOKE_ROOT/config.json"
   GENERATION_DIR="$SMOKE_ROOT/generation"
   RETRIEVAL_DIR="$SMOKE_ROOT/retrieval_latency"
