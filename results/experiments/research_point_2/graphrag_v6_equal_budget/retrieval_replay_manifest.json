@@ -3,11 +3,15 @@
     "ordered_query_id_set_sha256": "9bc372df36d260cb07c3135518f492643efc83d9c5f24147e8c0deebc7d47e97",
     "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
     "query_count": 40,
-    "sha256": "2a812abfd9e8524a41f576390a4989ab7ca843c0988a9d8d6582fc964641bea0"
+    "sha256": "aaf33355e039066ae39fa2b1b52b5b5d6b85534cf8a5f6e6093ce979973fc7be"
   },
   "config": {
     "path": "configs/rp2_graphrag_v6_equal_budget.json",
-    "sha256": "d05ae394cea6e42ea9acb2a574ea571c11a96734fbff9b44b1111e4a8cca0f42"
+    "sha256": "d060ce3cc8877747a0d6a45d8471479ea217dd225cb4e95dc53f9c56d38b0ee9"
+  },
+  "content_hash_policy": {
+    "name": "utf8_text_lf_normalized_sha256_v1",
+    "purpose": "Treat Git LF and CRLF materializations as the same JSON/JSONL experiment content while preserving all parsed values."
   },
   "human_expert_reviewed": false,
   "immutable": true,
@@ -17,7 +21,7 @@
     "archived_elapsed_ms_preserved_for_audit": true,
     "warning": "Historical elapsed_ms values were produced under v3/v4 runs and MUST NOT be added to or reported as formal v6 end-to-end latency. Formal v6 latency requires a new interleaved replay under the v6 timing protocol."
   },
-  "manifest_schema": "rp2_v6_equal_budget_replay_manifest_v1",
+  "manifest_schema": "rp2_v6_equal_budget_replay_manifest_v2",
   "method_mappings": [
     {
       "archived_latency_ms_max": 185.633275,
@@ -32,7 +36,7 @@
       },
       "retrieval_method": "dense_topk",
       "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
-      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_file_sha256": "c4e9059b2dbbcb4bf05ffba327c4ce1908cb0776dec67fc698ba3fa1395c587f",
       "source_method": "B1_dense_k3",
       "underfilled_query_count": 0
     },
@@ -51,7 +55,7 @@
       },
       "retrieval_method": "dense_metapath",
       "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
-      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_file_sha256": "c4e9059b2dbbcb4bf05ffba327c4ce1908cb0776dec67fc698ba3fa1395c587f",
       "source_method": "B4_metapath_k3",
       "underfilled_query_count": 3
     },
@@ -69,7 +73,7 @@
       },
       "retrieval_method": "dense_ours_no_source_family",
       "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
-      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_file_sha256": "c4e9059b2dbbcb4bf05ffba327c4ce1908cb0776dec67fc698ba3fa1395c587f",
       "source_method": "A2_ours_k3_no_source_family",
       "underfilled_query_count": 2
     },
@@ -89,7 +93,7 @@
       },
       "retrieval_method": "dense_ours_v4",
       "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
-      "source_file_sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714",
+      "source_file_sha256": "eb17a478fad84ccb186f4fd8b0aa4ab072def29dd9d0ca691f8d96c6f52ff61e",
       "source_method": "Ours_v4_k3",
       "underfilled_query_count": 16
     },
@@ -106,7 +110,7 @@
       },
       "retrieval_method": "dense_topk",
       "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
-      "source_file_sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714",
+      "source_file_sha256": "eb17a478fad84ccb186f4fd8b0aa4ab072def29dd9d0ca691f8d96c6f52ff61e",
       "source_method": "B1_dense_k4_guard",
       "underfilled_query_count": 0
     }
@@ -116,20 +120,20 @@
     "bytes": 249963,
     "path": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
     "records": 200,
-    "sha256": "aea2c107a426665e87ac0f424af07378e9a24410ce6362af6be28c257456e8b1"
+    "sha256": "4275dd091cefabcb856d2887227ce516049b189110d78951d9ed65fda19a4171"
   },
   "source_artifacts": [
     {
-      "bytes": 436970,
+      "bytes": 436490,
       "path": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
       "records": 480,
-      "sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d"
+      "sha256": "c4e9059b2dbbcb4bf05ffba327c4ce1908cb0776dec67fc698ba3fa1395c587f"
     },
     {
-      "bytes": 146688,
+      "bytes": 146528,
       "path": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
       "records": 160,
-      "sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714"
+      "sha256": "eb17a478fad84ccb186f4fd8b0aa4ab072def29dd9d0ca691f8d96c6f52ff61e"
     }
   ],
   "validation": {

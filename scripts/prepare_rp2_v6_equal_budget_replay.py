@@ -20,12 +20,60 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def _lf_normalized_bytes(content: bytes) -> bytes:
+    """Normalize text line endings without changing JSON/JSONL content.
+
+    Git may materialize the same tracked text artifact with LF on Linux and
+    CRLF on Windows.  Raw working-tree hashes would therefore make provenance
+    and immutable replay checks depend on ``core.autocrlf`` rather than on the
+    experiment data.  All RP2 replay inputs are UTF-8 JSON or JSONL, so line
+    endings are deliberately excluded from their content identity.
+    """
+
+    return content.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
+def normalized_file_bytes(path: Path) -> bytes:
+    return _lf_normalized_bytes(path.read_bytes())
+
+
 def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+    """Return the cross-platform LF-normalized SHA-256 of a text artifact."""
+
+    return hashlib.sha256(normalized_file_bytes(path)).hexdigest()
+
+
+def _difference_diagnostic(path: Path, existing: bytes, expected: bytes) -> str:
+    existing_normalized = _lf_normalized_bytes(existing)
+    expected_normalized = _lf_normalized_bytes(expected)
+    details = [
+        f"normalized_bytes existing={len(existing_normalized)}, "
+        f"expected={len(expected_normalized)}"
+    ]
+    if path.suffix.lower() == ".jsonl":
+        existing_lines = [line for line in existing_normalized.splitlines() if line.strip()]
+        expected_lines = [line for line in expected_normalized.splitlines() if line.strip()]
+        details.append(
+            f"records existing={len(existing_lines)}, expected={len(expected_lines)}"
+        )
+        for index, (left, right) in enumerate(
+            zip(existing_lines, expected_lines), start=1
+        ):
+            if left == right:
+                continue
+            try:
+                left_row = json.loads(left)
+                right_row = json.loads(right)
+                details.append(
+                    "first_difference="
+                    f"record {index}, "
+                    f"existing_key=({left_row.get('method')},{left_row.get('query_id')}), "
+                    f"expected_key=({right_row.get('method')},{right_row.get('query_id')})"
+                )
+            except (UnicodeDecodeError, json.JSONDecodeError, AttributeError):
+                details.append(f"first_difference=record {index}")
+            break
+    return "; ".join(details)
 
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -141,7 +189,7 @@ def build_replay(
             source_manifests[source_path_text] = {
                 "path": source_path_text,
                 "sha256": digest_after,
-                "bytes": source_path.stat().st_size,
+                "bytes": len(normalized_file_bytes(source_path)),
                 "records": len(all_rows),
             }
 
@@ -206,9 +254,16 @@ def build_replay(
     replay_bytes = _jsonl_bytes(output_rows)
     query_set_sha256 = hashlib.sha256("\n".join(canonical_query_ids).encode("utf-8")).hexdigest()
     manifest: dict[str, Any] = {
-        "manifest_schema": "rp2_v6_equal_budget_replay_manifest_v1",
+        "manifest_schema": "rp2_v6_equal_budget_replay_manifest_v2",
         "protocol_id": str(config["protocol_id"]),
         "immutable": True,
+        "content_hash_policy": {
+            "name": "utf8_text_lf_normalized_sha256_v1",
+            "purpose": (
+                "Treat Git LF and CRLF materializations as the same JSON/JSONL "
+                "experiment content while preserving all parsed values."
+            ),
+        },
         "label_policy": "Silver only; never Gold",
         "human_expert_reviewed": False,
         "config": {
@@ -253,15 +308,40 @@ def build_replay(
 def _write_immutable(path: Path, content: bytes) -> str:
     if path.exists():
         existing = path.read_bytes()
+        if existing == content:
+            return "VERIFIED"
+        if _lf_normalized_bytes(existing) == _lf_normalized_bytes(content):
+            return "VERIFIED_EOL_NORMALIZED"
         if existing != content:
+            existing_sha = hashlib.sha256(_lf_normalized_bytes(existing)).hexdigest()
+            expected_sha = hashlib.sha256(_lf_normalized_bytes(content)).hexdigest()
             raise RuntimeError(
                 f"Refusing to overwrite immutable RP2 v6 artifact: {path}. "
+                f"LF-normalized sha256 existing={existing_sha}, expected={expected_sha}. "
+                f"{_difference_diagnostic(path, existing, content)}. "
+                "This is a real content/provenance difference, not an LF/CRLF difference. "
                 "Use a new protocol/output path for changed inputs."
             )
-        return "VERIFIED"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(content)
     return "CREATED"
+
+
+def _verify_immutable(path: Path, expected: bytes) -> str:
+    if not path.is_file():
+        raise RuntimeError(f"RP2 v6 immutable artifact is missing: {path}")
+    actual = path.read_bytes()
+    if actual == expected:
+        return "VERIFIED"
+    if _lf_normalized_bytes(actual) == _lf_normalized_bytes(expected):
+        return "VERIFIED_EOL_NORMALIZED"
+    actual_sha = hashlib.sha256(_lf_normalized_bytes(actual)).hexdigest()
+    expected_sha = hashlib.sha256(_lf_normalized_bytes(expected)).hexdigest()
+    raise RuntimeError(
+        f"RP2 v6 immutable artifact differs: {path}. "
+        f"LF-normalized sha256 actual={actual_sha}, expected={expected_sha}. "
+        f"{_difference_diagnostic(path, actual, expected)}."
+    )
 
 
 def main() -> int:
@@ -282,10 +362,8 @@ def main() -> int:
     manifest_bytes = _json_bytes(manifest)
 
     if args.verify_only:
-        for path, expected in ((replay_path, replay_bytes), (manifest_path, manifest_bytes)):
-            if not path.is_file() or path.read_bytes() != expected:
-                raise RuntimeError(f"RP2 v6 immutable artifact is missing or differs: {path}")
-        replay_status = manifest_status = "VERIFIED"
+        replay_status = _verify_immutable(replay_path, replay_bytes)
+        manifest_status = _verify_immutable(manifest_path, manifest_bytes)
     else:
         replay_status = _write_immutable(replay_path, replay_bytes)
         manifest_status = _write_immutable(manifest_path, manifest_bytes)

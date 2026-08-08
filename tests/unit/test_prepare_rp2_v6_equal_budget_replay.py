@@ -6,7 +6,11 @@ from pathlib import Path
 
 import pytest
 
-from scripts.prepare_rp2_v6_equal_budget_replay import build_replay
+from scripts.prepare_rp2_v6_equal_budget_replay import (
+    _verify_immutable,
+    _write_immutable,
+    build_replay,
+)
 
 
 def _write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -109,3 +113,42 @@ def test_build_replay_rejects_query_set_mismatch(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="query set mismatch"):
         build_replay(tmp_path, config, config_path)
+
+
+def test_replay_identity_ignores_only_lf_crlf_materialization(tmp_path: Path) -> None:
+    artifact = tmp_path / "replay.jsonl"
+    artifact.write_bytes(b'{"query_id":"Q1"}\r\n{"query_id":"Q2"}\r\n')
+    expected = b'{"query_id":"Q1"}\n{"query_id":"Q2"}\n'
+
+    assert _write_immutable(artifact, expected) == "VERIFIED_EOL_NORMALIZED"
+    assert _verify_immutable(artifact, expected) == "VERIFIED_EOL_NORMALIZED"
+
+
+def test_replay_identity_still_rejects_real_content_change(tmp_path: Path) -> None:
+    artifact = tmp_path / "replay.jsonl"
+    artifact.write_bytes(b'{"query_id":"Q1"}\r\n')
+
+    with pytest.raises(RuntimeError, match="first_difference=record 1") as error:
+        _write_immutable(artifact, b'{"query_id":"Q9"}\n')
+    assert "real content/provenance difference" in str(error.value)
+
+
+def test_build_replay_is_identical_for_lf_and_crlf_inputs(tmp_path: Path) -> None:
+    config, config_path = _config(tmp_path)
+    queries = tmp_path / "benchmark/queries.jsonl"
+    source = tmp_path / "source.jsonl"
+    query_lf = queries.read_bytes().replace(b"\r\n", b"\n")
+    source_lf = source.read_bytes().replace(b"\r\n", b"\n")
+    config_lf = (json.dumps(config, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    queries.write_bytes(query_lf.replace(b"\n", b"\r\n"))
+    source.write_bytes(source_lf.replace(b"\n", b"\r\n"))
+    config_path.write_bytes(config_lf.replace(b"\n", b"\r\n"))
+    crlf_replay, crlf_manifest = build_replay(tmp_path, config, config_path)
+
+    queries.write_bytes(query_lf)
+    source.write_bytes(source_lf)
+    config_path.write_bytes(config_lf)
+    lf_replay, lf_manifest = build_replay(tmp_path, config, config_path)
+
+    assert crlf_replay == lf_replay
+    assert crlf_manifest == lf_manifest
