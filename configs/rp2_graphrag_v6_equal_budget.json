@@ -1,0 +1,247 @@
+{
+  "protocol_id": "marine_pump_rp2_graphrag_v6_equal_budget",
+  "version": "0.6.0-equal-budget-preregistered",
+  "status": "development_equal_budget_retest_before_external_freeze",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {
+    "require_cuda": true
+  },
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "frozen_retrieval_results": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+  "frozen_retrieval_manifest": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay_manifest.json",
+  "output_dir": "results/experiments/research_point_2/graphrag_v6_equal_budget",
+  "retrieval_latency_output_dir": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_latency",
+  "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+  "embedding": {
+    "model_path": "data/model/BAAI-bge-m3",
+    "backend": "sentence_transformers",
+    "device": "cuda",
+    "normalize_embeddings": true,
+    "batch_size": 16,
+    "max_length": 8192,
+    "index_dir": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated"
+  },
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "stage1_max_new_tokens": 64,
+    "review_max_new_tokens": 48,
+    "warmup_runs": 2,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_equal_budget_v6"
+  },
+  "generation_contract": {
+    "max_prompt_tokens": 1536,
+    "max_answer_points": 3,
+    "max_point_chars": 80,
+    "max_summary_chars": 100,
+    "latency_scope": "single online decision run; three rotating-interleaved repetitions are independent measurements and never majority-vote ensemble members"
+  },
+  "retrieval": {
+    "dense_top_n": 32,
+    "anchor_evidence_count": 8,
+    "max_scored_candidates": 32,
+    "max_per_source_family": 3,
+    "source_family_bonus": 0.06,
+    "redundancy_penalty": 0.0,
+    "fixed_hops": 2,
+    "ours_graph_hops": 1,
+    "ours_graph_decay": 0.7,
+    "graph_score_weight": 0.24,
+    "fault_affinity_weight": 0.35,
+    "fault_affinity_floor": 0.03
+  },
+  "cascade": {
+    "stage1": "evidence_mask_v3 precision mask",
+    "stage2": "independent single-candidate recall review for every stage-1 zero",
+    "decision_policy": "single_run",
+    "decision_run": 0,
+    "interleaved_repeats": 3,
+    "repeat_purpose": "timing_measurement_only",
+    "method_order": "rotate by query_index plus repeat",
+    "latency_statistic": "per-query median of three independent repeats, then method p95",
+    "online_silver_labels_used": false
+  },
+  "scenarios": [
+    {
+      "id": "B1_dense_k3_equal",
+      "display_name": "Dense K3",
+      "comparison_tier": "primary_equal_budget",
+      "retrieval_method": "dense_topk",
+      "source_retrieval_method": "B1_dense_k3_equal",
+      "max_selected_evidence": 3,
+      "components": {
+        "role_filter": false,
+        "graph_expansion": false,
+        "fault_affinity": false,
+        "source_family_novelty": false
+      },
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "B4_role_k3_equal",
+      "display_name": "Role K3",
+      "comparison_tier": "primary_equal_budget",
+      "retrieval_method": "dense_metapath",
+      "source_retrieval_method": "B4_role_k3_equal",
+      "max_selected_evidence": 3,
+      "components": {
+        "role_filter": true,
+        "graph_expansion": false,
+        "fault_affinity": false,
+        "source_family_novelty": false
+      },
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "A2_role_graph_k3_equal",
+      "display_name": "Role + Graph K3",
+      "comparison_tier": "primary_equal_budget",
+      "retrieval_method": "dense_ours_no_source_family",
+      "source_retrieval_method": "A2_role_graph_k3_equal",
+      "max_selected_evidence": 3,
+      "components": {
+        "role_filter": true,
+        "graph_expansion": true,
+        "fault_affinity": false,
+        "source_family_novelty": false
+      },
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "Ours_v6_k3_equal",
+      "display_name": "Full K3",
+      "comparison_tier": "primary_equal_budget",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v6_k3_equal",
+      "max_selected_evidence": 3,
+      "components": {
+        "role_filter": true,
+        "graph_expansion": true,
+        "fault_affinity": true,
+        "source_family_novelty": true,
+        "source_family_cap_active_at_k3": false
+      },
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "B1_dense_k4_secondary",
+      "display_name": "Dense K4",
+      "comparison_tier": "secondary_cross_budget",
+      "retrieval_method": "dense_topk",
+      "source_retrieval_method": "B1_dense_k4_secondary",
+      "max_selected_evidence": 4,
+      "components": {
+        "role_filter": false,
+        "graph_expansion": false,
+        "fault_affinity": false,
+        "source_family_novelty": false
+      },
+      "minimum_visible_fault_affinity": 0.05
+    }
+  ],
+  "primary_comparison": {
+    "evidence_budget": 3,
+    "methods": [
+      "B1_dense_k3_equal",
+      "B4_role_k3_equal",
+      "A2_role_graph_k3_equal",
+      "Ours_v6_k3_equal"
+    ]
+  },
+  "secondary_quality_cost_operating_point": {
+    "method": "B1_dense_k4_secondary",
+    "evidence_budget": 4,
+    "not_valid_for_graph_module_attribution": true
+  },
+  "replay_preparation": {
+    "expected_query_count": 40,
+    "method_mappings": [
+      {
+        "id": "B1_dense_k3_equal",
+        "display_name": "Dense K3",
+        "comparison_tier": "primary_equal_budget",
+        "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+        "source_method": "B1_dense_k3",
+        "retrieval_method": "dense_topk",
+        "candidate_budget": 3
+      },
+      {
+        "id": "B4_role_k3_equal",
+        "display_name": "Role K3",
+        "comparison_tier": "primary_equal_budget",
+        "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+        "source_method": "B4_metapath_k3",
+        "retrieval_method": "dense_metapath",
+        "candidate_budget": 3
+      },
+      {
+        "id": "A2_role_graph_k3_equal",
+        "display_name": "Role + Graph K3",
+        "comparison_tier": "primary_equal_budget",
+        "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+        "source_method": "A2_ours_k3_no_source_family",
+        "retrieval_method": "dense_ours_no_source_family",
+        "candidate_budget": 3
+      },
+      {
+        "id": "Ours_v6_k3_equal",
+        "display_name": "Full K3",
+        "comparison_tier": "primary_equal_budget",
+        "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+        "source_method": "Ours_v4_k3",
+        "retrieval_method": "dense_ours_v4",
+        "candidate_budget": 3
+      },
+      {
+        "id": "B1_dense_k4_secondary",
+        "display_name": "Dense K4",
+        "comparison_tier": "secondary_cross_budget",
+        "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+        "source_method": "B1_dense_k4_guard",
+        "retrieval_method": "dense_topk",
+        "candidate_budget": 4
+      }
+    ]
+  },
+  "latency_protocol": {
+    "warmup_runs": 2,
+    "interleaved_repeats": 3,
+    "online_decision_runs": 1,
+    "repeat_outputs_used_for_decision_fusion": false,
+    "archived_v3_v4_elapsed_ms_formal_v6_eligible": false,
+    "required_breakdown": [
+      "retrieval_ms",
+      "prompt_build_ms",
+      "stage1_model_ms",
+      "stage2_review_ms",
+      "render_ms",
+      "total_ms"
+    ]
+  },
+  "anti_leakage": {
+    "online_forbidden_fields": [
+      "fault_class_ids",
+      "relevant_evidence_ids"
+    ],
+    "structured_inputs": [
+      "query.question_zh",
+      "query.fault_id",
+      "query.fault_name_zh",
+      "query.role"
+    ],
+    "heldout_documents_forbidden_during_development": [
+      "MP009",
+      "MP010",
+      "MP011",
+      "MP012",
+      "MP013"
+    ],
+    "frozen_retrieval_reused_without_reranking": true,
+    "same_reviewer_for_all_methods": true,
+    "review_only_stage1_zero_candidates": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}

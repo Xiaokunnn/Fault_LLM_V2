@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import platform
 import time
 from pathlib import Path
 from typing import Iterable
@@ -54,8 +55,15 @@ def cuda_runtime_manifest(*, require_cuda: bool = False) -> dict:
                 }
             )
     return {
+        "python_version": platform.python_version(),
+        "platform": platform.platform(),
         "torch_version": str(torch.__version__),
         "torch_compiled_cuda": str(torch.version.cuda or ""),
+        "cudnn_version": (
+            int(torch.backends.cudnn.version())
+            if torch.backends.cudnn.is_available()
+            else None
+        ),
         "cuda_available": available,
         "cuda_device_count": int(torch.cuda.device_count()) if available else 0,
         "cuda_visible_devices": os.environ.get("CUDA_VISIBLE_DEVICES"),
@@ -130,6 +138,7 @@ class QwenLocalGenerator:
             raise FileNotFoundError(f"Qwen model not found: {path}")
         try:
             import torch
+            import transformers
             from transformers import AutoModelForCausalLM, AutoTokenizer
         except ImportError as exc:
             raise RuntimeError("Install requirements-server.txt before loading Qwen") from exc
@@ -161,11 +170,42 @@ class QwenLocalGenerator:
             raise RuntimeError(
                 f"Qwen loaded on {model_device} with device_map={self.device_map}, not CUDA"
             )
+        parameter_dtypes = sorted(
+            {
+                str(parameter.dtype).removeprefix("torch.")
+                for parameter in self.model.parameters()
+            }
+        )
+        raw_quantization = getattr(self.model.config, "quantization_config", None)
+        if hasattr(raw_quantization, "to_dict"):
+            quantization_manifest = raw_quantization.to_dict()
+        elif raw_quantization is None:
+            quantization_manifest = None
+        else:
+            quantization_manifest = str(raw_quantization)
         self.runtime_manifest.update(
             {
                 "model_device": model_device,
                 "model_device_map": self.device_map,
                 "cpu_or_disk_offload": offloaded,
+                "transformers_version": str(transformers.__version__),
+                "requested_dtype": dtype,
+                "resolved_parameter_dtypes": parameter_dtypes,
+                "model_config_dtype": str(
+                    getattr(self.model.config, "torch_dtype", "") or ""
+                ).removeprefix("torch."),
+                "quantized": bool(
+                    getattr(self.model, "is_quantized", False)
+                    or raw_quantization is not None
+                ),
+                "quantization_config": quantization_manifest,
+                "model_class": type(self.model).__name__,
+                "tokenizer_class": type(self.tokenizer).__name__,
+                "inference_batch_size": 1,
+                "deterministic_decoding": {
+                    "do_sample": False,
+                    "use_cache": True,
+                },
             }
         )
         self.last_metrics: dict = {}
@@ -193,7 +233,12 @@ class QwenLocalGenerator:
             torch.cuda.synchronize()
         started = time.perf_counter()
         with torch.inference_mode():
-            output = self.model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False)
+            output = self.model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens,
+                do_sample=False,
+                use_cache=True,
+            )
         if torch.cuda.is_available():
             torch.cuda.synchronize()
         generated = output[0][inputs.input_ids.shape[1] :]
@@ -202,6 +247,10 @@ class QwenLocalGenerator:
         self.last_metrics = {
             "prompt_tokens": int(inputs.input_ids.shape[1]),
             "generated_tokens": int(generated.shape[0]),
+            "batch_size": int(inputs.input_ids.shape[0]),
+            "requested_max_new_tokens": int(max_new_tokens),
+            "do_sample": False,
+            "use_cache": True,
             "input_preparation_ms": preparation_elapsed * 1000,
             "elapsed_ms": elapsed * 1000,
             "tokens_per_second": float(generated.shape[0]) / elapsed if elapsed else 0.0,

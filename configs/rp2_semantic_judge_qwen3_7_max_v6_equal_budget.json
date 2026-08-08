@@ -1,0 +1,28 @@
+{
+  "protocol_id": "marine_pump_rp2_same_model_dual_prompt_audit_v6_equal_budget",
+  "status": "development_equal_budget_answer_consistency_audit",
+  "model": "qwen3.7-max",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "temperature": 0,
+  "enable_thinking": false,
+  "response_format": {"type": "json_object"},
+  "timeout_seconds": 600,
+  "max_retries": 5,
+  "batch_size": 6,
+  "expected_query_count": 40,
+  "quote_protocol": "multi_span_v2",
+  "minimum_quote_chars": 4,
+  "selected_methods": [
+    "B1_dense_k3_equal",
+    "B4_role_k3_equal",
+    "A2_role_graph_k3_equal",
+    "Ours_v6_k3_equal"
+  ],
+  "source_generation_results": "results/experiments/research_point_2/graphrag_v6_equal_budget/generation_results.jsonl",
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "output_dir": "results/experiments/research_point_2/rp2_v6_same_model_dual_prompt_audit",
+  "audit_name_for_paper": "same-model, dual-prompt consistency audit",
+  "api_key_source": "DASHSCOPE_API_KEY environment variable only",
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

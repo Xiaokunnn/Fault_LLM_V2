@@ -1,0 +1,143 @@
+{
+  "benchmark_queries": {
+    "ordered_query_id_set_sha256": "9bc372df36d260cb07c3135518f492643efc83d9c5f24147e8c0deebc7d47e97",
+    "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+    "query_count": 40,
+    "sha256": "2a812abfd9e8524a41f576390a4989ab7ca843c0988a9d8d6582fc964641bea0"
+  },
+  "config": {
+    "path": "configs/rp2_graphrag_v6_equal_budget.json",
+    "sha256": "d05ae394cea6e42ea9acb2a574ea571c11a96734fbff9b44b1111e4a8cca0f42"
+  },
+  "human_expert_reviewed": false,
+  "immutable": true,
+  "label_policy": "Silver only; never Gold",
+  "latency_policy": {
+    "archived_elapsed_ms_formal_v6_eligible": false,
+    "archived_elapsed_ms_preserved_for_audit": true,
+    "warning": "Historical elapsed_ms values were produced under v3/v4 runs and MUST NOT be added to or reported as formal v6 end-to-end latency. Formal v6 latency requires a new interleaved replay under the v6 timing protocol."
+  },
+  "manifest_schema": "rp2_v6_equal_budget_replay_manifest_v1",
+  "method_mappings": [
+    {
+      "archived_latency_ms_max": 185.633275,
+      "archived_latency_ms_min": 27.108786,
+      "candidate_budget": 3,
+      "comparison_tier": "primary_equal_budget",
+      "display_name": "Dense K3",
+      "id": "B1_dense_k3_equal",
+      "query_count": 40,
+      "ranked_count_distribution": {
+        "3": 40
+      },
+      "retrieval_method": "dense_topk",
+      "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_method": "B1_dense_k3",
+      "underfilled_query_count": 0
+    },
+    {
+      "archived_latency_ms_max": 136.657628,
+      "archived_latency_ms_min": 28.83354,
+      "candidate_budget": 3,
+      "comparison_tier": "primary_equal_budget",
+      "display_name": "Role K3",
+      "id": "B4_role_k3_equal",
+      "query_count": 40,
+      "ranked_count_distribution": {
+        "1": 1,
+        "2": 2,
+        "3": 37
+      },
+      "retrieval_method": "dense_metapath",
+      "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_method": "B4_metapath_k3",
+      "underfilled_query_count": 3
+    },
+    {
+      "archived_latency_ms_max": 132.612273,
+      "archived_latency_ms_min": 27.338418,
+      "candidate_budget": 3,
+      "comparison_tier": "primary_equal_budget",
+      "display_name": "Role + Graph K3",
+      "id": "A2_role_graph_k3_equal",
+      "query_count": 40,
+      "ranked_count_distribution": {
+        "2": 2,
+        "3": 38
+      },
+      "retrieval_method": "dense_ours_no_source_family",
+      "source_file": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+      "source_file_sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d",
+      "source_method": "A2_ours_k3_no_source_family",
+      "underfilled_query_count": 2
+    },
+    {
+      "archived_latency_ms_max": 137.66031,
+      "archived_latency_ms_min": 26.995363,
+      "candidate_budget": 3,
+      "comparison_tier": "primary_equal_budget",
+      "display_name": "Full K3",
+      "id": "Ours_v6_k3_equal",
+      "query_count": 40,
+      "ranked_count_distribution": {
+        "0": 4,
+        "1": 6,
+        "2": 6,
+        "3": 24
+      },
+      "retrieval_method": "dense_ours_v4",
+      "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+      "source_file_sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714",
+      "source_method": "Ours_v4_k3",
+      "underfilled_query_count": 16
+    },
+    {
+      "archived_latency_ms_max": 181.69075,
+      "archived_latency_ms_min": 27.016047,
+      "candidate_budget": 4,
+      "comparison_tier": "secondary_cross_budget",
+      "display_name": "Dense K4",
+      "id": "B1_dense_k4_secondary",
+      "query_count": 40,
+      "ranked_count_distribution": {
+        "4": 40
+      },
+      "retrieval_method": "dense_topk",
+      "source_file": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+      "source_file_sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714",
+      "source_method": "B1_dense_k4_guard",
+      "underfilled_query_count": 0
+    }
+  ],
+  "protocol_id": "marine_pump_rp2_graphrag_v6_equal_budget",
+  "replay_artifact": {
+    "bytes": 249963,
+    "path": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+    "records": 200,
+    "sha256": "aea2c107a426665e87ac0f424af07378e9a24410ce6362af6be28c257456e8b1"
+  },
+  "source_artifacts": [
+    {
+      "bytes": 436970,
+      "path": "results/experiments/research_point_2/graphrag_v3_budget_effectiveness/retrieval_results.jsonl",
+      "records": 480,
+      "sha256": "ef7a1a25f8e451afdce1d0e1e2cb3e7f102a2798078f853672f48d4f788a512d"
+    },
+    {
+      "bytes": 146688,
+      "path": "results/experiments/research_point_2/graphrag_v4_faithfulness/retrieval_results.jsonl",
+      "records": 160,
+      "sha256": "42fab0f0ce95948b1902a1d5a4dc21b7f716aca628cb681b2df2393261371714"
+    }
+  ],
+  "validation": {
+    "candidate_budget_upper_bounds_valid": true,
+    "identical_query_id_sets": true,
+    "methods": 5,
+    "queries_per_method": 40,
+    "records": 200,
+    "source_method_mapping_valid": true
+  }
+}

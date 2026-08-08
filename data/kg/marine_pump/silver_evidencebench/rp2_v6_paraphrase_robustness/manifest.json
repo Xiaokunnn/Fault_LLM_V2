@@ -1,0 +1,30 @@
+{
+  "benchmark_id": "marine_pump_rp2_v6_paraphrase_robustness",
+  "parent_benchmark_id": "marine_pump_rp2_full_graph_development_v2",
+  "scope": "development_wording_robustness_only_not_held_out",
+  "structured_input_policy": "question wording changes; fault_id, fault_name_zh, role and Silver labels stay fixed",
+  "generation_policy": "two deterministic role-specific templates per parent query",
+  "parent_query_count": 40,
+  "query_count": 80,
+  "answerable_query_count": 68,
+  "unanswerable_query_count": 12,
+  "candidate_count": 208,
+  "positive_seeded_candidate_pool": false,
+  "parameters_tuned_on_paraphrases": false,
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold",
+  "source_files": {
+    "queries": {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+      "sha256": "2a812abfd9e8524a41f576390a4989ab7ca843c0988a9d8d6582fc964641bea0"
+    },
+    "evidence_candidates": {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/evidence_candidates.jsonl",
+      "sha256": "0506f3818830d928bd6adde61ee87db551bd59cb26f6de87ce07cb142b0865b4"
+    },
+    "manifest": {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/manifest.json",
+      "sha256": "161dea5295f9543c17dec87d0e4810640a4bdee7d1b5465ec7674062ce7bc4b3"
+    }
+  }
+}

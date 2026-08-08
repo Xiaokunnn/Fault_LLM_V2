@@ -1,0 +1,82 @@
+{
+  "protocol_id": "marine_pump_rp2_v6_local_verifier_ablation",
+  "version": "0.6.0-development-verifier-ablation",
+  "status": "development_ablation_no_external_tuning",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "runtime": {"require_cuda": true},
+  "benchmark_dir": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2",
+  "frozen_retrieval_results": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+  "frozen_retrieval_manifest": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay_manifest.json",
+  "output_dir": "results/experiments/research_point_2/graphrag_v6_verifier_ablation",
+  "generator": {
+    "model_path": "data/model/Qwen2.5-7B-Instruct",
+    "backend": "transformers",
+    "dtype": "auto",
+    "device_map": "auto",
+    "stage1_max_new_tokens": 64,
+    "review_max_new_tokens": 48,
+    "warmup_runs": 2,
+    "cache_dir": "data/interim/rp2_model_cache/qwen2_5_7b_v6_verifier_ablation"
+  },
+  "generation_contract": {
+    "max_prompt_tokens": 1536,
+    "max_answer_points": 3,
+    "max_point_chars": 80,
+    "max_summary_chars": 100,
+    "latency_scope": "generation and deterministic rendering stages; Full K3 retrieval is shared by all ablations"
+  },
+  "cascade": {
+    "decision_policy": "single_run",
+    "decision_run": 0,
+    "interleaved_repeats": 3,
+    "repeat_purpose": "timing_measurement_only",
+    "method_order": "rotate by query_index plus repeat",
+    "online_silver_labels_used": false
+  },
+  "scenarios": [
+    {
+      "id": "A0_full_k3_direct_render",
+      "display_name": "Top-K + deterministic guard",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v6_k3_equal",
+      "verification_mode": "direct_render",
+      "max_selected_evidence": 3,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "A1_full_k3_stage1_only",
+      "display_name": "Stage 1 mask + deterministic guard",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v6_k3_equal",
+      "verification_mode": "stage1_only",
+      "max_selected_evidence": 3,
+      "minimum_visible_fault_affinity": 0.05
+    },
+    {
+      "id": "A2_full_k3_stage1_review",
+      "display_name": "Stage 1 + recall review + deterministic guard",
+      "retrieval_method": "dense_ours_v4",
+      "source_retrieval_method": "Ours_v6_k3_equal",
+      "verification_mode": "stage1_plus_review",
+      "max_selected_evidence": 3,
+      "minimum_visible_fault_affinity": 0.05
+    }
+  ],
+  "effectiveness_tests": [],
+  "verification_ablation": {
+    "retrieval_candidates_identical_across_methods": true,
+    "quality_uses_repeat_zero_only": true,
+    "timing_repeats_used_for_voting": false,
+    "shared_renderer_and_guard": true,
+    "comparison_question": "Does the local 7B precision mask and recall review improve Silver citation selection and abstention?"
+  },
+  "anti_leakage": {
+    "online_forbidden_fields": ["fault_class_ids", "relevant_evidence_ids"],
+    "heldout_documents_forbidden_during_development": [
+      "MP009", "MP010", "MP011", "MP012", "MP013"
+    ],
+    "same_full_k3_candidates_for_all_ablation_rows": true,
+    "positive_seeded_candidate_pool_for_main_results": false
+  }
+}

@@ -72,7 +72,28 @@ def main() -> int:
             "label_policy": "Silver only; never Gold",
         },
     )
-    print(f"[RP2 index] completed: rows={len(candidates)}, elapsed={time.perf_counter()-started:.1f}s", flush=True)
+    elapsed_seconds = time.perf_counter() - started
+    manifest_path = output / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest.update(
+        {
+            "build_elapsed_seconds": elapsed_seconds,
+            "build_time_scope": (
+                "load local BGE-M3, encode all evidence assertions and persist NumPy index"
+            ),
+            "index_total_bytes": sum(
+                path.stat().st_size for path in output.rglob("*") if path.is_file()
+            ),
+        }
+    )
+    manifest_path.write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(
+        f"[RP2 index] completed: rows={len(candidates)}, elapsed={elapsed_seconds:.1f}s",
+        flush=True,
+    )
     return 0
 
 
