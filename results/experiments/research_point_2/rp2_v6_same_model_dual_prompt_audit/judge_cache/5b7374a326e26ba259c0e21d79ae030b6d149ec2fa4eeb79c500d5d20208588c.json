@@ -1,0 +1,98 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-a8a6e7e3-ee49-9f5e-b8a6-b203aa39fcc6",
+  "latency_ms": 10725,
+  "usage": {
+    "completion_tokens": 922,
+    "prompt_tokens": 1750,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2672
+  },
+  "prompt_sha256": "5b7374a326e26ba259c0e21d79ae030b6d149ec2fa4eeb79c500d5d20208588c",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F07-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-2fc5117319274221a158",
+            "quote": "Pump Vibrates:                                                               \n       a. Misalignment"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F07-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-99c468413d581e233735",
+            "quote": "Misalignment may be the cause of noisy pump operation, vibration, premature bearing failure, or\n       excessive coupling wear."
+          },
+          {
+            "evidence_id": "MPA-2fc5117319274221a158",
+            "quote": "Pump Vibrates:                                                               \n       a. Misalignment"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F08-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-d7df6bc52d67a6b21241",
+            "quote": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F08-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F08-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-d7df6bc52d67a6b21241",
+            "quote": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+          },
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "B1_dense_k3_equal::CQ-F08-MAINT::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-8e947ac6c11836ceff20",
+            "quote": "The interface between the stator and rotor must maintain a water seal to prevent water leaking into\n                 the motor space resulting in motor failure."
+          }
+        ],
+        "reason_code": "scope_mismatch"
+      }
+    ]
+  }
+}

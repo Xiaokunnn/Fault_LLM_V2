@@ -1,0 +1,273 @@
+{
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "benchmark_scope": "development_only_not_held_out",
+  "methods": {
+    "A2_role_graph_k3_equal": {
+      "evaluated_answerable_queries": 68,
+      "latency_samples": 80,
+      "recall_at_budget_macro": 0.33828505086245025,
+      "mrr": 0.732843137254902,
+      "ndcg_at_budget_macro": 0.6449591785162113,
+      "mean_source_family_coverage": 1.9852941176470589,
+      "mean_exact_claim_redundancy": 0.004901960784313726,
+      "mean_pairwise_endpoint_overlap": 0.10620915032679737,
+      "latency_ms_p50": 28.2944625,
+      "latency_ms_p95": 29.7217175,
+      "mean_scored_candidates": 16.375,
+      "mean_selected_evidence": 2.875,
+      "mean_visited_evidence": 16.825,
+      "mean_visited_nodes": 22.875,
+      "mean_visited_edges": 26.625,
+      "timeout_count": 0
+    },
+    "B1_dense_k3_equal": {
+      "evaluated_answerable_queries": 68,
+      "latency_samples": 80,
+      "recall_at_budget_macro": 0.20164289399970514,
+      "mrr": 0.5343137254901961,
+      "ndcg_at_budget_macro": 0.42676366571679997,
+      "mean_source_family_coverage": 1.9558823529411764,
+      "mean_exact_claim_redundancy": 0.004901960784313726,
+      "mean_pairwise_endpoint_overlap": 0.1111111111111111,
+      "latency_ms_p50": 27.925304,
+      "latency_ms_p95": 29.279260499999996,
+      "mean_scored_candidates": 32.0,
+      "mean_selected_evidence": 3.0,
+      "mean_visited_evidence": 32.0,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    },
+    "B4_role_k3_equal": {
+      "evaluated_answerable_queries": 68,
+      "latency_samples": 80,
+      "recall_at_budget_macro": 0.32743070912575556,
+      "mrr": 0.7083333333333333,
+      "ndcg_at_budget_macro": 0.6170315867237675,
+      "mean_source_family_coverage": 2.014705882352941,
+      "mean_exact_claim_redundancy": 0.004901960784313726,
+      "mean_pairwise_endpoint_overlap": 0.08169934640522876,
+      "latency_ms_p50": 27.963071499999998,
+      "latency_ms_p95": 28.9587774,
+      "mean_scored_candidates": 14.825,
+      "mean_selected_evidence": 2.825,
+      "mean_visited_evidence": 14.825,
+      "mean_visited_nodes": 0.0,
+      "mean_visited_edges": 0.0,
+      "timeout_count": 0
+    },
+    "Ours_v6_k3_equal": {
+      "evaluated_answerable_queries": 68,
+      "latency_samples": 80,
+      "recall_at_budget_macro": 0.3830440070765148,
+      "mrr": 0.8602941176470589,
+      "ndcg_at_budget_macro": 0.7370924184746032,
+      "mean_source_family_coverage": 2.1029411764705883,
+      "mean_exact_claim_redundancy": 0.009803921568627453,
+      "mean_pairwise_endpoint_overlap": 0.07026143790849673,
+      "latency_ms_p50": 29.3907625,
+      "latency_ms_p95": 30.75341845,
+      "mean_scored_candidates": 6.2,
+      "mean_selected_evidence": 2.1875,
+      "mean_visited_evidence": 6.2,
+      "mean_visited_nodes": 22.875,
+      "mean_visited_edges": 26.625,
+      "timeout_count": 0
+    }
+  },
+  "run_manifest": {
+    "protocol_id": "marine_pump_rp2_v6_paraphrase_retrieval_robustness",
+    "protocol_version": "0.6.0-development-wording-robustness",
+    "embedding_model": {
+      "path": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/model/BAAI-bge-m3",
+      "file_count": 30,
+      "total_bytes": 4587311333,
+      "structure_sha256": "7b99c8d196a71d863dbdfbeab151d047533e897bbb5ce6c996fd36619ccf9c99",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1627
+        },
+        {
+          "path": "1_Pooling/config.json",
+          "bytes": 191
+        },
+        {
+          "path": "README.md",
+          "bytes": 15822
+        },
+        {
+          "path": "colbert_linear.pt",
+          "bytes": 2100674
+        },
+        {
+          "path": "config.json",
+          "bytes": 687
+        },
+        {
+          "path": "config_sentence_transformers.json",
+          "bytes": 123
+        },
+        {
+          "path": "configuration.json",
+          "bytes": 77
+        },
+        {
+          "path": "imgs/bm25.jpg",
+          "bytes": 131849
+        },
+        {
+          "path": "imgs/long.jpg",
+          "bytes": 485432
+        },
+        {
+          "path": "imgs/miracl.jpg",
+          "bytes": 576482
+        },
+        {
+          "path": "imgs/mkqa.jpg",
+          "bytes": 608027
+        },
+        {
+          "path": "imgs/nqa.jpg",
+          "bytes": 158358
+        },
+        {
+          "path": "imgs/others.webp",
+          "bytes": 20984
+        },
+        {
+          "path": "long.jpg",
+          "bytes": 126894
+        },
+        {
+          "path": "modules.json",
+          "bytes": 349
+        },
+        {
+          "path": "onnx/Constant_7_attr__value",
+          "bytes": 65552
+        },
+        {
+          "path": "onnx/config.json",
+          "bytes": 698
+        },
+        {
+          "path": "onnx/model.onnx",
+          "bytes": 724923
+        },
+        {
+          "path": "onnx/model.onnx_data",
+          "bytes": 2266820608
+        },
+        {
+          "path": "onnx/sentencepiece.bpe.model",
+          "bytes": 5069051
+        },
+        {
+          "path": "onnx/special_tokens_map.json",
+          "bytes": 964
+        },
+        {
+          "path": "onnx/tokenizer.json",
+          "bytes": 17082821
+        },
+        {
+          "path": "onnx/tokenizer_config.json",
+          "bytes": 1173
+        },
+        {
+          "path": "pytorch_model.bin",
+          "bytes": 2271145830
+        },
+        {
+          "path": "sentence_bert_config.json",
+          "bytes": 54
+        },
+        {
+          "path": "sentencepiece.bpe.model",
+          "bytes": 5069051
+        },
+        {
+          "path": "sparse_linear.pt",
+          "bytes": 3516
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 964
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 17098108
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 444
+        }
+      ]
+    },
+    "generator_model": null,
+    "full_graph_candidate_count": 208,
+    "query_count": 80,
+    "scenarios": [
+      {
+        "id": "B1_dense_k3_equal",
+        "retrieval_method": "dense_topk",
+        "max_selected_evidence": 3
+      },
+      {
+        "id": "B4_role_k3_equal",
+        "retrieval_method": "dense_metapath",
+        "max_selected_evidence": 3
+      },
+      {
+        "id": "A2_role_graph_k3_equal",
+        "retrieval_method": "dense_ours_no_source_family",
+        "max_selected_evidence": 3
+      },
+      {
+        "id": "Ours_v6_k3_equal",
+        "retrieval_method": "dense_ours_v4",
+        "max_selected_evidence": 3
+      }
+    ],
+    "generation_contract": {
+      "max_prompt_tokens": 1536,
+      "max_answer_points": 3,
+      "max_point_chars": 80,
+      "max_summary_chars": 100
+    },
+    "force_generation": false,
+    "retrieval_replay": false,
+    "frozen_retrieval_results": null,
+    "frozen_retrieval_file_sha256": null,
+    "system_prompt_sha256_by_scenario": {
+      "B1_dense_k3_equal": "07c6a0527c01879eb13fc73ac54c34106142e2d6a2da93437c8a1a7b3e3d0c1c",
+      "B4_role_k3_equal": "07c6a0527c01879eb13fc73ac54c34106142e2d6a2da93437c8a1a7b3e3d0c1c",
+      "A2_role_graph_k3_equal": "07c6a0527c01879eb13fc73ac54c34106142e2d6a2da93437c8a1a7b3e3d0c1c",
+      "Ours_v6_k3_equal": "07c6a0527c01879eb13fc73ac54c34106142e2d6a2da93437c8a1a7b3e3d0c1c"
+    },
+    "embedding_runtime": {
+      "python_version": "3.11.15",
+      "platform": "Linux-6.17.0-40-generic-x86_64-with-glibc2.39",
+      "torch_version": "2.6.0+cu118",
+      "torch_compiled_cuda": "11.8",
+      "cudnn_version": 90100,
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "cuda_visible_devices": null,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA RTX 5880 Ada Generation",
+          "total_memory_bytes": 51002081280,
+          "compute_capability": "8.9"
+        }
+      ]
+    },
+    "embedding_device": "cuda:0",
+    "generator_runtime": null,
+    "label_policy": "Silver only; never Gold"
+  }
+}

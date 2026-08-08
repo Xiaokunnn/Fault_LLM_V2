@@ -1,0 +1,90 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-0b0a18fc-fb72-96a1-a2d0-dadf118ae227",
+  "latency_ms": 9521,
+  "usage": {
+    "completion_tokens": 835,
+    "prompt_tokens": 1745,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2580
+  },
+  "prompt_sha256": "4661dd6d8702364b60e7199f30ecd5fb10862abaf76271e76a3f7fc20c16869d",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-CAUSE::point::0",
+        "verdict": "unsupported",
+        "confidence": 0.95,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-ffc39c83ec015c2c19c0",
+            "quote": "Reduced\nperformance\n--- CELL ---\nExcessively worn impeller or wear ring"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4ccff5b0e877c2077f53",
+            "quote": "lack of liquid will damage the Impeller"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-CAUSE::summary",
+        "verdict": "partial",
+        "confidence": 0.9,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-4ccff5b0e877c2077f53",
+            "quote": "lack of liquid will damage the Impeller"
+          }
+        ],
+        "reason_code": "causal_direction_error"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-INS::point::0",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-c06f09d4417784779d15",
+            "quote": "Check Impeller for signs of wear or damage, replace if\n     required."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-INS::point::1",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-7fdda1ec8f9e8ab02b46",
+            "quote": "7.6.2 Measuring clearance between impeller and wear plate, other bearing groups"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F04-INS::point::2",
+        "verdict": "supported",
+        "confidence": 0.98,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-591a18698146a22f6da7",
+            "quote": "Measure OD of impeller hub or impeller wear rings and ID of casing wear rings. Compute\n       diametral clearance (ID minus OD) and compare with clearance given under Section entitled Wear Ring\n       Clearance"
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}

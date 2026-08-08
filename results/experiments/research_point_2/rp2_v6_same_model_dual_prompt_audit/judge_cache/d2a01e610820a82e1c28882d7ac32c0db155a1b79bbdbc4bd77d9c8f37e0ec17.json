@@ -1,0 +1,94 @@
+{
+  "model": "qwen3.7-max",
+  "request_id": "chatcmpl-1f17b06a-293a-9f13-a334-b6f18d539b89",
+  "latency_ms": 10009,
+  "usage": {
+    "completion_tokens": 869,
+    "prompt_tokens": 1680,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 2549
+  },
+  "prompt_sha256": "d2a01e610820a82e1c28882d7ac32c0db155a1b79bbdbc4bd77d9c8f37e0ec17",
+  "response_json": {
+    "judgments": [
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F08-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-d7df6bc52d67a6b21241",
+            "quote": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F08-CAUSE::point::1",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F08-CAUSE::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-d7df6bc52d67a6b21241",
+            "quote": "Motor fails to start\n--- CELL ---\nMotor may be overloaded"
+          },
+          {
+            "evidence_id": "MPA-f51064cf3443681a8fc6",
+            "quote": "Motor stalls\n--- CELL ---\nOverload"
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F08-MAINT::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-9191b1dbb126796a9954",
+            "quote": "Motor may be overloaded\n--- CELL ---\nReduce load."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F08-MAINT::summary",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-9191b1dbb126796a9954",
+            "quote": "Motor may be overloaded\n--- CELL ---\nReduce load."
+          }
+        ],
+        "reason_code": "direct_support"
+      },
+      {
+        "item_id": "A2_role_graph_k3_equal::CQ-F09-CAUSE::point::0",
+        "verdict": "supported",
+        "confidence": 1.0,
+        "evidence_spans": [
+          {
+            "evidence_id": "MPA-68183fc221936c37fc37",
+            "quote": "Improper seal water conditions can cause air leakage into the pump,\n                      excessive seepage out of the pump, overheating of packing and premature failure\n                      of packing and scoring of shaft sleeve."
+          }
+        ],
+        "reason_code": "direct_support"
+      }
+    ]
+  }
+}
