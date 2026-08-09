@@ -1,0 +1,438 @@
+{
+  "protocol_id": "rp2_equal_budget_paper_summary_v1",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "quality_decision": "canonical measurement repeat 0; interleaved repeats are timing measurements only and are not fused",
+  "latency_policy": "Fresh retrieval timings are paired with generation-only timings by (repeat, method, query_id). Archived retrieval_elapsed_ms values are never used. E2E is null when fresh timing is incomplete.",
+  "latency_pairing": {
+    "method_query_rows": 80,
+    "complete_method_query_rows": 80,
+    "pending_method_query_rows": 0,
+    "status": "complete"
+  },
+  "metric_boundary": "Retrieval and citation metrics measure agreement with the frozen Silver evidence benchmark, not expert factual correctness.",
+  "bootstrap": {
+    "unit": "fault_class",
+    "method": "paired percentile cluster bootstrap",
+    "seed": 20260808,
+    "requested_replicates": 5000,
+    "confidence": 0.95,
+    "intervals": {
+      "Full_v6_1_k3": {
+        "retrieval_recall_macro": {
+          "point": 0.4312094574671974,
+          "ci_low": 0.35511119677072867,
+          "ci_high": 0.5261741693978537,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.8222774299616643,
+          "ci_low": 0.7168341218212806,
+          "ci_high": 0.9186368634834189,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.7990196078431373,
+          "ci_low": 0.6578947368421053,
+          "ci_high": 0.925925925925926,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.37047766475011057,
+          "ci_low": 0.2535101267779839,
+          "ci_high": 0.49894450507990407,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.4263008233596469,
+          "ci_low": 0.30951450835920535,
+          "ci_high": 0.5444858938850873,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 544.3972336966028,
+          "ci_low": 454.57559858384957,
+          "ci_high": 638.3384011061505,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      },
+      "FullNoGraph_v6_1_k3": {
+        "retrieval_recall_macro": {
+          "point": 0.42945875718708537,
+          "ci_low": 0.3495376791264949,
+          "ci_high": 0.5268702374779313,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.7997668229914108,
+          "ci_low": 0.6429053929963819,
+          "ci_high": 0.9212327974392542,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.7843137254901961,
+          "ci_low": 0.6236346915676289,
+          "ci_high": 0.924731182795699,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.36872696446999853,
+          "ci_low": 0.2499349262620233,
+          "ci_high": 0.4978913268193526,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.4231495628554452,
+          "ci_low": 0.30260570681999255,
+          "ci_high": 0.542945649531671,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 0.9705882352941176,
+          "ci_low": 0.9090909090909091,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 0.8571428571428571,
+          "ci_low": 0.4285714285714285,
+          "ci_high": 1.0,
+          "replicates": 4990,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 530.2283400195628,
+          "ci_low": 454.08395459519346,
+          "ci_high": 614.0915803656136,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      }
+    },
+    "paired_comparisons": {
+      "Configured_primary_comparison": {
+        "reference": "FullNoGraph_v6_1_k3",
+        "proposed": "Full_v6_1_k3",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.0017507002801120386,
+            "ci_low": -0.007352941176470562,
+            "ci_high": 0.012244897959183654,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.5552,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.022510606970253533,
+            "ci_low": -0.02070347320688637,
+            "ci_high": 0.08823529411764697,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.6588,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.003151260504201725,
+            "ci_low": -0.012605042016806733,
+            "ci_high": 0.021428571428571408,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.5552,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": 14.168893677040046,
+            "ci_low": -3.411559971917033,
+            "ci_high": 34.12421388539135,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 0.0718,
+            "replicates": 5000,
+            "clusters": 10
+          }
+        }
+      }
+    }
+  },
+  "method_specs": [
+    {
+      "id": "Full_v6_1_k3",
+      "label": "Full K3",
+      "budget": 3,
+      "group": "paired_graph_attribution",
+      "role": true,
+      "graph": true,
+      "fault_affinity": true,
+      "source_novelty": true
+    },
+    {
+      "id": "FullNoGraph_v6_1_k3",
+      "label": "Full-NoGraph K3",
+      "budget": 3,
+      "group": "paired_graph_attribution",
+      "role": true,
+      "graph": false,
+      "fault_affinity": true,
+      "source_novelty": true
+    }
+  ],
+  "methods": {
+    "Full_v6_1_k3": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 34,
+      "valid_abstained_queries": 6,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4312094574671974,
+      "retrieval_ndcg_macro": 0.8222774299616643,
+      "citation_precision_macro": 0.7990196078431373,
+      "citation_recall_macro": 0.37047766475011057,
+      "citation_f1_macro": 0.4263008233596469,
+      "source_family_coverage_mean": 2.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": 1.0,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 1.8,
+        "p50": 2.0,
+        "p95": 3.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 634.725,
+        "p50": 687.5,
+        "p95": 1107.8999999999996
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 13.5,
+        "p50": 16.0,
+        "p95": 22.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 29.391490875,
+          "p50_ms": 29.948839,
+          "p95_ms": 30.769568099999997
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.5045692499999999,
+          "p50_ms": 1.5128655,
+          "p95_ms": 1.8808923999999996
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 297.36173503042664,
+          "p50_ms": 348.71258048224263,
+          "p95_ms": 441.8521111365407
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 196.20512989640702,
+          "p50_ms": 205.89139152434655,
+          "p95_ms": 437.9461221105883
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.06571015,
+          "p50_ms": 0.0728875,
+          "p95_ms": 0.09356535
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 2.455127028224524,
+          "p50_ms": 2.6354124711360782,
+          "p95_ms": 4.415282988338731
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 504.08627093129326,
+          "p50_ms": 551.0815854941029,
+          "p95_ms": 867.4242231470998
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 513.1784444530739,
+          "p50_ms": 555.4262229752917,
+          "p95_ms": 873.4136847124421
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 544.3972336966028,
+          "p50_ms": 585.5589184752916,
+          "p95_ms": 903.1283769520242
+        }
+      },
+      "end_to_end_latency_ms_mean": 544.3972336966028,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "FullNoGraph_v6_1_k3": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 33,
+      "valid_abstained_queries": 7,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.42945875718708537,
+      "retrieval_ndcg_macro": 0.7997668229914108,
+      "citation_precision_macro": 0.7843137254901961,
+      "citation_recall_macro": 0.36872696446999853,
+      "citation_f1_macro": 0.4231495628554452,
+      "source_family_coverage_mean": 2.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 0.9705882352941176,
+      "answerable_coverage": 0.9705882352941176,
+      "abstention_precision": 0.8571428571428571,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 1.775,
+        "p50": 2.0,
+        "p95": 3.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 628.25,
+        "p50": 690.0,
+        "p95": 1107.8999999999996
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 13.35,
+        "p50": 16.0,
+        "p95": 22.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 29.34082595,
+          "p50_ms": 29.6503105,
+          "p95_ms": 30.67450735
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.511739075,
+          "p50_ms": 1.5005945,
+          "p95_ms": 1.91985545
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 283.1569461413892,
+          "p50_ms": 345.15231297700666,
+          "p95_ms": 367.56903752102494
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 199.32282192603452,
+          "p50_ms": 206.18224696954712,
+          "p95_ms": 515.1742540503619
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.064547875,
+          "p50_ms": 0.072886,
+          "p95_ms": 0.09008224999999999
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 2.4390063801547512,
+          "p50_ms": 2.6445529947523028,
+          "p95_ms": 4.3921285221586
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 492.0432785671437,
+          "p50_ms": 556.7003154719714,
+          "p95_ms": 869.9124986625975
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 496.38399922709334,
+          "p50_ms": 560.9459550195488,
+          "p95_ms": 877.511753181999
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 530.2283400195628,
+          "p50_ms": 593.5348110022123,
+          "p95_ms": 907.756422381999
+        }
+      },
+      "end_to_end_latency_ms_mean": 530.2283400195628,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    }
+  },
+  "warnings": [],
+  "inputs": {
+    "queries": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+    "retrieval_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_replay.jsonl",
+    "generation_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_1_no_graph_control/generation_results.jsonl",
+    "fresh_retrieval_latency": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_latency/retrieval_latency_runs.jsonl"
+  }
+}

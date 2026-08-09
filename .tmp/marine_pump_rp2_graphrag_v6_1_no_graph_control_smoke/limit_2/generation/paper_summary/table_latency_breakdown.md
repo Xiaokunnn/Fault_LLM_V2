@@ -1,0 +1,20 @@
+| Method | K | Stage | N | Mean ms | p50 ms | p95 ms |
+|---|---|---|---|---|---|---|
+| Full K3 | 3 | retrieval | 2 | 28.92 | 28.92 | 29.083 |
+| Full K3 | 3 | prompt_build | 2 | 1.539 | 1.539 | 1.614 |
+| Full K3 | 3 | stage1_verifier | 2 | 349.592 | 349.592 | 357.773 |
+| Full K3 | 3 | stage2_review | 2 | 109.926 | 109.926 | 208.86 |
+| Full K3 | 3 | render | 2 | 0.078 | 0.078 | 0.086 |
+| Full K3 | 3 | input_preparation | 2 | 2.049 | 2.049 | 2.479 |
+| Full K3 | 3 | model_inference | 2 | 453.966 | 453.966 | 548.792 |
+| Full K3 | 3 | generation_pipeline | 2 | 461.888 | 461.888 | 553.175 |
+| Full K3 | 3 | end_to_end | 2 | 489.661 | 489.661 | 580.857 |
+| Full-NoGraph K3 | 3 | retrieval | 2 | 28.549 | 28.549 | 28.816 |
+| Full-NoGraph K3 | 3 | prompt_build | 2 | 1.647 | 1.647 | 1.84 |
+| Full-NoGraph K3 | 3 | stage1_verifier | 2 | 345.06 | 345.06 | 348.807 |
+| Full-NoGraph K3 | 3 | stage2_review | 2 | 105.891 | 105.891 | 201.194 |
+| Full-NoGraph K3 | 3 | render | 2 | 0.076 | 0.076 | 0.076 |
+| Full-NoGraph K3 | 3 | input_preparation | 2 | 2.052 | 2.052 | 2.457 |
+| Full-NoGraph K3 | 3 | model_inference | 2 | 449.634 | 449.634 | 541.363 |
+| Full-NoGraph K3 | 3 | generation_pipeline | 2 | 453.296 | 453.296 | 545.279 |
+| Full-NoGraph K3 | 3 | end_to_end | 2 | 484.385 | 484.385 | 576.705 |
