@@ -1162,6 +1162,19 @@ def _paired_effect_rows(report: Mapping[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
+def _partition_table_specs(
+    specs: Sequence[Mapping[str, Any]],
+) -> tuple[list[Mapping[str, Any]], list[Mapping[str, Any]]]:
+    """Split equal-budget main methods from optional cross-budget context."""
+    secondary = [
+        spec for spec in specs if spec["group"] == "cross_budget_secondary"
+    ]
+    main = [
+        spec for spec in specs if spec["group"] != "cross_budget_secondary"
+    ]
+    return main, secondary
+
+
 def _resolve_input(experiment: Path, explicit: str | None, candidates: Sequence[str]) -> Path:
     if explicit:
         return Path(explicit).resolve()
@@ -1280,10 +1293,11 @@ def main() -> int:
     specs = report["method_specs"]
     summaries = report["methods"]
     intervals = report["bootstrap"]["intervals"]
-    main_specs = [spec for spec in specs if spec["group"] == "equal_budget_main"]
-    secondary_specs = [
-        spec for spec in specs if spec["group"] == "cross_budget_secondary"
-    ]
+    # A protocol-specific equal-budget attribution study may use a more
+    # descriptive group name (for example ``paired_graph_attribution``).
+    # Treat every non-cross-budget scenario as a main-table method so that a
+    # valid custom protocol cannot silently produce an empty paper table.
+    main_specs, secondary_specs = _partition_table_specs(specs)
     for stem, selected in (
         ("table_equal_budget_main", main_specs),
         ("table_cross_budget_secondary", secondary_specs),

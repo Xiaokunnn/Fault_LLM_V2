@@ -3,9 +3,21 @@ from __future__ import annotations
 from scripts.summarize_rp2_equal_budget_v6 import (
     _cluster_bootstrap,
     _paired_cluster_bootstrap,
+    _partition_table_specs,
     _query_record,
     summarize,
 )
+
+
+def test_protocol_specific_main_group_is_not_treated_as_cross_budget() -> None:
+    specs = [
+        {"id": "full", "group": "paired_graph_attribution"},
+        {"id": "no_graph", "group": "paired_graph_attribution"},
+        {"id": "dense_k4", "group": "cross_budget_secondary"},
+    ]
+    main, secondary = _partition_table_specs(specs)
+    assert [spec["id"] for spec in main] == ["full", "no_graph"]
+    assert [spec["id"] for spec in secondary] == ["dense_k4"]
 
 
 def _generation(query_id: str, *, status: str, citations: list[str]) -> dict:
