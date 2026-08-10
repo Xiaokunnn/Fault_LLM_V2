@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{float}
 \usepackage{balance}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
@@ -95,24 +96,21 @@ Figure \ref{fig:pipeline} summarizes the workflow. For example, on a pump-motor 
 
 \subsection{Benchmark and Equal-Budget Baselines}
 
-The controlled benchmark contains 40 queries formed from ten pump fault classes and four diagnostic roles. The fixed evidence base can answer 34 queries; six intentionally test abstention. The online evaluation store contains 208 evidence assertions drawn from 14 source documents and grouped into ten source families. Relevance labels are hidden from all online methods. We also generated two deterministic paraphrases per query, yielding 80 untuned robustness queries. An isolated external set was processed only after protocol fixation; its seven answerable queries serve as a no-feedback check rather than a basis for statistical inference.
+The benchmark contains 40 queries spanning ten pump-fault classes and four diagnostic roles: 34 are answerable and six test abstention. The online store contains 208 evidence assertions from 14 documents in ten source families; relevance labels are hidden from every online method. Two deterministic paraphrases per query yield 80 untuned robustness queries. Seven answerable queries from an isolated external set provide a post-freeze, no-feedback check and are not used for statistical inference.
 
-All primary methods use the same maximum budget $K=3$: \emph{Dense} uses only BGE-M3 similarity; \emph{Role} adds diagnostic-role gating; \emph{Role+Graph} adds one-hop propagation; and \emph{Full} additionally applies fault affinity, source novelty, active underfilling, and two-stage verification. A \emph{Full-NoGraph} control disables only graph propagation.
+All methods share the maximum budget $K=3$. \emph{Dense} uses BGE-M3 similarity; \emph{Role} adds diagnostic-role gating; \emph{Role+Graph} adds one-hop propagation; and \emph{Full} adds fault affinity, source novelty, active underfilling, and two-stage verification. \emph{Full-NoGraph} disables only graph propagation.
 
 \subsection{Metrics and Runtime Protocol}
 
-Retrieval is measured by Recall and NDCG. Response evaluation includes citation precision, recall, and F1; answerable-query recall; unanswerable-query abstention recall; and strict evidence support for atomic statements. Citation precision, recall, and F1 are macro-averaged independently over answerable queries; the reported F1 is not recomputed from the aggregate precision and recall. Efficiency measures include prompt tokens, model calls, stage latency, and end-to-end latency. We use 5,000 paired bootstrap samples clustered by fault class and report 95 percent confidence intervals (CIs).
+We report Recall and NDCG for retrieval; citation precision, recall, and F1; answerable-query recall; abstention recall; and strict atomic support. Citation precision, recall, and F1 are macro-averaged independently over answerable queries, so F1 is not recomputed from aggregate precision and recall. Efficiency metrics are prompt tokens, model calls, stage latency, and end-to-end latency. Confidence intervals use 5,000 paired bootstrap samples clustered by fault class.
 
-The method targets resource-constrained deployment, but controlled experiments ran on one NVIDIA RTX 5880 Ada GPU with 48 GB memory. Qwen2.5-7B was loaded in BF16 entirely on the GPU, without CPU or disk offload. Each query was measured in three interleaved method orders with CUDA synchronization; quality uses one prespecified run and timing uses the per-query median. Latency covers retrieval, prompt construction, verification, and rendering, but excludes model loading, index construction, and warm-up. The claims therefore concern relative inference work and latency on identical hardware, not absolute embedded-device performance.
+Experiments ran on one 48-GB NVIDIA RTX 5880 Ada GPU. Qwen2.5-7B was loaded in BF16 without CPU or disk offload. Three interleaved method orders were measured per query with CUDA synchronization; quality uses one prespecified run and timing the per-query median. Latency includes retrieval, prompt construction, verification, and rendering, but excludes loading, indexing, and warm-up. Results therefore compare relative online cost on identical hardware rather than absolute embedded-device performance.
 
-\newpage
 \section{Results}
 
 \subsection{Answer Quality and End-to-End Efficiency}
 
-Table \ref{tab:main} reports the equal-budget results. Relative to Dense, Full improves Recall by 0.2127, NDCG by 0.4166, and citation F1 by 0.1672, while reducing mean end-to-end latency by 308.2 ms. The clustered 95 percent CIs are $[0.1496,0.2748]$, $[0.3184,0.4940]$, $[0.1075,0.2298]$, and $[-395.3,-217.2]$ ms, respectively. None crosses zero. The quality gain therefore does not depend on a larger evidence input.
-
-\begin{table}[!h]
+\begin{table}[H]
 \centering
 \caption{Equal-budget results with maximum $K=3$}
 \label{tab:main}
@@ -130,6 +128,8 @@ Role+Graph & 0.405 & 0.716 & 0.750/0.302/0.377 & 0.882/1.000 & 805.5/1101.6 \\
 \end{tabular}}
 \end{table}
 
+Table \ref{tab:main} reports the equal-budget results. Relative to Dense, Full improves Recall by 0.2127, NDCG by 0.4166, and citation F1 by 0.1672, while reducing mean end-to-end latency by 308.2 ms. The clustered 95 percent CIs are $[0.1496,0.2748]$, $[0.3184,0.4940]$, $[0.1075,0.2298]$, and $[-395.3,-217.2]$ ms, respectively. None crosses zero. The quality gain therefore does not depend on a larger evidence input.
+
 Full selects 2.25 evidence items on average. Mean prompt length falls from 1066.7 to 634.7 tokens, model calls from 2.95 to 1.80, and mean end-to-end latency from 839.4 to 531.2 ms, reductions of 40.5, 39.0, and 36.7 percent. The model is unchanged, so the savings arise from budgeted selection and active underfilling. In a separate synchronized breakdown, retrieval and prompt construction take 29.4 and 1.5 ms, model inference 504.1 ms, and deterministic rendering 0.07 ms; model inference remains the dominant cost.
 
 \subsection{Attribution, Verification, and Evidence Support}
@@ -146,6 +146,7 @@ On 80 paraphrases excluded from parameter selection, Full obtains 0.383 Recall a
 
 The practical contribution is a retrieval-side resource controller for local fault assistance. Dense recall protects candidate coverage; role and fault constraints remove mismatched evidence; one-hop propagation recovers structurally related tail items; and source novelty plus underfilling bounds the actual context. The 7B model performs only support classification, while deterministic rendering prevents new unsupported statements. This division of labor improves evidence-grounded responses and reduces the work assigned to the most expensive online component.
 
+\balance
 The design also matches a broader data-systems problem addressed by D2AI: coordinating vector and graph access paths under an explicit downstream budget. The offline graph is only a fixed input in this paper. Its source spans and identifiers make final suggestions inspectable, but graph construction is not claimed as a contribution here.
 
 Two limitations define the current scope. First, the 40-query benchmark is a controlled capability test and provides the fault scope and diagnostic role; open-ended intent recognition remains future work. Second, relative latency was measured on a server GPU rather than on shipboard low-power hardware. A deployment study should keep the frozen model and retrieval policy while measuring memory, energy, concurrency, and absolute latency on the target platform.
@@ -157,7 +158,6 @@ This paper presented budget-constrained vector-graph evidence retrieval for comp
 \section*{Declarations}
 \textbf{Data availability:} Frozen configurations, code, derived evaluation records, and aggregate results will be released in a public repository. Copyrighted source PDFs are not redistributed. \textbf{Ethics and conflicts:} This study involves no human participants, animals, or personal data. The authors declare no known conflict of interest. \textbf{AI assistance:} Generative AI assisted code development, experiment-log organization, and language editing. The authors verified the study design, experiments, statistics, citations, and final manuscript.
 
-\balance
 \begin{thebibliography}{00}
 
 \bibitem{lewis2020rag} P. Lewis et al., ``Retrieval-augmented generation for knowledge-intensive NLP tasks,'' in \emph{Advances in Neural Information Processing Systems}, vol. 33, pp. 9459--9474, 2020.
