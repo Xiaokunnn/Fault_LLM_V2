@@ -48,7 +48,7 @@ Our contributions are as follows:
 
 BGE-M3 supports multilingual, multi-function, and multi-granularity representations \cite{chen2024bgem3}, while Qwen2.5 provides open-weight instruction models at several scales \cite{yang2024qwen}. We fix Qwen2.5-7B throughout the study. Unlike prompt compressors that rewrite the context \cite{jiang2023llmlingua}, our method preserves verbatim evidence and reduces the amount selected before generation.
 
-GraphRAG and related systems use graph search or retrieved subgraphs to guide generation \cite{edge2024graphrag,sun2024think,he2024gretriever,zhu2025kg2rag}. We use only one-hop propagation as a bounded retrieval signal, not open-ended path reasoning. ALCE \cite{gao2023alce} and RAGAs \cite{es2024ragas} motivate explicit evaluation of citation and faithfulness, while selective question answering \cite{kamath2020selective} and Self-RAG \cite{asai2024selfrag} show the value of abstention and self-checking. Our focus is the joint control of evidence quality and inference cost in a hybrid vector-graph pipeline.
+GraphRAG and related systems use graph search or retrieved subgraphs to guide generation \cite{edge2024graphrag,sun2024think,he2024gretriever,zhu2025kg2rag}. We use only one-hop propagation as a bounded retrieval signal, not open-ended path reasoning. ALCE \cite{gao2023alce} and RAGAS \cite{es2024ragas} motivate explicit evaluation of citation and faithfulness, while selective question answering \cite{kamath2020selective} and Self-RAG \cite{asai2024selfrag} show the value of abstention and self-checking. Our focus is the joint control of evidence quality and inference cost in a hybrid vector-graph pipeline.
 
 \begin{figure*}[!t]
     \centering
@@ -98,7 +98,7 @@ Figure \ref{fig:pipeline} summarizes the workflow. For example, on a pump-motor 
 
 The benchmark contains 40 queries spanning ten pump-fault classes and four diagnostic roles: 34 are answerable and six test abstention. The online store contains 208 evidence assertions from 14 documents in ten source families; relevance labels are hidden from every online method. Two deterministic paraphrases per query yield 80 untuned robustness queries. Seven answerable queries from an isolated external set provide a post-freeze, no-feedback check and are not used for statistical inference.
 
-All methods share the maximum budget $K=3$. \emph{Dense} uses BGE-M3 similarity; \emph{Role} adds diagnostic-role gating; \emph{Role+Graph} adds one-hop propagation; and \emph{Full} adds fault affinity, source novelty, active underfilling, and two-stage verification. \emph{Full-NoGraph} disables only graph propagation.
+All methods share the maximum budget $K=3$. \emph{Dense} uses BGE-M3 similarity; \emph{Role} adds diagnostic-role gating; \emph{Role+Graph} adds one-hop propagation; and \emph{Full} adds fault affinity, source novelty, and active underfilling. \emph{Full-NoGraph} disables only graph propagation. After retrieval, every method uses the same two-stage Qwen2.5-7B verifier and the same deterministic answer renderer; the baselines therefore differ only in evidence selection.
 
 \subsection{Metrics and Runtime Protocol}
 
@@ -118,7 +118,7 @@ Experiments ran on one 48-GB NVIDIA RTX 5880 Ada GPU. Qwen2.5-7B was loaded in B
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lccccc}
 \toprule
-Method & Recall & NDCG & Citation P/R/F1 & Ans./Abs. R & Mean/p95 (ms) \\
+Method & Recall & NDCG & Citation P/R/F1 & Ans. Rec./Abs. Rec. & Mean/p95 (ms) \\
 \midrule
 Dense & 0.218 & 0.406 & 0.574/0.197/0.259 & 0.676/1.000 & 839.4/1113.1 \\
 Role & 0.378 & 0.678 & 0.721/0.299/0.372 & 0.853/1.000 & 782.1/1109.6 \\
@@ -136,7 +136,7 @@ Full selects 2.25 evidence items on average. Mean prompt length falls from 1066.
 
 At the retrieval layer, adding one-hop propagation to Role increases Recall by 0.0268 (95 percent CI $[0.0031,0.0616]$) and NDCG by 0.0381 (95 percent CI $[0.0059,0.0804]$). In the complete system, Full and Full-NoGraph have similar means: Recall is 0.431 versus 0.429, NDCG 0.822 versus 0.800, and citation F1 0.426 versus 0.423. These mean differences are not significant. The graph signal nevertheless recovers one misalignment inspection query missed without it, raising answerable coverage from 33/34 to 34/34 at a 14.2 ms mean latency cost in the synchronized attribution run. We therefore interpret one-hop propagation as a low-cost tail-recall mechanism, not as the sole source of the system gain.
 
-The two-stage verifier trades a small amount of precision for complete coverage. Stage 1 alone reaches 0.818 citation precision but misses one answerable query. Recall-oriented rechecking raises coverage to 34/34 while retaining 0.799 precision; all six unanswerable queries are rejected. An automated same-model, dual-prompt consistency audit covers 160 query-method outputs and 323 judged items, including 207 atomic answer points and 116 answer-level summaries. For Full, 91.0 percent of atomic answer points are strictly supported by cited source spans, 88.2 percent of answered responses have all atomic claims supported, and source-span verification is 100 percent. These are evidence-support measures, not expert-certified repair accuracy.
+The common two-stage verifier trades a small amount of precision for complete coverage. Stage 1 alone reaches 0.818 citation precision but misses one answerable query. Recall-oriented rechecking raises coverage to 34/34 while retaining 0.799 precision; all six unanswerable queries are rejected. An automated same-model, dual-prompt consistency audit covers 160 query-method outputs and 323 judged items, including 207 atomic answer points and 116 answer-level summaries. For Full, 91.0 percent of atomic answer points are strictly supported by cited source spans, 88.2 percent of answered responses have all atomic claims supported, and source-span verification is 100 percent. These are evidence-support measures, not expert-certified repair accuracy.
 
 \subsection{Paraphrase Stability}
 
@@ -156,7 +156,7 @@ Two limitations define the current scope. First, the 40-query benchmark is a con
 This paper presented budget-constrained vector-graph evidence retrieval for compute-efficient mechanical fault assistance. Under a maximum of three evidence items, the method jointly uses dense relevance, task and fault constraints, local graph structure, and source diversity. Active underfilling and binary verification reduce unnecessary local-model inference. Within the evaluated marine-pump domain, the method improves retrieval and citation quality, shortens prompts, reduces model calls and end-to-end latency, and returns evidence-linked suggestions or a reliable abstention without increasing model size.
 
 \section*{Declarations}
-\textbf{Data availability:} Frozen configurations, code, derived evaluation records, and aggregate results will be released in a public repository. Copyrighted source PDFs are not redistributed. \textbf{Ethics and conflicts:} This study involves no human participants, animals, or personal data. The authors declare no known conflict of interest. \textbf{AI assistance:} Generative AI assisted code development, experiment-log organization, and language editing. The authors verified the study design, experiments, statistics, citations, and final manuscript.
+\textbf{Data availability:} The code, frozen configurations, derived evaluation records, and aggregate results are not publicly released. They are available from the corresponding author upon reasonable request and subject to institutional approval. Copyrighted source PDFs cannot be redistributed. \textbf{Ethics and conflicts:} This study involves no human participants, animals, or personal data. The authors declare no known conflict of interest. \textbf{AI assistance:} Generative AI assisted code development, experiment-log organization, and language editing. The authors verified the study design, experiments, statistics, citations, and final manuscript.
 
 \begin{thebibliography}{00}
 
@@ -176,7 +176,7 @@ This paper presented budget-constrained vector-graph evidence retrieval for comp
 
 \bibitem{gao2023alce} T. Gao, H. Yen, J. Yu, and D. Chen, ``Enabling large language models to generate text with citations,'' in \emph{Proc. EMNLP}, pp. 6465--6488, 2023, doi: 10.18653/v1/2023.emnlp-main.398.
 
-\bibitem{es2024ragas} S. Es, J. James, L. Espinosa Anke, and S. Schockaert, ``RAGAs: Automated evaluation of retrieval augmented generation,'' in \emph{Proc. EACL System Demonstrations}, pp. 150--158, 2024, doi: 10.18653/v1/2024.eacl-demo.16.
+\bibitem{es2024ragas} S. Es, J. James, L. Espinosa Anke, and S. Schockaert, ``RAGAS: Automated evaluation of retrieval augmented generation,'' in \emph{Proc. EACL System Demonstrations}, pp. 150--158, 2024, doi: 10.18653/v1/2024.eacl-demo.16.
 
 \bibitem{kamath2020selective} A. Kamath, R. Jia, and P. Liang, ``Selective question answering under domain shift,'' in \emph{Proc. ACL}, pp. 5684--5696, 2020, doi: 10.18653/v1/2020.acl-main.503.
 
