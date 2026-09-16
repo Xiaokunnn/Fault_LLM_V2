@@ -13,6 +13,7 @@
 - RP1 claims and numbers come first from `papers/ICSMD_2026/RP1_ICSMD2026_English_Final.tex` and its frozen experiment assets.
 - RP2 claims and numbers come first from `papers/D2AI_ICDM_2026/RP2_D2AI2026_English_Final_v1.tex`, `docs/RP2_V6_EQUAL_BUDGET_PROTOCOL.md`, and `configs/frozen/rp2_v6_paper_evidence_freeze.json`.
 - The current three-point plan is `docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`.
+- The current RP3 comparison matrix and ordered backlog are `docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md`.
 - Files under `docs/archive/` and old v1-v5 protocols are historical reproduction records, not current project status.
 
 ## Terminology and evidence boundary

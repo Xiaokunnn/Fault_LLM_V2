@@ -4,6 +4,8 @@
 
 本文件只保留当前状态和继续工作所需入口。此前数百行的阶段性构图日志、旧研究点编号和未完成计划已由两篇小论文终稿、冻结实验与 `docs/archive/` 中的历史文档取代。
 
+研究点三的正式基线定义、最少实验矩阵和分优先级TODO见 `docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md`。
+
 ## 当前研究结构
 
 1. 研究点一：无需逐条人工审批的自动证据质量门控与可追溯知识图谱构建。
@@ -73,7 +75,7 @@ bash scripts/run_rp3_experiments.sh calibrate
 
 ## 远程新对话接手顺序
 
-1. 先读根目录 `AGENTS.md`、本文件和 `docs/RP3_SERVER_EXPERIMENT_GUIDE.md`。
+1. 先读根目录 `AGENTS.md`、本文件、`docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md` 和 `docs/RP3_SERVER_EXPERIMENT_GUIDE.md`。
 2. 执行 `git status -sb` 和 `git log -1 --oneline`，不要用reset/clean删除服务器实验资产。
 3. 查看 `logs/rp3_augment_20260917.log` 和增强目录是否已生成，再从最后成功阶段继续。
 4. 不重新运行已完成的teacher、MP008和基线训练，也不删除失败的基线校准搜索报告。

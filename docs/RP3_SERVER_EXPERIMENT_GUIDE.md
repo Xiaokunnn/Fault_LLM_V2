@@ -1,4 +1,4 @@
-# RP3 服务器实验执行说明（更新于 2026-09-16）
+# RP3 服务器实验执行说明（更新于 2026-09-17）
 
 ## 先看边界
 
@@ -26,7 +26,8 @@ git log -1 --oneline
 Git同步时不得使用 `git reset --hard` 或 `git clean` 删除这些资产。若旧补丁造成受跟踪文件存在本地修改，
 先用 `git stash push -m "rp3-server-code-before-pull"` 保存，再执行fast-forward pull；远端已包含对应修复时无需pop。
 
-远程开启新对话时，先让助手阅读根目录 `AGENTS.md`、`docs/RESEARCH_HANDOFF.md` 和本文件，
+远程开启新对话时，先让助手阅读根目录 `AGENTS.md`、`docs/RESEARCH_HANDOFF.md`、
+`docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md` 和本文件，
 再检查当前日志与结果目录，不要从teacher阶段重新开始。
 
 ## 2. 环境和模型

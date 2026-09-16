@@ -27,6 +27,7 @@
 - 当前没有逐条领域专家审核。自动证据合格、自动语义支持和基准相关性均不能解释为专家事实正确率、故障诊断准确率或工程安全保证。
 
 最新统一规划见 [`docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)，本轮审查结论见 [`docs/research/MASTER_THESIS_REVIEW_AND_OPTIMIZATION_REPORT.md`](docs/research/MASTER_THESIS_REVIEW_AND_OPTIMIZATION_REPORT.md)。历史规划与阶段报告统一放在 `docs/archive/`，不得作为当前状态入口；精简后的 [`docs/RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md) 只保留继续工作所需事实。
+研究点三的基线矩阵、最低必做实验和有序TODO见 [`docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md`](docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md)。
 
 ## 数据边界
 

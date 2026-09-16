@@ -219,9 +219,15 @@ R_C(LEC_Q)\le R_C(T)
 
 ### 4.7 实验与工作量
 
-主基线：3B INT4闭卷、3B+词法桶工具、无蒸馏轻量Dense、rank-only LEC、+support、+field/underfill、完整LEC+价值路由、RP2 7B教师上界；另以3B答案级LoRA-KD检验“背答案”是否弱于证据控制。
+最低必做对照为：RP2 7B教师参考上界、无干预蒸馏LEC、证据移除增强LEC；
+核心消融为`rank-only → +support → +field/underfill → +route`；路由对照为始终本地、始终教师、
+始终拒答和简单置信度/熵阈值。这些对照与FP32/INT8、量化后校准、多随机种子、外部评价和实机测量
+构成论文的最小实验矩阵。
 
-关键消融：`rank-only → +support → +underfill → +route → full joint`、四头联合与四个独立模型、软排序蒸馏与硬top-k/对比学习、离线模仿与学生rollout再标注、去可用性掩码/干预、五类干预分解、价值路由与始终本地/始终教师/熵阈值/复杂度分类器、去调用成本/危险误接受成本、FP32/FP16/INT8旧阈值/INT8重校准、候选宽度8/16/32、传统查表/逻辑回归/GBDT/轻量Dense、Full教师与NoGraph教师配对蒸馏。若最后一项无显著差异，不使用“图谱拓扑蒸馏”措辞。
+3B INT4闭卷、3B+工具、3B答案级LoRA-KD、四个独立头模型、候选宽度8/16/32、传统逻辑回归/GBDT、
+Full教师与NoGraph教师配对蒸馏均属扩展实验，不是当前主结论的前置条件。若Full/NoGraph无显著差异，
+不使用“图谱拓扑蒸馏”措辞。实验臂编号、当前状态和优先级以
+`docs/RP3_EXPERIMENT_BASELINES_AND_TODO.md`为准。
 
 质量指标包括Pointer P/R/F1/NDCG、Support F1/AUPRC/ECE、字段集合准确率、空字段准确率、不可用ID率、字段支持率、危险维护动作误接受率、干预方向一致性、风险—覆盖AURC、路由后悔和回退率。系统指标包括控制器参数量、模型/记忆体积、p50/p95时延、峰值内存、LLM提示Token、能耗与30分钟热稳态。
 
