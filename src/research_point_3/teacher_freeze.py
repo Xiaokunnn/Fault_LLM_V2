@@ -14,7 +14,7 @@ import json
 import math
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterable, Mapping
+from typing import Any, Callable, Iterable, Mapping
 
 from .artifacts import canonical_json_bytes, file_sha256, normalized_text_sha256
 from .contracts import ContractError
@@ -217,17 +217,33 @@ def _artifact(path: Path, root: Path) -> dict[str, Any]:
     }
 
 
-def _directory_inventory(path: Path, root: Path) -> dict[str, Any]:
+def _directory_inventory(
+    path: Path,
+    root: Path,
+    progress: Callable[[str], None] | None = None,
+) -> dict[str, Any]:
     """Bind every file in an index/model directory by exact-byte SHA-256."""
 
     files = []
     total_bytes = 0
     if path.is_dir():
-        for item in sorted(
+        candidates = sorted(
             (candidate for candidate in path.rglob("*") if candidate.is_file()),
             key=lambda candidate: candidate.relative_to(path).as_posix(),
-        ):
+        )
+        declared_bytes = sum(item.stat().st_size for item in candidates)
+        if progress is not None:
+            progress(
+                f"exact-byte inventory {path.relative_to(root.resolve()).as_posix()}: "
+                f"{len(candidates)} files, {declared_bytes / (1024 ** 3):.2f} GiB"
+            )
+        for number, item in enumerate(candidates, start=1):
             size = item.stat().st_size
+            if progress is not None and size >= 256 * 1024 * 1024:
+                progress(
+                    f"hashing {number}/{len(candidates)} "
+                    f"{item.relative_to(path).as_posix()} ({size / (1024 ** 3):.2f} GiB)"
+                )
             total_bytes += size
             files.append(
                 {
@@ -236,11 +252,29 @@ def _directory_inventory(path: Path, root: Path) -> dict[str, Any]:
                     "sha256": file_sha256(item),
                 }
             )
+        if progress is not None:
+            progress(f"inventory complete: {path.relative_to(root.resolve()).as_posix()}")
     summary = {
         "root": path.relative_to(root.resolve()).as_posix(),
         "file_count": len(files),
         "total_bytes": total_bytes,
         "files": files,
+    }
+    summary["logical_sha256"] = hashlib.sha256(
+        canonical_json_bytes(summary, newline=False)
+    ).hexdigest()
+    return summary
+
+
+def _skipped_directory_inventory(path: Path, root: Path) -> dict[str, Any]:
+    """Stable blocked-state marker; it is never accepted as a frozen identity."""
+
+    summary = {
+        "root": path.relative_to(root.resolve()).as_posix(),
+        "status": "skipped_due_to_failed_teacher_prerequisite",
+        "file_count": 0,
+        "total_bytes": 0,
+        "files": [],
     }
     summary["logical_sha256"] = hashlib.sha256(
         canonical_json_bytes(summary, newline=False)
@@ -1048,6 +1082,8 @@ def _append_final_training_bundle_checks(
 def audit_teacher_freeze(
     root: str | Path,
     config: Mapping[str, Any],
+    *,
+    progress: Callable[[str], None] | None = None,
 ) -> TeacherFreezeAudit:
     """Audit all freeze prerequisites without mutating any artifact."""
 
@@ -1240,11 +1276,6 @@ def audit_teacher_freeze(
             )
         )
 
-    index_inventory = _directory_inventory(index_dir, project_root)
-    model_inventories = [
-        _directory_inventory(path, project_root) for path in required_models
-    ]
-
     # A reproducible teacher system and a distillation-ready trace export are
     # deliberately distinct gates.  ``ready`` below requires both.
     teacher_system_checks = tuple(
@@ -1253,6 +1284,25 @@ def audit_teacher_freeze(
     teacher_system_ready = bool(teacher_system_checks) and all(
         check.ok for check in teacher_system_checks
     )
+    # Do not spend minutes hashing model shards when a small frozen input is
+    # already absent.  A blocked audit receives an explicit non-freezable
+    # marker; once all inexpensive prerequisites pass, every byte is hashed.
+    if teacher_system_ready:
+        index_inventory = _directory_inventory(
+            index_dir, project_root, progress=progress
+        )
+        model_inventories = [
+            _directory_inventory(path, project_root, progress=progress)
+            for path in required_models
+        ]
+    else:
+        if progress is not None:
+            progress("skipping large model/index hashes because teacher prerequisites failed")
+        index_inventory = _skipped_directory_inventory(index_dir, project_root)
+        model_inventories = [
+            _skipped_directory_inventory(path, project_root)
+            for path in required_models
+        ]
     _append_teacher_trace_checks(
         checks,
         project_root=project_root,

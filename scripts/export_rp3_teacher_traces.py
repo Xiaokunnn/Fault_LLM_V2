@@ -198,7 +198,11 @@ def main() -> int:
     args = parse_args()
     try:
         config = _read_json(_resolve_in_repo(args.freeze_config))
-        audit = audit_teacher_freeze(ROOT, config)
+        audit = audit_teacher_freeze(
+            ROOT,
+            config,
+            progress=lambda message: print(f"[RP3 inventory] {message}", flush=True),
+        )
         if not audit.teacher_system_ready or not audit.distillation_trace_ready:
             blockers = (*audit.teacher_system_blockers, *audit.distillation_trace_blockers)
             raise ContractError("teacher/candidate gate is blocked: " + "; ".join(blockers))

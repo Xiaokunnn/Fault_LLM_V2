@@ -20,6 +20,15 @@ def main():
         p.error("limit must be non-negative")
     import os
     os.chdir(ROOT)
+    # Fail before importing/loading BGE or Qwen when small frozen dependencies
+    # are absent. This is the same read-only gate exposed by the preflight stage.
+    from scripts.check_rp3_server import collect_report
+    preflight = collect_report(ROOT)
+    if preflight["blockers"]:
+        raise RuntimeError(
+            "RP3 preflight is blocked; restore frozen inputs before loading models: "
+            + "; ".join(preflight["blockers"])
+        )
     from dataclasses import replace
     from src.research_point_2.dataset import EvidenceCandidate, SilverQuery, load_evidence_candidates
     from src.research_point_2.dense_index import DenseEvidenceIndex
@@ -61,7 +70,11 @@ def main():
     dense = DenseEvidenceIndex.load(index_path)
     if set(dense.evidence_ids) != {x.evidence_id for x in candidates}:
         raise RuntimeError("BGE index evidence ID closure mismatch")
-    audit = audit_teacher_freeze(ROOT, freeze_config)
+    audit = audit_teacher_freeze(
+        ROOT,
+        freeze_config,
+        progress=lambda message: print(f"[RP3 inventory] {message}", flush=True),
+    )
     if not audit.teacher_system_ready:
         raise RuntimeError("teacher system blocked: " + "; ".join(audit.teacher_system_blockers))
     # Bind the entire ready system inventory, including binary model/index hashes.

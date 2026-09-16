@@ -1,4 +1,4 @@
-# RP3 服务器实验执行说明（2026-09-06）
+# RP3 服务器实验执行说明（更新于 2026-09-16）
 
 ## 先看边界
 
@@ -19,15 +19,15 @@
 本地打包命令（不会包含模型、密钥、原始 PDF、论文草稿或其他无关未提交改动）：
 
 ```powershell
-python scripts/package_rp3_upload.py --output .tmp/rp3_upload_20260906.tar.gz
-scp .tmp/rp3_upload_20260906.tar.gz YOUR_SSH_HOST:~/rp3_upload_20260906.tar.gz
+python scripts/package_rp3_upload.py --output .tmp/rp3_upload_20260916_final.tar.gz
+scp .tmp/rp3_upload_20260916_final.tar.gz YOUR_SSH_HOST:~/rp3_upload_20260916_final.tar.gz
 ```
 
 用实际 SSH 配置名替换 `YOUR_SSH_HOST`。确认目标目录后，在服务器执行：
 
 ```bash
 RP3_STAGE=$(mktemp -d /tmp/rp3-upload.XXXXXX)
-tar -xzf ~/rp3_upload_20260906.tar.gz -C "$RP3_STAGE"
+tar -xzf ~/rp3_upload_20260916_final.tar.gz -C "$RP3_STAGE"
 python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2
 # 查看上一步列出的改动范围后，应用：
 python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2 --apply
@@ -62,6 +62,23 @@ data/interim/parsed_pages/corpus_v2/MP008.pages.v2.jsonl  # 仅校准
 依赖文件沿用 RP2 的 torch 2.6.0 约束。已工作的 CUDA 环境不要盲目替换；若安装后 CUDA 不可用，
 先按服务器驱动选择兼容的 PyTorch wheel，再继续。脚本不下载模型，也不会把教师偷偷退回 CPU。
 上面的专项测试包含纯合成 CPU 训练/ONNX/INT8 联调，不会加载 7B/BGE，亦不产生正式实验结果。
+
+### 2026-09-16 服务器阻塞的处理
+
+若预检列出 `missing/mismatched RP2 frozen input`，说明服务器检出中缺少论文冻结清单依赖，
+不是 7B、CUDA 或 BGE 故障。先重新安装本次白名单包；它包含冻结清单声明的 13 个小型 RP2 资产。
+安装后必须先单独执行并确认：
+
+```bash
+bash scripts/run_rp3_experiments.sh preflight
+echo $?  # 必须为 0
+```
+
+若仍有条目，不要继续 `teacher-smoke` 或 `all`，也不要在服务器上重算、改写这些论文资产；
+应从本地冻结副本重新同步。新版审计会在小型先决条件失败时跳过大型模型哈希。
+
+资产齐全后，首次 `teacher-smoke` 会对 Qwen2.5-7B、BGE-M3 和索引执行逐字节 SHA-256 清点。
+终端会打印 `[RP3 inventory]` 进度；这是一次完整性绑定，不是模型推理卡死，请勿中断。
 
 ## 3. 先跑两题联调
 

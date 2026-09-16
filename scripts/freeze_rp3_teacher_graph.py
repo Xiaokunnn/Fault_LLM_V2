@@ -41,7 +41,11 @@ def main() -> int:
     args = parse_args()
     config_path = ROOT / args.config
     config = json.loads(config_path.read_text(encoding="utf-8"))
-    audit = audit_teacher_freeze(ROOT, config)
+    audit = audit_teacher_freeze(
+        ROOT,
+        config,
+        progress=lambda message: print(f"[RP3 inventory] {message}", flush=True),
+    )
     print(json.dumps(audit.manifest, ensure_ascii=False, indent=2))
     if not audit.ready:
         print("TeacherGraph_RP3_v1 remains BLOCKED:")

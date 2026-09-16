@@ -330,12 +330,23 @@ def _write_complete_trace(root: Path) -> None:
     manifest_path.write_bytes(canonical_json_bytes(manifest))
 
 
-def test_missing_index_blocks_teacher_freeze(tmp_path: Path) -> None:
+def test_missing_index_blocks_teacher_freeze(tmp_path: Path, monkeypatch) -> None:
     _complete(tmp_path)
     (_at(tmp_path, CANONICAL_VECTOR_INDEX_DIR) / "index.bin").unlink()
+    calls = []
+    original = teacher_freeze_module._directory_inventory
+    monkeypatch.setattr(
+        teacher_freeze_module,
+        "_directory_inventory",
+        lambda *args, **kwargs: calls.append(args) or original(*args, **kwargs),
+    )
     audit = audit_teacher_freeze(tmp_path, _config())
     assert audit.ready is False
     assert audit.teacher_system_ready is False
+    assert calls == []
+    assert audit.manifest["vector_index"]["inventory"]["status"] == (
+        "skipped_due_to_failed_teacher_prerequisite"
+    )
     with pytest.raises(ContractError, match="not ready"):
         freeze_teacher_manifest(tmp_path / "freeze.json", audit)
 
