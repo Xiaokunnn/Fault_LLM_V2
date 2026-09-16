@@ -35,11 +35,25 @@ def main():
         "memory":{"id":memory["memory_id"],"logical_sha256":memory["logical_sha256"]},
         "teacher_graph":memory["teacher_graph"],"bucket_count":len(rows),"logical_sha256":stable_sha256(rows)}
     registry=FrozenCandidateBucketRegistry(buckets=buckets,manifest=registry_manifest,resolver=resolver)
+    scope_authorizations={}
+    for trace in traces:
+        if trace.perturbation_id!="original":
+            continue
+        key=(trace.query.fault_id,trace.query.requested_role)
+        authorized=set(scope_authorizations.get(key,()))
+        declared=trace.metadata.get("automatic_fault_label_mismatch_selected_evidence_ids",())
+        if not set(declared).issubset(trace.selected_evidence_ids):
+            raise ValueError("trace scope authorization is not teacher-selected")
+        authorized.update(declared)
+        if authorized:
+            scope_authorizations[key]=tuple(sorted(authorized))
     root=Path(args.export_dir)
     controller=OnnxEvidenceController(onnx_manifest_path=root/"onnx_export_manifest.json",
         quantized_model_path=root/"controller.int8.onnx",calibration_manifest_path=root/"calibration_manifest.json",
         memory_manifest=memory,feature_provider=HashingFeatureProvider(),providers=["CPUExecutionProvider"])
-    facade=SelectPumpEvidenceFacade(tool=SelectPumpEvidenceTool(controller=controller,resolver=resolver,teacher_available=False),registry=registry)
+    facade=SelectPumpEvidenceFacade(tool=SelectPumpEvidenceTool(controller=controller,
+        resolver=resolver,teacher_available=False,
+        teacher_scope_authorizations=scope_authorizations),registry=registry)
     for line in sys.stdin:
         if not line.strip():
             continue

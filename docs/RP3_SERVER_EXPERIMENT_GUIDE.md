@@ -19,15 +19,15 @@
 本地打包命令（不会包含模型、密钥、原始 PDF、论文草稿或其他无关未提交改动）：
 
 ```powershell
-python scripts/package_rp3_upload.py --output .tmp/rp3_upload_20260916_final.tar.gz
-scp .tmp/rp3_upload_20260916_final.tar.gz YOUR_SSH_HOST:~/rp3_upload_20260916_final.tar.gz
+python scripts/package_rp3_upload.py --output .tmp/rp3_upload_20260916_r11.tar.gz
+scp .tmp/rp3_upload_20260916_r11.tar.gz YOUR_SSH_HOST:~/rp3_upload_20260916_r11.tar.gz
 ```
 
 用实际 SSH 配置名替换 `YOUR_SSH_HOST`。确认目标目录后，在服务器执行：
 
 ```bash
 RP3_STAGE=$(mktemp -d /tmp/rp3-upload.XXXXXX)
-tar -xzf ~/rp3_upload_20260916_final.tar.gz -C "$RP3_STAGE"
+tar -xzf ~/rp3_upload_20260916_r11.tar.gz -C "$RP3_STAGE"
 python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2
 # 查看上一步列出的改动范围后，应用：
 python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2 --apply
@@ -79,6 +79,26 @@ echo $?  # 必须为 0
 
 资产齐全后，首次 `teacher-smoke` 会对 Qwen2.5-7B、BGE-M3 和索引执行逐字节 SHA-256 清点。
 终端会打印 `[RP3 inventory]` 进度；这是一次完整性绑定，不是模型推理卡死，请勿中断。
+
+若 7B 对某个**辅助尾候选**未返回合法的严格 JSON/掩码，新版代码会保留原始响应，
+将该候选标记为 `not_assessed`，并在支持损失中使用 `IGNORE_INDEX`；它不会被伪装成负样本，
+也不会改变冻结 RP2 K3 的选择。若原始 K3 核验本身无效，流程仍会失败关闭。
+
+RP2 的故障范围采用可见中文语义亲和度与直接支持核验，不把自动 `fault_class_ids`
+当作专家真值。若一条原文能直接支持相邻故障范围、但自动本体仅给出一个标签，导出器保留
+原标签并记录跨标签证据 ID；在线工具仅对冻结教师已选中的这些 ID 放行，不对整个候选池放宽。
+
+诊断角色严格复现 RP2 v6 的关系语义映射（例如 `indicates`属于“症状”）。严格 208 图中有
+5 条记录保留了与关系语义不一致的早期 `evidence_role`；RP3 不改写冻结图，而是按 RP2
+关系语义构建轻量证据内存，并在内存元数据中显式保留原字段及冲突标记。
+
+严格 208 图中有 4 个故障×角色问题没有任何候选证据。这不是数据损坏，而是有效的“主动欠填”
+和路由监督：轨迹保留故障场景分组，但不伪造来源文档 ID。固定证据内存的训练/验证协议允许这种空候选轨迹；
+真正声称文档隔离的归纳实验仍强制要求文档组。边缘运行时，空候选桶不调用 ONNX，而是按教师可用性执行回退或弃答。
+
+MP008 的 PDF 表格提取文本包含大量对齐空格和换行。校准候选的 v2 跨度策略允许模型对这些空白做规范化，
+但所有非空白字符仍必须在页面的一个连续区间中按原顺序匹配；最终存储的是映射回原页面后的精确字符串和偏移。
+省略号、跨段拼接、表格重排和改写仍会被拒绝。v2 模型响应缓存与旧策略分开，原始响应与所有拒绝理由继续保留。
 
 ## 3. 先跑两题联调
 
@@ -139,19 +159,27 @@ bash scripts/run_rp3_experiments.sh evaluate
 先完成正式 teacher 冻结，再执行：
 
 ```bash
-python scripts/augment_rp3_interventions.py
-python scripts/build_rp3_features.py \
-  --traces data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/traces/augmented_training \
-  --memory data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/evidence_memory/training \
-  --output data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/features/augmented_training_features.json
+bash scripts/run_rp3_experiments.sh augment
 ```
 
 派生样本继承原始故障场景的 train/validation 分组。干预包括移除全部证据、逐条移除已选证据、
 移除首条未选证据；重新执行原 RP2 来源约束选择和真实 7B 核验，不直接复制受影响的标签。
 尾部未重新选入 K3 的支持标签仍为原查询—单证据辅助标签，这不等于整图重检索干预。
 
-复制主训练配置到新文件，仅将 `trace_bundle_dir` 和 `feature_bundle_path` 指向上述增强产物；
-用 `RP3_CONFIG=新配置 RP3_RUN_DIR=新目录` 执行 train/route/export 等阶段。
+增强配置已固定为 `configs/research_point_3/lec_train_augmented_v1.json`，除预先声明的构建集干预输入外，
+模型、训练超参数和 MP008 边界与基线完全相同。使用独立结果目录执行：
+
+```bash
+export RP3_CONFIG=configs/research_point_3/lec_train_augmented_v1.json
+export RP3_RUN_DIR=results/experiments/research_point_3/lec_augmented_v1
+bash scripts/run_rp3_experiments.sh train
+bash scripts/run_rp3_experiments.sh route
+bash scripts/run_rp3_experiments.sh export
+bash scripts/run_rp3_experiments.sh quantize
+bash scripts/run_rp3_experiments.sh calibrate
+bash scripts/run_rp3_experiments.sh evaluate
+```
+
 原 40 题冻结 bundle 和主图不变。派生数量不能当作新增独立故障案例数量。
 
 ## 6. 边缘工具调用

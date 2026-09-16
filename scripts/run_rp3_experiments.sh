@@ -9,7 +9,7 @@ RUN="${RP3_RUN_DIR:-results/experiments/research_point_3/lec_v1}"
 stage="${1:-help}"
 case "$stage" in
   help|-h|--help)
-    echo 'Stages: preflight teacher-smoke teacher mp008 features train route export quantize calibrate evaluate all'
+    echo 'Stages: preflight teacher-smoke teacher mp008 features augment train route export quantize calibrate evaluate all'
     echo 'Use a model-capable Linux server. Teacher requires the frozen Qwen2.5-7B and BGE-M3.'
     echo 'all is a sequential first run, not an overwrite/resume switch for training.'
     ;;
@@ -22,8 +22,12 @@ case "$stage" in
     ;;
   mp008) "$PYTHON" -u scripts/prepare_rp3_mp008.py ;;
   features)
-    "$PYTHON" scripts/build_rp3_features.py --traces "$BUNDLE/traces/training" --memory "$BUNDLE/evidence_memory/training" --output "$BUNDLE/features/training_features.json"
-    "$PYTHON" scripts/build_rp3_features.py --traces "$BUNDLE/traces/development_mp008" --memory "$BUNDLE/evidence_memory/development_mp008" --output "$BUNDLE/features/development_mp008_features.json"
+    "$PYTHON" scripts/build_rp3_features.py --purpose training --traces "$BUNDLE/traces/training" --memory "$BUNDLE/evidence_memory/training" --output "$BUNDLE/features/training_features.json"
+    "$PYTHON" scripts/build_rp3_features.py --purpose development --traces "$BUNDLE/traces/development_mp008" --memory "$BUNDLE/evidence_memory/development_mp008" --output "$BUNDLE/features/development_mp008_features.json"
+    ;;
+  augment)
+    "$PYTHON" -u scripts/augment_rp3_interventions.py
+    "$PYTHON" scripts/build_rp3_features.py --purpose training --traces "$BUNDLE/traces/augmented_training" --memory "$BUNDLE/evidence_memory/training" --output "$BUNDLE/features/augmented_training_features.json"
     ;;
   train) "$PYTHON" -u scripts/train_rp3_lec.py --config "$CONFIG" --output-dir "$RUN/bootstrap" ;;
   route) "$PYTHON" -u scripts/fit_rp3_route_head.py --config "$CONFIG" --training-dir "$RUN/bootstrap" --output-dir "$RUN/routed" ;;

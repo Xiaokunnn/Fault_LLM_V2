@@ -25,7 +25,19 @@ def main():
     root=Path(args.export_dir)
     prepared=prepare(args.config,attach_development=False)
     dataset=prepared.validation_dataset
-    calibration=ControllerCalibration.read(root/"calibration_manifest.json")
+    calibration_path=root/"calibration_manifest.json"
+    if not calibration_path.is_file():
+        search_path=root/"calibration_search_report.json"
+        detail=""
+        if search_path.is_file():
+            search=json.loads(search_path.read_text(encoding="utf-8"))
+            blocked=search.get("blocked") or {}
+            detail=f" MP008 calibration status={search.get('status')}, reason={blocked.get('reason')}."
+        raise RuntimeError(
+            "evaluation blocked because no deployable calibration manifest exists."
+            + detail + " Run/fix calibrate before evaluate; uncalibrated INT8 metrics are not reported."
+        )
+    calibration=ControllerCalibration.read(calibration_path)
     model=root/"controller.int8.onnx"
     if calibration.quantized_model_sha256!=file_sha256(model):
         raise ValueError("INT8/calibration identity mismatch")

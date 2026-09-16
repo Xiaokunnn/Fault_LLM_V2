@@ -274,6 +274,20 @@ def test_tool_returns_grounded_answer_and_tool_schema() -> None:
     assert audit_schema["parameters"]["properties"]["tool_api_version"]["const"] == TOOL_API_VERSION
 
 
+def test_cross_label_scope_requires_frozen_teacher_authorization() -> None:
+    record=replace(_record(),fault_class_ids=("NEIGHBOUR",))
+    records=(record,)
+    blocked=_tool(records,_Controller()).select_pump_evidence(_request(records))
+    assert blocked.action == RouteAction.ABSTAIN
+    resolver=EvidenceMemoryResolver(records,_manifest(records))
+    authorized=SelectPumpEvidenceTool(controller=_Controller(),resolver=resolver,
+        teacher_scope_authorizations={("F01",DiagnosticRole.SYMPTOM):("E1",)})
+    request=replace(_request(records),query=_query(DiagnosticRole.SYMPTOM))
+    accepted=authorized.select_pump_evidence(request)
+    assert accepted.action == RouteAction.ANSWER
+    assert accepted.diagnosis_card.cited_evidence_ids == ("E1",)
+
+
 def test_public_facade_injects_frozen_candidates_and_hashes_server_side() -> None:
     records = (_record(),)
     resolver = EvidenceMemoryResolver(records, _manifest(records))
@@ -309,6 +323,51 @@ def test_public_facade_injects_frozen_candidates_and_hashes_server_side() -> Non
         scenario_id="S1",
     )
     assert response.action == RouteAction.ANSWER
+
+
+def test_empty_frozen_bucket_is_valid_underfill_and_abstains_without_edge_teacher() -> None:
+    records = (_record(),)
+    resolver = EvidenceMemoryResolver(records, _manifest(records))
+    bucket = FrozenCandidateBucket(
+        fault_id="F01", role=DiagnosticRole.INSPECTION, evidence_ids=()
+    )
+    rows = [{"fault_id": "F01", "role": "inspection", "evidence_ids": []}]
+    registry = FrozenCandidateBucketRegistry(
+        buckets=(bucket,),
+        manifest={
+            "artifact_type": "rp3_frozen_candidate_bucket_registry",
+            "contract_version": CONTRACT_VERSION,
+            "bucket_count": 1,
+            "memory": {
+                "id": resolver.manifest["memory_id"],
+                "logical_sha256": resolver.manifest["logical_sha256"],
+            },
+            "teacher_graph": resolver.manifest["teacher_graph"],
+            "logical_sha256": stable_sha256(rows),
+        },
+        resolver=resolver,
+    )
+    facade = SelectPumpEvidenceFacade(
+        tool=SelectPumpEvidenceTool(
+            controller=_Controller(),
+            resolver=resolver,
+            teacher_available=False,
+        ),
+        registry=registry,
+    )
+
+    response = facade(
+        question="该故障有哪些可用检查证据？",
+        fault_id="F01",
+        fault_name="异常振动",
+        role="inspection",
+        scenario_id="S-empty",
+    )
+
+    assert response.ok is True
+    assert response.action == RouteAction.ABSTAIN
+    assert response.diagnosis_card.cited_evidence_ids == ()
+    assert "no_candidate_evidence" in response.route.reason_codes
 
 
 def test_unknown_id_fails_closed_without_exposing_factual_text() -> None:

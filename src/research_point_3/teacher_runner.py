@@ -62,16 +62,27 @@ def verify_selection(query, retrieval, evidence, generator, config, cache_dir, i
     )
 
 def compile_candidate_row(query, retrieval, pool, base_run, tail_runs):
-    """Keep base teacher selection separate from auxiliary tail support labels."""
+    """Keep base teacher selection separate from auxiliary tail support labels.
+
+    The frozen RP2 K3 cascade remains fail-closed: an invalid base response
+    aborts the row.  Tail checks are additional RP3 supervision only.  A
+    malformed tail response is therefore retained for audit but omitted from
+    ``final_support_by_evidence_id``; downstream tensorization maps the missing
+    value to NOT_ASSESSED/IGNORE_INDEX instead of inventing a negative label.
+    """
     base_ids = [x.evidence_id for x in retrieval.ranked]
     pool_by_id = {x.evidence_id: (x, score) for x, score in pool}
     ids = base_ids + [x.evidence_id for x, _ in pool if x.evidence_id not in base_ids]
+    if not base_run["cascade_contract_valid"]:
+        raise ContractError("invalid base RP2 verifier response")
     support = dict(zip(base_ids, base_run["final_mask"]))
+    invalid_tail_ids = []
     for eid, run in tail_runs.items():
         if not run["cascade_contract_valid"]:
-            raise ContractError(f"invalid auxiliary verifier response: {eid}")
+            invalid_tail_ids.append(eid)
+            continue
         support[eid] = run["final_mask"][0]
-    if not base_run["cascade_contract_valid"] or set(support) != set(ids):
+    if not set(support).issubset(ids) or set(ids) - set(support) != set(invalid_tail_ids):
         raise ContractError("incomplete or invalid teacher support decisions")
     selected = [eid for point in base_run["answer"]["answer_points"] for eid in point["evidence_ids"]]
     return {
@@ -82,6 +93,13 @@ def compile_candidate_row(query, retrieval, pool, base_run, tail_runs):
             for index, eid in enumerate(ids)],
         "ranking_target": "RP2_selected_prefix_then_remaining_base_score_order",
         "final_support_by_evidence_id": support, "selected_evidence_ids": selected,
+        "auxiliary_contract_failure_evidence_ids": invalid_tail_ids,
+        "support_supervision": {
+            "assessed": len(support), "not_assessed": len(invalid_tail_ids),
+            "candidate_count": len(ids),
+            "coverage": (len(support) / len(ids)) if ids else 1.0,
+            "invalid_auxiliary_outputs_are_negative_labels": False,
+        },
         "underfill_reason_codes": ["frozen_RP2_active_underfill"] if len(selected) < 3 else [],
         "rp2_selected_before_verifier": base_ids,
         "route": {"action": "answer" if selected else "abstain",

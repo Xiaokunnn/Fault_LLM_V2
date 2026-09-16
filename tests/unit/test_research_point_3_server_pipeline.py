@@ -1,6 +1,7 @@
 """CPU-only checks for newly executable RP3 preparation boundaries."""
 import sys
 from dataclasses import replace
+from pathlib import Path
 from types import SimpleNamespace
 import pytest
 from src.research_point_3.features import HashingFeatureProvider, hash_text, query_vector, evidence_vector
@@ -65,3 +66,78 @@ def test_teacher_tail_support_cannot_change_base_selection():
     assert row["selected_evidence_ids"]==[]
     assert row["final_support_by_evidence_id"]["E2"]==1
     assert len(export_candidate_decisions(row,candidate_count_policy="at_most").candidate_ids)==2
+
+def test_invalid_auxiliary_tail_is_unassessed_not_negative():
+    r=SimpleNamespace(evidence_id="E1")
+    t=SimpleNamespace(evidence_id="E2")
+    base={"final_mask":[1],"cascade_contract_valid":True,
+        "answer":{"answer_points":[{"evidence_ids":["E1"]}]}}
+    invalid={"final_mask":[0],"cascade_contract_valid":False,
+        "first_audit":{"issues":["mask_length_mismatch"]}}
+    row=compile_candidate_row(SimpleNamespace(query_id="Q1"),SimpleNamespace(ranked=(r,)),
+        ((r,0.9),(t,0.8)),base,{"E2":invalid})
+    assert "E2" not in row["final_support_by_evidence_id"]
+    assert row["auxiliary_contract_failure_evidence_ids"]==["E2"]
+    assert row["support_supervision"]["not_assessed"]==1
+    exported=export_candidate_decisions(row,candidate_count_policy="at_most")
+    assert exported.decisions[1].support.value=="not_assessed"
+
+def test_invalid_base_verifier_still_fails_closed():
+    r=SimpleNamespace(evidence_id="E1")
+    base={"final_mask":[0],"cascade_contract_valid":False,"answer":{"answer_points":[]}}
+    with pytest.raises(ContractError,match="base RP2"):
+        compile_candidate_row(SimpleNamespace(query_id="Q1"),SimpleNamespace(ranked=(r,)),
+            ((r,0.9),),base,{})
+
+def test_feature_stage_declares_training_and_development_boundaries():
+    root = Path(__file__).resolve().parents[2]
+    runner = (root / "scripts" / "run_rp3_experiments.sh").read_text(
+        encoding="utf-8"
+    )
+    assert "build_rp3_features.py --purpose training" in runner
+    assert "build_rp3_features.py --purpose development" in runner
+
+def test_shared_experiment_decoder_uses_the_runtime_decoder():
+    np = pytest.importorskip("numpy")
+    from src.research_point_3.experiment_io import decode_row
+
+    trace = SimpleNamespace(
+        candidate_evidence_ids=("E1",),
+        availability_mask=(True,),
+        selection_budget=1,
+    )
+    records = {"E1": SimpleNamespace(role=DiagnosticRole.SYMPTOM)}
+    outputs = (
+        np.asarray([[1.0]], dtype=np.float32),
+        np.asarray([[8.0]], dtype=np.float32),
+        np.asarray([[[0.0, 1.0, 0.0, 0.0]] * 4], dtype=np.float32),
+        np.asarray([[[1.0, 0.0, 0.0, 0.0]] * 4], dtype=np.float32),
+        np.asarray([[0.0, 1.0, 0.0]], dtype=np.float32),
+    )
+    decoded = decode_row(outputs, trace, records)
+    assert decoded.route_action.value == "fallback"
+    assert decoded.direct_support_evidence_ids == ("E1",)
+
+def test_calibration_search_distinguishes_coverage_and_risk_failures():
+    from scripts.calibrate_rp3_thresholds import select_operating_point
+
+    low_coverage = [{"support": .5, "confidence": .5, "answered": 2, "risk": 0.0}]
+    best, blocked = select_operating_point(
+        low_coverage, maximum_teacher_disagreement=.1, minimum_answers=5
+    )
+    assert best is None
+    assert blocked["reason"] == "insufficient_answer_coverage"
+
+    high_risk = [{"support": .5, "confidence": .5, "answered": 8, "risk": .25}]
+    best, blocked = select_operating_point(
+        high_risk, maximum_teacher_disagreement=.1, minimum_answers=5
+    )
+    assert best is None
+    assert blocked["reason"] == "teacher_disagreement_above_limit"
+
+    feasible = [{"support": .7, "confidence": .8, "answered": 6, "risk": 0.0}]
+    best, blocked = select_operating_point(
+        feasible, maximum_teacher_disagreement=.1, minimum_answers=5
+    )
+    assert best == feasible[0]
+    assert blocked is None

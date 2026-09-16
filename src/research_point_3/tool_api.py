@@ -33,7 +33,7 @@ from .renderer import (
     RenderEvidenceDecision,
     RenderFieldPlan,
 )
-from .routing import CostSensitiveRouter
+from .routing import CostSensitiveRouter, RoutingSignals
 
 
 TOOL_NAME = "select_pump_evidence"
@@ -82,7 +82,7 @@ class SelectPumpEvidenceRequest:
         if not isinstance(self.query, QueryContext):
             object.__setattr__(self, "query", QueryContext.from_dict(self.query))
         ids = tuple(str(value).strip() for value in self.candidate_evidence_ids)
-        if not ids or any(not value for value in ids):
+        if any(not value for value in ids):
             raise ContractError("candidate_evidence_ids must contain non-empty IDs")
         if len(ids) != len(set(ids)):
             raise ContractError("candidate_evidence_ids must not contain duplicates")
@@ -660,12 +660,33 @@ class SelectPumpEvidenceTool:
         renderer: DeterministicDiagnosisCardRenderer | None = None,
         teacher_available: bool = True,
         minimum_route_confidence: float | None = None,
+        teacher_scope_authorizations: Mapping[
+            tuple[str, DiagnosticRole | str], Sequence[str]
+        ] | None = None,
     ) -> None:
         self.controller = controller
         self.resolver = resolver
         self.router = router or CostSensitiveRouter()
         self.renderer = renderer or DeterministicDiagnosisCardRenderer()
         self.teacher_available = bool(teacher_available)
+        normalized_scope: dict[tuple[str, DiagnosticRole], frozenset[str]] = {}
+        for raw_key, raw_ids in (teacher_scope_authorizations or {}).items():
+            if not isinstance(raw_key, tuple) or len(raw_key) != 2:
+                raise ContractError("teacher scope authorization key must be (fault_id, role)")
+            fault_id = str(raw_key[0]).strip()
+            try:
+                role = DiagnosticRole(str(raw_key[1]))
+            except ValueError as exc:
+                raise ContractError("teacher scope authorization role is invalid") from exc
+            if not fault_id or role not in CARD_SLOT_ROLES:
+                raise ContractError("teacher scope authorization must name one card role")
+            ids = frozenset(str(value).strip() for value in raw_ids)
+            if not ids or any(not value for value in ids):
+                raise ContractError("teacher scope authorization IDs must be non-empty")
+            if any(not resolver.contains(value) for value in ids):
+                raise ContractError("teacher scope authorization references unknown evidence")
+            normalized_scope[(fault_id, role)] = ids
+        self.teacher_scope_authorizations = normalized_scope
         if minimum_route_confidence is not None:
             raise ContractError(
                 "runtime route thresholds must come from the controller's "
@@ -806,6 +827,31 @@ class SelectPumpEvidenceTool:
             candidates = self.resolver.resolve_candidates(
                 normalized.candidate_evidence_ids, normalized.availability_mask
             )
+            if not candidates:
+                # An empty frozen fault×role bucket is a valid observation,
+                # not a malformed request.  It supplies route/underfill
+                # supervision but no pointer decision for the ONNX controller.
+                # Escalate to the teacher when admissible and otherwise abstain.
+                route = self.router.decide(
+                    RoutingSignals(
+                        student_success_probability=0.0,
+                        teacher_success_probability=(
+                            1.0 if self.teacher_available else 0.0
+                        ),
+                        direct_support_count=0,
+                        teacher_available=self.teacher_available,
+                        hard_failure_codes=("no_candidate_evidence",),
+                    )
+                )
+                return SelectPumpEvidenceResponse(
+                    ok=True,
+                    action=route.action,
+                    route=route,
+                    diagnosis_card=self._empty_card(normalized.query),
+                    natural_language_shell="",
+                    selected_evidence=(),
+                    error_codes=(),
+                )
             prediction = self.controller.predict(
                 query=normalized.query,
                 candidates=candidates,
@@ -840,16 +886,29 @@ class SelectPumpEvidenceTool:
                 available_by_id=available_by_id,
             )
             selected_counts = {role: 0 for role in CARD_SLOT_ROLES}
+            scope_authorized_selected_ids: set[str] = set()
             for row in selected:
                 record = records_by_id[row.evidence_id]
                 if record.role not in CARD_SLOT_ROLES:
                     raise RuntimeEvidenceError(
                         "controller selected context or non-card evidence"
                     )
-                if normalized.query.fault_id not in record.fault_class_ids:
+                scope_key = (
+                    normalized.query.fault_id,
+                    normalized.query.requested_role,
+                )
+                teacher_scope_authorized = row.evidence_id in (
+                    self.teacher_scope_authorizations.get(scope_key, frozenset())
+                )
+                if (
+                    normalized.query.fault_id not in record.fault_class_ids
+                    and not teacher_scope_authorized
+                ):
                     raise RuntimeEvidenceError(
                         "controller selected evidence outside query fault scope"
                     )
+                if teacher_scope_authorized:
+                    scope_authorized_selected_ids.add(row.evidence_id)
                 if (
                     normalized.query.requested_role != DiagnosticRole.FULL_CARD
                     and record.role != normalized.query.requested_role
@@ -900,6 +959,7 @@ class SelectPumpEvidenceTool:
                     )
                     for field in prediction.fields
                 ),
+                scope_authorized_evidence_ids=scope_authorized_selected_ids,
             )
             shell = self.renderer.render_natural_language_shell(card)
             evidence_packet = tuple(
@@ -1058,13 +1118,13 @@ def select_pump_evidence_audit_schema() -> dict[str, Any]:
                 "candidate_evidence_ids": {
                     "type": "array",
                     "items": {"type": "string"},
-                    "minItems": 1,
+                    "minItems": 0,
                     "uniqueItems": True,
                 },
                 "availability_mask": {
                     "type": "array",
                     "items": {"type": "boolean"},
-                    "minItems": 1,
+                    "minItems": 0,
                 },
                 "selection_budget": {"type": "integer", "minimum": 1},
                 "candidate_signature_sha256": {"type": "string"},

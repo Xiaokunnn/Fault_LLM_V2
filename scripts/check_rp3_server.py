@@ -15,6 +15,11 @@ def collect_report(root=ROOT):
     config=json.loads((root/"configs/research_point_3/teacher_graph_rp3_v1.json").read_text(encoding="utf-8"))
     failures=[]
     versions={}
+    try:
+        from src.research_point_3.experiment_io import decode_row  # noqa: F401
+        from src.research_point_3.onnx_runtime import decode_numpy_output  # noqa: F401
+    except (ImportError, AttributeError) as exc:
+        failures.append(f"RP3 downstream interface mismatch: {exc}")
     for package in ("torch","transformers","sentence-transformers","numpy","onnx","onnxruntime","pytest"):
         try:
             versions[package]=importlib.metadata.version(package)

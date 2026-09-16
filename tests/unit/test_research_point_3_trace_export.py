@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import replace
+
 import pytest
 
 from src.research_point_3.contracts import (
@@ -180,6 +182,23 @@ def test_single_role_trace_and_multi_role_card_bridge_are_deterministic() -> Non
     assert state_by_role[DiagnosticRole.MAINTENANCE] == CardFieldState.SUPPORTED
     assert state_by_role[DiagnosticRole.INSPECTION] == CardFieldState.INSUFFICIENT
     assert merged.cited_evidence_ids == ("E0", "E1")
+
+
+def test_visible_teacher_scope_mismatch_is_disclosed_without_relabelling_graph() -> None:
+    records = {f"E{index}": _record(f"E{index}", DiagnosticRole.SYMPTOM, index)
+        for index in range(4)}
+    records["E0"] = replace(records["E0"], fault_class_ids=("neighbour_fault",))
+    trace = assemble_single_role_teacher_trace(
+        trace_id="T-CROSS-LABEL",
+        query=QueryContext("Q1","堵塞有哪些症状？","hydraulic_blockage","堵塞",
+            DiagnosticRole.SYMPTOM,"S1"),
+        candidate_trace=export_candidate_decisions(_row(),require_complete_top_n=4),
+        records_by_id=records,route=_route(),
+        route_action_costs={"answer":1.0,"fallback":8.0,"abstain":12.0},
+        split=DataSplit.TRAIN,teacher_graph_id="TeacherGraph_RP3_v1",
+        teacher_replay_id="RP2-v6-replay")
+    assert records["E0"].fault_class_ids == ("neighbour_fault",)
+    assert trace.metadata["automatic_fault_label_mismatch_selected_evidence_ids"] == ["E0"]
 
 
 def test_route_export_requires_explicit_three_action_costs() -> None:

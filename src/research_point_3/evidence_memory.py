@@ -77,21 +77,31 @@ def _strings(value: Any) -> tuple[str, ...]:
 
 
 def _resolve_role(row: Mapping[str, Any]) -> DiagnosticRole:
-    role = str(row.get("evidence_role") or row.get("role") or "").strip()
-    if role:
-        if role in UPSTREAM_ROLE:
-            return UPSTREAM_ROLE[role]
-        try:
-            return DiagnosticRole(role)
-        except ValueError:
-            # A declared upstream role is authoritative.  Silently falling
-            # back to the relation would turn non-diagnostic standard or
-            # operating-condition records into a diagnosis-card field.
-            raise ContractError(f"unmapped RP3 evidence role: {role!r}")
     relation = str(row.get("relation") or "")
     if relation not in RELATION_ROLE:
         raise ContractError(f"unmapped RP3 evidence relation: {relation!r}")
+    # RP2 v6 defines the evaluated diagnostic role from the governed relation
+    # (for example, ``indicates`` belongs to the symptom task).  A handful of
+    # strict-208 source records retain an older extraction-time
+    # ``evidence_role`` that disagrees with that frozen convention.  RP3 must
+    # replay the RP2 task semantics rather than silently changing the role of
+    # a teacher-selected item.  The original field is preserved below as
+    # metadata for audit; no upstream graph record is rewritten.
     return RELATION_ROLE[relation]
+
+
+def _normalized_declared_role(row: Mapping[str, Any]) -> DiagnosticRole | None:
+    """Normalize the legacy source role only for discrepancy disclosure."""
+
+    role = str(row.get("evidence_role") or row.get("role") or "").strip()
+    if not role:
+        return None
+    if role in UPSTREAM_ROLE:
+        return UPSTREAM_ROLE[role]
+    try:
+        return DiagnosticRole(role)
+    except ValueError:
+        return None
 
 
 def _graph_eligible(row: Mapping[str, Any]) -> bool:
@@ -147,6 +157,8 @@ def compile_evidence_memory(
             raise ContractError(f"missing group-derived split for evidence {evidence_id}")
         split_value = split_by_evidence_id.get(evidence_id, DataSplit.UNASSIGNED)
         vector = tuple(float(value) for value in feature_vectors.get(evidence_id, ()))
+        resolved_role = _resolve_role(row)
+        declared_role = _normalized_declared_role(row)
         records.append(
             CompactEvidenceRecord(
                 evidence_id=evidence_id,
@@ -154,7 +166,7 @@ def compile_evidence_memory(
                 head_label_zh=str(row.get("head_canonical_zh") or row.get("head") or ""),
                 relation=str(row.get("relation") or ""),
                 tail_label_zh=str(row.get("tail_canonical_zh") or row.get("tail") or ""),
-                role=_resolve_role(row),
+                role=resolved_role,
                 fault_class_ids=fault_ids,
                 evidence_text=str(row.get("evidence_text") or ""),
                 provenance=EvidenceProvenance(
@@ -177,7 +189,7 @@ def compile_evidence_memory(
                     "applicability_scope": str(row.get("applicability_scope") or ""),
                     "terminology_tier": "strict_208",
                     "card_selectable": (
-                        _resolve_role(row) in CARD_SLOT_ROLES
+                        resolved_role in CARD_SLOT_ROLES
                         and fault_ids != ("__unscoped_nonselectable__",)
                     ),
                     "bbox_available": bool(row.get("bbox")),
@@ -190,6 +202,13 @@ def compile_evidence_memory(
                         "missing_nonselectable"
                         if fault_ids == ("__unscoped_nonselectable__",)
                         else "declared"
+                    ),
+                    "role_assignment_policy": "rp2_relation_semantics_v1",
+                    "source_declared_evidence_role": str(
+                        row.get("evidence_role") or row.get("role") or ""
+                    ),
+                    "source_role_disagrees_with_relation": (
+                        declared_role is not None and declared_role != resolved_role
                     ),
                 },
             )

@@ -35,6 +35,7 @@ from src.research_point_3.contracts import (
 from src.research_point_3.splits import (
     assign_fixed_memory_query_splits,
     assign_grouped_splits,
+    assert_training_trace_boundary,
 )
 
 
@@ -154,6 +155,40 @@ def _memory(
     )
 
 
+def _zero_candidate_trace(trace_id: str = "T-ZERO") -> TeacherTrace:
+    trace = _trace(trace_id)
+    empty_card = DiagnosisCard(
+        card_id=f"CARD-{trace_id}",
+        status=CardStatus.INSUFFICIENT_EVIDENCE,
+        fault_ids=(trace.query.fault_id,),
+        applicability_conditions=(),
+        slots=tuple(
+            DiagnosisCardSlot(role=role, state=CardFieldState.INSUFFICIENT)
+            for role in CARD_SLOT_ROLES
+        ),
+    )
+    return replace(
+        trace,
+        candidate_evidence_ids=(),
+        availability_mask=(),
+        selection_budget=3,
+        underfill_reason_codes=("no_role_candidates",),
+        evidence_decisions=(),
+        diagnosis_card=empty_card,
+        route=RouteDecision(
+            action=RouteAction.ABSTAIN,
+            reason_codes=("no_candidate_evidence",),
+            estimated_student_cost=1.0,
+            estimated_teacher_cost=8.0,
+            estimated_error_cost=2.0,
+            confidence=1.0,
+        ),
+        claim_group_ids=(),
+        document_group_ids=(),
+        source_family_group_ids=(),
+    )
+
+
 def test_complete_card_rejects_missing_slot() -> None:
     card = _card()
     with pytest.raises(ContractError, match="complete diagnosis card"):
@@ -210,6 +245,34 @@ def test_fixed_memory_split_groups_by_scenario_without_candidate_giant_component
     by_id = {row.trace_id: row for row in rows}
     assert by_id["T1"].split == by_id["T2"].split
     assert report.component_count == 2
+
+
+def test_fixed_memory_split_preserves_zero_candidate_route_supervision() -> None:
+    trace = _zero_candidate_trace()
+    rows, report = assign_fixed_memory_query_splits((trace,), seed="fixed")
+
+    assert len(rows) == 1
+    assert rows[0].split in {DataSplit.TRAIN, DataSplit.VALIDATION}
+    assert rows[0].document_group_ids == ()
+    assert report.component_count == 1
+    assert_training_trace_boundary(
+        rows, split_mode="fixed_memory_query_generalization"
+    )
+
+
+def test_empty_document_groups_remain_forbidden_outside_zero_candidate_fixed_memory() -> None:
+    zero = replace(_zero_candidate_trace(), split=DataSplit.TRAIN)
+    with pytest.raises(ContractError, match="document_group_ids"):
+        assert_training_trace_boundary(zero for _ in range(1))
+
+    malformed_nonempty = replace(
+        _trace(),
+        claim_group_ids=(),
+        document_group_ids=(),
+        source_family_group_ids=(),
+    )
+    with pytest.raises(ContractError, match="non-empty fixed-memory"):
+        assign_fixed_memory_query_splits((malformed_nonempty,))
 
 
 def test_training_bundle_hard_rejects_external_evaluation_documents(tmp_path: Path) -> None:
@@ -344,8 +407,15 @@ def test_trace_memory_validates_card_role_fault_and_claim_closure() -> None:
         validate_trace_memory_references((trace,), (wrong_role, unused))
 
     wrong_fault = replace(_memory(), fault_class_ids=("OTHER",))
-    with pytest.raises(ContractError, match="outside fault scope"):
+    with pytest.raises(ContractError, match="scope authorization"):
         validate_trace_memory_references((trace,), (wrong_fault, unused))
+    authorized = replace(
+        trace,
+        metadata={
+            "automatic_fault_label_mismatch_selected_evidence_ids": ["E1"]
+        },
+    )
+    validate_trace_memory_references((authorized,), (wrong_fault, unused))
 
     wrong_claim = replace(_memory(), claim_id="OMITTED")
     with pytest.raises(ContractError, match="omits cited claim"):

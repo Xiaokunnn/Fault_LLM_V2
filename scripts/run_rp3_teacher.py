@@ -133,6 +133,12 @@ def main():
         "validation":{k:True for k in freeze_config["required_teacher_trace"]["required_validation_flags"]},
         "supervision_boundary":"teacher_generated_not_expert_ground_truth",
         "route_supervision_status":"pending_student_rollout",
+        "support_supervision": {
+            "candidate_count": sum(len(row["candidates"]) for row in exported),
+            "assessed_count": sum(len(row["final_support_by_evidence_id"]) for row in exported),
+            "not_assessed_count": sum(len(row.get("auxiliary_contract_failure_evidence_ids", ())) for row in exported),
+            "invalid_auxiliary_outputs_are_negative_labels": False,
+        },
     }
     manifest["logical_sha256"]=stable_sha256(manifest)
     _write_immutable(output/"manifest.json",canonical_json_bytes(manifest))

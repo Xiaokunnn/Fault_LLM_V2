@@ -104,7 +104,7 @@ def _finite_vector(values: Sequence[float], expected: int, name: str) -> list[fl
     return result
 
 
-def _decode_numpy_output(
+def decode_numpy_output(
     *,
     rank_logits: Any,
     support_logits: Any,
@@ -412,7 +412,7 @@ class OnnxEvidenceController:
                 "selection_budget": np.asarray([selection_budget], dtype=np.int64),
             },
         )
-        decoded = _decode_numpy_output(
+        decoded = decode_numpy_output(
             rank_logits=raw[0],
             support_logits=raw[1],
             field_state_logits=raw[2],
@@ -438,4 +438,5 @@ __all__ = [
     "FeatureProvider",
     "ONNX_RUNTIME_INSTALL_HINT",
     "OnnxEvidenceController",
+    "decode_numpy_output",
 ]

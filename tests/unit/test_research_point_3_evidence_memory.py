@@ -76,6 +76,22 @@ def test_compile_memory_preserves_non_card_context_without_mislabeling(
     assert report.record_count == 1
 
 
+def test_compile_memory_uses_frozen_rp2_relation_role_and_discloses_legacy_conflict(
+    tmp_path: Path,
+) -> None:
+    row = _row()
+    row["relation"] = "indicates"
+    row["evidence_role"] = "inspection"
+    _write(tmp_path, [row])
+
+    records, _ = compile_evidence_memory(tmp_path)
+
+    assert records[0].role.value == "symptom"
+    assert records[0].metadata["role_assignment_policy"] == "rp2_relation_semantics_v1"
+    assert records[0].metadata["source_declared_evidence_role"] == "inspection"
+    assert records[0].metadata["source_role_disagrees_with_relation"] is True
+
+
 def test_compile_memory_preserves_unscoped_rows_as_nonselectable(
     tmp_path: Path,
 ) -> None:

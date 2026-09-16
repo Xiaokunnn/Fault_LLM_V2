@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 from .dataset import TensorizationConfig, prepare_training_data
+from .onnx_runtime import decode_numpy_output
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -20,8 +21,7 @@ def onnx_feed(dataset, index):
         "query_features", "candidate_features", "availability_mask", "selection_budget")}
 
 def decode_row(outputs, trace, records, *, support_threshold=0.5, minimum_route_confidence=0.0):
-    from .onnx_runtime import _decode_numpy
-    return _decode_numpy(rank_logits=outputs[0], support_logits=outputs[1],
+    return decode_numpy_output(rank_logits=outputs[0], support_logits=outputs[1],
         field_state_logits=outputs[2], cardinality_logits=outputs[3], route_logits=outputs[4],
         candidate_ids=trace.candidate_evidence_ids,
         candidate_roles=[records[eid].role for eid in trace.candidate_evidence_ids],

@@ -272,6 +272,7 @@ def assemble_single_role_teacher_trace(
         for decision in candidate_trace.decisions
         if decision.selected
     }
+    automatic_fault_label_mismatches: list[str] = []
     for evidence_id in selected_ids:
         record = records_by_id[evidence_id]
         if record.role != query.requested_role:
@@ -279,9 +280,13 @@ def assemble_single_role_teacher_trace(
                 f"selected evidence {evidence_id} is outside the requested role"
             )
         if query.fault_id not in record.fault_class_ids:
-            raise ContractError(
-                f"selected evidence {evidence_id} is outside the requested fault scope"
-            )
+            # RP2 v6 deliberately gates scope with visible Chinese semantics
+            # and the verifier, not the automatically assigned fault label.
+            # The latter is not expert truth and can be single-label even when
+            # an evidence statement directly supports two neighbouring scopes.
+            # Preserve the original label and disclose the mismatch; never
+            # rewrite the canonical graph to make the export pass.
+            automatic_fault_label_mismatches.append(evidence_id)
 
     render_decisions = tuple(
         RenderEvidenceDecision(
@@ -310,6 +315,7 @@ def assemble_single_role_teacher_trace(
         records_by_id=records_by_id,
         decisions=render_decisions,
         field_plan=field_plan,
+        scope_authorized_evidence_ids=automatic_fault_label_mismatches,
     )
     if selected_count == 0 and route.action == RouteAction.ANSWER:
         raise ContractError("an empty teacher selection cannot use route=answer")
@@ -353,6 +359,13 @@ def assemble_single_role_teacher_trace(
                 {record.provenance.source_family_id for record in candidate_records}
             ),
             "validation_semantics": "fixed_memory_query_generalization",
+            "fault_scope_policy": (
+                "frozen_RP2_visible_affinity_and_direct_verifier;_automatic_"
+                "fault_class_ids_are_not_expert_ground_truth"
+            ),
+            "automatic_fault_label_mismatch_selected_evidence_ids": sorted(
+                automatic_fault_label_mismatches
+            ),
         }
     )
     return TeacherTrace(

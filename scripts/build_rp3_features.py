@@ -13,9 +13,17 @@ def main():
     p.add_argument("--traces", required=True)
     p.add_argument("--memory", required=True)
     p.add_argument("--output", required=True)
+    p.add_argument(
+        "--purpose",
+        required=True,
+        choices=("training", "development"),
+        help="Fail-closed corpus boundary expected for both input bundles.",
+    )
     args = p.parse_args()
-    traces, tm = read_teacher_trace_bundle(args.traces)
-    records, mm = read_compact_evidence_memory_bundle(args.memory)
+    traces, tm = read_teacher_trace_bundle(args.traces, purpose=args.purpose)
+    records, mm = read_compact_evidence_memory_bundle(
+        args.memory, purpose=args.purpose
+    )
     if tm["teacher_graph"] != mm["teacher_graph"] or tm["purpose"] != mm["purpose"]:
         raise ValueError("trace/memory graph or purpose mismatch")
     result = ExplicitFeatureStore.build_payload(

@@ -73,8 +73,15 @@ def trace_group_tokens(trace: TeacherTrace) -> frozenset[str]:
     )
 
 
-def _forced_document_split(document_ids: Iterable[str]) -> DataSplit | None:
-    partitions = {corpus_partition(item) for item in document_ids}
+def _forced_document_split(
+    document_ids: Iterable[str], *, allow_empty: bool = False
+) -> DataSplit | None:
+    values = tuple(document_ids)
+    if not values:
+        if allow_empty:
+            return None
+        raise ContractError("each RP3 trace must declare document_group_ids")
+    partitions = {corpus_partition(item) for item in values}
     if "excluded" in partitions:
         raise ContractError("MP014 is excluded and cannot appear in an RP3 trace")
     if "external_evaluation" in partitions:
@@ -87,8 +94,6 @@ def _forced_document_split(document_ids: Iterable[str]) -> DataSplit | None:
         return DataSplit.DEVELOPMENT
     if partitions == {"build"}:
         return None
-    if not partitions:
-        raise ContractError("each RP3 trace must declare document_group_ids")
     raise ContractError(f"unsupported corpus partition combination: {sorted(partitions)}")
 
 
@@ -213,7 +218,17 @@ def assign_fixed_memory_query_splits(
     scenario_owner: dict[str, DataSplit] = {}
     assigned: list[TeacherTrace] = []
     for trace in rows:
-        if _forced_document_split(trace.document_group_ids) is not None:
+        # A zero-candidate RP2 role query is valid active-underfill/route
+        # supervision.  It has no evidence provenance to name, so its leakage
+        # key is the mandatory fault scenario.  Non-empty candidate traces must
+        # still expose their actual build-document provenance.
+        if not trace.document_group_ids and trace.candidate_evidence_ids:
+            raise ContractError(
+                "a non-empty fixed-memory trace must declare document_group_ids"
+            )
+        if _forced_document_split(
+            trace.document_group_ids, allow_empty=not trace.candidate_evidence_ids
+        ) is not None:
             raise ContractError(
                 "fixed-memory build split cannot contain development/external documents"
             )
@@ -244,10 +259,29 @@ def assign_fixed_memory_query_splits(
     )
 
 
-def assert_training_trace_boundary(traces: Iterable[TeacherTrace]) -> tuple[TeacherTrace, ...]:
+def assert_training_trace_boundary(
+    traces: Iterable[TeacherTrace],
+    *,
+    split_mode: str = "inductive_evidence_holdout",
+) -> tuple[TeacherTrace, ...]:
     rows = validate_unique_trace_ids(traces)
+    if split_mode not in {
+        "fixed_memory_query_generalization",
+        "inductive_evidence_holdout",
+    }:
+        raise ContractError(f"unknown training split mode: {split_mode}")
     for trace in rows:
-        forced = _forced_document_split(trace.document_group_ids)
+        allow_empty = (
+            split_mode == "fixed_memory_query_generalization"
+            and not trace.candidate_evidence_ids
+        )
+        if not trace.document_group_ids and not allow_empty:
+            raise ContractError(
+                "a training trace with candidate evidence must declare document_group_ids"
+            )
+        forced = _forced_document_split(
+            trace.document_group_ids, allow_empty=allow_empty
+        )
         if trace.split not in {DataSplit.TRAIN, DataSplit.VALIDATION}:
             raise ContractError(
                 f"training bundle contains trace {trace.trace_id} with split={trace.split.value}"

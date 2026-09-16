@@ -133,6 +133,7 @@ class DeterministicDiagnosisCardRenderer:
         records_by_id: Mapping[str, CompactEvidenceRecord],
         decisions: Iterable[RenderEvidenceDecision],
         field_plan: Iterable[RenderFieldPlan],
+        scope_authorized_evidence_ids: Iterable[str] = (),
     ) -> DiagnosisCard:
         if not isinstance(query, QueryContext):
             query = QueryContext.from_dict(query)
@@ -193,6 +194,7 @@ class DeterministicDiagnosisCardRenderer:
                 + ", ".join(invalid_selected)
             )
 
+        scope_authorized = {str(value) for value in scope_authorized_evidence_ids}
         selected_records: list[tuple[RenderEvidenceDecision, CompactEvidenceRecord]] = []
         for decision in direct:
             record = records_by_id.get(decision.evidence_id)
@@ -206,7 +208,10 @@ class DeterministicDiagnosisCardRenderer:
                 raise ContractError(
                     f"evidence {record.evidence_id} has an illegal diagnosis-card role"
                 )
-            if query.fault_id not in record.fault_class_ids:
+            if (
+                query.fault_id not in record.fault_class_ids
+                and record.evidence_id not in scope_authorized
+            ):
                 raise ContractError(
                     f"evidence {record.evidence_id} is outside query fault scope"
                 )

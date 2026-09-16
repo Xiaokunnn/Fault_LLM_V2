@@ -174,7 +174,7 @@ def write_teacher_trace_bundle(
         raise ContractError("split_protocol.mode is invalid")
     rows = validate_unique_trace_ids(traces)
     if purpose == "training":
-        rows = assert_training_trace_boundary(rows)
+        rows = assert_training_trace_boundary(rows, split_mode=split_mode)
     elif purpose not in {"development", "external_evaluation", "audit"}:
         raise ContractError(f"unknown teacher-trace bundle purpose: {purpose}")
     expected_splits = {
@@ -272,7 +272,9 @@ def read_teacher_trace_bundle(
     if stable_sha256([row.to_dict() for row in rows]) != manifest.get("logical_sha256"):
         raise ContractError("teacher-trace logical hash mismatch")
     if manifest.get("purpose") == "training":
-        assert_training_trace_boundary(rows)
+        assert_training_trace_boundary(
+            rows, split_mode=str(split_protocol.get("mode", ""))
+        )
     elif manifest.get("purpose") in {"development", "external_evaluation"}:
         expected = manifest["purpose"]
         if any(row.split.value != expected for row in rows):
@@ -342,6 +344,34 @@ def validate_trace_memory_references(
             for evidence_id, decision in decision_by_id.items()
             if decision.selected
         }
+        raw_scope_authorizations = trace.metadata.get(
+            "automatic_fault_label_mismatch_selected_evidence_ids", ()
+        )
+        if not isinstance(raw_scope_authorizations, (list, tuple)):
+            raise ContractError(
+                f"trace {trace.trace_id} scope authorization must be an ID list"
+            )
+        declared_scope_authorizations = tuple(
+            str(value).strip() for value in raw_scope_authorizations
+        )
+        if (
+            any(not value for value in declared_scope_authorizations)
+            or len(set(declared_scope_authorizations))
+            != len(declared_scope_authorizations)
+        ):
+            raise ContractError(
+                f"trace {trace.trace_id} scope authorization IDs must be unique and non-empty"
+            )
+        expected_scope_authorizations = {
+            evidence_id
+            for evidence_id in selected
+            if trace.query.fault_id not in memory_by_id[evidence_id].fault_class_ids
+        }
+        if set(declared_scope_authorizations) != expected_scope_authorizations:
+            raise ContractError(
+                f"trace {trace.trace_id} scope authorization must exactly disclose "
+                "teacher-selected automatic fault-label mismatches"
+            )
         for slot in trace.diagnosis_card.slots:
             for item in slot.items:
                 for evidence_id in item.evidence_ids:
@@ -357,7 +387,10 @@ def validate_trace_memory_references(
                             f"trace {trace.trace_id} card slot/evidence role mismatch for "
                             f"{evidence_id}"
                         )
-                    if trace.query.fault_id not in record.fault_class_ids:
+                    if (
+                        trace.query.fault_id not in record.fault_class_ids
+                        and evidence_id not in expected_scope_authorizations
+                    ):
                         raise ContractError(
                             f"trace {trace.trace_id} card evidence is outside fault scope: "
                             f"{evidence_id}"

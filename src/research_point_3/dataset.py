@@ -307,11 +307,11 @@ def validate_training_sources(
 
     freeze_hash = _validate_teacher_freeze_manifest(teacher_freeze_manifest)
     frozen_graph_hash, frozen_system_hash = _freeze_identities(teacher_freeze_manifest)
-    assert_training_trace_boundary(traces)
     split_protocol = trace_manifest.get("split_protocol", {})
     if not isinstance(split_protocol, Mapping):
         raise ContractError("trace manifest split_protocol must be a JSON object")
     split_mode = str(split_protocol.get("mode", ""))
+    assert_training_trace_boundary(traces, split_mode=split_mode)
     assert_group_disjoint_splits(traces, split_mode=split_mode)
     validate_trace_memory_references(traces, records)
     trace_graph = _graph_binding(trace_manifest, "trace manifest")
