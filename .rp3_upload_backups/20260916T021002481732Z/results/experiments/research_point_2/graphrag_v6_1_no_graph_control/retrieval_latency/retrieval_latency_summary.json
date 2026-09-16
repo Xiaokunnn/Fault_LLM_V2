@@ -1,0 +1,198 @@
+{
+  "all_rankings_match_immutable_replay": true,
+  "artifacts": {
+    "retrieval_latency_runs": {
+      "path": "results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_latency/retrieval_latency_runs.jsonl",
+      "sha256": "278d1345f0a774914e090fd585351824ce9e5fcc7a0fe59dd9107084900b74ed"
+    }
+  },
+  "decision_policy": "single_run",
+  "inputs": {
+    "config": {
+      "path": "configs/rp2_graphrag_v6_1_no_graph_control.json",
+      "sha256": "65a1a040b70c8d5d5adbc2dc299a3e7b07c90a799d4284b14c47ccd96d4478f8"
+    },
+    "replay": {
+      "path": "results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_replay.jsonl",
+      "sha256": "0a7cd7ae2e42665ac30aaa578d9f8b52ea0aa938076bc5ad7fed91db12490818"
+    },
+    "replay_manifest": {
+      "path": "results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_replay_manifest.json",
+      "sha256": "fe08785470c77da221c90f279e9cf2d47e754adcedce23813b458b1cb6ba9dc1"
+    }
+  },
+  "latency_scope": "fresh CUDA-synchronized retrieval only; model loading/warmup excluded",
+  "measurement_repeats": 3,
+  "methods": {
+    "FullNoGraph_v6_1_k3": {
+      "retrieval_ms_mean": 31.583331725,
+      "retrieval_ms_median": 29.6503105,
+      "retrieval_ms_p95": 31.5969281,
+      "samples": 120
+    },
+    "Full_v6_1_k3": {
+      "retrieval_ms_mean": 31.272284875,
+      "retrieval_ms_median": 29.7689595,
+      "retrieval_ms_p95": 31.264333200000003,
+      "samples": 120
+    }
+  },
+  "protocol_id": "marine_pump_rp2_graphrag_v6_1_no_graph_control",
+  "queries": 40,
+  "runtime": {
+    "cuda": {
+      "compiled_cuda": "11.8",
+      "cuda_available": true,
+      "device": "0",
+      "gpu_name": "NVIDIA RTX 5880 Ada Generation",
+      "torch_version": "2.6.0+cu118"
+    },
+    "embedding_model": {
+      "file_count": 30,
+      "files": [
+        {
+          "bytes": 1627,
+          "path": ".gitattributes"
+        },
+        {
+          "bytes": 191,
+          "path": "1_Pooling/config.json"
+        },
+        {
+          "bytes": 15822,
+          "path": "README.md"
+        },
+        {
+          "bytes": 2100674,
+          "path": "colbert_linear.pt"
+        },
+        {
+          "bytes": 687,
+          "path": "config.json"
+        },
+        {
+          "bytes": 123,
+          "path": "config_sentence_transformers.json"
+        },
+        {
+          "bytes": 77,
+          "path": "configuration.json"
+        },
+        {
+          "bytes": 131849,
+          "path": "imgs/bm25.jpg"
+        },
+        {
+          "bytes": 485432,
+          "path": "imgs/long.jpg"
+        },
+        {
+          "bytes": 576482,
+          "path": "imgs/miracl.jpg"
+        },
+        {
+          "bytes": 608027,
+          "path": "imgs/mkqa.jpg"
+        },
+        {
+          "bytes": 158358,
+          "path": "imgs/nqa.jpg"
+        },
+        {
+          "bytes": 20984,
+          "path": "imgs/others.webp"
+        },
+        {
+          "bytes": 126894,
+          "path": "long.jpg"
+        },
+        {
+          "bytes": 349,
+          "path": "modules.json"
+        },
+        {
+          "bytes": 65552,
+          "path": "onnx/Constant_7_attr__value"
+        },
+        {
+          "bytes": 698,
+          "path": "onnx/config.json"
+        },
+        {
+          "bytes": 724923,
+          "path": "onnx/model.onnx"
+        },
+        {
+          "bytes": 2266820608,
+          "path": "onnx/model.onnx_data"
+        },
+        {
+          "bytes": 5069051,
+          "path": "onnx/sentencepiece.bpe.model"
+        },
+        {
+          "bytes": 964,
+          "path": "onnx/special_tokens_map.json"
+        },
+        {
+          "bytes": 17082821,
+          "path": "onnx/tokenizer.json"
+        },
+        {
+          "bytes": 1173,
+          "path": "onnx/tokenizer_config.json"
+        },
+        {
+          "bytes": 2271145830,
+          "path": "pytorch_model.bin"
+        },
+        {
+          "bytes": 54,
+          "path": "sentence_bert_config.json"
+        },
+        {
+          "bytes": 5069051,
+          "path": "sentencepiece.bpe.model"
+        },
+        {
+          "bytes": 3516,
+          "path": "sparse_linear.pt"
+        },
+        {
+          "bytes": 964,
+          "path": "special_tokens_map.json"
+        },
+        {
+          "bytes": 17098108,
+          "path": "tokenizer.json"
+        },
+        {
+          "bytes": 444,
+          "path": "tokenizer_config.json"
+        }
+      ],
+      "path": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/model/BAAI-bge-m3",
+      "structure_sha256": "7b99c8d196a71d863dbdfbeab151d047533e897bbb5ce6c996fd36619ccf9c99",
+      "total_bytes": 4587311333
+    },
+    "encoder": {
+      "cuda_available": true,
+      "cuda_device_count": 1,
+      "cuda_visible_devices": null,
+      "cudnn_version": 90100,
+      "devices": [
+        {
+          "compute_capability": "8.9",
+          "index": 0,
+          "name": "NVIDIA RTX 5880 Ada Generation",
+          "total_memory_bytes": 51002081280
+        }
+      ],
+      "platform": "Linux-6.17.0-40-generic-x86_64-with-glibc2.39",
+      "python_version": "3.11.15",
+      "torch_compiled_cuda": "11.8",
+      "torch_version": "2.6.0+cu118"
+    }
+  },
+  "warmup_runs": 2
+}

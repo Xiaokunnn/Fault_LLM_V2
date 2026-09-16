@@ -1,0 +1,1104 @@
+{
+  "protocol_id": "rp2_equal_budget_paper_summary_v1",
+  "label_policy": "Silver only; never Gold",
+  "human_expert_reviewed": false,
+  "quality_decision": "canonical measurement repeat 0; interleaved repeats are timing measurements only and are not fused",
+  "latency_policy": "Fresh retrieval timings are paired with generation-only timings by (repeat, method, query_id). Archived retrieval_elapsed_ms values are never used. E2E is null when fresh timing is incomplete.",
+  "latency_pairing": {
+    "method_query_rows": 200,
+    "complete_method_query_rows": 200,
+    "pending_method_query_rows": 0,
+    "status": "complete"
+  },
+  "metric_boundary": "Retrieval and citation metrics measure agreement with the frozen Silver evidence benchmark, not expert factual correctness.",
+  "bootstrap": {
+    "unit": "fault_class",
+    "method": "paired percentile cluster bootstrap",
+    "seed": 20260808,
+    "requested_replicates": 5000,
+    "confidence": 0.95,
+    "intervals": {
+      "B1_dense_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.21849200206398348,
+          "ci_low": 0.11186735842985847,
+          "ci_high": 0.3347947015977443,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.40569514362386716,
+          "ci_low": 0.27071365413486237,
+          "ci_high": 0.5458550238201528,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.5735294117647058,
+          "ci_low": 0.3333333333333333,
+          "ci_high": 0.8166666666666667,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.19723850066342327,
+          "ci_low": 0.0882311023093448,
+          "ci_high": 0.31698035577535105,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.2590819232085969,
+          "ci_low": 0.1273186607052762,
+          "ci_high": 0.3983079324315664,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 0.6764705882352942,
+          "ci_low": 0.48717948717948717,
+          "ci_high": 0.8571428571428571,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 0.35294117647058826,
+          "ci_low": 0.08333333333333333,
+          "ci_high": 0.6923076923076923,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 839.4149740074724,
+          "ci_low": 802.9523814533292,
+          "ci_high": 878.1289249666218,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      },
+      "B4_role_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.37808583959899744,
+          "ci_low": 0.289908745776271,
+          "ci_high": 0.46989339463855717,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.6777458725685443,
+          "ci_low": 0.4895629819877955,
+          "ci_high": 0.8396427728759678,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.7205882352941176,
+          "ci_low": 0.4861011904761905,
+          "ci_high": 0.9464285714285714,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.29932183399675655,
+          "ci_low": 0.18865857826384141,
+          "ci_high": 0.41015974903474905,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.37240205091867495,
+          "ci_low": 0.2398118058215032,
+          "ci_high": 0.5006811497651346,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 0.8529411764705882,
+          "ci_low": 0.705802861685215,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 0.5454545454545454,
+          "ci_low": 0.15384615384615385,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 782.1346756530055,
+          "ci_low": 719.0552479483084,
+          "ci_high": 842.526468750137,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      },
+      "A2_role_graph_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.4048715538847118,
+          "ci_low": 0.31432122378456967,
+          "ci_high": 0.49499558785159375,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.7158659287734227,
+          "ci_low": 0.5483925524743561,
+          "ci_high": 0.8699467218325672,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.75,
+          "ci_low": 0.5540540540540541,
+          "ci_high": 0.9464285714285714,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.30197552705292646,
+          "ci_low": 0.19280417841478703,
+          "ci_high": 0.4121027141110243,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.3773358426171725,
+          "ci_low": 0.25192850696185687,
+          "ci_high": 0.50207270711323,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 0.8823529411764706,
+          "ci_low": 0.7631578947368421,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 0.6,
+          "ci_low": 0.18181818181818182,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 805.5298313587732,
+          "ci_low": 739.4706295488802,
+          "ci_high": 866.2421537006878,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      },
+      "Ours_v6_k3_equal": {
+        "retrieval_recall_macro": {
+          "point": 0.4312094574671974,
+          "ci_low": 0.35511119677072867,
+          "ci_high": 0.5261741693978537,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.8222774299616643,
+          "ci_low": 0.7168341218212806,
+          "ci_high": 0.9186368634834189,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.7990196078431373,
+          "ci_low": 0.6578947368421053,
+          "ci_high": 0.925925925925926,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.37047766475011057,
+          "ci_low": 0.2535101267779839,
+          "ci_high": 0.49894450507990407,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.4263008233596469,
+          "ci_low": 0.30951450835920535,
+          "ci_high": 0.5444858938850873,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 531.2268530306558,
+          "ci_low": 450.61819851447075,
+          "ci_high": 617.4554404001043,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      },
+      "B1_dense_k4_secondary": {
+        "retrieval_recall_macro": {
+          "point": 0.25727738463806576,
+          "ci_low": 0.1357419897783675,
+          "ci_high": 0.3893130472284607,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "retrieval_ndcg_macro": {
+          "point": 0.4055342751595761,
+          "ci_low": 0.2691853783417788,
+          "ci_high": 0.543378908395203,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_precision_macro": {
+          "point": 0.5735294117647058,
+          "ci_low": 0.32856026785714293,
+          "ci_high": 0.8166666666666667,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_recall_macro": {
+          "point": 0.22491707209199469,
+          "ci_low": 0.09992949054621848,
+          "ci_high": 0.35799657861759643,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "citation_f1_macro": {
+          "point": 0.2869890978586631,
+          "ci_low": 0.14119392684610077,
+          "ci_high": 0.4402762118572395,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_precision": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "answer_recall": {
+          "point": 0.6764705882352942,
+          "ci_low": 0.48717948717948717,
+          "ci_high": 0.8571428571428571,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_precision": {
+          "point": 0.35294117647058826,
+          "ci_low": 0.08333333333333333,
+          "ci_high": 0.6923076923076923,
+          "replicates": 5000,
+          "clusters": 10
+        },
+        "abstention_recall": {
+          "point": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "replicates": 4969,
+          "clusters": 10
+        },
+        "end_to_end_latency_ms_mean": {
+          "point": 1092.7387522877093,
+          "ci_low": 1044.4270141546397,
+          "ci_high": 1147.1071604863537,
+          "replicates": 5000,
+          "clusters": 10
+        }
+      }
+    },
+    "paired_comparisons": {
+      "Full_vs_Dense_K3": {
+        "reference": "B1_dense_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.21271745540321393,
+            "ci_low": 0.14964916611806017,
+            "ci_high": 0.2748428680089865,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.41658228633779715,
+            "ci_low": 0.31837644133328286,
+            "ci_high": 0.49395176598928864,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.16721890015105,
+            "ci_low": 0.10746597054688384,
+            "ci_high": 0.22983299843182922,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": -308.18812097681666,
+            "ci_low": -395.2667798150907,
+            "ci_high": -217.2299005676231,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          }
+        }
+      },
+      "Full_vs_Role_K3": {
+        "reference": "B4_role_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.05312361786819997,
+            "ci_low": -0.014346515770994283,
+            "ci_high": 0.13125106292517003,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9348,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.14453155739311996,
+            "ci_low": 0.05298590041513205,
+            "ci_high": 0.24365948640341237,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9998,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.053898772440971965,
+            "ci_low": -0.003679586518054922,
+            "ci_high": 0.11341805631775671,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9672,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": -250.90782262234973,
+            "ci_low": -342.5765745268193,
+            "ci_high": -164.313936052365,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          }
+        }
+      },
+      "Full_vs_RoleGraph_K3": {
+        "reference": "A2_role_graph_k3_equal",
+        "proposed": "Ours_v6_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.02633790358248561,
+            "ci_low": -0.04752845534152248,
+            "ci_high": 0.11001454002653671,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.728,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.10641150118824161,
+            "ci_low": 0.02454771725052129,
+            "ci_high": 0.18990076890478635,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9952,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.04896498074247441,
+            "ci_low": -0.0026171520286222675,
+            "ci_high": 0.09965383122312459,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9676,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": -274.30297832811743,
+            "ci_low": -372.5862855856053,
+            "ci_high": -173.75873930319352,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 1.0,
+            "replicates": 5000,
+            "clusters": 10
+          }
+        }
+      },
+      "RoleGraph_vs_Role_K3": {
+        "reference": "B4_role_k3_equal",
+        "proposed": "A2_role_graph_k3_equal",
+        "metrics": {
+          "retrieval_recall_macro": {
+            "point_delta_proposed_minus_reference": 0.026785714285714357,
+            "ci_low": 0.003124999999999989,
+            "ci_high": 0.061576354679802936,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9754,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "retrieval_ndcg_macro": {
+            "point_delta_proposed_minus_reference": 0.03812005620487835,
+            "ci_low": 0.005865984075284492,
+            "ci_high": 0.08041231423897621,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.9754,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "citation_f1_macro": {
+            "point_delta_proposed_minus_reference": 0.004933791698497558,
+            "ci_low": -0.007717257540846235,
+            "ci_high": 0.020833333333333315,
+            "favorable_direction": "positive",
+            "bootstrap_favorable_probability": 0.6544,
+            "replicates": 5000,
+            "clusters": 10
+          },
+          "end_to_end_latency_ms_mean": {
+            "point_delta_proposed_minus_reference": 23.395155705767706,
+            "ci_low": -12.533017860068764,
+            "ci_high": 59.32695240602709,
+            "favorable_direction": "negative",
+            "bootstrap_favorable_probability": 0.0996,
+            "replicates": 5000,
+            "clusters": 10
+          }
+        }
+      }
+    }
+  },
+  "method_specs": [
+    {
+      "id": "B1_dense_k3_equal",
+      "label": "Dense K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": false,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "B4_role_k3_equal",
+      "label": "Role K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "A2_role_graph_k3_equal",
+      "label": "Role + Graph K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": true,
+      "fault_affinity": false,
+      "source_novelty": false
+    },
+    {
+      "id": "Ours_v6_k3_equal",
+      "label": "Full K3",
+      "budget": 3,
+      "group": "equal_budget_main",
+      "role": true,
+      "graph": true,
+      "fault_affinity": true,
+      "source_novelty": true
+    },
+    {
+      "id": "B1_dense_k4_secondary",
+      "label": "Dense K4",
+      "budget": 4,
+      "group": "cross_budget_secondary",
+      "role": false,
+      "graph": false,
+      "fault_affinity": false,
+      "source_novelty": false
+    }
+  ],
+  "methods": {
+    "B1_dense_k3_equal": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 23,
+      "valid_abstained_queries": 17,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.21849200206398348,
+      "retrieval_ndcg_macro": 0.40569514362386716,
+      "citation_precision_macro": 0.5735294117647058,
+      "citation_recall_macro": 0.19723850066342327,
+      "citation_f1_macro": 0.2590819232085969,
+      "source_family_coverage_mean": 2.025,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 0.6764705882352942,
+      "answerable_coverage": 0.6764705882352942,
+      "abstention_precision": 0.35294117647058826,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 2.95,
+        "p50": 3.0,
+        "p95": 4.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 1066.675,
+        "p50": 1007.0,
+        "p95": 1669.2
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 21.7,
+        "p50": 22.0,
+        "p95": 28.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 28.243930749999997,
+          "p50_ms": 28.125178,
+          "p95_ms": 29.846390149999998
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.8624373250000001,
+          "p50_ms": 1.795701,
+          "p95_ms": 2.2227083
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 365.10470245266333,
+          "p50_ms": 354.37080753035843,
+          "p95_ms": 454.36736046976876
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 426.77154951379634,
+          "p50_ms": 425.67312996834517,
+          "p95_ms": 732.8727314830758
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.061220224999999996,
+          "p50_ms": 0.0653135,
+          "p95_ms": 0.08497715
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 4.375102688209154,
+          "p50_ms": 4.227928497130051,
+          "p95_ms": 6.61977646232117
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 794.5739178743679,
+          "p50_ms": 769.6561490010936,
+          "p95_ms": 1075.9755740873516
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 810.3925925283245,
+          "p50_ms": 778.3586740838145,
+          "p95_ms": 1085.9619906363264
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 839.4149740074724,
+          "p50_ms": 806.8072155910488,
+          "p95_ms": 1113.1164780793129
+        }
+      },
+      "end_to_end_latency_ms_mean": 839.4149740074724,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "B4_role_k3_equal": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 29,
+      "valid_abstained_queries": 11,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.37808583959899744,
+      "retrieval_ndcg_macro": 0.6777458725685443,
+      "citation_precision_macro": 0.7205882352941176,
+      "citation_recall_macro": 0.29932183399675655,
+      "citation_f1_macro": 0.37240205091867495,
+      "source_family_coverage_mean": 2.025,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 0.8529411764705882,
+      "answerable_coverage": 0.8529411764705882,
+      "abstention_precision": 0.5454545454545454,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 2.775,
+        "p50": 3.0,
+        "p95": 4.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 991.375,
+        "p50": 998.5,
+        "p95": 1357.9
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 20.45,
+        "p50": 22.0,
+        "p95": 28.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 28.376705275,
+          "p50_ms": 28.1529755,
+          "p95_ms": 30.5122448
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.8126946,
+          "p50_ms": 1.822241,
+          "p95_ms": 2.14333825
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 351.10681387450313,
+          "p50_ms": 352.80809001415037,
+          "p95_ms": 371.4541106717659
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 386.87757724837866,
+          "p50_ms": 417.1402225329075,
+          "p95_ms": 643.965848046355
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.06789832500000001,
+          "p50_ms": 0.07301099999999999,
+          "p95_ms": 0.09562825000000001
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 4.052482151018921,
+          "p50_ms": 4.217792011331767,
+          "p95_ms": 5.802631416008808
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 745.6203053705394,
+          "p50_ms": 768.815802060999,
+          "p95_ms": 1070.0259577075485
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 753.6417424530055,
+          "p50_ms": 774.8481395486816,
+          "p95_ms": 1078.044113249674
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 782.1346756530055,
+          "p50_ms": 803.5834715486816,
+          "p95_ms": 1109.578531849674
+        }
+      },
+      "end_to_end_latency_ms_mean": 782.1346756530055,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "A2_role_graph_k3_equal": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 30,
+      "valid_abstained_queries": 10,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4048715538847118,
+      "retrieval_ndcg_macro": 0.7158659287734227,
+      "citation_precision_macro": 0.75,
+      "citation_recall_macro": 0.30197552705292646,
+      "citation_f1_macro": 0.3773358426171725,
+      "source_family_coverage_mean": 2.025,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 0.8823529411764706,
+      "answerable_coverage": 0.8823529411764706,
+      "abstention_precision": 0.6,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 2.8,
+        "p50": 3.0,
+        "p95": 4.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 1006.175,
+        "p50": 1023.0,
+        "p95": 1376.6
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 20.7,
+        "p50": 22.0,
+        "p95": 28.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 28.57817635,
+          "p50_ms": 28.351652,
+          "p95_ms": 30.364516350000002
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.8436261999999999,
+          "p50_ms": 1.826839,
+          "p95_ms": 2.1707865999999996
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 360.02089707326377,
+          "p50_ms": 354.793353471905,
+          "p95_ms": 435.18918325717095
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 401.8933964383905,
+          "p50_ms": 425.9135289757978,
+          "p95_ms": 647.5589222711276
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.067860225,
+          "p50_ms": 0.0712525,
+          "p95_ms": 0.09415639999999999
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 4.173421640007291,
+          "p50_ms": 4.267205978976563,
+          "p95_ms": 5.977444688323885
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 760.8210973354289,
+          "p50_ms": 778.0797940504272,
+          "p95_ms": 1060.8198422502026
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 771.792910263273,
+          "p50_ms": 792.5674649463991,
+          "p95_ms": 1068.916554955668
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 805.5298313587732,
+          "p50_ms": 819.8809754463991,
+          "p95_ms": 1101.5522751488534
+        }
+      },
+      "end_to_end_latency_ms_mean": 805.5298313587732,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "Ours_v6_k3_equal": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 34,
+      "valid_abstained_queries": 6,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.4312094574671974,
+      "retrieval_ndcg_macro": 0.8222774299616643,
+      "citation_precision_macro": 0.7990196078431373,
+      "citation_recall_macro": 0.37047766475011057,
+      "citation_f1_macro": 0.4263008233596469,
+      "source_family_coverage_mean": 2.0,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 1.0,
+      "answerable_coverage": 1.0,
+      "abstention_precision": 1.0,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 1.8,
+        "p50": 2.0,
+        "p95": 3.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 634.725,
+        "p50": 687.5,
+        "p95": 1107.8999999999996
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 13.5,
+        "p50": 16.0,
+        "p95": 22.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 28.721523,
+          "p50_ms": 28.6195435,
+          "p95_ms": 30.03505865
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 1.64147325,
+          "p50_ms": 1.6543435,
+          "p95_ms": 2.0872307999999995
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 299.29360312089557,
+          "p50_ms": 347.1851925132796,
+          "p95_ms": 437.6864196936367
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 191.75706532405457,
+          "p50_ms": 208.2441429956816,
+          "p95_ms": 423.57671348436264
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.067304475,
+          "p50_ms": 0.0732135,
+          "p95_ms": 0.09164769999999998
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 4.582514532376081,
+          "p50_ms": 2.7911835350096226,
+          "p95_ms": 4.862984255305491
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 495.6935167690972,
+          "p50_ms": 555.4487720073666,
+          "p95_ms": 858.8122607412514
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 502.1667347048603,
+          "p50_ms": 560.5275090350308,
+          "p95_ms": 864.483493220989
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 531.2268530306558,
+          "p50_ms": 589.4778010097127,
+          "p95_ms": 892.454587870989
+        }
+      },
+      "end_to_end_latency_ms_mean": 531.2268530306558,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    },
+    "B1_dense_k4_secondary": {
+      "queries": 40,
+      "fault_classes": 10,
+      "answerable_queries": 34,
+      "unanswerable_queries": 6,
+      "valid_answered_queries": 23,
+      "valid_abstained_queries": 17,
+      "invalid_contract_queries": 0,
+      "valid_contract_rate": 1.0,
+      "retrieval_recall_macro": 0.25727738463806576,
+      "retrieval_ndcg_macro": 0.4055342751595761,
+      "citation_precision_macro": 0.5735294117647058,
+      "citation_recall_macro": 0.22491707209199469,
+      "citation_f1_macro": 0.2869890978586631,
+      "source_family_coverage_mean": 2.325,
+      "exact_claim_redundancy_mean": 0.0,
+      "answer_precision": 1.0,
+      "answer_recall": 0.6764705882352942,
+      "answerable_coverage": 0.6764705882352942,
+      "abstention_precision": 0.35294117647058826,
+      "abstention_recall": 1.0,
+      "model_calls": {
+        "samples": 40,
+        "mean": 3.7,
+        "p50": 4.0,
+        "p95": 5.0
+      },
+      "prompt_tokens": {
+        "samples": 40,
+        "mean": 1378.35,
+        "p50": 1333.5,
+        "p95": 2049.0
+      },
+      "generated_tokens": {
+        "samples": 40,
+        "mean": 28.2,
+        "p50": 30.0,
+        "p95": 36.0
+      },
+      "latency": {
+        "retrieval": {
+          "samples": 40,
+          "mean_ms": 28.29776155,
+          "p50_ms": 28.107205,
+          "p95_ms": 29.780816199999997
+        },
+        "prompt_build": {
+          "samples": 40,
+          "mean_ms": 2.098249975,
+          "p50_ms": 2.0237525,
+          "p95_ms": 2.6406168500000002
+        },
+        "stage1_verifier": {
+          "samples": 40,
+          "mean_ms": 445.8347191699431,
+          "p50_ms": 425.3112839651294,
+          "p95_ms": 529.1136251442367
+        },
+        "stage2_review": {
+          "samples": 40,
+          "mean_ms": 603.1008797916002,
+          "p50_ms": 633.0091680865735,
+          "p95_ms": 949.9317942158086
+        },
+        "render": {
+          "samples": 40,
+          "mean_ms": 0.06816035000000001,
+          "p50_ms": 0.069918,
+          "p95_ms": 0.09986889999999997
+        },
+        "input_preparation": {
+          "samples": 40,
+          "mean_ms": 5.60493881785078,
+          "p50_ms": 5.6930300197564065,
+          "p95_ms": 8.277547740726732
+        },
+        "model_inference": {
+          "samples": 40,
+          "mean_ms": 1054.4946969414013,
+          "p50_ms": 1086.9573605014011,
+          "p95_ms": 1410.557276092004
+        },
+        "generation_pipeline": {
+          "samples": 40,
+          "mean_ms": 1062.3042287377202,
+          "p50_ms": 1095.0823439928613,
+          "p95_ms": 1422.6189450624263
+        },
+        "end_to_end": {
+          "samples": 40,
+          "mean_ms": 1092.7387522877093,
+          "p50_ms": 1125.9345379928614,
+          "p95_ms": 1452.2960606638733
+        }
+      },
+      "end_to_end_latency_ms_mean": 1092.7387522877093,
+      "metric_boundary": "Macro citation precision/recall/F1 are computed over all answerable queries; a valid abstention on an answerable query scores zero. These are Silver evidence-label agreement metrics."
+    }
+  },
+  "warnings": [],
+  "inputs": {
+    "queries": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+    "retrieval_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+    "generation_results": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_equal_budget/generation_results.jsonl",
+    "fresh_retrieval_latency": "/home/hengshan10/08-zxk/Fault_LLM_V2/results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_latency/retrieval_latency_runs.jsonl"
+  }
+}

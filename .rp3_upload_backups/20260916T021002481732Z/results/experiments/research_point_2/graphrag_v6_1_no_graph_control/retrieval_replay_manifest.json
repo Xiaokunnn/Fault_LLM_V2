@@ -1,0 +1,41 @@
+{
+  "comparison": {
+    "evidence_budget": 3,
+    "proposed": "Full_v6_1_k3",
+    "reference": "FullNoGraph_v6_1_k3",
+    "single_changed_component": "one-hop graph propagation and graph proximity score"
+  },
+  "human_expert_reviewed": false,
+  "immutable": true,
+  "inputs": {
+    "base_full_replay": {
+      "path": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+      "sha256": "4275dd091cefabcb856d2887227ce516049b189110d78951d9ed65fda19a4171"
+    },
+    "config": {
+      "path": "configs/rp2_graphrag_v6_1_no_graph_control.json",
+      "sha256": "65a1a040b70c8d5d5adbc2dc299a3e7b07c90a799d4284b14c47ccd96d4478f8"
+    },
+    "dense_index_manifest": {
+      "path": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated/manifest.json",
+      "sha256": "1dc2b66005f3c827979353de10d413b2d3aff9c771125d42dd171f64ce95033b"
+    },
+    "evidence_candidates": {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/evidence_candidates.jsonl",
+      "sha256": "657039b7ea7b295ff215a0b0640a85d2beb3149d1c9c454e16a9910390a6e885"
+    },
+    "queries": {
+      "path": "data/kg/marine_pump/silver_evidencebench/rp2_full_graph_development_v2/queries.jsonl",
+      "sha256": "aaf33355e039066ae39fa2b1b52b5b5d6b85534cf8a5f6e6093ce979973fc7be"
+    }
+  },
+  "label_policy": "Silver only; never Gold",
+  "manifest_schema": "rp2_v6_1_graph_attribution_replay_manifest_v1",
+  "protocol_id": "marine_pump_rp2_graphrag_v6_1_no_graph_control",
+  "replay": {
+    "path": "results/experiments/research_point_2/graphrag_v6_1_no_graph_control/retrieval_replay.jsonl",
+    "queries_per_method": 40,
+    "records": 80,
+    "sha256": "0a7cd7ae2e42665ac30aaa578d9f8b52ea0aa938076bc5ad7fed91db12490818"
+  }
+}

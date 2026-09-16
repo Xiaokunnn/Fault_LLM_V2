@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "direct": 1
+  },
+  "generation_metrics": {
+    "prompt_tokens": 372,
+    "generated_tokens": 6,
+    "batch_size": 1,
+    "requested_max_new_tokens": 48,
+    "do_sample": false,
+    "use_cache": true,
+    "input_preparation_ms": 1.507502980530262,
+    "elapsed_ms": 237.0838249917142,
+    "tokens_per_second": 25.307504635584873,
+    "cuda_peak_memory_bytes": 15321483776,
+    "cuda_allocated_memory_bytes": 15244874240,
+    "model_device": "cuda:0",
+    "model_output_valid_json": true
+  },
+  "cache_payload": {
+    "protocol": "rp3_teacher_replay_v2",
+    "fingerprint": "003145396d2efc560676f5e22475f47cbac41c99524fc0c6ef5d9ccdd303099f",
+    "stage": "recall_review",
+    "verification_mode": "stage1_plus_review",
+    "measurement_repeat": 0,
+    "scenario": "Ours_v6_k3_equal",
+    "query_id": "CQ-F02-CAUSE",
+    "candidate_index": 0,
+    "prompt": "{\"question\":\"哪些原因、机理或运行工况与“空气侵入或失去自吸”有关并形成可追溯因果证据？\",\"fault_scope\":\"空气侵入或失去自吸\",\"required_role\":\"cause_or_mechanism\",\"candidate\":{\"role\":\"cause_or_mechanism\",\"head\":\"液体温度过高\",\"relation\":\"causes\",\"tail\":\"泵无法自吸\",\"claim\":\"液体温度过高 --causes--> 泵无法自吸\",\"verbatim\":\"The pump does not\\nprime\\n--- CELL ---\\n1. The pump is not filled\\nwith liquid\\n2. Leaking non-return\\nvalve in pump\\n3. Wrong direction of\\nrotation\\n4. Air is drawn in because\\nof too little liquid or\\nleaking suction line\\n5. Liquid lock in outlet line\\n6. Temperature of liquid\\ntoo high\\n7. Air cannot escape on\\npressure side\"},\"output\":{\"direct\":\"0或1\"}}",
+    "model": "36d470c9cd00d95c73d395548dc690a658446ad844ef7cf53c7fc2d5d0d004c4"
+  }
+}
