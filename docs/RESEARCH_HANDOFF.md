@@ -1,6 +1,6 @@
 # Fault LLM v2 当前研究交接
 
-更新日期：2026-08-13
+更新日期：2026-09-17
 
 本文件只保留当前状态和继续工作所需入口。此前数百行的阶段性构图日志、旧研究点编号和未完成计划已由两篇小论文终稿、冻结实验与 `docs/archive/` 中的历史文档取代。
 
@@ -35,15 +35,49 @@
 
 查询的候选故障范围和诊断角色已给定；输出是单角色原子建议，不是完整诊断卡，也不是开放式故障识别。
 
-## 研究点三启动前必须解决
+## 研究点三当前状态
 
-1. 冻结唯一 `TeacherGraph_RP3_v1`：严格208、保守620与标准1326不能混用同一名称。
-2. 在所选教师图上重建向量索引并重放研究点二选择、核验和拒答流程。
-3. 定义完整诊断卡和教师轨迹契约；确定性渲染器继续作为规则组件，不作为主要蒸馏对象。
-4. 学生主体固定为目标参数量小于50M的四头轻量证据控制器（LEC），以ONNX INT8部署；3B模型只可作为可选对话壳/工具调用者，不是主要蒸馏对象。
-5. 以有界本地证据访问保持ID可追溯；没有候选/可用性输入的闭卷学生不得声称学习证据删除干预。
-6. MP008仅开发；MP009–MP013仅最终外部评价，不进入训练、课程、阈值或路由校准。
-7. 真正声称边缘部署前，至少在一块目标板上测量内存、TTFT、TPOT、端到端时延、能耗与热稳态。
+服务器工作目录为 `~/08-zxk/Fault_LLM_V2`。代码从 `origin/main` 同步，正式实验输出保留在服务器，未随Git提交。
+
+已经完成：
+
+1. 在严格208图上重建并冻结 `TeacherGraph_RP3_v1`；轻量证据记忆为208条Evidence、203项Claim、14份文档、10个来源族、38个故障—角色桶。
+2. 精确重放研究点二选择与核验策略，导出40条原始教师轨迹；固定证据记忆查询泛化划分为32条train和8条组隔离validation。
+3. MP008独立开发流程完成40/40核验；其轨迹、证据记忆和特征均标记为development，不参与梯度或早停。
+4. 基线四头LEC完成训练、仅Route头效用拟合、FP32 ONNX导出和静态INT8 QDQ。INT8文件包含40个QDQ节点，使用40个MP008代表输入完成数值检查。
+5. 基线路由rollout：train精确教师集合一致11/32，validation一致1/8；train动作目标为11 answer、16 fallback、5 abstain，validation为1 answer、6 fallback、1 abstain。
+6. 基线MP008量化后校准失败关闭：40条中Route原始argmax为26 fallback、14 abstain、0 answer，最大可接受回答数为0。因此没有生成部署用 `calibration_manifest.json`，不得执行正式evaluate、工具部署或声称边缘效果。
+
+当前正在做：预先声明的构建集证据移除增强实验。该实验只对构建集候选集合做全删除、已选证据逐条删除和首个未选证据删除，并使用冻结7B重新核验受影响选择；派生行继承原故障场景split。它不是新增独立病例，也不使用MP008调参。
+
+服务器下一步：
+
+```bash
+cd ~/08-zxk/Fault_LLM_V2
+git pull --ff-only origin main
+bash scripts/run_rp3_experiments.sh augment \
+  2>&1 | tee logs/rp3_augment_20260917.log
+
+export RP3_CONFIG=configs/research_point_3/lec_train_augmented_v1.json
+export RP3_RUN_DIR=results/experiments/research_point_3/lec_augmented_v1
+bash scripts/run_rp3_experiments.sh train
+bash scripts/run_rp3_experiments.sh route
+bash scripts/run_rp3_experiments.sh export
+bash scripts/run_rp3_experiments.sh quantize
+bash scripts/run_rp3_experiments.sh calibrate
+```
+
+只有增强组生成有效校准证书后才能执行 `evaluate`。基线目录 `results/experiments/research_point_3/lec_v1` 必须保留，作为无干预增强对照。
+
+仍未完成：增强组结果、MP009–MP013外部评价、620/1326层迁移、完整消融、可选LLM壳接入，以及Jetson等目标边缘硬件的内存、端到端时延、能耗与热稳态测量。
+
+## 远程新对话接手顺序
+
+1. 先读根目录 `AGENTS.md`、本文件和 `docs/RP3_SERVER_EXPERIMENT_GUIDE.md`。
+2. 执行 `git status -sb` 和 `git log -1 --oneline`，不要用reset/clean删除服务器实验资产。
+3. 查看 `logs/rp3_augment_20260917.log` 和增强目录是否已生成，再从最后成功阶段继续。
+4. 不重新运行已完成的teacher、MP008和基线训练，也不删除失败的基线校准搜索报告。
+5. 任何教师一致性指标都不能写成专家诊断准确率；任何RTX服务器结果都不能写成真实边缘硬件结果。
 
 ## 命名说明
 

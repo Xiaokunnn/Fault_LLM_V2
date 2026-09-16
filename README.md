@@ -23,7 +23,7 @@
 - 研究点二以 [`papers/D2AI_ICDM_2026/RP2_D2AI2026_English_Final_v1.tex`](papers/D2AI_ICDM_2026/RP2_D2AI2026_English_Final_v1.tex) 为英文主稿。冻结v6在208条严格中文证据、40条受控查询上完成；相对Dense K3，Full K3的Recall为0.431、NDCG为0.822、Citation F1为0.426，平均端到端时延为531.2 ms。
 - 研究点二论文教师只生成“给定故障范围与诊断角色下的原子建议”，尚不是完整诊断卡，也不是从传感器信号识别故障。
 - 研究点三主教师固定为研究点二论文真实使用的严格208条底座；620条和1326条层只做主方案冻结后的容量/层迁移压力测试。训练前必须冻结唯一的 `TeacherGraph_RP3_v1` 并精确重放研究点二流程。
-- 当前本机缺少RP2配置声明的BGE索引，因而只能完成研究点三生码与失败关闭检查，不能声称教师已冻结或重放完成。
+- 研究点三已在模型服务器完成严格208教师冻结、40题轨迹与MP008开发集构造、基线LEC训练、FP32 ONNX导出和INT8量化。基线在MP008量化后校准中0/40路由为本地回答，因而未生成部署校准证书；当前进入预先规划的构建集证据移除增强实验，不能将该失败解释成已完成边缘部署。
 - 当前没有逐条领域专家审核。自动证据合格、自动语义支持和基准相关性均不能解释为专家事实正确率、故障诊断准确率或工程安全保证。
 
 最新统一规划见 [`docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md`](docs/research/MASTER_THESIS_THREE_RESEARCH_POINTS_PLAN.md)，本轮审查结论见 [`docs/research/MASTER_THESIS_REVIEW_AND_OPTIMIZATION_REPORT.md`](docs/research/MASTER_THESIS_REVIEW_AND_OPTIMIZATION_REPORT.md)。历史规划与阶段报告统一放在 `docs/archive/`，不得作为当前状态入口；精简后的 [`docs/RESEARCH_HANDOFF.md`](docs/RESEARCH_HANDOFF.md) 只保留继续工作所需事实。

@@ -2,7 +2,7 @@
 
 ## 先看边界
 
-本次补的是**可执行的核心实验链路**，不是已经得到实验结果。
+核心链路已经在服务器实际执行；当前既有成功产物，也有必须保留的基线校准失败结果。
 服务器的 7B 应为冻结 RP2 实际使用的 `Qwen2.5-7B-Instruct`，还需要 `BAAI-bge-m3`。
 仅有任意一个 7B 模型不足以精确复现教师；不能把另一款 7B 改目录名冒充原教师。
 学生是四头 LEC，不是训练 7B。边缘工具可以由 LLM 调用，也可以直接用 JSON 调用。
@@ -11,32 +11,23 @@
 该编码器不需要另下模型、没有可学习参数，能够处理新问题；它是**轻量特征基线**，不是已验证的语义编码器创新。
 后续与小型语义编码器比较时，必须把编码器参数、时延与内存一并计入，不能只计算 LEC。
 
-## 1. 上传与安装
+## 1. Git同步与远程接手
 
-本次检查时 `zxk / 192.168.1.107`、`wangjq / 192.168.0.199` 的 SSH 均连接超时，
-因此没有完成实际上传，也未确认服务器目录或模型状态。旧文档目录是 `~/08-zxk/Fault_LLM_V2`，使用前须确认。
-
-本地打包命令（不会包含模型、密钥、原始 PDF、论文草稿或其他无关未提交改动）：
-
-```powershell
-python scripts/package_rp3_upload.py --output .tmp/rp3_upload_20260916_r11.tar.gz
-scp .tmp/rp3_upload_20260916_r11.tar.gz YOUR_SSH_HOST:~/rp3_upload_20260916_r11.tar.gz
-```
-
-用实际 SSH 配置名替换 `YOUR_SSH_HOST`。确认目标目录后，在服务器执行：
+当前服务器目录已确认为 `~/08-zxk/Fault_LLM_V2`，后续代码统一通过Git同步，不再把白名单补丁包作为常规更新方式：
 
 ```bash
-RP3_STAGE=$(mktemp -d /tmp/rp3-upload.XXXXXX)
-tar -xzf ~/rp3_upload_20260916_r11.tar.gz -C "$RP3_STAGE"
-python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2
-# 查看上一步列出的改动范围后，应用：
-python "$RP3_STAGE/scripts/install_rp3_upload.py" --target ~/08-zxk/Fault_LLM_V2 --apply
+cd ~/08-zxk/Fault_LLM_V2
+git status -sb
+git pull --ff-only origin main
+git log -1 --oneline
 ```
 
-安装器逐文件校验 SHA-256；覆盖前把服务器旧文件保存到
-`.rp3_upload_backups/<UTC时间>/`，并保存回滚清单。不会删除远程模型、缓存、论文或实验结果。
-包内少量 RP2 冻结资产是原字节副本，用来解决原冻结清单中混合 LF/CRLF 文件的校验问题，
-没有改动论文数字或教师参数。不要用自动换行转换工具处理这些冻结数据。
+服务器的模型、教师缓存、MP008响应、训练checkpoint、ONNX、日志和正式实验结果不进入代码提交；
+Git同步时不得使用 `git reset --hard` 或 `git clean` 删除这些资产。若旧补丁造成受跟踪文件存在本地修改，
+先用 `git stash push -m "rp3-server-code-before-pull"` 保存，再执行fast-forward pull；远端已包含对应修复时无需pop。
+
+远程开启新对话时，先让助手阅读根目录 `AGENTS.md`、`docs/RESEARCH_HANDOFF.md` 和本文件，
+再检查当前日志与结果目录，不要从teacher阶段重新开始。
 
 ## 2. 环境和模型
 
@@ -63,11 +54,12 @@ data/interim/parsed_pages/corpus_v2/MP008.pages.v2.jsonl  # 仅校准
 先按服务器驱动选择兼容的 PyTorch wheel，再继续。脚本不下载模型，也不会把教师偷偷退回 CPU。
 上面的专项测试包含纯合成 CPU 训练/ONNX/INT8 联调，不会加载 7B/BGE，亦不产生正式实验结果。
 
-### 2026-09-16 服务器阻塞的处理
+### 2026-09-16 已解决的服务器阻塞
 
-若预检列出 `missing/mismatched RP2 frozen input`，说明服务器检出中缺少论文冻结清单依赖，
-不是 7B、CUDA 或 BGE 故障。先重新安装本次白名单包；它包含冻结清单声明的 13 个小型 RP2 资产。
-安装后必须先单独执行并确认：
+若其他新环境的预检列出 `missing/mismatched RP2 frozen input`，说明检出中缺少论文冻结清单依赖，
+不是 7B、CUDA 或 BGE 故障。先确认已经拉取最新 `origin/main`；若受跟踪的冻结小文件被本地改写，
+只对预检明确列出的路径从远端提交恢复，不要重算论文资产，也不要对整个工作区执行破坏性重置。
+同步后必须先单独执行并确认：
 
 ```bash
 bash scripts/run_rp3_experiments.sh preflight
@@ -110,7 +102,13 @@ bash scripts/run_rp3_experiments.sh teacher-smoke
 每题要求新检索的 K≤3 ID 顺序与冻结 RP2 replay 一致；不同则立即停止。
 不会把两题联调输出冻结成正式 40 题实验。
 
-## 4. 首次完整核心流程
+## 4. 核心流程与当前进度
+
+截至2026-09-17，服务器已经完成teacher、MP008、features、基线train/route/export/quantize。
+基线MP008校准因40条均未路由为本地回答而失败关闭，没有部署校准证书；这是需要保留的实验结果，
+不能删除报告或降低门槛伪造成功。当前应执行第5节的增强实验，不要再次运行 `all`。
+
+以下仅供全新环境首次复现使用。
 
 建议在 `tmux` 或其他持久终端中执行：
 
