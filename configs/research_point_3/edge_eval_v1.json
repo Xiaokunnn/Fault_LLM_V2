@@ -1,0 +1,51 @@
+{
+  "schema": "rp3_edge_evaluation_config_v1",
+  "protocol_id": "marine_pump_rp3_edge_eval_v1",
+  "runtime_artifact_contract": {
+    "onnx_exact_byte_hash_required": true,
+    "fixed_candidate_width": 32,
+    "graph_memory_controller_binding_required": true,
+    "precomputed_feature_provider_required": true,
+    "online_text_encoding_in_controller": false,
+    "threshold_source": "MP008_post_quantization_calibration_manifest_only",
+    "online_threshold_override_allowed": false
+  },
+  "quality_metrics": [
+    "pointer_precision_recall_f1",
+    "pointer_ndcg",
+    "support_f1_auprc_ece",
+    "field_exact_set_accuracy",
+    "empty_field_accuracy",
+    "unavailable_id_rate",
+    "field_evidence_support_rate",
+    "maintenance_false_accept_rate",
+    "intervention_direction_consistency",
+    "selective_risk_coverage_aurc",
+    "router_regret",
+    "fallback_rate"
+  ],
+  "system_metrics": [
+    "controller_parameter_count",
+    "model_bytes",
+    "evidence_memory_bytes",
+    "latency_p50_ms",
+    "latency_p95_ms",
+    "peak_memory_bytes",
+    "llm_prompt_tokens",
+    "energy_joules_per_request",
+    "thermal_stability_30min"
+  ],
+  "evaluation_order": [
+    "strict_208_internal",
+    "TierShift-620",
+    "TierShift-1326",
+    "MP009-MP013_external",
+    "real_edge_hardware"
+  ],
+  "target_hardware": [
+    "Jetson Orin Nano 8GB",
+    "Jetson Orin NX 16GB"
+  ],
+  "server_gpu_resource_limit_label": "resource_constrained_simulation_not_edge_deployment",
+  "human_expert_reviewed": false
+}

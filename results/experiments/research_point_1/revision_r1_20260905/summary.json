@@ -1,0 +1,224 @@
+{
+  "baseline": [
+    {
+      "method": "Direct LLM",
+      "extraction": "open",
+      "records": 162,
+      "evidence_count": 73,
+      "evidence_pct": 45.06,
+      "endpoints_count": 65,
+      "endpoints_pct": 40.12,
+      "provenance_pct": 100.0,
+      "evidence_qualified": null
+    },
+    {
+      "method": "Direct LLM + basic",
+      "extraction": "open",
+      "records": 115,
+      "evidence_count": 71,
+      "evidence_pct": 61.74,
+      "endpoints_count": 65,
+      "endpoints_pct": 56.52,
+      "provenance_pct": 100.0,
+      "evidence_qualified": null
+    },
+    {
+      "method": "Shared extraction: no gate",
+      "extraction": "shared",
+      "records": 367,
+      "evidence_count": 322,
+      "evidence_pct": 87.74,
+      "endpoints_count": 292,
+      "endpoints_pct": 79.56,
+      "provenance_pct": 100.0,
+      "evidence_qualified": 148
+    },
+    {
+      "method": "Shared extraction: basic",
+      "extraction": "shared",
+      "records": 243,
+      "evidence_count": 238,
+      "evidence_pct": 97.94,
+      "endpoints_count": 223,
+      "endpoints_pct": 91.77,
+      "provenance_pct": 100.0,
+      "evidence_qualified": 98
+    },
+    {
+      "method": "Shared extraction: full",
+      "extraction": "shared",
+      "records": 148,
+      "evidence_count": 148,
+      "evidence_pct": 100.0,
+      "endpoints_count": 148,
+      "endpoints_pct": 100.0,
+      "provenance_pct": 100.0,
+      "evidence_qualified": 148
+    }
+  ],
+  "rejections": {
+    "primary": {
+      "evidence": 3868,
+      "schema_type": 1292,
+      "relation_support": 253,
+      "below_candidate_0.60": 11
+    },
+    "overlapping": {
+      "relation_not_entailed": 2777,
+      "evidence_invalid": 4632,
+      "relation_type_invalid": 1292,
+      "dual_qwen_relation_not_entailed": 253,
+      "below_candidate_confidence": 11
+    },
+    "primary_among_1707_reaudit_passed": {
+      "relation_support": 253,
+      "evidence": 1451,
+      "below_candidate_0.60": 3
+    },
+    "attribution_order": [
+      "schema_type",
+      "evidence",
+      "relation_support",
+      "below_candidate_0.60"
+    ]
+  },
+  "hard_gate_pool": 1704,
+  "terminology_endpoint_reasons": {
+    "singleton_below_confidence": 200,
+    "protected_token_not_preserved": 6,
+    "label_missing_or_conflicting": 75,
+    "repeated_candidate_below_confidence": 5
+  },
+  "lengths": {
+    "included": {
+      "records": 1326,
+      "median_max_endpoint_words": 7.0
+    },
+    "excluded": {
+      "records": 372,
+      "median_max_endpoint_words": 9.0
+    }
+  },
+  "sensitivity_at_threshold_080": [
+    {
+      "e2_weight": 0.85,
+      "supported_weight": 0.9,
+      "threshold": 0.8,
+      "records": 1398,
+      "e2_records": 0,
+      "gained": 0,
+      "lost": 300,
+      "jaccard": 0.823322
+    },
+    {
+      "e2_weight": 0.85,
+      "supported_weight": 0.95,
+      "threshold": 0.8,
+      "records": 1531,
+      "e2_records": 0,
+      "gained": 0,
+      "lost": 167,
+      "jaccard": 0.901649
+    },
+    {
+      "e2_weight": 0.85,
+      "supported_weight": 1.0,
+      "threshold": 0.8,
+      "records": 1677,
+      "e2_records": 127,
+      "gained": 0,
+      "lost": 21,
+      "jaccard": 0.987633
+    },
+    {
+      "e2_weight": 0.9,
+      "supported_weight": 0.9,
+      "threshold": 0.8,
+      "records": 1398,
+      "e2_records": 0,
+      "gained": 0,
+      "lost": 300,
+      "jaccard": 0.823322
+    },
+    {
+      "e2_weight": 0.9,
+      "supported_weight": 0.95,
+      "threshold": 0.8,
+      "records": 1658,
+      "e2_records": 127,
+      "gained": 0,
+      "lost": 40,
+      "jaccard": 0.976443
+    },
+    {
+      "e2_weight": 0.9,
+      "supported_weight": 1.0,
+      "threshold": 0.8,
+      "records": 1697,
+      "e2_records": 147,
+      "gained": 0,
+      "lost": 1,
+      "jaccard": 0.999411
+    },
+    {
+      "e2_weight": 0.95,
+      "supported_weight": 0.9,
+      "threshold": 0.8,
+      "records": 1525,
+      "e2_records": 127,
+      "gained": 0,
+      "lost": 173,
+      "jaccard": 0.898115
+    },
+    {
+      "e2_weight": 0.95,
+      "supported_weight": 0.95,
+      "threshold": 0.8,
+      "records": 1678,
+      "e2_records": 147,
+      "gained": 0,
+      "lost": 20,
+      "jaccard": 0.988221
+    },
+    {
+      "e2_weight": 0.95,
+      "supported_weight": 1.0,
+      "threshold": 0.8,
+      "records": 1698,
+      "e2_records": 148,
+      "gained": 0,
+      "lost": 0,
+      "jaccard": 1.0
+    },
+    {
+      "e2_weight": 1.0,
+      "supported_weight": 0.9,
+      "threshold": 0.8,
+      "records": 1545,
+      "e2_records": 147,
+      "gained": 0,
+      "lost": 153,
+      "jaccard": 0.909894
+    },
+    {
+      "e2_weight": 1.0,
+      "supported_weight": 0.95,
+      "threshold": 0.8,
+      "records": 1679,
+      "e2_records": 148,
+      "gained": 0,
+      "lost": 19,
+      "jaccard": 0.98881
+    },
+    {
+      "e2_weight": 1.0,
+      "supported_weight": 1.0,
+      "threshold": 0.8,
+      "records": 1698,
+      "e2_records": 148,
+      "gained": 0,
+      "lost": 0,
+      "jaccard": 1.0
+    }
+  ]
+}

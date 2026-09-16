@@ -1,0 +1,87 @@
+{
+  "schema": "rp3_lec_training_config_v1",
+  "experiment_id": "marine_pump_rp3_lec_v1",
+  "teacher_graph_id": "TeacherGraph_RP3_v1",
+  "teacher_trace_dataset_id": "RP3_TeacherTrace_v1",
+  "risk_benchmark_id": "RP3_RiskBench_v1",
+  "trace_bundle_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/traces/training",
+  "memory_bundle_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/evidence_memory/training",
+  "teacher_freeze_path": "configs/frozen/teacher_graph_rp3_v1.freeze.json",
+  "feature_bundle_path": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/features/training_features.json",
+  "development_trace_bundle_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/traces/development_mp008",
+  "development_memory_bundle_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/evidence_memory/development_mp008",
+  "development_feature_bundle_path": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/features/development_mp008_features.json",
+  "tensorization": {
+    "max_candidates": 32,
+    "max_cardinality": 3,
+    "require_validation_split": true
+  },
+  "model": {
+    "query_dim": 256,
+    "evidence_dim": 288,
+    "hidden_dim": 384,
+    "max_cardinality": 3,
+    "dropout": 0.1
+  },
+  "training": {
+    "epochs": 30,
+    "batch_size": 16,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "seed": 7042026,
+    "device": "auto",
+    "num_workers": 0,
+    "early_stopping_patience": 5,
+    "temperatures": [1.0, 2.0, 4.0],
+    "expected_route_cost_weight": 1.0,
+    "route_class_weights": null,
+    "loss_weights": {
+      "ranking": 1.0,
+      "support": 1.0,
+      "field_state": 0.6,
+      "cardinality": 0.6,
+      "route": 0.8,
+      "intervention": 0.5,
+      "calibration": 0.2
+    }
+  },
+  "input_boundary": {
+    "known_fault_scope": true,
+    "known_diagnostic_role": true,
+    "open_fault_identification": false,
+    "candidate_availability_visible": true,
+    "maximum_candidates": 32,
+    "maximum_selected_evidence": 3
+  },
+  "research_protocol": {
+    "stages": [
+      "offline_teacher_imitation",
+      "student_rollout_teacher_correction"
+    ],
+    "gradient_training_splits": ["train"],
+    "model_selection_split": "group_disjoint_build_validation",
+    "threshold_and_quantization_calibration_split": "MP008_development_only",
+    "split_group_keys": [
+      "scenario_id",
+      "claim_id",
+      "doc_id",
+      "source_family_id"
+    ],
+    "derived_rows_inherit_base_group": true,
+    "route_cost_supervision": "explicit_three_action_counterfactual_costs_required"
+  },
+  "corpus_policy": {
+    "MP008": "development_threshold_and_quantization_calibration_only",
+    "MP009-MP013": "final_external_evaluation_only",
+    "MP014": "excluded"
+  },
+  "deployment": {
+    "primary_export": "onnx_int8",
+    "comparison_precisions": ["fp16", "int8", "int4"],
+    "recalibrate_after_quantization": true,
+    "optional_llm_shell": "Qwen2.5-3B-Instruct-INT4"
+  },
+  "maximum_parameter_count": 50000000,
+  "supervision_boundary": "teacher_generated_not_expert_ground_truth"
+}

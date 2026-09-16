@@ -1,0 +1,28 @@
+% !TeX program = xelatex
+% !TeX root = RP1_ICSMD2026_Abstract_R1.tex
+% Standalone submission abstract. Main manuscript and response are unchanged.
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+\setlength{\emergencystretch}{2em}
+\begin{document}
+\begin{center}
+{\large\bfseries Evidence-Traceable Knowledge Graph Construction from Marine Pump Technical Documents via Automated Evidence-Quality Gating\par}
+\medskip
+Xiaokun Zhang\textsuperscript{1}, Dongliang Fu\textsuperscript{1,*}, Rui Wang\textsuperscript{2}, and Erwu Liu\textsuperscript{2}\par
+\small
+\textsuperscript{1}Shanghai Marine Equipment Research Institute (SMERI), China State Shipbuilding Corporation (CSSC), Shanghai, China\par
+\textsuperscript{2}Tongji University, Shanghai, China\par
+\textsuperscript{*}Corresponding author: Dongliang Fu; e-mail: \texttt{fdl@163.com}
+\end{center}
+\medskip
+\textbf{Abstract}
+
+Marine pump technical documents link measured symptoms to possible causes, inspections, and maintenance actions. Large language models can extract these relations, but the resulting triples often lack recoverable evidence or retain ambiguous table associations. This paper presents automated evidence-quality gating for constructing a traceable knowledge graph without requiring manual approval of every triple at admission. Normalized triples are stored separately from page-level evidence records. Executable checks govern structural validity, evidence localization, relation support, provenance completeness, and corpus boundaries. An audit graph retains all candidates and decisions, while Chinese terminology rules define tiered application graphs. Source-family capping prevents repeated documents assigned to the same family from increasing independent-support scores. Across 15 documents and 1,934 physical pages, the workflow produced 8,003 audit records, including 1,698 evidence-qualified records. The standard application layer contains 1,326 evidence records and 1,281 unique triples. On 20 fixed pages, basic filtering of a shared candidate set retained 243 records, with both endpoints recoverable inside the located evidence for 91.77\%. Full gating retained 148 records, all passing this check, including 50 table records missed by basic filtering. All evidence-qualified records passed re-localization and provenance checks, and all 13,729 controlled rule violations triggered a gate. Rejection analysis, terminology-exclusion analysis, and 84 weight--threshold combinations characterize the filtering and coverage tradeoffs. The method provides auditable document knowledge for measurement interpretation and diagnostic assistance. Evidence qualification denotes compliance with executable rules, not expert-confirmed factual or diagnostic accuracy.
+
+\textbf{Keywords:} marine pump systems; knowledge graph; evidence-quality gating; page-level provenance; terminology normalization; condition-monitoring knowledge.
+\end{document}

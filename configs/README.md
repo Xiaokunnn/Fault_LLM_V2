@@ -1,23 +1,17 @@
 # Configurations
 
-保存可版本化的流水线配置，不在代码中硬编码实验参数。
+该目录保存可版本化的Schema、文档划分、提示契约、图谱构建、检索、生成、评价和冻结配置。物理文件名中的 `silver` 为历史兼容标识，不代表专家真值。
 
-当前已冻结：
+当前关键配置包括：
 
-- `document_split_marine_pump_v2.json`：新增独立来源后的正式文档级划分和来源家族隔离。
-- `fault_ontology_marine_pump_v1.json`：10类故障的统一选页/映射规则与正式覆盖门槛。
-- `page_layout_review_marine_pump_v2.json`：代表页视觉核验和印刷页码覆盖。
-- `targeted_page_plan_marine_pump_v2.json`：第一轮24页定向补抽计划。
-- `entity_terminology_zh_marine_pump_v1.json`：中文图谱的类型、关系、中英术语、受保护词和翻译发布状态。
-- `triple_extraction_qwen3_7_max_targeted_zh_v1.json`：下一轮24页中文规范实体候选抽取契约；当前只冻结契约，尚未调用模型。
-- `triple_extraction_qwen3_7_max_pilot_v1.json`：历史四页试抽取的百炼模型、重试和密钥不落盘策略。
-- `document_split_marine_pump_pilot_v1.json`：历史试抽取划分，仅用于结果复现；正式解析与覆盖统计不得再使用。
+- `document_split_marine_pump_v4.json`：最终文档级划分；
+- `fault_ontology_marine_pump_v1.json`：10类候选故障及角色映射；
+- `provenance_schema_marine_pump_v1.json`及相关Schema：证据与来源字段；
+- `entity_terminology_zh_marine_pump_v4_silver.json`：冻结的中文术语治理配置；
+- `rp2_graphrag_v6_equal_budget.json`：研究点二v6主实验；
+- `rp2_graphrag_v6_1_no_graph_control.json`：公平去图控制；
+- `frozen/rp2_v6_paper_evidence_freeze.json`：研究点二论文证据冻结清单。
 
-后续阶段再新增：
+研究点三不得直接继承含糊的 `KG_v1_validated` 名称。主教师清单固定为 `configs/research_point_3/teacher_graph_rp3_v1.json`，只绑定RP2 v6真实使用的208条严格层及其输入哈希、证据/Claim/实体规模、模型、索引和重放版本；620/1326条层只以独立 `TierShift` 身份作冻结后压力测试。
 
-- `ingest_v1.json`：解析器、页范围和 chunk 策略。
-- `extraction_v1.json`：模型、提示词版本和置信度阈值。
-- `graph_v1.json`：Schema、去重和图谱版本参数。
-- `benchmark_v1.json`：文档切分、查询规模和噪声比例。
-- `retrieval_v1.json`：元路径、关系权重、候选上限、提前终止和时延档。
-- `runtime_rk3588_v1.json`：线程、功耗模式、存储、索引、缓存和内存上限。
+API密钥不得写入配置、命令历史、日志或缓存元数据。

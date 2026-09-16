@@ -1,0 +1,80 @@
+{
+  "schema": "rp3_teacher_graph_freeze_config_v1",
+  "teacher_graph_id": "TeacherGraph_RP3_v1",
+  "status": "blocked_until_index_rebuilt_and_teacher_replayed",
+  "terminology_tier": "strict_208",
+  "graph_root": "data/kg/marine_pump/triples/KG_v1_validated",
+  "vector_index_dir": "data/kg/marine_pump/vector_indexes/bge_m3_KG_v1_validated",
+  "rp2_replay_path": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay.jsonl",
+  "rp2_replay_manifest_path": "results/experiments/research_point_2/graphrag_v6_equal_budget/retrieval_replay_manifest.json",
+  "rp2_config_path": "configs/rp2_graphrag_v6_equal_budget.json",
+  "rp2_paper_freeze_path": "configs/frozen/rp2_v6_paper_evidence_freeze.json",
+  "required_model_paths": [
+    "data/model/BAAI-bge-m3",
+    "data/model/Qwen2.5-7B-Instruct"
+  ],
+  "expected_counts": {
+    "evidence_assertions": 208,
+    "claims": 203,
+    "entities": 281,
+    "claim_evidence_links": 208,
+    "source_records": 208
+  },
+  "required_replay": {
+    "query_count": 40,
+    "teacher_method": "Ours_v6_k3_equal",
+    "total_record_count": 200,
+    "method_count": 5,
+    "require_exact_replay_identity": true
+  },
+  "required_training_bundle": {
+    "trace_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/traces/training",
+    "memory_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/evidence_memory/training",
+    "trace_count": 40,
+    "base_perturbation_id": "original",
+    "required_card_roles": [
+      "symptom",
+      "cause_or_mechanism",
+      "inspection",
+      "maintenance"
+    ],
+    "require_route_closure": true
+  },
+  "required_teacher_trace": {
+    "data_path": "results/experiments/research_point_3/teacher_traces/strict208_base_top32/teacher_candidate_traces.jsonl",
+    "manifest_path": "results/experiments/research_point_3/teacher_traces/strict208_base_top32/manifest.json",
+    "base_query_count": 40,
+    "base_perturbation_id": "original",
+    "candidates_per_query": 32,
+    "candidate_count_policy": "at_most",
+    "require_complete_top32": true,
+    "require_fresh_execution_audit": true,
+    "maximum_selected": 3,
+    "teacher_method": "Ours_v6_k3_equal",
+    "strict_evidence_count": 208,
+    "required_validation_flags": [
+      "unique_base_query_ids",
+      "base_queries_only",
+      "teacher_method_consistent",
+      "candidate_width_valid",
+      "candidate_ids_unique_within_query",
+      "complete_teacher_decisions",
+      "strict_evidence_id_closure",
+      "query_set_matches_replay"
+    ]
+  },
+  "stress_test_only_graphs": [
+    {
+      "id": "TierShift-620",
+      "evidence_count": 620,
+      "may_replace_main_teacher": false
+    },
+    {
+      "id": "TierShift-1326",
+      "evidence_count": 1326,
+      "may_replace_main_teacher": false
+    }
+  ],
+  "human_expert_reviewed": false,
+  "claim_boundary": "The freeze binds an automatically evidence-qualified teacher system, not expert factual or diagnostic truth."
+}

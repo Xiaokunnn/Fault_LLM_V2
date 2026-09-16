@@ -1,20 +1,22 @@
 # 研究点一与研究点二下一阶段实验执行说明
 
+> 历史执行指南。RP1与RP2论文实验现已完成，当前结论以两篇终稿、RP2 v6协议和统一总规划为准；下文命令仅用于复现阶段实验。其中 `Silver` 是历史字段、脚本和目录标识，不再作为当前研究概念。
+
 更新日期：2026-08-03
 
 ## 1. 当前边界
 
-- 研究点一是“可追溯证据型 Silver 知识图谱构建与质量治理”。
+- 研究点一是“无需逐条人工审批的自动证据质量门控与可追溯知识图谱构建”。
 - 研究点二是“面向大模型回答的预算约束 GraphRAG 检索与证据组织”。
 - 研究点二必须同时评价检索和生成，不再把纯字符串检索当作最终实验。
-- 所有自动标签、查询、路径和回答评价都是 Silver，不是 Gold。
+- 所有自动标签、查询、路径和回答评价都不是专家真值；历史复现字段中的 `Silver` 不构成当前方法命名。
 - MP009–MP013 在开发协议冻结前不得用于调参。
 
 ## 2. 研究点一剩余实验
 
 ### 2.1 已完成
 
-- 8003 条全审计记录和 1698 条证据合格 Silver 断言。
+- 8003条全审计记录和1698条自动证据合格断言。
 - `KG_v1_raw` / `KG_v1_validated` 双图机制。
 - CQ v1 十类故障四种任务类型查询。
 - B0–Ours 离线治理对照、模块消融、敏感性和标准化约束报告。
@@ -140,7 +142,7 @@ v2 的开发配置位于 `configs/rp2_graphrag_v2_development_v2.json`。旧 v1 
 
 ## 5. 研究点二v3回答效果—时延实验
 
-v2结果只作为开发记录。正式核心假设改为：固定本地7B和统一生成预算后，Ours必须提高最终Silver回答效用，同时端到端p95时延不高于同预算Dense RAG的105%。详细定义见 `docs/research/RP2_BUDGET_EFFECTIVENESS_V3_PROTOCOL.md`。
+v2结果只作为开发记录。正式核心假设改为：固定本地7B和统一生成预算后，Ours必须提高最终Silver回答效用，同时端到端p95时延不高于同预算Dense RAG的105%。该阶段定义已归档至 `docs/archive/rp2_stages/RP2_BUDGET_EFFECTIVENESS_V3_PROTOCOL.md`；当前论文结论以v6协议和终稿为准。
 
 两条查询联调：
 
@@ -180,7 +182,7 @@ bash scripts/run_rp2_budget_effectiveness_v3_server.sh \
 
 ## 6. 研究点二v3最终化与外部评价
 
-完整边界见 `docs/research/RP2_V3_FINALIZATION_AND_EXTERNAL_PROTOCOL.md`。
+该阶段边界已归档至 `docs/archive/rp2_stages/RP2_V3_FINALIZATION_AND_EXTERNAL_PROTOCOL.md`；当前冻结清单以 `configs/frozen/rp2_v6_paper_evidence_freeze.json` 为准。
 
 先完成600次交错重复时延、120回答双提示词Silver语义Judge，并生成冻结清单：
 

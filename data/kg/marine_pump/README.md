@@ -1,17 +1,16 @@
 # Marine Pump Knowledge Graph Data
 
-该目录是正式主实验的新数据线，与原轴承图谱完全隔离。
-
-计划产物：
+该目录保存船舶机舱泵系的正式图谱与证据评价资产，与旧轴承项目完全隔离。
 
 ```text
-schema/
-triples/
-graph_versions/
-silver_evidencebench/
-experiment_results/
+schema/               节点、关系、来源和证据契约
+triples/              规范Claim、Evidence Assertion和来源记录
+graph_versions/       图结构、索引和统计
+silver_evidencebench/ 历史兼容路径名：研究点二受控证据评价集
 ```
 
-所有三元组必须符合 `schema/provenance_schema_v1.json`，并保留来源 URL、页码/章节、原文证据和抽取置信度。
+当前 `KG_v1_raw` 保存8003条完整审计记录；根路径 `KG_v1_validated` 保存研究点二v6使用的208条严格中文证据。研究点一论文另报告1326条标准中文应用层，该版本目前位于术语治理实验目录，不能与根路径208条集合混称同一教师图。
 
-当前已完成4份代表性文档的页级候选三元组试抽取，并在 `data/interim/candidate_triples/` 保存逐条校验状态；这些记录仍是中间层Silver候选。`triples/`、`graph_versions/` 和 `silver_evidencebench/` 尚未形成正式版本，不应将当前试抽取描述为已完成的新知识图谱。
+研究点三启动前必须从严格、保守或标准层中选择并冻结唯一的 `TeacherGraph_RP3_v1`，记录来源文件、哈希、证据数、Claim数、实体数和术语门槛；不得直接用同名目录推断版本。
+
+所有证据记录必须保留来源URL、物理页、原文、bbox、文档/页面哈希及抽取和门控轨迹。自动证据合格表示通过冻结契约，不表示专家确认事实。

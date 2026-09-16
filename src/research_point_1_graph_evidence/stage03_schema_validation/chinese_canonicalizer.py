@@ -18,6 +18,10 @@ import unicodedata
 
 HAN_PATTERN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 LATIN_PATTERN = re.compile(r"[A-Za-z]")
+_TERM_INDEX_CACHE: dict[
+    tuple[int, str, int],
+    tuple[Mapping[str, object], dict[tuple[str, str], Mapping[str, object]]],
+] = {}
 
 
 @dataclass(frozen=True)
@@ -113,8 +117,17 @@ def detect_surface_language(value: object) -> str:
 def _term_index(
     terminology: Mapping[str, object],
 ) -> dict[tuple[str, str], Mapping[str, object]]:
+    terms = terminology.get("terms", [])
+    cache_key = (
+        id(terminology),
+        str(terminology.get("version", "")),
+        len(terms) if isinstance(terms, Sequence) else -1,
+    )
+    cached = _TERM_INDEX_CACHE.get(cache_key)
+    if cached is not None and cached[0] is terminology:
+        return cached[1]
     result: dict[tuple[str, str], Mapping[str, object]] = {}
-    for raw_entry in terminology.get("terms", []):
+    for raw_entry in terms:
         if not isinstance(raw_entry, Mapping):
             continue
         entity_type = str(raw_entry.get("entity_type", ""))
@@ -133,6 +146,9 @@ def _term_index(
                     f"{entity_type}:{surface}"
                 )
             result[key] = raw_entry
+    if len(_TERM_INDEX_CACHE) >= 8:
+        _TERM_INDEX_CACHE.clear()
+    _TERM_INDEX_CACHE[cache_key] = (terminology, result)
     return result
 
 
@@ -158,6 +174,8 @@ def _generated_concept_id(entity_type: str, canonical_label_zh: str) -> str:
 def _reviewed_translation_method(status: str) -> str:
     if status == "secondary_ai_verified":
         return "secondary_ai_verified"
+    if status == "local_consistency_verified":
+        return "local_consistency_verified"
     if status == "human_approved":
         return "human_reviewed"
     return "model_proposed"
@@ -194,6 +212,8 @@ def _canonicalize_endpoint(
         translation_method = (
             "secondary_ai_verified"
             if translation_status == "secondary_ai_verified"
+            else "local_consistency_verified"
+            if translation_status == "local_consistency_verified"
             else "human_reviewed"
             if translation_status == "human_approved"
             else "source_zh_exact"

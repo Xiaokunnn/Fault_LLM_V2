@@ -1,9 +1,12 @@
-"""Govern fault-related Chinese endpoints with cached dual-pass verification.
+"""Govern Chinese endpoints with cached dual-pass verification.
 
 The extraction model's Chinese proposal is never release-eligible by itself.
 An endpoint becomes ``secondary_ai_verified`` only when two independent,
 conservative verifier prompts agree on the same Chinese canonical label with
-high confidence and local protected-token checks pass.
+high confidence and local protected-token checks pass.  The historical
+``fault_core`` scope is kept as the default for reproducibility; the
+``all_eligible`` scope expands the same rules to every evidence-qualified
+record without weakening any evidence or terminology threshold.
 """
 
 from __future__ import annotations
@@ -140,15 +143,18 @@ def token_check(tokens: Iterable[str], canonical_zh: str) -> bool:
     return all(normalize_lookup_text(token) in normalized for token in tokens)
 
 
-def collect_fault_endpoints(
+def collect_governance_endpoints(
     records: Iterable[Mapping[str, object]],
+    *,
+    scope: str = "fault_core",
 ) -> dict[tuple[str, str], dict[str, object]]:
+    if scope not in {"fault_core", "all_eligible"}:
+        raise ValueError(f"Unsupported terminology governance scope: {scope}")
     endpoints: dict[tuple[str, str], dict[str, object]] = {}
     for record in records:
-        if (
-            record.get("decision") != "silver_candidate"
-            or not record.get("fault_class_ids")
-        ):
+        if record.get("decision") != "silver_candidate":
+            continue
+        if scope == "fault_core" and not record.get("fault_class_ids"):
             continue
         for side in ("head", "tail"):
             surface = str(record.get(f"{side}_surface") or record.get(side) or "")
@@ -179,6 +185,14 @@ def collect_fault_endpoints(
                     }
                 )
     return endpoints
+
+
+def collect_fault_endpoints(
+    records: Iterable[Mapping[str, object]],
+) -> dict[tuple[str, str], dict[str, object]]:
+    """Backward-compatible wrapper for the frozen fault-core experiment."""
+
+    return collect_governance_endpoints(records, scope="fault_core")
 
 
 def add_form_to_term(
@@ -553,6 +567,20 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=20)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
+        "--scope",
+        choices=("fault_core", "all_eligible"),
+        default="fault_core",
+        help=(
+            "Select fault_core for the historical target-fault experiment or "
+            "all_eligible to govern endpoints from every evidence-qualified "
+            "record with the same automatic checks."
+        ),
+    )
+    parser.add_argument(
+        "--terminology-version",
+        default="marine_pump_zh_terminology_v3_0_silver",
+    )
+    parser.add_argument(
         "--allow-incomplete",
         action="store_true",
         help=(
@@ -567,11 +595,20 @@ def main() -> None:
     terminology = copy.deepcopy(
         load_chinese_terminology(PROJECT_ROOT / args.base_terminology)
     )
-    terminology["version"] = "marine_pump_zh_terminology_v3_0_silver"
-    terminology["status"] = "secondary_ai_verified_fault_core"
+    terminology["version"] = args.terminology_version
+    terminology["status"] = (
+        "secondary_ai_verified_all_evidence_eligible"
+        if args.scope == "all_eligible"
+        else "secondary_ai_verified_fault_core"
+    )
     terminology["human_expert_reviewed"] = False
     terminology["label_policy"] = "Silver only; never Gold"
-    endpoints = collect_fault_endpoints(records)
+    endpoints = collect_governance_endpoints(records, scope=args.scope)
+    selected_records = sum(
+        record.get("decision") == "silver_candidate"
+        and (args.scope == "all_eligible" or bool(record.get("fault_class_ids")))
+        for record in records
+    )
     queue, deterministic_counts = build_queue(endpoints, terminology)
     output_dir = PROJECT_ROOT / args.output_dir
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -588,6 +625,9 @@ def main() -> None:
         summary = {
             "version": "marine_pump_silver_terminology_governance_v1",
             "dry_run": True,
+            "scope": args.scope,
+            "selected_evidence_records": selected_records,
+            "selected_endpoint_keys": len(endpoints),
             "fault_related_endpoint_keys": len(endpoints),
             "deterministic_counts": deterministic_counts,
             "dual_pass_queue": len(queue),
@@ -638,7 +678,10 @@ def main() -> None:
     summary = {
         "version": "marine_pump_silver_terminology_governance_v1",
         "dry_run": False,
+        "scope": args.scope,
         "input_records": len(records),
+        "selected_evidence_records": selected_records,
+        "selected_endpoint_keys": len(endpoints),
         "fault_related_silver_records": sum(
             record.get("decision") == "silver_candidate"
             and bool(record.get("fault_class_ids"))

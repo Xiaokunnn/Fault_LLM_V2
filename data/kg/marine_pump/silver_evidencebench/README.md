@@ -1,19 +1,16 @@
-# Marine Pump Silver EvidenceBench
+# Marine Pump Evidence Benchmark
 
-该目录用于构造船舶机舱泵系的弱监督证据检索测试集。
+目录名中的 `silver_evidencebench` 是冻结兼容路径。当前统一称其为**自动证据评价集**，相关性和支持标签均非专家真值。
 
-基本要求：
+## 已形成资产
 
-- 查询与正例证据按文档隔离，避免由路径反向生成查询造成闭环。
-- Silver 正例必须有原文证据位置且置信度不低于 0.8。
-- 第一版总计 30-50 条查询，10 类故障各覆盖约 3-5 条；每条查询配置 30-80 条候选路径。
-- 同时报告全量 Silver 集和高置信 Silver 子集的结果。
-- 使用 macro 指标，避免高频故障类型主导结论。
+- `rp2_full_graph_development_v2/`：研究点二v6的40条受控查询及208条候选证据；覆盖10类候选故障与4类诊断角色，其中34条可回答、6条不可回答。
+- `rp2_v6_paraphrase_robustness/`：80条确定性问题改写，只用于检索措辞稳健性评价。
+- `rp2_development_v1/`：早期开发版本，保留用于复现，不作为当前论文主结果。
 
-当前已提供以下中间审计资产，但尚未生成 EvidenceBench 查询或标签：
+## 使用规则
 
-- `fault_scope_draft_v1.json`：历史故障范围草案，仅保留作版本追踪；正式映射以 `configs/fault_ontology_marine_pump_v1.json` 中声明的内容版本为准。
-- `source_coverage_lexical_build_v2.csv`：仅构建集的词法候选页审计。
-- `fault_category_coverage_matrix_v2.csv/json/md`：严格 Silver 证据覆盖、来源覆盖和词法候选页的联合矩阵。
-
-词法命中只用于定位待抽取页面，不能作为三元组、类别归属或 Silver 正例。当前10类均未通过严格的批量构图门槛，图谱和 Silver EvidenceBench 均尚未构建。
+- 在线方法不得读取 `relevant_evidence_ids`、`fault_class_ids` 等答案字段。
+- 评价按基础查询、故障类、Claim或来源族成组统计；同一问题的改写不是独立样本。
+- MP008只用于开发；MP009–MP013只用于冻结后的外部评价，不进入训练、调参或路由校准。
+- 该评价集检验受控查询下的检索、引用、作答与拒答行为，不代表开放式故障识别或工程维修准确率。

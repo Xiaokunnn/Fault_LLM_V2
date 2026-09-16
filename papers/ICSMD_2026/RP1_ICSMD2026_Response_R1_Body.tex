@@ -1,0 +1,146 @@
+% Shared response text: standalone article or appended to the revised manuscript.
+% !TeX root = RP1_ICSMD2026_Revision_Package_R1.tex
+\begingroup
+\normalfont\fontsize{11}{14}\selectfont
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{plain}
+\newcommand{\responseitem}[2]{\par\Needspace{8\baselineskip}\bigskip\noindent\textbf{Comment #1. #2}\par\nopagebreak}
+\begin{center}
+{\Large\bfseries Response to Reviewers}\par
+\medskip
+ICSMD 2026 --- Submission 46\par
+\textit{Evidence-Traceable Knowledge Graph Construction from Marine Pump Technical Documents via Automated Evidence-Quality Gating}
+\end{center}
+
+Dear Editor and Reviewers,
+
+Thank you for reviewing our manuscript. We have added simple extraction and filtering baselines, a breakdown of rejection reasons, an analysis of terminology exclusions, and a joint weight--threshold sensitivity analysis. We have also clarified the development and evaluation sequence and standardized the terminology. Changes in the manuscript are highlighted in yellow. Section and table references below refer to the revised manuscript. The comments are summarized before each response.
+
+The added analyses use the retained candidate records, page objects, and extraction caches. They do not require new model calls or change the frozen graph. We distinguish these revision analyses from the original parameter choices throughout the response.
+
+\bigskip
+{\large\bfseries Reviewer \#2}
+
+\responseitem{2.1}{B0--B3 are author-defined ablations rather than established baselines. Add a simple LLM extraction and filtering baseline, or clarify the focus on auditability and engineering applicability.}
+
+We agree that the original comparison did not isolate the benefit of post-extraction gating. Table IV now includes direct LLM extraction, direct extraction with basic filtering, and three controls that share exactly the same 367 normalized candidates. The last three controls use no gate, basic filtering, and complete gating, respectively. This keeps extraction outputs and extraction cost fixed when comparing the post-processing methods.
+
+Basic filtering requires complete head, relation, tail, and type fields, matches both endpoint strings anywhere on the source page after case and whitespace normalization, and removes identical triples within the same page. It does not use evidence-span constraints, table alignment, relation-support decisions, or confidence scores. The direct extraction baseline retains its native types and relation names. We no longer represent its failure to match our whitelist as evidence that all its statements are wrong.
+
+On the shared candidate set, basic filtering retains 243 records. Both endpoints are recoverable inside the located evidence for 223 of them (91.77\%). Complete gating retains 148 records, all of which pass this check. Basic filtering retains only 98 of these 148 evidence-qualified records. The other 50 use table evidence that can be resolved through cell locations but fails flat-page string matching. These results show both the limitations of page-wide matching and the practical value of table-aware evidence recovery. Parser-supplied provenance is complete in all configurations and is not presented as an advantage of gating.
+
+Section IV-D now identifies B0--B3 as historical prompt-rule ablations. Section V-C states that the comparison evaluates evidence auditability and does not establish state-of-the-art extraction accuracy. For engineering use, the graph connects observations with documented causes and actions and lets a user inspect their page evidence. The baseline comparison supports this evidence-management role; a diagnosis-performance claim would require a separate evaluation.
+
+\textbf{Changes:} Table IV; Section IV-D, ``Simple Baselines and Prompt-Rule Ablation''; Section V-C; abstract and conclusion.
+
+\responseitem{2.2}{Explain the primary failure gates among the 5,424 rejected records, including those that retain locatable evidence and endpoints.}
+
+Table V reports the following mutually exclusive attribution. We assign a record to the first failed category in the order shown, since a record can have several failure flags.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Primary failure category & Records & Share \\
+\midrule
+Schema/type incompatibility & 1,292 & 23.82\% \\
+Evidence admission failure & 3,868 & 71.31\% \\
+Relation support failure & 253 & 4.66\% \\
+Below the 0.60 candidate floor & 11 & 0.20\% \\
+\midrule
+Total & 5,424 & 100.00\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The percentages may sum to 99.99\% after rounding. These are order-dependent primary reasons, not independent estimates of each gate's contribution. Across overlapping flags, 4,632 rejected records have an evidence failure and 2,777 have a rule-based relation-support failure; a further 253 have a failed two-prompt relation check.
+
+Checking the 1,707 rejected records that pass all re-localization subchecks revealed an omission in our earlier explanation. Of these records, 1,451 still fail the original E2 admission conditions. Among that group, 1,449 lack an affirmative table-layout validation flag and 290 lack column names; the two counts overlap. Another 253 fail relation support and three fall below the candidate score floor. Recovering cell coordinates and endpoint text does not establish that the table layout and column semantics met the original admission rules. Section IV-B now gives this breakdown explicitly.
+
+We also distinguish the 0.60 candidate floor, which can cause rejection, from the 0.80 evidence-admission threshold. The six-record loss at 0.80 is measured among the 1,704 records that pass the other hard gates; it is not the count of score-based rejections among all 5,424 rejected records.
+
+\textbf{Changes:} Sections III-C and IV-B; new Table V; the gate-count paragraph in Section IV-C.
+
+\clearpage
+{\large\bfseries Reviewer \#3}
+
+\responseitem{3.1}{Add a baseline LLM extraction method without gating on the same documents; report evidence qualification, evidence locatability, and factual accuracy if annotations are available.}
+
+Table IV now includes the requested direct-extraction baseline and a simple-filtering variant on the same 20 pages. Direct extraction produces 162 records, of which 73 (45.06\%) have recoverable evidence and 65 (40.12\%) also have both endpoints inside that evidence. Basic filtering retains 115 records, with corresponding rates of 61.74\% and 56.52\%. These rows are assessed using the same re-localizer as the other configurations, without requiring their native schema to match our relation whitelist.
+
+The table also provides a controlled comparison on the full prompt's 367 normalized candidates. The no-gate, basic-filter, and full-gate outputs contain 367, 243, and 148 records; 148, 98, and 148 of those records, respectively, have the frozen evidence-qualified status. This status is an internal compliance measure, so the main table reports the separate evidence and endpoint recovery rates rather than presenting qualification counts as factual accuracy.
+
+No factual annotations are available, and we therefore do not report factual accuracy or F1. The manuscript retains that limit. B0--B3 are explicitly called prompt-rule ablations, and the original 2.96-fold yield comparison is no longer used to argue an advantage over existing extraction methods.
+
+\textbf{Changes:} Table IV; Section IV-D; Section V-C.
+
+\responseitem{3.2}{Analyze the 372 terminology exclusions by relation and source, and assess whether the normalization rules are too strict or overfitted.}
+
+We traced the 372 excluded records to 286 unresolved endpoint groups. Of these groups, 205 are below the 0.90 translation-confidence threshold, 75 have missing or conflicting Chinese labels, and six fail protected-string preservation. Endpoint and record counts differ because an endpoint can occur in several records and either endpoint can block admission.
+
+The exclusions are not evenly distributed. MP003, MP005, and MP022 contribute 149, 74, and 39 records. Relative to each document's evidence-qualified records, these are exclusion rates of 29.04\%, 27.82\%, and 40.21\%, respectively. Maintenance, inspection, and prevention relations contribute 118, 84, and 58 exclusions, with within-relation rates of 25.99\%, 22.40\%, and 34.32\%. We report both counts and rates so that large documents and frequent relations are not mistaken for unusually high-risk groups merely because they contain more records.
+
+The median word count of the longer endpoint is nine for excluded records and seven for included records. This is consistent with a greater burden for longer action descriptions, although it does not show that length causes the failures. A threshold-only relaxation, keeping completeness, conflict, and protected-string rules fixed, would increase the application set from 1,326 records to 1,329 at 0.88 and 1,491 at 0.85.
+
+We now acknowledge that the terminology rule limits coverage and affects sources and relations differently. Without independent semantic labels, we cannot determine how many of the newly admitted names would be correct or claim that overfitting has been ruled out. The analysis is reported as a coverage tradeoff, and the frozen application layers are unchanged.
+
+\textbf{Changes:} Section IV-C, terminology-exclusion and threshold-relaxation paragraphs; Sections V-A and V-C.
+
+\responseitem{3.3}{Standardize ``page-level evidence'' versus ``page-level provenance,'' and ``qualified'' versus ``evidence-qualified.''}
+
+Section III-B now defines page-level evidence as the supporting passage or table cells. Page-level provenance refers to the source metadata: document identity, physical PDF page, URL, publisher, source family, and hashes. The terms are used for content and origin, respectively. Accepted records are called ``evidence-qualified records'' throughout the manuscript, including the abstract, tables, figure axis, discussion, and conclusion.
+
+\textbf{Changes:} Section III-B and terminology edits throughout the manuscript.
+
+\responseitem{3.4}{Clarify what was adjusted using MP008 and whether development or preliminary transfer checks could contaminate the holdout evaluation.}
+
+We have made the sequence and its limits explicit. MP008 supported parser, prompt, and rule debugging. The retained pilot contains only two MP008 candidate records; it does not support a claim that weights or thresholds were selected through a statistical search on that document. The revised manuscript does not make such a claim.
+
+MP009 was screened before the split and is described only as a non-blind transfer case. MP010--MP013 were first processed after the method and primary graph had been frozen. Their records remained outside the graph, and their results were not used to adjust the rules or thresholds. The new sensitivity calculations use the frozen build records and select no replacement parameters.
+
+We distinguish two issues in the revision: iterative development can make rules specific to the development/build material, while holdout contamination would require using the holdout material to guide changes. The former remains a limitation. The documented processing sequence and split restrictions address the latter; they do not prove that the rules are free from overfitting.
+
+\textbf{Changes:} Section III-A, ``Corpus Partition and Page Parsing''; Sections IV-A and V-C. The original holdout results in Section IV-E are retained.
+
+\responseitem{3.5}{Explain the evidence and relation weights and the choice of the 0.80 inclusion threshold.}
+
+The original settings were engineering choices. We found no retained grid-search or expert-calibration record that would justify describing them as optimized, and have stated this directly in Section III-C.
+
+The weights encode an ordering: E1 evidence and supported relations provide the reference value of 1.00; E2 receives a small penalty for dependence on table alignment; reconstructed evidence and unresolved relations receive a discount in the audit ledger; unsupported relations receive zero. The values 0.95 and 0.75 specify the size of those heuristic penalties, rather than an estimated probability of correctness.
+
+The 0.80 threshold is a permissive confidence floor applied after the hard evidence requirements. With the original weights, E1 records need model confidence of at least 0.80 and E2 records approximately 0.8421. The hard conditions already prevent E3 and unresolved relations from entering the evidence-qualified set, regardless of their numerical weights. This distinction was not sufficiently clear in the submitted version.
+
+To assess the practical consequences, we added a post-submission sensitivity analysis rather than reconstructing an unsupported parameter-selection history. At threshold 0.80 and supported-relation weight 1.00, changing the E2 weight from 0.90 to 1.00 changes the retained count from 1,697 to 1,698. With the original E2 weight, reducing the supported-relation weight from 1.00 to 0.95 retains 1,678 records. Larger perturbations and higher thresholds produce substantial reductions, which are reported in Figure 2 and Section IV-C. These results describe sensitivity; they do not establish that 0.80 is optimal.
+
+\textbf{Changes:} Section III-C, weight rationale and score boundaries; Section IV-C and revised Figure 2; Section V-C.
+
+\responseitem{3.6}{Add sensitivity analysis for combinations of weights rather than a single threshold.}
+
+We evaluated 84 combinations on the 1,704 records that satisfy all non-score hard gates. The grid crosses E2 weights of 0.85, 0.90, 0.95, and 1.00; supported-relation weights of 0.90, 0.95, and 1.00; and thresholds of 0.75, 0.80, 0.85, 0.90, 0.925, 0.95, and 0.975. E1 remains the unit reference. Figure 2 plots the original setting and three weight combinations; the table below gives all weight combinations at the original 0.80 threshold.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+& \multicolumn{3}{c}{Supported-relation weight} \\
+E2 weight & 0.90 & 0.95 & 1.00 \\
+\midrule
+0.85 & 1398 & 1531 & 1677 \\
+0.90 & 1398 & 1658 & 1697 \\
+0.95 & 1525 & 1678 & 1698 \\
+1.00 & 1545 & 1679 & 1698 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+At threshold 0.80, the grid retains 1,398--1,698 records. Small changes around the original weights have limited effects, but the combined penalties can remove many table records. The curves also show sharp losses at high thresholds because model confidence values cluster at a few levels. Changing the E3 or undetermined-relation weight cannot alter admission while their hard vetoes remain active; we state this property separately rather than treating those weights as effective admission parameters.
+
+All perturbations are descriptive revision analyses on fixed build records. The original weights, thresholds, graph, and holdout evaluation remain unchanged.
+
+\textbf{Changes:} Section IV-C; Figure 2; parameter limitations in Section V-C.
+
+\medskip
+Sincerely,\par
+Xiaokun Zhang, Dongliang Fu, Rui Wang, and Erwu Liu\par
+Corresponding author: Dongliang Fu, \texttt{fdl@163.com}
+\endgroup

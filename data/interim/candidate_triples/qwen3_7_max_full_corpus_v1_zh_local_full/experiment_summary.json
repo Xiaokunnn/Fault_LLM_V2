@@ -1,0 +1,57 @@
+{
+  "version": "local_full_terminology_governance_v1",
+  "input_records": 8003,
+  "evidence_qualified_records": 1698,
+  "endpoint_groups": 2700,
+  "selected_policy": "standard_090",
+  "selected_policy_result": {
+    "policy": "standard_090",
+    "repeated_min_confidence": 0.9,
+    "singleton_min_confidence": 0.9,
+    "approved_concepts": 1935,
+    "unresolved_endpoint_groups": 286,
+    "graph": {
+      "records": 1326,
+      "claims": 1281,
+      "entities": 2022
+    },
+    "approval_reason_counts": {
+      "singleton_high_confidence": 1987,
+      "repeated_exact_label_consensus": 75
+    },
+    "unresolved_reason_counts": {
+      "singleton_below_confidence": 200,
+      "protected_token_not_preserved": 6,
+      "label_missing_or_conflicting": 75,
+      "repeated_candidate_below_confidence": 5
+    }
+  },
+  "conservative_policy_result": {
+    "policy": "conservative_090_095",
+    "repeated_min_confidence": 0.9,
+    "singleton_min_confidence": 0.95,
+    "approved_concepts": 938,
+    "unresolved_endpoint_groups": 1340,
+    "graph": {
+      "records": 620,
+      "claims": 590,
+      "entities": 870
+    },
+    "approval_reason_counts": {
+      "singleton_high_confidence": 933,
+      "repeated_exact_label_consensus": 75
+    },
+    "unresolved_reason_counts": {
+      "singleton_below_confidence": 1254,
+      "protected_token_not_preserved": 6,
+      "label_missing_or_conflicting": 75,
+      "repeated_candidate_below_confidence": 5
+    }
+  },
+  "fault_classes_passing_gate": 10,
+  "terminology_artifact": "data/interim/candidate_triples/qwen3_7_max_full_corpus_v1_zh_local_full/entity_terminology_zh_marine_pump_v5_local_full.json",
+  "external_api_calls": 0,
+  "independent_model_verification": false,
+  "human_expert_reviewed": false,
+  "label_policy": "Silver only; never Gold"
+}

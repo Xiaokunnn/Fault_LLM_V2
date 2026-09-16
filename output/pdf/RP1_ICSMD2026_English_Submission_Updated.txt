@@ -1,0 +1,370 @@
+Evidence-Traceable Knowledge Graph Construction
+   from Marine Pump Technical Documents via
+       Automated Evidence-Quality Gating
+                                    Xiaokun Zhang1 , Dongliang Fu1 , and Rui Wang2,*
+ 1
+     Shanghai Marine Equipment Research Institute (SMERI), China State Shipbuilding Corporation (CSSC), Shanghai, China
+                                            2
+                                              Tongji University, Shanghai, China
+                             *
+                               Corresponding author: Rui Wang; e-mail: ruiwang@tongji.edu.cn
+
+
+   Abstract—Measurements from marine engine-room pumps             Retaining only a deduplicated head–relation–tail triple loses
+become more interpretable and auditable when linked to doc-        the exact supporting passage. Moreover, manuals from one
+umented causes, inspections, and maintenance actions. Large        source often repeat content, so document count overstates
+language models can extract such relations from manuals,
+but their outputs may contain unlocatable evidence, reversed       independent support.
+relations, misaligned table cells, or duplicated support copied       Knowledge graphs organize equipment, faults, symptoms,
+across documents. This paper presents an automated evidence-       inspections, and maintenance actions [3], [4]. LLMs reduce
+quality gating method for constructing a page-traceable and        extraction effort, but schema alignment, canonicalization, and
+auditable knowledge graph. Each normalized triple is stored        output stability still require explicit controls [5]. Industrial
+separately from every page-level evidence record that supports
+it. Admission requires valid graph structure and direction,        fault graphs mainly address extraction, fusion, reasoning, or
+recoverable page or table evidence, relation support, complete     diagnosis [6]–[8]. A preceding issue remains: what document-
+provenance, build-corpus membership, and non-inference. A          evidence conditions should an automatically extracted record
+full audit graph retains all candidates and gate outcomes;         satisfy before entering an application graph?
+evidence-qualified records with normalized Chinese terminology        We treat each generated triple as a candidate, not a fact. It
+form tiered application graphs. From 15 documents and 1,934
+physical pages, the pipeline produced 8,003 audit records, of      must point to recoverable evidence and pass frozen executable
+which 1,698 passed all evidence gates. The standard application    checks for field completeness, structure, direction, localiza-
+layer contains 1,326 evidence records, 1,281 unique triples,       tion, provenance, and corpus boundaries. Passing denotes
+and 2,022 Chinese entities, covering 78.09% of the qualified       compliance with these admission rules, not expert confirma-
+set. All qualified records passed a label-blind re-localization    tion of objective truth.
+and provenance audit, and all 13,729 controlled rule violations
+triggered at least one gate. In four held-out documents from one      The study asks whether the pipeline produces schema-
+source family, 81 records met the non-corpus evidence gates with   compliant, page-localized, provenance-complete records
+complete page localization and provenance but remained outside     (RQ1); how evidence and terminology gates affect filtering,
+the application graph. Eightfold replication within one source     graph size, and cost (RQ2); whether frozen rules transfer
+family did not change the family-capped support score. The         to held-out sources (RQ3); whether source-family capping
+method enables evidence-grounded graph construction without
+manual approval of every triple at admission time. Qualification   resists within-family duplication (RQ4); and how terminology
+denotes compliance with declared evidence rules, not expert-       tiers affect predefined fault-path coverage and density (RQ5).
+confirmed factual or diagnostic accuracy.                             The contributions are threefold. First, normalized triples
+   Index Terms—marine pump systems, knowledge graph,               are separated from page-level evidence records, preserving
+evidence-quality gating, page-level provenance, terminology nor-   multiple supports after semantic deduplication. Second, exe-
+malization, condition-monitoring knowledge
+                                                                   cutable gates jointly determine qualification, quarantine, or re-
+                                                                   jection and retain a complete audit trail. Third, tiered Chinese
+                       I. INTRODUCTION
+                                                                   application graphs are derived from the audit graph, while
+   Pumps, motors, pipes, and valves in a ship’s engine room        source-family capping limits repeated documents assigned to
+support cooling, ballast transfer, bilge drainage, and fuel        one family from appearing as independent corroboration. We
+delivery. Condition-monitoring systems observe insufficient        evaluate these mechanisms by complete-candidate re-audit,
+inlet pressure, reduced flow, elevated vibration, high tem-        controlled fault injection, terminology sensitivity, source hold-
+perature, and abnormal current [1], [2]. These measurements        out, and replication stress tests.
+seldom identify a fault alone; engineers consult classification
+                                                                                         II. RELATED WORK
+guidance, manuals, and maintenance tables to link them to
+possible causes and actions.                                       A. LLM-Based Knowledge Graph Construction
+   Such knowledge is evidence-dependent. A relation may              Knowledge graph construction combines extraction,
+appear in prose, a troubleshooting table, or a maintenance pro-    schema alignment, canonicalization, and fusion [3], [4].
+cedure; tables may contain merged rows and inherited headers.      Extract-Define-Canonicalize separates open extraction,
+schema definition, and post-hoc canonicalization, showing          where hi , ri , and ti are the head entity, relation, and tail entity.
+why LLM construction is not a single prompting step                Every occurrence of document support creates a separate
+[5]. Industrial graphs support process monitoring, rotating        page-level evidence record:
+machinery, and equipment diagnosis [6]–[8]. Our focus is
+                                                                                           ai = ⟨ci , ei , pi , gi ⟩,                 (2)
+earlier: the evidence requirements that generated records
+must meet when manual review of every triple is not a              where ei stores the verbatim passage and page span or table
+prerequisite.                                                      cell, pi stores provenance, and gi stores evidence type, support
+                                                                   mode, score, and gate outcomes. A triple may link to multiple
+B. Statement-Level Provenance and Evidence Support                 evidence records; semantic deduplication never overwrites
+   W3C PROV-O represents derivation through entities, ac-          page-level support.
+tivities, and agents [9]; named or contextualized graphs can          For example, MP016 p. 3 states that insufficient inlet pres-
+retain statement-level provenance [10]. RDF 1.2 triple terms       sure causes pump cavitation. The model proposes insufficient
+and reifiers describe a statement without directly asserting       inlet pressure–causes–cavitation. The system validates its
+it [11], while nanopublications separate an assertion from         types and direction, relocates both endpoints and the relation
+provenance and publication information [12]. ProVe verifies        phrase, and stores page, URL, hashes, and source family. A
+textual support for graph triples [13]; SciGraph-LLM jointly       repeated sentence in another manual adds evidence but not
+extracts atomic claims, source spans, and provenance [14].         another contribution from that family.
+   Marine documents add physical-page and table localization,
+                                                                   C. Automated Evidence-Quality Gating
+directed relations, Chinese terminology, and repeated content
+within source families. Rather than proposing a provenance            The gates comprise four groups.
+standard, we turn established representation principles into an       Structure: Endpoint types, relation, and direction must
+executable admission workflow.                                     comply with the whitelist and schema.
+                                                                      Evidence: E1 requires both entities in one continuous page
+                         III. METHOD                               span. E2 requires relevant cells in one row or validated
+                                                                   merged-row group, preserving cell IDs and bounding boxes.
+A. Corpus Partition and Page Parsing                               Cross-sentence E3 records remain auditable but cannot enter
+   MP numbers are corpus registry IDs, not a continuous            an application graph.
+build-set sequence. The build set comprises MP001–MP007               Relation support: Explicit rules require an unambiguous
+and MP015–MP022: 15 documents and 1,934 physical pages.            phrase or table role. Otherwise, the extraction model receives
+MP008 was used for development, MP009 for a preliminary            support- and rejection-oriented prompts. Both must support
+non-blind transfer check, and MP010–MP013 for source-held-         the relation at confidence ≥ 0.9, with relocatable quotations.
+out evaluation after freezing the method and primary graph;           Admission boundary: The governance score qi =
+none entered that graph. MP014 was excluded because it is an       αi wE (li )wR (ηi ) combines model-reported confidence αi
+offshore electric-submersible-pump signal dataset rather than      with frozen weights for evidence level and relation-support
+a marine technical document.                                       status. The weights for E1/E2/E3 are 1.00/0.95/0.75, and
+   Deterministic rules removed blank, cover/title, contents,       those for supported/undetermined/unsupported relations are
+index, and exact-duplicate pages, leaving 1,889 extraction         1.00/0.75/0. A record must belong to the build set, be non-
+pages. Each page object retained text, table cells, bounding       inferred, contain complete URL/family/hash provenance, and
+boxes, physical page, URL, publisher, source family, and           have qi ≥ 0.8. This heuristic supports filtering; it is not a
+document/page hashes. Candidate generation used the Alibaba        factual probability.
+Cloud Model Studio alias qwen3.7-max through the Dash-                The combined gate is
+Scope API at temperature zero on July 26–27, 2026; requests
+                                                                         H(ai ) = Istr Idir Iloc Isup Iprov Ibuild Inoninf Iq≥0.8 .   (3)
+and responses were cached. The API records contain the alias
+rather than a dated model snapshot, so the historical backend      All indicators must equal one. Unresolved relations, E3 evi-
+snapshot cannot be established retrospectively.                    dence, and other recoverable cases are quarantined; unlocat-
+   The schema contains 13 node and 15 relation types. Al-          able, structurally invalid, or unsupported records are rejected.
+lowed endpoint types, relation directions, the whitelist, termi-
+nology dictionary, source-family assignments, and thresholds       D. Full Audit Graph and Tiered Chinese Application Graphs
+were frozen before full-corpus construction. Domain knowl-            The full audit graph retains every candidate, gate outcome,
+edge was thus encoded in reusable rules rather than ad hoc         and failure reason. The Chinese application graph selects
+admission decisions.                                               qualified, non-inferred records for retrieval and visualization,
+                                                                   then assigns standard, conservative, or strict layers from both
+B. Normalized Triples and Page-Level Evidence Records              endpoints’ terminology status. Stable IDs link each applica-
+  A normalized triple is denoted by                                tion record to the audit graph and physical page (Fig. 1).
+                                                                      Normalization never rewrites verbatim evidence. Frozen
+                       ci = (hi , ri , ti ),                (1)    dictionary and earlier two-prompt terms are retained. Other
+             1                2                    3                   4                                         5                    6
+                                                                          Automated
+                                                    Normalized
+                                                                          evidence-                              Tiered Chinese
+               Frozen          Page-level           triples and                                                                         Chinese
+                                                                        quality gating                             terminology
+               corpus          candidate          page evidence                                                                        application
+                                                                          Structure,         Evidence-            normalization
+              and rules        generation             records                                                                            graph
+                                                                           direction,       qualified set        Standard: 0.90
+               15 build         Preserve             Semantic                                                                          Standard:
+                                                                             E1/E2         1,698 records          Conservative:
+             documents        source text,        deduplication;                                                                         1,326
+                                                                         localization,     1,650 unique           repeated 0.90
+                1,889        physical page         each support                                                                       Conservative:
+                                                                      relation support,        triples           singleton 0.95
+             extraction           and               occurrence                                                                             620
+                                                                             source                                Strict: frozen
+                pages        table location            stored                                                                          Strict: 208
+                                                                           and non-                                    state
+                                                  independently
+                                                                           inference
+
+                                                             All decisions        Pass only
+
+                                                                     Full audit graph
+                                                                        (complete
+                                                                        processing
+                                                                                                   Source-family cap
+                                                                          ledger)
+                                                                                                  Retain the strongest
+                                                                     8,003: evidence-
+                                                                                                   support per family
+                                                                         qualified,
+                                                                       quarantined,
+                                                                         rejected
+                                                                                                                  Stable-ID trace-back
+
+
+
+
+             Fig. 1. Workflow for automated evidence-quality gating, the complete processing ledger, and tiered Chinese application graphs.
+
+
+
+Chinese names require completeness, no same-type naming                                                             TABLE I
+conflict, protected-string preservation, and the layer threshold.                                  PAGE LOCALIZATION AND PROVENANCE RE-AUDIT
+Standard uses 0.90; conservative uses 0.90 for recurring                                      Decision       Records Evidence Endpoints Subchecks
+endpoints and 0.95 for singletons; strict retains only the
+                                                                                              Qualified         1698 100.00%        100.00%   100.00%
+original frozen status. Protected strings include models, units,                              Quarantined        881 100.00%        100.00%    62.54%
+API, ISO, and NPSH. These checks indicate local consistency,                                  Rejected          5424 72.77%          48.80%    31.47%
+not independent or expert confirmation.
+                                                                                                                     TABLE II
+E. Source-Family Capping                                                                                 CONTROLLED FAULT-INJECTION RESULTS
+   Manuals from one publisher may share content. For triple                               Fault group            Corrupted fields         Cases Detection
+c, only the strongest evidence score in each publisher- or
+                                                                                          Identity/provenance    hash, URL, family        6792    100.00%
+document-defined family is retained:                                                      Page/evidence          page, span, endpoints    4943    100.00%
+                                                  min(B,|Fc |)                            Structural type        relation-tail type       1698    100.00%
+                             (B)              1        ∑                                  Table structure        cell ID, bounding box     296    100.00%
+ sf (c) =     max qi ,      Sf am (c) =                          s(j) (c). (4)
+            ai ∈Af (c)                        B        j=1                                Total                  10 fault types           13729   100.00%
+
+Here Fc is the set of families supporting c, s(j) is the jth-                      experiments ran locally without human factual labels, and the
+largest family score, and B = 2 is the frozen engineering                          terminology experiment sent no passages to an external model.
+coverage target; missing family slots contribute zero. The                         Manifests recorded SHA-256 hashes of candidates, schema,
+index is audit and ranking metadata and does not change                            and page files.
+gate decisions or application-graph membership. Duplicates
+within one family therefore cannot increase its contribution.                      B. Complete Candidate Re-Audit and Controlled Fault Injec-
+The family label is an engineering proxy for dependence, not                       tion
+proof of independence.                                                                The 8,003 records referenced 922 physical pages. Without
+                 IV. EXPERIMENTS AND RESULTS                                       reading original decision labels, re-audit reloaded page objects
+                                                                                   and checked document-page mappings, hashes, URLs, pub-
+A. Experimental Setup                                                              lishers, families, evidence and endpoint spans, and E2 table
+   Evaluation covered full-corpus gating; candidate re-audit;                      locations.
+controlled fault injection; prompt-rule cost on fixed pages;                          Table I shows that all 1,698 qualified records passed lo-
+terminology layers; and source holdout, within-family repli-                       calization, provenance, and type checks. All 881 quarantined
+cation, and fault paths. Audit, fault-injection, and terminology                   records retained locatable evidence and endpoints; 330 failed
+                                                                    TABLE III
+                               EFFECT OF CHINESE TERMINOLOGY LAYERS ON APPLICATION-GRAPH SIZE AND FAULT-PATH DENSITY
+
+Layer          Terminology rule                                                                            Evidence Unique Chinese       Path   Mean     Mean
+                                                                                                            records triples entities coverage answers evidence
+Strict       Frozen dictionary and two-prompt status                                                              208     203          281         34/40     5.075      6.150
+Conservative Recurring 0.90; singleton 0.95                                                                       620     590          870         34/40     5.575      6.800
+Standard     Uniform threshold of 0.90                                                                           1326    1281         2022         34/40     6.400      7.700
+
+
+
+                           TABLE IV                                                                      1,698           1,678
+           PROMPT RULES AND TOKEN COST ON FIXED PAGES                                                                                        1,525
+                                                                                                 1,500
+        Method Raw Qual. Qual./raw Tok./qual. Qual./100k
+
+
+
+
+                                                                             Qualified records
+        B0        162      0       0.00%          –        0.0
+        B1        312     50      16.03%     3565.3       28.0                                   1,000                                                 895      867
+        B2        226     31      13.72%     5238.0       19.1
+        B3        254     32      12.60%     5329.8       18.8
+                                                                                                  500
+        Ours      367    148      40.33%     1466.7       68.2
+
+                                                                                                                                                                            36
+the listed subchecks because they used E3 reconstruction.                                           0
+Of 5,424 rejected records, 3,947 retained locatable evidence,                                            0.8            0.8
+                                                                                                                           5                 0.9     0.9
+                                                                                                                                                        3
+                                                                                                                                                             0.9
+                                                                                                                                                                5
+                                                                                                                                                                      0.9
+                                                                                                                                                                         8
+
+2,647 both endpoints, and 1,707 all listed subchecks. Rejec-                                                                   Governance-score threshold
+tion may instead reflect relation support, score, or another
+gate: localization is necessary, not sufficient.                           Fig. 2. Effect of the governance-score threshold on the number of evidence-
+                                                                           qualified records.
+   Fault injection corrupted one declared rule at a time in
+the 1,698 qualified records. Ten fault types covered iden-                 split isolation, E1/E2 and non-inference, provenance, re-
+tity/provenance, page/evidence location, endpoint types, and               lation domain/range, terminology admission, and verbatim
+tables. Every valid mutation triggered a gate (Table II);                  immutability—no release-blocking violation was found for
+this tests encoded-rule response, not general semantic-error               the standard or conservative layer. One non-blocking warning
+detection.                                                                 concerned 40 rejected records without verbatim text. The 0.80
+C. Full-Corpus Graph, Terminology Layers, and Gate Con-                    evidence threshold controls qualification; 0.90/0.95 terminol-
+tributions                                                                 ogy thresholds control application-layer membership.
+                                                                              Raising the evidence threshold from 0.80 to 0.85, 0.90,
+   From 8,071 raw candidates, normalization and dedupli-
+                                                                           0.925, 0.95, and 0.975 reduced qualification from 1,698
+cation produced 8,003 audit records: 1,698 qualified, 881
+                                                                           to 1,678, 1,525, 895, 867, and 36 (Fig. 2). At 0.975, the
+quarantined, and 5,424 rejected. Qualified records represent
+                                                                           remaining 36 records spanned eight of the ten predefined fault
+1,650 unique triples and 2,613 source-language entities.
+                                                                           classes. The frozen 0.80 is an engineering tradeoff, not fitted
+   By relation-support mode, explicit phrases supported 784
+                                                                           to human labels.
+records and table roles supported 98; the other 816 used
+same-model two-prompt consistency and were marked sep-                     D. Prompt Rules and Cost on Fixed Pages
+arately because it is not independent validation. By evidence-                The prompt comparison used the same 20 evidence-rich
+localization mode, the qualified set comprised 1,550 E1 and                pages, model, temperature, JSON format, and retry policy. B0
+148 E2 records.                                                            was unconstrained; B1 added schema constraints, B2 E1/E2
+   Sequential gates removed 1,292 records by schema/type,                  evidence, B3 direction and applicability, and Ours the full
+4,206 by E1/E2 localization, 801 by relation support, and six              rule set. Historical runs lacked common candidate and output-
+by the 0.8 score. Extending terminology processing moved                   token limits, so Table IV compares recorded rule-compliant
+1,118 of 1,490 strict-layer exclusions into the standard layer             yield and cost, not factual accuracy.
+without changing evidence decisions or provenance.                            Ours yielded 148 qualified records, 2.96 times B1, and used
+   Terminology processing held all 1,698 evidence decisions                the fewest tokens per qualified record despite the highest total
+fixed (Table III). The standard layer covers 78.09% and,                   tokens. The factor is configuration-specific, not a 2.96-fold
+versus strict, adds 1,118 records, 1,078 triples, and 1,741                factual-quality gain. B0’s free-form outputs did not match
+Chinese entities, yielding 6.38 times as many records. The                 the whitelist; this does not make every proposed statement
+remaining 372 lacked complete, conflict-free, sufficiently con-            incorrect.
+fident names or failed protected-string-preservation checks. A
+repeated-form-only rule at 0.90 yields 237 records, 216 triples,           E. Source Holdout, Within-Family Replication, and Fault
+and 301 entities.                                                          Paths
+   Across 36 custom Python release checks—covering                           After freezing the method and primary graph, MP010–
+file integrity, stable-ID uniqueness, evidence-link closure,               MP013 underwent first extraction in isolation. Their 103
+physical pages (94 after exclusions) yielded 287 audit records.    links pressure, flow, vibration, temperature, and current obser-
+Of these, 81 met the non-corpus evidence gates with complete       vations to documented causes, inspections, and maintenance,
+page localization and provenance but retained held-out status      with a page basis for every relation. It can support evidence
+under the build-boundary rule. They did not feed back into         retrieval, diagnostic assistance, and later GraphRAG systems;
+tuning. All belong to the MAIB family, so this test covers         no sensor time series or fault-recognition accuracy is reported.
+structural and evidence-rule behavior on unseen documents,
+not source diversity or external factual accuracy.                 C. Limitations
+   Three triples occurred identically in two documents from           No expert factual labels were available, so triple preci-
+one family. Replicating evidence one, two, four, and eight         sion, recall, and F1 cannot be reported. Same-model relation
+times left the mean capped index at 0.461058 (maximum              checks and terminology suggestions may share correlated
+change zero). Direct document accumulation raised the mean         errors. Fault injection covers encoded rule violations, not all
+from 0.461877 to 0.922116 and the number scoring ≥ 0.8             semantic errors. The prompt comparison was not candidate-
+from three to 1,650. Thus within-family duplication cannot         or token-budget matched. Source-family testing covers only
+increase capped support; no natural identical cross-family         within-family replication because the corpus has no identical
+triple was available to test cross-family discrimination.          cross-family triple. Finally, standard-layer names passed local
+   Every terminology layer covered 34/40 predefined fault          consistency, not independent semantic verification, and 372
+paths (85%); the four groups remained 7/10, 10/10, 7/10, and       qualified records still lack eligible Chinese terminology.
+10/10. From strict to standard, mean answers rose from 5.075
+                                                                                          VI. CONCLUSION
+to 6.400, page evidence from 6.150 to 7.700, documents from
+2.700 to 3.075, and families from 2.350 to 2.600. Expansion           This paper presented automated evidence-quality gating for
+increased density, not path types; these are not question-         marine pump document graphs. Separating normalized triples
+answering or diagnostic accuracy.                                  from page-level support preserves provenance; executable
+                                                                   structure, localization, support, provenance, corpus, and non-
+                        V. DISCUSSION                              inference rules govern admission. A full audit graph retains
+A. Meaning of Qualification and the Human-Review Bound-            all outcomes, while three Chinese application layers expose
+ary                                                                selectable terminology risk.
+                                                                      Fifteen documents produced 8,003 audit records and 1,698
+   Every qualified record could be relocated to a physical         qualified records. The standard layer contains 1,326 evidence
+page with evidence, endpoints, and provenance forming a            records, 1,281 triples, and 2,022 Chinese entities. All qualified
+closed trace. Deleting evidence, changing page identity or         records passed re-localization and provenance audit; 13,729
+hashes, corrupting types, or breaking table locations triggered    injected rule violations triggered a gate. On four held-out doc-
+rejection. Qualification is therefore a repeatable executable      uments, 81 records retained structural and evidence compli-
+state, not a nominal label.                                        ance while remaining outside the application graph, and fam-
+   The original 208 records measured strict terminology cov-       ily capping resisted within-family duplication. Terminology
+erage, not total qualified knowledge. Extending terminology        expansion preserved 34/40 path coverage while increasing ev-
+processing raised the standard layer to 1,326 records without      idence density. The method thus supplies traceable knowledge
+weakening evidence gates. Standard supports routine retrieval;     for measurement interpretation and diagnostic assistance, but
+conservative and strict subsets support higher-risk queries.       does not establish factual or downstream diagnostic accuracy.
+   The gates test declared document-evidence conditions; they
+cannot make a manual infallible or guarantee behavior of                      ACKNOWLEDGMENT AND DECLARATIONS
+a real machine. Encoding reusable decisions in schemas,               Data availability: Code, configurations, scripts, and re-
+evidence rules, source families, and terminology removes           leasable derived results will be released upon acceptance.
+triple-by-triple expert approval as an admission prerequisite.     Copyrighted PDFs will not be redistributed; source URLs are
+Human judgment still defines these rules, and conflicts, safety-   retained with the evidence records. Funding: This research
+critical statements, and out-of-scope conditions warrant tar-      received no external funding. Conflict of interest: The
+geted review.                                                      authors declare no conflict of interest. Ethics: No human
+                                                                   participants, animals, or personal data were involved. Genera-
+B. Relation-Support Modes and Measurement Knowledge                tive AI: The Alibaba Cloud Model Studio alias qwen3.7-max
+   Explicit phrases or table roles support 882 records; 816        generated candidates, performed same-model relation checks,
+use two checks by the extraction model. Their errors may           and suggested initial Chinese terms through the DashScope
+be correlated, so the modes are exposed rather than treated        API on July 26–27, 2026. The API returned the alias rather
+as equally independent. Safety-critical retrieval can prioritize   than a dated snapshot; prompt versions, request identifiers,
+explicit-rule records or target model-consistency records for      and responses were retained. Terminology expansion used
+review.                                                            local records only. Generative AI assisted English translation
+   This work addresses the knowledge-data layer of measure-        and language editing. The authors reviewed the manuscript
+ment and diagnosis, not a new sensor or classifier. The graph      and take responsibility for its content.
+                             REFERENCES                                        [9] T. Lebo, S. Sahoo, and D. McGuinness, “PROV-O: The PROV ontol-
+                                                                                   ogy,” https://www.w3.org/TR/prov-o/, 2013, W3C Recommendation,
+[1] American Bureau of Shipping, “Guidance notes on equipment condition            Apr. 30, 2013.
+    monitoring techniques,” American Bureau of Shipping, Houston, TX,         [10] L. F. Sikos and D. Philp, “Provenance-aware knowledge representation:
+    USA, Tech. Rep., 2016.                                                         A survey of data models and contextualized knowledge graphs,” Data
+[2] ——, “Guide for surveys based on machinery reliability and mainte-              Science and Engineering, vol. 5, no. 3, pp. 293–316, 2020, doi:
+    nance techniques,” American Bureau of Shipping, Houston, TX, USA,              10.1007/s41019-020-00118-0.
+    Tech. Rep., 2023.                                                         [11] W3C RDF & SPARQL Working Group, “RDF 1.2 concepts and
+[3] A. Hogan, E. Blomqvist, M. Cochez et al., “Knowledge graphs,”                  abstract data model,” https://www.w3.org/TR/rdf12-concepts/, 2026,
+    ACM Computing Surveys, vol. 54, no. 4, pp. 1–37, 2021, doi:                    W3C Candidate Recommendation Snapshot, Apr. 7, 2026.
+    10.1145/3447772.                                                          [12] P. Groth, A. Gibson, and J. Velterop, “The anatomy of a nanopublica-
+[4] S. Ji, S. Pan, E. Cambria, P. Marttinen, and P. S. Yu, “A survey on            tion,” Information Services & Use, vol. 30, no. 1–2, pp. 51–56, 2010,
+    knowledge graphs: Representation, acquisition, and applications,” IEEE         doi: 10.3233/ISU-2010-0613.
+    Transactions on Neural Networks and Learning Systems, vol. 33, no. 2,     [13] G. Amaral, O. Rodrigues, and E. Simperl, “ProVe: A pipeline for
+    pp. 494–514, 2022, doi: 10.1109/TNNLS.2021.3070843.                            automated provenance verification of knowledge graphs against tex-
+[5] B. Zhang and H. Soh, “Extract, define, canonicalize: An LLM-based              tual sources,” Semantic Web, vol. 15, pp. 2159–2192, 2024, doi:
+    framework for knowledge graph construction,” in Proceedings of                 10.3233/SW-233467.
+    EMNLP 2024, 2024, pp. 9820–9836, doi: 10.18653/v1/2024.emnlp-             [14] I. P. Malashin, I. S. Masich, V. S. Tynchenko, A. S. Borodulin,
+    main.548.                                                                      A. P. Gantimurov, V. A. Nelyub, and D. A. Martysyuk, “SciGraph-
+[6] H. Han, J. Wang, X. Wang, and S. Chen, “Construction and evolution             LLM: Automatic knowledge graph construction from scientific papers,”
+    of fault diagnosis knowledge graph in industrial process,” IEEE Trans-         in Proceedings of the Nineteenth ACM International Conference on
+    actions on Instrumentation and Measurement, vol. 71, pp. 1–12, 2022,           Web Search and Data Mining Companion, 2026, pp. 48–57, doi:
+    doi: 10.1109/TIM.2022.3200429.                                                 10.1145/3779211.3793169.
+[7] C. Cai, Z. Jiang, H. Wu, J. Wang, J. Liu, and L. Song, “Research
+    on knowledge graph-driven equipment fault diagnosis method for
+    intelligent manufacturing,” International Journal of Advanced Manu-
+    facturing Technology, vol. 130, no. 9–10, pp. 4649–4662, 2024, doi:
+    10.1007/s00170-024-12998-x.
+[8] J. Wu, A. Zhang, M. Wu, Y. Zhang, and C. Wang, “Overview
+    of research and application of knowledge graph in equipment fault
+    diagnosis,” Journal of Computer Applications, vol. 44, no. 9, pp. 2651–
+    2659, 2024, doi: 10.11772/j.issn.1001-9081.2023091280.
+

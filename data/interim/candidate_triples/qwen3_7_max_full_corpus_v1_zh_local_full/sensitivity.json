@@ -1,0 +1,77 @@
+[
+  {
+    "policy": "existing_strict",
+    "approved_concepts": 0,
+    "unresolved_endpoint_groups": 0,
+    "graph": {
+      "records": 208,
+      "claims": 203,
+      "entities": 281
+    }
+  },
+  {
+    "policy": "repeated_only_090",
+    "repeated_min_confidence": 0.9,
+    "singleton_min_confidence": null,
+    "approved_concepts": 73,
+    "unresolved_endpoint_groups": 2273,
+    "graph": {
+      "records": 237,
+      "claims": 216,
+      "entities": 301
+    },
+    "approval_reason_counts": {
+      "repeated_exact_label_consensus": 75
+    },
+    "unresolved_reason_counts": {
+      "singleton_not_eligible": 2187,
+      "protected_token_not_preserved": 6,
+      "label_missing_or_conflicting": 75,
+      "repeated_candidate_below_confidence": 5
+    }
+  },
+  {
+    "policy": "conservative_090_095",
+    "repeated_min_confidence": 0.9,
+    "singleton_min_confidence": 0.95,
+    "approved_concepts": 938,
+    "unresolved_endpoint_groups": 1340,
+    "graph": {
+      "records": 620,
+      "claims": 590,
+      "entities": 870
+    },
+    "approval_reason_counts": {
+      "singleton_high_confidence": 933,
+      "repeated_exact_label_consensus": 75
+    },
+    "unresolved_reason_counts": {
+      "singleton_below_confidence": 1254,
+      "protected_token_not_preserved": 6,
+      "label_missing_or_conflicting": 75,
+      "repeated_candidate_below_confidence": 5
+    }
+  },
+  {
+    "policy": "standard_090",
+    "repeated_min_confidence": 0.9,
+    "singleton_min_confidence": 0.9,
+    "approved_concepts": 1935,
+    "unresolved_endpoint_groups": 286,
+    "graph": {
+      "records": 1326,
+      "claims": 1281,
+      "entities": 2022
+    },
+    "approval_reason_counts": {
+      "singleton_high_confidence": 1987,
+      "repeated_exact_label_consensus": 75
+    },
+    "unresolved_reason_counts": {
+      "singleton_below_confidence": 200,
+      "protected_token_not_preserved": 6,
+      "label_missing_or_conflicting": 75,
+      "repeated_candidate_below_confidence": 5
+    }
+  }
+]

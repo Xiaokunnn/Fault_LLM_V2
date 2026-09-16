@@ -416,7 +416,7 @@ def main() -> None:
                 f"- 物理页{item['pdf_page_number']}：{classes}；{roles}{table_flag}"
             )
         lines.append("")
-    report_path = PROJECT_ROOT / "docs/research/gap_repair_page_plan_v1.md"
+    report_path = PROJECT_ROOT / "docs/archive/rp1_stages/gap_repair_page_plan_v1.md"
     report_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
     print(

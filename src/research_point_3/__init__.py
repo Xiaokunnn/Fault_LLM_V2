@@ -1,0 +1,66 @@
+"""Research point 3: evidence-controller distillation and selective routing."""
+
+from .artifacts import (
+    read_compact_evidence_memory_bundle,
+    read_teacher_trace_bundle,
+    stable_sha256,
+    validate_trace_memory_references,
+    write_compact_evidence_memory_bundle,
+    write_teacher_trace_bundle,
+)
+from .contracts import (
+    CARD_SCHEMA_VERSION,
+    CONTRACT_VERSION,
+    CardFieldState,
+    CardItem,
+    CardStatus,
+    CompactEvidenceRecord,
+    ContractError,
+    DataSplit,
+    DiagnosisCard,
+    DiagnosisCardSlot,
+    DiagnosticRole,
+    EvidenceConflict,
+    EvidenceProvenance,
+    QueryContext,
+    RouteAction,
+    RouteDecision,
+    SupportVerdict,
+    TeacherEvidenceDecision,
+    TeacherTrace,
+)
+from .splits import assign_fixed_memory_query_splits, assign_grouped_splits
+from .renderer import merge_single_role_teacher_traces
+from .trace_export import assemble_single_role_teacher_trace
+
+__all__ = [
+    "CARD_SCHEMA_VERSION",
+    "CONTRACT_VERSION",
+    "CardFieldState",
+    "CardItem",
+    "CardStatus",
+    "CompactEvidenceRecord",
+    "ContractError",
+    "DataSplit",
+    "DiagnosisCard",
+    "DiagnosisCardSlot",
+    "DiagnosticRole",
+    "EvidenceConflict",
+    "EvidenceProvenance",
+    "QueryContext",
+    "RouteAction",
+    "RouteDecision",
+    "SupportVerdict",
+    "TeacherEvidenceDecision",
+    "TeacherTrace",
+    "assign_grouped_splits",
+    "assign_fixed_memory_query_splits",
+    "assemble_single_role_teacher_trace",
+    "merge_single_role_teacher_traces",
+    "read_compact_evidence_memory_bundle",
+    "read_teacher_trace_bundle",
+    "stable_sha256",
+    "validate_trace_memory_references",
+    "write_compact_evidence_memory_bundle",
+    "write_teacher_trace_bundle",
+]
