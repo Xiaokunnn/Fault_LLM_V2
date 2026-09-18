@@ -61,6 +61,7 @@ def validate_config_schema(values: dict) -> None:
         "num_card_fields",
         "num_field_states",
         "num_route_actions",
+        "support_context",
     }
     allowed_training = set(TrainingConfig.__dataclass_fields__)
     allowed_tensorization = set(TensorizationConfig.__dataclass_fields__)

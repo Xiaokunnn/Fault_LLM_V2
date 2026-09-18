@@ -1,0 +1,282 @@
+{
+  "schema": "rp3_augmented_v1_resume_summary_v1",
+  "date": "2026-09-17",
+  "status": "blocked_no_feasible_calibration",
+  "arms": {
+    "lec_v1": {
+      "rollout_groups": {
+        "all_train": {
+          "count": 32,
+          "nonempty_teacher_exact_success": 11,
+          "set_exact_including_empty": 16,
+          "student_empty_count": 8,
+          "teacher_empty_count": 5,
+          "route_target_counts": {
+            "answer": 11,
+            "abstain": 5,
+            "fallback": 16
+          }
+        },
+        "all_validation": {
+          "count": 8,
+          "nonempty_teacher_exact_success": 1,
+          "set_exact_including_empty": 1,
+          "student_empty_count": 2,
+          "teacher_empty_count": 1,
+          "route_target_counts": {
+            "fallback": 6,
+            "abstain": 1,
+            "answer": 1
+          }
+        },
+        "original_train": {
+          "count": 32,
+          "nonempty_teacher_exact_success": 11,
+          "set_exact_including_empty": 16,
+          "student_empty_count": 8,
+          "teacher_empty_count": 5,
+          "route_target_counts": {
+            "answer": 11,
+            "abstain": 5,
+            "fallback": 16
+          }
+        },
+        "original_validation": {
+          "count": 8,
+          "nonempty_teacher_exact_success": 1,
+          "set_exact_including_empty": 1,
+          "student_empty_count": 2,
+          "teacher_empty_count": 1,
+          "route_target_counts": {
+            "fallback": 6,
+            "abstain": 1,
+            "answer": 1
+          }
+        }
+      },
+      "bootstrap_best_epoch": 5,
+      "runtime": {
+        "device_type": "cuda",
+        "python": "3.11.15",
+        "torch": "2.6.0+cu124"
+      },
+      "parameter_count": 1261093,
+      "quantization": {
+        "accuracy_passed": false,
+        "calibration_manifest_sha256": "8ff0bb2904263e0137405bbbe1898906088e2615e0926281c8aabc2e22f64b57",
+        "checked_samples": 40,
+        "fp32_bytes": 5071982,
+        "fp32_sha256": "381b70a830d277d1f4461f9ee8e2d51fee277ec9b93ecac87c1b6c23aafb3ccd",
+        "int8_bytes": 1342935,
+        "int8_sha256": "9654dfa2c635dd74f8668fb443c5e9a06f4dd8ba6c51e9bcd6e6b6c1e84c827e",
+        "logical_sha256": "f2e76c4f7be4acf18a8890e7712f43c26c00e6ba9c43e6f532d1c71af22c2bd1",
+        "maximum_absolute_error_per_head": [
+          0.026584863662719727,
+          0.031604111194610596,
+          0.02719283103942871,
+          0.03428235650062561,
+          0.0241091251373291
+        ],
+        "onnxruntime_version": "1.30.0",
+        "post_quantization_calibration_required": true,
+        "qdq_nodes": 40,
+        "schema": "rp3_int8_quantization_v1",
+        "status": "quantized_thresholds_pending",
+        "target_edge_hardware_measured": false
+      },
+      "calibration": {
+        "status": "blocked_no_feasible_operating_point",
+        "raw_route_argmax_counts": {
+          "abstain": 14,
+          "fallback": 26
+        },
+        "constraints": {
+          "maximum_teacher_disagreement": 0.1,
+          "minimum_answers": 5
+        },
+        "blocked": {
+          "closest_observed_point": null,
+          "lowest_observed_risk": null,
+          "maximum_answered": 0,
+          "reason": "insufficient_answer_coverage"
+        }
+      },
+      "calibration_manifest_exists": false,
+      "evaluation_exists": false
+    },
+    "lec_augmented_v1": {
+      "rollout_groups": {
+        "all_train": {
+          "count": 129,
+          "nonempty_teacher_exact_success": 11,
+          "set_exact_including_empty": 48,
+          "student_empty_count": 109,
+          "teacher_empty_count": 37,
+          "route_target_counts": {
+            "answer": 11,
+            "abstain": 37,
+            "fallback": 81
+          }
+        },
+        "all_validation": {
+          "count": 36,
+          "nonempty_teacher_exact_success": 0,
+          "set_exact_including_empty": 12,
+          "student_empty_count": 36,
+          "teacher_empty_count": 12,
+          "route_target_counts": {
+            "fallback": 24,
+            "abstain": 12
+          }
+        },
+        "original_train": {
+          "count": 32,
+          "nonempty_teacher_exact_success": 3,
+          "set_exact_including_empty": 8,
+          "student_empty_count": 28,
+          "teacher_empty_count": 5,
+          "route_target_counts": {
+            "answer": 3,
+            "abstain": 5,
+            "fallback": 24
+          }
+        },
+        "original_validation": {
+          "count": 8,
+          "nonempty_teacher_exact_success": 0,
+          "set_exact_including_empty": 1,
+          "student_empty_count": 8,
+          "teacher_empty_count": 1,
+          "route_target_counts": {
+            "fallback": 7,
+            "abstain": 1
+          }
+        },
+        "derived_train": {
+          "count": 97,
+          "nonempty_teacher_exact_success": 8,
+          "set_exact_including_empty": 40,
+          "student_empty_count": 81,
+          "teacher_empty_count": 32,
+          "route_target_counts": {
+            "answer": 8,
+            "abstain": 32,
+            "fallback": 57
+          }
+        },
+        "derived_validation": {
+          "count": 28,
+          "nonempty_teacher_exact_success": 0,
+          "set_exact_including_empty": 11,
+          "student_empty_count": 28,
+          "teacher_empty_count": 11,
+          "route_target_counts": {
+            "fallback": 17,
+            "abstain": 11
+          }
+        }
+      },
+      "bootstrap_best_epoch": 1,
+      "runtime": {
+        "device_type": "cuda",
+        "python": "3.11.15",
+        "torch": "2.6.0+cu118"
+      },
+      "parameter_count": 1261093,
+      "quantization": {
+        "accuracy_passed": false,
+        "calibration_manifest_sha256": "8ff0bb2904263e0137405bbbe1898906088e2615e0926281c8aabc2e22f64b57",
+        "checked_samples": 40,
+        "fp32_bytes": 5071982,
+        "fp32_sha256": "a1bdb5610c24307c35446a7c7a741e13b26f18df9ebd37b8aa20f4690fc3a6e0",
+        "int8_bytes": 1342926,
+        "int8_sha256": "58155c3f2fc1364f0492df77d6badc560e2e2c6851a8bbdfef94e650dd85af45",
+        "logical_sha256": "ac1330c9b133abefcd213340d82c150ef2241c25598f940915e2382c9c90ef7e",
+        "maximum_absolute_error_per_head": [
+          0.017087817192077637,
+          0.020386934280395508,
+          0.02573704719543457,
+          0.029903769493103027,
+          0.0240476131439209
+        ],
+        "onnxruntime_version": "1.30.0",
+        "post_quantization_calibration_required": true,
+        "qdq_nodes": 40,
+        "schema": "rp3_int8_quantization_v1",
+        "status": "quantized_thresholds_pending",
+        "target_edge_hardware_measured": false
+      },
+      "calibration": {
+        "status": "blocked_no_feasible_operating_point",
+        "raw_route_argmax_counts": {
+          "abstain": 40
+        },
+        "constraints": {
+          "maximum_teacher_disagreement": 0.1,
+          "minimum_answers": 5
+        },
+        "blocked": {
+          "closest_observed_point": null,
+          "lowest_observed_risk": null,
+          "maximum_answered": 0,
+          "reason": "insufficient_answer_coverage"
+        }
+      },
+      "calibration_manifest_exists": false,
+      "evaluation_exists": false
+    }
+  },
+  "augmentation": {
+    "original_queries": 40,
+    "derived_rows": 125,
+    "total": 165,
+    "train": 129,
+    "validation": 36,
+    "independent_fault_scenarios": 10,
+    "originals_byte_equivalent": true,
+    "group_disjoint_and_inherited_split_checked": true
+  },
+  "build_validation_diagnosis": {
+    "teacher_nonempty_rows": 24,
+    "predicted_zero_requested_cardinality": 24,
+    "no_available_support_over_05": 0,
+    "requested_field_states": {
+      "supported": 15,
+      "insufficient": 9
+    }
+  },
+  "calibration_feasibility": {
+    "teacher_nonempty": 3,
+    "teacher_empty": 37,
+    "minimum_answers": 5,
+    "maximum_teacher_disagreement": 0.1,
+    "minimum_possible_disagreement_at_five_answers": 0.4,
+    "feasible_even_with_perfect_selection": false,
+    "thresholds_changed": false
+  },
+  "preservation": {
+    "recovered_asset_count": 697,
+    "all_recovered_assets_unchanged_after_experiment": true,
+    "baseline_and_original_bundle_files_checked": 24,
+    "all_unchanged": true,
+    "source_commit": "9370860efec459ffd53c7e2b6359e585920bc834",
+    "existing_versions_backed_up": 6
+  },
+  "git": {
+    "code_head": "a3b01d64345ec47ce2ed6c6d755d391be766efa1",
+    "working_branch": "codex/rp3-augmented-v1-results",
+    "rebase_quit_after_metadata_backup": true,
+    "original_main_commit_preserved": true
+  },
+  "validation": {
+    "read_only_teacher_freeze_audit": "passed, frozen teacher identity unchanged",
+    "rp3_unit_tests_passed": 93,
+    "onnx_tracer_warnings": 10
+  },
+  "research_boundary": {
+    "mp008_used_for_gradients_or_selection": false,
+    "external_evaluation_run": false,
+    "expert_diagnostic_accuracy_claim": false,
+    "target_hardware_measurement": false
+  }
+}

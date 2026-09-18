@@ -53,8 +53,33 @@ class TrainingConfig:
     expected_route_cost_weight: float = 1.0
     route_class_weights: tuple[float, ...] | None = None
     loss_weights: LossWeights = LossWeights()
+    field_loss_normalization: str = "all_fields"
+    record_field_diagnostics: bool = False
+    hard_negative_support_weight: float = 0.0
+    joint_contract_weight: float = 0.0
+    hard_negative_reference_rate: float | None = None
+    positive_step_guard: bool = False
+    positive_guard_margin: float = 0.1
+    positive_guard_backtracks: int = 8
+    positive_guard_tolerance: float = 1e-7
 
     def __post_init__(self) -> None:
+        import math
+        if type(self.positive_step_guard) is not bool:
+            raise ValueError("positive_step_guard must be boolean")
+        if (not 0 < self.positive_guard_margin < 1 or type(self.positive_guard_backtracks) is not int
+                or self.positive_guard_backtracks < 0 or not math.isfinite(self.positive_guard_tolerance)
+                or self.positive_guard_tolerance < 0):
+            raise ValueError("invalid positive guard constants")
+        if any(not math.isfinite(x) or x < 0 for x in (self.hard_negative_support_weight, self.joint_contract_weight)):
+            raise ValueError("joint auxiliary weights must be finite and nonnegative")
+        if self.hard_negative_support_weight or self.joint_contract_weight:
+            if self.hard_negative_reference_rate is None or not 0 < self.hard_negative_reference_rate <= 1:
+                raise ValueError("joint training requires a frozen hard-negative train reference rate")
+        if self.field_loss_normalization not in {"all_fields", "requested_balanced"}:
+            raise ValueError("unknown field_loss_normalization")
+        if type(self.record_field_diagnostics) is not bool:
+            raise ValueError("record_field_diagnostics must be boolean")
         for name in ("epochs", "batch_size"):
             if int(getattr(self, name)) < 1:
                 raise ValueError(f"{name} must be >= 1")
@@ -114,6 +139,7 @@ def _targets_on_device(batch: Mapping[str, Any], device: "torch.device") -> Evid
         cardinality_labels=batch["cardinality_labels"].to(device),
         route_labels=batch["route_labels"].to(device),
         route_action_costs=batch["route_action_costs"].to(device),
+        requested_field_mask=(batch["requested_field_mask"].to(device) if "requested_field_mask" in batch else None),
     )
 
 
@@ -141,6 +167,8 @@ def _select_rows(
             if targets.route_action_costs is not None
             else None
         ),
+        requested_field_mask=(targets.requested_field_mask.index_select(0, indices)
+                              if targets.requested_field_mask is not None else None),
     )
     return selected_output, selected_targets
 
@@ -151,7 +179,8 @@ def _run_epoch(
     config: TrainingConfig,
     device: "torch.device",
     optimizer: "torch.optim.Optimizer | None",
-) -> dict[str, float]:
+    positive_guard: Any = None,
+) -> dict[str, Any]:
     training = optimizer is not None
     model.train(training)
     sums = {
@@ -168,6 +197,11 @@ def _run_epoch(
         )
     }
     row_count = 0
+    guard_steps = []
+    audit = None
+    if config.record_field_diagnostics:
+        from .field_audit import EpochFieldAudit
+        audit = EpochFieldAudit(loader.dataset)
     route_weights = (
         torch.tensor(config.route_class_weights, dtype=torch.float32, device=device)
         if config.route_class_weights is not None
@@ -204,17 +238,34 @@ def _run_epoch(
                 temperatures=config.temperatures,
                 route_class_weights=route_weights,
                 expected_route_cost_weight=config.expected_route_cost_weight,
+                field_loss_normalization=config.field_loss_normalization,
                 intervention_pair=intervention_augmented_supervision,
             )
             if not torch.isfinite(losses.total):
                 raise RuntimeError("non-finite RP3 training loss; aborting fail-closed")
+            if config.hard_negative_support_weight or config.joint_contract_weight:
+                from .joint_contract import joint_auxiliary_losses
+                hard, semantic = joint_auxiliary_losses(
+                    output, batch, reference_rate=config.hard_negative_reference_rate
+                )
+                losses.total = (losses.total + config.hard_negative_support_weight * hard
+                                + config.joint_contract_weight * semantic)
+                if not torch.isfinite(losses.total):
+                    raise RuntimeError("non-finite joint-contract objective")
+                for key, value in (("hard_negative_support", hard), ("joint_contract", semantic)):
+                    sums[key] = sums.get(key, 0.0) + float(value.detach().cpu()) * int(query.shape[0])
+            if audit is not None:
+                audit.observe(output, batch)
             if training:
                 losses.total.backward()
                 if config.gradient_clip_norm > 0:
                     torch.nn.utils.clip_grad_norm_(
                         model.parameters(), config.gradient_clip_norm
                     )
-                optimizer.step()
+                if positive_guard is None:
+                    optimizer.step()
+                else:
+                    guard_steps.append(positive_guard.step(model, optimizer))
             batch_size = int(query.shape[0])
             row_count += batch_size
             for name, value in losses.as_dict(detach=True).items():
@@ -226,7 +277,12 @@ def _run_epoch(
                 sums[metric_name] += float(value.cpu().item()) * batch_size
     if row_count == 0:
         raise ContractError("an RP3 epoch cannot operate on an empty dataset")
-    return {name: value / row_count for name, value in sums.items()}
+    metrics = {name: value / row_count for name, value in sums.items()}
+    if audit is not None:
+        metrics["field_diagnostics"] = audit.summary()
+    if positive_guard is not None:
+        metrics["positive_guard_steps"] = guard_steps
+    return metrics
 
 
 def _cpu_state_dict(model: LightweightEvidenceController) -> dict[str, Any]:
@@ -339,6 +395,20 @@ def train_evidence_controller(
             for trace in prepared.development_dataset.traces
         ):
             raise ContractError("non-development trace reached the MP008 calibration set")
+    if training_config.hard_negative_support_weight or training_config.joint_contract_weight:
+        from .joint_contract import hard_empty_rows
+        hard_count = 0
+        for i in range(len(prepared.train_dataset)):
+            row = prepared.train_dataset[i]
+            requested = row["requested_field_mask"]
+            if int(requested.sum()) != 1:
+                raise ContractError("joint training requires single-role supervision")
+            eligible = row["requested_candidate_mask"] & row["availability_mask"]
+            hard_count += int(hard_empty_rows(row["support_labels"][None], eligible[None],
+                                            row["cardinality_labels"][requested])[0])
+        actual_rate = hard_count / len(prepared.train_dataset)
+        if abs(actual_rate - training_config.hard_negative_reference_rate) > 1e-12:
+            raise ContractError("hard-negative reference rate differs from frozen training data")
     output = Path(output_dir)
     manifest_path = output / "training_manifest.json"
     checkpoint_path = output / "best_controller.pt"
@@ -361,6 +431,13 @@ def train_evidence_controller(
         lr=training_config.learning_rate,
         weight_decay=training_config.weight_decay,
     )
+    positive_guard = None
+    if training_config.positive_step_guard:
+        from .positive_guard import PositiveStepGuard
+        reference = collate_teacher_batch([prepared.train_dataset[i] for i in range(len(prepared.train_dataset))])
+        reference = {key: value.to(device) if isinstance(value, torch.Tensor) else value for key, value in reference.items()}
+        positive_guard = PositiveStepGuard(reference, margin=training_config.positive_guard_margin,
+            backtracks=training_config.positive_guard_backtracks, tolerance=training_config.positive_guard_tolerance)
     generator = torch.Generator()
     generator.manual_seed(training_config.seed)
     train_loader = DataLoader(
@@ -385,7 +462,7 @@ def train_evidence_controller(
     stale_epochs = 0
     for epoch in range(1, training_config.epochs + 1):
         train_metrics = _run_epoch(
-            model, train_loader, training_config, device, optimizer
+            model, train_loader, training_config, device, optimizer, positive_guard
         )
         validation_metrics = _run_epoch(
             model, validation_loader, training_config, device, None

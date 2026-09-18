@@ -26,3 +26,14 @@ data/interim/candidate_triples/qwen3_7_max_full_corpus_v1/raw_responses/*.tmp
 *.out
 *.synctex.gz
 *.xdv
+
+# RP3 server research assets stay on disk; publish code and reviewable reports.
+# Ignore rules never remove existing files or untrack historical Git records.
+/logs/
+/data/kg/marine_pump/rp3/
+/results/experiments/research_point_3/teacher_traces/
+/results/experiments/research_point_3/mp008_calibration/
+/results/experiments/research_point_3/**/features/
+/results/experiments/research_point_3/**/*.npz
+/.rp3_upload_backups/
+/rp3_upload_*.tar.gz

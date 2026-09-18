@@ -1,0 +1,18 @@
+{
+  "schema": "rp3_joint_contract_protocol_v1",
+  "seeds": [7042027, 7042028, 7042029],
+  "control_root": "results/experiments/research_point_3/field_normalization_v1",
+  "control_arm": "requested_balanced",
+  "output_root": "results/experiments/research_point_3/joint_contract_v1",
+  "audit_root": "results/experiments/research_point_3/joint_gating_audit_v1",
+  "diagnostic_protocol": "configs/research_point_3/diagnostics_v1.json",
+  "hard_negative_reference_count": 5,
+  "training_rows": 129,
+  "arms": {
+    "W1": {"hard_negative_support_weight": 0.25, "joint_contract_weight": 0.0},
+    "J1": {"hard_negative_support_weight": 0.25, "joint_contract_weight": 0.1}
+  },
+  "development_attached": false,
+  "external_evaluation_allowed": false,
+  "deployment_allowed": false
+}

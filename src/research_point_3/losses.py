@@ -30,6 +30,7 @@ class EvidenceControllerTargets:
     cardinality_labels: Tensor
     route_labels: Tensor
     route_action_costs: Tensor | None = None
+    requested_field_mask: Tensor | None = None
 
 
 @dataclass(frozen=True)
@@ -178,6 +179,36 @@ def masked_cross_entropy(
     return F.cross_entropy(flat_logits[active], flat_labels[active], weight=weights)
 
 
+def field_cross_entropy(
+    logits: Tensor,
+    labels: Tensor,
+    requested_field_mask: Tensor | None = None,
+    *,
+    normalization: str = "all_fields",
+) -> Tensor:
+    """Preserve legacy CE or balance separately normalized requested/other slots.
+
+    The new mode is restricted to complete, single-request-role supervision.
+    Each group receives half the mass; the existing task weight is unchanged.
+    """
+    if normalization == "all_fields":
+        return masked_cross_entropy(logits, labels)
+    if normalization != "requested_balanced":
+        raise ValueError("unknown field loss normalization")
+    if requested_field_mask is None or requested_field_mask.dtype != torch.bool:
+        raise ValueError("requested_balanced requires an explicit boolean requested-field mask")
+    if labels.ndim != 2 or logits.shape[:-1] != labels.shape or requested_field_mask.shape != labels.shape:
+        raise ValueError("requested-field mask and labels must align with batched field logits")
+    mask = requested_field_mask.to(logits.device)
+    if labels.shape[1] < 2 or torch.any(mask.sum(dim=1) != 1):
+        raise ValueError("requested_balanced requires exactly one requested slot per row")
+    if torch.any(labels == IGNORE_INDEX):
+        raise ValueError("requested_balanced requires complete labels for both field groups")
+    labels = labels.to(device=logits.device, dtype=torch.long)
+    per_slot = F.cross_entropy(logits.flatten(0, 1), labels.flatten(), reduction="none").reshape_as(labels)
+    return 0.5 * per_slot[mask].mean() + 0.5 * per_slot[~mask].mean()
+
+
 def cost_sensitive_route_loss(
     route_logits: Tensor,
     route_labels: Tensor,
@@ -277,6 +308,7 @@ def _supervised_components(
     temperatures: Sequence[float],
     route_class_weights: Tensor | None,
     expected_route_cost_weight: float,
+    field_loss_normalization: str = "all_fields",
 ) -> Mapping[str, Tensor]:
     ranking = multi_temperature_listwise_kd(
         output.rank_logits,
@@ -287,11 +319,13 @@ def _supervised_components(
     support = masked_support_bce(
         output.support_logits, targets.support_labels, output.availability_mask
     )
-    field_state = masked_cross_entropy(
-        output.field_state_logits, targets.field_state_labels
+    field_state = field_cross_entropy(
+        output.field_state_logits, targets.field_state_labels, targets.requested_field_mask,
+        normalization=field_loss_normalization,
     )
-    cardinality = masked_cross_entropy(
-        output.cardinality_logits, targets.cardinality_labels
+    cardinality = field_cross_entropy(
+        output.cardinality_logits, targets.cardinality_labels, targets.requested_field_mask,
+        normalization=field_loss_normalization,
     )
     route = cost_sensitive_route_loss(
         output.route_logits,
@@ -316,6 +350,7 @@ def evidence_intervention_loss(
     temperatures: Sequence[float] = (1.0, 2.0, 4.0),
     route_class_weights: Tensor | None = None,
     expected_route_cost_weight: float = 1.0,
+    field_loss_normalization: str = "all_fields",
 ) -> Tensor:
     """Supervise changed decisions after candidate removal/interference.
 
@@ -332,6 +367,7 @@ def evidence_intervention_loss(
         temperatures=temperatures,
         route_class_weights=route_class_weights,
         expected_route_cost_weight=expected_route_cost_weight,
+        field_loss_normalization=field_loss_normalization,
     )
     return torch.stack(tuple(components.values())).mean()
 
@@ -344,6 +380,7 @@ def compute_evidence_controller_loss(
     temperatures: Sequence[float] = (1.0, 2.0, 4.0),
     route_class_weights: Tensor | None = None,
     expected_route_cost_weight: float = 1.0,
+    field_loss_normalization: str = "all_fields",
     intervention_pair: tuple[
         EvidenceControllerOutput, EvidenceControllerTargets
     ]
@@ -358,6 +395,7 @@ def compute_evidence_controller_loss(
         temperatures=temperatures,
         route_class_weights=route_class_weights,
         expected_route_cost_weight=expected_route_cost_weight,
+        field_loss_normalization=field_loss_normalization,
     )
     if intervention_pair is None:
         intervention = _zero(output.route_logits)
@@ -368,6 +406,7 @@ def compute_evidence_controller_loss(
             temperatures=temperatures,
             route_class_weights=route_class_weights,
             expected_route_cost_weight=expected_route_cost_weight,
+            field_loss_normalization=field_loss_normalization,
         )
     calibration = calibration_brier_loss(output, targets)
     total = (
@@ -400,6 +439,7 @@ __all__ = [
     "compute_evidence_controller_loss",
     "cost_sensitive_route_loss",
     "evidence_intervention_loss",
+    "field_cross_entropy",
     "masked_cross_entropy",
     "masked_support_bce",
     "multi_temperature_listwise_kd",

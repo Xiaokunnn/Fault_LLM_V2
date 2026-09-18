@@ -1,0 +1,7 @@
+# Frozen research records are byte-addressed by SHA-256 manifests.
+# Preserve their original line endings on every checkout.
+results/experiments/research_point_3/** -text
+configs/frozen/teacher_graph_rp3_v1.freeze.json -text
+
+# Python csv.writer emits CRLF; retain those valid record separators.
+results/experiments/research_point_3/**/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

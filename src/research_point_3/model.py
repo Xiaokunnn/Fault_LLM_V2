@@ -59,8 +59,11 @@ class EvidenceControllerConfig:
     num_card_fields: int = len(CARD_FIELD_ROLES)
     num_field_states: int = len(CARD_FIELD_STATES)
     num_route_actions: int = len(ROUTE_ACTIONS)
+    support_context: str = "pointwise"
 
     def __post_init__(self) -> None:
+        if self.support_context not in ("pointwise", "local_residual", "set_residual"):
+            raise ValueError("unknown support_context")
         for name in (
             "query_dim",
             "evidence_dim",
@@ -174,6 +177,13 @@ if nn is not None:
             # Head 4 uses the RouteAction enum order: answer, fallback, abstain.
             self.route_head = nn.Linear(hidden, config.num_route_actions)
 
+            if config.support_context != "pointwise":
+                from .set_support import CandidateContextSupport
+                # All original parameters and the subsequent dropout RNG stream
+                # remain paired with the old pointwise model at initialization.
+                with torch.random.fork_rng(devices=[]):
+                    self.support_residual = CandidateContextSupport(hidden, config.support_context)
+
         @staticmethod
         def _masked_logits(logits: Tensor, availability_mask: Tensor) -> Tensor:
             floor = torch.finfo(logits.dtype).min
@@ -248,9 +258,10 @@ if nn is not None:
             )
 
             rank_logits = self._masked_logits(self.rank_head(candidate_hidden).squeeze(-1), mask)
-            support_logits = self._masked_logits(
-                self.support_head(candidate_hidden).squeeze(-1), mask
-            )
+            support_logits = self.support_head(candidate_hidden).squeeze(-1)
+            if self.config.support_context != "pointwise":
+                support_logits = support_logits + self.support_residual(candidate_hidden, mask)
+            support_logits = self._masked_logits(support_logits, mask)
 
             mask_float = mask.unsqueeze(-1).to(candidate_hidden.dtype)
             available_count = mask_float.sum(dim=1)

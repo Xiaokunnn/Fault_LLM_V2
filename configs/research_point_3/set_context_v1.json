@@ -1,0 +1,14 @@
+{
+  "schema": "rp3_set_context_protocol_v1",
+  "seeds": [7042027, 7042028, 7042029],
+  "reference_root": "results/experiments/research_point_3/field_normalization_v1",
+  "output_root": "results/experiments/research_point_3/set_context_v1",
+  "diagnostic_protocol": "configs/research_point_3/diagnostics_v1.json",
+  "arms": {"S0": "local_residual", "S1": "set_residual"},
+  "required_comparisons": ["S1_vs_C0", "S1_vs_S0"],
+  "support_threshold": 0.5,
+  "development_attached": false,
+  "external_evaluation_allowed": false,
+  "deployment_allowed": false,
+  "stop_architecture_search_if_rule_fails": true
+}

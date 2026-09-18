@@ -1,0 +1,15 @@
+{
+  "schema": "rp3_head_ablation_protocol_v1",
+  "base_config": "configs/research_point_3/lec_train_augmented_v1.json",
+  "seeds": [7042027, 7042028, 7042029],
+  "arms": {
+    "A1": {"decoder": "rank_only", "loss_weights": {"ranking": 1.0, "support": 0.0, "field_state": 0.0, "cardinality": 0.0, "route": 0.0, "intervention": 0.0, "calibration": 0.0}},
+    "A2": {"decoder": "rank_support", "loss_weights": {"ranking": 1.0, "support": 1.0, "field_state": 0.0, "cardinality": 0.0, "route": 0.0, "intervention": 0.0, "calibration": 0.0}},
+    "A3": {"decoder": "full_local", "loss_weights": {"ranking": 1.0, "support": 1.0, "field_state": 0.6, "cardinality": 0.6, "route": 0.0, "intervention": 0.0, "calibration": 0.0}},
+    "A4": {"decoder": "full", "bootstrap_reuse": "A3", "route_fit": true}
+  },
+  "output_root": "results/experiments/research_point_3/head_ablation_v1",
+  "diagnostic_protocol": "configs/research_point_3/diagnostics_v1.json",
+  "development_attached": false,
+  "deployment_allowed": false
+}

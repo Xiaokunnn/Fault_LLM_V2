@@ -9,7 +9,7 @@ RUN="${RP3_RUN_DIR:-results/experiments/research_point_3/lec_v1}"
 stage="${1:-help}"
 case "$stage" in
   help|-h|--help)
-    echo 'Stages: preflight teacher-smoke teacher mp008 features augment train route export quantize calibrate evaluate all'
+    echo 'Stages: preflight teacher-smoke teacher mp008 features augment train route export quantize calibrate diagnose evaluate all'
     echo 'Use a model-capable Linux server. Teacher requires the frozen Qwen2.5-7B and BGE-M3.'
     echo 'all is a sequential first run, not an overwrite/resume switch for training.'
     ;;
@@ -34,6 +34,7 @@ case "$stage" in
   export) "$PYTHON" -u scripts/export_rp3_onnx.py --training-manifest "$RUN/routed/training_manifest.json" --memory-manifest "$BUNDLE/evidence_memory/training/manifest.json" --output-dir "$RUN/onnx" --calibration-config "$CONFIG" ;;
   quantize) "$PYTHON" -u scripts/quantize_rp3_onnx.py --export-dir "$RUN/onnx" ;;
   calibrate) "$PYTHON" -u scripts/calibrate_rp3_thresholds.py --config "$CONFIG" --export-dir "$RUN/onnx" ;;
+  diagnose) "$PYTHON" -u scripts/diagnose_rp3_lec.py --config "$CONFIG" --export-dir "$RUN/onnx" --output-dir "${RP3_DIAGNOSTIC_DIR:-$RUN/diagnostics_v1}" ;;
   evaluate) "$PYTHON" -u scripts/evaluate_rp3_lec.py --config "$CONFIG" --export-dir "$RUN/onnx" --output-dir "$RUN/evaluation" ;;
   all)
     for next in preflight teacher mp008 features train route export quantize calibrate evaluate; do

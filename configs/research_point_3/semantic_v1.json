@@ -1,0 +1,23 @@
+{
+  "schema": "rp3_semantic_protocol_v1",
+  "seeds": [7042027, 7042028, 7042029],
+  "arms": ["H512", "E1"],
+  "reference_root": "results/experiments/research_point_3/field_normalization_v1",
+  "output_root": "results/experiments/research_point_3/semantic_v1",
+  "diagnostic_protocol": "configs/research_point_3/diagnostics_v1.json",
+  "encoder_directory": "data/model/BAAI-bge-small-zh-v1.5-r7999e1d",
+  "encoder_id": "BAAI/bge-small-zh-v1.5",
+  "encoder_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "query_dimension": 512,
+  "evidence_dimension": 544,
+  "encoding_batch_size": 16,
+  "support_threshold": 0.5,
+  "maximum_total_parameters": 50000000,
+  "required_comparisons": ["E1_vs_C0", "E1_vs_H512"],
+  "quality_checks": ["pointer_f1_strictly_improved", "support_recall_not_lower", "decoded_empty_not_higher", "decoded_cardinality_not_lower", "all_seed_false_fill_safeguards", "negative_false_accept_not_higher", "oracle_correct_mean_strictly_improved", "oracle_correct_each_seed_not_lower"],
+  "cost": {"seed": 7042027, "threads": 1, "warmup": 5, "repeats": 30, "scope": "query_encoding_cached_candidate_assembly_controller_decode_cpu_fp32"},
+  "development_attached": false,
+  "external_evaluation_allowed": false,
+  "deployment_allowed": false,
+  "stop_semantic_search_if_rule_fails": true
+}

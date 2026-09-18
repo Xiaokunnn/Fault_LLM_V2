@@ -539,6 +539,13 @@ class TensorizedTeacherDataset(Dataset):
             "support_labels": support_labels,
             "field_state_labels": field_states,
             "cardinality_labels": cardinalities,
+            "requested_field_mask": torch.tensor(
+                [role == trace.query.requested_role for role in CARD_SLOT_ROLES], dtype=torch.bool
+            ),
+            "requested_candidate_mask": torch.tensor(
+                [bool(eid) and self.records[eid].role == trace.query.requested_role for eid in candidate_ids],
+                dtype=torch.bool
+            ),
             "route_labels": route_label,
             "route_action_costs": torch.tensor(route_costs, dtype=torch.float32),
         }
@@ -559,6 +566,8 @@ def collate_teacher_batch(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         "support_labels",
         "field_state_labels",
         "cardinality_labels",
+        "requested_field_mask",
+        "requested_candidate_mask",
         "route_labels",
         "route_action_costs",
     )
@@ -578,6 +587,7 @@ def collate_teacher_batch(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
         support_labels=result["support_labels"],
         field_state_labels=result["field_state_labels"],
         cardinality_labels=result["cardinality_labels"],
+        requested_field_mask=result["requested_field_mask"],
         route_labels=result["route_labels"],
         route_action_costs=result["route_action_costs"],
     )
