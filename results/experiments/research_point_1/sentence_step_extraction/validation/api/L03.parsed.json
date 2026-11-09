@@ -1,0 +1,213 @@
+{
+  "records": [
+    {
+      "unit": "u8",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "滑环（套在轴上）",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "用手将滑环推过轴",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u9",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "滑环",
+      "relation": "maintained_by",
+      "tail_id": "5",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果橡胶波纹管过紧，使用安装工具并注意不要损坏滑环",
+      "conditions": [
+        {
+          "id": "6",
+          "zh": "如果橡胶波纹管过紧"
+        },
+        {
+          "id": "7",
+          "zh": "注意不要损坏滑环"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u10",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "碳环",
+      "relation": "inspected_by",
+      "tail_id": "6",
+      "tail_type": "InspectionAction",
+      "tail_zh": "如果碳环未固定，检查其是否正确安装，即倒角/研磨面应朝向阀座",
+      "conditions": [
+        {
+          "id": "7",
+          "zh": "如果碳环未固定"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u11",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "碳环",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "用少量润滑脂固定碳环",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "波纹管",
+      "relation": "maintained_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在轴上使用硅脂时，波纹管将在约15分钟内沉降并就位，在此之前不应期望密封性",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "在轴上使用硅脂时"
+        },
+        {
+          "id": "9",
+          "zh": "在此之前不应期望密封性"
+        }
+      ],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u13",
+      "head_id": "2",
+      "head_type": "FaultMode",
+      "head_zh": "泄漏",
+      "relation": "inspected_by",
+      "tail_id": "4",
+      "tail_type": "InspectionAction",
+      "tail_zh": "启动后通过观察泄漏孔检查是否有泄漏",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "启动后"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u14",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "泵轴",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "将泵轴安装在电机轴上并检查跳动是否在0.07 mm公差范围内合格",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "检查跳动是否在0.07 mm公差范围内合格"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u15",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "电机支架",
+      "relation": "maintained_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "对于Ø215/265，将电机支架和轴封(10)安装到带轴的电动机上",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u15",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "轴封(10)",
+      "relation": "maintained_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "对于Ø215/265，将电机支架和轴封(10)安装到带轴的电动机上",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "scopes_zh": {
+    "s1": "组装泵组",
+    "s2": "适用于NSL350-525，固定密封环(27)并",
+    "s3": "10.2.2. 安装轴封",
+    "s4": "对于带有平衡轴封类型ELK的泵（铭牌泵代码中包含“-L”），请",
+    "s5": "组装泵组",
+    "s6": "10.2.3. 安装叶轮"
+  },
+  "missing": [
+    {
+      "unit": "u16",
+      "reason": "Source text contains only manufacturer address and contact information, no pump system knowledge."
+    },
+    {
+      "unit": "u17",
+      "reason": "Source text contains only manufacturer email and website, no pump system knowledge."
+    },
+    {
+      "unit": "u20",
+      "reason": "Source text is fragmented noise characters with no meaningful pump knowledge."
+    },
+    {
+      "unit": "u21",
+      "reason": "Duplicate source_only unit of u8; knowledge already extracted from u8."
+    },
+    {
+      "unit": "u22",
+      "reason": "Incomplete sentence fragment; full context already extracted from u9."
+    },
+    {
+      "unit": "u23",
+      "reason": "Incomplete sentence fragment; full context already extracted from u9."
+    },
+    {
+      "unit": "u24",
+      "reason": "Incomplete sentence fragment; full context already extracted from u10."
+    },
+    {
+      "unit": "u25",
+      "reason": "Source text is fragmented noise characters with no meaningful pump knowledge."
+    },
+    {
+      "unit": "u26",
+      "reason": "Incomplete sentence fragment; full context already extracted from u12."
+    },
+    {
+      "unit": "u27",
+      "reason": "Incomplete sentence fragment; full context already extracted from u13."
+    }
+  ]
+}

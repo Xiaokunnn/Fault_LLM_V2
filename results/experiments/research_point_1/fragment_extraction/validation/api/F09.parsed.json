@@ -1,0 +1,296 @@
+{
+  "catalog_sha256": "4663f949569069159391b9ed3bbd80fcafbde62dcc0a818716e115b1584c4388",
+  "records": [
+    {
+      "head": [
+        "E007",
+        "Component",
+        "自动透气管头"
+      ],
+      "relation": "contains",
+      "tail": [
+        "E006",
+        "Component",
+        "内腔和外腔"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P006"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E010",
+        "Component",
+        "透气管头"
+      ],
+      "relation": "inspected_by",
+      "tail": [
+        "A005",
+        "InspectionAction",
+        "每种类型和尺寸的透气口自动关闭装置应在制造厂或其他可接受地点进行检验和型式试验"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P036"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E010",
+        "Component",
+        "透气管头"
+      ],
+      "relation": "operates_under",
+      "tail": [
+        "C001",
+        "OperatingCondition",
+        "在任何单项试验期间，每个循环的最大允许泄漏量不得超过进水管公称直径的2 ml/mm（1.312 x 10-2 gal/in.）"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P029",
+        "P031"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "condition_names": {
+    "C001": "在任何单项试验期间，每个循环的最大允许泄漏量不得超过进水管公称直径的2 ml/mm（1.312 x 10-2 gal/in.）",
+    "C002": "流速应以恒定速率逐渐施加，直至浮子被吸入并阻断流动",
+    "C003": "在预处理前后应对浮子进行冲击和压缩载荷试验，试验温度如下：°C (°F)",
+    "C004": "试验条件：干燥（是/是/是），浸水后（是/是/是），浸燃油后（不适用/是/不适用）；在水和燃油中的浸泡时间应至少为48小时",
+    "C005": "施加全载荷后",
+    "C006": "挠度随时间的记录应显示挠度无持续增加，且在释放载荷后不应出现永久挠度"
+  },
+  "unrepresented_source": [
+    {
+      "paragraph_id": "P004",
+      "reason": "Requirement to provide suitable guides for float-type vent outlet closing devices is a design/installation specification not representable as a pump-system relation with available ontology types"
+    },
+    {
+      "paragraph_id": "P005",
+      "reason": "Wall thickness tolerance specification for floats is a dimensional requirement, not a supported relation type"
+    },
+    {
+      "paragraph_id": "P007",
+      "reason": "Side cover minimum wall thickness requirement is a dimensional specification, not a supported relation type"
+    },
+    {
+      "paragraph_id": "P008",
+      "reason": "Conditional acceptance of side covers less than 6 mm based on tightness test is a complex conditional manufacturing rule without direct relation mapping"
+    },
+    {
+      "paragraph_id": "P009",
+      "reason": "Material and corrosion protection requirements for casings are material specifications, not directly mappable to the allowed relations"
+    },
+    {
+      "paragraph_id": "P010",
+      "reason": "Zinc coating application method and thickness for galvanized steel air pipe heads are manufacturing specifications"
+    },
+    {
+      "paragraph_id": "P011",
+      "reason": "Recommendation for additional harder coating in erosion-susceptible areas is a material/coating specification"
+    },
+    {
+      "paragraph_id": "P012",
+      "reason": "Specification of aluminum bearing epoxy or equivalent coating over zinc is a material requirement"
+    },
+    {
+      "paragraph_id": "P013",
+      "reason": "Compatibility and temperature range requirements for non-metallic closures and seats are material specifications"
+    },
+    {
+      "paragraph_id": "P014",
+      "reason": "Section heading for type testing, no extractable relation"
+    },
+    {
+      "paragraph_id": "P015",
+      "reason": "Duplicate/similar type testing location requirement already captured via A005/P036"
+    },
+    {
+      "paragraph_id": "P016",
+      "reason": "Detailed minimum test requirements including flow characteristics, pressure drop measurement, and immersion tightness test procedures are complex inspection protocols not fully representable as single relations"
+    },
+    {
+      "paragraph_id": "P017",
+      "reason": "Instruction to record leakage quantity is a procedural step within testing, not an independent relation"
+    },
+    {
+      "paragraph_id": "P018",
+      "reason": "Submersion procedure detail is part of the test protocol described in P016"
+    },
+    {
+      "paragraph_id": "P019",
+      "reason": "Submerging velocity and duration parameters are test conditions within the protocol of P016"
+    },
+    {
+      "paragraph_id": "P020",
+      "reason": "Instruction to record leakage quantity is a procedural step within testing"
+    },
+    {
+      "paragraph_id": "P021",
+      "reason": "Test position requirements (normal and 40 degrees inclination) are test procedure details"
+    },
+    {
+      "paragraph_id": "P022",
+      "reason": "Additional test orientation requirements when strictest conditions are unclear are test procedure details"
+    },
+    {
+      "paragraph_id": "P023",
+      "reason": "Reference to figures, no extractable relation"
+    },
+    {
+      "paragraph_id": "P024",
+      "reason": "Document title heading, scope only"
+    },
+    {
+      "paragraph_id": "P025",
+      "reason": "Page footer text, no pump knowledge"
+    },
+    {
+      "paragraph_id": "P026",
+      "reason": "Document structure heading, scope only"
+    },
+    {
+      "paragraph_id": "P027",
+      "reason": "Document structure heading, scope only"
+    },
+    {
+      "paragraph_id": "P028",
+      "reason": "Document structure heading, scope only"
+    },
+    {
+      "paragraph_id": "P030",
+      "reason": "Section heading for discharge/reverse flow test, no extractable relation"
+    },
+    {
+      "paragraph_id": "P031",
+      "reason": "Functional requirement for air passage to prevent vacuum is an operating principle, not directly a relation between defined entities"
+    },
+    {
+      "paragraph_id": "P032",
+      "reason": "Statement that reverse flow test shall be performed is a test requirement without specific target entity linkage beyond context"
+    },
+    {
+      "paragraph_id": "P033",
+      "reason": "Test setup instruction to connect vacuum pump is a procedural step, not a maintenance action on equipment"
+    },
+    {
+      "paragraph_id": "P034",
+      "reason": "Test procedure for applying flow velocity until float blocks flow is a test condition/procedure detail"
+    },
+    {
+      "paragraph_id": "P035",
+      "reason": "Recording blocking velocity and certificate statement is a test documentation requirement"
+    },
+    {
+      "paragraph_id": "P037",
+      "reason": "Section heading for testing of nonmetallic floats, no extractable relation"
+    },
+    {
+      "paragraph_id": "P038",
+      "reason": "Test temperature matrix header, procedural context for C003"
+    },
+    {
+      "paragraph_id": "P039",
+      "reason": "Test temperature value -25°C, used as shared topic S002"
+    },
+    {
+      "paragraph_id": "P040",
+      "reason": "Test temperature value 20°C, used as shared topic S003"
+    },
+    {
+      "paragraph_id": "P041",
+      "reason": "Test temperature value 85°C, used as shared topic S004"
+    },
+    {
+      "paragraph_id": "P042",
+      "reason": "Test condition matrix and immersion duration requirement are test procedure specifications represented by C004"
+    },
+    {
+      "paragraph_id": "P043",
+      "reason": "Impact test heading, scope only"
+    },
+    {
+      "paragraph_id": "P044",
+      "reason": "Pendulum testing machine suggestion is a test equipment recommendation, not a relation"
+    },
+    {
+      "paragraph_id": "P045",
+      "reason": "Impact test parameters (5 impacts of 2.5 N-m) and pass criteria are test specifications"
+    },
+    {
+      "paragraph_id": "P046",
+      "reason": "Subsequent impact test parameters (5 impacts of 25 N-m) are test specifications"
+    },
+    {
+      "paragraph_id": "P047",
+      "reason": "Allowance for localized surface damage at higher impact energy is a test acceptance criterion"
+    },
+    {
+      "paragraph_id": "P048",
+      "reason": "No permanent deformation or cracking requirement is a test pass criterion"
+    },
+    {
+      "paragraph_id": "P049",
+      "reason": "Compression loading test heading, scope only"
+    },
+    {
+      "paragraph_id": "P050",
+      "reason": "Compression test mounting procedure is a test setup specification represented by A006 but lacks clear target-page evidence paragraph for the action itself beyond P050 which is the definition"
+    },
+    {
+      "paragraph_id": "P051",
+      "reason": "Ball type float load application procedure is a test specification"
+    },
+    {
+      "paragraph_id": "P052",
+      "reason": "Disc type float load application procedure is a test specification"
+    },
+    {
+      "paragraph_id": "P053",
+      "reason": "Load magnitude and application time are test parameters"
+    },
+    {
+      "paragraph_id": "P054",
+      "reason": "Load maintenance duration is a test parameter"
+    },
+    {
+      "paragraph_id": "P055",
+      "reason": "Deflection measurement interval is a test procedure step"
+    },
+    {
+      "paragraph_id": "P056",
+      "reason": "Deflection record criteria is a test pass criterion represented by C006"
+    },
+    {
+      "paragraph_id": "P057",
+      "reason": "Metallic floats testing heading, scope only"
+    },
+    {
+      "paragraph_id": "P058",
+      "reason": "Impact test conditions for metallic floats (room temperature, dry) are test specifications"
+    },
+    {
+      "paragraph_id": "P059",
+      "reason": "Document title heading, scope only"
+    },
+    {
+      "paragraph_id": "P060",
+      "reason": "Page footer text, no pump knowledge"
+    }
+  ],
+  "coverage_note": "This page primarily contains detailed material, dimensional, and type-testing specifications for vent outlet automatic closing devices, air pipe heads, and floats in marine piping systems. Most content consists of test procedures, acceptance criteria, and manufacturing tolerances which do not map to the allowed pump-system relationship types. Only three relations were extracted: a containment relation for the air pipe head chambers, an inspection relation linking the air pipe head to its type testing action, and an operating condition for maximum allowable leakage. The extensive test protocols (impact, compression, tightness, reverse flow) are represented as unrepresented source because they are procedural specifications rather than maintainable/operational relationships between pump system entities."
+}

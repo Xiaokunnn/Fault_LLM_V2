@@ -1,0 +1,64 @@
+{
+  "status": "completed_offline_expansion_and_AI_sample_comparison",
+  "sample_n": 80,
+  "labels": {
+    "S": "source-supported / context-qualified usable under the indicated column",
+    "E": "observed representation, scope or binding defect",
+    "U": "unresolved from attached evidence"
+  },
+  "rubric": "Support checks endpoints, direction, polarity, Chinese meaning and semantic types against full source page. Usable also requires local applicability/critical action conditions in attached evidence/context; a page pointer alone is insufficient. Atomic method associations need not reproduce a full procedure.",
+  "limitations": [
+    "unblinded single-AI judgments; not expert accuracy or independent evaluation",
+    "build-corpus record samples, correlated within pages; not external generalization",
+    "no page reference inventory; no recall claim",
+    "only a sample is adjudicated; none removed or repaired after review"
+  ],
+  "sample_sha256": "7b129a20389e4a17fbb9a6605230c79bf7d9ff60103f744d1b4d16fc7e2e43cd",
+  "graph_freeze_sha256": "479b4ca0f9ca672609c77adaa8c6fd39dc30c34185cb5085b018cf97dd900c6d",
+  "baseline": {
+    "source_support": {
+      "S": 36,
+      "U": 1,
+      "E": 3
+    },
+    "context_qualified_usable": {
+      "U": 4,
+      "S": 23,
+      "E": 13
+    },
+    "n": 40
+  },
+  "added": {
+    "source_support": {
+      "S": 38,
+      "E": 2
+    },
+    "context_qualified_usable": {
+      "S": 26,
+      "U": 3,
+      "E": 11
+    },
+    "n": 40
+  },
+  "paired_original": {
+    "source_support": {
+      "S": 38,
+      "E": 2
+    },
+    "usable": {
+      "E": 22,
+      "S": 15,
+      "U": 3
+    }
+  },
+  "paired_usable_transitions": {
+    "E->S": 11,
+    "S->S": 15,
+    "U->U": 3,
+    "E->E": 11
+  },
+  "weighted_expanded_source_support_S_fraction": 0.9044642857142858,
+  "weighted_expanded_context_qualified_usable_S_fraction": 0.5816964285714286,
+  "estimated_added_context_qualified_records": 84.5,
+  "estimated_added_note": "Sample-weighted estimate, not a count of verified records; no claim-level estimate."
+}

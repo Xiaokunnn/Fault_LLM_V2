@@ -1,0 +1,926 @@
+{
+  "catalog_sha256": "d802f4e258ed30c1a7858dee04e4e25c753880456def06c7177339926c65d28b",
+  "conditions": [
+    {
+      "condition_id": "C0001",
+      "kind": "prerequisite",
+      "canonical_zh": "使用工具进行装配时",
+      "evidence": [
+        {
+          "unit_id": "U0031",
+          "start": 2,
+          "end": 11
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0002",
+          "binding_evidence": [
+            {
+              "unit_id": "U0031",
+              "start": 2,
+              "end": 11
+            }
+          ]
+        },
+        {
+          "record_id": "R0003",
+          "binding_evidence": [
+            {
+              "unit_id": "U0031",
+              "start": 2,
+              "end": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "C0002",
+      "kind": "exception",
+      "canonical_zh": "橡胶波纹管过紧时",
+      "evidence": [
+        {
+          "unit_id": "U0038",
+          "start": 13,
+          "end": 19
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0006",
+          "binding_evidence": [
+            {
+              "unit_id": "U0038",
+              "start": 13,
+              "end": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "C0003",
+      "kind": "local_antecedent",
+      "canonical_zh": "碳环未固定时",
+      "evidence": [
+        {
+          "unit_id": "U0040",
+          "start": 13,
+          "end": 20
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0008",
+          "binding_evidence": [
+            {
+              "unit_id": "U0040",
+              "start": 13,
+              "end": 22
+            }
+          ]
+        },
+        {
+          "record_id": "R0009",
+          "binding_evidence": [
+            {
+              "unit_id": "U0040",
+              "start": 13,
+              "end": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "C0004",
+      "kind": "procedure_phase",
+      "canonical_zh": "在轴上使用硅脂后约15分钟内",
+      "evidence": [
+        {
+          "unit_id": "U0044",
+          "start": 2,
+          "end": 19
+        },
+        {
+          "unit_id": "U0046",
+          "start": 0,
+          "end": 10
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0011",
+          "binding_evidence": [
+            {
+              "unit_id": "U0044",
+              "start": 2,
+              "end": 19
+            },
+            {
+              "unit_id": "U0046",
+              "start": 0,
+              "end": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "C0005",
+      "kind": "procedure_phase",
+      "canonical_zh": "启动后",
+      "evidence": [
+        {
+          "unit_id": "U0046",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0012",
+          "binding_evidence": [
+            {
+              "unit_id": "U0046",
+              "start": 11,
+              "end": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "C0006",
+      "kind": "applicability",
+      "canonical_zh": "适用于Ø215/265叶轮",
+      "evidence": [
+        {
+          "unit_id": "U0016",
+          "start": 0,
+          "end": 3
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R0013",
+          "binding_evidence": [
+            {
+              "unit_id": "U0016",
+              "start": 0,
+              "end": 3
+            }
+          ]
+        },
+        {
+          "record_id": "R0014",
+          "binding_evidence": [
+            {
+              "unit_id": "U0016",
+              "start": 0,
+              "end": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "record_id": "R0001",
+      "head": {
+        "canonical_zh": "泵组",
+        "type": "Equipment",
+        "spans": [
+          {
+            "unit_id": "U0000",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      },
+      "relation": "contains",
+      "tail": {
+        "canonical_zh": "叶轮",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0048",
+            "start": 12,
+            "end": 13
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0000",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "unit_id": "U0048",
+          "start": 12,
+          "end": 13
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "descriptive",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0002",
+      "head": {
+        "canonical_zh": "座滑动面",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0031",
+            "start": 14,
+            "end": 17
+          },
+          {
+            "unit_id": "U0033",
+            "start": 0,
+            "end": 1
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "保护滑动面",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0031",
+            "start": 13,
+            "end": 19
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0031",
+          "start": 13,
+          "end": 19
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0001"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0003",
+      "head": {
+        "canonical_zh": "座",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0031",
+            "start": 18,
+            "end": 19
+          }
+        ]
+      },
+      "relation": "mitigated_by",
+      "tail": {
+        "canonical_zh": "保护滑动面",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0031",
+            "start": 13,
+            "end": 19
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0031",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "unit_id": "U0033",
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0001"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0004",
+      "head": {
+        "canonical_zh": "滑环橡胶波纹管内表面",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0033",
+            "start": 11,
+            "end": 17
+          },
+          {
+            "unit_id": "U0034",
+            "start": 0,
+            "end": 2
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "涂抹薄层硅脂润滑",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0033",
+            "start": 10,
+            "end": 11
+          },
+          {
+            "unit_id": "U0034",
+            "start": 3,
+            "end": 9
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0033",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "unit_id": "U0034",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0005",
+      "head": {
+        "canonical_zh": "滑环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0035",
+            "start": 5,
+            "end": 8
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "推过轴",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0035",
+            "start": 5,
+            "end": 10
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0035",
+          "start": 5,
+          "end": 10
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0006",
+      "head": {
+        "canonical_zh": "滑环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0038",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "使用装配工具推过轴",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0038",
+            "start": 20,
+            "end": 22
+          },
+          {
+            "unit_id": "U0040",
+            "start": 0,
+            "end": 2
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0038",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "unit_id": "U0040",
+          "start": 0,
+          "end": 2
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "conditional",
+      "scope": "primary",
+      "condition_ids": [
+        "C0002"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0007",
+      "head": {
+        "canonical_zh": "橡胶波纹管",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0035",
+            "start": 14,
+            "end": 17
+          },
+          {
+            "unit_id": "U0036",
+            "start": 8,
+            "end": 11
+          }
+        ]
+      },
+      "relation": "mitigated_by",
+      "tail": {
+        "canonical_zh": "使用锥形装配衬套",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0035",
+            "start": 11,
+            "end": 18
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0035",
+          "start": 11,
+          "end": 18
+        },
+        {
+          "unit_id": "U0036",
+          "start": 5,
+          "end": 13
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "recommended",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0008",
+      "head": {
+        "canonical_zh": "碳环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0040",
+            "start": 15,
+            "end": 17
+          },
+          {
+            "unit_id": "U0041",
+            "start": 4,
+            "end": 5
+          }
+        ]
+      },
+      "relation": "inspected_by",
+      "tail": {
+        "canonical_zh": "检查安装方向是否正确",
+        "type": "InspectionAction",
+        "spans": [
+          {
+            "unit_id": "U0041",
+            "start": 1,
+            "end": 8
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0040",
+          "start": 21,
+          "end": 22
+        },
+        {
+          "unit_id": "U0041",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0003"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0009",
+      "head": {
+        "canonical_zh": "碳环倒角/研磨面",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0041",
+            "start": 13,
+            "end": 18
+          }
+        ]
+      },
+      "relation": "located_in",
+      "tail": {
+        "canonical_zh": "面向座侧",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0041",
+            "start": 19,
+            "end": 23
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0041",
+          "start": 13,
+          "end": 23
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0003"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0010",
+      "head": {
+        "canonical_zh": "碳环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0042",
+            "start": 1,
+            "end": 3
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "用少量油脂固定",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0042",
+            "start": 3,
+            "end": 10
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0042",
+          "start": 3,
+          "end": 10
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "possible",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0011",
+      "head": {
+        "canonical_zh": "密封性",
+        "type": "OperatingCondition",
+        "spans": [
+          {
+            "unit_id": "U0046",
+            "start": 5,
+            "end": 6
+          }
+        ]
+      },
+      "relation": "prevented_by",
+      "tail": {
+        "canonical_zh": "等待约15分钟使波纹管沉降就位",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0044",
+            "start": 11,
+            "end": 16
+          },
+          {
+            "unit_id": "U0046",
+            "start": 0,
+            "end": 1
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0044",
+          "start": 10,
+          "end": 19
+        },
+        {
+          "unit_id": "U0046",
+          "start": 0,
+          "end": 10
+        }
+      ],
+      "polarity": "negative",
+      "negation_evidence": [
+        {
+          "unit_id": "U0046",
+          "start": 5,
+          "end": 10
+        }
+      ],
+      "modality": "descriptive",
+      "scope": "primary",
+      "condition_ids": [
+        "C0004"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0012",
+      "head": {
+        "canonical_zh": "泄漏孔",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0047",
+            "start": 0,
+            "end": 2
+          }
+        ]
+      },
+      "relation": "inspected_by",
+      "tail": {
+        "canonical_zh": "目视检查无泄漏",
+        "type": "InspectionAction",
+        "spans": [
+          {
+            "unit_id": "U0046",
+            "start": 14,
+            "end": 17
+          },
+          {
+            "unit_id": "U0047",
+            "start": 2,
+            "end": 7
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0046",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "unit_id": "U0047",
+          "start": 0,
+          "end": 7
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0005"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0013",
+      "head": {
+        "canonical_zh": "泵组",
+        "type": "Equipment",
+        "spans": [
+          {
+            "unit_id": "U0000",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      },
+      "relation": "contains",
+      "tail": {
+        "canonical_zh": "平键",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0048",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0000",
+          "start": 0,
+          "end": 3
+        },
+        {
+          "unit_id": "U0048",
+          "start": 4,
+          "end": 6
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "descriptive",
+      "scope": "primary",
+      "condition_ids": [
+        "C0006"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0014",
+      "head": {
+        "canonical_zh": "叶轮",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0048",
+            "start": 12,
+            "end": 13
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "tail": {
+        "canonical_zh": "用垫圈和螺母固定",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0048",
+            "start": 20,
+            "end": 33
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0048",
+          "start": 20,
+          "end": 33
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "C0006"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R0015",
+      "head": {
+        "canonical_zh": "硅脂",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0034",
+            "start": 7,
+            "end": 9
+          }
+        ]
+      },
+      "relation": "increases_risk_of",
+      "tail": {
+        "canonical_zh": "滑面污染",
+        "type": "Risk",
+        "spans": [
+          {
+            "unit_id": "U0034",
+            "start": 12,
+            "end": 17
+          },
+          {
+            "unit_id": "U0035",
+            "start": 0,
+            "end": 3
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "unit_id": "U0034",
+          "start": 9,
+          "end": 18
+        },
+        {
+          "unit_id": "U0035",
+          "start": 0,
+          "end": 3
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "conditional",
+      "scope": "primary",
+      "condition_ids": [],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    }
+  ],
+  "coverage_note": "Scanned all target units on page 108 (U0000-U0027, U0028, U0030-U0048). Page 107 units (U0050-U0083) are context only and not extracted as targets. Extracted assembly relations for seat protection, slide ring lubrication/installation, carbon ring orientation check, silicone grease settling time, post-start leak inspection, and impeller fitting. Footer/address tokens (U0021-U0027) are out of scope. Table margin label fragments (U0030, U0037, U0043) contain no extractable relations."
+}

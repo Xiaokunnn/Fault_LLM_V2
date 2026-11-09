@@ -1,0 +1,220 @@
+{
+  "assertions": [
+    {
+      "head_surface": "bearing failure",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [
+        "insufficient lubricant in bearing housing",
+        "lubricant contaminated with dirt or moisture"
+      ],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Operation of the unit under these conditions will lead to impaired pump performance and possible bearing failure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "impaired pump performance",
+      "head_type": "Symptom",
+      "relation": "causes",
+      "tail_surface": "insufficient lubricant in bearing housing",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Operation of the unit under these conditions will lead to impaired pump performance and possible bearing failure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "impaired pump performance",
+      "head_type": "Symptom",
+      "relation": "causes",
+      "tail_surface": "lubricant is contaminated with dirt or moisture",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Operation of the unit under these conditions will lead to impaired pump performance and possible bearing failure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "bearings to overheat",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "excessive amount of lubricant",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Do not operate pump with excessive amount of lubricant. Such action will cause bearings to overheat.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "damage the bearings",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "Mixing of different greases or oils",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Mixing of different greases or oils and use of the wrong grease or oil will damage the bearings.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "damage the bearings",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "use of the wrong grease or oil",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Mixing of different greases or oils and use of the wrong grease or oil will damage the bearings.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "bearings",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "All pump bearings having grease lubrication are lubricated at the factory.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "bearings",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "bearing lubricant should be checked before starting",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "Model F Pumps",
+        "Grease Lubrication"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "However, bearing lubricant should be checked before starting.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "moisture is present",
+      "head_type": "Cause",
+      "relation": "mitigated_by",
+      "tail_surface": "bearings should be cleaned and grease applied",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "Model F Pumps",
+        "Grease Lubrication"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "If moisture is present, bearings should be cleaned and grease applied.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "bearings",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "refer to your specific assembly drawing to determine the specific type and location of bearings that are used",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "Before attempting to lubricate this unit"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Before attempting to lubricate this unit, refer to your specific assembly drawing to determine the specific type and location of bearings that are used.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "bearings",
+      "head_type": "Component",
+      "relation": "operates_under",
+      "tail_surface": "The bearings will accept grease while operating",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "The bearings will accept grease while operating.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "harmful overheating of bearings",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "Churning of the grease",
+      "tail_type": "FailureMechanism",
+      "conditions": [
+        "over lubricate"
+      ],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "DO NOT over lubricate. Churning of the grease may result in harmful overheating of bearings.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "recommended grease",
+      "head_type": "Standard",
+      "relation": "specified_by",
+      "tail_surface": "Table II",
+      "tail_type": "Standard",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Non-Clog Pump, Model F Pumps",
+      "evidence_text": "Slowly introduce recommended grease, per Table II into the bearings.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "The use of chlorinated solvents of any kind is not recommended in bearing cleaning.",
+      "reason": "Negative recommendation for a cleaning agent; no positive maintenance action to represent as an edge.",
+      "evidence_text": "The use of chlorinated solvents of any kind is not recommended in bearing cleaning.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Allow only experienced maintenance personnel to lubricate this unit.",
+      "reason": "Personnel qualification requirement, not representable as a defined relation between allowed node types.",
+      "evidence_text": "Allow only experienced maintenance personnel to lubricate this unit.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "If operating under favorable conditions that do not warrant frequent lubrication, the grease inlets should be equipped with plugs that are replaced with grease fittings only during lubrication.",
+      "reason": "Conditional equipment configuration recommendation; prerequisite condition not met unconditionally.",
+      "evidence_text": "If operating under favorable conditions that do not warrant frequent lubrication, the grease inlets should be equipped with plugs that are replaced with grease fittings only during lubrication.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "prompt_arm": "E0",
+    "checks": {
+      "complete_quantity_nondecreasing": true,
+      "coverage_strictly_increases": true,
+      "problem_plus_unknown_nondecreasing_safety": true,
+      "correct_knowledge_loss_not_worse": true,
+      "no_newly_corrupted_correct_core_released": true,
+      "coverage_gain_without_scope_promotion": true,
+      "background_control_no_primary_fill": true
+    },
+    "semantic_development_gate": "PASS",
+    "implementation_checks": "see verification.json; required separately"
+  },
+  {
+    "prompt_arm": "E1",
+    "checks": {
+      "complete_quantity_nondecreasing": true,
+      "coverage_strictly_increases": true,
+      "problem_plus_unknown_nondecreasing_safety": true,
+      "correct_knowledge_loss_not_worse": true,
+      "no_newly_corrupted_correct_core_released": false,
+      "coverage_gain_without_scope_promotion": true,
+      "background_control_no_primary_fill": true
+    },
+    "semantic_development_gate": "FAIL",
+    "implementation_checks": "see verification.json; required separately"
+  }
+]

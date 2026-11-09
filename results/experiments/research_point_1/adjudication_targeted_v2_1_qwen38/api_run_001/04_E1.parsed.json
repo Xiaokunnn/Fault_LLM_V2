@@ -1,0 +1,454 @@
+{
+  "assertions": [
+    {
+      "head_surface": "pump",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "60hz motor",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The pump may run with 60hz motor. The flow, head and power of the pump running at 60hz will be changed.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "60hz",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "flow, head and power of the pump running at 60hz will be changed",
+      "tail_type": "Symptom",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The flow, head and power of the pump running at 60hz will be changed.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump",
+      "head_type": "Equipment",
+      "relation": "inspected_by",
+      "tail_surface": "confirm that the pump is shut off",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "Before maintenance"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "Before maintenance, confirm that the pump is shut off so as to avoid accident.",
+      "evidence_unit_ids": [
+        "MP007:p0015:t01:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "Pump bearing",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "require no maintenance",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "Pump bearing and shaft seal require no maintenance.",
+      "evidence_unit_ids": [
+        "MP007:p0015:t01:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "shaft seal",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "require no maintenance",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "Pump bearing and shaft seal require no maintenance.",
+      "evidence_unit_ids": [
+        "MP007:p0015:t01:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "Motor bearing",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "motor without a nozzle",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The motor without a nozzle requires no maintenance.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Motor bearing",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "requires no maintenance",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "The motor without a nozzle"
+      ],
+      "modality": "asserted",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The motor without a nozzle requires no maintenance.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Motor bearing",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "motor with a nozzle (including motor above 11kW)",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The motor with a nozzle (including motor above 11kW) shall be lubricated with lubricant or similar high-temperature lithium base grease.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Motor bearing",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "lubricated with lubricant or similar high-temperature lithium base grease",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "The motor with a nozzle (including motor above 11kW)"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The motor with a nozzle (including motor above 11kW) shall be lubricated with lubricant or similar high-temperature lithium base grease.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Motor bearing",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "lubricate before starting the motor",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "seasonal running (motor shutdown for over 6 months)"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "In case of seasonal running (motor shutdown for over 6 months), lubricate before starting the motor.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "mechanical seal",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The mechanical seal is adjusted automatically. The contact surface of dynamic ring and static ring in the seal will be lubricated and cooled down by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "dynamic ring",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "seal",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The contact surface of dynamic ring and static ring in the seal will be lubricated and cooled down by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "static ring",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "seal",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The contact surface of dynamic ring and static ring in the seal will be lubricated and cooled down by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "contact surface of dynamic ring and static ring",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "lubricated and cooled down by the liquid conveyed by the pump",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The contact surface of dynamic ring and static ring in the seal will be lubricated and cooled down by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "sliding bearing",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The sliding bearing in the pump will be lubricated by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "sliding bearing",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "lubricated by the liquid conveyed by the pump",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The sliding bearing in the pump will be lubricated by the liquid conveyed by the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "freezing of the liquid conveyed by the pump",
+      "head_type": "Cause",
+      "relation": "increases_risk_of",
+      "tail_surface": "damage to the pump",
+      "tail_type": "Risk",
+      "conditions": [
+        "If the pump is installed at a place where it is likely to freeze"
+      ],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "If the pump is installed at a place where it is likely to freeze, proper quantity of antifreezing agent must be added so as to avoid damage to the pump due to freezing of the liquid conveyed by the pump.",
+      "evidence_unit_ids": [
+        "MP007:p0015:t02:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "freezing of the liquid conveyed by the pump",
+      "head_type": "Cause",
+      "relation": "prevented_by",
+      "tail_surface": "proper quantity of antifreezing agent must be added",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "If the pump is installed at a place where it is likely to freeze"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "If the pump is installed at a place where it is likely to freeze, proper quantity of antifreezing agent must be added so as to avoid damage to the pump due to freezing of the liquid conveyed by the pump.",
+      "evidence_unit_ids": [
+        "MP007:p0015:t02:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "pump out of service during a frost period",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "damage to the pump",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "If the pump is out of service during a frost period, you should drain the liquid inside it so as to avoid any damage to the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump out of service during a frost period",
+      "head_type": "OperatingCondition",
+      "relation": "mitigated_by",
+      "tail_surface": "drain the liquid inside it",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "If the pump is out of service during a frost period, you should drain the liquid inside it so as to avoid any damage to the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "liquid inside the pump",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "drained via the water injection hole at the pump head and the drainage hole at bottom",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "If the pump is out of service during a frost period"
+      ],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The liquid inside the pump may be drained via the water injection hole at the pump head and the drainage hole at bottom.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "water injection hole",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump head",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The liquid inside the pump may be drained via the water injection hole at the pump head and the drainage hole at bottom.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "drainage hole",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "bottom",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "The liquid inside the pump may be drained via the water injection hole at the pump head and the drainage hole at bottom.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "using the pump once again",
+      "head_type": "OperatingCondition",
+      "relation": "prevented_by",
+      "tail_surface": "firstly tighten the vent plug and drainage valve",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "When using the pump once again, firstly tighten the vent plug and drainage valve.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "replace the drainage valve",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "loosen the bypass valve, then unscrew the drain plug",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "When it is necessary to replace the drainage valve"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "When it is necessary to replace the drainage valve, you must loosen the bypass valve, then unscrew the drain plug (refer to Fig. 5).",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "install the drainage valve",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "firstly tighten the drain plug, then tighten the bypass valve",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical Multistage Centrifugal Pump",
+      "evidence_text": "If you want to install the drainage valve, firstly tighten the drain plug, then tighten the bypass valve.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "The pump may run with 60hz motor; consult DESMI for running at 60hz.",
+      "reason": "Consultation instruction not representable as a defined relation edge.",
+      "evidence_text": "As for running at 60hz, please consult DESMI.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "For more details on motor bearing lubrication, refer to instructions on the windscreen.",
+      "reason": "Reference to external documentation not representable as a defined relation edge.",
+      "evidence_text": "For more details, refer to instructions on the windscreen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Pay attention to safety of persons and objects during water drainage (cold or hot).",
+      "reason": "Safety warning not representable as a defined relation edge.",
+      "evidence_text": "Pay attention to safety of persons and objects during water drainage (cold or hot).",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Table MP007:p0015:t00 contains numerical data rows without column headers identifying physical meaning.",
+      "reason": "Unlabeled numeric table cannot be mapped to pump knowledge assertions.",
+      "evidence_text": "20 10.5 29 20 / 32 15 40 32 / 45 22 58 45 / 64 30 85 64 / 90 45 120 90 / 120 60 150 120 / 150 80 180 150 / 200 100 240 200",
+      "evidence_unit_ids": [
+        "MP007:p0015:t00:r000:c00",
+        "MP007:p0015:t00:r000:c01",
+        "MP007:p0015:t00:r000:c02",
+        "MP007:p0015:t00:r000:c03",
+        "MP007:p0015:t00:r001:c00",
+        "MP007:p0015:t00:r001:c01",
+        "MP007:p0015:t00:r001:c02",
+        "MP007:p0015:t00:r001:c03",
+        "MP007:p0015:t00:r002:c00",
+        "MP007:p0015:t00:r002:c01",
+        "MP007:p0015:t00:r002:c02",
+        "MP007:p0015:t00:r002:c03",
+        "MP007:p0015:t00:r003:c00",
+        "MP007:p0015:t00:r003:c01",
+        "MP007:p0015:t00:r003:c02",
+        "MP007:p0015:t00:r003:c03",
+        "MP007:p0015:t00:r004:c00",
+        "MP007:p0015:t00:r004:c01",
+        "MP007:p0015:t00:r004:c02",
+        "MP007:p0015:t00:r004:c03",
+        "MP007:p0015:t00:r005:c00",
+        "MP007:p0015:t00:r005:c01",
+        "MP007:p0015:t00:r005:c02",
+        "MP007:p0015:t00:r005:c03",
+        "MP007:p0015:t00:r006:c00",
+        "MP007:p0015:t00:r006:c01",
+        "MP007:p0015:t00:r006:c02",
+        "MP007:p0015:t00:r006:c03",
+        "MP007:p0015:t00:r007:c00",
+        "MP007:p0015:t00:r007:c01",
+        "MP007:p0015:t00:r007:c02",
+        "MP007:p0015:t00:r007:c03"
+      ]
+    }
+  ],
+  "unresolved": []
+}

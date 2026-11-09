@@ -1,0 +1,432 @@
+{
+  "assertions": [
+    {
+      "head_surface": "pump casing",
+      "head_type": "Component",
+      "relation": "contains",
+      "tail_surface": "plug",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Remove the plug at the top of the pump casing and fill the pump with cold liquid.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "shaft seal",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "self-priming centrifugal pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "The liquid also serves as coolant for the shaft seal.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "liquid",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "coolant for the shaft seal",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "The liquid also serves as coolant for the shaft seal.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "started before it has been primed with liquid",
+      "head_type": "Cause",
+      "relation": "increases_risk_of",
+      "tail_surface": "damage to the shaft seal",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Consequently, the pump must under no circumstances be started before it has been primed with liquid. Furthermore, the pump must never run dry.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "run dry",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "self-priming centrifugal pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Furthermore, the pump must never run dry.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "operate against closed discharge valve",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "damage to the pump",
+      "tail_type": "Risk",
+      "conditions": [
+        "max. 5 minutes",
+        "max. temperature of 80°C for standard pumps"
+      ],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80°C for standard pumps). Otherwise there is a risk of damage to the pump and, at worst, of a steam explosion.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "operate against closed discharge valve",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "steam explosion",
+      "tail_type": "Risk",
+      "conditions": [
+        "max. 5 minutes",
+        "max. temperature of 80°C for standard pumps"
+      ],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Otherwise there is a risk of damage to the pump and, at worst, of a steam explosion.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "safety device",
+      "head_type": "Component",
+      "relation": "mitigated_by",
+      "tail_surface": "installation of a safety device",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "If the pump is not monitored"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "If the pump is not monitored, the installation of a safety device is recommended.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "relief valve",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "self-priming centrifugal pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "To protect the pump against unintentional operation it is equipped with a relief valve which opens at a pre-set pressure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "unintentional operation",
+      "head_type": "Risk",
+      "relation": "mitigated_by",
+      "tail_surface": "relief valve",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "To protect the pump against unintentional operation it is equipped with a relief valve which opens at a pre-set pressure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "relief valve",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "maintenance of the relief valve - see paragraph 10",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "As regards maintenance of the relief valve - see paragraph 10.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "relief valve",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "check that the shaft rotates freely without jarring sounds",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "Before starting the pump"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Before starting the pump check that - the shaft rotates freely without jarring sounds. - the pump casing is filled with liquid.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump casing",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "check that the pump casing is filled with liquid",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "Before starting the pump"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Before starting the pump check that - the shaft rotates freely without jarring sounds. - the pump casing is filled with liquid.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "direction of rotation",
+      "head_type": "OperatingCondition",
+      "relation": "inspected_by",
+      "tail_surface": "Start the pump for a moment to check the direction of rotation",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Start the pump for a moment to check the direction of rotation. If the direction is correct (i.e. in the direction of the arrow), the pump may be started.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "considerably smaller delivery head than expected",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "increased power consumption",
+      "tail_type": "Symptom",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "considerably smaller delivery head than expected",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "cavitation",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "A considerably smaller delivery head than expected will increase the quantity of liquid delivered, causing increased power consumption and perhaps cavitation in pump and piping.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitation",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "perhaps cavitation in pump and piping.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitation",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "piping",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "perhaps cavitation in pump and piping.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitation",
+      "head_type": "FailureMechanism",
+      "relation": "causes",
+      "tail_surface": "heavy erosion",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion) which may at times render an impeller unfit for use in a very short time.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "heavy erosion",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "impeller",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "In the pump the impeller may show signs of heavy erosion caused by cavitation (corrosion)",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "heavy erosion",
+      "head_type": "FaultMode",
+      "relation": "evolves_to",
+      "tail_surface": "impeller unfit for use",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "which may at times render an impeller unfit for use in a very short time.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "erosions",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "pipe bends",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Not unusually do similar erosions occur in pipe bends and valves elsewhere in the piping system.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "erosions",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "valves",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Not unusually do similar erosions occur in pipe bends and valves elsewhere in the piping system.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "quantity of liquid delivered",
+      "head_type": "OperatingCondition",
+      "relation": "inspected_by",
+      "tail_surface": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "after start-up"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Therefore, after start-up, it is necessary to check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "power consumption",
+      "head_type": "SignalFeature",
+      "relation": "inspected_by",
+      "tail_surface": "measuring the current intensity of the connected motor",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "after start-up"
+      ],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "check either the quantity of liquid delivered or the power consumption of the pump e.g. by measuring the current intensity of the connected motor.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "quantity of water delivered",
+      "head_type": "OperatingCondition",
+      "relation": "inspected_by",
+      "tail_surface": "reading of the differential pressure",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Together with a reading of the differential pressure the quantity of water delivered can be determined against the characteristics of the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump not function as intended",
+      "head_type": "FaultMode",
+      "relation": "diagnosed_by",
+      "tail_surface": "fault-finding list",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "DESMI SA self-priming centrifugal pump",
+      "evidence_text": "Should the pump not function as intended, please proceed according to the fault-finding list.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "The relief valve must in no circumstances be removed or re-adjusted.",
+      "reason": "Prohibition on maintenance action; no direct relation target representable within the allowed schema.",
+      "evidence_text": "The relief valve must in no circumstances be removed or re-adjusted !",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "When the valve opens, the escaping liquid will be hot.",
+      "reason": "Safety warning about operating state; no specific relation target representable within the allowed schema.",
+      "evidence_text": "Be careful: When the valve opens, the escaping liquid will be hot.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "It is often difficult to calculate a manometric delivery head in advance.",
+      "reason": "General engineering context; no specific pump diagnostic relation representable.",
+      "evidence_text": "It is often difficult to calculate a manometric delivery head in advance.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "The majority of faults stem from the piping system.",
+      "reason": "Generic reliability statement without a specific named fault-mode-to-cause relation instance.",
+      "evidence_text": "Bear in mind, though, that the pump was carefully checked and tested at the factory and that the majority of faults stem from the piping system.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": [
+    {
+      "statement": "Fill the pump with cold liquid via the plug at the top of the pump casing.",
+      "reason": "Priming procedure described but no single allowed relation captures the full procedural sequence atomically without splitting prerequisites.",
+      "evidence_text": "Remove the plug at the top of the pump casing and fill the pump with cold liquid. Fit the plug and the pump is ready for service.",
+      "evidence_unit_ids": []
+    }
+  ]
+}

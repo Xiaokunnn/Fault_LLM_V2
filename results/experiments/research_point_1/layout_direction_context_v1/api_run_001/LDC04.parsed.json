@@ -1,0 +1,496 @@
+{
+  "assertions": [
+    {
+      "head_surface": "Pumpenkopf",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "Pumpen mit flexiblem Laufrad",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Zur Anpassung an die Installation kann der Pumpenkopf in verschiedene Positionen gedreht werden. Pumpen mit flexiblem Laufrad drehen gleichermaßen in beide Richtungen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Saug- und Druckanschlüsse",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "Pumpen mit flexiblem Laufrad",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Saug- und Druckanschlüsse sind von der Drehrichtung der Welle abhängig.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kraftübertragung zur Pumpenwelle",
+      "head_type": "OperatingCondition",
+      "relation": "occurs_at",
+      "tail_surface": "Pumpenwelle",
+      "tail_type": "Component",
+      "conditions": [
+        "Kopf-Kits"
+      ],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Kopf-Kits: Über einen Wellenadapter, der mit dem Motor gekoppelt ist.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kraftübertragung zur Pumpenwelle",
+      "head_type": "OperatingCondition",
+      "relation": "occurs_at",
+      "tail_surface": "Pumpenwelle",
+      "tail_type": "Component",
+      "conditions": [
+        "Sockelpumpen",
+        "Wenn die Drehzahl des Synchronmotors auf die erforderliche Pumpendrehzahl abgestimmt wird"
+      ],
+      "modality": "conditional",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Sockelpumpen: Wenn die Drehzahl des Synchronmotors auf die erforderliche Pumpendrehzahl abgestimmt wird, kann der Antrieb über eine eigene flexible Wellenkupplung erfolgen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Verformung",
+      "head_type": "FailureMechanism",
+      "relation": "causes",
+      "tail_surface": "Ausrichtung der Kupplung beeinträchtigen",
+      "tail_type": "FaultMode",
+      "conditions": [
+        "Grundplatte oder Rahmen nicht stark und steif genug"
+      ],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Pumpen müssen auf einer gemeinsamen Grundplatte oder einem Rahmen montiert werden, der stark und steif genug sein muss, um den Reaktionskräften des Antriebs standzuhalten und die Ausrüstung ohne Vibrationen zu tragen. Eine Verformung könnte die Ausrichtung der Kupplung beeinträchtigen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Ausrichtung der Kupplung beeinträchtigen",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "Kupplung",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Eine Verformung könnte die Ausrichtung der Kupplung beeinträchtigen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Ausrichtung von Pumpe und Antrieb",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "Überprüfen Sie immer die Ausrichtung von Pumpe und Antrieb nach der Installation und vor dem Starten der Pumpe",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Überprüfen Sie immer die Ausrichtung von Pumpe und Antrieb nach der Installation und vor dem Starten der Pumpe.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pumpen- und Motorwellen",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Pumpen- und Motorwellen müssen exakt nach den Anweisungen des Kupplungsherstellers ausgerichtet werden",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Pumpen- und Motorwellen müssen exakt nach den Anweisungen des Kupplungsherstellers ausgerichtet werden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Grenzwerte laut Kupplungshersteller",
+      "head_type": "Standard",
+      "relation": "specified_by",
+      "tail_surface": "flexible Wellenkupplung",
+      "tail_type": "Component",
+      "conditions": [
+        "Sockelpumpen"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Allerdings sind dabei grundsätzlich die Grenzwerte laut Kupplungshersteller zu beachten.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Datenblatt zur Berechnung des Drehmoments",
+      "head_type": "Standard",
+      "relation": "specified_by",
+      "tail_surface": "Drehmoment",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Siehe Datenblatt zur Berechnung des Drehmoments.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kavitation",
+      "head_type": "FaultMode",
+      "relation": "caused_by",
+      "tail_surface": "kurze Rohrlängen und große Rohrdurchmesser",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "negative",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Sorgen Sie für kurze Rohrlängen und große Rohrdurchmesser; die Rohre müssen u. U.einen größeren Durchmesser haben als die Pumpenanschlüsse – insbesondere zum Fördern viskoser Flüssigkeiten, um Kavitation zu vermeiden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kavitation",
+      "head_type": "FaultMode",
+      "relation": "prevented_by",
+      "tail_surface": "Rohre müssen u. U. einen größeren Durchmesser haben als die Pumpenanschlüsse",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "insbesondere zum Fördern viskoser Flüssigkeiten"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "die Rohre müssen u. U.einen größeren Durchmesser haben als die Pumpenanschlüsse – insbesondere zum Fördern viskoser Flüssigkeiten, um Kavitation zu vermeiden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kavitation",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "verstopfter Filter",
+      "tail_type": "Cause",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Ein verstopfter Filter führt zur Kavitation.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Kavitation",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "Pumpen mit flexiblem Laufrad",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "possible",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Ein verstopfter Filter führt zur Kavitation.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Filter auf der Saugseite der Pumpe",
+      "head_type": "Component",
+      "relation": "mitigated_by",
+      "tail_surface": "Vermeiden Sie nach Möglichkeit Filter auf der Saugseite der Pumpe",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Vermeiden Sie nach Möglichkeit Filter auf der Saugseite der Pumpe.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Unterdruck-/Druckmessgerät",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "jeder Seite der Pumpe",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Bringen Sie auf jeder Seite der Pumpe ein Unterdruck-/Druckmessgerät an, um die Druckverhältnisse zu überwachen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Druckverhältnisse",
+      "head_type": "OperatingCondition",
+      "relation": "diagnosed_by",
+      "tail_surface": "Unterdruck-/Druckmessgerät",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Bringen Sie auf jeder Seite der Pumpe ein Unterdruck-/Druckmessgerät an, um die Druckverhältnisse zu überwachen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Absperrventile",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "beiden Seiten der Pumpe",
+      "tail_type": "Equipment",
+      "conditions": [
+        "Zur Erleichterung der Wartung"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Zur Erleichterung der Wartung können Sie auf beiden Seiten der Pumpe Absperrventile montieren.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Gewicht der Rohrleitung",
+      "head_type": "Cause",
+      "relation": "increases_risk_of",
+      "tail_surface": "Lastet auf den Pumpenanschlüssen",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Stützen Sie die Rohrleitungen ab – und zwar so, dass das Gewicht der Rohrleitung (mit der darin befindlichen Flüssigkeit) nicht auf den Pumpenanschlüssen lastet.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pumpenanschlüsse",
+      "head_type": "Component",
+      "relation": "prevented_by",
+      "tail_surface": "Stützen Sie die Rohrleitungen ab",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Stützen Sie die Rohrleitungen ab – und zwar so, dass das Gewicht der Rohrleitung (mit der darin befindlichen Flüssigkeit) nicht auf den Pumpenanschlüssen lastet.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Wärmedehnungskräfte",
+      "head_type": "Cause",
+      "relation": "increases_risk_of",
+      "tail_surface": "auf die Pumpe übertragen",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Sie können ggf. Kompensatoren montieren, die verhindern, dass die Wärmedehnungskräfte auf die Pumpe übertragen werden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Wärmedehnungskräfte auf die Pumpe übertragen",
+      "head_type": "Risk",
+      "relation": "mitigated_by",
+      "tail_surface": "Kompensatoren montieren",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Sie können ggf. Kompensatoren montieren, die verhindern, dass die Wärmedehnungskräfte auf die Pumpe übertragen werden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Lufteintritt unter Vakuum",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "Rohrverbindungen",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Kein Lufteintritt unter Vakuum",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Flüssigkeitsaustritt unter Druck",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "Rohrverbindungen",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Kein Flüssigkeitsaustritt unter Druck",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Motor für die Dauer der Wartung, Instandhaltung und Reinigung zu isolieren",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "Es muss die Möglichkeit bestehen, den Motor für die Dauer der Wartung, Instandhaltung und Reinigung auf der Pumpe zu isolieren",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Es muss die Möglichkeit bestehen, den Motor für die Dauer der Wartung, Instandhaltung und Reinigung auf der Pumpe zu isolieren.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "beweglichen Teile",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Alle beweglichen Teile müssen geschützt sein",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Alle beweglichen Teile müssen geschützt sein und den vor Ort geltenden Richtlinien entsprechen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Schutzvorrichtungen",
+      "head_type": "Component",
+      "relation": "specified_by",
+      "tail_surface": "nichtrostenden Materialien",
+      "tail_type": "Standard",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Schutzvorrichtungen müssen aus nichtrostenden Materialien bestehen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Schutzvorrichtungen",
+      "head_type": "Component",
+      "relation": "specified_by",
+      "tail_surface": "nicht funkenbildendem Material",
+      "tail_type": "Standard",
+      "conditions": [
+        "In Gefahrenbereichen"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "In Gefahrenbereichen müssen die Schutzvorrichtungen aus nicht funkenbildendem Material bestehen.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pumpe",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Bei abgenommenen Schutzvorrichtungen darf die Pumpe nicht betrieben werden",
+      "tail_type": "OperatingCondition",
+      "conditions": [
+        "abgenommenen Schutzvorrichtungen"
+      ],
+      "modality": "required",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Bei abgenommenen Schutzvorrichtungen darf die Pumpe nicht betrieben werden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Durchgangs- oder Nadelventile",
+      "head_type": "Component",
+      "relation": "mitigated_by",
+      "tail_surface": "Vermeiden Sie Durchgangs- oder Nadelventile bei zähen Flüssigkeiten",
+      "tail_type": "MaintenanceAction",
+      "conditions": [
+        "bei zähen Flüssigkeiten"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Vermeiden Sie Durchgangs- oder Nadelventile bei zähen Flüssigkeiten.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Bögen mit großem Radius und Ventile mit vollem Durchlass",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Verwenden Sie Bögen mit großem Radius und Ventile mit vollem Durchlass",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Verwenden Sie Bögen mit großem Radius und Ventile mit vollem Durchlass.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Das Gerät ist keine vollständige Anlage und darf erst in Betrieb genommen werden, sobald die Anlage vorschriftsmäßig abgenommen wurde (TÜV, DEKRA usw.).",
+      "reason": "General installation safety requirement not specific to pump diagnostic knowledge graph relations.",
+      "evidence_text": "Das Gerät ist keine vollständige Anlage und darf erst in Betrieb genommen werden, sobald die Anlage, in die es eingebaut werden soll, vorschriftsmäßig abgenommen wurde (TÜV, DEKRA usw.).",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Elektrischer Strom kann zu Verletzungen mit Todesfolge führen.",
+      "reason": "General electrical safety warning, not a pump-specific diagnostic relation.",
+      "evidence_text": "Elektrischer Strom kann zu Verletzungen mit Todesfolge führen – beachten Sie die bewährten praktischen Regeln und die örtlichen Vorschriften.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Alle Arbeiten an der Elektrik müssen von Fachpersonal nach den örtlichen Sicherheitsvorschriften und Regeln der Technik durchgeführt werden.",
+      "reason": "General electrical work requirement, not a pump component maintenance action.",
+      "evidence_text": "Alle Arbeiten an der Elektrik müssen von Fachpersonal nach den örtlichen Sicherheitsvorschriften und Regeln der Technik durchgeführt werden.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Anforderungen des Bereichs wie Abspritzen und hohe Luftfeuchtigkeit müssen beachtet werden.",
+      "reason": "Environmental condition advisory without a specific linked pump fault or maintenance action edge.",
+      "evidence_text": "Beachten Sie insbesondere die Anforderungen des Bereichs, d. h. Abspritzen, hohe Luftfeuchtigkeit usw.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Kupplungen, Riemen und Riemenscheiben müssen umschlossen sein, damit keine Finger, Kleidung oder Werkzeuge mit beweglichen Teilen in Berührung kommen können.",
+      "reason": "Safety guarding requirement for drive components, general machinery safety rather than pump-specific diagnostic assertion.",
+      "evidence_text": "Kupplungen, Riemen und Riemenscheiben müssen umschlossen sein, damit keine Finger, Kleidung oder Werkzeuge mit beweglichen Teilen in Berührung kommen können.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Beim Pumpen gefährlicher, heißer oder giftiger Flüssigkeiten sind besondere Vorsichtsmaßnahmen zu treffen.",
+      "reason": "General fluid handling safety advisory without specific pump diagnostic edges.",
+      "evidence_text": "",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

@@ -20,7 +20,10 @@ G1 F1恢复到0.1972且空集误填仍为0/12，但低于C0的0.3472；正、负
 已暂停本条结构/损失试探，转入[`RP3范围评审`](research/RP3_SCOPE_REASSESSMENT_20260917.md)，
 E1语义特征与H512对照也已完成，两项总体判据失败；最新结果见
 [`RP3_SEMANTIC_V1_RESULTS_20260918.md`](RP3_SEMANTIC_V1_RESULTS_20260918.md)。
-下一步先做任务/监督/数据与研究范围评审；不要重跑G1/S0/S1/E1/H512，没有部署证书时不得evaluate。
+构建集任务—监督对齐审计现已完成，见
+[`RP3_TASK_ALIGNMENT_V1_RESULTS_20260918.md`](RP3_TASK_ALIGNMENT_V1_RESULTS_20260918.md)及第14节。
+构建查询族覆盖可行性实验也已完成，见第15节；下一步审阅草案、冻结新查询与评价版本，随后再决定V0/V1。
+不要重跑G1/S0/S1/E1/H512，没有部署证书时不得evaluate。
 
 ## 先看边界
 
@@ -378,3 +381,56 @@ E1共25,411,621参数，含查询编码的服务器CPU组件时延82.342 ms，C0
 没有新增量化、MP008校准、外部评价或部署，旧校准不可行事实不变。
 
 静态 QDQ 与量化后精度回归的接口依据：[ONNX Runtime 量化文档](https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html)。
+
+## 14. 已完成的构建集任务—监督对齐审计
+
+协议：[`RP3_TASK_ALIGNMENT_AUDIT_V1_PROTOCOL.md`](RP3_TASK_ALIGNMENT_AUDIT_V1_PROTOCOL.md)；
+结果：[`RP3_TASK_ALIGNMENT_V1_RESULTS_20260918.md`](RP3_TASK_ALIGNMENT_V1_RESULTS_20260918.md)。
+以下命令已完成，输出拒绝覆盖；仅供审查或新环境复现：
+
+```bash
+.venv/bin/python scripts/audit_rp3_task_alignment.py
+.venv/bin/python scripts/verify_rp3_task_alignment.py \
+  --inventory logs/rp3_task_alignment_20260918T093148Z/asset_inventory.before.json
+.venv/bin/python scripts/audit_rp3_task_alignment_order.py
+```
+
+输出为`results/experiments/research_point_3/task_alignment_v1/`，含逐候选/轨迹/核验运行/缓存引用、
+13组冲突、六子集统计、查询模板和来源覆盖、输入输出哈希及独立核验。
+另有`export_order_audit.json`：6条train派生卡片沿用旧候选顺序，ID集合不变；新有序核验输入应取实际运行顺序。
+165条轨迹、317份核验记录和519份响应缓存全部对应，无模型调用或新训练。
+150项测试通过，1544个已有研究资产/日志/用户报告字节未变；首次ID对数/特征输入数比较失败日志保留。
+
+train/validation的正但未选出现215/21次；全池正标签取前三会改变34/129、8/36条教师集合。
+10/3组点式标签冲突均可追溯到第一阶段上下文/条件复核路径，未发现相同保存用户提示的不同响应；
+不是上下文唯一因果性的证明。原始40问只有四种共享模板，故障类别场景仍8/2。
+
+后续输入/对照决策见[`RP3_VERIFIER_INPUT_AND_CONTROLS_20260918.md`](research/RP3_VERIFIER_INPUT_AND_CONTROLS_20260918.md)：
+优先明确有序K3上的教师mask模仿，保留原guard，点式核验作匹配控制，尾部辅助监督另立对照。
+先解决独立构建查询族和评价协议，不立即训练新核验器/路由；MP008原门槛和外部集边界保持不变。
+
+## 15. 已完成的构建查询族覆盖可行性实验
+
+协议：[`RP3_QUERY_FAMILY_FEASIBILITY_V1_PROTOCOL.md`](RP3_QUERY_FAMILY_FEASIBILITY_V1_PROTOCOL.md)；
+结果：[`RP3_QUERY_FAMILY_FEASIBILITY_V1_RESULTS_20260918.md`](RP3_QUERY_FAMILY_FEASIBILITY_V1_RESULTS_20260918.md)。
+以下入口已经完成，现有产物拒绝覆盖；不要重复执行：
+
+```bash
+.venv/bin/python scripts/audit_rp3_query_families.py
+.venv/bin/python scripts/verify_rp3_query_families.py \
+  --inventory logs/rp3_query_family_20260918T154723Z/asset_inventory.before.json
+```
+
+产物`query_family_feasibility_v1/`保存逐条来源、62个自动FaultMode范围、248条未标注查询草案、
+三个依赖闭包及合并原因、固定SHA划分草案、输入/产物哈希和独立核验。
+145条E1以原文跨度核验；63条E2以source_records已有单元ID、表/行、文本及嵌套bbox核验。
+compact memory本身仍无bbox，E2无连续offset；不向冻结数据补写定位。
+
+主规则有26个故障范围组，来源族闭包仅3组（最大206/208条Evidence）。
+内部pilot候选划分14/6/6组、176/24/48问，不是来源隔离或现场病例泛化。
+248条中仅68条有方向角色锚点，其余180条不能直接作负例；全部草案暂不允许训练。
+161项测试通过，1572个旧研究资产/日志/用户报告不变；初始两次定位适配失败源码/日志保留。
+
+下一步按草案逐项核查适用范围、语义近义和因果方向，再固定新问题与评价职责，
+才生成独立目录中的真实新K3监督和V0/V1三种子对照。不重跑旧教师40问、MP008、features或旧学生。
+本轮没有模型调用、训练、校准或部署证书；旧MP008门槛与外部集边界不变。

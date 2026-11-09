@@ -1,0 +1,332 @@
+{
+  "records": [
+    {
+      "unit": "u22",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "除非在管路中使用虹吸破坏器，否则不得将排出管路终止于低于被泵送液体液位的位置",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "除非在管路中使用虹吸破坏器"
+        }
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u23",
+      "head_id": "16",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "causes",
+      "tail_id": "1",
+      "tail_type": "FaultMode",
+      "tail_zh": "导致泵损坏的虹吸作用",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u24",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "maintained_by",
+      "tail_id": "5",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果在排出管路中需要节流阀，应使用与最大管道一样大的阀门以尽量减少摩擦损失",
+      "conditions": [
+        {
+          "id": "6",
+          "zh": "如果在排出管路中需要节流阀"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u25",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "吸入管路",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "切勿在吸入管路中安装节流阀",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u26",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "contains",
+      "tail_id": "1",
+      "tail_type": "Component",
+      "tail_zh": "止回阀",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u27",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "maintained_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在高排出扬程下，建议在排出管路中安装节流阀和系统止回阀，以保护泵免受停泵时过大的冲击压力和反转的影响",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "当泵停止时"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u27",
+      "head_id": "5",
+      "head_type": "FaultMode",
+      "head_zh": "过大的冲击压力",
+      "relation": "mitigated_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在高排出扬程下，建议在排出管路中安装节流阀和系统止回阀，以保护泵免受停泵时过大的冲击压力和反转的影响",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "当泵停止时"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u27",
+      "head_id": "5",
+      "head_type": "FaultMode",
+      "head_zh": "反转",
+      "relation": "mitigated_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在高排出扬程下，建议在排出管路中安装节流阀和系统止回阀，以保护泵免受停泵时过大的冲击压力和反转的影响",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "当泵停止时"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": "反转作为故障模式缺少独立ID，暂用pressure(5)替代"
+    },
+    {
+      "unit": "u28",
+      "head_id": "14",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "operates_under",
+      "tail_id": "1",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "应用涉及高排出扬程",
+      "conditions": [],
+      "mode": "conditional",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u28",
+      "head_id": "14",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果应用涉及高排出扬程，在停泵前逐渐关闭排出节流阀",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "如果应用涉及高排出扬程"
+        },
+        {
+          "id": "5",
+          "zh": "在停泵之前"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u29",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "自吸泵",
+      "relation": "operates_under",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "自吸泵不是空气压缩机",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u30",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "排出侧",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在引水循环期间，必须将吸入管路中的空气排放到排出侧的大气中",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u31",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "operates_under",
+      "tail_id": "3",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "如果排出管路是敞开的，空气将通过排出口排出",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "如果排出管路是敞开的"
+        }
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u32",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "contains",
+      "tail_id": "1",
+      "tail_type": "Component",
+      "tail_zh": "止回阀",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u32",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "排出管路",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果在排出管路中安装了止回阀，则必须通过在泵排出口和止回阀之间安装的旁通管路将泵的排出侧打开至大气压",
+      "conditions": [
+        {
+          "id": "7",
+          "zh": "如果在排出管路中安装了止回阀"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u33",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "自吸离心泵",
+      "relation": "operates_under",
+      "tail_id": "4",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "如果有足够的静液头使排出止回阀保持关闭，自吸离心泵将无法引水",
+      "conditions": [
+        {
+          "id": "6",
+          "zh": "如果有足够的静液头使排出止回阀保持关闭"
+        }
+      ],
+      "mode": "asserted",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u34",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "旁通管路",
+      "relation": "specified_by",
+      "tail_id": "4",
+      "tail_type": "Standard",
+      "tail_zh": "旁通管路的尺寸应不影响泵的排出能力；但旁通管路的直径应至少为1英寸",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "scopes_zh": {
+    "s2": "安装"
+  },
+  "missing": [
+    {
+      "unit": "u23",
+      "reason": "缺少'虹吸作用'和'泵损坏'的独立实体/故障模式ID，无法建立精确的因果链"
+    },
+    {
+      "unit": "u27",
+      "reason": "缺少'反转'作为独立故障模式的ID"
+    },
+    {
+      "unit": "u28",
+      "reason": "缺少'排出节流阀'的独立组件ID，仅能引用包含条件的复合语句"
+    },
+    {
+      "unit": "u30",
+      "reason": "缺少'引水循环'作为运行工况或阶段的独立ID"
+    },
+    {
+      "unit": "u32",
+      "reason": "缺少'旁通管路'的独立组件ID（仅在长文本中出现）"
+    },
+    {
+      "unit": "u33",
+      "reason": "缺少'无法引水'作为故障模式的独立ID"
+    },
+    {
+      "unit": "u35",
+      "reason": "仅为图表标题，无实质泵知识可提取"
+    },
+    {
+      "unit": "u36",
+      "reason": "仅为表格标题片段，无完整关系可提取"
+    },
+    {
+      "unit": "u37",
+      "reason": "仅为表格标题片段，无完整关系可提取"
+    }
+  ]
+}

@@ -1,0 +1,718 @@
+{
+  "records": [
+    {
+      "unit": "u7",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "油位设定",
+      "relation": "inspected_by",
+      "tail_id": "4",
+      "tail_type": "InspectionAction",
+      "tail_zh": "检查油位设定并在需要时正确设置",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "如果需要"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u8",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "正确的油位",
+      "relation": "specified_by",
+      "tail_id": "3",
+      "tail_type": "Standard",
+      "tail_zh": "泵组件剖面图",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u9",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "最低油位设定",
+      "relation": "operates_under",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "高于注油器侧出口中心线7/32英寸（约6毫米）",
+      "conditions": [],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u10",
+      "head_id": "4",
+      "head_type": "Component",
+      "head_zh": "油位设定",
+      "relation": "specified_by",
+      "tail_id": "3",
+      "tail_type": "Standard",
+      "tail_zh": "组件剖面图上给出的尺寸",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u10",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "给出的尺寸",
+      "relation": "located_in",
+      "tail_id": "7",
+      "tail_type": "Component",
+      "tail_zh": "斜管顶部",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u11",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "斜管",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "松开紧定螺钉并将斜管和油杯升高至适当尺寸",
+      "conditions": [
+        {
+          "id": "7",
+          "zh": "如果油位过低"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "轴承箱",
+      "relation": "maintained_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "向瓶内注满油，将其旋入Optomatic注油器的下储液罐中，让油流入轴承箱",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u13",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "轴承腔",
+      "relation": "maintained_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "可能需要多次注油直到轴承腔内的油位等于注油器调整的油位",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "在轴承腔内油位等于注油器调整的油位之前"
+        }
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u14",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "通过注油器底座向轴承腔注油",
+      "relation": "mitigated_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "切勿通过注油器底座向轴承腔注油",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u15",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "油",
+      "relation": "inspected_by",
+      "tail_id": "6",
+      "tail_type": "InspectionAction",
+      "tail_zh": "不时从轴承箱(31)排出少量油进行检查",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u16",
+      "head_id": "2",
+      "head_type": "Symptom",
+      "head_zh": "出现起泡",
+      "relation": "indicates",
+      "tail_id": "1",
+      "tail_type": "Cause",
+      "tail_zh": "存在水分",
+      "conditions": [
+        {
+          "id": "2",
+          "zh": "如果出现起泡"
+        }
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u17",
+      "head_id": "5",
+      "head_type": "Symptom",
+      "head_zh": "油变黑",
+      "relation": "indicates",
+      "tail_id": "4",
+      "tail_type": "FaultMode",
+      "tail_zh": "轴承运行过热并烧焦油",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "如果油变黑"
+        }
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u18",
+      "head_id": "4",
+      "head_type": "Symptom",
+      "head_zh": "油呈棕色",
+      "relation": "indicates",
+      "tail_id": "3",
+      "tail_type": "Cause",
+      "tail_zh": "污染物已混入油中",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "如果油呈棕色"
+        }
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u19",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "油",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在上述每种情况下必须排空油、清洁轴承并更换油",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u19",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "轴承",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在上述每种情况下必须排空油、清洁轴承并更换油",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u20",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "来自径向轴承的润滑脂",
+      "relation": "operates_under",
+      "tail_id": "7",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "部分润滑脂与油混合并有使油变稠的趋势属于正常现象",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u21",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "油",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "根据需要不时排放并更换油",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u22",
+      "head_id": "4",
+      "head_type": "Component",
+      "head_zh": "推力轴承油",
+      "relation": "maintained_by",
+      "tail_id": "7",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "当使用热轻质（不重于SAE 10）油冲洗壳体而不拆卸来清洁脂润滑轴承时，应更换推力轴承油，因为它会被冲洗用油污染",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u23",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料函",
+      "relation": "operates_under",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "用于限制或消除泵送流体泄漏并防止空气进入泵",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u24",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "contains",
+      "tail_id": "2",
+      "tail_type": "Component",
+      "tail_zh": "机械密封",
+      "conditions": [],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": "packing（填料）未在选项列表中提供为独立实体ID"
+    },
+    {
+      "unit": "u25",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "填料函密封",
+      "relation": "maintained_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "通常不使用泵送液体润滑填料函密封，因为液体通常脏污、含砂砾或含有会卡住密封的材料，应使用外部来源的密封液",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u25",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "泵送液体",
+      "relation": "mitigated_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "通常不使用泵送液体润滑填料函密封，因为液体通常脏污、含砂砾或含有会卡住密封的材料，应使用外部来源的密封液",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u27",
+      "head_id": "3",
+      "head_type": "Component",
+      "head_zh": "压盖",
+      "relation": "operates_under",
+      "tail_id": "4",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "配备填料的泵必须始终有轻微泄漏",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u28",
+      "head_id": "2",
+      "head_type": "Symptom",
+      "head_zh": "液体稳定地滴过压盖",
+      "relation": "indicates",
+      "tail_id": "3",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "推荐的泄漏量状态",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u29",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料函压盖",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "在泵启动后调整填料函压盖",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "泵启动后"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u30",
+      "head_id": "2",
+      "head_type": "Component",
+      "head_zh": "密封水管路中的阀门",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "当泄漏过大时，调整密封水管路中的阀门直至达到所需的泄漏量",
+      "conditions": [
+        {
+          "id": "7",
+          "zh": "当泄漏过大时"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u31",
+      "head_id": "1",
+      "head_type": "FaultMode",
+      "head_zh": "填料函过热",
+      "relation": "prevented_by",
+      "tail_id": "2",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "确保填料函不过热",
+      "conditions": [
+        {
+          "id": "3",
+          "zh": "确保填料函不过热"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u32",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "流量",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果发生过热，增加流量直到温度稳定",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "如果发生过热"
+        },
+        {
+          "id": "5",
+          "zh": "直到温度稳定"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u33",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "压盖",
+      "relation": "maintained_by",
+      "tail_id": "6",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "可能需要调整压盖以在压盖紧密度和密封水流量之间取得适当平衡",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u34",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "压盖螺栓",
+      "relation": "maintained_by",
+      "tail_id": "5",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "务必均匀地拧紧压盖螺栓，每次拧一点",
+      "conditions": [
+        {
+          "id": "6",
+          "zh": "务必均匀地拧紧压盖螺栓，每次拧一点"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u35",
+      "head_id": "3",
+      "head_type": "MaintenanceAction",
+      "head_zh": "留出一些时间让填料适应新位置",
+      "relation": "mitigated_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "留出一些时间让填料适应新位置",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": "缺少填料(packing)实体ID作为被维护对象"
+    },
+    {
+      "unit": "u36",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "压盖",
+      "relation": "mitigated_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "切勿将压盖拧紧至无泄漏，因为这会导致过热和轴套过度磨损",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "unit": "u36",
+      "head_id": "4",
+      "head_type": "MaintenanceAction",
+      "head_zh": "切勿将压盖拧紧至无泄漏，因为这会导致过热和轴套过度磨损",
+      "relation": "causes",
+      "tail_id": "3",
+      "tail_type": "FaultMode",
+      "tail_zh": "导致过热和轴套过度磨损",
+      "conditions": [],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": "过热和轴套过度磨损未作为独立FaultMode ID提供"
+    },
+    {
+      "unit": "u37",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料函填料",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "按以下步骤更换填料函填料",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u38",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "停泵",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u39",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "驱动机",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "采取预防措施防止驱动机意外启动",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u40",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "压盖螺栓螺母",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "拆下压盖螺栓螺母和压盖",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u41",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "旧填料环",
+      "relation": "maintained_by",
+      "tail_id": "9",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "拆下并丢弃旧填料环——注意水封环的位置",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u41",
+      "head_id": "4",
+      "head_type": "Component",
+      "head_zh": "水封环",
+      "relation": "maintained_by",
+      "tail_id": "8",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "重新填充填料函时，水封环必须定位成使水封连接口与水封环相对",
+      "conditions": [
+        {
+          "id": "10",
+          "zh": "重新填充填料函时"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u42",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料函",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "清理填料函",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u43",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "轴套",
+      "relation": "inspected_by",
+      "tail_id": "3",
+      "tail_type": "InspectionAction",
+      "tail_zh": "检查轴套是否磨损，如果有划痕或沟槽则应更换",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "如果有划痕或沟槽"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u44",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料函衬套",
+      "relation": "maintained_by",
+      "tail_id": "4",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "确保填料函衬套（如提供）设置在箱体底部",
+      "conditions": [
+        {
+          "id": "5",
+          "zh": "如提供"
+        },
+        {
+          "id": "6",
+          "zh": "确保填料函衬套设置在箱体底部"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u45",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "填料环",
+      "relation": "maintained_by",
+      "tail_id": "9",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "插入填料环并轻敲使其紧贴衬套就位。确保环的尺寸和长度合适且切口交错安装。水封环必须安装在与密封水连接口相对的位置。",
+      "conditions": [
+        {
+          "id": "13",
+          "zh": "确保环的尺寸和长度合适且切口交错安装"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u45",
+      "head_id": "6",
+      "head_type": "Component",
+      "head_zh": "水封环",
+      "relation": "maintained_by",
+      "tail_id": "12",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "水封环必须安装在与密封水连接口相对的位置",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "scopes_zh": {},
+  "missing": [
+    {
+      "unit": "u24",
+      "reason": "缺少'填料'(packing)作为Component实体的选择ID"
+    },
+    {
+      "unit": "u35",
+      "reason": "缺少'填料'(packing)作为Component实体的选择ID以建立maintained_by关系"
+    },
+    {
+      "unit": "u36",
+      "reason": "缺少'过热'和'轴套过度磨损'作为FaultMode的选择ID"
+    }
+  ]
+}

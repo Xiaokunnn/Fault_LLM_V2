@@ -1,0 +1,180 @@
+{
+  "E1_contiguous_spans_verified": 145,
+  "E2_cell_record_locations_verified": 63,
+  "E2_records_with_representation_differences": 3,
+  "all_evidence_locations_verified_by_native_mode": true,
+  "bbox_available_records": 0,
+  "build_documents_scanned": 15,
+  "claims": 203,
+  "entities": 281,
+  "evidence_documents": 14,
+  "evidence_records": 208,
+  "fault_scope_candidates": 62,
+  "head_type_record_counts": {
+    "Cause": 82,
+    "Component": 38,
+    "Equipment": 4,
+    "FailureMechanism": 3,
+    "FaultMode": 58,
+    "OperatingCondition": 13,
+    "Risk": 1,
+    "Symptom": 9
+  },
+  "interpretation": {
+    "formal_new_benchmark_ready": false,
+    "independent_generalization_or_risk_certification_established": false,
+    "internal_pilot_partition_structurally_possible": true,
+    "reason": "Draft task scope and semantic families require review; dependency closure is not IID evidence. Shared frozen memory remains unchanged.",
+    "source_disjoint_six_group_holdouts_possible": false
+  },
+  "new_independent_field_cases": 0,
+  "new_teacher_calls": 0,
+  "new_training_runs": 0,
+  "physical_pages_scanned": 1934,
+  "proposed_splits": {
+    "build_confirmation": {
+      "doc_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP006",
+        "MP007",
+        "MP015",
+        "MP016",
+        "MP018",
+        "MP022"
+      ],
+      "groups": 6,
+      "queries": 48,
+      "scopes": 12,
+      "source_family_ids": [
+        "ABS",
+        "ALFA_LAVAL",
+        "DESMI",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "with_directional_role_anchor": 14
+    },
+    "train": {
+      "doc_ids": [
+        "MP001",
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP006",
+        "MP015",
+        "MP016",
+        "MP017",
+        "MP018",
+        "MP019",
+        "MP020"
+      ],
+      "groups": 14,
+      "queries": 176,
+      "scopes": 44,
+      "source_family_ids": [
+        "ABB",
+        "ABS",
+        "DESMI",
+        "GORMAN_RUPP",
+        "INDICOR__CORNELL_PUMP",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ],
+      "with_directional_role_anchor": 47
+    },
+    "validation": {
+      "doc_ids": [
+        "MP001",
+        "MP003",
+        "MP015",
+        "MP021"
+      ],
+      "groups": 6,
+      "queries": 24,
+      "scopes": 6,
+      "source_family_ids": [
+        "ABS",
+        "IDEX__VIKING_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP"
+      ],
+      "with_directional_role_anchor": 7
+    }
+  },
+  "query_drafts": 248,
+  "query_drafts_with_directional_anchors": 68,
+  "query_drafts_without_directional_anchors": 180,
+  "question_templates": 4,
+  "schema": "rp3_query_family_feasibility_v1",
+  "schemes": {
+    "entity_alias_claim_page": {
+      "all_dependency_groups": 45,
+      "fault_scope_groups": 26,
+      "largest_evidence_group": 101,
+      "largest_scope_group": 22,
+      "scope_inverse_concentration_not_effective_sample_size": 6.650519031141869
+    },
+    "entity_alias_claim_page_source_family": {
+      "all_dependency_groups": 3,
+      "fault_scope_groups": 3,
+      "largest_evidence_group": 206,
+      "largest_scope_group": 60,
+      "scope_inverse_concentration_not_effective_sample_size": 1.0671848972792892
+    },
+    "entity_claim_page": {
+      "all_dependency_groups": 45,
+      "fault_scope_groups": 26,
+      "largest_evidence_group": 101,
+      "largest_scope_group": 22,
+      "scope_inverse_concentration_not_effective_sample_size": 6.650519031141869
+    }
+  },
+  "source_families": 10,
+  "split_source_overlap": {
+    "train__build_confirmation": {
+      "doc_ids": [
+        "MP003",
+        "MP004",
+        "MP005",
+        "MP006",
+        "MP015",
+        "MP016",
+        "MP018"
+      ],
+      "source_family_ids": [
+        "ABS",
+        "DESMI",
+        "PATTERSON_PUMP",
+        "SPX_FLOW__JOHNSON_PUMP",
+        "XYLEM__JABSCO"
+      ]
+    },
+    "train__validation": {
+      "doc_ids": [
+        "MP001",
+        "MP003",
+        "MP015"
+      ],
+      "source_family_ids": [
+        "ABS",
+        "SPX_FLOW__JOHNSON_PUMP"
+      ]
+    },
+    "validation__build_confirmation": {
+      "doc_ids": [
+        "MP003",
+        "MP015"
+      ],
+      "source_family_ids": [
+        "ABS",
+        "SPX_FLOW__JOHNSON_PUMP"
+      ]
+    }
+  },
+  "status": "coverage_audit_complete_query_drafts_not_training_data",
+  "training_eligible_queries": 0,
+  "unique_head_labels": 146
+}

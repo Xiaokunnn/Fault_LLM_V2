@@ -1,0 +1,22 @@
+{
+  "schema": "rp3_task_alignment_audit_protocol_v1",
+  "audit_id": "task_alignment_v1",
+  "mode": "read_only_build_records_no_model_calls",
+  "trace_root": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/traces",
+  "memory_dir": "data/kg/marine_pump/rp3/TeacherGraph_RP3_v1/evidence_memory/training",
+  "raw_teacher_dir": "results/experiments/research_point_3/teacher_traces/strict208_base_top32",
+  "teacher_freeze": "configs/frozen/teacher_graph_rp3_v1.freeze.json",
+  "teacher_config": "configs/rp2_graphrag_v6_equal_budget.json",
+  "previous_alias_audit": "results/experiments/research_point_3/support_separability_v1/audit.json",
+  "output_dir": "results/experiments/research_point_3/task_alignment_v1",
+  "questions": [
+    "Reconcile every stored support label and selected ID with its actual verifier run, availability and deterministic guard.",
+    "Separate original K3 batch, original singleton tail, fresh intervention K3 and inherited labels; never treat unassessed as negative.",
+    "Trace input-alias conflicts through saved precision prompts and conditional singleton recall reviews; distinguish observed association from causation.",
+    "Measure original query, fault-scenario, fault-masked template and evidence/source overlap; derived rows are not independent query families.",
+    "Specify a verifier input boundary and matched controls only after the audit; do not train or alter the frozen teacher."
+  ],
+  "subsets": ["train_original", "train_derived", "train_all", "validation_original", "validation_derived", "validation_all"],
+  "risk_boundary": "teacher_generated_not_expert_ground_truth; empirical audit is not a deployment certificate",
+  "prohibited": ["teacher_rerun", "student_training", "feature_regeneration", "MP008_content", "MP009-MP013_content", "threshold_fitting", "label_rewriting", "overwrite_existing_outputs"]
+}

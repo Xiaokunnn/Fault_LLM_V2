@@ -1,0 +1,667 @@
+{
+  "catalog_sha256": "380b02520d8fe2b6891b0daf6361c7d477b79cf0a0f07dfeee6deb8f5ec92a64",
+  "records": [
+    {
+      "head": [
+        "E001",
+        "Equipment",
+        "泵（组）"
+      ],
+      "relation": "operates_under",
+      "tail": [
+        "C003",
+        "OperatingCondition",
+        "产品文献中规定的运行限值内"
+      ],
+      "local": [
+        "C003"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P003"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E001",
+        "Equipment",
+        "泵（组）"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A008",
+        "MaintenanceAction",
+        "仅运行处于完美技术状态的泵/泵组"
+      ],
+      "local": [],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P004"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E006",
+        "Equipment",
+        "泵（组）"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A009",
+        "MaintenanceAction",
+        "不要在部分组装状态下运行泵（组）"
+      ],
+      "local": [],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P005"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E007",
+        "Equipment",
+        "泵"
+      ],
+      "relation": "operates_under",
+      "tail": [
+        "C004",
+        "OperatingCondition",
+        "仅用于处理订单或泵型号或变型的产品文献中描述的流体"
+      ],
+      "local": [
+        "C004"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P006"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E012",
+        "Equipment",
+        "泵"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A010",
+        "MaintenanceAction",
+        "切勿在没有待处理流体的情况下运行泵"
+      ],
+      "local": [],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P007"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C005",
+        "Cause",
+        "低于最小流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C006",
+        "FaultMode",
+        "过热"
+      ],
+      "local": [
+        "C005",
+        "C006"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P008"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C005",
+        "Cause",
+        "低于最小流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C007",
+        "FaultMode",
+        "轴承损坏"
+      ],
+      "local": [
+        "C005",
+        "C007"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P008"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C005",
+        "Cause",
+        "低于最小流量运行"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A011",
+        "MaintenanceAction",
+        "遵守产品文献中规定的最小流量信息，以防止过热、轴承损坏等"
+      ],
+      "local": [
+        "C005"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P008"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C008",
+        "Cause",
+        "超过最大流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C006",
+        "FaultMode",
+        "过热"
+      ],
+      "local": [
+        "C008",
+        "C006"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P009"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C008",
+        "Cause",
+        "超过最大流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C009",
+        "FaultMode",
+        "机械密封损坏"
+      ],
+      "local": [
+        "C008",
+        "C009"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P009"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C008",
+        "Cause",
+        "超过最大流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C010",
+        "FaultMode",
+        "汽蚀损坏"
+      ],
+      "local": [
+        "C008",
+        "C010"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P009"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C008",
+        "Cause",
+        "超过最大流量运行"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C007",
+        "FaultMode",
+        "轴承损坏"
+      ],
+      "local": [
+        "C008",
+        "C007"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P009"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C008",
+        "Cause",
+        "超过最大流量运行"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A012",
+        "MaintenanceAction",
+        "遵守产品文献中规定的最大流量信息，以防止过热、机械密封损坏、汽蚀损坏、轴承损坏等"
+      ],
+      "local": [
+        "C008"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P009"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C011",
+        "Cause",
+        "在泵的吸入侧节流流量"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C010",
+        "FaultMode",
+        "汽蚀损坏"
+      ],
+      "local": [
+        "C011",
+        "C010"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P010"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C011",
+        "Cause",
+        "在泵的吸入侧节流流量"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A013",
+        "MaintenanceAction",
+        "不要在泵的吸入侧节流流量（以防止汽蚀损坏）"
+      ],
+      "local": [
+        "C011"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P010"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C012",
+        "Cause",
+        "将排出侧关闭元件打开超过允许范围"
+      ],
+      "relation": "causes",
+      "tail": [
+        "C013",
+        "FaultMode",
+        "超过技术产品文献中规定的最大流量"
+      ],
+      "local": [
+        "C012",
+        "C013"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P012",
+        "P013"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C012",
+        "Cause",
+        "将排出侧关闭元件打开超过允许范围"
+      ],
+      "relation": "increases_risk_of",
+      "tail": [
+        "C014",
+        "Risk",
+        "汽蚀损坏风险"
+      ],
+      "local": [
+        "C012",
+        "C014"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P012",
+        "P014"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C012",
+        "Cause",
+        "将排出侧关闭元件打开超过允许范围"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A014",
+        "MaintenanceAction",
+        "切勿将排出侧关闭元件打开超过允许范围"
+      ],
+      "local": [
+        "C012"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P012"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C015",
+        "Cause",
+        "超过产品文献中规定的允许运行限值（压力、温度等）"
+      ],
+      "relation": "increases_risk_of",
+      "tail": [
+        "C016",
+        "Risk",
+        "人员因电气、热、机械和化学效应及爆炸而面临危险"
+      ],
+      "local": [
+        "C015",
+        "C016"
+      ],
+      "shared": [
+        "S004"
+      ],
+      "evidence": [
+        "P014",
+        "P021"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C015",
+        "Cause",
+        "超过产品文献中规定的允许运行限值（压力、温度等）"
+      ],
+      "relation": "prevented_by",
+      "tail": [
+        "A015",
+        "MaintenanceAction",
+        "切勿超过产品文献中规定的允许运行限值（压力、温度等）"
+      ],
+      "local": [
+        "C015"
+      ],
+      "shared": [
+        "S002"
+      ],
+      "evidence": [
+        "P014"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E001",
+        "Equipment",
+        "泵（组）"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A003",
+        "MaintenanceAction",
+        "操作人员应为高温、低温和运动部件安装接触防护装置，并检查防护装置功能正常"
+      ],
+      "local": [],
+      "shared": [
+        "S006"
+      ],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E001",
+        "Equipment",
+        "泵（组）"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A004",
+        "MaintenanceAction",
+        "运行期间不要拆除任何接触防护装置"
+      ],
+      "local": [],
+      "shared": [
+        "S006"
+      ],
+      "evidence": [
+        "P026"
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E061",
+        "Component",
+        "轴封"
+      ],
+      "relation": "inspected_by",
+      "tail": [
+        "A016",
+        "MaintenanceAction",
+        "围堵所处理的危险流体（如易爆、有毒、高温流体）的泄漏（例如在轴封处），以避免对人员和环境造成任何危险"
+      ],
+      "local": [],
+      "shared": [
+        "S006"
+      ],
+      "evidence": [
+        "P028"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E070",
+        "Equipment",
+        "泵组"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A006",
+        "MaintenanceAction",
+        "消除所有电气危险（在这方面，请参阅适用的国家安全法规和/或当地能源供应公司发布的法规）。如果在泵组安装期间关闭泵不会增加潜在风险，则在泵（组）紧邻位置安装紧急停止控制装置"
+      ],
+      "local": [],
+      "shared": [
+        "S006"
+      ],
+      "evidence": [
+        "P030"
+      ],
+      "mode": "conditional",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "condition_names": {
+    "C003": "产品文献中规定的运行限值内",
+    "C004": "仅用于处理订单或泵型号或变型的产品文献中描述的流体",
+    "C005": "低于最小流量运行",
+    "C006": "过热",
+    "C007": "轴承损坏",
+    "C008": "超过最大流量运行",
+    "C009": "机械密封损坏",
+    "C010": "汽蚀损坏",
+    "C011": "在泵的吸入侧节流流量",
+    "C012": "将排出侧关闭元件打开超过允许范围",
+    "C013": "超过技术产品文献中规定的最大流量",
+    "C014": "汽蚀损坏风险",
+    "C015": "超过产品文献中规定的允许运行限值（压力、温度等）",
+    "C016": "人员因电气、热、机械和化学效应及爆炸而面临危险"
+  },
+  "unrepresented_source": [
+    {
+      "paragraph_id": "P011",
+      "reason": "Consult manufacturer for other modes of operation is a general administrative instruction without a specific pump-system relationship target"
+    },
+    {
+      "paragraph_id": "P015",
+      "reason": "Observe all safety information is a generic compliance statement, not a specific extractable relation"
+    },
+    {
+      "paragraph_id": "P016",
+      "reason": "Manufacturer address footer text, not pump knowledge"
+    },
+    {
+      "paragraph_id": "P017",
+      "reason": "Manufacturer contact details footer text, not pump knowledge"
+    },
+    {
+      "paragraph_id": "P020",
+      "reason": "Warranty forfeiture consequence is a legal/administrative outcome, not a physical or operational pump-system relationship"
+    },
+    {
+      "paragraph_id": "P021",
+      "reason": "General list of non-compliance consequences (hazards, failures) without specific causal links to defined components or conditions in this context"
+    },
+    {
+      "paragraph_id": "P023",
+      "reason": "Compliance with external laws and regulations is an administrative requirement, not a pump-system technical relationship"
+    },
+    {
+      "paragraph_id": "P027",
+      "reason": "Provide personnel with protective equipment is a general HSE action, not specific to pump maintenance or operation"
+    },
+    {
+      "paragraph_id": "P029",
+      "reason": "Adhere to all relevant laws is a generic compliance statement"
+    },
+    {
+      "paragraph_id": "P031",
+      "reason": "Manufacturer address footer text, not pump knowledge"
+    },
+    {
+      "paragraph_id": "P032",
+      "reason": "Manufacturer contact details footer text, not pump knowledge"
+    }
+  ],
+  "coverage_note": "Extracted operating limits, flow-related fault causes (overheating, bearing damage, mechanical seal damage, cavitation), suction throttling prohibition, discharge valve over-opening risks, and operator safety maintenance actions (guards, leakage containment, emergency stop). Footer texts, generic legal compliance statements, and warranty forfeiture clauses were excluded as they do not represent pump-system technical relationships."
+}

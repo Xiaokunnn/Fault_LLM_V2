@@ -1,0 +1,83 @@
+{
+  "assertions": [
+    {
+      "head_surface": "forces and torques acting on the flanges",
+      "head_type": "Cause",
+      "relation": "causes",
+      "tail_surface": "deformations in the pump unit",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "The forces and torques acting on the flanges cause deformations in the pump unit.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "deformations in the pump unit",
+      "head_type": "FaultMode",
+      "relation": "manifests_as",
+      "tail_surface": "displacement of the shaft journal of the pump in relation to the shaft journal of the motor",
+      "tail_type": "Symptom",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "These are manifested in a displacement of the shaft journal of the pump in relation to the shaft journal of the motor.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "permissible forces and moments on the flanges",
+      "head_type": "OperatingCondition",
+      "relation": "specified_by",
+      "tail_surface": "maximum values for the radial displacement of the shaft journal of the pump: pumps of bracket group 1: 0,15 mm, pumps of bracket group 2: 0,20 mm, pumps of bracket group 3: 0,25 mm, pumps of bracket group 4: 0,25 mm",
+      "tail_type": "Standard",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "The permissible forces and moments on the flanges should be based on the following maximum values for the radial displacement of the shaft journal of the pump: • pumps of bracket group 1: 0,15 mm, • pumps of bracket group 2: 0,20 mm, • pumps of bracket group 3: 0,25 mm, • pumps of bracket group 4: 0,25 mm.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "permissible values",
+      "head_type": "OperatingCondition",
+      "relation": "specified_by",
+      "tail_surface": "( Fv / Fv,max )^2 + ( Fh / Fh,max )^2 + ( M / Mmax )^2 ≤ 1",
+      "tail_type": "Standard",
+      "conditions": [
+        "Irrespective of the direction of the forces and torques and their components on the flanges"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "Irrespective of the direction of the forces and torques and their components on the flanges, the permissible values should comply with the following equation: ( Fv / Fv,max )^2 + ( Fh / Fh,max )^2 + ( M / Mmax )^2 ≤ 1",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "When determinating the forces the weight of the piping and of the liquid must be taken into account.",
+      "reason": "Calculation prerequisite for force determination, not directly representable as a single allowed relation edge without inventing nodes.",
+      "evidence_text": "When determinating the forces the weight of the piping and of the liquid must be taken into account.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Fv = 2/3 · Fv,press + Fv,suct ≤ Fv,max; Fh = Fh,press + 2/3 · Fh,suct ≤ Fh,max; M = Mpress + Msuct ≤ Mmax",
+      "reason": "Component equations defining how vertical, horizontal forces and torque are calculated from suction and pressure contributions; mathematical definitions rather than diagnostic relations.",
+      "evidence_text": "F v = 2 ⁄ 3 ⋅ F v,press + F v,suct ≤ F v,max Index v = in vertical direction, y axis F h = F h,press + 2 ⁄ 3 ⋅ F h,suct ≤ F h,max Index h = in horizontal direction, x axis and z axis M = M press + M suct ≤ M max M = torque in the plane of the flange",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "A distinction is made between a pump unit with a base plate not grouted and a pump unit with a base plate which is grouted for Fv,max, Fh,max and Mmax values given in the table.",
+      "reason": "Contextual note about table lookup conditions; the referenced table is not present on this page.",
+      "evidence_text": "F v,max , F h,max and M max are given in the table. A distinction is made here between a pump unit with a base plate not grouted and a pump unit with a base plate which is grouted",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

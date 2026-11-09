@@ -1,0 +1,184 @@
+{
+  "records": [
+    {
+      "unit": "u17",
+      "head_id": "1",
+      "head_type": "OperatingCondition",
+      "head_zh": "电机表面温度过高",
+      "relation": "causes",
+      "tail_id": "2",
+      "tail_type": "FaultMode",
+      "tail_zh": "爆炸导致电机损坏、死亡或重伤",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u19",
+      "head_id": "1",
+      "head_type": "OperatingCondition",
+      "head_zh": "启动频率",
+      "relation": "causes",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "电机最大温升",
+      "conditions": [],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u20",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "电机功率储备",
+      "relation": "causes",
+      "tail_id": "4",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "启动频率",
+      "conditions": [],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": "启动条件（直接启动DOL、星三角启动、转动惯量等）也影响启动频率，但缺少对应ID"
+    },
+    {
+      "unit": "u21",
+      "head_id": "4",
+      "head_type": "Component",
+      "head_zh": "叶轮",
+      "relation": "operates_under",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "以下限制作为排出侧闸阀微开时启动的指导值：青铜(NiAlBz/CC333G)材质叶轮最大6次/小时；不锈钢(1.4410/1.4436)材质叶轮最大6次/小时",
+      "conditions": [
+        {
+          "id": "8",
+          "zh": "如果启动在指定时间段内均匀分布"
+        }
+      ],
+      "mode": "descriptive",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u22",
+      "head_id": "1",
+      "head_type": "OperatingCondition",
+      "head_zh": "电机仍在运行时重新启动",
+      "relation": "causes",
+      "tail_id": "2",
+      "tail_type": "FaultMode",
+      "tail_zh": "损坏泵组",
+      "conditions": [],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u23",
+      "head_id": "3",
+      "head_type": "MaintenanceAction",
+      "head_zh": "重新启动泵组",
+      "relation": "mitigated_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "不要在泵电机完全停止之前重新启动泵组",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "泵电机完全停止之前"
+        }
+      ],
+      "mode": "required",
+      "polarity": "negative",
+      "unresolved": "头尾相同动作表示禁止执行该操作"
+    },
+    {
+      "unit": "u24",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "operates_under",
+      "tail_id": "2",
+      "tail_type": "OperatingCondition",
+      "tail_zh": "70%至120%最佳效率点(BEP)流量",
+      "conditions": [],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u24",
+      "head_id": "6",
+      "head_type": "OperatingCondition",
+      "head_zh": "在推荐范围外运行",
+      "relation": "causes",
+      "tail_id": "3",
+      "tail_type": "FaultMode",
+      "tail_zh": "显著缩短泵寿命（包括轴封和泵轴承）",
+      "conditions": [],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "scopes_zh": {
+    "s2": "对于长时间停机期间：",
+    "s16": "对于防爆电机，请遵守制造商规定的启动频率"
+  },
+  "missing": [
+    {
+      "unit": "u16",
+      "reason": "Source is only a period character, no extractable pump knowledge"
+    },
+    {
+      "unit": "u18",
+      "reason": "Source is only the word 'documents.', fragment without actionable knowledge"
+    },
+    {
+      "unit": "u25",
+      "reason": "Company name only, no pump system knowledge"
+    },
+    {
+      "unit": "u26",
+      "reason": "Address and contact information only, no pump system knowledge"
+    },
+    {
+      "unit": "u27",
+      "reason": "Email and website only, no pump system knowledge"
+    },
+    {
+      "unit": "u37",
+      "reason": "Warning label 'DANGER' only, no technical content"
+    },
+    {
+      "unit": "u38",
+      "reason": "Random characters from OCR artifact, no meaningful content"
+    },
+    {
+      "unit": "u39",
+      "reason": "Hazardous area warning excluded per instructions"
+    },
+    {
+      "unit": "u40",
+      "reason": "Warning label fragment, already covered in u17"
+    },
+    {
+      "unit": "u41",
+      "reason": "source_only fragment duplicating s16 scope text, no additional relations extractable"
+    },
+    {
+      "unit": "u42",
+      "reason": "Single character OCR artifact"
+    },
+    {
+      "unit": "u43",
+      "reason": "Single character OCR artifact"
+    },
+    {
+      "unit": "u44",
+      "reason": "Random characters from OCR artifact"
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "contexts": [
+    {
+      "context_id": "ctx_speed_limit",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP017:p0006:b0002",
+          "quote": "uous operating speed for the pump is"
+        },
+        {
+          "unit_id": "MP017:p0006:b0003",
+          "quote": "shown on the performance curve (see"
+        },
+        {
+          "unit_id": "MP017:p0006:b0004",
+          "quote": "the Parts List Manual)."
+        }
+      ],
+      "conditions_zh": [
+        "泵由内燃机驱动时"
+      ],
+      "applicability_zh": "自吸离心泵连续运行转速限制",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP017:p0006:b0005",
+          "quote": "Fuel used by internal combustion en-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0006",
+          "quote": "gines presents an extreme explosion"
+        },
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        },
+        {
+          "unit_id": "MP017:p0006:b0008",
+          "quote": "fuel lines are securely connected and"
+        },
+        {
+          "unit_id": "MP017:p0006:b0010",
+          "quote": "free of leaks. Never refuel a hot or run-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0012",
+          "quote": "tank.Always use the correcttype offuel."
+        }
+      ],
+      "conditions_zh": [
+        "泵由内燃机驱动时"
+      ],
+      "applicability_zh": "内燃机驱动泵的燃油安全要求",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_exhaust_hazard",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP017:p0006:b0009",
+          "quote": "Ifthe pump ispowered byan engine,the"
+        },
+        {
+          "unit_id": "MP017:p0006:b0011",
+          "quote": "engine exhaust from this product con-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0013",
+          "quote": "tains chemicals known to the State of"
+        },
+        {
+          "unit_id": "MP017:p0006:b0015",
+          "quote": "California to cause cancer, birth defects"
+        },
+        {
+          "unit_id": "MP017:p0006:b0016",
+          "quote": "or other reproductive harm."
+        }
+      ],
+      "conditions_zh": [
+        "泵由发动机驱动时"
+      ],
+      "applicability_zh": "发动机排气健康危害警告",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_governor_tamper",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP017:p0006:b0017",
+          "quote": "Never tamper with the engine governor"
+        },
+        {
+          "unit_id": "MP017:p0006:b0019",
+          "quote": "to gain more power. The governor esta-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0021",
+          "quote": "blishes safe operating limits thatshould"
+        },
+        {
+          "unit_id": "MP017:p0006:b0023",
+          "quote": "not be exceeded. The maximum contin-"
+        }
+      ],
+      "conditions_zh": [
+        "泵由内燃机驱动且配备调速器时"
+      ],
+      "applicability_zh": "禁止篡改发动机调速器以获取更大功率",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_installation_standards",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP017:p0006:b0018",
+          "quote": "Pumps and related equipment must be in-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0020",
+          "quote": "stalled and operated according to all na-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0022",
+          "quote": "tional, local and industry standards."
+        }
+      ],
+      "conditions_zh": [],
+      "applicability_zh": "泵及相关设备的安装和运行须符合所有国家、地方和行业标准",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    }
+  ],
+  "records": [
+    {
+      "context_id": "ctx_speed_limit",
+      "head_surface": "pump",
+      "head_canonical_zh": "泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "maximum continuous operating speed",
+      "tail_canonical_zh": "最大连续运行转速",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "descriptive",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0002"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0002",
+        "MP017:p0006:b0023"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0002",
+          "quote": "uous operating speed for the pump is"
+        },
+        {
+          "unit_id": "MP017:p0006:b0003",
+          "quote": "shown on the performance curve (see"
+        },
+        {
+          "unit_id": "MP017:p0006:b0004",
+          "quote": "the Parts List Manual)."
+        },
+        {
+          "unit_id": "MP017:p0006:b0023",
+          "quote": "not be exceeded. The maximum contin-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_speed_limit",
+      "head_surface": "maximum continuous operating speed",
+      "head_canonical_zh": "最大连续运行转速",
+      "head_type": "OperatingCondition",
+      "relation": "specified_by",
+      "tail_surface": "performance curve",
+      "tail_canonical_zh": "性能曲线",
+      "tail_type": "Standard",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0002",
+        "MP017:p0006:b0023"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0003"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0002",
+          "quote": "uous operating speed for the pump is"
+        },
+        {
+          "unit_id": "MP017:p0006:b0003",
+          "quote": "shown on the performance curve (see"
+        },
+        {
+          "unit_id": "MP017:p0006:b0004",
+          "quote": "the Parts List Manual)."
+        },
+        {
+          "unit_id": "MP017:p0006:b0023",
+          "quote": "not be exceeded. The maximum contin-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "head_surface": "Fuel",
+      "head_canonical_zh": "燃油",
+      "head_type": "Cause",
+      "relation": "increases_risk_of",
+      "tail_surface": "extreme explosion and fire hazard",
+      "tail_canonical_zh": "极端爆炸和火灾危险",
+      "tail_type": "Risk",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0005"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0006",
+        "MP017:p0006:b0007"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0005",
+          "quote": "Fuel used by internal combustion en-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0006",
+          "quote": "gines presents an extreme explosion"
+        },
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        }
+      ],
+      "conditions_zh": [
+        "使用内燃机时"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "head_surface": "fuel lines",
+      "head_canonical_zh": "燃油管路",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Make certain that all fuel lines are securely connected and free of leaks",
+      "tail_canonical_zh": "确保所有燃油管路牢固连接且无泄漏",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0008"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0007",
+        "MP017:p0006:b0008",
+        "MP017:p0006:b0010"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        },
+        {
+          "unit_id": "MP017:p0006:b0008",
+          "quote": "fuel lines are securely connected and"
+        },
+        {
+          "unit_id": "MP017:p0006:b0010",
+          "quote": "free of leaks. Never refuel a hot or run-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "head_surface": "extreme explosion and fire hazard",
+      "head_canonical_zh": "极端爆炸和火灾危险",
+      "head_type": "Risk",
+      "relation": "prevented_by",
+      "tail_surface": "Never refuel a hot or running engine",
+      "tail_canonical_zh": "切勿在发动机过热或运行时加油",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0006",
+        "MP017:p0006:b0007"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0010"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0006",
+          "quote": "gines presents an extreme explosion"
+        },
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        },
+        {
+          "unit_id": "MP017:p0006:b0010",
+          "quote": "free of leaks. Never refuel a hot or run-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "head_surface": "extreme explosion and fire hazard",
+      "head_canonical_zh": "极端爆炸和火灾危险",
+      "head_type": "Risk",
+      "relation": "prevented_by",
+      "tail_surface": "Avoid overfilling the fuel tank",
+      "tail_canonical_zh": "避免燃油箱加注过满",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "recommended",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0006",
+        "MP017:p0006:b0007"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0012"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0006",
+          "quote": "gines presents an extreme explosion"
+        },
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        },
+        {
+          "unit_id": "MP017:p0006:b0012",
+          "quote": "ning engine. Avoid overfilling the fuel"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fuel_hazard",
+      "head_surface": "extreme explosion and fire hazard",
+      "head_canonical_zh": "极端爆炸和火灾危险",
+      "head_type": "Risk",
+      "relation": "prevented_by",
+      "tail_surface": "Always use the correct type of fuel",
+      "tail_canonical_zh": "始终使用正确类型的燃油",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0006",
+        "MP017:p0006:b0007"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0014"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0006",
+          "quote": "gines presents an extreme explosion"
+        },
+        {
+          "unit_id": "MP017:p0006:b0007",
+          "quote": "and fire hazard. Make certain that all"
+        },
+        {
+          "unit_id": "MP017:p0006:b0014",
+          "quote": "tank.Always use the correcttype offuel."
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_exhaust_hazard",
+      "head_surface": "engine exhaust",
+      "head_canonical_zh": "发动机排气",
+      "head_type": "Cause",
+      "relation": "causes",
+      "tail_surface": "cancer, birth defects or other reproductive harm",
+      "tail_canonical_zh": "癌症、出生缺陷或其他生殖危害",
+      "tail_type": "Risk",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0011"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0015",
+        "MP017:p0006:b0016"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0009",
+          "quote": "Ifthe pump ispowered byan engine,the"
+        },
+        {
+          "unit_id": "MP017:p0006:b0011",
+          "quote": "engine exhaust from this product con-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0013",
+          "quote": "tains chemicals known to the State of"
+        },
+        {
+          "unit_id": "MP017:p0006:b0015",
+          "quote": "California to cause cancer, birth defects"
+        },
+        {
+          "unit_id": "MP017:p0006:b0016",
+          "quote": "or other reproductive harm."
+        }
+      ],
+      "conditions_zh": [
+        "泵由发动机驱动时"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_governor_tamper",
+      "head_surface": "engine governor",
+      "head_canonical_zh": "发动机调速器",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Never tamper with the engine governor to gain more power",
+      "tail_canonical_zh": "切勿为获取更大功率而篡改发动机调速器",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0017"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0017",
+        "MP017:p0006:b0019"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0017",
+          "quote": "Never tamper with the engine governor"
+        },
+        {
+          "unit_id": "MP017:p0006:b0019",
+          "quote": "to gain more power. The governor esta-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_governor_tamper",
+      "head_surface": "engine governor",
+      "head_canonical_zh": "发动机调速器",
+      "head_type": "Component",
+      "relation": "contains",
+      "tail_surface": "safe operating limits",
+      "tail_canonical_zh": "安全运行限值",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "background",
+      "head_evidence_ids": [
+        "MP017:p0006:b0019"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0021"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0019",
+          "quote": "to gain more power. The governor esta-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0021",
+          "quote": "blishes safe operating limits thatshould"
+        },
+        {
+          "unit_id": "MP017:p0006:b0023",
+          "quote": "not be exceeded. The maximum contin-"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_installation_standards",
+      "head_surface": "Pumps and related equipment",
+      "head_canonical_zh": "泵及相关设备",
+      "head_type": "Equipment",
+      "relation": "specified_by",
+      "tail_surface": "all national, local and industry standards",
+      "tail_canonical_zh": "所有国家、地方和行业标准",
+      "tail_type": "Standard",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP017:p0006:b0018"
+      ],
+      "tail_evidence_ids": [
+        "MP017:p0006:b0020",
+        "MP017:p0006:b0022"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP017:p0006:b0018",
+          "quote": "Pumps and related equipment must be in-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0020",
+          "quote": "stalled and operated according to all na-"
+        },
+        {
+          "unit_id": "MP017:p0006:b0022",
+          "quote": "tional, local and industry standards."
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    }
+  ],
+  "coverage_note": "Scanned entire target page 6 (SAFETY PAGE A-3) of OM-04760. Extracted knowledge about: maximum continuous operating speed reference to performance curve; fuel hazards and required fuel line inspection/refueling precautions for internal combustion engines; engine exhaust chemical hazard warning; prohibition against tampering with engine governor and its role in establishing safe operating limits; requirement to install/operate per national/local/industry standards. All content is safety/regulatory warnings rather than detailed pump-component structural or diagnostic data. No tables present. Previous page context (page 5 SAFETY) was not continued as a single procedure but shares the same safety section theme; no cross-page triples were fabricated."
+}

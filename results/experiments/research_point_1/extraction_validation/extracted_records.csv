@@ -1,0 +1,225 @@
+candidate_id,page_key,head_zh,relation,tail_zh,polarity,conditions_zh,applicability_zh,automatic_pass,AI_sample_grade,failure_flags
+P01:001,MP005:p0062,管道和管件布置不良,causes,系统内湍流和振动,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:002,MP005:p0062,系统内湍流和振动,manifests_as,管道系统的振动和噪声,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:003,MP005:p0062,系统内湍流和振动,manifests_as,机械密封可能过早泄漏,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:004,MP005:p0062,系统内湍流和振动,mitigated_by,检查管道和管件布置是否符合CEN标准,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,False,not_sampled,"[""schema_type_or_relation""]"
+P01:005,MP005:p0062,系统内湍流和振动,prevented_by,应在设计阶段审查并批准,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:006,MP005:p0062,检查管道和管件布置是否符合CEN标准,specified_by,CEN标准,positive,"[""管道和管件布置不良""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:007,MP005:p0062,进口流量不足或断流,causes,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,True,E,[]
+P01:008,MP005:p0062,密封液膜不足,causes,干运转,positive,"[""进口流量不足或断流"", ""进口流量不足导致密封液膜不足""]",NSL船用离心泵系统故障排查,False,not_sampled,"[""table_cause_direction""]"
+P01:009,MP005:p0062,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,manifests_as,泵振动和运行读数不稳定,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:010,MP005:p0062,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,manifests_as,提高泵转速时流量不增加,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:011,MP005:p0062,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,manifests_as,机械密封可能泄漏,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,True,E,[]
+P01:012,MP005:p0062,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,mitigated_by,确保所有阀门打开且过滤器未堵塞等,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,False,E,"[""schema_type_or_relation""]"
+P01:013,MP005:p0062,泵未获得足够液体以稳定运行，流量不足；可能导致密封液膜不足和干运转,mitigated_by,检查管道和管件,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,False,E,"[""schema_type_or_relation""]"
+P01:014,MP005:p0062,同一吸入管路上的其他用户可能引起问题,causes,进口流量不足或断流,positive,"[""进口流量不足或断流""]",NSL船用离心泵系统故障排查,False,not_sampled,"[""schema_type_or_relation"", ""table_cause_direction""]"
+P01:015,MP005:p0062,液体流速过高,causes,系统内振动和湍流,positive,"[""液体流速过高""]",NSL船用离心泵系统故障排查,True,S,[]
+P01:016,MP005:p0062,系统内振动和湍流,manifests_as,噪声、振动和泵性能下降,positive,"[""液体流速过高""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:017,MP005:p0062,系统内振动和湍流,manifests_as,机械轴封可能泄漏,positive,"[""液体流速过高""]",NSL船用离心泵系统故障排查,True,S,[]
+P01:018,MP005:p0062,系统内振动和湍流,mitigated_by,确保管道按指定流量额定值选型,positive,"[""液体流速过高""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:019,MP005:p0062,管道,operates_under,通常液体流速应从管道入口经泵到出口逐渐增加,positive,"[""液体流速过高""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:020,MP005:p0062,来自船体或管道系统的外部激励振动,increases_risk_of,过早的机械故障,positive,"[""外部激励振动超过推荐值7mm/s"", ""振动水平超过推荐值7mm/s""]",NSL船用离心泵系统故障排查,True,S,[]
+P01:021,MP005:p0062,过早的机械故障,manifests_as,机械轴封泄漏,positive,"[""外部激励振动超过推荐值7mm/s"", ""外部激励振动超过7mm/s""]",NSL船用离心泵系统故障排查,False,not_sampled,"[""schema_type_or_relation""]"
+P01:022,MP005:p0062,来自船体或管道系统的外部激励振动,diagnosed_by,目视和测量振动水平,positive,"[""外部激励振动超过推荐值7mm/s""]",NSL船用离心泵系统故障排查,False,not_sampled,"[""table_action_branch""]"
+P01:023,MP005:p0062,过早的机械故障,mitigated_by,安装减振部件如进出口柔性波纹管、底座减振垫、电机水平侧向支撑,positive,"[""外部激励振动超过推荐值7mm/s""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:024,MP005:p0062,柔性波纹管,located_in,进口/出口,positive,"[""外部激励振动超过推荐值7mm/s"", ""作为减振部件安装""]",NSL船用离心泵系统故障排查,True,not_sampled,[]
+P01:025,MP005:p0062,减振垫,located_in,底座,positive,"[""外部激励振动超过推荐值7mm/s"", ""作为减振部件安装""]",NSL船用离心泵系统故障排查,True,S,[]
+P01:026,MP005:p0062,水平侧向支撑,located_in,电机,positive,"[""外部激励振动超过推荐值7mm/s"", ""作为减振部件安装""]",NSL船用离心泵系统故障排查,True,S,[]
+P02:001,MP005:p0108,静环座,located_in,轴封,positive,"[""泵组装配阶段"", ""轴封安装步骤3""]",DESMI NSL离心泵泵组装配-轴封安装,True,S,[]
+P02:002,MP005:p0108,静环座,maintained_by,用手指将静环座压入到位,positive,"[""泵组装配阶段"", ""轴封安装步骤3""]",DESMI NSL离心泵泵组装配-轴封安装,True,S,[]
+P02:003,MP005:p0108,所有零件,inspected_by,检查所有零件是否正确嵌入,positive,"[""泵组装配阶段"", ""轴封安装步骤3"", ""静环座压入后""]",DESMI NSL离心泵泵组装配-轴封安装,True,not_sampled,[]
+P02:004,MP005:p0108,静环座滑动面,maintained_by,保护静环座滑动面,positive,"[""使用工具进行装配时"", ""必须使用工具装配时""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,S,[]
+P02:005,MP005:p0108,划伤或割伤,prevented_by,保护静环座滑动面,positive,"[""使用工具进行装配时"", ""必须使用工具装配时""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,not_sampled,[]
+P02:006,MP005:p0108,动环橡胶波纹管内表面,maintained_by,用薄层硅脂润滑动环橡胶波纹管内表面,positive,"[""使用工具进行装配时""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,not_sampled,[]
+P02:007,MP005:p0108,硅脂,operates_under,硅脂不得进入滑动面,negative,"[""使用工具进行装配时""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,not_sampled,[]
+P02:008,MP005:p0108,动环,maintained_by,将其推过轴,positive,"[""使用工具进行装配时"", ""已润滑波纹管内表面后""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,not_sampled,[]
+P02:009,MP005:p0108,橡胶波纹管被割破,prevented_by,使用锥形装配衬套,positive,"[""使用工具进行装配时""]",DESMI NSL离心泵轴封装配-需使用工具时的注意事项,True,E,[]
+P02:010,MP005:p0108,动环,maintained_by,用手将动环推过轴,positive,"[""橡胶波纹管过紧时"", ""碳环未固定时""]",DESMI NSL离心泵轴封装配-推入动环及碳环方向检查,True,not_sampled,[]
+P02:011,MP005:p0108,动环,maintained_by,使用装配工具并注意不要损坏动环,positive,"[""橡胶波纹管过紧时"", ""碳环未固定时"", ""橡胶波纹管过紧时""]",DESMI NSL离心泵轴封装配-推入动环及碳环方向检查,True,E,[]
+P02:012,MP005:p0108,碳环,inspected_by,检查其安装正确，即倒角/研磨面朝向静环座,positive,"[""橡胶波纹管过紧时"", ""碳环未固定时"", ""碳环未固定时""]",DESMI NSL离心泵轴封装配-推入动环及碳环方向检查,True,not_sampled,[]
+P02:013,MP005:p0108,碳环,maintained_by,用少量油脂固定,positive,"[""橡胶波纹管过紧时"", ""碳环未固定时""]",DESMI NSL离心泵轴封装配-推入动环及碳环方向检查,True,not_sampled,[]
+P02:014,MP005:p0108,波纹管,operates_under,约15分钟内沉降并就位,positive,"[""在轴上使用硅脂后约15分钟内"", ""启动后"", ""在轴上使用硅脂后""]",DESMI NSL离心泵轴封装配-硅脂沉降时间及泄漏检查,True,E,[]
+P02:015,MP005:p0108,密封性,operates_under,波纹管就位前不应期望有密封性,negative,"[""在轴上使用硅脂后约15分钟内"", ""启动后"", ""使用硅脂后约15分钟内""]",DESMI NSL离心泵轴封装配-硅脂沉降时间及泄漏检查,False,not_sampled,"[""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P02:016,MP005:p0108,泄漏,inspected_by,通过观察泄漏孔检查是否无泄漏,positive,"[""在轴上使用硅脂后约15分钟内"", ""启动后"", ""启动后""]",DESMI NSL离心泵轴封装配-硅脂沉降时间及泄漏检查,True,E,[]
+P02:017,MP005:p0108,泄漏孔,located_in,轴封,positive,"[""在轴上使用硅脂后约15分钟内"", ""启动后""]",DESMI NSL离心泵轴封装配-硅脂沉降时间及泄漏检查,False,not_sampled,"[""not_primary"", ""source_unresolved""]"
+P02:018,MP005:p0108,叶轮,located_in,泵组,positive,"[""叶轮直径Ø215或Ø265"", ""叶轮直径Ø215/265""]",DESMI NSL离心泵叶轮安装（Ø215/265）,True,S,[]
+P02:019,MP005:p0108,平键,located_in,轴,positive,"[""叶轮直径Ø215或Ø265"", ""叶轮直径Ø215/265""]",DESMI NSL离心泵叶轮安装（Ø215/265）,True,S,[]
+P02:020,MP005:p0108,叶轮,maintained_by,将叶轮导向轴的台肩,positive,"[""叶轮直径Ø215或Ø265"", ""叶轮直径Ø215/265"", ""平键已装入轴中""]",DESMI NSL离心泵叶轮安装（Ø215/265）,True,S,[]
+P02:021,MP005:p0108,叶轮,maintained_by,用垫圈(7和8)和螺母固定叶轮,positive,"[""叶轮直径Ø215或Ø265"", ""叶轮直径Ø215/265"", ""叶轮已推至轴台肩""]",DESMI NSL离心泵叶轮安装（Ø215/265）,True,not_sampled,[]
+P02:022,MP005:p0108,垫圈(7和8),contains,叶轮,positive,"[""叶轮直径Ø215或Ø265""]",DESMI NSL离心泵叶轮安装（Ø215/265）,False,not_sampled,"[""not_primary"", ""source_unresolved""]"
+P02:023,MP005:p0108,螺母,contains,叶轮,positive,"[""叶轮直径Ø215或Ø265""]",DESMI NSL离心泵叶轮安装（Ø215/265）,False,not_sampled,"[""not_primary"", ""source_unresolved""]"
+P03:001,MP004:p0013,泵,operates_under,无压力且已排液,negative,"[""任何检查之前"", ""机组不能意外启动"", ""系统无压力且已排液"", ""检查前必须确认""]",DESMI SA型自吸离心泵检查前安全前提条件,True,E,[]
+P03:002,MP004:p0013,轴封,inspected_by,定期检查轴封是否泄漏,positive,"[""定期检查间隔""]",DESMI SA型自吸离心泵轴封泄漏检查,True,not_sampled,[]
+P03:003,MP004:p0013,轴封,located_in,泵,positive,"[""定期检查间隔""]",DESMI SA型自吸离心泵轴封泄漏检查,False,not_sampled,"[""not_primary""]"
+P03:004,MP004:p0013,安全阀,inspected_by,定期激活安全阀以检查功能,positive,"[""定期检查间隔"", ""阀门堵塞时""]",DESMI SA型自吸离心泵安全阀功能检查与处理,True,E,[]
+P03:005,MP004:p0013,阀门堵塞,mitigated_by,更换或清洁阀门,positive,"[""定期检查间隔"", ""阀门堵塞时"", ""如果可能""]",DESMI SA型自吸离心泵安全阀功能检查与处理,True,not_sampled,[]
+P03:006,MP004:p0013,管堵,located_in,泵底部,positive,"[""管路系统已排空后"", ""泵内仍有残留液体""]",DESMI SA型自吸离心泵排液操作,True,not_sampled,[]
+P03:007,MP004:p0013,残留液体,mitigated_by,拆卸泵底部的管堵,positive,"[""管路系统已排空后"", ""泵内仍有残留液体"", ""管路系统已排空后""]",DESMI SA型自吸离心泵排液操作,False,not_sampled,"[""schema_type_or_relation""]"
+P03:008,MP004:p0013,球轴承,located_in,泵,positive,"[""出厂前终身润滑"", ""出现噪音或轴承磨损时""]",DESMI SA型自吸离心泵球轴承维护与更换,True,not_sampled,[]
+P03:009,MP004:p0013,噪音,indicates,轴承磨损,positive,"[""出厂前终身润滑"", ""出现噪音或轴承磨损时""]",DESMI SA型自吸离心泵球轴承维护与更换,True,not_sampled,[]
+P03:010,MP004:p0013,球轴承,maintained_by,在噪音或轴承磨损时更换,positive,"[""出厂前终身润滑"", ""出现噪音或轴承磨损时"", ""出现噪音或轴承磨损时""]",DESMI SA型自吸离心泵球轴承维护与更换,True,E,[]
+P03:011,MP004:p0013,球轴承,maintained_by,出厂前终身润滑,positive,"[""出厂前终身润滑"", ""出现噪音或轴承磨损时""]",DESMI SA型自吸离心泵球轴承维护与更换,True,E,[]
+P03:012,MP004:p0013,轴承,maintained_by,在清洗后或新安装轴承的侧面涂抹一圈润滑脂,positive,"[""清洗后或新安装的轴承"", ""半封闭轴承仅在开口侧涂脂"", ""推荐使用锂基润滑脂"", ""清洗后或新安装时""]",DESMI SA型自吸离心泵轴承润滑脂涂抹规范,False,not_sampled,"[""context_quote_unbound""]"
+P03:013,MP004:p0013,半封闭轴承,maintained_by,仅在轴承开口侧涂抹润滑脂,positive,"[""清洗后或新安装的轴承"", ""半封闭轴承仅在开口侧涂脂"", ""推荐使用锂基润滑脂""]",DESMI SA型自吸离心泵轴承润滑脂涂抹规范,False,not_sampled,"[""context_quote_unbound""]"
+P03:014,MP004:p0013,润滑脂,specified_by,锂基,positive,"[""清洗后或新安装的轴承"", ""半封闭轴承仅在开口侧涂脂"", ""推荐使用锂基润滑脂""]",DESMI SA型自吸离心泵轴承润滑脂涂抹规范,False,not_sampled,"[""context_quote_unbound""]"
+P03:015,MP004:p0013,泵型号和泵编号,located_in,泵铭牌,positive,"[""订购备件时""]",DESMI SA型自吸离心泵备件订购要求,False,E,"[""schema_type_or_relation""]"
+P04:001,MP018:p0023,轴承盖(37),located_in,径向轴承座(33),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤8B：拆卸轴承盖""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P04:002,MP018:p0023,挡脂圈(51),located_in,径向轴承座(33),negative,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤8B：拆卸轴承盖时断开挡脂圈与径向轴承座的连接""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P04:003,MP018:p0023,径向轴承座(33),maintained_by,拆下螺栓并移除径向轴承座(33),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤9B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:004,MP018:p0023,锁紧螺母(22),maintained_by,拆卸锁紧螺母(22)和锁紧垫圈(69),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤10B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:005,MP018:p0023,锁紧垫圈(69),maintained_by,拆卸锁紧螺母(22)和锁紧垫圈(69),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤10B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:006,MP018:p0023,径向轴承(16),maintained_by,使用凹槽将拉拔器放置在轴承隔套(78)周围,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤11B：拆卸径向轴承""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:007,MP018:p0023,挡脂圈(51),maintained_by,不要对挡脂圈(51)施加拉拔器,negative,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤11B：禁止对挡脂圈使用拉拔器""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:008,MP018:p0023,轴承隔套(78),maintained_by,从轴上拉出轴承隔套(78),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤11B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,E,[]
+P04:009,MP018:p0023,推力轴承(18),maintained_by,拆卸推力轴承(18)和弹簧,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤12B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:010,MP018:p0023,弹簧,maintained_by,保留弹簧，装配时必须重新安装,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤12B：弹簧必须在装配时重新安装""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:011,MP018:p0023,推力轴承座(31),maintained_by,拆卸推力轴承座(31),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤13B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:012,MP018:p0023,挡油圈(107),located_in,推力轴承座(31),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""挡油圈用螺栓固定在轴承座上，随轴承座一起拆出""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:013,MP018:p0023,甩水密封(40b),located_in,轴,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤14B：甩水密封安装在轴上""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:014,MP018:p0023,甩水密封(40b),maintained_by,将甩水密封(40b)从轴上滑下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤14B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:015,MP018:p0023,填料压盖(17),maintained_by,拆卸填料压盖(17),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤15B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:016,MP018:p0023,轴套螺母(20),maintained_by,松开紧定螺钉并将轴套螺母(20)从轴上旋下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤16B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:017,MP018:p0023,填料环(13),maintained_by,拆卸填料环(13),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤17B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:018,MP018:p0023,水封环(29),located_in,轴,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤17B：水封环安装在轴上""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:019,MP018:p0023,叶轮螺母(26),maintained_by,拆卸叶轮螺母(26)的螺栓并将其从轴上旋下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤18B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:020,MP018:p0023,叶轮(2),maintained_by,将叶轮(2)从轴上滑下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤18B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""tail_unbound""]"
+P04:021,MP018:p0023,叶轮键,maintained_by,保留叶轮键以供装配时使用,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤18B：叶轮键必须在装配时重新使用""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:022,MP018:p0023,挡圈(1 80),maintained_by,拆卸挡圈(1 80)的螺栓,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤19B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:023,MP018:p0023,下轴承座(99),located_in,蜗壳盖(11),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤19B：下轴承座安装在蜗壳盖上""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""tail_unbound""]"
+P04:024,MP018:p0023,锁定键,maintained_by,保留锁定键，装配时必须使用,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤19B：锁定键必须在装配时重新使用""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:025,MP018:p0023,轴(6),maintained_by,小心地将轴(6)从蜗壳盖(11)中滑出,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤20B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:026,MP018:p0023,轴颈(74),located_in,轴(6),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤20B：轴滑出时包含轴颈、锁紧螺母和轴套""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""head_unbound""]"
+P04:027,MP018:p0023,锁紧螺母(22-I),located_in,轴(6),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤20B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:028,MP018:p0023,轴套(14),located_in,轴(6),positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤20B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:029,MP018:p0023,轴套(14),maintained_by,将轴套(14)从轴上滑下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤21B""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:030,MP018:p0023,销,maintained_by,装配时必须使用销,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤21B：销必须在装配时重新使用""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:031,MP018:p0023,轴颈锁紧螺母(22-I),maintained_by,松开紧定螺钉并将轴颈锁紧螺母(22-I)从轴上旋下,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤22B：拆卸轴颈前需先拆下轴颈锁紧螺母""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,S,[]
+P04:032,MP018:p0023,轴颈(74),maintained_by,将轴颈(74)从轴上滑下，小心操作,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤22B：需小心操作轴颈""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:033,MP018:p0023,轴承衬套(39),maintained_by,拆下锁板并使用尽可能大的冲头将其从壳体中压出,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤23B：冲头尺寸受限于下轴承座(99)的孔径""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:034,MP018:p0023,耐磨环(8和25，如提供),located_in,泵,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""步骤24B：泵完全拆卸后仅剩耐磨环未拆""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,True,not_sampled,[]
+P04:035,MP018:p0023,耐磨环(8和25，如提供),operates_under,过盈配合,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""耐磨环与其对应零件为过盈配合""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P04:036,MP018:p0023,耐磨环(8和25，如提供),maintained_by,拆下各自的锁定装置并在180°对称点均匀撬出,positive,"[""仅适用于Model FS泵"", ""若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A"", ""从第16页步骤7继续"", ""仅在需要更换时才执行此拆卸操作""]",Model FS非堵塞离心泵拆卸程序（步骤8B至24B）,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P04:037,MP018:p0023,耐磨环,maintained_by,除非必须用新零件更换否则不应拆卸,negative,"[""仅在需要用新零件更换时才应拆卸耐磨环"", ""仅在需要用新零件更换时才拆卸耐磨环""]",Model FS泵耐磨环拆卸限制说明,True,S,[]
+P05:001,MP021:p0006,转子轴,maintained_by,清洁转子轴和密封壳孔，确保无污垢、砂砾和划痕,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤1""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:002,MP021:p0006,密封壳孔,maintained_by,清洁转子轴和密封壳孔，确保无污垢、砂砾和划痕,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤1""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:003,MP021:p0006,密封放置处的轴径,maintained_by,轻轻倒圆密封放置处轴径的前缘,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤1""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:004,MP021:p0006,机械密封面,maintained_by,除干净的手或干净的布外，切勿用任何东西接触机械密封面,negative,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装期间""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:005,MP021:p0006,微小颗粒,causes,划伤密封面,positive,"[""仅适用于组件式机械密封安装""]",Viking回转容积泵组件式机械密封安装程序,False,not_sampled,"[""tail_unbound""]"
+P05:006,MP021:p0006,划伤密封面,causes,泄漏,positive,"[""仅适用于组件式机械密封安装""]",Viking回转容积泵组件式机械密封安装程序,False,E,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P05:007,MP021:p0006,锥形安装套,maintained_by,将锥形安装套放在轴上，用大量P-80®或等效物涂覆锥形套和旋转件内侧，不推荐使用油脂,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤2""]",Viking回转容积泵组件式机械密封安装程序,False,E,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:008,MP021:p0006,旋转件内侧,maintained_by,用大量P-80®或等效物涂覆锥形套和旋转件内侧，不推荐使用油脂,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤2""]",Viking回转容积泵组件式机械密封安装程序,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:009,MP021:p0006,油脂,prevented_by,不推荐使用油脂,negative,"[""仅适用于组件式机械密封安装"", ""涂覆锥形安装套和旋转件内侧时""]",Viking回转容积泵组件式机械密封安装程序,False,not_sampled,"[""head_absent_from_bound_quotes"", ""no_target_page_relation"", ""relation_quote_unbound"", ""source_unresolved"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:010,MP021:p0006,旋转件,maintained_by,在轴上并越过锥形套开始安装旋转件,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤2""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:011,MP021:p0006,旋转件,maintained_by,移动旋转件使紧定螺钉位于支架侧面密封检修孔正下方，将所有紧定螺钉牢固拧紧到轴上,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤3""]",Viking回转容积泵组件式机械密封安装程序,True,E,[]
+P05:012,MP021:p0006,固定夹,maintained_by,密封安装在轴上后拆下固定夹以释放弹簧,positive,"[""仅适用于组件式机械密封安装"", ""部分配备压缩密封弹簧固定夹的密封""]",Viking回转容积泵组件式机械密封安装程序,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P05:013,MP021:p0006,O形圈密封垫片,maintained_by,用P-80®或等效物润滑O形圈密封垫片外径,positive,"[""O形圈垫片型机械密封座安装"", ""O形圈垫片型机械密封座安装""]",O形圈垫片型机械密封座的安装步骤,False,E,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:014,MP021:p0006,密封座,maintained_by,将密封座压入孔中直到背面未研磨面与孔齐平,positive,"[""O形圈垫片型机械密封座安装"", ""O形圈垫片型机械密封座安装""]",O形圈垫片型机械密封座的安装步骤,True,not_sampled,[]
+P05:015,MP021:p0006,密封座固定器,maintained_by,安装密封座固定器、帽螺钉和螺母并牢固拧紧,positive,"[""O形圈垫片型机械密封座安装"", ""O形圈垫片型机械密封座安装""]",O形圈垫片型机械密封座的安装步骤,True,not_sampled,[]
+P05:016,MP021:p0006,锥形安装套,maintained_by,拆下锥形安装套,positive,"[""O形圈垫片型机械密封座安装"", ""O形圈垫片型机械密封座安装完成后""]",O形圈垫片型机械密封座的安装步骤,True,not_sampled,[]
+P05:017,MP021:p0006,旋转件和密封座的密封面,maintained_by,用油冲洗旋转件和密封座的密封面,positive,"[""夹紧式机械密封座安装"", ""夹紧式机械密封座安装""]",夹紧式机械密封座的安装步骤,True,not_sampled,[]
+P05:018,MP021:p0006,密封座和座垫片,maintained_by,将密封座和座垫片安装在轴端并贴紧机加工支架面,positive,"[""夹紧式机械密封座安装"", ""夹紧式机械密封座安装""]",夹紧式机械密封座的安装步骤,True,not_sampled,[]
+P05:019,MP021:p0006,密封垫片、密封座固定器、帽螺钉和螺母,maintained_by,安装另一个密封垫片、密封座固定器、帽螺钉和螺母并牢固拧紧,positive,"[""夹紧式机械密封座安装"", ""夹紧式机械密封座安装""]",夹紧式机械密封座的安装步骤,False,E,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:020,MP021:p0006,锥形安装套,maintained_by,拆下锥形安装套,positive,"[""夹紧式机械密封座安装"", ""夹紧式机械密封座安装完成后""]",夹紧式机械密封座的安装步骤,False,E,"[""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P05:021,MP021:p0006,回吸或冲洗管路,maintained_by,连接回吸或冲洗管路，或对无循环管路的密封排放填料函，直到启动时有液体存在,positive,"[""仅适用于组件式机械密封安装"", ""组件式机械密封安装步骤5""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:022,MP021:p0006,填料函,maintained_by,对无循环管路的密封排放填料函直到启动时有液体存在,positive,"[""仅适用于组件式机械密封安装"", ""无循环管路的密封""]",Viking回转容积泵组件式机械密封安装程序,True,not_sampled,[]
+P05:023,MP021:p0006,密封寿命,indicates,应使用回吸或冲洗管路尺寸,positive,"[""仅适用于组件式机械密封安装"", ""为获得最大密封寿命""]",Viking回转容积泵组件式机械密封安装程序,False,not_sampled,"[""schema_type_or_relation"", ""source_unresolved"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:024,MP021:p0006,黄铜或塑料棒,maintained_by,将黄铜或塑料棒通过端口开口插入转子齿之间以防止轴转动,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤1""]",Viking回转容积泵组件式机械密封拆卸程序,True,E,[]
+P05:025,MP021:p0006,锁紧螺母和锁紧垫圈,maintained_by,弯起锁紧垫圈的凸耳，用扳手从轴上拆下锁紧螺母和锁紧垫圈,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤1""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:026,MP021:p0006,轴承座组件,maintained_by,松开轴承座端面上的两个紧定螺钉并从支架上拆下轴承座组件,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤2""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:027,MP021:p0006,半圆环（仅K、KK、L、LQ、LL、LS规格）,maintained_by,从轴上拆下内隔套下方的半圆环对,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤3"", ""仅适用于K、KK、L、LQ、LL、LS规格""]",Viking回转容积泵组件式机械密封拆卸程序,True,E,[]
+P05:028,MP021:p0006,密封座固定器、密封座和密封垫片,maintained_by,松开螺母并拆下密封座固定器、密封座和密封垫片,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤4""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:029,MP021:p0006,机械密封旋转件中的紧定螺钉,maintained_by,松开机械密封旋转件中的紧定螺钉,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤5""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:030,MP021:p0006,循环管路和/或螺塞,maintained_by,需要拆下循环管路和/或螺塞才能接触到紧定螺钉,positive,"[""仅适用于组件式机械密封拆卸"", ""松开机械密封旋转件紧定螺钉前""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:031,MP021:p0006,转子/轴组件,maintained_by,将转子/轴组件推出壳体直到转子齿伸出壳体端面,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤6""]",Viking回转容积泵组件式机械密封拆卸程序,True,not_sampled,[]
+P05:032,MP021:p0006,转子/轴组件,maintained_by,将转子/轴组件推回壳体，密封旋转件应被推到轴上足够远以便轻松拆卸,positive,"[""仅适用于组件式机械密封拆卸"", ""组件式机械密封拆卸步骤7""]",Viking回转容积泵组件式机械密封拆卸程序,True,E,[]
+P05:033,MP021:p0006,转子轴组件,maintained_by,如果仅更换机械密封，则转子轴组件只需移动到足以脱开密封旋转件即可,positive,"[""仅适用于组件式机械密封拆卸"", ""仅更换机械密封作为维护范围时""]",Viking回转容积泵组件式机械密封拆卸程序,False,not_sampled,"[""head_unbound""]"
+P05:034,MP021:p0006,弹性体波纹管、弹性体O形圈和PTFE楔形密封,maintained_by,需要泵拆卸才能更换（参见第7页,,[],弹性体波纹管、弹性体O形圈和PTFE楔形密封的更换要求,False,not_sampled,"[""conditions_not_list"", ""head_unbound"", ""incomplete_record"", ""modality_missing"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P05:035,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:036,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:037,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:038,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:039,MP021:p0006,,,,,[],,False,U,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:040,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:041,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:042,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:043,MP021:p0006,,,,,[],,False,U,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:044,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:045,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P05:046,MP021:p0006,,,,,[],,False,not_sampled,"[""conditions_not_list"", ""head_absent_from_bound_quotes"", ""head_not_chinese"", ""head_unbound"", ""incomplete_record"", ""invalid_context_kind"", ""missing_or_duplicate_context"", ""modality_missing"", ""no_applicability"", ""no_context_evidence"", ""no_relation_evidence"", ""no_target_page_relation"", ""not_primary"", ""polarity_missing"", ""schema_type_or_relation"", ""tail_absent_from_bound_quotes"", ""tail_not_chinese"", ""tail_unbound""]"
+P06:001,MP007:p0008,立式多级离心泵,maintained_by,可生物降解润滑剂,positive,"[""适用时"", ""适用时""]",立式多级离心泵维护润滑,True,not_sampled,[]
+P06:002,MP007:p0008,立式多级离心泵,maintained_by,拆解并环保处置产品,positive,[],立式多级离心泵报废拆解,True,E,[]
+P06:003,MP007:p0008,立式多级离心泵,operates_under,介质温度：-20°C ~ +120°C,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:004,MP007:p0008,立式多级离心泵,operates_under,流量范围：0.7~240m³/h,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:005,MP007:p0008,立式多级离心泵,operates_under,最大压力：33bar,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:006,MP007:p0008,立式多级离心泵,operates_under,介质pH值：3 - 9,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:007,MP007:p0008,立式多级离心泵,operates_under,最高环境温度：+40°C,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P06:008,MP007:p0008,立式多级离心泵,operates_under,最大海拔：<=1000m,positive,[],立式多级离心泵运行工况范围,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:009,MP007:p0008,立式多级离心泵,operates_under,稀薄、不易燃易爆、不含固体颗粒或纤维的液体,positive,[],立式多级离心泵输送介质要求,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P06:010,MP007:p0008,泵材料,operates_under,液体对泵材料无化学腐蚀,positive,[],立式多级离心泵输送介质要求,True,not_sampled,[]
+P06:011,MP007:p0008,输送液体,causes,需考虑使用大功率电机,positive,"[""输送液体密度或粘度大于水"", ""输送液体的密度或粘度大于水""]",高粘度或高密度介质下的电机选型,True,not_sampled,[]
+P07:001,MP005:p0022,泵,operates_under,基本水力设计、连接类型和密封,positive,"[""ATEX防爆标志泵在爆炸性危险环境中使用时介质温度有额外限制""]",DESMI NSL船用离心泵工作范围通用规范,False,not_sampled,"[""head_unbound""]"
+P07:002,MP005:p0022,泵,operates_under,介质下限温度-20°C,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,True,not_sampled,[]
+P07:003,MP005:p0022,球墨铸铁盐水泵（配特殊密封）,operates_under,介质下限温度-40°C,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,True,not_sampled,[]
+P07:004,MP005:p0022,泵（淡水）,operates_under,淡水介质上限温度+80°C,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,False,not_sampled,"[""head_unbound""]"
+P07:005,MP005:p0022,泵（淡水，配特殊轴封）,operates_under,淡水介质上限温度150°C（特殊轴封）,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,False,not_sampled,"[""head_unbound""]"
+P07:006,MP005:p0022,泵（海水）,operates_under,海水介质上限温度+40°C,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,True,not_sampled,[]
+P07:007,MP005:p0022,Super Duplex泵（配特殊轴封）,operates_under,海水介质上限温度+60°C,positive,"[""球墨铸铁盐水泵配特殊密封时下限为-40°C"", ""淡水配特殊轴封时上限可达150°C"", ""Super Duplex海水泵配特殊轴封时上限可达+60°C""]",NSL泵输送不同介质时的温度限值,True,not_sampled,[]
+P07:008,MP005:p0022,泵,contains,球轴承,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)"", ""泵轴上安装球轴承时""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,not_sampled,"[""context_quote_unbound"", ""no_target_page_relation"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:009,MP005:p0022,球轴承,located_in,泵轴,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,not_sampled,"[""context_quote_unbound"", ""head_absent_from_bound_quotes"", ""no_target_page_relation"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:010,MP005:p0022,泵（泵轴装球轴承）,operates_under,清洁淡水温度最高100°C（泵轴装球轴承）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,not_sampled,"[""context_quote_unbound"", ""no_target_page_relation"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P07:011,MP005:p0022,泵（泵轴不装球轴承）,operates_under,清洁淡水温度最高140°C（泵轴不装球轴承）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,S,"[""context_quote_unbound"", ""no_target_page_relation"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P07:012,MP005:p0022,泵壳,specified_by,球墨铸铁（如GGG40）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)"", ""输送清洁淡水温度超过100°C时""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,E,"[""context_quote_unbound"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:013,MP005:p0022,泵壳,specified_by,马氏体不锈钢（如1.4436）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)"", ""输送清洁淡水温度超过100°C时""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,not_sampled,"[""context_quote_unbound"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:014,MP005:p0022,后盖,specified_by,球墨铸铁（如GGG40）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)"", ""输送清洁淡水温度超过100°C时""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,not_sampled,"[""context_quote_unbound"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:015,MP005:p0022,后盖,specified_by,马氏体不锈钢（如1.4436）,positive,"[""仅适用于清洁淡水"", ""泵轴上安装球轴承时最高100°C"", ""泵轴上不安装球轴承时最高140°C"", ""超过100°C时泵壳和后盖必须使用球墨铸铁(GGG40)或马氏体不锈钢(1.4436)"", ""输送清洁淡水温度超过100°C时""]",NSL泵输送清洁淡水时基于轴承配置和壳体材料的温度适用条件,False,E,"[""context_quote_unbound"", ""relation_quote_unbound"", ""tail_absent_from_bound_quotes""]"
+P07:016,MP005:p0022,泵,operates_under,环境下限温度-20°C,positive,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,False,not_sampled,"[""head_unbound""]"
+P07:017,MP005:p0022,泵,operates_under,环境上限温度+45°C,positive,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,False,U,"[""head_unbound""]"
+P07:018,MP005:p0022,泵,operates_under,冻结状态,negative,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,True,not_sampled,[]
+P07:019,MP005:p0022,环境温度超过+45°C,causes,电机冷却效果降低,positive,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,True,S,[]
+P07:020,MP005:p0022,电机位于海拔1000m以上,causes,电机冷却效果降低,positive,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,True,not_sampled,[]
+P07:021,MP005:p0022,电机冷却效果降低,evolves_to,可能需要调整电机功率,positive,"[""环境温度超过+45°C或电机海拔超过1000m时冷却效果降低"", ""需避免泵冻结""]",NSL泵运行环境温度限值及超限影响,True,not_sampled,[]
+P07:022,MP005:p0022,泵,operates_under,介质密度最大2500 kg/m³,positive,"[""密度最大2500 kg/m³"", ""粘度最大500 cSt"", ""高于水的密度或粘度需要更大机械扭矩和电机功率""]",NSL泵输送介质的密度和粘度限值及超载风险,False,not_sampled,"[""head_unbound""]"
+P07:023,MP005:p0022,泵,operates_under,介质粘度最大500 cSt,positive,"[""密度最大2500 kg/m³"", ""粘度最大500 cSt"", ""高于水的密度或粘度需要更大机械扭矩和电机功率""]",NSL泵输送介质的密度和粘度限值及超载风险,False,not_sampled,"[""head_unbound""]"
+P07:024,MP005:p0022,输送密度和/或粘度高于水的液体,causes,泵轴需要更大机械扭矩且电机需要更大功率,positive,"[""密度最大2500 kg/m³"", ""粘度最大500 cSt"", ""高于水的密度或粘度需要更大机械扭矩和电机功率""]",NSL泵输送介质的密度和粘度限值及超载风险,True,not_sampled,[]
+P07:025,MP005:p0022,泵轴需要更大机械扭矩且电机需要更大功率,causes,泵轴和电机过载,positive,"[""密度最大2500 kg/m³"", ""粘度最大500 cSt"", ""高于水的密度或粘度需要更大机械扭矩和电机功率""]",NSL泵输送介质的密度和粘度限值及超载风险,True,not_sampled,[]
+P08:001,MP018:p0022,推力轴承(18),maintained_by,对最内侧轴承的内圈施力拆卸,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""拆解步骤26A""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:002,MP018:p0022,未使用该拆卸程序,causes,损坏轴承,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""拆卸推力轴承(18)时未对内圈施力""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:003,MP018:p0022,推力轴承座(141),maintained_by,将推力轴承座(141)从轴上滑出,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""拆解步骤27A，推力轴承已拆除后""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:004,MP018:p0022,油脂密封(51),inspected_by,检查是否有可见损坏,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""若泵配备用于推力轴承盖(37)、径向轴承盖(35)及推力轴承座(141)的油脂密封(51)""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:005,MP018:p0022,可见损坏,mitigated_by,必要时更换,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""油脂密封(51)存在可见损坏时""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,S,[]
+P08:006,MP018:p0022,耐磨环(8和25),located_in,泵,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""拆解步骤29A，除耐磨环和填料箱衬套外泵已完全拆解""]",Non-Clog离心泵完全拆解程序步骤26A至29A,False,U,"[""not_primary""]"
+P08:007,MP018:p0022,填料箱衬套(15和27，若配备),located_in,泵,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""拆解步骤29A""]",Non-Clog离心泵完全拆解程序步骤26A至29A,False,U,"[""not_primary""]"
+P08:008,MP018:p0022,耐磨环(8和25),operates_under,过盈配合,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:009,MP018:p0022,填料箱衬套(15和27，若配备),operates_under,过盈配合,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:010,MP018:p0022,耐磨环(8和25),maintained_by,拆除各自的锁定装置并在180°对称点均匀撬出,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""需要更换新零件时才拆卸""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:011,MP018:p0022,填料箱衬套(15和27，若配备),maintained_by,拆除各自的锁定装置并在180°对称点均匀撬出,positive,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合"", ""需要更换新零件时才拆卸""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:012,MP018:p0022,耐磨环,maintained_by,除非必须更换新件否则不应拆卸,negative,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P08:013,MP018:p0022,填料箱衬套,maintained_by,除非必须更换新件否则不应拆卸,negative,"[""泵已按前页步骤拆解至推力轴承拆卸阶段"", ""若泵配备油脂密封(51)"", ""耐磨环和填料箱衬套为过盈配合""]",Non-Clog离心泵完全拆解程序步骤26A至29A,True,not_sampled,[]
+P09:001,MP017:p0006,泵,operates_under,最大连续运行转速,positive,"[""泵由内燃机驱动时""]",自吸离心泵连续运行转速限制,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P09:002,MP017:p0006,最大连续运行转速,specified_by,性能曲线,positive,"[""泵由内燃机驱动时""]",自吸离心泵连续运行转速限制,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound""]"
+P09:003,MP017:p0006,燃油,increases_risk_of,极端爆炸和火灾危险,positive,"[""泵由内燃机驱动时"", ""使用内燃机时""]",内燃机驱动泵的燃油安全要求,False,not_sampled,"[""context_quote_unbound""]"
+P09:004,MP017:p0006,燃油管路,maintained_by,确保所有燃油管路牢固连接且无泄漏,positive,"[""泵由内燃机驱动时""]",内燃机驱动泵的燃油安全要求,False,not_sampled,"[""context_quote_unbound""]"
+P09:005,MP017:p0006,极端爆炸和火灾危险,prevented_by,切勿在发动机过热或运行时加油,negative,"[""泵由内燃机驱动时""]",内燃机驱动泵的燃油安全要求,False,not_sampled,"[""context_quote_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P09:006,MP017:p0006,极端爆炸和火灾危险,prevented_by,避免燃油箱加注过满,negative,"[""泵由内燃机驱动时""]",内燃机驱动泵的燃油安全要求,False,not_sampled,"[""context_quote_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P09:007,MP017:p0006,极端爆炸和火灾危险,prevented_by,始终使用正确类型的燃油,positive,"[""泵由内燃机驱动时""]",内燃机驱动泵的燃油安全要求,False,not_sampled,"[""context_quote_unbound""]"
+P09:008,MP017:p0006,发动机排气,causes,癌症、出生缺陷或其他生殖危害,positive,"[""泵由发动机驱动时"", ""泵由发动机驱动时""]",发动机排气健康危害警告,True,not_sampled,[]
+P09:009,MP017:p0006,发动机调速器,maintained_by,切勿为获取更大功率而篡改发动机调速器,negative,"[""泵由内燃机驱动且配备调速器时""]",禁止篡改发动机调速器以获取更大功率,True,not_sampled,[]
+P09:010,MP017:p0006,发动机调速器,contains,安全运行限值,positive,"[""泵由内燃机驱动且配备调速器时""]",禁止篡改发动机调速器以获取更大功率,False,E,"[""head_unbound"", ""not_primary"", ""schema_type_or_relation""]"
+P09:011,MP017:p0006,泵及相关设备,specified_by,所有国家、地方和行业标准,positive,[],泵及相关设备的安装和运行须符合所有国家、地方和行业标准,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:001,MP017:p0004,G-R自吸离心泵,contains,基本底座安装型,positive,[],G-R自吸离心泵,False,E,"[""not_primary"", ""tail_unbound""]"
+P10:002,MP017:p0004,G-R自吸离心泵,contains,直联型,positive,[],G-R自吸离心泵,False,E,"[""not_primary"", ""tail_unbound""]"
+P10:003,MP017:p0004,直联型,contains,电动机,positive,[],G-R自吸离心泵,False,not_sampled,"[""head_unbound"", ""not_primary"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:004,MP017:p0004,直联型,contains,汽油机或柴油机,positive,[],G-R自吸离心泵,False,E,"[""head_unbound"", ""not_primary""]"
+P10:005,MP017:p0004,泵,maintained_by,断开或关闭动力源并采取必要预防措施确保泵保持停机状态,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤2""]",G-R自吸离心泵维护准备,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:006,MP017:p0004,泵,maintained_by,若过热则让泵完全冷却,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤3；泵过热时""]",G-R自吸离心泵维护准备,True,S,[]
+P10:007,MP017:p0004,盖板、面板或螺塞,inspected_by,打开任何盖板、面板或螺塞前检查温度,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤4""]",G-R自吸离心泵维护准备,False,not_sampled,"[""head_unbound""]"
+P10:008,MP017:p0004,吸入和排出阀,maintained_by,关闭吸入和排出阀,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤5""]",G-R自吸离心泵维护准备,True,not_sampled,[]
+P10:009,MP017:p0004,泵,maintained_by,缓慢谨慎地给泵排气,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤6""]",G-R自吸离心泵维护准备,False,not_sampled,"[""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:010,MP017:p0004,泵,maintained_by,排空泵,positive,"[""打开或维修泵之前"", ""打开或维修泵之前的步骤7""]",G-R自吸离心泵维护准备,True,S,[]
+P10:011,MP017:p0004,泵未设计用于输送的液体,causes,损坏泵,positive,[],G-R自吸离心泵,False,not_sampled,"[""context_quote_unbound""]"
+P10:012,MP017:p0004,泵未设计用于输送的液体,causes,泵故障,positive,[],G-R自吸离心泵,False,not_sampled,"[""context_quote_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:013,MP017:p0004,泵,operates_under,泵未设计用于输送的液体,negative,[],G-R自吸离心泵,False,not_sampled,"[""context_quote_unbound""]"
+P10:014,MP017:p0004,吸入和排出软管及管道,maintained_by,起吊前从泵上拆除,positive,"[""起吊前"", ""起吊前""]",G-R自吸离心泵吊装搬运,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:015,MP017:p0004,泵及所有管道或软管连接,inspected_by,运行前确认泵及所有管道或软管连接紧固、支撑适当且牢固,positive,"[""泵就位后、运行前"", ""泵就位后、运行前""]",G-R自吸离心泵安装检查,False,not_sampled,"[""head_absent_from_bound_quotes"", ""head_unbound"", ""tail_absent_from_bound_quotes"", ""tail_unbound""]"
+P10:016,MP017:p0004,泵,operates_under,长时间关闭排出阀,negative,"[""长时间关闭排出阀运行""]",G-R自吸离心泵运行限制,False,not_sampled,"[""tail_unbound""]"
+P10:017,MP017:p0004,关闭排出阀,causes,泵部件劣化,positive,"[""长时间关闭排出阀运行"", ""长时间在关闭排出阀下运行""]",G-R自吸离心泵运行限制,False,S,"[""head_unbound""]"

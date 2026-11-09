@@ -1,0 +1,139 @@
+{
+  "assertions": [
+    {
+      "head_surface": "Trend Analysis",
+      "head_type": "InspectionMethod",
+      "relation": "indicates",
+      "tail_surface": "systems or components that may be in the process of degrading",
+      "tail_type": "FailureMechanism",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "A trend analysis provides an indication for systems or components that may be in the process of degrading.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Equipment downtime",
+      "head_type": "SignalFeature",
+      "relation": "diagnosed_by",
+      "tail_surface": "Trend Analysis",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "The measurement factors used for trending may be as follows: i) Equipment downtime",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Equipment item/component condition monitoring levels (vibration, thermography, tribology, etc.)",
+      "head_type": "SignalFeature",
+      "relation": "diagnosed_by",
+      "tail_surface": "Trend Analysis",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "ii) Equipment item/component condition monitoring levels (vibration, thermography, tribology, etc.)",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Other condition-monitoring parameters related to performance (temperatures, pressures, power, etc.)",
+      "head_type": "SignalFeature",
+      "relation": "diagnosed_by",
+      "tail_surface": "Trend Analysis",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "iii) Other condition-monitoring parameters related to performance (temperatures, pressures, power, etc.)",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "The results of chronic root cause failure analyses",
+      "head_type": "SignalFeature",
+      "relation": "diagnosed_by",
+      "tail_surface": "Trend Analysis",
+      "tail_type": "InspectionMethod",
+      "conditions": [],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "iv) The results of chronic root cause failure analyses",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Documents containing maintenance requirements for systems, equipment items or components",
+      "head_type": "Standard",
+      "relation": "inspected_by",
+      "tail_surface": "Maintenance Requirements Document Reviews",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "Documents containing maintenance requirements for systems, equipment items or components are to be reviewed at least annually to identify outdated maintenance processes, techniques or technologies, or to bring attention to obsolete tools and outdated spare parts.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Task packaging",
+      "head_type": "MaintenanceAction",
+      "relation": "maintained_by",
+      "tail_surface": "Task packaging reviews",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "Task packaging reviews should be conducted periodically to evaluate the packaged maintenance intervals to verify that as maintenance tasks are added, deleted or modified, optimum packaged intervals are maintained.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "age exploration tasks",
+      "head_type": "InspectionAction",
+      "relation": "prevented_by",
+      "tail_surface": "insufficient age-to-failure data are available or assumed data are used during the initial reliability based analysis",
+      "tail_type": "Cause",
+      "conditions": [
+        "When insufficient age-to-failure data are available or assumed data are used during the initial reliability based analysis"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "background",
+      "applicability": "marine machinery reliability and maintenance surveys",
+      "evidence_text": "When insufficient age-to-failure data are available or assumed data are used during the initial reliability based analysis, age exploration tasks are to be designed and implemented.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Task packaging is the process of bundling a number of derived maintenance tasks into optimum uniform intervals such as maintenance performed during a vessel’s scheduled dry-docking.",
+      "reason": "Definition of a maintenance planning concept; not directly representable as a relation between defined node types without inventing nodes.",
+      "evidence_text": "Task packaging is the process of bundling a number of derived maintenance tasks into optimum uniform intervals such as maintenance performed during a vessel’s scheduled dry-docking.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "An effective reliability based program will necessarily impose frequent changes to an age exploration program, such as adding new equipment, deleting completed or unproductive tasks, or adjusting task intervals.",
+      "reason": "Program management guidance; no specific pump component or fault target on this page to form a concrete assertion edge.",
+      "evidence_text": "An effective reliability based program will necessarily impose frequent changes to an age exploration program, such as adding new equipment, deleting completed or unproductive tasks, or adjusting task intervals.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "The result of the age-exploration tasks is a better understanding of the system or equipment’s wear-out region of the failure characteristics curve, which can be fed back for use in updating the analysis.",
+      "reason": "Describes analytical feedback loop outcome; not mappable to a single allowed relation between node types without fabricating nodes.",
+      "evidence_text": "The result of the age-exploration tasks is a better understanding of the system or equipment’s wear-out region of the failure characteristics curve, which can be fed back for use in updating the analysis.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

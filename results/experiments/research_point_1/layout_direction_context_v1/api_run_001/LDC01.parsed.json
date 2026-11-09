@@ -1,0 +1,94 @@
+{
+  "assertions": [
+    {
+      "head_surface": "flanges",
+      "head_type": "Component",
+      "relation": "specified_by",
+      "tail_surface": "EN-ISO 5199",
+      "tail_type": "Standard",
+      "conditions": [
+        "Table 12: Permissible forces and moments on the flanges"
+      ],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "Table 12: Permissible forces and moments on the flanges, based on EN-ISO 5199",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pump casing",
+      "head_type": "Component",
+      "relation": "contains",
+      "tail_surface": "flanges",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump",
+      "evidence_text": "Permissible forces and moments on the flanges",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Cast iron",
+      "head_type": "Component",
+      "relation": "specified_by",
+      "tail_surface": "stated values x 1,0",
+      "tail_type": "Standard",
+      "conditions": [
+        "Pump casing material",
+        "Table 12 permissible forces and moments"
+      ],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump with cast iron pump casing",
+      "evidence_text": "Cast iron           stated values x 1,0",
+      "evidence_unit_ids": [
+        "MP015:p0106:t01:r000:c00",
+        "MP015:p0106:t01:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "Stainless steel",
+      "head_type": "Component",
+      "relation": "specified_by",
+      "tail_surface": "stated values x 2,0",
+      "tail_type": "Standard",
+      "conditions": [
+        "Pump casing material",
+        "Table 12 permissible forces and moments"
+      ],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "FreFlow Horizontal Centrifugal Pump with stainless steel pump casing",
+      "evidence_text": "Stainless steel     stated values x 2,0",
+      "evidence_unit_ids": [
+        "MP015:p0106:t01:r001:c00",
+        "MP015:p0106:t01:r001:c01"
+      ]
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Table 12 lists permissible vertical force (Fv max), horizontal force (Fh max), and moment (Mmax) on flanges for each FRE pump model, bracket group, and base plate type (non grouted vs grouted).",
+      "reason": "Tabular numerical limits per model/configuration are parameter data not representable as a single relational assertion between defined node types.",
+      "evidence_text": "Table 12: Permissible forces and moments on the flanges, based on EN-ISO 5199\n                            Pump unit, non grouted base plate Pump unit, grouted base plate\n                      Bracket                                                     \n                 FRE         F       F       M       F       F       M            \n                      group   v max   h max   max     v max  h max    max         \n                              [N]     [N]    [Nm]     [N]     [N]    [Nm]",
+      "evidence_unit_ids": [
+        "MP015:p0106:t00:r000:c00",
+        "MP015:p0106:t00:r000:c01",
+        "MP015:p0106:t00:r000:c02",
+        "MP015:p0106:t00:r000:c05",
+        "MP015:p0106:t00:r001:c02",
+        "MP015:p0106:t00:r001:c03",
+        "MP015:p0106:t00:r001:c04",
+        "MP015:p0106:t00:r001:c05",
+        "MP015:p0106:t00:r001:c06",
+        "MP015:p0106:t00:r001:c07"
+      ]
+    }
+  ],
+  "unresolved": []
+}

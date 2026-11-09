@@ -1,0 +1,444 @@
+{
+  "catalog_sha256": "d2f1752f182b3be95680df3f7fe8b58a58756556f68f8127e5a2bfb355caf971",
+  "records": [
+    {
+      "head": [
+        "E045",
+        "Component",
+        "filter"
+      ],
+      "relation": "located_in",
+      "tail": [
+        "E046",
+        "Component",
+        "suction pipe"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E047",
+        "Component",
+        "suction strainer"
+      ],
+      "relation": "located_in",
+      "tail": [
+        "E046",
+        "Component",
+        "suction pipe"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "asserted",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E045",
+        "Component",
+        "filter"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A001",
+        "MaintenanceAction",
+        "Regularly clean the filter in the suction pipe or the suction strainer at the bottom of the suction pipe, as the inlet pressure may become too low if the filter or the suction strainer is fouled."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E047",
+        "Component",
+        "suction strainer"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A001",
+        "MaintenanceAction",
+        "Regularly clean the filter in the suction pipe or the suction strainer at the bottom of the suction pipe, as the inlet pressure may become too low if the filter or the suction strainer is fouled."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C001",
+        "Cause",
+        "the inlet pressure may become too low if the filter or the suction strainer is fouled"
+      ],
+      "relation": "mitigated_by",
+      "tail": [
+        "A001",
+        "MaintenanceAction",
+        "Regularly clean the filter in the suction pipe or the suction strainer at the bottom of the suction pipe, as the inlet pressure may become too low if the filter or the suction strainer is fouled."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P025"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E055",
+        "Equipment",
+        "pump"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A002",
+        "MaintenanceAction",
+        "If there is a risk that the pumped liquid expands during solidification or freezing, the pump has to be drained and, if necessary, flushed after it has been put out of service."
+      ],
+      "local": [
+        "C002"
+      ],
+      "shared": [],
+      "evidence": [
+        "P026"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "C002",
+        "OperatingCondition",
+        "after it has been put out of service"
+      ],
+      "relation": "causes",
+      "tail": [
+        "E053",
+        "Risk",
+        "risk that the pumped liquid expands during solidification or freezing"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P026"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E058",
+        "Equipment",
+        "pump"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A002",
+        "MaintenanceAction",
+        "If there is a risk that the pumped liquid expands during solidification or freezing, the pump has to be drained and, if necessary, flushed after it has been put out of service."
+      ],
+      "local": [
+        "C003"
+      ],
+      "shared": [],
+      "evidence": [
+        "P027"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E061",
+        "Component",
+        "motor"
+      ],
+      "relation": "inspected_by",
+      "tail": [
+        "A003",
+        "InspectionAction",
+        "Check motor for accumulation of dust or dirt, which might influence motor temperature."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P028"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E067",
+        "Equipment",
+        "pump unit"
+      ],
+      "relation": "inspected_by",
+      "tail": [
+        "A004",
+        "InspectionAction",
+        "If a pump starts making noise, this may point to certain problems with the pump unit."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P029"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E069",
+        "Symptom",
+        "crackling noise"
+      ],
+      "relation": "indicates",
+      "tail": [
+        "E070",
+        "FaultMode",
+        "cavitation"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P030"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E072",
+        "Symptom",
+        "excessive motor noise"
+      ],
+      "relation": "indicates",
+      "tail": [
+        "E073",
+        "Component",
+        "bearings"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P030"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": "deterioration of the bearings is a fault mode but only 'bearings' component candidate is available; deterioration not representable as standalone entity"
+    },
+    {
+      "head": [
+        "E075",
+        "Component",
+        "Motor"
+      ],
+      "relation": "inspected_by",
+      "tail": [
+        "A005",
+        "InspectionAction",
+        "Check motor specifications for start-stop frequency."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P031"
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E078",
+        "Equipment",
+        "pump"
+      ],
+      "relation": "operates_under",
+      "tail": [
+        "E080",
+        "OperatingCondition",
+        "pressure"
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P032"
+      ],
+      "mode": "possible",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E088",
+        "Equipment",
+        "pump unit"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A007",
+        "MaintenanceAction",
+        "Switch off the power supply to the pump unit."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P035"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E090",
+        "Component",
+        "working switch"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A008",
+        "MaintenanceAction",
+        "Lock the working switch with a padlock or remove the fuse."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P036"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "head": [
+        "E099",
+        "Component",
+        "stop valves"
+      ],
+      "relation": "maintained_by",
+      "tail": [
+        "A009",
+        "MaintenanceAction",
+        "Close the stop valves."
+      ],
+      "local": [],
+      "shared": [],
+      "evidence": [
+        "P038"
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "condition_names": {
+    "C001": "如果过滤器或吸入滤网被污染，入口压力可能变得过低",
+    "C002": "在泵停止运行之后",
+    "C003": "如果泵长时间停用",
+    "C004": "如果泵开始发出噪音，这可能表明泵机组存在某些问题",
+    "C005": "如果是内燃机：关闭发动机并切断发动机的燃油供应"
+  },
+  "unrepresented_source": [
+    {
+      "paragraph_id": "P002",
+      "reason": "Action 'Regularly check the outlet pressure' lacks a complete_action_candidate; E001 'outlet pressure' is a parameter, not an inspectable physical component per ontology rules"
+    },
+    {
+      "paragraph_id": "P003",
+      "reason": "Prohibition 'No water should get into the terminal box' requires a negative maintenance action candidate which is absent from choices"
+    },
+    {
+      "paragraph_id": "P004",
+      "reason": "Prohibition 'Never spray water on hot pump parts' requires a negative maintenance action candidate which is absent from choices"
+    },
+    {
+      "paragraph_id": "P005",
+      "reason": "Cause-effect 'sudden cooling down may cause them to burst' lacks statement_candidate linking the event to the fault mode"
+    },
+    {
+      "paragraph_id": "P007",
+      "reason": "Consequence 'Flawed maintenance will result in shorter lifespan' lacks statement_candidate for the causal relationship"
+    },
+    {
+      "paragraph_id": "P008",
+      "reason": "Prohibition 'Never top up with fuel while the motor is running' requires a negative maintenance action candidate which is absent"
+    },
+    {
+      "paragraph_id": "P009",
+      "reason": "Prohibition 'should never be allowed to run dry' requires a negative operating condition candidate which is absent"
+    },
+    {
+      "paragraph_id": "P010",
+      "reason": "Requirement 'oil chamber must always be filled with lubricating liquid' lacks a complete maintenance action candidate"
+    },
+    {
+      "paragraph_id": "P012",
+      "reason": "Action 'Drain the oil or the liquid every 2000 hours... and replace it' lacks a complete_action_candidate"
+    },
+    {
+      "paragraph_id": "P014",
+      "reason": "Action 'Make sure the drained oil or liquid is discharged safely' lacks a complete_action_candidate"
+    },
+    {
+      "paragraph_id": "P016",
+      "reason": "Negative recommendation 'not advisable to dismantle the seal' requires a negative maintenance action candidate which is absent"
+    },
+    {
+      "paragraph_id": "P018",
+      "reason": "Rule 'Dismantling always means replacement of the mechanical seal' lacks a complete_action_candidate for the replacement action"
+    },
+    {
+      "paragraph_id": "P019",
+      "reason": "Requirement 'When the shaft seal is leaking it has to be replaced' lacks a complete_action_candidate for the replacement action"
+    },
+    {
+      "paragraph_id": "P021",
+      "reason": "Required action 'pump must be immediately stopped to replace the mechanical seal' lacks a complete_action_candidate combining both steps"
+    },
+    {
+      "paragraph_id": "P022",
+      "reason": "Action 'Regularly check the pressure of the flushing liquid' lacks a complete_action_candidate; E041 is a parameter not a component"
+    },
+    {
+      "paragraph_id": "P023",
+      "reason": "Specification 'pressure must be 1.5 bar higher than pressure at impeller hub' lacks a statement_candidate for the operating condition relationship"
+    },
+    {
+      "paragraph_id": "P033",
+      "reason": "Safety prerequisite 'Take appropriate precautions and protect yourself' is a general safety instruction, not a pump-system maintenance/inspection relation per ontology scope"
+    }
+  ],
+  "coverage_note": "Page 29 prohibitions (P003, P004, P008), required replacements (P018, P019, P021), and periodic maintenance actions (P012) are unrepresented because the choice set provides only nominal_candidates or prose fragments rather than complete_action_candidates or statement_candidates needed to form valid relations. Page 30 extraction covers filter/strainer location and cleaning, pump draining/preservation conditions, motor inspection, noise symptom indications, and fault determination safety steps where candidates were available."
+}

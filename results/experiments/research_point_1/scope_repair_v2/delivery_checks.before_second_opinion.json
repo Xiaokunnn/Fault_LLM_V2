@@ -1,0 +1,16 @@
+{
+  "report_local_links_valid": true,
+  "six_python_files_parse": true,
+  "trailing_whitespace_absent": true,
+  "unit_test_observation": {
+    "command": "PYTHONPATH=src .venv/bin/python -m pytest tests/unit/test_rp1_repair_probe_v2.py -q",
+    "exit_code": 0,
+    "passed": 12,
+    "source": "observed tool output; not a second test invocation"
+  },
+  "initial_test_collection_failure": {
+    "command": ".venv/bin/python -m pytest tests/unit/test_rp1_repair_probe_v2.py -q",
+    "exit_code": 2,
+    "reason": "src package not on sys.path; fixed by explicit PYTHONPATH=src, no algorithm change"
+  }
+}

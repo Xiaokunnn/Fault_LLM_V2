@@ -1,0 +1,73 @@
+{
+  "assertions": [
+    {
+      "head_surface": "coupling guard",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "COUPLING",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Cornell General Purpose Pumps",
+      "evidence_text": "DRIVE      COUPLING          ALIGNMENT*                           \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n               MOTOR STRAIGHT EDGE PUMP FRAME                                       \n                                                  MOTOR      CALIPER PUMP FRAME     \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                  Correct Alignment           Reinstall coupling guard\n                                                                before start-up.    \n                                                                                    \n                                                                                    \n               MOTOR STRAIGHT EDGE PUMP FRAME     MOTOR     CALIPER PUMP FRAME      \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                              Reinstall coupling guard\n                                 Incorrect Alignment            before start-up.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "coupling guard",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Reinstall coupling guard before start-up.",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Cornell General Purpose Pumps",
+      "evidence_text": "Reinstall coupling guard\n                                                                before start-up.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "STRAIGHT EDGE",
+      "head_type": "InspectionMethod",
+      "relation": "inspected_by",
+      "tail_surface": "ALIGNMENT*",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "when double indicator or laser alignment is not used"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Cornell General Purpose Pumps",
+      "evidence_text": "DRIVE      COUPLING          ALIGNMENT*\n*Suggested method when double indicator or laser alignment is not used.\nMOTOR STRAIGHT EDGE PUMP FRAME",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "CALIPER",
+      "head_type": "InspectionMethod",
+      "relation": "inspected_by",
+      "tail_surface": "ALIGNMENT*",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "when double indicator or laser alignment is not used"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Cornell General Purpose Pumps",
+      "evidence_text": "DRIVE      COUPLING          ALIGNMENT*\n*Suggested method when double indicator or laser alignment is not used.\nMOTOR      CALIPER PUMP FRAME",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Page contains diagrams illustrating Correct Alignment and Incorrect Alignment of motor, pump frame using straight edge and caliper methods.",
+      "reason": "Visual diagram content; no extractable relational assertion beyond what is captured.",
+      "evidence_text": "Correct Alignment\nIncorrect Alignment\nMOTOR STRAIGHT EDGE PUMP FRAME\nMOTOR     CALIPER PUMP FRAME",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

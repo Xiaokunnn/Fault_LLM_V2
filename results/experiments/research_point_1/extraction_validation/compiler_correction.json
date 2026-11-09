@@ -1,0 +1,27 @@
+{
+  "corrected_at": "2026-10-13T01:43:19.929013+00:00",
+  "reason": "Single-unit substring implementation contradicted the declared multi-unit evidence contract. Exact endpoints now bind across adjacent native units with real layout and quote-character coverage; no cross-cell collage or large-gap join.",
+  "observations_before_correction": "Four API pages returned; no source-review sample drawn and no semantic outcome labels created. Correction is disclosed, not claimed as a pre-response code freeze.",
+  "original_sha256": {
+    "src/research_point_1_graph_evidence/stage02_triple_extraction/contextual_extraction.py": "b7c0c51e4c4876d7644ce7cb963ee52988c03e00461c31def0bde2a604b36cd6",
+    "scripts/validate_rp1_extraction.py": "4f2a6259e8cd9775e1a252730223f40012fc45ed12acf8e7a60c3ab99e15ca72",
+    "tests/unit/test_rp1_contextual_extraction.py": "972560aae2a8d619832d7beebbc3ac643b15136281504d0010b54f433898fae9"
+  },
+  "corrected_sha256": {
+    "src/research_point_1_graph_evidence/stage02_triple_extraction/contextual_extraction.py": "fc7f5c6cfff6d4d22831311d09c9890eda22b5aadb8a0157cc8988355fe0fee6",
+    "scripts/validate_rp1_extraction.py": "c01847a9cc85fb1bb43978bc73826a3a48acc0b90f6663dc855f7fe303208963",
+    "tests/unit/test_rp1_contextual_extraction.py": "b7095cc6573d9395134e2975e06e99c2371c16e2adf928c03de6457bbc4b468e"
+  },
+  "original_compiler_snapshot": "logs/rp1_extraction_validation_prepare_20261013/single_unit_compiler.py",
+  "initial_decisions": "logs/rp1_extraction_validation_prepare_20261013/partial_single_unit_decisions.jsonl",
+  "prompt_requests_changed": false,
+  "source_inventory_changed": false,
+  "quality_target_changed": false,
+  "tests": {
+    "passed": 10,
+    "output": "10 passed",
+    "note": "Final test output recorded in tool transcript"
+  },
+  "comparison": "Retain original single-unit decisions for ALL pages at final compilation as well. Report code-correction effect separately from model quality.",
+  "followup": "The same multi-block fix must preserve explicitly addressed native blocks even when the parser also wraps the paragraph in a table; default locator suppresses duplicate block views. Added a regression case; no quotation rewriting."
+}

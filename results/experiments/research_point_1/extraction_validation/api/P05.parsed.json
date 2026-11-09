@@ -1,0 +1,1777 @@
+{
+  "contexts": [
+    {
+      "context_id": "ctx_install_component_seal",
+      "kind": "procedure",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0001",
+          "quote": "INSTALLATION: COMPONENT"
+        },
+        {
+          "unit_id": "MP021:p0006:b0003",
+          "quote": "MECHANICAL SEAL"
+        }
+      ],
+      "conditions_zh": [
+        "仅适用于组件式机械密封安装"
+      ],
+      "applicability_zh": "Viking回转容积泵组件式机械密封安装程序",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "kind": "procedure",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0037",
+          "quote": "REMOVAL: COMPONENT"
+        },
+        {
+          "unit_id": "MP021:p0006:b0039",
+          "quote": "MECHANICAL SEAL"
+        }
+      ],
+      "conditions_zh": [
+        "仅适用于组件式机械密封拆卸"
+      ],
+      "applicability_zh": "Viking回转容积泵组件式机械密封拆卸程序",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_o_ring_seat_install",
+      "kind": "procedure",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0035",
+          "quote": "4. FOR “O-RING” GASKET TYPE MECHANICAL SEAL"
+        },
+        {
+          "unit_id": "MP021:p0006:b0036",
+          "quote": "SEAT: Lubricate outer diameter of O-Ring seal gasket"
+        }
+      ],
+      "conditions_zh": [
+        "O形圈垫片型机械密封座安装"
+      ],
+      "applicability_zh": "O形圈垫片型机械密封座的安装步骤",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_clamped_in_seat_install",
+      "kind": "procedure",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0045",
+          "quote": "FOR “CLAMPED-IN” TYPE MECHANICAL SEAL SEAT:"
+        }
+      ],
+      "conditions_zh": [
+        "夹紧式机械密封座安装"
+      ],
+      "applicability_zh": "夹紧式机械密封座的安装步骤",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_elastomeric_removal_req",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0042",
+          "quote": "Elastomeric bellows, elastomeric o-ring and PTFE wedge"
+        },
+        {
+          "unit_id": "MP021:p0006:b0044",
+          "quote": "seals generally require pump disassembly to be replaced"
+        }
+      ],
+      "conditions_zh": [],
+      "applicability_zh": "弹性体波纹管、弹性体O形圈和PTFE楔形密封的更换要求",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_danger_open_chamber",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0002",
+          "quote": "DANGER !"
+        },
+        {
+          "unit_id": "MP021:p0006:b0004",
+          "quote": "Before opening any Viking pump liquid chamber"
+        },
+        {
+          "unit_id": "MP021:p0006:b0029",
+          "quote": "Failure to follow above listed precautionary measures"
+        },
+        {
+          "unit_id": "MP021:p0006:b0031",
+          "quote": "may result in serious injury or death."
+        }
+      ],
+      "conditions_zh": [
+        "打开任何Viking泵液腔之前"
+      ],
+      "applicability_zh": "打开泵液腔前的安全预防措施",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_danger_guards",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP021:p0006:b0069",
+          "quote": "DANGER !"
+        },
+        {
+          "unit_id": "MP021:p0006:b0072",
+          "quote": "Before starting pump, be sure all drive equipment guards"
+        },
+        {
+          "unit_id": "MP021:p0006:b0074",
+          "quote": "are in place."
+        },
+        {
+          "unit_id": "MP021:p0006:b0076",
+          "quote": "Failure to properly mount guards may result in serious"
+        },
+        {
+          "unit_id": "MP021:p0006:b0078",
+          "quote": "injury or death."
+        }
+      ],
+      "conditions_zh": [
+        "启动泵之前"
+      ],
+      "applicability_zh": "启动泵前驱动设备护罩的安全要求",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    }
+  ],
+  "records": [
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "rotor shaft",
+      "head_canonical_zh": "转子轴",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Clean rotor shaft and seal housing bore. Make sure they are free of dirt, grit and scratches.",
+      "tail_canonical_zh": "清洁转子轴和密封壳孔，确保无污垢、砂砾和划痕",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0006"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0006",
+        "MP021:p0006:b0008"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0006",
+          "quote": "1. Clean rotor shaft and seal housing bore. Make sure they"
+        },
+        {
+          "unit_id": "MP021:p0006:b0008",
+          "quote": "are free of dirt, grit and scratches."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤1"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "seal housing bore",
+      "head_canonical_zh": "密封壳孔",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Clean rotor shaft and seal housing bore. Make sure they are free of dirt, grit and scratches.",
+      "tail_canonical_zh": "清洁转子轴和密封壳孔，确保无污垢、砂砾和划痕",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0006"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0006",
+        "MP021:p0006:b0008"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0006",
+          "quote": "1. Clean rotor shaft and seal housing bore. Make sure they"
+        },
+        {
+          "unit_id": "MP021:p0006:b0008",
+          "quote": "are free of dirt, grit and scratches."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤1"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "shaft diameter over which seal is to be placed",
+      "head_canonical_zh": "密封放置处的轴径",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Gently radius leading edge of the shaft diameter over which seal is to be placed.",
+      "tail_canonical_zh": "轻轻倒圆密封放置处轴径的前缘",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0010"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0008",
+        "MP021:p0006:b0010"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0008",
+          "quote": "Gently radius leading"
+        },
+        {
+          "unit_id": "MP021:p0006:b0010",
+          "quote": "edge of the shaft diameter over which seal is to be placed."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤1"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "mechanical seal faces",
+      "head_canonical_zh": "机械密封面",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Never touch mechanical seal faces with anything except clean hands or clean cloth.",
+      "tail_canonical_zh": "除干净的手或干净的布外，切勿用任何东西接触机械密封面",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0012",
+        "MP021:p0006:b0014"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0012",
+        "MP021:p0006:b0014"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0012",
+          "quote": "Never touch mechanical seal faces with anything except"
+        },
+        {
+          "unit_id": "MP021:p0006:b0014",
+          "quote": "clean hands or clean cloth."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装期间"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "Minute particles",
+      "head_canonical_zh": "微小颗粒",
+      "head_type": "Cause",
+      "relation": "causes",
+      "tail_surface": "scratch the seal faces",
+      "tail_canonical_zh": "划伤密封面",
+      "tail_type": "FailureMechanism",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0014"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0016"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0014",
+          "quote": "Minute particles can scratch"
+        },
+        {
+          "unit_id": "MP021:p0006:b0016",
+          "quote": "the seal faces"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "scratch the seal faces",
+      "head_canonical_zh": "划伤密封面",
+      "head_type": "FailureMechanism",
+      "relation": "causes",
+      "tail_surface": "leakage",
+      "tail_canonical_zh": "泄漏",
+      "tail_type": "FaultMode",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0016"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0016"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0016",
+          "quote": "the seal faces and cause leakage."
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "tapered installation sleeve",
+      "head_canonical_zh": "锥形安装套",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Place tapered installation sleeve on the shaft. Coat tapered sleeve and inside of the rotary member with a generous quantity of P-80® or equivalent. Grease is not recommended.",
+      "tail_canonical_zh": "将锥形安装套放在轴上，用大量P-80®或等效物涂覆锥形套和旋转件内侧，不推荐使用油脂",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0018",
+        "MP021:p0006:b0020"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0018",
+        "MP021:p0006:b0020",
+        "MP021:p0006:b0022"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0018",
+          "quote": "2. Place tapered installation sleeve on the shaft. Coat"
+        },
+        {
+          "unit_id": "MP021:p0006:b0020",
+          "quote": "tapered sleeve and inside of the rotary member with a"
+        },
+        {
+          "unit_id": "MP021:p0006:b0022",
+          "quote": "generous quantity of P-80® or equivalent. Grease is not"
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤2"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "inside of the rotary member",
+      "head_canonical_zh": "旋转件内侧",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Coat tapered sleeve and inside of the rotary member with a generous quantity of P-80® or equivalent. Grease is not recommended.",
+      "tail_canonical_zh": "用大量P-80®或等效物涂覆锥形套和旋转件内侧，不推荐使用油脂",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0020"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0020",
+        "MP021:p0006:b0022"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0020",
+          "quote": "tapered sleeve and inside of the rotary member with a"
+        },
+        {
+          "unit_id": "MP021:p0006:b0022",
+          "quote": "generous quantity of P-80® or equivalent. Grease is not"
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤2"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "Grease",
+      "head_canonical_zh": "油脂",
+      "head_type": "Cause",
+      "relation": "prevented_by",
+      "tail_surface": "Grease is not recommended.",
+      "tail_canonical_zh": "不推荐使用油脂",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "recommended",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0022"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0022"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0022",
+          "quote": "Grease is not recommended."
+        }
+      ],
+      "conditions_zh": [
+        "涂覆锥形安装套和旋转件内侧时"
+      ],
+      "unresolved_reason": "schema relation 'prevented_by' requires an explicitly named adverse event; source only says grease is not recommended without naming the specific failure it prevents"
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "rotary member",
+      "head_canonical_zh": "旋转件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Start rotary member on shaft and over tapered sleeve.",
+      "tail_canonical_zh": "在轴上并越过锥形套开始安装旋转件",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0024"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0024",
+        "MP021:p0006:b0026"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0024",
+          "quote": "Start rotary member on shaft and over"
+        },
+        {
+          "unit_id": "MP021:p0006:b0026",
+          "quote": "tapered sleeve."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤2"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "rotary member",
+      "head_canonical_zh": "旋转件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Move rotary member so setscrews are directly below seal access holes on side of bracket. Tighten all setscrews securely to shaft.",
+      "tail_canonical_zh": "移动旋转件使紧定螺钉位于支架侧面密封检修孔正下方，将所有紧定螺钉牢固拧紧到轴上",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0028",
+        "MP021:p0006:b0030"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0028",
+        "MP021:p0006:b0030",
+        "MP021:p0006:b0032"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0028",
+          "quote": "3. Move rotary member so setscrews are directly below seal"
+        },
+        {
+          "unit_id": "MP021:p0006:b0030",
+          "quote": "access holes on side of bracket. Tighten all setscrews"
+        },
+        {
+          "unit_id": "MP021:p0006:b0032",
+          "quote": "securely to shaft."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤3"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "holding clips",
+      "head_canonical_zh": "固定夹",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove holding clips to release springs after seal is installed on shaft.",
+      "tail_canonical_zh": "密封安装在轴上后拆下固定夹以释放弹簧",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0033"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0033",
+        "MP021:p0006:b0034"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0033",
+          "quote": "clips to release springs after seal is installed on shaft."
+        },
+        {
+          "unit_id": "MP021:p0006:b0032",
+          "quote": "Some seals are equipped with holding"
+        }
+      ],
+      "conditions_zh": [
+        "部分配备压缩密封弹簧固定夹的密封"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_o_ring_seat_install",
+      "head_surface": "O-Ring seal gasket",
+      "head_canonical_zh": "O形圈密封垫片",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Lubricate outer diameter of O-Ring seal gasket with P-80® or equivalent.",
+      "tail_canonical_zh": "用P-80®或等效物润滑O形圈密封垫片外径",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0036"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0036"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0036",
+          "quote": "SEAT: Lubricate outer diameter of O-Ring seal gasket"
+        }
+      ],
+      "conditions_zh": [
+        "O形圈垫片型机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_o_ring_seat_install",
+      "head_surface": "seal seat",
+      "head_canonical_zh": "密封座",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Press seal seat in to bore until back, unlapped face, is flush with bore.",
+      "tail_canonical_zh": "将密封座压入孔中直到背面未研磨面与孔齐平",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0038"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0038",
+        "MP021:p0006:b0040"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0038",
+          "quote": "Press seal seat in to bore until"
+        },
+        {
+          "unit_id": "MP021:p0006:b0040",
+          "quote": "back, unlapped face, is flush with bore."
+        }
+      ],
+      "conditions_zh": [
+        "O形圈垫片型机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_o_ring_seat_install",
+      "head_surface": "seal holder",
+      "head_canonical_zh": "密封座固定器",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Install seal holder, capscrews, and nuts and tighten securely.",
+      "tail_canonical_zh": "安装密封座固定器、帽螺钉和螺母并牢固拧紧",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0040"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0040",
+        "MP021:p0006:b0041"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0040",
+          "quote": "Install seal holder,"
+        },
+        {
+          "unit_id": "MP021:p0006:b0041",
+          "quote": "capscrews, and nuts and tighten securely."
+        }
+      ],
+      "conditions_zh": [
+        "O形圈垫片型机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_o_ring_seat_install",
+      "head_surface": "tapered installation sleeve",
+      "head_canonical_zh": "锥形安装套",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove tapered installation sleeve.",
+      "tail_canonical_zh": "拆下锥形安装套",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0043"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0041",
+        "MP021:p0006:b0043"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0041",
+          "quote": "Remove"
+        },
+        {
+          "unit_id": "MP021:p0006:b0043",
+          "quote": "tapered installation sleeve."
+        }
+      ],
+      "conditions_zh": [
+        "O形圈垫片型机械密封座安装完成后"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_clamped_in_seat_install",
+      "head_surface": "sealing faces of both rotary member and seal seat",
+      "head_canonical_zh": "旋转件和密封座的密封面",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Flush sealing faces of both rotary member and seal seat with oil",
+      "tail_canonical_zh": "用油冲洗旋转件和密封座的密封面",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0049"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0049",
+        "MP021:p0006:b0051"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0049",
+          "quote": "Flush sealing faces of both rotary member and seal seat"
+        },
+        {
+          "unit_id": "MP021:p0006:b0051",
+          "quote": "with oil"
+        }
+      ],
+      "conditions_zh": [
+        "夹紧式机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_clamped_in_seat_install",
+      "head_surface": "seal seat and seat gasket",
+      "head_canonical_zh": "密封座和座垫片",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "install seal seat and seat gasket over end of shaft against machined bracket face.",
+      "tail_canonical_zh": "将密封座和座垫片安装在轴端并贴紧机加工支架面",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0051"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0051",
+        "MP021:p0006:b0053"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0051",
+          "quote": "and install seal seat and seat gasket over end of"
+        },
+        {
+          "unit_id": "MP021:p0006:b0053",
+          "quote": "shaft against machined bracket face."
+        }
+      ],
+      "conditions_zh": [
+        "夹紧式机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_clamped_in_seat_install",
+      "head_surface": "seal gasket, seal holder, capscrews, and nuts",
+      "head_canonical_zh": "密封垫片、密封座固定器、帽螺钉和螺母",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Install other seal gasket, seal holder, capscrews, and nuts and tighten securely.",
+      "tail_canonical_zh": "安装另一个密封垫片、密封座固定器、帽螺钉和螺母并牢固拧紧",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0053",
+        "MP021:p0006:b0055"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0053",
+        "MP021:p0006:b0055"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0053",
+          "quote": "Install other seal"
+        },
+        {
+          "unit_id": "MP021:p0006:b0055",
+          "quote": "gasket, seal holder, capscrews, and nuts and tighten"
+        }
+      ],
+      "conditions_zh": [
+        "夹紧式机械密封座安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_clamped_in_seat_install",
+      "head_surface": "tapered installation sleeve",
+      "head_canonical_zh": "锥形安装套",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove tapered installation sleeve.",
+      "tail_canonical_zh": "拆下锥形安装套",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0057"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0055",
+        "MP021:p0006:b0057"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0055",
+          "quote": "securely. Remove"
+        },
+        {
+          "unit_id": "MP021:p0006:b0057",
+          "quote": "tapered installation sleeve."
+        }
+      ],
+      "conditions_zh": [
+        "夹紧式机械密封座安装完成后"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "suckback or flush line",
+      "head_canonical_zh": "回吸或冲洗管路",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Connect suckback or flush line or vent stuffing box for seals without circulation line until liquid is present on start up.",
+      "tail_canonical_zh": "连接回吸或冲洗管路，或对无循环管路的密封排放填料函，直到启动时有液体存在",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0059"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0059",
+        "MP021:p0006:b0061"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0059",
+          "quote": "5. Connect suckback or flush line or vent stuffing box for seals"
+        },
+        {
+          "unit_id": "MP021:p0006:b0061",
+          "quote": "without circulation line until liquid is present on start up."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封安装步骤5"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "stuffing box",
+      "head_canonical_zh": "填料函",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "vent stuffing box for seals without circulation line until liquid is present on start up.",
+      "tail_canonical_zh": "对无循环管路的密封排放填料函直到启动时有液体存在",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "conditional",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0059"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0059",
+        "MP021:p0006:b0061"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0059",
+          "quote": "5. Connect suckback or flush line or vent stuffing box for seals"
+        },
+        {
+          "unit_id": "MP021:p0006:b0061",
+          "quote": "without circulation line until liquid is present on start up."
+        }
+      ],
+      "conditions_zh": [
+        "无循环管路的密封"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_install_component_seal",
+      "head_surface": "seal life",
+      "head_canonical_zh": "密封寿命",
+      "head_type": "SignalFeature",
+      "relation": "indicates",
+      "tail_surface": "suckback or flush line sizes should be used",
+      "tail_canonical_zh": "应使用回吸或冲洗管路尺寸",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "recommended",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0063"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0063",
+        "MP021:p0006:b0065"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0063",
+          "quote": "NOTE: For maximum seal life, suckback or flush line"
+        },
+        {
+          "unit_id": "MP021:p0006:b0065",
+          "quote": "should be used."
+        }
+      ],
+      "conditions_zh": [
+        "为获得最大密封寿命"
+      ],
+      "unresolved_reason": "source recommends using suckback/flush line sizes for maximum seal life but does not name a specific fault or risk being mitigated; mapped as recommendation for signal feature 'seal life'"
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "brass or plastic bar",
+      "head_canonical_zh": "黄铜或塑料棒",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Insert brass or plastic bar through port opening between rotor teeth to keep shaft from turning.",
+      "tail_canonical_zh": "将黄铜或塑料棒通过端口开口插入转子齿之间以防止轴转动",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0050"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0050",
+        "MP021:p0006:b0052"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0050",
+          "quote": "1. Insert brass or plastic bar through port opening between"
+        },
+        {
+          "unit_id": "MP021:p0006:b0052",
+          "quote": "rotor teeth to keep shaft from turning."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤1"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "locknut and lockwasher",
+      "head_canonical_zh": "锁紧螺母和锁紧垫圈",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Bend up tang of lockwasher and with a spanner wrench, remove locknut and lockwasher from shaft.",
+      "tail_canonical_zh": "弯起锁紧垫圈的凸耳，用扳手从轴上拆下锁紧螺母和锁紧垫圈",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0054",
+        "MP021:p0006:b0056"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0052",
+        "MP021:p0006:b0054",
+        "MP021:p0006:b0056"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0052",
+          "quote": "Bend up tang of"
+        },
+        {
+          "unit_id": "MP021:p0006:b0054",
+          "quote": "lockwasher and with a spanner wrench, remove locknut"
+        },
+        {
+          "unit_id": "MP021:p0006:b0056",
+          "quote": "and lockwasher from shaft."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤1"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "bearing housing assembly",
+      "head_canonical_zh": "轴承座组件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Loosen two set screws in the face of the bearing housing and remove the bearing housing assembly from the bracket.",
+      "tail_canonical_zh": "松开轴承座端面上的两个紧定螺钉并从支架上拆下轴承座组件",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0058",
+        "MP021:p0006:b0060"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0058",
+        "MP021:p0006:b0060"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0058",
+          "quote": "2. Loosen two set screws in the face of the bearing housing"
+        },
+        {
+          "unit_id": "MP021:p0006:b0060",
+          "quote": "and remove the bearing housing assembly from the bracket."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤2"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "half round rings (K, KK, L, LQ, LL, LS sizes only)",
+      "head_canonical_zh": "半圆环（仅K、KK、L、LQ、LL、LS规格）",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove the pair of half round rings (K, KK, L, LQ, LL, LS sizes only) under the inner spacer collar from the shaft.",
+      "tail_canonical_zh": "从轴上拆下内隔套下方的半圆环对",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0062",
+        "MP021:p0006:b0064"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0062",
+        "MP021:p0006:b0064"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0062",
+          "quote": "3. Remove the pair of half round rings (K, KK, L, LQ, LL, LS"
+        },
+        {
+          "unit_id": "MP021:p0006:b0064",
+          "quote": "sizes only) under the inner spacer collar from the shaft."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤3",
+        "仅适用于K、KK、L、LQ、LL、LS规格"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "seal holder, seal seat and seal gasket(s)",
+      "head_canonical_zh": "密封座固定器、密封座和密封垫片",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Loosen nuts and remove seal holder, seal seat and seal gasket(s).",
+      "tail_canonical_zh": "松开螺母并拆下密封座固定器、密封座和密封垫片",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0066",
+        "MP021:p0006:b0067"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0066",
+        "MP021:p0006:b0067"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0066",
+          "quote": "4. Loosen nuts and remove seal holder, seal seat and seal"
+        },
+        {
+          "unit_id": "MP021:p0006:b0067",
+          "quote": "gasket(s)."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤4"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "setscrews in mechanical seal rotary member",
+      "head_canonical_zh": "机械密封旋转件中的紧定螺钉",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Loosen setscrews in mechanical seal rotary member.",
+      "tail_canonical_zh": "松开机械密封旋转件中的紧定螺钉",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0070"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0070"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0070",
+          "quote": "5. Loosen setscrews in mechanical seal rotary member."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤5"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "Circulation line and/or plugs",
+      "head_canonical_zh": "循环管路和/或螺塞",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Circulation line and/or plugs will need to be removed to access setscrews.",
+      "tail_canonical_zh": "需要拆下循环管路和/或螺塞才能接触到紧定螺钉",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0071"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0071",
+        "MP021:p0006:b0073"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0071",
+          "quote": "NOTE: Circulation line and/or plugs will need to be"
+        },
+        {
+          "unit_id": "MP021:p0006:b0073",
+          "quote": "removed to access setscrews."
+        }
+      ],
+      "conditions_zh": [
+        "松开机械密封旋转件紧定螺钉前"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "rotor/shaft assembly",
+      "head_canonical_zh": "转子/轴组件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Drive the rotor/shaft assembly out of the casing until the rotor teeth extend past the face of the casing.",
+      "tail_canonical_zh": "将转子/轴组件推出壳体直到转子齿伸出壳体端面",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0081"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0081",
+        "MP021:p0006:b0082"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0081",
+          "quote": "6. Drive the rotor/shaft assembly out of the casing until the"
+        },
+        {
+          "unit_id": "MP021:p0006:b0082",
+          "quote": "rotor teeth extend past the face of the casing."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤6"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "rotor/shaft assembly",
+      "head_canonical_zh": "转子/轴组件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Push the rotor/shaft assembly back into the casing. The rotary member of the seal should now be pushed far enough down the shaft for easy removal.",
+      "tail_canonical_zh": "将转子/轴组件推回壳体，密封旋转件应被推到轴上足够远以便轻松拆卸",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0084",
+        "MP021:p0006:b0086"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0084",
+        "MP021:p0006:b0086",
+        "MP021:p0006:b0087"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0084",
+          "quote": "7. Push the rotor/shaft assembly back into the casing. The"
+        },
+        {
+          "unit_id": "MP021:p0006:b0086",
+          "quote": "rotary member of the seal should now be pushed far"
+        },
+        {
+          "unit_id": "MP021:p0006:b0087",
+          "quote": "enough down the shaft for easy removal."
+        }
+      ],
+      "conditions_zh": [
+        "组件式机械密封拆卸步骤7"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_removal_component_seal",
+      "head_surface": "rotor shaft assembly",
+      "head_canonical_zh": "转子轴组件",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "If changing the mechanical seal is the extent of the maintenance to be performed, then the rotor shaft assembly only needs to be moved far enough to dislodge the rotary member of the seal.",
+      "tail_canonical_zh": "如果仅更换机械密封，则转子轴组件只需移动到足以脱开密封旋转件即可",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "conditional",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP021:p0006:b0077"
+      ],
+      "tail_evidence_ids": [
+        "MP021:p0006:b0075",
+        "MP021:p0006:b0077",
+        "MP021:p0006:b0079",
+        "MP021:p0006:b0080"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP021:p0006:b0075",
+          "quote": "If changing the mechanical seal is the extent of the"
+        },
+        {
+          "unit_id": "MP021:p0006:b0077",
+          "quote": "maintenance to be performed, then the rotor shaft"
+        },
+        {
+          "unit_id": "MP021:p0006:b0079",
+          "quote": "assembly only needs to be moved far enough to dislodge"
+        },
+        {
+          "unit_id": "MP021:p0006:b0080",
+          "quote": "the rotary member of the seal."
+        }
+      ],
+      "conditions_zh": [
+        "仅更换机械密封作为维护范围时"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_elastomeric_removal_req",
+      "head_surface": "Elastomeric bellows, elastomeric o-ring and PTFE wedge seals",
+      "head_canonical_zh": "弹性体波纹管、弹性体O形圈和PTFE楔形密封",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "require pump disassembly to be replaced (refer to \"Pump Disassembly\" on page 7).",
+      "tail_canonical_zh": "需要泵拆卸才能更换（参见第7页",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " asserted",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0042",
+        " MP021:p0006:b0044"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0044",
+        " MP021:p0006:b0046",
+        " MP021:p0006:b0048",
+        " MP021:p0006:b0047"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0042",
+          " quote": " Elastomeric bellows, elastomeric o-ring and PTFE wedge"
+        },
+        {
+          " unit_id": " MP021:p0006:b0044",
+          " quote": " seals generally require pump disassembly to be replaced"
+        },
+        {
+          " unit_id": " MP021:p0006:b0046",
+          " quote": " (refer to"
+        },
+        {
+          " unit_id": " MP021:p0006:b0048",
+          " quote": " \" Pump Disassembly\" on page"
+        },
+        {
+          " unit_id": " MP021:p0006:b0047",
+          " quote": " 7)."
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " rotor shaft",
+      " head_canonical_zh": " 转子轴",
+      " head_type": " Component",
+      " relation": " maintained_by",
+      " tail_surface": " Coat rotor shaft, tapered installation sleeve and inner diameter of mechanical seal with P-80® or equivalent before assembly.",
+      " tail_canonical_zh": " 组装前用P-80®或等效物涂覆转子轴、锥形安装套和机械密封内径",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0090"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0090",
+        " MP021:p0006:b0091"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0090",
+          " quote": " NOTE: Coat rotor shaft, tapered installation sleeve and inner diameter"
+        },
+        {
+          " unit_id": " MP021:p0006:b0091",
+          " quote": " of mechanical seal with P-80® or equivalent before assembly."
+        }
+      ],
+      " conditions_zh": [
+        " 组装前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " tapered installation sleeve",
+      " head_canonical_zh": " 锥形安装套",
+      " head_type": " Component",
+      " relation": " maintained_by",
+      " tail_surface": " Coat rotor shaft, tapered installation sleeve and inner diameter of mechanical seal with P-80® or equivalent before assembly.",
+      " tail_canonical_zh": " 组装前用P-80®或等效物涂覆转子轴、锥形安装套和机械密封内径",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0090"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0090",
+        " MP021:p0006:b0091"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0090",
+          " quote": " NOTE: Coat rotor shaft, tapered installation sleeve and inner diameter"
+        },
+        {
+          " unit_id": " MP021:p0006:b0091",
+          " quote": " of mechanical seal with P-80® or equivalent before assembly."
+        }
+      ],
+      " conditions_zh": [
+        " 组装前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " inner diameter of mechanical seal",
+      " head_canonical_zh": " 机械密封内径",
+      " head_type": " Component",
+      " relation": " maintained_by",
+      " tail_surface": " Coat rotor shaft, tapered installation sleeve and inner diameter of mechanical seal with P-80® or equivalent before assembly.",
+      " tail_canonical_zh": " 组装前用P-80®或等效物涂覆转子轴、锥形安装套和机械密封内径",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0090",
+        " MP021:p0006:b0091"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0090",
+        " MP021:p0006:b0091"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0090",
+          " quote": " NOTE: Coat rotor shaft, tapered installation sleeve and inner diameter"
+        },
+        {
+          " unit_id": " MP021:p0006:b0091",
+          " quote": " of mechanical seal with P-80® or equivalent before assembly."
+        }
+      ],
+      " conditions_zh": [
+        " 组装前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_danger_open_chamber",
+      " head_surface": " pressure in the chamber",
+      " head_canonical_zh": " 腔内压力",
+      " head_type": " OperatingCondition",
+      " relation": " prevented_by",
+      " tail_surface": " That any pressure in the chamber has been completely vented through the suction or discharge lines, or other appropriate openings or connections.",
+      " tail_canonical_zh": " 通过吸入或排出管路或其他适当的开口或连接完全排空腔内任何压力",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0009"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0009",
+        " MP021:p0006:b0011",
+        " MP021:p0006:b0013"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0009",
+          " quote": " 1. That any pressure in the chamber has been"
+        },
+        {
+          " unit_id": " MP021:p0006:b0011",
+          " quote": " completely vented through the suction or discharge"
+        },
+        {
+          " unit_id": " MP021:p0006:b0013",
+          " quote": " lines, or other appropriate openings or connections."
+        }
+      ],
+      " conditions_zh": [
+        " 打开任何Viking泵液腔之前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_danger_open_chamber",
+      " head_surface": " driving means (motor, turbine, engine, etc.)",
+      " head_canonical_zh": " 驱动装置（电机、涡轮机、发动机等）",
+      " head_type": " Component",
+      " relation": " maintained_by",
+      " tail_surface": " That the driving means (motor, turbine, engine, etc.) has been “locked out” or made non-operational, so that it cannot be started while work is being done on pump.",
+      " tail_canonical_zh": " 驱动装置（电机、涡轮机、发动机等）已被“锁定”或使其无法运行，以便在对泵进行作业时无法启动",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0015"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0015",
+        " MP021:p0006:b0017",
+        " MP021:p0006:b0019"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0015",
+          " quote": " 2. That the driving means (motor, turbine, engine, etc.)"
+        },
+        {
+          " unit_id": " MP021:p0006:b0017",
+          " quote": " has been “locked out” or made non-operational, so that"
+        },
+        {
+          " unit_id": " MP021:p0006:b0019",
+          " quote": " it cannot be started while work is being done on pump."
+        }
+      ],
+      " conditions_zh": [
+        " 打开任何Viking泵液腔之前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_danger_open_chamber",
+      " head_surface": " liquid the pump has been handling",
+      " head_canonical_zh": " 泵所输送的液体",
+      " head_type": " OperatingCondition",
+      " relation": " diagnosed_by",
+      " tail_surface": " Obtain a material safety data sheet (MSDS) for the liquid to be sure these precautions are understood.",
+      " tail_canonical_zh": " 获取液体的材料安全数据表(MSDS)以确保了解这些预防措施",
+      " tail_type": " InspectionAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0021"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0025",
+        " MP021:p0006:b0027"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0021",
+          " quote": " 3. That you know what liquid the pump has been handling"
+        },
+        {
+          " unit_id": " MP021:p0006:b0025",
+          " quote": " liquid. Obtain a material safety data sheet (MSDS) for"
+        },
+        {
+          " unit_id": " MP021:p0006:b0027",
+          " quote": " the liquid to be sure these precautions are understood."
+        }
+      ],
+      " conditions_zh": [
+        " 打开任何Viking泵液腔之前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_danger_guards",
+      " head_surface": " drive equipment guards",
+      " head_canonical_zh": " 驱动设备护罩",
+      " head_type": " Component",
+      " relation": " maintained_by",
+      " tail_surface": " Before starting pump, be sure all drive equipment guards are in place.",
+      " tail_canonical_zh": " 启动泵前确保所有驱动设备护罩已就位",
+      " tail_type": " MaintenanceAction",
+      " polarity": " positive",
+      " modality": " required",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0072",
+        " MP021:p0006:b0074"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0072",
+        " MP021:p0006:b0074"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0072",
+          " quote": " Before starting pump, be sure all drive equipment guards"
+        },
+        {
+          " unit_id": " MP021:p0006:b0074",
+          " quote": " are in place."
+        }
+      ],
+      " conditions_zh": [
+        " 启动泵之前"
+      ],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_danger_guards",
+      " head_surface": " Failure to properly mount guards",
+      " head_canonical_zh": " 未正确安装护罩",
+      " head_type": " Cause",
+      " relation": " increases_risk_of",
+      " tail_surface": " serious injury or death",
+      " tail_canonical_zh": " 严重伤害或死亡",
+      " tail_type": " Risk",
+      " polarity": " positive",
+      " modality": " asserted",
+      " scope": " primary",
+      " head_evidence_ids": [
+        " MP021:p0006:b0076"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0076",
+        " MP021:p0006:b0078"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0076",
+          " quote": " Failure to properly mount guards may result in serious"
+        },
+        {
+          " unit_id": " MP021:p0006:b0078",
+          " quote": " injury or death."
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " pumping chamber",
+      " head_canonical_zh": " 泵送腔",
+      " head_type": " Component",
+      " relation": " located_in",
+      " tail_surface": " Viking pump",
+      " tail_canonical_zh": " Viking泵",
+      " tail_type": " Equipment",
+      " polarity": " positive",
+      " modality": " descriptive",
+      " scope": " background",
+      " head_evidence_ids": [
+        " MP021:p0006:b0005"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0004"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0004",
+          " quote": " Before opening any Viking pump liquid chamber"
+        },
+        {
+          " unit_id": " MP021:p0006:b0005",
+          " quote": " (pumping chamber, reservoir, relief valve adjusting cap"
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " reservoir",
+      " head_canonical_zh": " 储液腔",
+      " head_type": " Component",
+      " relation": " located_in",
+      " tail_surface": " Viking pump",
+      " tail_canonical_zh": " Viking泵",
+      " tail_type": " Equipment",
+      " polarity": " positive",
+      " modality": " descriptive",
+      " scope": " background",
+      " head_evidence_ids": [
+        " MP021:p0006:b0005"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0004"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0004",
+          " quote": " Before opening any Viking pump liquid chamber"
+        },
+        {
+          " unit_id": " MP021:p0006:b0005",
+          " quote": " (pumping chamber, reservoir, relief valve adjusting cap"
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " relief valve adjusting cap fitting",
+      " head_canonical_zh": " 安全阀调节帽配件",
+      " head_type": " Component",
+      " relation": " located_in",
+      " tail_surface": " Viking pump",
+      " tail_canonical_zh": " Viking泵",
+      " tail_type": " Equipment",
+      " polarity": " positive",
+      " modality": " descriptive",
+      " scope": " background",
+      " head_evidence_ids": [
+        " MP021:p0006:b0005",
+        " MP021:p0006:b0007"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0004"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0004",
+          " quote": " Before opening any Viking pump liquid chamber"
+        },
+        {
+          " unit_id": " MP021:p0006:b0005",
+          " quote": " (pumping chamber, reservoir, relief valve adjusting cap"
+        },
+        {
+          " unit_id": " MP021:p0006:b0007",
+          " quote": " fitting, etc.) be sure:"
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": null
+    },
+    {
+      " context_id": " ctx_install_component_seal",
+      " head_surface": " 226A SERIES™ & 4226A SERIES™ JACKETED PUMPS",
+      " head_canonical_zh": " 226A系列和4226A系列夹套泵",
+      " head_type": " Equipment",
+      " relation": " specified_by",
+      " tail_surface": " DISCONTINUED AS OF 4Q20",
+      " tail_canonical_zh": " 自2020年第四季度起停产",
+      " tail_type": " Standard",
+      " polarity": " positive",
+      " modality": " asserted",
+      " scope": " background",
+      " head_evidence_ids": [
+        " MP021:p0006:b0093"
+      ],
+      " tail_evidence_ids": [
+        " MP021:p0006:b0093"
+      ],
+      " evidence": [
+        {
+          " unit_id": " MP021:p0006:b0093",
+          " quote": " NOTE: 226A SERIES™ & 4226A SERIES™ JACKETED PUMPS DISCONTINUED AS OF 4Q20."
+        }
+      ],
+      " conditions_zh": [],
+      " unresolved_reason": " 'DISCONTINUED AS OF 4Q20' is a product lifecycle status, not a technical standard; mapped to specified_by per closest available schema relation"
+    }
+  ],
+  " coverage_note": " Scanned entire target page 6 of TSM 1600. Extracted component mechanical seal installation procedure (steps 1-5 plus notes), O-ring and clamped-in seat installation sub-procedures, component mechanical seal removal procedure (steps 1-7), elastomeric/PTFE seal replacement requirement, Figure 8 note about P-80 lubrication, danger warnings for chamber opening and guard mounting, and discontinued model note. Previous page 5 context confirmed continuity of DANGER blocks and general structure but was not used as a source of new triples. All procedural steps, causal chains (particles→scratch→leakage), conditional requirements (sizes K-LS for half round rings), negative prohibitions (no grease, never touch seal faces), and safety prerequisites were represented. No troubleshooting table exists on this page."
+}

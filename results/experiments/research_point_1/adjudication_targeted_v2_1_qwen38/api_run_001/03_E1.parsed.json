@@ -1,0 +1,271 @@
+{
+  "assertions": [
+    {
+      "head_surface": "vacuum valve",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [
+        "The discharge pipe is sloped downwards in the direction of leaving the pump",
+        "Siphonage may occur",
+        "It is necessary to stop backflow of unclean water"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump installation with specified features",
+      "evidence_text": "If your installation is characterized by one of\nfollowing features, please install one vacuum\nvalve near the pump.\n● The discharge pipe is sloped downwards\nin the direction of leaving the pump.\n● Siphonage may occur.\n● It is necessary to stop backflow of unclean\nwater.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t00:r000:c02"
+      ]
+    },
+    {
+      "head_surface": "dry running",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "pump bearing and shaft seal will be damaged",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump startup",
+      "evidence_text": "Caution: Do not start the pump before water is filled and air is discharged. In case of dry running,\npump bearing and shaft seal will be damaged.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r001:c01"
+      ]
+    },
+    {
+      "head_surface": "dry running",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump startup",
+      "evidence_text": "Do not start the pump before water is filled and air is discharged. In case of dry running,\npump bearing and shaft seal will be damaged.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r001:c01"
+      ]
+    },
+    {
+      "head_surface": "pump bearing",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump",
+      "evidence_text": "pump bearing and shaft seal will be damaged",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r001:c01"
+      ]
+    },
+    {
+      "head_surface": "shaft seal",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "pump",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump",
+      "evidence_text": "pump bearing and shaft seal will be damaged",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r001:c01"
+      ]
+    },
+    {
+      "head_surface": "heat protector",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "One-phase motor",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "One-phase motor for vertical multistage centrifugal pump",
+      "evidence_text": "One-phase motor is provided with a heat protector inside while three-phase motor shall be provided\nwith a three-phase protector before installation.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t02:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "three-phase protector",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "three-phase motor",
+      "tail_type": "Equipment",
+      "conditions": [
+        "before installation"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Three-phase motor for vertical multistage centrifugal pump",
+      "evidence_text": "three-phase motor shall be provided\nwith a three-phase protector before installation.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t02:r000:c01"
+      ]
+    },
+    {
+      "head_surface": "foot bolts",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "Check if foot bolts are tightened",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  Check if foot bolts are tightened.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump",
+      "head_type": "Equipment",
+      "relation": "inspected_by",
+      "tail_surface": "If the pump is full of water or not",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  If the pump is full of water or not.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump",
+      "head_type": "Equipment",
+      "relation": "inspected_by",
+      "tail_surface": "If the rotating direction is correct or not",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  If the rotating direction is correct or not.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pipes",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "If all pipes are tightly connected or not, if pipes can provide water normally or not",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  If all pipes are tightly connected or not, if pipes can\n          •  provide water normally or not.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "valves on inlet pipes",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "If valves on inlet pipes are completely opened or not",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  If valves on inlet pipes are completely opened or not.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pressure meter",
+      "head_type": "Component",
+      "relation": "inspected_by",
+      "tail_surface": "Check working pressure if a pressure meter is installed",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "if a pressure meter is installed"
+      ],
+      "modality": "conditional",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump before startup",
+      "evidence_text": "•  Check working pressure if a pressure meter is installed.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "full-load current of the motor",
+      "head_type": "SignalFeature",
+      "relation": "inspected_by",
+      "tail_surface": "Check if the full-load current of the motor exceeds the maximum allowable current via the pressure switch",
+      "tail_type": "InspectionAction",
+      "conditions": [
+        "If the pump is controlled by the pressure switch"
+      ],
+      "modality": "conditional",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "Vertical multistage centrifugal pump controlled by pressure switch",
+      "evidence_text": "If the pump is controlled by the pressure switch, check, adjust, start and disconnect the\npressure. Check if the full-load current of the motor exceeds the maximum allowable current\nvia the pressure switch.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Please carefully read warning signs on the pump motor base before startup.",
+      "reason": "Instructional directive without a representable diagnostic relation between defined node types.",
+      "evidence_text": "Please carefully read warning signs on the pump motor base before startup.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r000:c01"
+      ]
+    },
+    {
+      "statement": "The motor shall be provided with reliable earthing.",
+      "reason": "Electrical safety requirement; no specific pump diagnostic relation node type applicable beyond general maintenance context already captured.",
+      "evidence_text": "The motor shall be provided with reliable earthing.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t02:r000:c01"
+      ]
+    },
+    {
+      "statement": "Before dismantling the motor connection box or the pump, make sure that the power supply is disconnected.",
+      "reason": "Safety prerequisite for maintenance action, not itself a distinct maintenance action on a component within the allowed relation semantics.",
+      "evidence_text": "Before dismantling the motor connection box or the pump, make sure that the power supply is\ndisconnected.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t02:r000:c01"
+      ]
+    },
+    {
+      "statement": "When discharging air, pay attention that water drained shall not injure people or damage objects, especially avoid scalding by sprayed hot water when it is used to convey hot water.",
+      "reason": "Safety warning during air discharge procedure; risk of injury/scalding is personnel safety rather than equipment fault mode or risk state within the pump diagnostic model.",
+      "evidence_text": "When discharging air, pay attention that water\ndrained shall not injure people or damage objects, especially avoid scalding by sprayed hot water\nwhen it is used to convey hot water.",
+      "evidence_unit_ids": [
+        "MP007:p0012:t01:r001:c01"
+      ]
+    },
+    {
+      "statement": "The outlet valve shall be opened slowly after the pump is started up.",
+      "reason": "Operational instruction for valve sequencing; does not map directly to a single allowed relation edge without fabricating a causal or maintenance link.",
+      "evidence_text": "The outlet valve shall be opened\n             slowly after the pump is started up.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "All controls required by normal running.",
+      "reason": "Incomplete checklist item lacking a concrete inspection action or target.",
+      "evidence_text": "•  All controls required by normal running.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,1183 @@
+{
+  "contexts": [
+    {
+      "context_id": "ctx_fs_disassembly",
+      "kind": "procedure",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP018:p0023:b0001",
+          "quote": "MODEL FS PUMPS ONLY (Continued from Step No. 7, Page 16)."
+        },
+        {
+          "unit_id": "MP018:p0023:b0002",
+          "quote": "NOTE: If pump is a Model F pump, disregard 8B - 24B, and continue with Steps 8A - 29A on page"
+        },
+        {
+          "unit_id": "MP018:p0023:b0003",
+          "quote": "16."
+        }
+      ],
+      "conditions_zh": [
+        "仅适用于Model FS泵",
+        "若为Model F泵则忽略步骤8B-24B，转至第16页步骤8A-29A",
+        "从第16页步骤7继续"
+      ],
+      "applicability_zh": "Model FS非堵塞离心泵拆卸程序（步骤8B至24B）",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_wear_ring_removal_note",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP018:p0023:b0036",
+          "quote": "NOTE: Wear rings should not be removed unless it is necessary to replace them with new parts."
+        }
+      ],
+      "conditions_zh": [
+        "仅在需要用新零件更换时才应拆卸耐磨环"
+      ],
+      "applicability_zh": "Model FS泵耐磨环拆卸限制说明",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    }
+  ],
+  "records": [
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "bearing cover (37)",
+      "head_canonical_zh": "轴承盖(37)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "radial bearing housing (33)",
+      "tail_canonical_zh": "径向轴承座(33)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0006"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0006"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0005",
+          "quote": "8B"
+        },
+        {
+          "unit_id": "MP018:p0023:b0006",
+          "quote": "Unbolt and remove bearing cover (37). This procedure disconnects Item 51 from Item 33."
+        }
+      ],
+      "conditions_zh": [
+        "步骤8B：拆卸轴承盖"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "grease retainer (51)",
+      "head_canonical_zh": "挡脂圈(51)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "radial bearing housing (33)",
+      "tail_canonical_zh": "径向轴承座(33)",
+      "tail_type": "Component",
+      "polarity": "negative",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0006"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0006"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0006",
+          "quote": "Unbolt and remove bearing cover (37). This procedure disconnects Item 51 from Item 33."
+        }
+      ],
+      "conditions_zh": [
+        "步骤8B：拆卸轴承盖时断开挡脂圈与径向轴承座的连接"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "radial bearing housing (33)",
+      "head_canonical_zh": "径向轴承座(33)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Unbolt and remove radial bearing housing (33).",
+      "tail_canonical_zh": "拆下螺栓并移除径向轴承座(33)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0008"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0008"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0007",
+          "quote": "9B"
+        },
+        {
+          "unit_id": "MP018:p0023:b0008",
+          "quote": "Unbolt and remove radial bearing housing (33)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤9B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "locknut (22)",
+      "head_canonical_zh": "锁紧螺母(22)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove locknut (22) and lockwasher (69).",
+      "tail_canonical_zh": "拆卸锁紧螺母(22)和锁紧垫圈(69)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0009"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0009"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0009",
+          "quote": "10B Remove locknut (22) and lockwasher (69)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤10B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "lockwasher (69)",
+      "head_canonical_zh": "锁紧垫圈(69)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove locknut (22) and lockwasher (69).",
+      "tail_canonical_zh": "拆卸锁紧螺母(22)和锁紧垫圈(69)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0009"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0009"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0009",
+          "quote": "10B Remove locknut (22) and lockwasher (69)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤10B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "radial bearing (16)",
+      "head_canonical_zh": "径向轴承(16)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "place puller around the bearing spacer (78) using the groove.",
+      "tail_canonical_zh": "使用凹槽将拉拔器放置在轴承隔套(78)周围",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0010"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0010"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0010",
+          "quote": "11B To remove the radial bearing (16), place puller around the bearing spacer (78) using the groove."
+        }
+      ],
+      "conditions_zh": [
+        "步骤11B：拆卸径向轴承"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "grease retainer (51)",
+      "head_canonical_zh": "挡脂圈(51)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Do not apply puller to grease retainer (51).",
+      "tail_canonical_zh": "不要对挡脂圈(51)施加拉拔器",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0011"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0011"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0011",
+          "quote": "Do not apply puller to grease retainer (51). Pull bearing spacer (78) from shaft. Radial bearing (16)"
+        }
+      ],
+      "conditions_zh": [
+        "步骤11B：禁止对挡脂圈使用拉拔器"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "bearing spacer (78)",
+      "head_canonical_zh": "轴承隔套(78)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Pull bearing spacer (78) from shaft.",
+      "tail_canonical_zh": "从轴上拉出轴承隔套(78)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0011"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0011"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0011",
+          "quote": "Do not apply puller to grease retainer (51). Pull bearing spacer (78) from shaft. Radial bearing (16)"
+        }
+      ],
+      "conditions_zh": [
+        "步骤11B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "thrust bearing (18)",
+      "head_canonical_zh": "推力轴承(18)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove thrust bearing (18) and springs.",
+      "tail_canonical_zh": "拆卸推力轴承(18)和弹簧",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0013"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0013"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0013",
+          "quote": "12B Remove thrust bearing (18) and springs. Retain the springs. They must be re-installed at"
+        }
+      ],
+      "conditions_zh": [
+        "步骤12B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "springs",
+      "head_canonical_zh": "弹簧",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Retain the springs. They must be re-installed at assembly.",
+      "tail_canonical_zh": "保留弹簧，装配时必须重新安装",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0013",
+        "MP018:p0023:b0014"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0013",
+        "MP018:p0023:b0014"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0013",
+          "quote": "12B Remove thrust bearing (18) and springs. Retain the springs. They must be re-installed at"
+        },
+        {
+          "unit_id": "MP018:p0023:b0014",
+          "quote": "assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤12B：弹簧必须在装配时重新安装"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "thrust bearing housing (31)",
+      "head_canonical_zh": "推力轴承座(31)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove thrust bearing housing (31).",
+      "tail_canonical_zh": "拆卸推力轴承座(31)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0015"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0015"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0015",
+          "quote": "13B Remove thrust bearing housing (31). The oil retainer (107) is bolted to the bearing housing and"
+        }
+      ],
+      "conditions_zh": [
+        "步骤13B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "oil retainer (107)",
+      "head_canonical_zh": "挡油圈(107)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "thrust bearing housing (31)",
+      "tail_canonical_zh": "推力轴承座(31)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0015"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0015"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0015",
+          "quote": "13B Remove thrust bearing housing (31). The oil retainer (107) is bolted to the bearing housing and"
+        },
+        {
+          "unit_id": "MP018:p0023:b0016",
+          "quote": "will come out with the housing."
+        }
+      ],
+      "conditions_zh": [
+        "挡油圈用螺栓固定在轴承座上，随轴承座一起拆出"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "flinger seal (40b)",
+      "head_canonical_zh": "甩水密封(40b)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "shaft",
+      "tail_canonical_zh": "轴",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0017"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0017"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0017",
+          "quote": "14B Slide flinger seal (40b) off of shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤14B：甩水密封安装在轴上"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "flinger seal (40b)",
+      "head_canonical_zh": "甩水密封(40b)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Slide flinger seal (40b) off of shaft.",
+      "tail_canonical_zh": "将甩水密封(40b)从轴上滑下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0017"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0017"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0017",
+          "quote": "14B Slide flinger seal (40b) off of shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤14B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "packing gland (17)",
+      "head_canonical_zh": "填料压盖(17)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove packing gland (17).",
+      "tail_canonical_zh": "拆卸填料压盖(17)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0018"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0018"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0018",
+          "quote": "15B Remove packing gland (17)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤15B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft sleeve nut (20)",
+      "head_canonical_zh": "轴套螺母(20)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Loosen set screws and turn shaft sleeve nut (20) off of shaft.",
+      "tail_canonical_zh": "松开紧定螺钉并将轴套螺母(20)从轴上旋下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0019"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0019"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0019",
+          "quote": "16B Loosen set screws and turn shaft sleeve nut (20) off of shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤16B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "packing rings (13)",
+      "head_canonical_zh": "填料环(13)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove packing rings (13)",
+      "tail_canonical_zh": "拆卸填料环(13)",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0020"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0020"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0020",
+          "quote": "17B Remove packing rings (13) - slide lantern ring (29) from shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤17B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "lantern ring (29)",
+      "head_canonical_zh": "水封环(29)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "shaft",
+      "tail_canonical_zh": "轴",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0020"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0020"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0020",
+          "quote": "17B Remove packing rings (13) - slide lantern ring (29) from shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤17B：水封环安装在轴上"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "impeller nut (26)",
+      "head_canonical_zh": "叶轮螺母(26)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove bolting from impeller nut (26) - turn impeller nut from shaft",
+      "tail_canonical_zh": "拆卸叶轮螺母(26)的螺栓并将其从轴上旋下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0021"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0021"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0021",
+          "quote": "18B Remove bolting from impeller nut (26) - turn impeller nut from shaft and slide the impeller (2) from"
+        }
+      ],
+      "conditions_zh": [
+        "步骤18B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "impeller (2)",
+      "head_canonical_zh": "叶轮(2)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "slide the impeller (2) from the shaft.",
+      "tail_canonical_zh": "将叶轮(2)从轴上滑下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0021"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0021"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0021",
+          "quote": "18B Remove bolting from impeller nut (26) - turn impeller nut from shaft and slide the impeller (2) from"
+        },
+        {
+          "unit_id": "MP018:p0023:b0022",
+          "quote": "the shaft. Retain the impeller key for use at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤18B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "impeller key",
+      "head_canonical_zh": "叶轮键",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Retain the impeller key for use at assembly.",
+      "tail_canonical_zh": "保留叶轮键以供装配时使用",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0022"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0022"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0022",
+          "quote": "the shaft. Retain the impeller key for use at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤18B：叶轮键必须在装配时重新使用"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "retaining ring (1 80)",
+      "head_canonical_zh": "挡圈(1 80)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Remove bolting from retaining ring (1 80)",
+      "tail_canonical_zh": "拆卸挡圈(1 80)的螺栓",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0023"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0023"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0023",
+          "quote": "19B Remove bolting from retaining ring (1 80) and slide the lower bearing housing (99) from the volute"
+        }
+      ],
+      "conditions_zh": [
+        "步骤19B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "lower bearing housing (99)",
+      "head_canonical_zh": "下轴承座(99)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "volute cover (11)",
+      "tail_canonical_zh": "蜗壳盖(11)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0023"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0023"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0023",
+          "quote": "19B Remove bolting from retaining ring (1 80) and slide the lower bearing housing (99) from the volute"
+        },
+        {
+          "unit_id": "MP018:p0023:b0024",
+          "quote": "cover (11). Retain locking key - it must be used at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤19B：下轴承座安装在蜗壳盖上"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "locking key",
+      "head_canonical_zh": "锁定键",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Retain locking key - it must be used at assembly.",
+      "tail_canonical_zh": "保留锁定键，装配时必须使用",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0024"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0024"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0024",
+          "quote": "cover (11). Retain locking key - it must be used at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤19B：锁定键必须在装配时重新使用"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft (6)",
+      "head_canonical_zh": "轴(6)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Carefully slide the shaft (6) from the volute cover (11).",
+      "tail_canonical_zh": "小心地将轴(6)从蜗壳盖(11)中滑出",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0025",
+          "quote": "20B Carefully slide the shaft (6) from the volute cover (11). It will contain the shaft journal"
+        }
+      ],
+      "conditions_zh": [
+        "步骤20B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft journal (74)",
+      "head_canonical_zh": "轴颈(74)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "shaft (6)",
+      "tail_canonical_zh": "轴(6)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0025",
+          "quote": "20B Carefully slide the shaft (6) from the volute cover (11). It will contain the shaft journal"
+        },
+        {
+          "unit_id": "MP018:p0023:b0026",
+          "quote": "(74) locknut (22-I) and shaft sleeve (14)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤20B：轴滑出时包含轴颈、锁紧螺母和轴套"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "locknut (22-I)",
+      "head_canonical_zh": "锁紧螺母(22-I)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "shaft (6)",
+      "tail_canonical_zh": "轴(6)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0026"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0025",
+          "quote": "20B Carefully slide the shaft (6) from the volute cover (11). It will contain the shaft journal"
+        },
+        {
+          "unit_id": "MP018:p0023:b0026",
+          "quote": "(74) locknut (22-I) and shaft sleeve (14)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤20B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft sleeve (14)",
+      "head_canonical_zh": "轴套(14)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "shaft (6)",
+      "tail_canonical_zh": "轴(6)",
+      "tail_type": "Component",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0026"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0025"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0025",
+          "quote": "20B Carefully slide the shaft (6) from the volute cover (11). It will contain the shaft journal"
+        },
+        {
+          "unit_id": "MP018:p0023:b0026",
+          "quote": "(74) locknut (22-I) and shaft sleeve (14)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤20B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft sleeve (14)",
+      "head_canonical_zh": "轴套(14)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Slide the shaft sleeve (14) from the shaft.",
+      "tail_canonical_zh": "将轴套(14)从轴上滑下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0027"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0027"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0027",
+          "quote": "21B Slide the shaft sleeve (14) from the shaft. Pin must be used at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤21B"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "Pin",
+      "head_canonical_zh": "销",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Pin must be used at assembly.",
+      "tail_canonical_zh": "装配时必须使用销",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0027"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0027"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0027",
+          "quote": "21B Slide the shaft sleeve (14) from the shaft. Pin must be used at assembly."
+        }
+      ],
+      "conditions_zh": [
+        "步骤21B：销必须在装配时重新使用"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "journal locknut (22-I)",
+      "head_canonical_zh": "轴颈锁紧螺母(22-I)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "loosen set screw and turn journal locknut (22-I) from shaft.",
+      "tail_canonical_zh": "松开紧定螺钉并将轴颈锁紧螺母(22-I)从轴上旋下",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0028",
+        "MP018:p0023:b0029"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0028",
+        "MP018:p0023:b0029"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0028",
+          "quote": "22B To remove shaft journal (74), loosen set screw and turn journal locknut (22-I) from"
+        },
+        {
+          "unit_id": "MP018:p0023:b0029",
+          "quote": "shaft."
+        }
+      ],
+      "conditions_zh": [
+        "步骤22B：拆卸轴颈前需先拆下轴颈锁紧螺母"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "shaft journal (74)",
+      "head_canonical_zh": "轴颈(74)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "Slide shaft journal (74) from shaft. Handle with care.",
+      "tail_canonical_zh": "将轴颈(74)从轴上滑下，小心操作",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0030"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0030"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0030",
+          "quote": "Slide shaft journal (74) from shaft. Handle with care."
+        }
+      ],
+      "conditions_zh": [
+        "步骤22B：需小心操作轴颈"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "bearing bushing (39)",
+      "head_canonical_zh": "轴承衬套(39)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "remove locking plate and press out of housing using a follower as large as bore in piece (99) will permit.",
+      "tail_canonical_zh": "拆下锁板并使用尽可能大的冲头将其从壳体中压出",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0031"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0031",
+        "MP018:p0023:b0032"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0031",
+          "quote": "23B To remove bearing bushing (39), remove locking plate and press out of housing using a follower"
+        },
+        {
+          "unit_id": "MP018:p0023:b0032",
+          "quote": "as large as bore in piece (99) will permit."
+        }
+      ],
+      "conditions_zh": [
+        "步骤23B：冲头尺寸受限于下轴承座(99)的孔径"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "wear rings (8 & 25, if supplied)",
+      "head_canonical_zh": "耐磨环(8和25，如提供)",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "Pump",
+      "tail_canonical_zh": "泵",
+      "tail_type": "Equipment",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0033"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0033"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0033",
+          "quote": "24B Pump is now completely disassembled with the exception of the wear rings (8 & 25, if supplied)."
+        }
+      ],
+      "conditions_zh": [
+        "步骤24B：泵完全拆卸后仅剩耐磨环未拆"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "wear rings (8 & 25, if supplied)",
+      "head_canonical_zh": "耐磨环(8和25，如提供)",
+      "head_type": "Component",
+      "relation": "operates_under",
+      "tail_surface": "interference fit",
+      "tail_canonical_zh": "过盈配合",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0034"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0034",
+          "quote": "These items have an interference fit with their respective pieces. To disassemble, remove their"
+        }
+      ],
+      "conditions_zh": [
+        "耐磨环与其对应零件为过盈配合"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_fs_disassembly",
+      "head_surface": "wear rings (8 & 25, if supplied)",
+      "head_canonical_zh": "耐磨环(8和25，如提供)",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "remove their respective locking devices and pry out working uniformly at 180° points.",
+      "tail_canonical_zh": "拆下各自的锁定装置并在180°对称点均匀撬出",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "conditional",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0034",
+        "MP018:p0023:b0035"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0034",
+        "MP018:p0023:b0035"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0034",
+          "quote": "These items have an interference fit with their respective pieces. To disassemble, remove their"
+        },
+        {
+          "unit_id": "MP018:p0023:b0035",
+          "quote": "respective locking devices and pry out working uniformly at 180° points."
+        }
+      ],
+      "conditions_zh": [
+        "仅在需要更换时才执行此拆卸操作"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_wear_ring_removal_note",
+      "head_surface": "Wear rings",
+      "head_canonical_zh": "耐磨环",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "should not be removed unless it is necessary to replace them with new parts.",
+      "tail_canonical_zh": "除非必须用新零件更换否则不应拆卸",
+      "tail_type": "MaintenanceAction",
+      "polarity": "negative",
+      "modality": "recommended",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP018:p0023:b0036"
+      ],
+      "tail_evidence_ids": [
+        "MP018:p0023:b0036"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP018:p0023:b0036",
+          "quote": "NOTE: Wear rings should not be removed unless it is necessary to replace them with new parts."
+        }
+      ],
+      "conditions_zh": [
+        "仅在需要用新零件更换时才拆卸耐磨环"
+      ],
+      "unresolved_reason": null
+    }
+  ],
+  "coverage_note": "Scanned entire target page containing Model FS pump disassembly procedure steps 8B through 24B. Extracted all component removal actions, structural locations, retention requirements for reassembly (springs, impeller key, locking key, pin), prohibitions (no puller on grease retainer, no unnecessary wear ring removal), and operating conditions (interference fit). Previous page context (Model F steps 26A-29A) was acknowledged but not used as source for new records since the target page explicitly redirects Model F pumps away from these steps. All representable pump knowledge from this page has been captured."
+}

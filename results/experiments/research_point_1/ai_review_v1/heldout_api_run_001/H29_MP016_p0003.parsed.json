@@ -1,0 +1,319 @@
+{
+  "assertions": [
+    {
+      "head_surface": "damage to the Impeller",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "operate the pump above the maximum differential pressure shown on the Datasheet, not even for a few seconds",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Do not operate the pump above the maximum differential pressure shown on the Datasheet, not even for a few seconds, as damage to the Impeller will result.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "run the pump against a closed valve",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "damage to the Impeller",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Never run the pump against a closed valve.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Flexible Impeller pumps",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "entrained solids",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Flexible Impeller pumps can handle entrained solids.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Insufficient inlet pressure",
+      "head_type": "Cause",
+      "relation": "causes",
+      "tail_surface": "cavitate",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitate",
+      "head_type": "FaultMode",
+      "relation": "manifests_as",
+      "tail_surface": "low performance",
+      "tail_type": "Symptom",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitate",
+      "head_type": "FaultMode",
+      "relation": "manifests_as",
+      "tail_surface": "noise",
+      "tail_type": "Symptom",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "cavitate",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "short pump life",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Insufficient inlet pressure will cause the pump to cavitate leading to low performance, noise and short pump life.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "High Temperature",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "Net Inlet Pressure Required or NIPR is higher",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "The pumps cannot operate without sufficient pressure of liquid at the inlet port to supply the pump. Normally atmospheric pressure is sufficient but the actual pressure needed (Net Inlet Pressure Required or NIPR), is higher for: • High Temperature",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "High Pump Speeds",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "Net Inlet Pressure Required or NIPR is higher",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "The pumps cannot operate without sufficient pressure of liquid at the inlet port to supply the pump. Normally atmospheric pressure is sufficient but the actual pressure needed (Net Inlet Pressure Required or NIPR), is higher for: • High Pump Speeds",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "inlet pipes are short, large bore and do not collapse under vacuum",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "cavitate",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Ensure inlet pipes are short, large bore and do not collapse under vacuum.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "pump light fraction petroleum derivatives, thinners, solvents, highly concentrated or organic acids",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "short pump life",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "negative",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Do not pump light fraction petroleum derivatives, thinners, solvents, highly concentrated or organic acids.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Flexible Impeller Pumps",
+      "head_type": "Equipment",
+      "relation": "maintained_by",
+      "tail_surface": "flushed with water or neutralizing agent after each operation",
+      "tail_type": "MaintenanceAction",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Pump life will be prolonged if flushed with water or neutralizing agent after each operation.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Nitrile and industrial grade Viton impellers",
+      "head_type": "Component",
+      "relation": "located_in",
+      "tail_surface": "Flexible Impeller pumps",
+      "tail_type": "Equipment",
+      "conditions": [
+        "for pumping oils, hydrocarbons, solvents"
+      ],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Nitrile and industrial grade Viton impellers are available for pumping oils, hydrocarbons, solvents etc.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "use any Jabsco pump for petrol, petroleum products or any products with a flash point below 37°C (98°F)",
+      "head_type": "OperatingCondition",
+      "relation": "increases_risk_of",
+      "tail_surface": "explosion or death may occur",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Do not use any Jabsco pump for petrol, petroleum products or any products with a flash point below 37°C (98°F), explosion or death may occur.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Remove packing material from container and check contents against packing list",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "Flexible Impeller Pumps",
+      "tail_type": "Equipment",
+      "conditions": [
+        "upon receipt"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "a. Remove packing material from container and check contents against packing list.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Check the pump for any physical damage sustained in shipping",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "Flexible Impeller Pumps",
+      "tail_type": "Equipment",
+      "conditions": [
+        "upon receipt"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "b. Check the pump for any physical damage sustained in shipping. If loss or damage is found, notify your carrier and supplier immediately.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Ensure ports are oriented to give the correct orientation and connection for duty required",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "Flexible Impeller Pumps",
+      "tail_type": "Equipment",
+      "conditions": [
+        "upon receipt"
+      ],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "d. Ensure ports are oriented to give the correct orientation and connection for duty required.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pump",
+      "head_type": "Equipment",
+      "relation": "located_in",
+      "tail_surface": "As close as possible to the fluid source and as low as possible",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Pump should be located: • As close as possible to the fluid source and as low as possible to maximize the net inlet pressure available to the pump.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Pump head",
+      "head_type": "Component",
+      "relation": "contains",
+      "tail_surface": "Intake and discharge ports",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "descriptive",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Pump head may be rotated to various positions to suit installation. Flexible Impeller pumps are equally suitable for both directions of rotation, Intake and discharge ports are determined by the direction of shaft rotation.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "direction of shaft rotation",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "Intake and discharge ports are determined",
+      "tail_type": "Component",
+      "conditions": [],
+      "modality": "asserted",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "船用发动机冷却柔性叶轮泵",
+      "evidence_text": "Intake and discharge ports are determined by the direction of shaft rotation.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "End cover is engraved to show rotation direction flow.",
+      "reason": "Descriptive marking information; no diagnostic relation applicable.",
+      "evidence_text": "The pump End cover is engraved to show rotation direction flow.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "MODEL NUMBER gives important information about the specification of the pump, see 7 PUMP NUMBER MATRIX for details.",
+      "reason": "Reference to another section; no direct diagnostic relation extractable on this page.",
+      "evidence_text": "The MODEL NUMBER gives important information about the specification of the pump, see 7 PUMP NUMBER MATRIX for details.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Flexible Impeller pumps are equally suitable for both directions of rotation.",
+      "reason": "General capability statement without specific diagnostic relation target.",
+      "evidence_text": "Flexible Impeller pumps are equally suitable for both directions of rotation",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Transmission to the pump shaft will normally be by Head Kits: Close coupled to motor using shaft adaptor.",
+      "reason": "Drive coupling description; no core diagnostic relation directly representable.",
+      "evidence_text": "Transmission to the pump shaft will normally be by one of the following: Head Kits: Close coupled to motor using shaft adaptor.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "unresolved": []
+}

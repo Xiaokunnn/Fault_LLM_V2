@@ -1,0 +1,51 @@
+{
+  "version": "rp1_targeted_extraction_v2_1_qwen38_timeout180",
+  "status": "manual_transport_recovery_frozen_before_remaining_calls",
+  "pages": 6,
+  "paired_requests": 12,
+  "runs_per_page_per_arm": 1,
+  "temperature": 0,
+  "max_completion_tokens_per_request": 8192,
+  "maximum_requested_completion_tokens_total": 98304,
+  "model_requested": "qwen3.8-max",
+  "model_identifier_origin": "explicit user instruction, 2026-10-02; requested provider alias, availability unverified",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_key_env": "DASHSCOPE_API_KEY",
+  "timeout_seconds": 180,
+  "automatic_retries": 0,
+  "arms": {
+    "E0": "direct extraction under shared v2 schema",
+    "E1": "same schema/input plus fixed relation, condition, polarity and full-page completeness checks"
+  },
+  "comparison_scope": "joint instruction-package effect; not a single-factor causal attribution and not an exact reproduction of the historical v4 extractor",
+  "sampling": "purposefully selected previously read development pages; no representative-corpus inference",
+  "holdout_access": false,
+  "reference_quality": "85 provisional AI primary-core reference items; 18 auxiliary/unresolved; six-page completeness and expert review pending",
+  "evaluation": {
+    "unit": "source-relative scoped conditional atomic assertion; duplicate equivalent facts count once",
+    "match": "same page, directed relation, compatible endpoint meaning, complete relevant conditions/modality/polarity/applicability; explicit adjudicated one-to-one matching",
+    "partial": "not full coverage; report separately",
+    "primary_target_empty_page": "MP002:p0089; reference recall NA; primary false fills reported as counts",
+    "pending": "separate from correct/incorrect and matched/missing; no silent exclusion",
+    "reports": [
+      "per-page and pooled source-supported counts",
+      "condition-complete core reference matches",
+      "incorrect and unsupported outputs",
+      "background promoted to primary count",
+      "partial matches, unresolved cases, duplicates",
+      "tokens, latency, returned model, finish reason, parse status"
+    ],
+    "provisional_progress_rule": "on paired AI technical review only: more unique condition-complete reference matches, no increase in incorrect outputs or background-to-primary outputs, and no loss on any previously covered page; unresolved comparisons remain inconclusive",
+    "formal_metrics_gate": "independent human source-first page inventory + separately adjudicated output correctness/matching + reference completeness required; no formal accuracy/recall now",
+    "generalization": "pilot cannot establish population accuracy/recall or statistical significance even after review"
+  },
+  "stop_rules": [
+    "missing key: no network request",
+    "any prior uncertain/failed request: stop, no automatic repeated billable call",
+    "non-stop/truncated/invalid JSON: archive raw bytes and stop",
+    "returned model mismatch across requests: archive and stop",
+    "no model fallback, no prompt tuning, no main-graph writes"
+  ],
+  "reviewer_independence": "model opinions and this assistant are not domain experts; runtime publication is still automated, independent review evaluates the study only",
+  "transport_amendment": "Original 60-second trial: ten complete, 06_E1 timed out without response bytes, 06_E0 unattempted. Preserve that outcome. Reuse ten responses byte-identically; permit one manual additional attempt of 06_E1 and first attempt of 06_E0. No automatic retries. Same payloads, first complete valid response only; at most 13 cumulative network attempts."
+}

@@ -1,0 +1,66 @@
+﻿candidate_id,page_key,head_zh,head_surface,relation,tail_zh,tail_surface,polarity,modality,condition_ids,conditions_zh,automatic_pass,flags,source_AI_grade,core_grade,condition_grade,reason
+N01:001,MP005:p0108,泵组,ASSEMBLING PUMP SET,contains,叶轮,impeller,positive,descriptive,,,True,,S,S,S,泵组标题及本页安装叶轮正文共同支持泵组包含叶轮；这是结构关系，不把安装步骤限制推广为运行条件。
+N01:002,MP005:p0108,座滑动面,"the sliding surface
+seat",maintained_by,保护滑动面,protect the sliding surface of the,positive,required,C0001,使用工具进行装配时,False,condition_binding_outside_relation|head_not_native_contiguous_path|head_outside_relation_evidence,S,S,S,源文明确工具装配时保护静环座滑动面，中文关系和工具条件成立；端点跨度断裂是另行报告的表示问题。
+N01:003,MP005:p0108,座,the,mitigated_by,保护滑动面,protect the sliding surface of the,positive,required,C0001,使用工具进行装配时,False,condition_binding_outside_relation|schema_type_or_relation,E,E,S,所选头端点仅为the，中文补成座；Component→mitigated_by也不符合模式，应表示划伤/割伤的预防。工具条件本身有源文支持。
+N01:004,MP005:p0108,滑环橡胶波纹管内表面,"the inner surface of the slide
+rubber bellows",maintained_by,涂抹薄层硅脂润滑,"Lubricate
+a thin layer of silicone grease",positive,required,,,False,head_not_native_contiguous_path|tail_not_native_contiguous_path,E,S,E,波纹管内表面涂薄层硅脂有源文支持，但遗漏同一要求中硅脂不得进入滑动面的关键限制。
+N01:005,MP005:p0108,滑环,push it over,maintained_by,推过轴,push it over the shaft,positive,required,,,True,,E,E,E,头端点选的是push it over而非动环/波纹管名词；本动作之前已润滑的顺序要求未保留。
+N01:006,MP005:p0108,滑环,slide ring,maintained_by,使用装配工具推过轴,"use a
+fitting tool",positive,conditional,C0002,橡胶波纹管过紧时,False,condition_binding_outside_relation|head_outside_relation_evidence|tail_not_native_contiguous_path,E,S,E,过紧时使用装配工具的关系及局部条件成立；动作没有保留同一句必须防止损坏动环的限制。
+N01:007,MP005:p0108,橡胶波纹管,"a conical fitting
+the rubber bellows",mitigated_by,使用锥形装配衬套,The use of a conical fitting bush,positive,recommended,,,False,head_not_native_contiguous_path|schema_type_or_relation,E,E,S,头端点把锥形装配工具和橡胶波纹管片段混合；Component→mitigated_by错误，源文是使用衬套预防波纹管被割破。
+N01:008,MP005:p0108,碳环,"carbon ring
+it",inspected_by,检查安装方向是否正确,to check that it is fitted correctly,positive,required,C0003,碳环未固定时,False,head_not_native_contiguous_path|head_outside_relation_evidence,E,S,E,碳环未固定时检查安装正确有源文支持；中文声称检查方向但没有保留倒角/研磨面应朝静环座的具体判据。
+N01:009,MP005:p0108,碳环倒角/研磨面,the chamfered/lapped side,located_in,面向座侧,to face the seat,positive,required,C0003,碳环未固定时,False,condition_binding_outside_relation,E,E,S,face the seat是方向要求，不是Component位于另一个Component；面向座侧也不是部件实体。碳环未固定的局部条件来自正确分支。
+N01:010,MP005:p0108,碳环,carbon ring,maintained_by,用少量油脂固定,can be held by a little grease,positive,possible,,,False,head_outside_relation_evidence,S,S,S,碳环可用少量油脂固定在源文单独成句，possible未提升为强制，也未继承无关的过紧条件。
+N01:011,MP005:p0108,密封性,tightness,prevented_by,等待约15分钟使波纹管沉降就位,"bellows will settle and seat
+minutes",negative,descriptive,C0004,在轴上使用硅脂后约15分钟内,False,tail_not_native_contiguous_path,E,E,E,密封性→negative prevented_by等待的语义不成立，且所选沉降/时间证据遗漏实际数字15；不是可部署的等待要求。
+N01:012,MP005:p0108,泄漏孔,leak hole,inspected_by,目视检查无泄漏,"check by viewing
+that there are no leaks",positive,required,C0005,启动后,False,tail_not_native_contiguous_path,S,S,S,泄漏孔目视检查无泄漏与启动后条件有源文支持，没有继承硅脂沉降15分钟条件；跨度跳过leak hole的问题另列。
+N01:013,MP005:p0108,泵组,ASSEMBLING PUMP SET,contains,平键,sunk key,positive,descriptive,C0006,适用于Ø215/265叶轮,False,condition_binding_outside_relation,S,S,S,本页将平键装入泵轴，支持泵组包含平键；Ø215/265局部范围保留。
+N01:014,MP005:p0108,叶轮,impeller,maintained_by,用垫圈和螺母固定,"Secure the impeller with washers (7 and 8) and
+a nut",positive,required,C0006,适用于Ø215/265叶轮,False,condition_binding_outside_relation|head_outside_relation_evidence,S,S,S,用垫圈7/8及螺母固定叶轮在实际动作源文保留，Ø215/265范围明确；标题和动作不重叠是程序绑定规则问题。
+N01:015,MP005:p0108,硅脂,silicone grease,increases_risk_of,滑面污染,"no silicone grease ends up
+the slide surfaces",positive,conditional,,,False,head_outside_relation_evidence|schema_type_or_relation|tail_not_native_contiguous_path,E,E,E,硅脂作为Component不能用于increases_risk_of的头类型；源文是禁止进入滑动面的要求，不直接陈述滑面污染的正向风险关系。
+N02:001,MP021:p0006,Viking泵液腔,Viking pump liquid chamber,inspected_by,确认压力已完全泄放,"1. That any pressure in the chamber has been
+completely vented through the suction or discharge",positive,required,C0001|C0002|C0003,打开泵液腔前确保压力已完全泄放|打开泵液腔前确保驱动装置已锁定或不可操作|打开泵液腔前了解泵所输送液体及安全注意事项,True,,S,S,S,打开液腔前确认完全泄压有源文支持；共同打开前的泄压、驱动锁定、液体安全条件均在明确拥有者列表内。
+N02:002,MP021:p0006,Viking泵液腔,Viking pump liquid chamber,maintained_by,锁定驱动装置使其不可操作,"2. That the driving means (motor, turbine, engine, etc.)
+has been “locked out” or made non-operational, so that
+it cannot be started while work is being done on pump.",positive,required,C0001|C0002|C0003,打开泵液腔前确保压力已完全泄放|打开泵液腔前确保驱动装置已锁定或不可操作|打开泵液腔前了解泵所输送液体及安全注意事项,True,,E,E,S,实际锁定对象是驱动装置，不能把液腔作为锁定驱动这一维护动作的对象；打开液腔前的公共前提文本正确。
+N02:003,MP021:p0006,未遵循预防措施,Failure to follow above listed precautionary measures,causes,严重伤害或死亡,may result in serious injury or death.,positive,probable,,,False,not_primary,E,E,S,源文仅may result，probable比possible更强，不能据此称很可能导致严重伤害；且本记录自报background。
+N02:004,MP021:p0006,转子轴,Clean rotor shaft,maintained_by,清洁并确保无污垢砂砾和划痕,"Clean rotor shaft and seal housing bore. Make sure they
+are free of dirt, grit and scratches.",positive,required,,,True,,E,S,E,清洁转子轴有源文支持；作为安装步骤输出，未显式保留部件机械密封安装阶段，清洁要求不能作为无阶段的独立维护指令消费。
+N02:005,MP021:p0006,密封腔孔,and seal housing bore,maintained_by,清洁并确保无污垢砂砾和划痕,"Clean rotor shaft and seal housing bore. Make sure they
+are free of dirt, grit and scratches.",positive,required,,,True,,E,S,E,清洁密封腔孔有源文支持；未显式保留部件机械密封安装阶段。本项不假定所有维护动作都必须打开液腔。
+N02:006,MP021:p0006,轴径前缘,"Gently radius leading
+edge of the shaft diameter over",maintained_by,轻轻倒圆角,"Gently radius leading
+edge of the shaft diameter over which seal is to be placed.",positive,recommended,,,True,,E,S,E,轻轻倒圆密封经过的轴径前缘有源文支持；未显式保留密封安装阶段，阶段性加工不能泛化为一般周期维护。
+N02:007,MP021:p0006,O形圈密封垫片,of O-Ring seal gasket,maintained_by,用P-80或等效品润滑外径,"Lubricate outer diameter of O-Ring seal gasket
+with P-80® or equivalent",positive,required,C0004,O形圈垫片型机械密封座安装阶段,False,condition_binding_outside_relation,S,S,S,O形圈密封垫片外径用P-80或等效品润滑与O形圈型密封座安装条件均正确。
+N02:008,MP021:p0006,密封座,Press seal seat,maintained_by,压入孔中直到背面与孔齐平,"Press seal seat in to bore until
+back, unlapped face, is flush with bore.",positive,required,C0004,O形圈垫片型机械密封座安装阶段,False,condition_binding_outside_relation,S,S,S,O形圈型密封座压入至未研磨背面齐平在动作源文保留，局部安装类型正确。
+N02:009,MP021:p0006,夹入式机械密封座,"FOR “CLAMPED-IN” TYPE MECHANICAL SEAL SEAT:
+seal seat",maintained_by,用油冲洗密封面,"Flush sealing faces of both rotary member and seal seat
+with oil and",positive,required,C0005,夹入式机械密封座安装阶段,False,condition_binding_outside_relation|head_not_native_contiguous_path|head_outside_relation_evidence,S,S,S,夹入式密封座用油冲洗密封面成立，明确绑定夹入式安装而非O形圈分支；断裂头端点另行报告。
+N02:010,MP021:p0006,夹入式机械密封座,"FOR “CLAMPED-IN” TYPE MECHANICAL SEAL SEAT:
+install seal seat",maintained_by,安装在轴端加工支架面上,"install seal seat and seat gasket over end of
+shaft against machined bracket face.",positive,required,C0005,夹入式机械密封座安装阶段,False,condition_binding_outside_relation|head_not_native_contiguous_path|head_outside_relation_evidence,S,S,S,夹入式密封座及垫片越过轴端并靠到加工支架面成立，类型/安装阶段明确；拼接头端点和证据覆盖问题另列。
+N02:011,MP021:p0006,锥形安装套,Place tapered installation sleeve on,maintained_by,涂大量P-80或等效品且不使用油脂,"tapered sleeve and inside of the rotary member with a
+generous quantity of P-80® or equivalent. Grease is not
+recommended.",positive,required,,,False,head_outside_relation_evidence,E,E,E,Grease is not recommended被中文写成不使用油脂，建议强度被改成禁止；安装阶段也未明确保留。
+N02:012,MP021:p0006,转子/轴组件,Drive the rotor/shaft assembly,maintained_by,从泵壳中推出直到转子齿伸出泵壳面,"Drive the rotor/shaft assembly out of the casing until the
+rotor teeth extend past the face of the casing.",positive,required,C0007,仅更换机械密封时转子轴组件只需移动到足以拆下旋转件即可,False,condition_binding_outside_relation,E,S,E,一般拆卸步骤推出至转子齿伸出源文支持，但把仅换密封时只移动必要距离的例外，绑定成该完整推出动作的前提，例外分支没有正确表示。
+N02:013,MP021:p0006,未正确安装护罩,Failure to properly mount guards may,increases_risk_of,严重伤害或死亡,"result in serious
+injury or death.",positive,probable,C0006,启动泵前确保所有驱动设备护罩就位,False,condition_binding_outside_relation|not_primary,E,E,S,源文护罩风险为may result，probable强于源文；启动前护罩就位要求有支持。该记录自报background。
+N02:014,MP021:p0006,机械密封面,touch mechanical seal faces,maintained_by,仅用干净的手或干净的布接触,"Never touch mechanical seal faces with anything except
+clean hands or clean cloth.",negative,required,,,True,,E,E,S,中文动作仅用干净手/布接触是源文允许的例外，却标negative，使极性否定了允许动作；不能用否定前缀直接否定含例外的整句。
+N02:015,MP021:p0006,微小颗粒,Minute particles can,causes,划伤密封面并导致泄漏,"scratch
+the seal faces and cause leakage.",positive,possible,,,False,not_primary,S,S,S,微小颗粒可划伤密封面并造成泄漏有源文支持，possible保留；自报background使应用准入另外失败。
+N02:016,MP021:p0006,弹性体波纹管、弹性体O形圈和PTFE楔形密封,"Elastomeric bellows, elastomeric o-ring and PTFE wedge",maintained_by,需要泵拆卸才能更换,seals generally require pump disassembly to be replaced,positive,descriptive,,,True,,S,S,S,弹性体波纹管/O形圈/PTFE楔形密封更换一般需拆泵在源文动作中保留generally，描述模态而非无条件required。
+N02:017,MP021:p0006,无循环管路的密封,"vent stuffing box for seals
+without circulation line",maintained_by,连接吸入回流或冲洗管路或排放填料箱直到启动时有液体,"Connect suckback or flush line or vent stuffing box for seals
+without circulation line until liquid is present on start up.",positive,required,,,True,,E,S,E,连接吸入回流或冲洗管路、无循环管路密封排气是源文动作；无循环管路只限定排气分支，头实体及中文条件把范围合并到整个或关系。
+N02:018,MP021:p0006,最大密封寿命,For maximum seal life,prevented_by,应使用吸入回流或冲洗管路,", suckback or flush line
+should be used.",positive,recommended,,,True,,E,E,S,最大密封寿命是期望收益，不是应被prevented_by的异常/风险；源文建议使用吸入回流或冲洗管路延长寿命。

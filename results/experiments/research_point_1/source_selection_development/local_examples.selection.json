@@ -1,0 +1,364 @@
+{
+  "catalog_sha256": "d802f4e258ed30c1a7858dee04e4e25c753880456def06c7177339926c65d28b",
+  "conditions": [
+    {
+      "condition_id": "ASSEMBLY",
+      "kind": "procedure_phase",
+      "canonical_zh": "泵组装配阶段",
+      "evidence": [
+        {
+          "unit_id": "U0000",
+          "start": 0,
+          "end": 3
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R10",
+          "binding_evidence": [
+            {
+              "unit_id": "U0008",
+              "start": 0,
+              "end": 13
+            }
+          ]
+        },
+        {
+          "record_id": "R11",
+          "binding_evidence": [
+            {
+              "unit_id": "U0008",
+              "start": 13,
+              "end": 22
+            },
+            {
+              "unit_id": "U0009",
+              "start": 0,
+              "end": 13
+            }
+          ]
+        },
+        {
+          "record_id": "R12",
+          "binding_evidence": [
+            {
+              "unit_id": "U0009",
+              "start": 13,
+              "end": 23
+            },
+            {
+              "unit_id": "U0010",
+              "start": 0,
+              "end": 24
+            }
+          ]
+        },
+        {
+          "record_id": "R16",
+          "binding_evidence": [
+            {
+              "unit_id": "U0013",
+              "start": 11,
+              "end": 18
+            },
+            {
+              "unit_id": "U0014",
+              "start": 0,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "TIGHT",
+      "kind": "local_antecedent",
+      "canonical_zh": "橡胶波纹管过紧时",
+      "evidence": [
+        {
+          "unit_id": "U0008",
+          "start": 13,
+          "end": 19
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R11",
+          "binding_evidence": [
+            {
+              "unit_id": "U0008",
+              "start": 13,
+              "end": 22
+            },
+            {
+              "unit_id": "U0009",
+              "start": 0,
+              "end": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "CARBON_UNFIXED",
+      "kind": "local_antecedent",
+      "canonical_zh": "碳环未固定时",
+      "evidence": [
+        {
+          "unit_id": "U0009",
+          "start": 13,
+          "end": 20
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R12",
+          "binding_evidence": [
+            {
+              "unit_id": "U0009",
+              "start": 13,
+              "end": 23
+            },
+            {
+              "unit_id": "U0010",
+              "start": 0,
+              "end": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "condition_id": "AFTER_START",
+      "kind": "procedure_phase",
+      "canonical_zh": "启动后",
+      "evidence": [
+        {
+          "unit_id": "U0013",
+          "start": 11,
+          "end": 13
+        }
+      ],
+      "applies_to": [
+        {
+          "record_id": "R16",
+          "binding_evidence": [
+            {
+              "unit_id": "U0013",
+              "start": 11,
+              "end": 18
+            },
+            {
+              "unit_id": "U0014",
+              "start": 0,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "record_id": "R10",
+      "head": {
+        "canonical_zh": "动环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0008",
+            "start": 4,
+            "end": 6
+          }
+        ]
+      },
+      "tail": {
+        "canonical_zh": "用手将动环推过轴",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0008",
+            "start": 2,
+            "end": 12
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "evidence": [
+        {
+          "unit_id": "U0008",
+          "start": 0,
+          "end": 13
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "ASSEMBLY"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R11",
+      "head": {
+        "canonical_zh": "动环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0009",
+            "start": 7,
+            "end": 9
+          }
+        ]
+      },
+      "tail": {
+        "canonical_zh": "使用装配工具并注意不要损坏动环",
+        "type": "MaintenanceAction",
+        "spans": [
+          {
+            "unit_id": "U0008",
+            "start": 20,
+            "end": 22
+          },
+          {
+            "unit_id": "U0009",
+            "start": 0,
+            "end": 12
+          }
+        ]
+      },
+      "relation": "maintained_by",
+      "evidence": [
+        {
+          "unit_id": "U0008",
+          "start": 13,
+          "end": 22
+        },
+        {
+          "unit_id": "U0009",
+          "start": 0,
+          "end": 13
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "conditional",
+      "scope": "primary",
+      "condition_ids": [
+        "ASSEMBLY",
+        "TIGHT"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R12",
+      "head": {
+        "canonical_zh": "碳环",
+        "type": "Component",
+        "spans": [
+          {
+            "unit_id": "U0009",
+            "start": 15,
+            "end": 17
+          }
+        ]
+      },
+      "tail": {
+        "canonical_zh": "检查其安装正确，即倒角/研磨面朝向静环座",
+        "type": "InspectionAction",
+        "spans": [
+          {
+            "unit_id": "U0010",
+            "start": 2,
+            "end": 23
+          }
+        ]
+      },
+      "relation": "inspected_by",
+      "evidence": [
+        {
+          "unit_id": "U0009",
+          "start": 13,
+          "end": 23
+        },
+        {
+          "unit_id": "U0010",
+          "start": 0,
+          "end": 24
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "ASSEMBLY",
+        "CARBON_UNFIXED"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    },
+    {
+      "record_id": "R16",
+      "head": {
+        "canonical_zh": "泄漏",
+        "type": "FaultMode",
+        "spans": [
+          {
+            "unit_id": "U0014",
+            "start": 6,
+            "end": 7
+          }
+        ]
+      },
+      "tail": {
+        "canonical_zh": "通过观察泄漏孔检查是否无泄漏",
+        "type": "InspectionAction",
+        "spans": [
+          {
+            "unit_id": "U0013",
+            "start": 14,
+            "end": 18
+          },
+          {
+            "unit_id": "U0014",
+            "start": 0,
+            "end": 7
+          }
+        ]
+      },
+      "relation": "inspected_by",
+      "evidence": [
+        {
+          "unit_id": "U0013",
+          "start": 11,
+          "end": 18
+        },
+        {
+          "unit_id": "U0014",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "polarity": "positive",
+      "negation_evidence": [],
+      "modality": "required",
+      "scope": "primary",
+      "condition_ids": [
+        "ASSEMBLY",
+        "AFTER_START"
+      ],
+      "conditions_complete": true,
+      "unresolved_reason": null,
+      "table_branch": null
+    }
+  ],
+  "coverage_note": "Four locally authored interface examples; not full-page extraction, new API results or quality evaluation."
+}

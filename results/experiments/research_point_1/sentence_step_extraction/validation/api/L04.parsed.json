@@ -1,0 +1,213 @@
+{
+  "records": [
+    {
+      "unit": "u12",
+      "head_id": "1",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "maintained_by",
+      "tail_id": "28",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "维护泵（仔细阅读说明并特别注意警告；始终备有备用轴封和橡胶密封件；参阅单独的电机说明）",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "7",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "inspected_by",
+      "tail_id": "29",
+      "tail_type": "InspectionAction",
+      "tail_zh": "维修后检查泵是否运行平稳",
+      "conditions": [
+        {
+          "id": "32",
+          "zh": "维修后"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "5",
+      "head_type": "Component",
+      "head_zh": "橡胶密封件",
+      "relation": "maintained_by",
+      "tail_id": "30",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "预防性维护：单班制运行12个月后更换橡胶密封件；泄漏后当天结束时更换橡胶密封件；计划性维护：定期检查泄漏和平稳运行情况，建议每年检查一次",
+      "conditions": [
+        {
+          "id": "33",
+          "zh": "更换完整轴封时"
+        },
+        {
+          "id": "35",
+          "zh": "泄漏后（泄漏通常缓慢开始）"
+        },
+        {
+          "id": "36",
+          "zh": "每年检查时"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "4",
+      "head_type": "Component",
+      "head_zh": "轴封",
+      "relation": "maintained_by",
+      "tail_id": "30",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "预防性维护：单班制运行12个月后更换完整轴封；泄漏后当天结束时更换完整轴封；计划性维护：定期检查泄漏和平稳运行情况，建议每年检查一次",
+      "conditions": [
+        {
+          "id": "33",
+          "zh": "更换完整轴封时"
+        },
+        {
+          "id": "35",
+          "zh": "泄漏后（泄漏通常缓慢开始）"
+        },
+        {
+          "id": "36",
+          "zh": "每年检查时"
+        }
+      ],
+      "mode": "recommended",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "9",
+      "head_type": "Component",
+      "head_zh": "电机轴承",
+      "relation": "maintained_by",
+      "tail_id": "30",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "更换完整轴封时更换电机轴承；磨损时更换完整轴承；确保轴承轴向锁定（参见电机说明）；保留泵的记录并使用统计数据进行检查规划",
+      "conditions": [
+        {
+          "id": "34",
+          "zh": "更换完整轴封时"
+        },
+        {
+          "id": "37",
+          "zh": "如果磨损"
+        },
+        {
+          "id": "39",
+          "zh": "确保轴承轴向锁定（参见电机说明）"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "22",
+      "head_type": "Component",
+      "head_zh": "O形圈",
+      "relation": "maintained_by",
+      "tail_id": "28",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "安装前用硅脂或硅油润滑O形圈",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u12",
+      "head_id": "25",
+      "head_type": "Component",
+      "head_zh": "电气连接",
+      "relation": "maintained_by",
+      "tail_id": "31",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "如果在维修期间从电机上拆下电气连接，则正确安装电气连接（参见第3.1节开箱/交付中的使用前检查）",
+      "conditions": [
+        {
+          "id": "38",
+          "zh": "如果在维修期间已从电机上拆下"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u13",
+      "head_id": "1",
+      "head_type": "Component",
+      "head_zh": "电机",
+      "relation": "maintained_by",
+      "tail_id": "3",
+      "tail_type": "MaintenanceAction",
+      "tail_zh": "短暂启动和停止电机",
+      "conditions": [],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    },
+    {
+      "unit": "u14",
+      "head_id": "6",
+      "head_type": "Equipment",
+      "head_zh": "泵",
+      "relation": "inspected_by",
+      "tail_id": "3",
+      "tail_type": "InspectionAction",
+      "tail_zh": "确保泵运行平稳",
+      "conditions": [
+        {
+          "id": "4",
+          "zh": "确保泵运行平稳"
+        }
+      ],
+      "mode": "required",
+      "polarity": "positive",
+      "unresolved": null
+    }
+  ],
+  "scopes_zh": {
+    "s1": "5.1 一般维护"
+  },
+  "missing": [
+    {
+      "unit": "u15",
+      "reason": "source_only unit containing only a table header 'Shaft seal' with no extractable relation or knowledge"
+    },
+    {
+      "unit": "u16",
+      "reason": "source_only unit duplicating preventive maintenance table row already extracted from u12"
+    },
+    {
+      "unit": "u17",
+      "reason": "source_only unit duplicating end-of-day replacement table fragment already extracted from u12"
+    },
+    {
+      "unit": "u18",
+      "reason": "source_only unit duplicating shaft seal replacement condition already extracted from u12"
+    },
+    {
+      "unit": "u19",
+      "reason": "source_only unit duplicating O-ring lubrication instruction already extracted from u12"
+    },
+    {
+      "unit": "u20",
+      "reason": "source_only unit duplicating silicone grease material note already extracted from u12"
+    }
+  ]
+}

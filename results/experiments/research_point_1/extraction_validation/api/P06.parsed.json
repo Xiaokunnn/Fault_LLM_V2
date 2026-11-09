@@ -1,0 +1,488 @@
+{
+  "contexts": [
+    {
+      "context_id": "ctx_env_maint",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP007:p0008:b0004",
+          "quote": "4.5.1 GENERAL"
+        },
+        {
+          "unit_id": "MP007:p0008:b0006",
+          "quote": "applicable, biodegradable lubricant shall be used for maintenance."
+        }
+      ],
+      "conditions_zh": [
+        "适用时"
+      ],
+      "applicability_zh": "立式多级离心泵维护润滑",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_dismantling",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP007:p0008:b0010",
+          "quote": "4.5.2 DISMANTLING"
+        },
+        {
+          "unit_id": "MP007:p0008:b0011",
+          "quote": "The Owner is obliged to dismantle and environmentally dispose of the product."
+        }
+      ],
+      "conditions_zh": [],
+      "applicability_zh": "立式多级离心泵报废拆解",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP007:p0008:b0034",
+          "quote": "5.3 APPLICATION SCOPE"
+        },
+        {
+          "unit_id": "MP007:p0008:b0035",
+          "quote": "Medium temperature: -20°C ~ +120°C"
+        },
+        {
+          "unit_id": "MP007:p0008:b0037",
+          "quote": "• Flow range: 0.7~240m3/h"
+        },
+        {
+          "unit_id": "MP007:p0008:b0038",
+          "quote": "Max pressure: 33bar"
+        },
+        {
+          "unit_id": "MP007:p0008:b0040",
+          "quote": "Medium PH: 3 - 9"
+        },
+        {
+          "unit_id": "MP007:p0008:b0043",
+          "quote": "• Highest ambient temperature:"
+        },
+        {
+          "unit_id": "MP007:p0008:b0042",
+          "quote": "+40°C"
+        },
+        {
+          "unit_id": "MP007:p0008:b0045",
+          "quote": "Max altitude: <=1000m (please refer to 6.1 or consult DESMI)"
+        }
+      ],
+      "conditions_zh": [],
+      "applicability_zh": "立式多级离心泵运行工况范围",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_working_medium",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP007:p0008:b0047",
+          "quote": "5.4 WORKING MEDIUM"
+        },
+        {
+          "unit_id": "MP007:p0008:b0048",
+          "quote": "A thin, nonflammable and non-explosive liquid, contains no solid particles or fiber. The liquid"
+        },
+        {
+          "unit_id": "MP007:p0008:b0049",
+          "quote": "causes no chemical corrosion to pump materials."
+        }
+      ],
+      "conditions_zh": [],
+      "applicability_zh": "立式多级离心泵输送介质要求",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    },
+    {
+      "context_id": "ctx_high_density_viscosity",
+      "kind": "prose",
+      "qualifier_evidence": [
+        {
+          "unit_id": "MP007:p0008:b0050",
+          "quote": "If the density or viscosity of the conveyed liquid is greater than that of water, the motor with"
+        },
+        {
+          "unit_id": "MP007:p0008:b0051",
+          "quote": "high power shall be considered."
+        }
+      ],
+      "conditions_zh": [
+        "输送液体密度或粘度大于水"
+      ],
+      "applicability_zh": "高粘度或高密度介质下的电机选型",
+      "branch": {
+        "fault_ids": [],
+        "cause_ids": [],
+        "action_ids": []
+      }
+    }
+  ],
+  "records": [
+    {
+      "context_id": "ctx_env_maint",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "maintained_by",
+      "tail_surface": "biodegradable lubricant",
+      "tail_canonical_zh": "可生物降解润滑剂",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0005"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0006"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0005",
+          "quote": "This product is always friendly to the environment throughout its life cycle. Therefore, if"
+        },
+        {
+          "unit_id": "MP007:p0008:b0006",
+          "quote": "applicable, biodegradable lubricant shall be used for maintenance."
+        }
+      ],
+      "conditions_zh": [
+        "适用时"
+      ],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_dismantling",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "maintained_by",
+      "tail_surface": "dismantle and environmentally dispose of the product",
+      "tail_canonical_zh": "拆解并环保处置产品",
+      "tail_type": "MaintenanceAction",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0011"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0011"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0011",
+          "quote": "The Owner is obliged to dismantle and environmentally dispose of the product."
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Medium temperature: -20°C ~ +120°C",
+      "tail_canonical_zh": "介质温度：-20°C ~ +120°C",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0035"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0034",
+          "quote": "5.3 APPLICATION SCOPE"
+        },
+        {
+          "unit_id": "MP007:p0008:b0035",
+          "quote": "Medium temperature: -20°C ~ +120°C"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Flow range: 0.7~240m3/h",
+      "tail_canonical_zh": "流量范围：0.7~240m³/h",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0037"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0034",
+          "quote": "5.3 APPLICATION SCOPE"
+        },
+        {
+          "unit_id": "MP007:p0008:b0037",
+          "quote": "• Flow range: 0.7~240m3/h"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Max pressure: 33bar",
+      "tail_canonical_zh": "最大压力：33bar",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0038"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0034",
+          "quote": "5.3 APPLICATION SCOPE"
+        },
+        {
+          "unit_id": "MP007:p0008:b0038",
+          "quote": "Max pressure: 33bar"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Medium PH: 3 - 9",
+      "tail_canonical_zh": "介质pH值：3 - 9",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0040"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0034",
+          "quote": "5.3 APPLICATION SCOPE"
+        },
+        {
+          "unit_id": "MP007:p0008:b0040",
+          "quote": "Medium PH: 3 - 9"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Highest ambient temperature: +40°C",
+      "tail_canonical_zh": "最高环境温度：+40°C",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0043",
+        "MP007:p0008:b0042"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0043",
+          "quote": "• Highest ambient temperature:"
+        },
+        {
+          "unit_id": "MP007:p0008:b0042",
+          "quote": "+40°C"
+        },
+        {
+          "unit_id": "MP007:p0008:b0044",
+          "quote": "(please refer to 6.1 or consult DESMI)"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_app_scope",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "Max altitude: <=1000m",
+      "tail_canonical_zh": "最大海拔：<=1000m",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "asserted",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0034"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0045"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0045",
+          "quote": "Max altitude: <=1000m (please refer to 6.1 or consult DESMI)"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_working_medium",
+      "head_surface": "product",
+      "head_canonical_zh": "立式多级离心泵",
+      "head_type": "Equipment",
+      "relation": "operates_under",
+      "tail_surface": "A thin, nonflammable and non-explosive liquid, contains no solid particles or fiber",
+      "tail_canonical_zh": "稀薄、不易燃易爆、不含固体颗粒或纤维的液体",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0047"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0048"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0047",
+          "quote": "5.4 WORKING MEDIUM"
+        },
+        {
+          "unit_id": "MP007:p0008:b0048",
+          "quote": "A thin, nonflammable and non-explosive liquid, contains no solid particles or fiber. The liquid"
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_working_medium",
+      "head_surface": "pump materials",
+      "head_canonical_zh": "泵材料",
+      "head_type": "Component",
+      "relation": "operates_under",
+      "tail_surface": "liquid causes no chemical corrosion to pump materials",
+      "tail_canonical_zh": "液体对泵材料无化学腐蚀",
+      "tail_type": "OperatingCondition",
+      "polarity": "positive",
+      "modality": "required",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0049"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0048",
+        "MP007:p0008:b0049"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0048",
+          "quote": "A thin, nonflammable and non-explosive liquid, contains no solid particles or fiber. The liquid"
+        },
+        {
+          "unit_id": "MP007:p0008:b0049",
+          "quote": "causes no chemical corrosion to pump materials."
+        }
+      ],
+      "conditions_zh": [],
+      "unresolved_reason": null
+    },
+    {
+      "context_id": "ctx_high_density_viscosity",
+      "head_surface": "conveyed liquid",
+      "head_canonical_zh": "输送液体",
+      "head_type": "Cause",
+      "relation": "causes",
+      "tail_surface": "motor with high power shall be considered",
+      "tail_canonical_zh": "需考虑使用大功率电机",
+      "tail_type": "Risk",
+      "polarity": "positive",
+      "modality": "conditional",
+      "scope": "primary",
+      "head_evidence_ids": [
+        "MP007:p0008:b0050"
+      ],
+      "tail_evidence_ids": [
+        "MP007:p0008:b0050",
+        "MP007:p0008:b0051"
+      ],
+      "evidence": [
+        {
+          "unit_id": "MP007:p0008:b0050",
+          "quote": "If the density or viscosity of the conveyed liquid is greater than that of water, the motor with"
+        },
+        {
+          "unit_id": "MP007:p0008:b0051",
+          "quote": "high power shall be considered."
+        }
+      ],
+      "conditions_zh": [
+        "输送液体的密度或粘度大于水"
+      ],
+      "unresolved_reason": null
+    }
+  ],
+  "coverage_note": "Scanned sections 4.5 (Environmental Aspects), 5.1 (Product Features), 5.2 (Purpose), 5.3 (Application Scope), and 5.4 (Working Medium). Extracted environmental maintenance requirement, dismantling obligation, all operating condition limits (temperature, flow, pressure, pH, ambient temp, altitude), working medium constraints, and high-density/viscosity motor sizing rule. Section 5.1 product features (low noise, high efficiency, etc.) and 5.2 application purposes are general marketing/application descriptions without representable pump-system component, fault, or operational triples; left unrepresented. Footer contact info ignored."
+}

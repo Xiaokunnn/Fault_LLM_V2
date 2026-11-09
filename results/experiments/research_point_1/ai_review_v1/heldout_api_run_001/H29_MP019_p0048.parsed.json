@@ -1,0 +1,273 @@
+{
+  "assertions": [
+    {
+      "head_surface": "courants de roulement",
+      "head_type": "FaultMode",
+      "relation": "occurs_at",
+      "tail_surface": "moteurs",
+      "tail_type": "Equipment",
+      "conditions": [
+        "convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode"
+      ],
+      "modality": "probable",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver with ABB ACS800/ACS550 frequency converters",
+      "evidence_text": "Dans le cas des convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode, les méthodes suivantes doivent être utilisées pour éviter des courants de roulement susceptibles d'altérer le fonctionnement des moteurs",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "courants de roulement",
+      "head_type": "FaultMode",
+      "relation": "causes",
+      "tail_surface": "altérer le fonctionnement des moteurs",
+      "tail_type": "Risk",
+      "conditions": [
+        "convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode"
+      ],
+      "modality": "probable",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver with ABB ACS800/ACS550 frequency converters",
+      "evidence_text": "courants de roulement susceptibles d'altérer le fonctionnement des moteurs",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "Roulement isolé côté non-entraînement",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "courants de roulement",
+      "tail_type": "FaultMode",
+      "conditions": [
+        "Pn ≥ 100 kW OU CEI 315 ≤ Frame size ≤ CEI 355",
+        "convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver with ABB ACS800/ACS550 frequency converters, Pn >= 100 kW or frame 315-355",
+      "evidence_text": "",
+      "evidence_unit_ids": [
+        "MP019:p0048:t00:r002:c00",
+        "MP019:p0048:t00:r002:c01"
+      ]
+    },
+    {
+      "head_surface": "Roulement isolé côté non-entraînement",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "courants de roulement",
+      "tail_type": "FaultMode",
+      "conditions": [
+        "Pn ≥ 350 kW OU CEI 400 ≤ Frame size ≤ CEI 450",
+        "convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver with ABB ACS800/ACS550 frequency converters, Pn >= 350 kW or frame 400-450",
+      "evidence_text": "",
+      "evidence_unit_ids": [
+        "MP019:p0048:t00:r003:c00",
+        "MP019:p0048:t00:r003:c01"
+      ]
+    },
+    {
+      "head_surface": "Filtre en mode commun au niveau du convertisseur",
+      "head_type": "MaintenanceAction",
+      "relation": "prevented_by",
+      "tail_surface": "courants de roulement",
+      "tail_type": "FaultMode",
+      "conditions": [
+        "Pn ≥ 350 kW OU CEI 400 ≤ Frame size ≤ CEI 450",
+        "convertisseurs de fréquence de série ABB ACS800 et ACS550 avec unité d'alimentation avec diode"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver with ABB ACS800/ACS550 frequency converters, Pn >= 350 kW or frame 400-450",
+      "evidence_text": "",
+      "evidence_unit_ids": [
+        "MP019:p0048:t00:r003:c00",
+        "MP019:p0048:t00:r003:c01"
+      ]
+    },
+    {
+      "head_surface": "roulements isolés dotés d'alésages intérieur et/ou extérieur revêtus d'oxyde d'aluminium ou d'éléments de roulement en céramique",
+      "head_type": "Component",
+      "relation": "mitigated_by",
+      "tail_surface": "courants de roulement",
+      "tail_type": "FaultMode",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver",
+      "evidence_text": "Il est recommandé d'utiliser des roulement isolés dotés d'alésages intérieur et/ou extérieur revêtus d'oxyde d'aluminium ou d'éléments de roulement en céramique.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "presse-étoupes appropriés assurant une continuité de masse sur 360°",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "moteur",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver",
+      "evidence_text": "Des presse-étoupes appropriés assurant une continuité de masse sur 360° doivent être utilisés au niveau de tous les points de raccordement ; par exemple, au niveau du moteur, du convertisseur, de l'éventuel commutateur de sécurité, etc.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "égalisation supplémentaire du potentiel entre le châssis du moteur et l'équipement entraîné",
+      "head_type": "MaintenanceAction",
+      "relation": "required",
+      "tail_surface": "moteurs d'une hauteur d'axe supérieure ou égale à CEI 280",
+      "tail_type": "Equipment",
+      "conditions": [
+        "sauf si le moteur et l'équipement sont montés sur un même socle d'acier"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver, frame >= IEC 280",
+      "evidence_text": "Pour les moteurs d'une hauteur d'axe supérieure ou égale à CEI 280, il est nécessaire de procéder à une égalisation supplémentaire du potentiel entre le châssis du moteur et l'équipement entraîné, sauf si le moteur et l'équipement sont montés sur un même socle d'acier.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "conductivité haute fréquence de la connexion fournie par le socle en acier",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "socle d'acier",
+      "tail_type": "Component",
+      "conditions": [
+        "moteur et l'équipement sont montés sur un même socle d'acier",
+        "moteurs d'une hauteur d'axe supérieure ou égale à CEI 280"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver, frame >= IEC 280 mounted on common steel base",
+      "evidence_text": "Dans ce cas, la conductivité haute fréquence de la connexion fournie par le socle en acier doit être vérifiée, par exemple, en mesurant la différence de potentiel entre les composants.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "mesurant la différence de potentiel entre les composants",
+      "head_type": "InspectionAction",
+      "relation": "diagnosed_by",
+      "tail_surface": "conductivité haute fréquence de la connexion fournie par le socle en acier",
+      "tail_type": "InspectionAction",
+      "conditions": [],
+      "modality": "example",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver",
+      "evidence_text": "par exemple, en mesurant la différence de potentiel entre les composants.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "câbles symétriques blindés et de presse-étoupe CEM assurant une continuité de masse sur 360°",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "moteurs d'une puissance supérieure à 30 kW",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver, Pn > 30 kW",
+      "evidence_text": "les moteurs d'une puissance supérieure à 30 kW doivent être câblés à l'aide de câbles symétriques blindés et de presse-étoupe CEM assurant une continuité de masse sur 360°.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "câbles symétriques blindés",
+      "head_type": "Component",
+      "relation": "maintained_by",
+      "tail_surface": "moteurs de moindre puissance",
+      "tail_type": "Equipment",
+      "conditions": [],
+      "modality": "recommended",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver, Pn <= 30 kW",
+      "evidence_text": "Pour les moteurs de moindre puissance, l'utilisation de câbles symétriques blindés est également hautement recommandée.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application",
+      "head_type": "Risk",
+      "relation": "increases_risk_of",
+      "tail_surface": "vitesses supérieures à la vitesse nominale inscrite sur la plaque signalétique du moteur",
+      "tail_type": "OperatingCondition",
+      "conditions": [],
+      "modality": "conditional",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver operating above nameplate speed",
+      "evidence_text": "Pour les vitesses supérieures à la vitesse nominale inscrite sur la plaque signalétique du moteur ou dans le catalogue produit correspondant, vérifiez l'absence de dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "vérifiez l'absence de dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application",
+      "head_type": "InspectionAction",
+      "relation": "inspected_by",
+      "tail_surface": "moteur",
+      "tail_type": "Equipment",
+      "conditions": [
+        "vitesses supérieures à la vitesse nominale inscrite sur la plaque signalétique du moteur"
+      ],
+      "modality": "required",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver operating above nameplate speed",
+      "evidence_text": "Pour les vitesses supérieures à la vitesse nominale inscrite sur la plaque signalétique du moteur ou dans le catalogue produit correspondant, vérifiez l'absence de dépassement de la vitesse de rotation la plus élevée autorisée ou de la vitesse critique de l'ensemble de l'application.",
+      "evidence_unit_ids": []
+    },
+    {
+      "head_surface": "fonctionnement dans des conditions de sous-tension ou de surtension",
+      "head_type": "OperatingCondition",
+      "relation": "causes",
+      "tail_surface": "influencer les performances de l'application",
+      "tail_type": "Risk",
+      "conditions": [],
+      "modality": "probable",
+      "polarity": "positive",
+      "scope": "primary",
+      "applicability": "low_voltage_induction_motor used as pump driver",
+      "evidence_text": "Le fonctionnement dans des conditions de sous-tension ou de surtension peuvent influencer les performances de l'application.",
+      "evidence_unit_ids": []
+    }
+  ],
+  "auxiliary": [
+    {
+      "statement": "Il est interdit de modifier le type de roulement ou la méthode d'isolation sans l'autorisation préalable d'ABB.",
+      "reason": "Negative prohibition without a representable positive relation edge in the schema; retained as auxiliary constraint.",
+      "evidence_text": "Il est interdit de modifier le type de roulement ou la méthode d'isolation sans l'autorisation préalable d'ABB.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "L'utilisateur est responsable de la protection du moteur et de l'équipement d'entraînement contre les courants de roulements dangereux avec d'autres convertisseurs.",
+      "reason": "Responsibility assignment not directly representable as a defined relation between allowed node types.",
+      "evidence_text": "L'utilisateur est responsable de la protection du moteur et de l'équipement d'entraînement contre les courants de roulements dangereux.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Les instructions décrites au chapitre 5.4.1 peuvent être suivies pour d'autres convertisseurs, mais leur efficacité ne peut être garantie dans tous les cas de figure.",
+      "reason": "Uncertainty statement about effectiveness of measures for non-ABB converters; no direct causal or preventive edge can be asserted.",
+      "evidence_text": "Les instructions décrites au chapitre 5.4.1 peuvent être suivies, mais leur efficacité ne peut être garantie dans tous les cas de figure.",
+      "evidence_unit_ids": []
+    },
+    {
+      "statement": "Aucune action nécessaire pour Pn < 100 kW avec convertisseurs ABB ACS800 et ACS550.",
+      "reason": "Absence of maintenance requirement is not a positive maintenance action per extraction rules.",
+      "evidence_text": "",
+      "evidence_unit_ids": [
+        "MP019:p0048:t00:r001:c00",
+        "MP019:p0048:t00:r001:c01"
+      ]
+    }
+  ],
+  "unresolved": []
+}
