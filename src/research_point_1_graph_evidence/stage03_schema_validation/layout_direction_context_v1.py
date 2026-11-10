@@ -5,6 +5,10 @@ of actual block/cell subspans, never a synthetic contiguous page offset.
 """
 import copy
 import re
+if __package__:
+    from .native_evidence_binding_v2 import screen_with_native_binding
+else:  # Historical experiment scripts also load this pure module by file path.
+    from research_point_1_graph_evidence.stage03_schema_validation.native_evidence_binding_v2 import screen_with_native_binding
 
 
 def flat(s):
@@ -168,15 +172,16 @@ def refine(raw,page,parent,schema,screen,stage='C'):
                 barriers.append('alternative_action_not_preserved')
         if a['relation'] in {'causes','increases_risk_of','manifests_as'} and a['modality']=='asserted' and re.search(r'\bmay\b',q,re.I):
             emit('LOCAL_MODALITY','source possibility must not become certainty',modality='possible')
-    flags=[] if a.get('record_kind') else list(screen(a,page))
-    if len(hits)==1:
-        flags=[f for f in flags if f!='unbound_quote']
+    binding=None if a.get('record_kind') else screen_with_native_binding(a,page,screen)
+    flags=[] if binding is None else binding['screen_flags']
     result.update(payload=a,barriers=sorted(set(barriers)),screen_flags=flags,
         included=not barriers and not flags,
         layout_binding=dict(geometry=geometry,unique_native_path=len(hits)==1,candidate_paths=len(hits),
                             original_quote_preserved=a['evidence_text']==before['evidence_text']),
         new_rules=events,refinement_stage=stage)
     result['rules']=result.get('rules',[])+events
+    if binding is not None:
+        result['evidence_binding_contract']=binding
     result['source_witnesses']=result.get('source_witnesses',[])+[w for w in proof if w not in result.get('source_witnesses',[])]
     result['refinement_delta']={k:dict(before=before.get(k),after=a.get(k)) for k in sorted(set(before)|set(a)) if before.get(k)!=a.get(k)}
     return result

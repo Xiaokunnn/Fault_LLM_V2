@@ -11,6 +11,7 @@ from . import clause_binding_v1 as clause
 from . import layout_direction_context_v1 as layout
 from .batch_evidence_repair_v1 import repair as batch_repair
 from .relation_type_validator import normalize_relation_direction
+from .native_evidence_binding_v2 import screen_with_native_binding
 from ..stage02_triple_extraction.native_fragment_completion_v1 import display,digest,type_hints,PHYSICAL
 
 
@@ -44,8 +45,15 @@ def legacy_rules(assertion,page,registry,screen):
     # Preserve every field selected by the legacy rule and its native context.
     if proposal:
         payload={k:proposal['payload'][k] for k in FIELDS}
-        flags=screen(payload,page)
+        # A batch proposal must use the same evidence-address contract as the
+        # layout stage, not silently fall back to contiguous page/cell text.
+        binding=screen_with_native_binding(payload,page,screen)
+        flags=binding['screen_flags']
         result.update(payload=payload,screen_flags=flags,included=not flags and not result.get('barriers'))
+        result['batch_binding_contract']=binding
+        for witness in binding['source_witnesses']:
+            if witness not in result['source_witnesses']:
+                result['source_witnesses'].append(witness)
         result['batch_native_proof']=proposal
     result['normalizer_actions']=events;result['batch_reason']=reason
     return result

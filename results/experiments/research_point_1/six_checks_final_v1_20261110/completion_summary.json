@@ -1,0 +1,70 @@
+{
+  "review_input_sha256": "dc38a681bee153ef5afca309b88cdcef10984caf9989162bd1ec7b96c3cb72fc",
+  "reviewer": "Codex AI, not human/domain-expert ground truth",
+  "representation_targets": 17,
+  "nonexclusive_complex_tags_not_relation_recall": true,
+  "raw_target_preservation": {
+    "cached_core_absent": 8,
+    "literal_partial": 4,
+    "literal_complete": 5
+  },
+  "native_rule_target_complete": 4,
+  "targets_requiring_scope_or_schema_definition": [
+    "T01",
+    "T02"
+  ],
+  "new_admissions": 3,
+  "new_admissions_AI_source_supported": 3,
+  "new_admissions_human_validated": 0,
+  "residual_preexisting_semantic_bad_admissions": [
+    "MP021:p0015:H29:021",
+    "MP021:p0015:H29:023"
+  ],
+  "teacher_reference_available_but_uncited": [
+    {
+      "query_id": "CQ-F07-CAUSE",
+      "status": "answered",
+      "selected_reference_count": 0,
+      "cited_ids": [
+        "MPA-2fc5117319274221a158",
+        "MPA-99c468413d581e233735",
+        "MPA-ea892d31456c130866e1"
+      ]
+    },
+    {
+      "query_id": "CQ-F09-SYM",
+      "status": "answered",
+      "selected_reference_count": 1,
+      "cited_ids": [
+        "MPA-eba7cd92795b8e97dde6"
+      ]
+    },
+    {
+      "query_id": "CQ-F09-MAINT",
+      "status": "answered",
+      "selected_reference_count": 1,
+      "cited_ids": [
+        "MPA-55d068f0921bd467a851",
+        "MPA-8e947ac6c11836ceff20"
+      ]
+    }
+  ],
+  "sixth_check_result": {
+    "cross_document_complex_semantics_observed": true,
+    "existing_generic_same_budget_stable_failure_demonstrated": false,
+    "novel_algorithm_go": false,
+    "reason": "One deterministic replay is not a matched-budget model baseline or cross-run stability study; source judgments are AI-only and 17 targets non-exhaustive. Keep only a narrow hypothesis for a later controlled experiment."
+  },
+  "new_model_calls": 0,
+  "graph_or_teacher_modified": false,
+  "external_documents_read": false,
+  "completed_checks": [
+    "interface_regression",
+    "graph_inventory",
+    "publication_loss",
+    "source_complexity_spot_check",
+    "40_query_coverage",
+    "research_direction_go_no_go"
+  ],
+  "limits": "Selected 17 non-exhaustive complex targets on the fixed 30-page sample. Not independent human labels, extraction precision/recall, or a same-budget model-improvement experiment. Existing generic native rules were replayed without new model calls."
+}
