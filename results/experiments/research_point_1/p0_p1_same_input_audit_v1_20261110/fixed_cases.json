@@ -1,0 +1,666 @@
+[
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 925,
+            "source_quote": "in the suction line permitting air to be drawn in may",
+            "start": 872,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "in the suction line permitting air to be drawn in may"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 1038,
+            "source_quote": "cause a noisy pump or a reduction in capacity.",
+            "start": 992,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "cause a noisy pump or a reduction in capacity."
+      }
+    ],
+    "category": "validation_rejection",
+    "conditions": "TSM1600所述回转容积泵；可能发生，不是必然因果",
+    "evaluated_raw_item_count": 28,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "吸入管路泄漏并吸入空气",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "43f4c9755b689907eec37530ee4137d8e4c6c3751ac7d0a944babb3a478fcaa3",
+        "parent_ids": [
+          "MP021:p0015:H29:002"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": [
+          "unbound_quote"
+        ]
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP021:p0015:H29:002",
+        "judgment": "complete",
+        "reason": "吸入漏气作为原因，噪声作为症状，causes方向及possible均与原句一致。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP021:p0015",
+    "quotes": [
+      "in the suction line permitting air to be drawn in may",
+      "cause a noisy pump or a reduction in capacity."
+    ],
+    "raw_packet_sha256": "01e6ab344f9744a1222ef05c139a33e696afe8390c76e5771ce6c7105992e4d7",
+    "reason": "不是遗漏。历史mechanical_filter及source_constrained_repair均拒绝此正确语义候选；拒绝属于原文字段绑定等执行约束，不等于事实不成立。",
+    "reference_id": "S01R01",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "causes",
+    "sample_id": "S01",
+    "source_proposition_visible_in_request": true,
+    "tail": "泵噪声"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 2315,
+            "source_quote": "dragging would",
+            "start": 2301,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "dragging would"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 2443,
+            "source_quote": "indicate unit misalignment or casing distortion from piping",
+            "start": 2384,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "indicate unit misalignment or casing distortion from piping"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 2498,
+            "source_quote": "strain.",
+            "start": 2491,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "strain."
+      }
+    ],
+    "category": "validation_rejection",
+    "conditions": "原文给出的并列诊断解释，不能确定唯一病因",
+    "evaluated_raw_item_count": 28,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "转子拖擦",
+    "latest_B0_descendants": [
+      {
+        "included": true,
+        "output_id": "06a625a409c199c31281d4a7a4442d0ce7b8bc23bfcae5c53c0069d16ccd0d69",
+        "parent_ids": [
+          "MP021:p0015:H29:005"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      },
+      {
+        "included": true,
+        "output_id": "258dc6533deedf9e145c3086c116dc00b81f7017db491fd9c3d771d0e42a8685",
+        "parent_ids": [
+          "MP021:p0015:H29:006"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP021:p0015:H29:005",
+        "judgment": "complete",
+        "reason": "拖擦指示不对中，是原句or并列解释的一支。"
+      },
+      {
+        "candidate_id": "MP021:p0015:H29:006",
+        "judgment": "complete",
+        "reason": "拖擦指示管路应力造成壳体变形，是原句or另一支；与005共同覆盖参考，不转成确定唯一病因。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP021:p0015",
+    "quotes": [
+      "dragging would",
+      "indicate unit misalignment or casing distortion from piping",
+      "strain."
+    ],
+    "raw_packet_sha256": "01e6ab344f9744a1222ef05c139a33e696afe8390c76e5771ce6c7105992e4d7",
+    "reason": "两个原始指示关系已生成，但历史机械及受源文约束修复分支均拒绝；并非LLM完全未生成。",
+    "reference_id": "S01R04",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "indicates",
+    "sample_id": "S01",
+    "source_proposition_visible_in_request": true,
+    "tail": "机组不对中或管路应力导致壳体变形"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 195,
+            "source_quote": "Do not operate the pump above the maximum",
+            "start": 154,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "Do not operate the pump above the maximum"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 330,
+            "source_quote": "differential pressure shown on the Datasheet, not even for a few",
+            "start": 266,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "differential pressure shown on the Datasheet, not even for a few"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 407,
+            "source_quote": "seconds, as damage to the Impeller will result.",
+            "start": 360,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "seconds, as damage to the Impeller will result."
+      }
+    ],
+    "category": "relation_error",
+    "conditions": "柔性叶轮泵，短时超过也不允许",
+    "evaluated_raw_item_count": 24,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "运行压差超过数据表最大值",
+    "latest_B0_descendants": [
+      {
+        "included": true,
+        "output_id": "b8a43e6d5c233ea9d4bc3e3b04d03849464d3261d896ffa3df3d2845ac1c3663",
+        "parent_ids": [
+          "MP016:p0003:H29:001"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP016:p0003:H29:001",
+        "judgment": "wrong_direction",
+        "reason": "输出damage to the Impeller causes operate above maximum differential pressure，把叶轮损坏放在原因端，实际应相反。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP016:p0003",
+    "quotes": [
+      "Do not operate the pump above the maximum",
+      "differential pressure shown on the Datasheet, not even for a few",
+      "seconds, as damage to the Impeller will result."
+    ],
+    "raw_packet_sha256": "3d37d9543256af1e41ea7edb6dc936bcd9c04c741f5d5743b1051618f45c6245",
+    "reason": "原句与两端都存在，错误在causes方向，不是遗漏；校验拒绝该错误候选不算验证误拒。",
+    "reference_id": "S02R01",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "causes",
+    "sample_id": "S02",
+    "source_proposition_visible_in_request": true,
+    "tail": "叶轮损坏"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 3618,
+            "source_quote": "Lubricate each grease fitting every 500 hours of operation or",
+            "start": 3557,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "Lubricate each grease fitting every 500 hours of operation or"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 3743,
+            "source_quote": "every six months, whichever occurs first. If service is severe,",
+            "start": 3680,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "every six months, whichever occurs first. If service is severe,"
+      }
+    ],
+    "category": "validation_rejection",
+    "conditions": "严苛工况更频繁；润滑脂须相容",
+    "evaluated_raw_item_count": 25,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "泵润滑脂加注点",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "577ad461d2d5d421f2309ae310f24703aec0aaa6feb288aca4e76ce929550a7f",
+        "parent_ids": [
+          "MP021:p0020:H29:006"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": [
+          "unbound_quote"
+        ]
+      },
+      {
+        "included": true,
+        "output_id": "eb9b43b9dd0597f9a5f7ffed6c603ac07aa9454fc16447659937303202523266",
+        "parent_ids": [
+          "MP021:p0020:H29:007"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP021:p0020:H29:006",
+        "judgment": "complete",
+        "reason": "加脂点maintained_by500小时或6个月取先到者。"
+      },
+      {
+        "candidate_id": "MP021:p0020:H29:007",
+        "judgment": "complete",
+        "reason": "同一维护对象在严苛工况下更频繁加脂。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP021:p0020",
+    "quotes": [
+      "Lubricate each grease fitting every 500 hours of operation or",
+      "every six months, whichever occurs first. If service is severe,"
+    ],
+    "raw_packet_sha256": "d6e3e0a413903037cab1c7e81a26b091e9e9c073b7e16f8c26c7a780ceb2bc32",
+    "reason": "正确维护周期已经生成，历史两个后处理分支拒绝；不得作为候选恢复新增知识计数。",
+    "reference_id": "S04R01",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "maintained_by",
+    "sample_id": "S04",
+    "source_proposition_visible_in_request": true,
+    "tail": "每运行500小时或每6个月加脂，取先到者"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 5905,
+            "source_quote": "Be sure the pump is kept full of liquid when in",
+            "start": 5858,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "Be sure the pump is kept full of liquid when in"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 6051,
+            "source_quote": "operation to prevent damage to the pump.",
+            "start": 6011,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "operation to prevent damage to the pump."
+      }
+    ],
+    "category": "validation_rejection",
+    "conditions": "Pumping Chamber of Stainless Pumps段落，不推广到所有泵型",
+    "evaluated_raw_item_count": 25,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "不锈钢泵损坏",
+    "latest_B0_descendants": [
+      {
+        "included": true,
+        "output_id": "9c2854aeb5d282c3f7aa39e576c2cd6e400efb0e33698bb9a0eda141035dfcc4",
+        "parent_ids": [
+          "MP021:p0020:H29:014"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP021:p0020:H29:014",
+        "judgment": "complete",
+        "reason": "damage to the pump prevented_by运行中充液，Stainless Pumps范围及required保留。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP021:p0020",
+    "quotes": [
+      "Be sure the pump is kept full of liquid when in",
+      "operation to prevent damage to the pump."
+    ],
+    "raw_packet_sha256": "d6e3e0a413903037cab1c7e81a26b091e9e9c073b7e16f8c26c7a780ceb2bc32",
+    "reason": "原始关系完整，历史后处理均拒绝，属于过滤损失而非未生成。",
+    "reference_id": "S04R02",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "prevented_by",
+    "sample_id": "S04",
+    "source_proposition_visible_in_request": true,
+    "tail": "运行中保持泵腔充满液体"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 14,
+            "source_quote": "Spike\nEnergyTM",
+            "start": 0,
+            "unit_id": "MP001:p0057:t00:r001:c00"
+          }
+        ],
+        "quote": "Spike\nEnergyTM"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 1036,
+            "source_quote": "Dry running pumps,",
+            "start": 1018,
+            "unit_id": "page_text"
+          },
+          {
+            "end": 18,
+            "source_quote": "Dry running pumps,",
+            "start": 0,
+            "unit_id": "MP001:p0057:t00:r001:c01"
+          }
+        ],
+        "quote": "Dry running pumps,"
+      }
+    ],
+    "category": "relation_error",
+    "conditions": "表中Conditions Monitored对应；需训练有经验人员，不声称单信号可确诊",
+    "evaluated_raw_item_count": 17,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "泵干运转",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "9dcfc0a6c365078cc50b9fa6efb8eca7912c300bb670544fd53eb1f40d2460aa",
+        "parent_ids": [
+          "L05:001"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": [
+          "unbound_quote"
+        ]
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "L05:001",
+        "judgment": "wrong_direction",
+        "reason": "InspectionMethod diagnosed_by FaultMode，方法与故障放反，应为干运转diagnosed_by Spike Energy。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP001:p0057",
+    "quotes": [
+      "Spike\nEnergyTM",
+      "Dry running pumps,"
+    ],
+    "raw_packet_sha256": "7108410b3bc2ee46c02cae2a8372af195a3a606954b88e7d79258155694d200a",
+    "reason": "存在具体干运转与监测方法配对，错误为角色方向；拒绝此候选有依据，不属于正确关系误拒。",
+    "reference_id": "S05R01",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "diagnosed_by",
+    "sample_id": "S05",
+    "source_proposition_visible_in_request": true,
+    "tail": "Spike Energy监测"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 14,
+            "source_quote": "Spike\nEnergyTM",
+            "start": 0,
+            "unit_id": "MP001:p0057:t00:r001:c00"
+          }
+        ],
+        "quote": "Spike\nEnergyTM"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 1130,
+            "source_quote": "cavitation, flow",
+            "start": 1114,
+            "unit_id": "page_text"
+          },
+          {
+            "end": 35,
+            "source_quote": "cavitation, flow",
+            "start": 19,
+            "unit_id": "MP001:p0057:t00:r001:c01"
+          }
+        ],
+        "quote": "cavitation, flow"
+      }
+    ],
+    "category": "relation_error",
+    "conditions": "表中列明的可监测状态",
+    "evaluated_raw_item_count": 17,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "汽蚀",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "7f89f5d2495e0e5d529f8509b291f1d050d5d3035fccb6d9715336a856e241dc",
+        "parent_ids": [
+          "L05:002"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": [
+          "unbound_quote"
+        ]
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "L05:002",
+        "judgment": "wrong_direction",
+        "reason": "尖峰能量监测diagnosed_by汽蚀，规范方向相反。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP001:p0057",
+    "quotes": [
+      "Spike\nEnergyTM",
+      "cavitation, flow"
+    ],
+    "raw_packet_sha256": "7108410b3bc2ee46c02cae2a8372af195a3a606954b88e7d79258155694d200a",
+    "reason": "已有对应知识配对但方向错误，不计候选完全遗漏。",
+    "reference_id": "S05R02",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "diagnosed_by",
+    "sample_id": "S05",
+    "source_proposition_visible_in_request": true,
+    "tail": "Spike Energy监测"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 5374,
+            "source_quote": "If the pump cannot rotate freely under all operating conditions, the pipe system must be better supported - alternatively,",
+            "start": 5252,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "If the pump cannot rotate freely under all operating conditions, the pipe system must be better supported - alternatively,"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 5448,
+            "source_quote": "compensator(s) must be installed between the pump and pipe system.",
+            "start": 5382,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "compensator(s) must be installed between the pump and pipe system."
+      }
+    ],
+    "category": "validation_rejection",
+    "conditions": "原文两种替代处置，不指定唯一病因",
+    "evaluated_raw_item_count": 15,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "各运行工况下泵不能自由转动",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "b436baa5dbe84e0da9156d64d3eb59aaa662bd91b591853ee66e5c9fbf16729d",
+        "parent_ids": [
+          "MP006:p0006:H29:014"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      },
+      {
+        "included": false,
+        "output_id": "9a11c3b3e31bb361c1f5580ee20ace8ef0a1b410cb48c52bfed6761e576ab5f0",
+        "parent_ids": [
+          "MP006:p0006:H29:015"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": []
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP006:p0006:H29:014",
+        "judgment": "complete",
+        "reason": "不能自由转动mitigated_by加强管路支承。"
+      },
+      {
+        "candidate_id": "MP006:p0006:H29:015",
+        "judgment": "complete",
+        "reason": "同一故障mitigated_by安装补偿器，保留另一替代方案。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP006:p0006",
+    "quotes": [
+      "If the pump cannot rotate freely under all operating conditions, the pipe system must be better supported - alternatively,",
+      "compensator(s) must be installed between the pump and pipe system."
+    ],
+    "raw_packet_sha256": "004e037f07cc8776cfc6900147980deaee2ab54acf0ce478544845c7386d0b63",
+    "reason": "两条均已有；机械过滤分支拒绝，但source_constrained_repair已保留。因此只算历史机械分支损失，不宣称当前修复分支仍阻塞。",
+    "reference_id": "S17R02",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "mitigated_by",
+    "sample_id": "S17",
+    "source_proposition_visible_in_request": true,
+    "tail": "加强管路支承或在泵与管路间安装补偿器"
+  },
+  {
+    "all_raw_sections_reviewed": true,
+    "anchors": [
+      {
+        "native_matches": [
+          {
+            "end": 5011,
+            "source_quote": "If the temperature of the pipe system changes significantly (up or down) after commissioning the pump",
+            "start": 4910,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "If the temperature of the pipe system changes significantly (up or down) after commissioning the pump"
+      },
+      {
+        "native_matches": [
+          {
+            "end": 5242,
+            "source_quote": "that the pump shaft still can rotate freely at actual upper/lower temperature limits.",
+            "start": 5157,
+            "unit_id": "page_text"
+          }
+        ],
+        "quote": "that the pump shaft still can rotate freely at actual upper/lower temperature limits."
+      }
+    ],
+    "category": "relation_error",
+    "conditions": "投运后管路温度显著变化，且热应力/位移可能传到泵时",
+    "evaluated_raw_item_count": 15,
+    "evaluation_origin": "single_assistant_nonblind_source_AI_audit",
+    "head": "泵轴自由转动状态",
+    "latest_B0_descendants": [
+      {
+        "included": false,
+        "output_id": "3dc109bc616305dee5dd165fa69ed9120b0ac514b113226de1b1767e63376f87",
+        "parent_ids": [
+          "MP006:p0006:H29:013"
+        ],
+        "reason": "legacy_chain",
+        "screen_flags": [
+          "schema_type_direction"
+        ]
+      }
+    ],
+    "matching_candidates": [
+      {
+        "candidate_id": "MP006:p0006:H29:013",
+        "judgment": "wrong_relation_roles",
+        "reason": "温度变化与热应力条件causes重新检查动作，把检查触发条件写成物理因果；应为泵轴inspected_by温度上下限复查并附条件。"
+      }
+    ],
+    "model": "qwen3.8-max",
+    "page_key": "MP006:p0006",
+    "quotes": [
+      "If the temperature of the pipe system changes significantly (up or down) after commissioning the pump",
+      "that the pump shaft still can rotate freely at actual upper/lower temperature limits."
+    ],
+    "raw_packet_sha256": "004e037f07cc8776cfc6900147980deaee2ab54acf0ce478544845c7386d0b63",
+    "reason": "检查句已被生成，错误在条件-动作-对象角色，不是原文关系完全消失。",
+    "reference_id": "S17R03",
+    "reference_origin": "assistant_source_reading_AI",
+    "relation": "inspected_by",
+    "sample_id": "S17",
+    "source_proposition_visible_in_request": true,
+    "tail": "在实际温度上限及下限重新检查"
+  }
+]

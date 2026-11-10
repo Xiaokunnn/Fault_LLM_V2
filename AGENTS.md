@@ -91,6 +91,16 @@
 
 ## Preservation and cleanup
 
+### RP1 controlled-validation handoff (2026-11-10)
+
+- The completed RP1 six-check offline audit and quotation-interface fix are recorded in `docs/research/RP1_SIX_CHECKS_REPORT_20261110.md` and `results/experiments/research_point_1/six_checks_final_v1_20261110/`. No teacher graph or frozen paper result was replaced.
+- The user-authorized next RP1 validation is a separate, not-yet-executed model study. Read `docs/research/RP1_ROUND2_SERVER_HANDOFF_20261110.md` before continuing: determine scope for the 17 AI-reviewed targets, audit complete original inputs/outputs, freeze four equal-budget generic controls, run actual repeated model experiments, obtain independent small-sample evaluation, then make a go/no-go decision.
+- The new four-arm runner/config and independent evaluation do not exist yet. `scripts/run_rp1_six_checks.py` only replays the completed offline audit, not the new model study. AI development judgments are not Gold or domain-expert truth.
+- The user chose another independent reviewer model for the small-sample evaluation, AI cross-evaluation only. Hide method identities and previous AI answers; using the same model with a different prompt is not an independent-model evaluation. No human/expert Gold claim is authorized.
+- Locally archived A3, P0/P1 and controlled-annotation records have been synchronized without changing their historical contents. Do not confuse their earlier findings with this next round's results. Existing RP1/RP2 teacher, corpus-split and preservation boundaries still apply.
+
+### General preservation rules
+
 - Never delete original PDFs, parsed pages, real API responses/caches, candidate decisions and failure reasons, frozen graph assets, frozen experiment outputs, or the two paper source trees.
 - Generated render/QA caches and LaTeX build intermediates may be deleted when the final source and PDF are preserved.
 - Preserve existing user modifications in a dirty worktree. In particular, do not overwrite or move an already modified paper draft.

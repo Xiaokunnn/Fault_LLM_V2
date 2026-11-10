@@ -1,0 +1,207 @@
+{
+  "occurs_at": {
+    "label_zh": "发生于",
+    "canonical_direction": "FaultMode_or_FailureMechanism -> Equipment_or_Component",
+    "domain": [
+      "FaultMode",
+      "FailureMechanism"
+    ],
+    "range": [
+      "Equipment",
+      "Component"
+    ],
+    "evidence_roles": [
+      "structural_context"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "causes": {
+    "label_zh": "导致",
+    "canonical_direction": "Cause_or_Mechanism_or_Condition_or_Fault -> Mechanism_or_Fault_or_Symptom_or_Risk",
+    "domain": [
+      "Cause",
+      "FailureMechanism",
+      "OperatingCondition",
+      "FaultMode"
+    ],
+    "range": [
+      "FailureMechanism",
+      "FaultMode",
+      "Symptom",
+      "SignalFeature",
+      "Risk"
+    ],
+    "evidence_roles": [
+      "cause_or_mechanism"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "indicates": {
+    "label_zh": "指示",
+    "canonical_direction": "Symptom_or_SignalFeature -> Cause_or_Mechanism_or_Fault_or_Risk",
+    "domain": [
+      "Symptom",
+      "SignalFeature"
+    ],
+    "range": [
+      "Cause",
+      "FailureMechanism",
+      "FaultMode",
+      "Risk"
+    ],
+    "evidence_roles": [
+      "symptom"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "manifests_as": {
+    "label_zh": "表现为",
+    "canonical_direction": "FaultMode_or_FailureMechanism -> Symptom_or_SignalFeature",
+    "domain": [
+      "FaultMode",
+      "FailureMechanism"
+    ],
+    "range": [
+      "Symptom",
+      "SignalFeature"
+    ],
+    "evidence_roles": [
+      "symptom"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "evolves_to": {
+    "label_zh": "演化为",
+    "canonical_direction": "FaultMode_or_FailureMechanism -> FaultMode_or_FailureMechanism_or_Risk",
+    "domain": [
+      "FaultMode",
+      "FailureMechanism"
+    ],
+    "range": [
+      "FaultMode",
+      "FailureMechanism",
+      "Risk"
+    ],
+    "evidence_roles": [
+      "cause_or_mechanism"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "diagnosed_by": {
+    "label_zh": "诊断方法为",
+    "canonical_direction": "DiagnosticTarget -> InspectionMethod_or_InspectionAction",
+    "domain": [
+      "Cause",
+      "FailureMechanism",
+      "FaultMode",
+      "Symptom",
+      "SignalFeature",
+      "Risk"
+    ],
+    "range": [
+      "InspectionMethod",
+      "InspectionAction"
+    ],
+    "evidence_roles": [
+      "inspection"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "inspected_by": {
+    "label_zh": "检查方法为",
+    "canonical_direction": "Equipment_or_Component_or_DiagnosticTarget -> InspectionMethod_or_InspectionAction",
+    "domain": [
+      "Equipment",
+      "Component",
+      "Cause",
+      "FailureMechanism",
+      "FaultMode"
+    ],
+    "range": [
+      "InspectionMethod",
+      "InspectionAction"
+    ],
+    "evidence_roles": [
+      "inspection"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "mitigated_by": {
+    "label_zh": "缓解措施为",
+    "canonical_direction": "Cause_or_Mechanism_or_Fault_or_Risk -> MaintenanceAction",
+    "domain": [
+      "Cause",
+      "FailureMechanism",
+      "FaultMode",
+      "Risk"
+    ],
+    "range": [
+      "MaintenanceAction"
+    ],
+    "evidence_roles": [
+      "maintenance"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "prevented_by": {
+    "label_zh": "预防措施为",
+    "canonical_direction": "Cause_or_Mechanism_or_Fault_or_Condition_or_Risk -> MaintenanceAction",
+    "domain": [
+      "Cause",
+      "FailureMechanism",
+      "FaultMode",
+      "OperatingCondition",
+      "Risk"
+    ],
+    "range": [
+      "MaintenanceAction"
+    ],
+    "evidence_roles": [
+      "maintenance"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "maintained_by": {
+    "label_zh": "维护方式为",
+    "canonical_direction": "Equipment_or_Component -> MaintenanceAction",
+    "domain": [
+      "Equipment",
+      "Component"
+    ],
+    "range": [
+      "MaintenanceAction"
+    ],
+    "evidence_roles": [
+      "maintenance"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  },
+  "increases_risk_of": {
+    "label_zh": "增加风险",
+    "canonical_direction": "Cause_or_Mechanism_or_Fault_or_Condition -> Risk",
+    "domain": [
+      "Cause",
+      "FailureMechanism",
+      "FaultMode",
+      "OperatingCondition"
+    ],
+    "range": [
+      "Risk"
+    ],
+    "evidence_roles": [
+      "risk"
+    ],
+    "inverse_storage_allowed": false,
+    "core_diagnostic_relation": true
+  }
+}

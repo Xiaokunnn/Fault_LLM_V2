@@ -1,0 +1,91 @@
+{
+  "review_origin": "single_assistant_nonblind_source_AI_audit_not_expert_truth",
+  "criteria": "物理含义与源文一致，不自动等于完整的类型化断言合格。分别判断方向/对象、维护与运行边界、条件与替代动作逻辑、引用地址及准入状态。使用冻结v3类型定义及归档流程声明的审计要求，不用是否放行反推语义正确。",
+  "C_cases": {
+    "S01R01": {
+      "raw_source_content_supported": true, "raw_structured_grade": "S",
+      "semantic_reason": "吸入管路漏气可能导致噪声；Cause→causes→Symptom、possible与原文一致。",
+      "latest_outcome": "unresolved_quote_contract_regression",
+      "failure_attribution": "原文块、两端和唯一原生引句路径均能定位。layout阶段通过；batch产生相同命题提案后重新调用只认连续page/cell的screen，恢复unbound_quote，最终拒绝。是多片段证明没有贯通后续筛选的工程问题，不是学习型蕴含器判错。",
+      "research_implication": "不构成独立算法证据，应作为规则链接口回归处理。"
+    },
+    "S01R04": {
+      "raw_source_content_supported": true, "raw_structured_grade": "S",
+      "semantic_reason": "拖擦为不对中或管路应力造成壳体变形的指示，两支各自为诊断可能性；证据保留or，不作唯一病因解释。",
+      "latest_outcome": "resolved_by_existing_layout_binding",
+      "failure_attribution": "历史连续引句绑定失败；最新版找到同栏唯一原生路径后保留两支，语义端点未被修改。",
+      "research_implication": "已有版面绑定处理能解决，不作为新算法创新。"
+    },
+    "S04R01": {
+      "raw_source_content_supported": true, "raw_structured_grade": "S",
+      "semantic_reason": "普通工况500小时或6个月取先到者，加上严苛工况更频繁加脂的配套记录，与同一段原文对应；不能把普通周期当作所有严苛工况的唯一周期。",
+      "latest_outcome": "partly_resolved_quote_contract_regression",
+      "failure_attribution": "严苛工况候选007已放行；周期候选006的原生路径在layout通过，却在batch提案重新screen时被连续引句约束拒绝，与S01R01为同一类接口回归。",
+      "research_implication": "不是两个独立语义难题；应合并为一个证据契约工程缺陷处理。"
+    },
+    "S04R02": {
+      "raw_source_content_supported": true, "raw_structured_grade": "U",
+      "semantic_reason": "原文确实说运行时保持不锈钢泵内充液可防损坏，但它是运行约束；现有范围只允许MaintenanceAction作为prevented_by的尾端，同时流程审计又要求不把正常运行当维护。缺少明确动作边界，不能直接认定原始类型化断言完全正确。",
+      "latest_outcome": "gate_passes_but_typed_action_boundary_unresolved",
+      "failure_attribution": "版面绑定已解决并放行；通过状态不解决运行条件与维护动作的表示边界。撤回其作为确定验证误拒正例的地位，待规范明确。",
+      "research_implication": "优先澄清Schema/准入边界，不作为已证实的C类或算法有效修复。"
+    },
+    "S17R02": {
+      "raw_source_content_supported": true, "raw_structured_grade": "N",
+      "semantic_reason": "原文是加强管路支承，或者安装补偿器，两种替代处置。两条原始required记录没有显式记录自身的替代分支关系；单个动作在物理上可行，不等于两条都必须执行的完整诊断建议成立。完整引句保留alternatively但结构化条件没有表达选择关系。",
+      "latest_outcome": "reclassified_missing_alternative_logic_not_confirmed_false_rejection",
+      "failure_attribution": "旧机械过滤拒绝，旧context+clause已放行；最新版定位/类型均通过，随后依据alternative_action_not_preserved拒绝。这是替代逻辑准入要求，不是引句定位失败，也不能确定称为蕴含模型误拒。",
+      "research_implication": "上一轮C类标签过宽；不将当前拒绝当作新算法必须解除的错误。"
+    }
+  },
+  "B_cases": {
+    "S02R01": {
+      "root_cause_supported_by_trace": "模型原始解析JSON中的角色顺序已经颠倒；不是后处理翻转产生。",
+      "schema_ambiguity_supported": false,
+      "pipeline_contribution": "旧对照链没有调用仓库已有的normalize_relation_direction。最新版调用后按类型将OperatingCondition置为原因、FaultMode置为结果，版面定位随后通过。",
+      "model_internal_reason": "仅凭反向输出不能区分真正没理解因果与理解后输出序列化失误；未进行同模型受控重测。",
+      "algorithm_motivation": "这一条可由现有通用类型归一化解决，不能当作新语义算法有效性证据。"
+    },
+    "S05R01": {
+      "root_cause_supported_by_trace": "原始模型记录把InspectionMethod放在diagnosed_by主语；编译器逐ID恢复，没有调换两端。另有方法端点菜单缺口。",
+      "schema_ambiguity_supported": false,
+      "pipeline_contribution": "normalizer可交换到规范方向，但原始head_id25实际是1684字符整段statement，并非独立Spike Energy方法。仅换方向不能修复端点，最新版仍拒绝。",
+      "model_internal_reason": "中文标签能命名Spike Energy，不足以证明其原生ID绑定正确；当前不能将问题单归因于模型不理解监测关系。",
+      "algorithm_motivation": "先建立可表达的端点池，并与通用类型/指针约束比较；尚未证明需要独立算法。"
+    },
+    "S05R02": {
+      "root_cause_supported_by_trace": "与S05R01同一菜单单元，原始记录方向反转且选了整段方法端点，非后续流程制造。",
+      "schema_ambiguity_supported": false,
+      "pipeline_contribution": "类型归一化纠正方向，但无法把1684字符整段自动当成准确监测方法；最新版继续因原生引句/路径问题拒绝。",
+      "model_internal_reason": "与上一项共享输入及方法端点缺口，不视为两个独立的模型语义理解失败实验。",
+      "algorithm_motivation": "优先端点表示和接口基线；不能凭两条同源错误推导稳定研究难题。"
+    },
+    "S17R03": {
+      "root_cause_supported_by_trace": "模型把检查触发条件→检查动作写成物理causes，混淆了条件、被检查对象和动作三种角色。",
+      "schema_ambiguity_supported": false,
+      "pipeline_contribution": "Schema明确禁止causes的尾端为InspectionAction；新旧版本均拒绝。当前归一化没有足够信息将条件重新挂到泵轴检查上，未执行有效修复。",
+      "model_internal_reason": "可定位为生成端的条件/动作角色编码问题，但未证明通用结构化输出或约束解码无法稳定解决。",
+      "algorithm_motivation": "只能保留为复杂角色绑定的待验证例子，不能作为已经排除通用方法的独立算法动机。"
+    }
+  },
+  "new_acceptance_reviews": {
+    "MP021:p0015:H29:003":{"grade":"S","reason":"吸入漏气可能降低流量/能力，causes方向、possible及回转容积泵范围正确，完整引句由同栏原生路径恢复。"},
+    "MP021:p0015:H29:004":{"grade":"S","reason":"PTFE tape用于NPT接口可能导致泵开裂，代词This action与前句对应，候选保留possible；没有反向因果。"},
+    "MP021:p0015:H29:005":{"grade":"S","reason":"拖擦可指示机组不对中，检查场景保留；只视作原句并列诊断解释之一，不当作唯一确诊。"},
+    "MP021:p0015:H29:006":{"grade":"S","reason":"拖擦可指示管路应力导致壳体变形，与原句or分支匹配，不宣称与不对中必然同时发生。"},
+    "MP021:p0015:H29:012":{"grade":"U","reason":"无泄压→破裂风险本身有源文支持，但源文依赖升温膨胀，候选把两种举例情境列为平面conditions且未显式表示OR，不能确认完整条件逻辑；不按放行反推正确。"},
+    "MP021:p0015:H29:015":{"grade":"S","reason":"泵对中检查用拆泵头后塞尺检查转子与壳体周向间隙，动作与对象明确，Q/M/N范围作为具体适用检查情境保留。"},
+    "MP021:p0015:H29:018":{"grade":"U","reason":"原文建议缺少泄压阀时考虑在排出管安装，物理含义明确；但将该安装配置定义为relief valve maintained_by的维护动作，属于启动安装/维护边界，当前约定不充分，保守不确认为完整正确。"},
+    "MP021:p0015:H29:019":{"grade":"S","reason":"轻质液体且吸上工况，底阀位置在吸入管末端；不把位置关系误写成故障因果。"},
+    "MP021:p0015:H29:020":{"grade":"S","reason":"同一工况下止回阀位于第一个水平管段，原文直接明示位置。"},
+    "MP021:p0015:H29:021":{"grade":"N","reason":"原文是保持管路接头紧密，密封剂帮助螺纹接头无泄漏。输出却把pipe sealer作为被维护对象，将接头要求/密封剂功能充作维护它的动作，作用对象错误；引句可定位不代表关系蕴含成立。"},
+    "MP021:p0015:H29:023":{"grade":"N","reason":"归一化后把pump casing is not distorted（壳体未变形）标为FaultMode且用positive prevented_by连接补偿措施；原文要防止的是壳体变形，不是防止未变形状态。仅按类型交换端点保留了否定含义错误。"},
+    "MP021:p0020:H29:007":{"grade":"S","reason":"严苛工况更频繁加脂，条件If service is severe保留，与周期006属于同一润滑规则的补充。"},
+    "MP021:p0020:H29:010":{"grade":"S","reason":"4924A氨泵启动前向储液腔加入一品脱轻质冷冻油，Neoprene相容性及15000SSU粘度上限均保留。"},
+    "MP021:p0020:H29:011":{"grade":"S","reason":"4924A氨泵储液腔首次200小时后换油，之后每1000小时更换，型号与先后次序保留。"},
+    "MP021:p0020:H29:014":{"grade":"U","reason":"充液运行可防泵损坏的物理预防关系成立，但把运行要求当MaintenanceAction尚有Schema/准入边界问题；与C案例S04R02同一条，不能将放行自动计为有效修复。"},
+    "MP021:p0020:H29:015":{"grade":"S","reason":"Viking A/B/C减速器在32°F上下分别用SAE30/SAE10W，油型与温度边界来自原文；保持背景通道，不用于泵轴承通用周期。"},
+    "MP021:p0020:H29:016":{"grade":"S","reason":"出厂未加油的减速器在初次启动前按规定油型/油量加到适当油位，必要条件保留。"},
+    "MP021:p0020:H29:017":{"grade":"S","reason":"减速器首次100运行小时后放油并换新润滑剂，原始阶段条件明确。"}
+  }
+}

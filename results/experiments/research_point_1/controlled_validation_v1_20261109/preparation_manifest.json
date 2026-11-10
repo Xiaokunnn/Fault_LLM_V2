@@ -1,0 +1,223 @@
+{
+  "config": {
+    "version": "rp1-controlled-validation-v1-20261109",
+    "input_commit": "bd1e7c60972bbc5f34e408cd69f542b10a4ad566",
+    "archive_root": "results/experiments/research_point_1",
+    "source_batch": "sentence_step_extraction/validation",
+    "latest_baseline_batch": "native_fragment_completion_v1/development",
+    "schema_path": "data/kg/marine_pump/schema/provenance_schema_v3.json",
+    "page_keys": [
+      "MP017:p0010",
+      "MP022:p0027",
+      "MP005:p0099",
+      "MP022:p0026",
+      "MP001:p0057",
+      "MP018:p0018",
+      "MP005:p0057",
+      "MP001:p0048",
+      "MP015:p0009",
+      "MP005:p0006"
+    ],
+    "expected_raw_candidates": 162,
+    "expected_original_pipeline_kept": 107,
+    "expected_latest_baseline_kept": 116,
+    "target_scope": "all explicit core_diagnostic_relation relations in frozen schema, including conditions, roles, polarity, modality and applicability",
+    "new_model_calls_allowed": 0,
+    "development_only": true,
+    "old_AI_references_are_human_labels": false,
+    "mechanism_execution_requires_loss_audit": true,
+    "joint_optimization_and_large_scale_execution_allowed": false
+  },
+  "input_sha256": {
+    "results/experiments/research_point_1/sentence_step_extraction/validation/sources.jsonl": "dd25fbf238be43841c2582726fbd049c5cfb66419aa449069f0a09b21e197ba8",
+    "data/kg/marine_pump/schema/provenance_schema_v3.json": "59a3c740f08157900c137372bc01cdc4ea9c6702fbcea171e21a6cc13b4b2ec7",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/decisions.jsonl": "f1ee9646cab030661face51553440d9e6c25c6bbf0c0af8f603f9678be71a277",
+    "results/experiments/research_point_1/native_fragment_completion_v1/development/outputs.jsonl": "b66df24962107f03eeee4b7af88d1f2d771f481fb67ac96471f6370ef91518d4",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L01.completed.json": "6c7cc1b4bb03dc51fd1d3102fa562c7ffb87de74629f42f22b732dde7d40f463",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L01.parsed.json": "64333d65e3da36e29cd9c6a0b791ea4b573884f22152b4f508f3f46573cd672a",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L02.completed.json": "772a65eaac9c7a65aff32c65302bb8ce23f0f3b84e0ca9e16c176feaf4a1f820",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L02.parsed.json": "48d697f818a29dcb054596f91afd9c7dec810683af5905c446d80bf904c9fe77",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L03.completed.json": "cd64c2a00423d0848f263226d764fa2d7d059343c848fe00a6b3ea0a36231887",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L03.parsed.json": "2cd35e11e77d423cdf7276fc7cf7993ec030830e6f725e1de8687d1ba3b64e0e",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L04.completed.json": "8bba2d1218370c050388eee5d2a319c03fc6497a62e8c1b3ae3bb02a3098f478",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L04.parsed.json": "549a0b7090d9fbce1d949f45f8cd3c9f0dce6f9c1c1d371dfef9b30af1a485f2",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L05.completed.json": "2a2ca2a92200f7c2f230af7b6256b80df8a0552c057cf32c044643590388e825",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L05.parsed.json": "a46d7b3442923cb4030504c61b4e5090d6b83914e8280cd44dfb059d6a2218f0",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L06.completed.json": "244eb0a97a29ab90d6295b60cd59a3d21307cda8c68c31db784eef7b91978e5e",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L06.parsed.json": "da6d805be6b8803e7bb07c84d51cd325924eac6407e56e35665eec5cb8a61c0d",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L07.completed.json": "5adf7689896136e961a9a81a26375139a7a8d9e37b686310dec92ef7c8c6221a",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L07.parsed.json": "1b20345f2758970c7928232e82a423f7707b74a371c90ead463086781eceef1c",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L08.completed.json": "d8af1688da2b3fb384c9e24abf795589f0f54bd50e9f2f5f2e17d2df69bd4d96",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L08.parsed.json": "4374e0f8dd06d81c64bfcd7cd4e4985811cf22981f8e82e450cb9c03294eed25",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L09.completed.json": "9120e55a54ccaf36320173a233daf380725682ec3222aaf08d81e8bf5097b550",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L09.parsed.json": "f0cbea3405f19f416b2e5f67d9cb0f445c6f7526d0fec849100682a9cb72fb63",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L10.completed.json": "cdb36faf759e27414d2e9fcfdfffd6b355b59736688818c1dd3d3135eaf3291f",
+    "results/experiments/research_point_1/sentence_step_extraction/validation/api/L10.parsed.json": "298fd69e726b500650ffd01e5c0afc696fa476a806d03dcf7cb600b9fcfdbc7e"
+  },
+  "source_count": 10,
+  "raw_candidates": 162,
+  "original_pipeline_kept": 107,
+  "latest_baseline_kept": 116,
+  "model_calls_this_run": 0,
+  "historical_model_calls": 10,
+  "historical_usage": [
+    {
+      "request_id": "L01",
+      "records": 17,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 2903,
+        "prompt_tokens": 9649,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 9649
+        },
+        "total_tokens": 12552
+      },
+      "elapsed_seconds": 51.548103202003404
+    },
+    {
+      "request_id": "L02",
+      "records": 18,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1559,
+        "prompt_tokens": 12636,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 12636
+        },
+        "total_tokens": 14195
+      },
+      "elapsed_seconds": 29.268280162010342
+    },
+    {
+      "request_id": "L03",
+      "records": 9,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1876,
+        "prompt_tokens": 8267,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 8267
+        },
+        "total_tokens": 10143
+      },
+      "elapsed_seconds": 31.3796528679959
+    },
+    {
+      "request_id": "L04",
+      "records": 9,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1090,
+        "prompt_tokens": 8255,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 8255
+        },
+        "total_tokens": 9345
+      },
+      "elapsed_seconds": 21.930981206998695
+    },
+    {
+      "request_id": "L05",
+      "records": 15,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1692,
+        "prompt_tokens": 9596,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 9596
+        },
+        "total_tokens": 11288
+      },
+      "elapsed_seconds": 36.2407129159983
+    },
+    {
+      "request_id": "L06",
+      "records": 44,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 6253,
+        "prompt_tokens": 29615,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 29615
+        },
+        "total_tokens": 35868
+      },
+      "elapsed_seconds": 107.6954167340009
+    },
+    {
+      "request_id": "L07",
+      "records": 8,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1605,
+        "prompt_tokens": 6732,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 6732
+        },
+        "total_tokens": 8337
+      },
+      "elapsed_seconds": 30.40124396700412
+    },
+    {
+      "request_id": "L08",
+      "records": 18,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 2419,
+        "prompt_tokens": 14562,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 14562
+        },
+        "total_tokens": 16981
+      },
+      "elapsed_seconds": 48.013498006999725
+    },
+    {
+      "request_id": "L09",
+      "records": 6,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1794,
+        "prompt_tokens": 8203,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 8203
+        },
+        "total_tokens": 9997
+      },
+      "elapsed_seconds": 30.540002558991546
+    },
+    {
+      "request_id": "L10",
+      "records": 18,
+      "model": "qwen3.8-max",
+      "usage": {
+        "completion_tokens": 1546,
+        "prompt_tokens": 12096,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "text_tokens": 12096
+        },
+        "total_tokens": 13642
+      },
+      "elapsed_seconds": 33.20512962700741
+    }
+  ],
+  "old_AI_labels_loaded": false,
+  "reference_status": "pending_human_annotation",
+  "prepared_payloads": {
+    "private/sources.jsonl": "f7400a5c3388fb9ae582e16dd08fed152d5c93bd4ab7d7f10be7da9eea6903eb",
+    "private/candidates.jsonl": "8f1461c979e126c3ecb8cf042b6035189f8eacff8fec424d555d6311f0bacef7",
+    "private/relation_registry.json": "a5a3d8672a1dd607f4669a2039076b7100df90989e149061f4cff5676a430c84"
+  },
+  "tool_sha256": "13aac1b3e4f2f6fbed061d4772877895e211bad86dbeb279b238e038d9078743"
+}
