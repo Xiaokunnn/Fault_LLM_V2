@@ -1,0 +1,51 @@
+{
+  "stage": "knowledge_enhancement_task_selection",
+  "knowledge_enhancement_is_an_established_RP1_stage": true,
+  "overall_enhancement_direction_go_no_go_evaluated": false,
+  "sole_base_graph": "expanded1456",
+  "recommended_primary_task": "B",
+  "recommended_problem": "原文证据约束下，Assertion级适用条件、语义角色与作用域的绑定增强",
+  "problem_not_architecture": true,
+  "selection_confidence": "Moderate, qualitative pilot recommendation; not a statistical ranking or an algorithm efficacy claim",
+  "research_priority": [
+    {"task":"B","role":"主研究任务：聚焦跨单元/章节的条件—对象—动作/参数绑定，而非通用if关键词或新增字段"},
+    {"task":"A","role":"首要落地与评价场景：在不放宽质量要求的条件下恢复已有候选；把恢复收益与重复/Schema问题分开"},
+    {"task":"E","role":"来源优先的发现及关联表示场景：过程/材料/条件关联，不预设图结构补边"},
+    {"task":"C","role":"融合与对齐配套：易清洗名称先处理，困难断言等价须保留对象、角色和条件"},
+    {"task":"D","role":"可靠性与安全配套：已知否定/规范/范围问题先用透明约束保守处理，未决项不强改"}
+  ],
+  "engineering_priority_is_not_the_same_as_algorithm_priority": true,
+  "B_primary_semantic_state_counts": {
+    "correctly_structured_for_reviewed_target":2,
+    "literal_retention_without_separate_structure":8,
+    "binding_or_scope_error_probe":1,
+    "confirmed_missing_information":0,
+    "unresolved_applicability_or_scope":1
+  },
+  "B_state_count_boundary": "12 primary items only. The one scope-error item is a pod propulsor, not a validated in-domain pump failure. Zero confirmed missing in this sample does not mean zero missing in the corpus.",
+  "cross_task_binding_instances": [
+    {"id":"R01","case":"A-RAW-03430","issue":"故障—多原因—对应措施的行内绑定","role":"semantic binding"},
+    {"id":"R02","case":"A-RAW-07936","issue":"LKH Prime型号组—螺钉动作—20/40Nm参数绑定","role":"cross-unit binding"},
+    {"id":"R03","case":"B-EXA-58eb77ad6563b3e08952dba4","issue":"同一试件—拆装10次—随后密性试验及条款引用","role":"event/sequence binding"},
+    {"id":"R04","case":"C-25eab0e754446b1a01e86709","issue":"FRES/FREM章节—尺寸A程序—各自支架参数表","role":"section/equipment binding"},
+    {"id":"R05","case":"C-3d9b8eebe09dc11cd36900eb","issue":"状态监测方法身份与超过P-F时可能检不出的有条件断言分开","role":"role and operator scope"},
+    {"id":"R06","case":"E-A-RAW-04016","issue":"检查项目—Daily/I列—正常/新应用全表条件","role":"table/global-condition binding"},
+    {"id":"R07","case":"E-SRC-b1b2605725df1b5d8947a718","issue":"再用/更换/安装三种触发下的不同阀门操作顺序","role":"trigger-scoped process binding"},
+    {"id":"R08","case":"E-B-EXA-e8f9e8fdc94b731233c7e9c1","issue":"ATEX章节范围与22500h更换阈值，避免和正常维护计划混用","role":"section-level applicability"},
+    {"id":"R09","case":"E-B-EXA-cdd51c549c9482db598945e4","issue":"all parts的阀门部件回指与必要时更换条件","role":"reference and guarded action"},
+    {"id":"R10","case":"E-B-EXA-d0d58ceec94816a546d21640","issue":"if/or if条件、under these conditions回指和will/possible后果模态","role":"anaphoric disjunction binding"}
+  ],
+  "cross_task_instances_are_not_ten_independent_benchmark_failures": true,
+  "why_not_choose_only_largest_opportunity_pool": "A/E pools contain duplicates, scope problems, simple schema issues and heterogeneous units. B identifies a common semantic bottleneck across recovery, fusion and association cases, not the highest success/failure percentage.",
+  "beyond_all_simple_methods_demonstrated": false,
+  "executed_baselines_leave_bounded_binding_limits": true,
+  "innovation_already_established": false,
+  "no_new_model_or_loss_designed": true,
+  "no_GNN_or_other_architecture_selected": true,
+  "training_data_sufficiency": "Enough for task definition and a pilot; expand independently reviewed source-first cases within the same 15 documents before algorithm efficacy or generalization claims",
+  "proposed_task_input": ["current Assertion/Claim or normalized candidate", "original source blocks/cells and section context", "existing equipment/type/schema/provenance fields"],
+  "proposed_task_output": ["keep/enrich/defer decision", "source-aligned applicability/operator/role frame", "source witnesses for every added field"],
+  "next_decision": "User decides whether to approve focused task formalization and a generic-method comparison. This delivery does not develop the final enhancement algorithm.",
+  "evidence_seal": "runs/20261113_v1/comparison_data_seal.json",
+  "final_experiment_results": "runs/20261113_v1/evaluation_v2/"
+}

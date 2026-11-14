@@ -1,0 +1,269 @@
+{
+  "input_git_commit": "833c8040058055434c7f6a9595ec524c3935755f",
+  "problems": [
+    {
+      "id": "P01",
+      "name": "Evidence-qualified records not released to the Chinese graph",
+      "definition": "Declared automatic evidence gate passed but source-record identity not in standard1326; not LLM-generation omission or expert-confirmed missed facts.",
+      "metric": {
+        "count": 372,
+        "denominator": 1698,
+        "percentage": 21.9081,
+        "meaning": "release membership only"
+      },
+      "evidence": [
+        "publication/qualified_record_membership.jsonl"
+      ],
+      "diagnosis_impact": "Potential source evidence unavailable to downstream graph queries; actual diagnostic relevance is not established for every record.",
+      "data_sufficiency": "372 traceable records, but no independent semantic completeness labels.",
+      "engineering": "Terminology status/protected-token governance first; lowering thresholds does not verify meaning.",
+      "algorithm_research": "INCONCLUSIVE",
+      "evaluation_boundary": "Can prove version membership and executable gate reason, not factual recall or safe usability."
+    },
+    {
+      "id": "P02",
+      "name": "Source-surface identity split and type ambiguity",
+      "definition": "Same typed conservative source form maps to more than one published node; unlike same label with different types, it is an alignment candidate, not automatic equivalence.",
+      "metric": {
+        "count": 10,
+        "denominator": 2022,
+        "percentage": 0.4946,
+        "meaning": "10 implicated nodes in 5 candidate groups; candidate incidence, not an error rate"
+      },
+      "candidate_groups": 5,
+      "confirmed_AI_groups": 4,
+      "unresolved_groups": 1,
+      "cases": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "evidence": [
+        "integrity/entity_alignment_candidates.jsonl",
+        "deeper/alias_sensitivity.json"
+      ],
+      "diagnosis_impact": "Equivalent symptoms/actions can fragment retrieval and apparent chains.",
+      "data_sufficiency": "Only five probe groups; no evidence that a learned aligner is necessary.",
+      "engineering": "Dictionary/nominalization cleanup is plausible; four-group AI review and all-five hypothetical merge are not interchangeable.",
+      "algorithm_research": "NO-GO for a new aligner justified only by these cases",
+      "evaluation_boundary": "Shows lexical splits and sensitivity without proving general semantic equivalence."
+    },
+    {
+      "id": "P03",
+      "name": "Polarity and normative/observational meaning mismatch",
+      "definition": "Positive graph reading is not justified by the source prohibition or design obligation; source location and legal endpoint types do not establish entailment.",
+      "metric": {
+        "count": 3,
+        "denominator": 1326,
+        "percentage": 0.2262,
+        "meaning": "At least 3 AI-audited semantic mismatches among 1326; targeted English probes, not an unbiased defect-rate estimate"
+      },
+      "subtypes": {
+        "literal_prohibition_mismatch": 1,
+        "normative_statement_cast_as_positive_cause": 2
+      },
+      "cases": [
+        "C07",
+        "C08",
+        "C09",
+        "C10"
+      ],
+      "evidence": [
+        "packets/record_issue_candidates.jsonl",
+        "deeper/negated_causal_candidates.jsonl"
+      ],
+      "diagnosis_impact": "A prohibition may become an unsuitable operating condition; a design requirement may become an unsupported causal explanation.",
+      "data_sufficiency": "Three source-anchored cases plus one retained-negation counterexample; too small for algorithm efficacy claims.",
+      "engineering": "Known cases allow conservative blocking/correction; generic operator preservation still needs empirical assessment, not assumed inability of rules.",
+      "algorithm_research": "INCONCLUSIVE",
+      "evaluation_boundary": "Source-proposition mismatch, not proof of real-world causal impossibility or equipment diagnostic accuracy."
+    },
+    {
+      "id": "P04",
+      "name": "Declared domain scope not respected by some source propositions",
+      "definition": "Published targets explicitly name other machinery despite a document scope restricted to pumps/piping; transferable mechanisms remain unresolved rather than automatically excluded.",
+      "metric": {
+        "count": 7,
+        "denominator": 1326,
+        "percentage": 0.5279,
+        "meaning": "7 AI-supported out-of-declared-scope records observed; 10 keyword candidates reviewed, 3 scope-transfer cases unresolved; not full corpus error rate"
+      },
+      "cases": [
+        "C10",
+        "C11"
+      ],
+      "evidence": [
+        "deeper/scope_candidates.jsonl",
+        "../../case_specs.json"
+      ],
+      "diagnosis_impact": "Propeller/crankshaft procedures may contaminate pump queries or misleading evidence chains.",
+      "data_sufficiency": "Ten probe records, seven supported within the declared boundary.",
+      "engineering": "Document/section/equipment applicability checks should precede model design.",
+      "algorithm_research": "NO-GO as a stand-alone innovation from current evidence",
+      "evaluation_boundary": "Can flag explicit scope mismatch; cannot decide all cross-machine transferability from keywords."
+    },
+    {
+      "id": "P05",
+      "name": "Qualifiers not independently bound in semantic payload",
+      "definition": "Source condition/negation/modality/alternative/sequence wording may live in evidence or endpoints, with no explicit operator-bound fields. Lack of fields alone is not lost knowledge.",
+      "metric": {
+        "count": 630,
+        "denominator": 1326,
+        "percentage": 47.5113,
+        "meaning": "English cue-bearing evidence records; a proxy, not 630 defective relations"
+      },
+      "source_cue_not_in_endpoints": {
+        "count": 374,
+        "denominator": 1326,
+        "percentage": 28.2051,
+        "meaning": "374 cue-category differences between evidence and endpoint text; evidence remains retained"
+      },
+      "cases": [
+        "C08",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20"
+      ],
+      "evidence": [
+        "integrity/qualifier_proxies.jsonl",
+        "case_review/cases.jsonl"
+      ],
+      "diagnosis_impact": "Different operating modes, units, branches and temporal prerequisites may be used outside their actual context.",
+      "data_sufficiency": "Several traceable positive/counterexamples and broad lexical candidates, but no exhaustive operator-label benchmark or same-budget method failure proof.",
+      "engineering": "Schema/serialization and literal qualifier retention are necessary transparent controls; difficult binding cases not yet isolated from them.",
+      "algorithm_research": "INCONCLUSIVE; priority for further problem isolation, not a chosen architecture",
+      "evaluation_boundary": "Can measure observable representation placement; cannot infer global semantic loss or prevalence from cue matches."
+    },
+    {
+      "id": "P06",
+      "name": "Fragmented topology versus actual missing knowledge",
+      "definition": "A FaultMode does not simultaneously have an incoming causal edge and outgoing mitigation/prevention edge; this chosen graph pattern is not a universal diagnostic requirement.",
+      "metric": {
+        "count": 223,
+        "denominator": 239,
+        "percentage": 93.3054,
+        "meaning": "223/239 structural-role gaps, not missing-fact rate"
+      },
+      "other_layer_role_counterparts": 3,
+      "evidence": [
+        "integrity/fault_role_gaps.jsonl",
+        "integrity/topology.jsonl",
+        "deeper/role_gap_cross_layer.jsonl",
+        "deeper/alias_sensitivity.json"
+      ],
+      "diagnosis_impact": "Graph traversal can stop because of naming, release selection or intentionally atomic knowledge, not because a physical causal link exists but is absent.",
+      "data_sufficiency": "All structural nodes checked; no independent labelled missing-edge universe.",
+      "engineering": "At least three gap roles occur in another existing tier; alias projection reduces four components without adding knowledge edges.",
+      "algorithm_research": "NO-GO for treating topology gaps as training positives or prespecifying link prediction",
+      "evaluation_boundary": "Can count connectivity and role incidence; cannot derive causal transitivity or evidence for a new edge."
+    },
+    {
+      "id": "P07",
+      "name": "Sparse independent-source corroboration",
+      "definition": "Multiple evidence occurrences from one source family are not independent confirmations. Different-family canonical matches still require object/condition verification.",
+      "metric": {
+        "count": 0,
+        "denominator": 1281,
+        "percentage": 0.0,
+        "meaning": "0/1281 governed claims with multiple recorded source families; metadata proxy, not proof no corroborating text exists"
+      },
+      "multi_evidence_same_family_claims": 28,
+      "candidate_different_family_matches": 4,
+      "conditional_evidence_addition": 1,
+      "insufficient_matches": 3,
+      "cases": [
+        "C06",
+        "C12",
+        "C13"
+      ],
+      "evidence": [
+        "integrity/claim_source_families.jsonl",
+        "publication/cross_family_candidate_matches.jsonl"
+      ],
+      "diagnosis_impact": "Repeated pages/languages can be mistaken for corroboration; generic endpoints can create false matches.",
+      "data_sufficiency": "One condition-supported additional evidence candidate, not a new atomic relation; no adequate independent-source truth benchmark.",
+      "engineering": "Source-family deduplication and retaining object-specific evidence first.",
+      "algorithm_research": "INCONCLUSIVE for probabilistic truth discovery; current corroboration labels inadequate",
+      "evaluation_boundary": "Counts recorded families, not statistical independence or truth probability."
+    },
+    {
+      "id": "P08",
+      "name": "First-record attribute projection loss",
+      "definition": "For one merged claim the graph builder's retained fault_class_ids does not contain the union of its source-record tags.",
+      "metric": {
+        "count": 1,
+        "denominator": 1281,
+        "percentage": 0.0781,
+        "meaning": "one observed claim projection discrepancy"
+      },
+      "cases": [
+        "C06"
+      ],
+      "evidence": [
+        "integrity/claim_attribute_projection_loss.jsonl"
+      ],
+      "diagnosis_impact": "A claim-level fault-category lookup may fail despite source evidence and category tags still being present.",
+      "data_sufficiency": "One fully traceable multi-language claim, enough for an engineering regression test but not an algorithm paper.",
+      "engineering": "Set-union projection is a transparent prospective repair; verify category semantics separately. No repair applied here.",
+      "algorithm_research": "NO-GO",
+      "evaluation_boundary": "Proves aggregation mismatch, not correctness of every upstream automatic fault tag."
+    },
+    {
+      "id": "P09",
+      "name": "Export view lacks detailed native addresses but full source archive retains them",
+      "definition": "Evidence export and graph display omit some offsets/cells that are still stored in source_records; this is a view/interface boundary, not deleted source evidence.",
+      "metric": {
+        "count": 1326,
+        "denominator": 1326,
+        "percentage": 100.0,
+        "meaning": "all standard evidence exports lack explicit evidence_start/evidence_units fields; full records retain E1/E2 data"
+      },
+      "full_E1_exact": 1189,
+      "full_E2_whitespace_equal_records": 137,
+      "evidence": [
+        "deeper/export_projection.jsonl",
+        "deeper/address_completeness.jsonl",
+        "case_review/native_cell_text_differences.jsonl"
+      ],
+      "diagnosis_impact": "A consumer reading only the compact view may be unable to inspect the exact table or local context.",
+      "data_sufficiency": "All source addresses inspected; five standard cell-text byte differences are whitespace-only, not missing evidence.",
+      "engineering": "Explicit source-record joins or lossless view adapters; no inferred bbox and no frozen artifact retrofit.",
+      "algorithm_research": "NO-GO",
+      "evaluation_boundary": "Shows field projection and address roundtrip, not relation entailment."
+    },
+    {
+      "id": "P10",
+      "name": "Formal qualifier contract differs from experimental sidecars",
+      "definition": "v3 Claim/EvidenceAssertion definitions have no explicit conditions/polarity/modality fields; DocumentSource has broad applicability_scope, and experimental records add sidecar context outside that formal contract.",
+      "metric": {
+        "count": 0,
+        "denominator": 2,
+        "percentage": 0.0,
+        "meaning": "0 of the two relevant formal record definitions explicitly models the selected per-assertion operator fields; not a schema-invalid-record count"
+      },
+      "cases": [
+        "C16",
+        "C17",
+        "C18",
+        "C20"
+      ],
+      "evidence": [
+        "case_review/summary.json"
+      ],
+      "diagnosis_impact": "Conditions cannot yet be independently validated/queried through one common formal interface; broad document scope cannot substitute local procedure guards.",
+      "data_sufficiency": "Direct schema inspection establishes the interface gap, not the benefit of any particular reasoning model.",
+      "engineering": "Versioned schema/interface design and compatibility tests before research models; do not modify the existing frozen schema in this investigation.",
+      "algorithm_research": "INCONCLUSIVE for semantic binding; schema work alone is engineering",
+      "evaluation_boundary": "Static inspection is not full JSON-Schema conformance or factual verification."
+    }
+  ],
+  "independent_ground_truth": false,
+  "categories_overlap": true,
+  "all_denominators_explicit": true,
+  "new_model_calls": 0,
+  "formal_graph_modifications": 0
+}

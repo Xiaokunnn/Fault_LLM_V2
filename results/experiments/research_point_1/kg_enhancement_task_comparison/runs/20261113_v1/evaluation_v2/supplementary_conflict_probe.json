@@ -1,0 +1,125 @@
+{
+  "id": "C-SUP-bearing-lifetime",
+  "origin": "Post-hoc full-page review of fixed E and schedule samples; not included in the 12-item C primary rate",
+  "proposition": "22500h与25000h/60月是否是同一适用条件下的矛盾更换周期",
+  "sources": [
+    {
+      "doc_id": "MP005",
+      "page": 9,
+      "queries": [
+        "ATEX declaration of conformity",
+        "replace bearings after 90% of rated life i.e. 22500 hours."
+      ]
+    },
+    {
+      "doc_id": "MP005",
+      "page": 69,
+      "native_cells": [
+        "MP005:p0069:t00:r016:c00",
+        "MP005:p0069:t00:r016:c06"
+      ],
+      "queries": [
+        "Inspection and maintenance intervals for normal applications"
+      ]
+    }
+  ],
+  "related_existing_assertion": "EXA-e8f9e8fdc94b731233c7e9c1",
+  "support": "insufficient_evidence",
+  "result": "apparent_conflict_different_applicability",
+  "baseline": "partial",
+  "reason": "p9为ATEX特别要求，p69为normal applications并有全表时间先到规则。元数据都写NSL不能证明工况相同；加入章节和列头回读后应保持条件差异，不宣布真实矛盾。",
+  "source_proofs": [
+    {
+      "doc_id": "MP005",
+      "page": 9,
+      "queries": [
+        "ATEX declaration of conformity",
+        "replace bearings after 90% of rated life i.e. 22500 hours."
+      ],
+      "source_query_proofs": [
+        {
+          "kind": "physical_page_text_span",
+          "start": 509,
+          "end": 539,
+          "text": "ATEX declaration of conformity"
+        },
+        {
+          "kind": "physical_page_text_span",
+          "start": 3996,
+          "end": 4072,
+          "text": "replace bearings after\n                  90% of rated life i.e. 22500 hours."
+        }
+      ],
+      "original_native_cells": [],
+      "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+      "page_text_sha256": "518313e52b96c8b97afb6c255653bb7948515803895a4c464ebe33fe461ee194",
+      "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf"
+    },
+    {
+      "doc_id": "MP005",
+      "page": 69,
+      "native_cells": [
+        "MP005:p0069:t00:r016:c00",
+        "MP005:p0069:t00:r016:c06"
+      ],
+      "queries": [
+        "Inspection and maintenance intervals for normal applications"
+      ],
+      "source_query_proofs": [
+        {
+          "kind": "physical_page_text_span",
+          "start": 504,
+          "end": 564,
+          "text": "Inspection and maintenance intervals for normal applications"
+        }
+      ],
+      "original_native_cells": [
+        {
+          "cell_id": "MP005:p0069:t00:r016:c00",
+          "table_id": "MP005:p0069:t00",
+          "row_id": "MP005:p0069:t00:r016",
+          "row_group_id": "MP005:p0069:t00:r016",
+          "row_index": 16,
+          "column_index": 0,
+          "column_name": "",
+          "column_role": "unclassified",
+          "text": "Replace pump bearings",
+          "page_text_start": 5084,
+          "page_text_end": 5105,
+          "page_text_source": "Replace pump bearings",
+          "bbox": {
+            "x0": 45.968,
+            "top": 669.46,
+            "x1": 201.437,
+            "bottom": 690.1
+          }
+        },
+        {
+          "cell_id": "MP005:p0069:t00:r016:c06",
+          "table_id": "MP005:p0069:t00",
+          "row_id": "MP005:p0069:t00:r016",
+          "row_group_id": "MP005:p0069:t00:r016",
+          "row_index": 16,
+          "column_index": 6,
+          "column_name": "25000 running hours or 60 months",
+          "column_role": "unclassified",
+          "text": "M",
+          "page_text_start": null,
+          "page_text_end": null,
+          "page_text_source": null,
+          "bbox": {
+            "x0": 449.703,
+            "top": 669.46,
+            "x1": 520.695,
+            "bottom": 690.1
+          }
+        }
+      ],
+      "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+      "page_text_sha256": "753c96d23ef6fc17139571cb7a15948b1de4d04991d0e6a8ddfcfaadc97468b1",
+      "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf"
+    }
+  ],
+  "human_gold": false,
+  "independent_review": false
+}
