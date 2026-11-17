@@ -1,0 +1,113 @@
+{
+  "controls": "All start from identical seed-matched G1 best checkpoint; same base and aux samples, reference forward and optimizer-step budget. anchor_uniform only removes candidate confidence weights.",
+  "mechanism": "L = CE_base + .3 * weighted_CE_candidate + lambda * KL(p_frozen_base || p_student), evaluated only on train-base query/tail minibatches",
+  "no_test_access_before_decision": true,
+  "novelty_limit": "Distillation/anti-forgetting and uncertainty weighting are established; this is a bounded application prototype, not a novelty claim",
+  "observed_validation_only": [
+    {
+      "seed": 14112026,
+      "validation": {
+        "best_epoch": 4,
+        "checkpoint_sha256": "59d2c4c3efc3540ced7c11e05ca110e8b9c4282afb40c3f8c6c19b49b459257a",
+        "illegal_context_rows_not_contrastive_positive": 0,
+        "no_test_read": true,
+        "peak_cuda_bytes": 1941945856,
+        "seconds": 39.699824939947575,
+        "validation_link_MRR": 0.26949087326317467
+      },
+      "view": "G1"
+    },
+    {
+      "seed": 14112026,
+      "validation": {
+        "best_epoch": 3,
+        "checkpoint_sha256": "ecd6859082017ada2854ff3593f211d9e8e509422165db09c7fddd9280793981",
+        "illegal_context_rows_not_contrastive_positive": 0,
+        "no_test_read": true,
+        "peak_cuda_bytes": 3253312512,
+        "seconds": 56.176910434965976,
+        "validation_link_MRR": 0.25745521592860493
+      },
+      "view": "G2"
+    },
+    {
+      "seed": 14112026,
+      "validation": {
+        "best_epoch": 7,
+        "checkpoint_sha256": "4cd0630295949e8d76256d04e963ec3d52800e359e88944abe28d32355dc7a57",
+        "illegal_context_rows_not_contrastive_positive": 1098,
+        "no_test_read": true,
+        "peak_cuda_bytes": 3253312512,
+        "seconds": 94.26596975605935,
+        "validation_link_MRR": 0.2647875947632627
+      },
+      "view": "G3"
+    }
+  ],
+  "problem": "Strong text KGC baseline degrades with uncertain extra candidates on validation; preserve trusted training response geometry while learning candidate context",
+  "rows": [
+    {
+      "epochs": 5,
+      "lambda_anchor": 0,
+      "lr": 2e-05,
+      "prototype": "continue",
+      "seed": 14112026
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor",
+      "seed": 14112026
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor_uniform",
+      "seed": 14112026
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 0,
+      "lr": 2e-05,
+      "prototype": "continue",
+      "seed": 14112027
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor",
+      "seed": 14112027
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor_uniform",
+      "seed": 14112027
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 0,
+      "lr": 2e-05,
+      "prototype": "continue",
+      "seed": 14112028
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor",
+      "seed": 14112028
+    },
+    {
+      "epochs": 5,
+      "lambda_anchor": 1.0,
+      "lr": 2e-05,
+      "prototype": "anchor_uniform",
+      "seed": 14112028
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not contain any triple or auxiliary text corresponding to the focus T03. The single triple in the output refers to a different warning (closed suction/discharge lines) and does not mention stopping the pump immediately or eliminating causes before returning to service.",
+        "evidence_quote": "Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not contain any triple or auxiliary text corresponding to the focus T04. The single triple in the output refers to a different warning (closed suction/discharge lines) and does not mention the specific time limit (5 minutes) or temperature limit (80 °C) for operating against a closed discharge valve.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The output triple claims that operating with shut-off elements closed 'causes' 'pump damage' (tail_type: FaultMode). However, the source text explicitly states that this condition 'will cause incorrect pressure and temperature' and that 'Hot or hazard fluids under pressure will cause death or serious injury'. While 'DAMAGE TO THE PUMP SET!' is mentioned in a *different* DANGER block (regarding dry running/gas content), the specific sentence cited in the output's evidence_text ('Do not operate the pump with the shut-off elements...') is linked in the source to explosion hazards and personal injury, not directly to pump damage as the primary consequence in that specific context. More critically, the output's evidence_text is an imperative instruction ('Do not operate...'), not a causal statement. The source says 'If the pump is operated... will cause incorrect pressure and temperature... cause death or serious injury'. It does not explicitly state in that specific block that it causes 'pump damage' as the direct fault mode, although it is a risk. However, the most significant error is that the output presents an imperative ('Do not operate') as a causal fact ('causes'), and the specific consequence 'pump damage' is not the direct stated result of *that specific* action in the source text (which focuses on pressure/temperature/injury). The source text for the specific action 'Do not operate the pump with the shut-off elements...' is preceded by 'If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature... cause death or serious injury'. It does not say 'causes pump damage' in that specific causal chain. The 'DAMAGE TO THE PUMP SET' is in the *next* DANGER block about dry running. Therefore, the relation 'causes' with tail 'pump damage' is not supported by the specific evidence text provided in the output or the immediate source context for that specific action.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5713,
+    "eval_count": 925,
+    "total_duration": 30463634586
+  },
+  "human_Gold": false
+}

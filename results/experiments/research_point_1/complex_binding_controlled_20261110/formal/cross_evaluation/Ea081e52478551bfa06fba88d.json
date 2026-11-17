@@ -1,0 +1,68 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the condition 'Allow the pump to completely cool if overheated' under the context 'Before attempting to open or service the pump'. The output contains a triple for 'Check the temperature before opening any covers, plates, or plugs' (Triple 1), which is a different instruction (Step 4) and does not retain the specific meaning of allowing the pump to cool if overheated (Step 3). No other triple in the output addresses the cooling requirement. Therefore, the specific atomic meaning of the focus is absent from the output.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction 'Check the temperature before opening any covers, plates, or plugs' from the source text. The head and tail accurately reflect the source sentence, and the relation 'inspected_by' is a reasonable semantic mapping for a procedural step involving inspection/checking.",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction 'Close the suction and discharge valves' from the source text. The head and tail accurately reflect the source sentence.",
+        "evidence_quote": "5. Close the suction and discharge valves."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction 'Vent the pump slowly and cautiously' from the source text. The head and tail accurately reflect the source sentence.",
+        "evidence_quote": "6. Vent the pump slowly and cautiously."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction 'Drain the pump' from the source text. The head and tail accurately reflect the source sentence.",
+        "evidence_quote": "7. Drain the pump."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the risk warning 'Do not operate the pump against a closed discharge valve for long periods of time' and its consequence 'pump components will deteriorate, and the liquid could come out of the pump'. The relation 'increases_risk_of' appropriately links the prohibited action to the negative outcome.",
+        "evidence_quote": "Do not operate the pump against a closed discharge valve for long periods of time. If operated against a closed discharge valve, pump components will deteriorate, and the liquid could come out of the pump."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction 'Suction and discharge hoses and piping must be removed from the pump before lifting' from the source text. The head and tail accurately reflect the source sentence.",
+        "evidence_quote": "Suction and discharge hoses and piping must be removed from the pump before lifting."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2588,
+    "eval_count": 836,
+    "total_duration": 15301052470
+  },
+  "human_Gold": false
+}

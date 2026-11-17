@@ -1,0 +1,92 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T08",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T08 specifically requires the extraction of the instruction to inspect seal faces for wear, check elastomer conditions, and either replace them or note them for scheduled maintenance. The provided anonymous_output contains no triple or auxiliary text that mentions 'tenute' (seals), 'facce delle tenute' (seal faces), 'elastomeri' (elastomers), or the specific maintenance action of noting for scheduled maintenance. While the output contains other maintenance and inspection steps (e.g., impeller, o-ring, end cover), it completely omits the specific content of focus T08. Therefore, the output does not retain the essential meaning of the focus.",
+        "evidence_quote": "Ispezionare le facce delle tenute verificando che non siano usurate e controllare le condizioni degli elastomeri. Sostituirle se necessario oppure prenderne nota per la manutenzione programmata.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The triple claims the inspection method is 'located_in' the pump. The source text describes observing the pump and washing it, but does not explicitly state a 'located_in' relationship between the inspection method and the pump as a structural fact. More importantly, this triple does not address the focus T08 (seal faces/elastomers).",
+        "evidence_quote": "Osservare la pompa durante le prime ore di funziona- È possibile lavare rapidamente la pompa per accedere rapida- mento alle superfici a contatto con il liquido per poterla pulire"
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The source states 'Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi.' The triple captures the condition (high speed/hot liquids) causing the symptom (surface heating). This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi"
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The source states 'Non utilizzare detergenti a base di iodio e fosforo perché queste sostanze aggrediscono la pompa e riducono le sue prestazioni.' The triple captures the prohibition (standard) preventing the use of such detergents (maintenance action). This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Non utilizzare detergenti a base di iodio e fosforo perché queste sostanze aggrediscono la pompa e riducono le sue prestazioni."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The source states 'Verificare che non ci siano rumori insoliti.' The triple captures the inspection method indicating the symptom (unusual noises). This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Verificare che non ci siano rumori insoliti."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The source states 'Controllare che non ci siano vibrazioni o variazioni di temperatura insolite.' The triple captures the inspection method indicating the symptom (vibrations/temperature changes). This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Controllare che non ci siano vibrazioni o variazioni di temperatura insolite."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The source states 'Ispezionare visivamente la girante verificando che non sia danneggiata o usurata e controllare che l'alloggiamento delle tenute non presenti perdite.' The triple captures the inspection of the impeller (girante). This is a valid extraction from the source, though unrelated to focus T08 (which is about seal faces/elastomers, not just the housing/impeller).",
+        "evidence_quote": "Ispezionare visivamente la girante verificando che non sia danneggiata o usurata e controllare che l'alloggiamento delle tenute non presenti perdite."
+      },
+      {
+        "index": 7,
+        "verdict": "S",
+        "reason": "The source states 'Sostituire l'o-ring o la guarnizione della copertura terminale.' The triple captures the maintenance action of replacing the o-ring/gasket. This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Sostituire l'o-ring o la guarnizione della copertura terminale."
+      },
+      {
+        "index": 8,
+        "verdict": "S",
+        "reason": "The source states 'Rimuovere la girante utilizzando lo strumento di rimozione della girante Jabsco della dimensione corretta.' The triple captures the maintenance action of removing the impeller. This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Rimuovere la girante utilizzando lo strumento di rimozione della girante Jabsco della dimensione corretta."
+      },
+      {
+        "index": 9,
+        "verdict": "S",
+        "reason": "The source states 'Controllare che il coperchio terminale si muova liberamente e, se è bloccato, picchiettare delicatamente lateralmente con un martello morbido, senza fare leva.' The triple captures the inspection/action regarding the end cover. This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Controllare che il coperchio terminale si muova liberamente e, se è bloccato, picchiettare delicatamente lateralmente con un martello morbido, senza fare leva."
+      },
+      {
+        "index": 10,
+        "verdict": "S",
+        "reason": "The source states 'Rimuovere l'o-ring, verificare l'usura e sostituire se necessario.' The triple captures the maintenance action regarding the o-ring. This is a valid extraction from the source, though unrelated to focus T08.",
+        "evidence_quote": "Rimuovere l'o-ring, verificare l'usura e sostituire se necessario."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5352,
+    "eval_count": 1566,
+    "total_duration": 31869762277
+  },
+  "human_Gold": false
+}

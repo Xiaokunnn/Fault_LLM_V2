@@ -1,0 +1,106 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T17",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "NA",
+        "evidence_support": "S",
+        "literal_complete": "P",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains the core inspection action 'Check the direction of rotation of the impeller' and the temporal condition 'before operation' in the head_surface. However, it omits the specific method/evidence source mentioned in the source ('See the indication label on the pump'), which is part of the complete instruction. The relation 'located_in' with tail 'Installation' is a reasonable structural binding but not an explicit machine-readable link to a specific ID or entity defined in the source metadata, hence explicit_binding is N. Literal completeness is P because the 'how' (label check) is missing from the head, though the evidence_text includes it.",
+        "evidence_quote": "Check the direction of rotation of the impeller before operation. - See the indication label on the pump.",
+        "output_refs": [
+          "triples:1"
+        ],
+        "output_quote": "Check the direction of rotation of the impeller before operation."
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Check the direction of rotation of the impeller before operation' as an InspectionAction located in the Installation section. The source text explicitly places this instruction under '3 Installation'.",
+        "evidence_quote": "3 Installation ... Check the direction of rotation of the impeller before operation."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the composition of packing materials as a Standard located in Recycling information. The source text lists this under '3.4 Recycling information' -> 'Unpacking'.",
+        "evidence_quote": "3.4 Recycling information ... Packing material consists of wood, plastics, cardboard boxes and, in some cases, metal straps"
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the disposal instruction for wood/cardboard as a Standard located in Recycling information.",
+        "evidence_quote": "Wood and cardboard boxes can be re-used, recycled or used for energy recovery"
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the disposal instruction for plastics as a Standard located in Recycling information.",
+        "evidence_quote": "Plastics should be recycled or burnt at a licensed waste incineration plant"
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the disposal instruction for metal straps as a Standard located in Recycling information.",
+        "evidence_quote": "Metal straps should be sent for material recycling"
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the maintenance action of replacing oil/parts as a MaintenanceAction located in Maintenance.",
+        "evidence_quote": "Maintenance - During maintenance, oil and wearing parts in the machine are replaced"
+      },
+      {
+        "index": 7,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the recycling instruction for metal parts during maintenance as a MaintenanceAction located in Maintenance.",
+        "evidence_quote": "All metal parts should be sent for material recycling"
+      },
+      {
+        "index": 8,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the recycling instruction for electronic parts during maintenance as a MaintenanceAction located in Maintenance.",
+        "evidence_quote": "Worn or defective electronic parts should be sent to a licensed handler for material recycling"
+      },
+      {
+        "index": 9,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the disposal instruction for oil/non-metal parts during maintenance as a MaintenanceAction located in Maintenance.",
+        "evidence_quote": "Oil and all non-metal wearing parts must be disposed of in accordance with local regulations"
+      },
+      {
+        "index": 10,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the end-of-use recycling requirement as a Standard located in Scrap.",
+        "evidence_quote": "Scrap - At the end of use, the equipment must be recycled according to relevant local regulations."
+      },
+      {
+        "index": 11,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the handling of hazardous residues as a Standard located in Scrap.",
+        "evidence_quote": "any hazardous residue from the process liquid must be taken into account and handled in the necessary way."
+      },
+      {
+        "index": 12,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the contact instruction for doubts/missing regulations as a Standard located in Scrap.",
+        "evidence_quote": "When in doubt, or in the absence of local regulations, please contact your local Alfa Laval sales company."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 3687,
+    "eval_count": 1240,
+    "total_duration": 31908887557
+  },
+  "human_Gold": false
+}

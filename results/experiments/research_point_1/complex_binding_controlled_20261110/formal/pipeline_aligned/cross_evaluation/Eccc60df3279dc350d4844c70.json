@@ -1,0 +1,50 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T11",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output fails to retain the specific table row data for 'Extreme dirt', 'Dry', 'Light to medium', 'Slow to medium', and 'Daily flushing out dirt'. Instead, it extracts generic causal triples linking 'Dirt', 'Clean', and 'Moderate to dirty' to 'grease conditions' based on the footnote text, completely omitting the specific maintenance interval and operating conditions requested in the focus.",
+        "evidence_quote": "Extreme dirt Dry Light to medium Slow to medium 0F (-18C) 200F (93C) Daily flushing out dirt",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source states 'Check grease conditions for oiliness and dirt and adjust greasing frequency accordingly.' It does not state that 'Dirt' causes 'grease conditions'. The output misinterprets the instruction to check for dirt as a causal relationship where dirt causes the condition.",
+        "evidence_quote": "Check grease conditions for oiliness and dirt and adjust greasing frequency accordingly."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The source lists 'Clean' as an ambient condition in the table. It does not state that 'Clean' causes 'oiliness and dirt'. This is a nonsensical causal claim not supported by the text.",
+        "evidence_quote": "Clean Dry Light to medium Slow to medium"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The source lists 'Moderate to dirty' as an ambient condition. It does not state that this condition causes 'grease conditions for oiliness and dirt'. The text advises checking these conditions, not that the dirt level causes them.",
+        "evidence_quote": "Moderate to dirty Dry Light to medium Slow to medium"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 9543,
+    "eval_count": 560,
+    "total_duration": 24547459876
+  },
+  "human_Gold": false
+}

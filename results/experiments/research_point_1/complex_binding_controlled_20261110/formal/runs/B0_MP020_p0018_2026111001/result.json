@@ -1,0 +1,102 @@
+{
+  "trial": {
+    "arm": "B0",
+    "input_sha256": "dcae9e4ad22cea8928b385a8380026ea912ac126cf78c2431187b46450d96f1c",
+    "page_key": "MP020:p0018",
+    "seed": 2026111001,
+    "split": "independent",
+    "trial_id": "B0_MP020_p0018_2026111001"
+  },
+  "used_total_tokens": 2811,
+  "used_output_tokens": 576,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 2235,
+      "output_tokens": 576,
+      "total_tokens": 2811,
+      "elapsed_seconds": 24.57705447403714,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "The pump must be filled with liquid before it is started.",
+        "head_canonical_zh": "泵启动前必须充满液体",
+        "head_type": "OperatingCondition",
+        "relation": "specifies",
+        "tail_surface": "Pump must be filled with liquid before starting",
+        "tail_canonical_zh": "泵启动前必须充满液体",
+        "tail_type": "Standard",
+        "evidence_text": "The pump must be filled with liquid before it is started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "Automatic priming is used for unattended operation.",
+        "head_canonical_zh": "自动充水适用于无人操作",
+        "head_type": "OperatingCondition",
+        "relation": "specifies",
+        "tail_surface": "Automatic priming for unattended operation",
+        "tail_canonical_zh": "无人操作时的自动充水",
+        "tail_type": "Standard",
+        "evidence_text": "Automatic priming is used for unattended operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "Electric sensing and controls prime the unit before start-up.",
+        "head_canonical_zh": "电感测和控制在启动前充水",
+        "head_type": "OperatingCondition",
+        "relation": "specifies",
+        "tail_surface": "Electric sensing and controls prime the unit before start-up",
+        "tail_canonical_zh": "电感测和控制在启动前充水",
+        "tail_type": "Standard",
+        "evidence_text": "Electric sensing and controls prime the unit before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 3,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false
+}

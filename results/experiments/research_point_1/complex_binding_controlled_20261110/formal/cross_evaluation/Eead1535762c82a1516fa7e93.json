@@ -1,0 +1,74 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T08",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not contain any triple or auxiliary text referencing the inspection of seal faces ('facce delle tenute'), the condition of elastomers ('elastomeri'), or the specific maintenance action of replacing them or noting them for scheduled maintenance. The output focuses on other components like the impeller, terminal cover, and general pump observation, completely omitting the specific focus T08.",
+        "evidence_quote": "Ispezionare le facce delle tenute verificando che non siano usurate e controllare le condizioni degli elastomeri. Sostituirle se necessario oppure prenderne nota per la manutenzione programmata.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The relation 'inspected_by' between 'Observe pump for noise/heat' and 'Visually inspect couplings' is semantically incorrect. These are two separate, parallel inspection tasks listed in the source, not a method-relationship where one inspects the other. The source lists them as distinct bullet points under 'Controlli giornalieri'.",
+        "evidence_quote": "• Osservare la pompa durante le prime ore di funziona-mento verificando che non ci siano rumori insoliti e che la pompa non sia eccessivamente surriscaldata. • Ispezionare visivamente tutti gli accoppiamenti e verificare che non ci siano segni di fuoriuscita di prodotto, liquido di lavaggio (se utilizzato)."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The source states 'Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi.' The output correctly identifies the operating condition (high speed/hot liquids) as causing the symptom (surface heating). The modality 'può' (can/may) is preserved in the Chinese translation '可能会' (may possibly).",
+        "evidence_quote": "Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi."
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The relation 'inspected_by' is incorrect. The source lists 'verify isolation/temperature/drainage' as a safety prerequisite ('Prima di rimuovere...') and 'replace o-ring' as a subsequent maintenance action. The verification does not inspect the replacement action; they are sequential steps in a procedure.",
+        "evidence_quote": "Prima di rimuovere la copertura terminale, verificare che la pompa e l’unità di azionamento siano isolate... • Sostituire l’o-ring o la guarnizione della copertura terminale."
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The relation 'inspected_by' is incorrect. Similar to index 3, verifying the seal flushing system is a safety prerequisite, not an inspection method for the action of replacing the o-ring.",
+        "evidence_quote": "quindi verificare che la pompa e il sistema di lavaggio delle tenute siano isolate e depressurizzate. • Sostituire l’o-ring o la guarnizione della copertura terminale."
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The relation 'maintained_by' is tautological and semantically weak. The head is 'Remove impeller using tool' and the tail is 'Remove impeller'. The source says 'Rimuovere la girante utilizzando lo strumento...'. The output splits this into a head and tail that are essentially the same action, failing to capture the specific tool usage as a distinct attribute or condition properly. It is a redundant self-relation.",
+        "evidence_quote": "Rimuovere la girante utilizzando lo strumento di rimozione della girante Jabsco della dimensione corretta."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The relation 'inspected_by' is incorrect. The source describes a procedure: 'Loosen bolts... Check if cover moves freely...'. The output frames the check as inspecting the removal action. The check is a condition for proceeding with removal, not an inspection of the removal itself. Also, the head/tail roles are swapped relative to the procedural flow (Check -> Remove, not Remove -> Check).",
+        "evidence_quote": "Allentare tutti i bulloni che fissano il coperchio terminale alla carrozzeria. Controllare che il coperchio terminale si muova liberamente e, se è bloccato, picchiettare delicatamente lateralmente con un martello morbido, senza fare leva."
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "Duplicate of index 4. The relation 'inspected_by' is incorrect. Verifying the seal flushing system is a safety prerequisite, not an inspection method for the action of replacing the o-ring.",
+        "evidence_quote": "quindi verificare che la pompa e il sistema di lavaggio delle tenute siano isolate e depressurizzate. • Sostituire l’o-ring o la guarnizione della copertura terminale."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5335,
+    "eval_count": 1287,
+    "total_duration": 41320402445
+  },
+  "human_Gold": false
+}

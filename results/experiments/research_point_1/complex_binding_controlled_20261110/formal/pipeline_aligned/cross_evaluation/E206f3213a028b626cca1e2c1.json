@@ -1,0 +1,68 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T09 specifically targets the instruction 'Allow the pump to completely cool if overheated' under the condition 'Before attempting to open or service the pump'. The anonymous output contains a triple for 'Check the temperature before opening any covers, plates, or plugs' (Triple 1), which is a different instruction (Item 4 in the source list) and does not capture the specific cooling requirement (Item 3). None of the other triples in the output address the cooling instruction or the specific condition of overheating. Therefore, the output fails to retain the specific knowledge requested by the focus.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the instruction to check temperature before opening covers/plates/plugs. The head 'Check the temperature before opening any covers, plates, or plugs' and tail 'temperature' accurately reflect the source text 'Check the temperature before opening any covers, plates, or plugs.' The relation 'inspected_by' is a reasonable semantic mapping for an inspection method involving a symptom/parameter (temperature).",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the maintenance action to close suction and discharge valves. The head 'Close the suction and discharge valves' and tail 'valves' accurately reflect the source text 'Close the suction and discharge valves.' The relation 'maintained_by' is appropriate for a maintenance action on a component.",
+        "evidence_quote": "5. Close the suction and discharge valves."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the maintenance action to vent the pump slowly and cautiously. The head 'Vent the pump slowly and cautiously' and tail 'pump' accurately reflect the source text 'Vent the pump slowly and cautiously.' The relation 'maintained_by' is appropriate for a maintenance action on equipment.",
+        "evidence_quote": "6. Vent the pump slowly and cautiously."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the maintenance action to drain the pump. The head 'Drain the pump' and tail 'pump' accurately reflect the source text 'Drain the pump.' The relation 'maintained_by' is appropriate for a maintenance action on equipment.",
+        "evidence_quote": "7. Drain the pump."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the risk associated with pumping incompatible liquids. The head 'Do not attempt to pump any liquids the pump has not been designed for' and tail 'damage the pump or endanger personnel' accurately reflect the source text 'Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure.' The relation 'increases_risk_of' is appropriate for a risk statement.",
+        "evidence_quote": "Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly extracts the operating condition regarding removing hoses/piping before lifting. The head 'Suction and discharge hoses and piping must be removed from the pump before lifting' and tail 'lifting operation' (implied by 'before lifting') accurately reflect the source text 'Suction and discharge hoses and piping must be removed from the pump before lifting.' The relation 'specifies' is appropriate for an operating condition specifying a requirement.",
+        "evidence_quote": "Suction and discharge hoses and piping must be removed from the pump before lifting."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2503,
+    "eval_count": 1027,
+    "total_duration": 21524511824
+  },
+  "human_Gold": false
+}

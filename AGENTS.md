@@ -91,6 +91,13 @@
 
 ## Preservation and cleanup
 
+### Git delivery preference (user instruction, 2026-11-17)
+
+- After completing each batch of new or changed code, documentation, or reviewable research results, commit and push it directly to `origin/main` without asking for permission again. This is the user's standing preference for subsequent work.
+- Check the worktree and fetch the current remote first. Preserve existing modifications and research assets; use fast-forward integration where possible. Never force-push, reset away local work, or clean research records to synchronize.
+- If `main` is checked out in another existing worktree, preserve that worktree and push the reviewed commit with `git push origin HEAD:main`; update the local `main` worktree by fast-forward only when it is clean. No new branch or pull request is required merely for delivery.
+- Publish source code, configurations, reports, result tables, and traceable text records. Keep secrets, downloaded runtimes/dependencies, model/checkpoint binaries, large vector/score caches, and transient locks locally under the ignore rules. Ignoring an artifact must not delete it or alter a frozen manifest.
+
 ### RP1 controlled-validation handoff (2026-11-10)
 
 - The completed RP1 six-check offline audit and quotation-interface fix are recorded in `docs/research/RP1_SIX_CHECKS_REPORT_20261110.md` and `results/experiments/research_point_1/six_checks_final_v1_20261110/`. No teacher graph or frozen paper result was replaced.

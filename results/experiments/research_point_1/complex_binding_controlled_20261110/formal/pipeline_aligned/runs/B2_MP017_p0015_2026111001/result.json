@@ -1,0 +1,767 @@
+{
+  "trial": {
+    "arm": "B2",
+    "input_sha256": "113182ea9999213188c94fb7bd2ca4a491294d0b26fa1671caad3d5878125a39",
+    "page_key": "MP017:p0015",
+    "seed": 2026111001,
+    "split": "independent",
+    "trial_id": "B2_MP017_p0015_2026111001"
+  },
+  "used_total_tokens": 4159,
+  "used_output_tokens": 1257,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 2902,
+      "output_tokens": 1257,
+      "total_tokens": 4159,
+      "elapsed_seconds": 58.86144702602178,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'prevention' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "exposed rotating parts",
+        "head_canonical_zh": "暴露的旋转部件",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "severe injury to personnel",
+        "tail_canonical_zh": "严重的人身伤害",
+        "tail_type": "Symptom",
+        "evidence_text": "exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "non-explosion proof motor",
+        "head_canonical_zh": "非防爆电机",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "explosion",
+        "tail_canonical_zh": "爆炸",
+        "tail_type": "Symptom",
+        "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect rotation on a three-phase motor",
+        "head_canonical_zh": "三相电机旋转方向错误",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage both pump and power source",
+        "tail_canonical_zh": "损坏泵和动力源",
+        "tail_type": "Symptom",
+        "evidence_text": "overspeeding the pump may damage both pump and power source.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "incorrect rotation on a single-phase motor",
+        "head_canonical_zh": "单相电机旋转方向错误",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "damage to the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "Symptom",
+        "evidence_text": "consult the literature supplied with the motor for specific instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "guard in place over the rotating parts",
+        "head_canonical_zh": "旋转部件上的防护罩",
+        "head_type": "Component",
+        "relation": "prevented_by",
+        "tail_surface": "exposed rotating parts",
+        "tail_canonical_zh": "暴露的旋转部件",
+        "tail_type": "Component",
+        "evidence_text": "Do not operate the pump without the guard in place over the rotating parts.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "prevention",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "qualified electrician",
+        "head_canonical_zh": "合格电工",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "electrical connections",
+        "tail_canonical_zh": "电气连接",
+        "tail_type": "Component",
+        "evidence_text": "obtain the services of a qualified electrician to make all electrical connections.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "National Electric Code",
+        "head_canonical_zh": "国家电气规范",
+        "head_type": "Standard",
+        "relation": "specifies",
+        "tail_surface": "installation and operation of the pump",
+        "tail_canonical_zh": "泵的安装和操作",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "install, connect and operate the motor in accordance with the National Electric Code and all local codes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalized": {
+        "head": "exposed rotating parts",
+        "head_surface": "exposed rotating parts",
+        "head_canonical_zh": "暴露的旋转部件",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "severe injury to personnel",
+        "tail_surface": "severe injury to personnel",
+        "tail_canonical_zh": "严重的人身伤害",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "exposed rotating parts",
+          "head_type": "Component",
+          "relation": "causes",
+          "tail_surface": "severe injury to personnel",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "schema_type_direction",
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction",
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "non-explosion proof motor",
+        "head_surface": "non-explosion proof motor",
+        "head_canonical_zh": "非防爆电机",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "explosion",
+        "tail_surface": "explosion",
+        "tail_canonical_zh": "爆炸",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "non-explosion proof motor",
+          "head_type": "Component",
+          "relation": "causes",
+          "tail_surface": "explosion",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "schema_type_direction",
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction",
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "incorrect rotation on a three-phase motor",
+        "head_surface": "incorrect rotation on a three-phase motor",
+        "head_canonical_zh": "三相电机旋转方向错误",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "damage both pump and power source",
+        "tail_surface": "damage both pump and power source",
+        "tail_canonical_zh": "损坏泵和动力源",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "overspeeding the pump may damage both pump and power source.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "incorrect rotation on a three-phase motor",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "damage both pump and power source",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "overspeeding the pump may damage both pump and power source.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 440,
+            "end": 542,
+            "text": "overspeeding the pump may damage both                                \n          pump and power source."
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP017:p0015:b0003",
+            "start": 5,
+            "end": 42,
+            "text": "overspeeding the pump may damage both",
+            "bbox": {
+              "bottom": 77.45,
+              "top": 67.37,
+              "x0": 72.0,
+              "x1": 293.96
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP017:p0015:b0004",
+            "start": 0,
+            "end": 22,
+            "text": "pump and power source.",
+            "bbox": {
+              "bottom": 90.65,
+              "top": 80.57,
+              "x0": 72.0,
+              "x1": 185.873
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP017:p0015:b0003",
+              "start": 5,
+              "end": 42,
+              "text": "overspeeding the pump may damage both",
+              "bbox": {
+                "bottom": 77.45,
+                "top": 67.37,
+                "x0": 72.0,
+                "x1": 293.96
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP017:p0015:b0004",
+              "start": 0,
+              "end": 22,
+              "text": "pump and power source.",
+              "bbox": {
+                "bottom": 90.65,
+                "top": 80.57,
+                "x0": 72.0,
+                "x1": 185.873
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 4,
+      "normalized": {
+        "head": "incorrect rotation on a single-phase motor",
+        "head_surface": "incorrect rotation on a single-phase motor",
+        "head_canonical_zh": "单相电机旋转方向错误",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "damage to the motor",
+        "tail_surface": "damage to the motor",
+        "tail_canonical_zh": "电机损坏",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "consult the literature supplied with the motor for specific instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "incorrect rotation on a single-phase motor",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "damage to the motor",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "consult the literature supplied with the motor for specific instructions.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 5,
+      "normalization_error": "ValueError: Unknown evidence role: prevention",
+      "included": false
+    },
+    {
+      "index": 6,
+      "normalized": {
+        "head": "qualified electrician",
+        "head_surface": "qualified electrician",
+        "head_canonical_zh": "合格电工",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "inspected_by",
+        "tail": "electrical connections",
+        "tail_surface": "electrical connections",
+        "tail_canonical_zh": "电气连接",
+        "tail_type": "Component",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "obtain the services of a qualified electrician to make all electrical connections.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "qualified electrician",
+          "head_type": "Component",
+          "relation": "inspected_by",
+          "tail_surface": "electrical connections",
+          "tail_type": "Component",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "obtain the services of a qualified electrician to make all electrical connections.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "schema_type_direction",
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction",
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 7,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "b8b83bc23b0c06bc1cd5fe173a8ee1ab7502aa9bd7ab0907d48eb58e8dca5770",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "ee29f1f50e5fe34354ceb9444959187490be0c21fa6d0258e10fcdae62546ffc"
+  }
+}

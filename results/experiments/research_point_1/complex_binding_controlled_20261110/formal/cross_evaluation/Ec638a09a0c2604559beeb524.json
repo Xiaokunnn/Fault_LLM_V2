@@ -1,0 +1,71 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "atomic": "S",
+        "alternative_joint": "S",
+        "channel": "main",
+        "condition_object": "S",
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen för fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "evidence_support": "S",
+        "explicit_binding": "N",
+        "focus_id": "T13",
+        "literal_complete": "S",
+        "negation": "S",
+        "numeric_order": "S",
+        "output_quote": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "output_refs": [
+          "triples:5",
+          "triples:6"
+        ],
+        "reason": "Output retains the conditional fault diagnosis (reference resistance not achieved -> winding wet) and the mandatory oven drying action with both temperature/time stages in correct order. The source's 'för fuktig' is rendered as 'fuktig', which preserves the essential meaning of the fault state. The drying action is correctly linked to the fault condition."
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen för fuktig och måste torkas i ugn.",
+        "index": 1,
+        "reason": "The triple correctly captures the standard requirement for insulation resistance (100 MΩ) and the measurement conditions (500/1000 V DC). The relation 'specifies' is appropriate for a standard value.",
+        "verdict": "S"
+      },
+      {
+        "evidence_quote": "Mät isolationsresistansen före driftsättning och då lindningarna kan misstänkas ha blivit fuktiga.",
+        "index": 2,
+        "reason": "The triple correctly identifies the inspection action (measuring insulation resistance) and the condition under which it is performed (suspected wet windings). The relation 'manifests_as' is slightly imprecise as it usually links a fault to a symptom, but here it links a condition to an action. However, the core meaning is retained.",
+        "verdict": "S"
+      },
+      {
+        "evidence_quote": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "index": 3,
+        "reason": "The triple correctly captures the safety requirement for the motor housing to be grounded. The relation 'inspected_by' is not ideal as grounding is a safety measure, not an inspection method, but the core meaning of the requirement is retained.",
+        "verdict": "S"
+      },
+      {
+        "evidence_quote": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "index": 4,
+        "reason": "The triple correctly captures the safety requirement to discharge the windings to the housing after each measurement. The relation 'inspected_by' is not ideal, but the core meaning of the action is retained.",
+        "verdict": "S"
+      },
+      {
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen för fuktig och måste torkas i ugn.",
+        "index": 5,
+        "reason": "The triple correctly captures the fault diagnosis: if the reference resistance is not achieved, the winding is wet. The relation 'manifests_as' is appropriate as it links the fault condition to the symptom (failure to meet resistance).",
+        "verdict": "S"
+      },
+      {
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen för fuktig och måste torkas i ugn.",
+        "index": 6,
+        "reason": "The triple correctly captures the maintenance action: the wet winding must be dried in an oven. The relation 'mitigated_by' is appropriate as it links the fault to the corrective action.",
+        "verdict": "S"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 3274,
+    "eval_count": 856,
+    "total_duration": 26477597468
+  },
+  "human_Gold": false
+}

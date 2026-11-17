@@ -1,0 +1,946 @@
+{
+  "trial": {
+    "arm": "B0",
+    "input_sha256": "8358321019f9cbe7cc0f3643ec01cb396d7f6c19f6a0d6918fdcd1e2e0f2de2b",
+    "page_key": "MP019:p0097",
+    "seed": 2026111001,
+    "split": "development",
+    "trial_id": "B0_MP019_p0097_2026111001"
+  },
+  "used_total_tokens": 4249,
+  "used_output_tokens": 1443,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 2806,
+      "output_tokens": 1443,
+      "total_tokens": 4249,
+      "elapsed_seconds": 58.512042914982885,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "isolationsresistansen, korrigerad till 25°C, måste överstiga referensvärdet, dvs. 100 MΩ (mätt med 500 eller 1000 V DC)",
+        "head_canonical_zh": "绝缘电阻值",
+        "head_type": "Component",
+        "relation": "specifies",
+        "tail_surface": "100 MΩ",
+        "tail_canonical_zh": "100兆欧",
+        "tail_type": "Standard",
+        "evidence_text": "isolationsresistansen, korrigerad till 25°C, måste överstiga referensvärdet, dvs. 100 MΩ (mätt med 500 eller 1000 V DC)",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "isolationssystemet kan misstänkas ha blivit fuktigt",
+        "head_canonical_zh": "绝缘系统可能受潮",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "mätta isolationsresistansen",
+        "tail_canonical_zh": "测量绝缘电阻",
+        "tail_type": "InspectionMethod",
+        "evidence_text": "Mät isolationsresistansen före driftsättning och då lindningarna kan misstänkas ha blivit fuktiga.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "motorhöljet måste vara jordat",
+        "head_canonical_zh": "电机外壳必须接地",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "jordning",
+        "tail_canonical_zh": "接地",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lindningarna måste laddas ur mot höljet omedelbart efter varje mätning",
+        "head_canonical_zh": "每次测量后必须立即移除电缆",
+        "head_type": "Component",
+        "relation": "inspected_by",
+        "tail_surface": "jordning",
+        "tail_canonical_zh": "接地",
+        "tail_type": "InspectionAction",
+        "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "om referensresistansen inte kan uppnås är lindningen fuktig",
+        "head_canonical_zh": "如果参考电阻值无法达到，则电缆可能潮湿",
+        "head_type": "FaultMode",
+        "relation": "manifests_as",
+        "tail_surface": "referensresistansen inte kan uppnås",
+        "tail_canonical_zh": "参考电阻值无法达到",
+        "tail_type": "Symptom",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "lindningen måste torkas i ugn",
+        "head_canonical_zh": "电缆必须在烤箱中干燥",
+        "head_type": "MaintenanceAction",
+        "relation": "mitigated_by",
+        "tail_surface": "lindningen fuktig",
+        "tail_canonical_zh": "电缆潮湿",
+        "tail_type": "FaultMode",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "isolationssystemet kan misstänkas ha blivit fuktigt",
+        "head_surface": "isolationssystemet kan misstänkas ha blivit fuktigt",
+        "head_canonical_zh": "绝缘系统可能受潮",
+        "head_type": "FaultMode",
+        "head_translation_status": "needs_review",
+        "relation": "manifests_as",
+        "tail": "mätta isolationsresistansen",
+        "tail_surface": "mätta isolationsresistansen",
+        "tail_canonical_zh": "测量绝缘电阻",
+        "tail_type": "InspectionMethod",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Mät isolationsresistansen före driftsättning och då lindningarna kan misstänkas ha blivit fuktiga.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP019",
+        "pdf_page_number": 97,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "ABB",
+        "source_url": "https://library.e.abb.com/public/b72746520683cd05c1257dd90035fed7/Standard_Manual_Low_Voltage_all_lang_lowres01-2010.pdf",
+        "source_tier": "B",
+        "publisher": "ABB",
+        "document_sha256": "EA9AB6352EAE9A994FFE8C9C34F0D8DC9EE4AC537874557D17796B4701731861",
+        "page_text_sha256": "3c6ce578b0cabc3066e44a39d3ce59ca64c4d962b7c81b32c69d0d7aea8b939d",
+        "pump_type": "low_voltage_induction_motor",
+        "service": "pump_driver_and_general_rotating_machinery",
+        "applicability_scope": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "isolationssystemet kan misstänkas ha blivit fuktigt",
+          "head_type": "FaultMode",
+          "relation": "manifests_as",
+          "tail_surface": "mätta isolationsresistansen",
+          "tail_type": "InspectionMethod",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+          "evidence_text": "Mät isolationsresistansen före driftsättning och då lindningarna kan misstänkas ha blivit fuktiga.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 7627,
+            "end": 7756,
+            "text": "Mät isolationsresistansen före driftsättning och då                          \n     lindningarna kan misstänkas ha blivit fuktiga."
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0067",
+            "start": 0,
+            "end": 51,
+            "text": "Mät isolationsresistansen före driftsättning och då",
+            "bbox": {
+              "bottom": 685.943,
+              "top": 675.943,
+              "x0": 36.0,
+              "x1": 255.69
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0068",
+            "start": 0,
+            "end": 46,
+            "text": "lindningarna kan misstänkas ha blivit fuktiga.",
+            "bbox": {
+              "bottom": 697.943,
+              "top": 687.943,
+              "x0": 36.0,
+              "x1": 233.91
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "schema_type_direction"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction"
+          ],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0067",
+              "start": 0,
+              "end": 51,
+              "text": "Mät isolationsresistansen före driftsättning och då",
+              "bbox": {
+                "bottom": 685.943,
+                "top": 675.943,
+                "x0": 36.0,
+                "x1": 255.69
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0068",
+              "start": 0,
+              "end": 46,
+              "text": "lindningarna kan misstänkas ha blivit fuktiga.",
+              "bbox": {
+                "bottom": 697.943,
+                "top": 687.943,
+                "x0": 36.0,
+                "x1": 233.91
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "scope_not_extended"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "motorhöljet måste vara jordat",
+        "head_surface": "motorhöljet måste vara jordat",
+        "head_canonical_zh": "电机外壳必须接地",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "inspected_by",
+        "tail": "jordning",
+        "tail_surface": "jordning",
+        "tail_canonical_zh": "接地",
+        "tail_type": "InspectionAction",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP019",
+        "pdf_page_number": 97,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "ABB",
+        "source_url": "https://library.e.abb.com/public/b72746520683cd05c1257dd90035fed7/Standard_Manual_Low_Voltage_all_lang_lowres01-2010.pdf",
+        "source_tier": "B",
+        "publisher": "ABB",
+        "document_sha256": "EA9AB6352EAE9A994FFE8C9C34F0D8DC9EE4AC537874557D17796B4701731861",
+        "page_text_sha256": "3c6ce578b0cabc3066e44a39d3ce59ca64c4d962b7c81b32c69d0d7aea8b939d",
+        "pump_type": "low_voltage_induction_motor",
+        "service": "pump_driver_and_general_rotating_machinery",
+        "applicability_scope": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "motorhöljet måste vara jordat",
+          "head_type": "Component",
+          "relation": "inspected_by",
+          "tail_surface": "jordning",
+          "tail_type": "InspectionAction",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+          "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0010",
+            "start": 0,
+            "end": 46,
+            "text": "Motorhöljet måste vara jordat och lindningarna",
+            "bbox": {
+              "bottom": 167.167,
+              "top": 157.167,
+              "x0": 318.061,
+              "x1": 523.601
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0011",
+            "start": 0,
+            "end": 43,
+            "text": "måste laddas ur mot höljet omedelbart efter",
+            "bbox": {
+              "bottom": 179.167,
+              "top": 169.167,
+              "x0": 318.061,
+              "x1": 511.321
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0013",
+            "start": 0,
+            "end": 49,
+            "text": "varje mätning så att risken för elektriska stötar",
+            "bbox": {
+              "bottom": 191.167,
+              "top": 181.167,
+              "x0": 318.061,
+              "x1": 521.871
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0015",
+            "start": 0,
+            "end": 8,
+            "text": "undviks.",
+            "bbox": {
+              "bottom": 203.167,
+              "top": 193.167,
+              "x0": 318.061,
+              "x1": 354.591
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [
+            "unbound_quote"
+          ],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0010",
+              "start": 0,
+              "end": 46,
+              "text": "Motorhöljet måste vara jordat och lindningarna",
+              "bbox": {
+                "bottom": 167.167,
+                "top": 157.167,
+                "x0": 318.061,
+                "x1": 523.601
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0011",
+              "start": 0,
+              "end": 43,
+              "text": "måste laddas ur mot höljet omedelbart efter",
+              "bbox": {
+                "bottom": 179.167,
+                "top": 169.167,
+                "x0": 318.061,
+                "x1": 511.321
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0013",
+              "start": 0,
+              "end": 49,
+              "text": "varje mätning så att risken för elektriska stötar",
+              "bbox": {
+                "bottom": 191.167,
+                "top": 181.167,
+                "x0": 318.061,
+                "x1": 521.871
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0015",
+              "start": 0,
+              "end": 8,
+              "text": "undviks.",
+              "bbox": {
+                "bottom": 203.167,
+                "top": 193.167,
+                "x0": 318.061,
+                "x1": 354.591
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "scope_not_extended"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 4,
+      "normalized": {
+        "head": "lindningarna måste laddas ur mot höljet omedelbart efter varje mätning",
+        "head_surface": "lindningarna måste laddas ur mot höljet omedelbart efter varje mätning",
+        "head_canonical_zh": "每次测量后必须立即移除电缆",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "inspected_by",
+        "tail": "jordning",
+        "tail_surface": "jordning",
+        "tail_canonical_zh": "接地",
+        "tail_type": "InspectionAction",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP019",
+        "pdf_page_number": 97,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "ABB",
+        "source_url": "https://library.e.abb.com/public/b72746520683cd05c1257dd90035fed7/Standard_Manual_Low_Voltage_all_lang_lowres01-2010.pdf",
+        "source_tier": "B",
+        "publisher": "ABB",
+        "document_sha256": "EA9AB6352EAE9A994FFE8C9C34F0D8DC9EE4AC537874557D17796B4701731861",
+        "page_text_sha256": "3c6ce578b0cabc3066e44a39d3ce59ca64c4d962b7c81b32c69d0d7aea8b939d",
+        "pump_type": "low_voltage_induction_motor",
+        "service": "pump_driver_and_general_rotating_machinery",
+        "applicability_scope": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "lindningarna måste laddas ur mot höljet omedelbart efter varje mätning",
+          "head_type": "Component",
+          "relation": "inspected_by",
+          "tail_surface": "jordning",
+          "tail_type": "InspectionAction",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+          "evidence_text": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet omedelbart efter varje mätning så att risken för elektriska stötar undviks.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0010",
+            "start": 0,
+            "end": 46,
+            "text": "Motorhöljet måste vara jordat och lindningarna",
+            "bbox": {
+              "bottom": 167.167,
+              "top": 157.167,
+              "x0": 318.061,
+              "x1": 523.601
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0011",
+            "start": 0,
+            "end": 43,
+            "text": "måste laddas ur mot höljet omedelbart efter",
+            "bbox": {
+              "bottom": 179.167,
+              "top": 169.167,
+              "x0": 318.061,
+              "x1": 511.321
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0013",
+            "start": 0,
+            "end": 49,
+            "text": "varje mätning så att risken för elektriska stötar",
+            "bbox": {
+              "bottom": 191.167,
+              "top": 181.167,
+              "x0": 318.061,
+              "x1": 521.871
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP019:p0097:b0015",
+            "start": 0,
+            "end": 8,
+            "text": "undviks.",
+            "bbox": {
+              "bottom": 203.167,
+              "top": 193.167,
+              "x0": 318.061,
+              "x1": 354.591
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [
+            "unbound_quote"
+          ],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0010",
+              "start": 0,
+              "end": 46,
+              "text": "Motorhöljet måste vara jordat och lindningarna",
+              "bbox": {
+                "bottom": 167.167,
+                "top": 157.167,
+                "x0": 318.061,
+                "x1": 523.601
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0011",
+              "start": 0,
+              "end": 43,
+              "text": "måste laddas ur mot höljet omedelbart efter",
+              "bbox": {
+                "bottom": 179.167,
+                "top": 169.167,
+                "x0": 318.061,
+                "x1": 511.321
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0013",
+              "start": 0,
+              "end": 49,
+              "text": "varje mätning så att risken för elektriska stötar",
+              "bbox": {
+                "bottom": 191.167,
+                "top": 181.167,
+                "x0": 318.061,
+                "x1": 521.871
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP019:p0097:b0015",
+              "start": 0,
+              "end": 8,
+              "text": "undviks.",
+              "bbox": {
+                "bottom": 203.167,
+                "top": 193.167,
+                "x0": 318.061,
+                "x1": 354.591
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "scope_not_extended"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 5,
+      "normalized": {
+        "head": "om referensresistansen inte kan uppnås är lindningen fuktig",
+        "head_surface": "om referensresistansen inte kan uppnås är lindningen fuktig",
+        "head_canonical_zh": "如果参考电阻值无法达到，则电缆可能潮湿",
+        "head_type": "FaultMode",
+        "head_translation_status": "needs_review",
+        "relation": "manifests_as",
+        "tail": "referensresistansen inte kan uppnås",
+        "tail_surface": "referensresistansen inte kan uppnås",
+        "tail_canonical_zh": "参考电阻值无法达到",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP019",
+        "pdf_page_number": 97,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "ABB",
+        "source_url": "https://library.e.abb.com/public/b72746520683cd05c1257dd90035fed7/Standard_Manual_Low_Voltage_all_lang_lowres01-2010.pdf",
+        "source_tier": "B",
+        "publisher": "ABB",
+        "document_sha256": "EA9AB6352EAE9A994FFE8C9C34F0D8DC9EE4AC537874557D17796B4701731861",
+        "page_text_sha256": "3c6ce578b0cabc3066e44a39d3ce59ca64c4d962b7c81b32c69d0d7aea8b939d",
+        "pump_type": "low_voltage_induction_motor",
+        "service": "pump_driver_and_general_rotating_machinery",
+        "applicability_scope": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "om referensresistansen inte kan uppnås är lindningen fuktig",
+          "head_type": "FaultMode",
+          "relation": "manifests_as",
+          "tail_surface": "referensresistansen inte kan uppnås",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+          "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "scope_not_extended"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 6,
+      "normalized": {
+        "head": "lindningen måste torkas i ugn",
+        "head_surface": "lindningen måste torkas i ugn",
+        "head_canonical_zh": "电缆必须在烤箱中干燥",
+        "head_type": "MaintenanceAction",
+        "head_translation_status": "needs_review",
+        "relation": "mitigated_by",
+        "tail": "lindningen fuktig",
+        "tail_surface": "lindningen fuktig",
+        "tail_canonical_zh": "电缆潮湿",
+        "tail_type": "FaultMode",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP019",
+        "pdf_page_number": 97,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "ABB",
+        "source_url": "https://library.e.abb.com/public/b72746520683cd05c1257dd90035fed7/Standard_Manual_Low_Voltage_all_lang_lowres01-2010.pdf",
+        "source_tier": "B",
+        "publisher": "ABB",
+        "document_sha256": "EA9AB6352EAE9A994FFE8C9C34F0D8DC9EE4AC537874557D17796B4701731861",
+        "page_text_sha256": "3c6ce578b0cabc3066e44a39d3ce59ca64c4d962b7c81b32c69d0d7aea8b939d",
+        "pump_type": "low_voltage_induction_motor",
+        "service": "pump_driver_and_general_rotating_machinery",
+        "applicability_scope": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "lindningen fuktig",
+          "head_type": "FaultMode",
+          "relation": "mitigated_by",
+          "tail_surface": "lindningen måste torkas i ugn",
+          "tail_type": "MaintenanceAction",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "只用于泵驱动电机可迁移的电气故障与检查维护证据;不得把其他语言重复页计为独立证据",
+          "evidence_text": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 297.638,
+            "text_units": 75,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [
+          "reoriented_mitigated_target_to_action"
+        ],
+        "batch_reason": "scope_not_extended"
+      },
+      "raw_metadata_preserved_in_response": true
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "6551317a7609ef55a4dfe18a6df9f5874f655372c111d9d8db531976d5732d9a",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "d1b618549f7d2b8aae7a0c4a8c0e0e194c175060d6980c17359fa647ac3f0563"
+  }
+}

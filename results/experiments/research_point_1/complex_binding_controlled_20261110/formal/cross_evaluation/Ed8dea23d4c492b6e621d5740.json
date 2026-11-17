@@ -1,0 +1,124 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T07",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "S",
+        "numeric_order": "NA",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output triple 10 accurately captures the source's cause ('Water flow is very low, the bubble pump is blocked') and the corrective action ('Make sure that flow is increased or a smaller pump is used'). It preserves the disjunctive alternative ('or a smaller pump is used') and the specific object ('bubble pump'). The relation 'manifests_as' is semantically appropriate for a troubleshooting table mapping a fault condition to a remedy. While the machine-readable binding is weak (no unit IDs), the literal meaning is fully retained.",
+        "evidence_quote": "Water flow is very low, the bubble pump is blocked Make sure that flow is increased or a smaller pump is used",
+        "output_refs": [
+          "triples:10"
+        ],
+        "output_quote": "Water flow is very low, the bubble pump is blocked Make sure that flow is increased or a smaller pump is used"
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "Correctly maps the symptom 'pump interior blocked' to the action 'check pump interior'.",
+        "evidence_quote": "The pump interior is blocked Check the pump interior"
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'heat protection switch triggered' to the inspection/action regarding the switch and contacting the supplier.",
+        "evidence_quote": "The heat protection switch of the motor is triggered The heat protection switch of the motor. If this problem often occurs, please contact the supplier."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'coupling loose' to the action 'check and tighten coupling bolt'.",
+        "evidence_quote": "The coupling between the pump and the motor is loose Check and tighten the coupling bolt"
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'pump shaft damaged' to the action 'contact manufacturer to replace'.",
+        "evidence_quote": "The pump shaft is damaged Contact the manufacturer to replace it"
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'air in pump' to the action 'discharge air'.",
+        "evidence_quote": "There is air in the pump Discharge air in the pump"
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'low suction pressure' to the action 'increase pressure'.",
+        "evidence_quote": "Pressure at the pump suction end is low Increase pressure at the pump suction end"
+      },
+      {
+        "index": 7,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'wrong rotating direction' to the action 'replace two phases of wiring'.",
+        "evidence_quote": "The pump rotating direction is wrong Replace two phases of three-phase wiring"
+      },
+      {
+        "index": 8,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'no air discharge in suction pipe' to the action 'discharge air in suction pipe'.",
+        "evidence_quote": "There is no air discharge in the suction pipe Discharge air in the suction pipe."
+      },
+      {
+        "index": 9,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'air leakage at suction end' to the action 'check air leakage position'.",
+        "evidence_quote": "There is air leakage at the suction end Check the air leakage position."
+      },
+      {
+        "index": 10,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'low water flow/bubble pump blocked' to the action 'increase flow or use smaller pump'.",
+        "evidence_quote": "Water flow is very low, the bubble pump is blocked Make sure that flow is increased or a smaller pump is used"
+      },
+      {
+        "index": 11,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'small suction pipe diameter' to the action 'increase pipe diameter'.",
+        "evidence_quote": "The diameter of suction pipe is small Increase the pipe diameter"
+      },
+      {
+        "index": 12,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'bottom valve blocked' to the action 'clean bottom valve'.",
+        "evidence_quote": "The bottom valve is blocked Clean the bottom valve"
+      },
+      {
+        "index": 13,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'impeller/pump chamber blocked' to the action 'clean pump interior'.",
+        "evidence_quote": "The impeller or pump chamber is blocked Clean the pump interior"
+      },
+      {
+        "index": 14,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'diffuser O-ring damaged' to the action 'replace O-ring'.",
+        "evidence_quote": "The O-ring of the diffuser is damaged Replace the O-ring"
+      },
+      {
+        "index": 15,
+        "verdict": "S",
+        "reason": "Correctly maps the fault 'O-ring unsuitable for medium' to the action 'replace with suitable O-ring'.",
+        "evidence_quote": "The O-ring is not suitable for the pumping medium Replace with an O-ring suitable for the pumping medium."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 8358,
+    "eval_count": 1439,
+    "total_duration": 36549425880
+  },
+  "human_Gold": false
+}

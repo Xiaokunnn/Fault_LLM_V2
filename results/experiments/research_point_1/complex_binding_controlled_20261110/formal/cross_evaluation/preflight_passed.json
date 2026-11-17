@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "case": "empty",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data. It fails to retain the instruction to inspect the pump, the condition 'before restart', or the prohibition against running the pump dry.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    },
+    {
+      "case": "correct",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "S",
+        "alternative_joint": "NA",
+        "numeric_order": "NA",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains both essential actions: the inspection requirement and the prohibition against dry running. The negation 'Never' is preserved in the tail surface. The condition 'before restart' is preserved in the first triple's tail. The binding is explicit in the sense that the head 'pump' is linked to the specific instructions, but the relation labels ('inspected_by', 'operates_under') are semantically awkward or incorrect for the imperative nature of the source, though the literal text is fully retained in the tail surfaces. Since the task asks to score what is retained, and the full literal meaning is present in the tail surfaces, literal_complete is S. Explicit_binding is N because the machine-readable relation types do not accurately capture the imperative/prohibitive nature, but the text binding is there. However, the prompt says 'Explicit_binding can be N while literal_complete is S'. The channel is main because triples are used.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [
+          "triples:1",
+          "triples:2"
+        ],
+        "output_quote": "Inspect the pump before restart. Never run the pump dry."
+      }
+    },
+    {
+      "case": "corrupt",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output reverses the temporal condition ('AFTER restart' vs 'before restart') and inverts the negation ('Always run' vs 'Never run'), resulting in a complete loss of the source's intended meaning and safety constraints.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [
+          "triples:1",
+          "triples:2"
+        ],
+        "output_quote": "Inspect the pump AFTER restart. Always run the pump dry."
+      }
+    }
+  ],
+  "synthetic_only": true,
+  "not_semantic_accuracy_certificate": true
+}

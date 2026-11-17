@@ -1,0 +1,70 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "I02",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific prohibition against operating a non-explosion-proof motor in an explosive atmosphere. The output contains a triple (index 4) regarding explosions and injury, but it fails to capture the specific condition (non-explosion-proof motor) and the specific prohibition (do not operate). It treats the explosion as a generic risk rather than the specific causal consequence of the prohibited action defined in the focus. The specific instruction 'do not operate a non-explosion proof motor in an explosive atmosphere' is missing from the triples.",
+        "evidence_quote": "If the pump is powered by an electric motor, do not operate a non-explosion proof motor in an explosive atmosphere.",
+        "output_refs": [
+          "triples:4"
+        ],
+        "output_quote": "An explosion, which may cause severe personal injury or death, could result"
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The source states 'overspeeding the pump may damage both pump and power source.' The triple correctly identifies the cause (overspeeding) and the effect (damage to pump and power source).",
+        "evidence_quote": "overspeeding the pump may damage both pump and power source"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The source states 'exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel.' The triple uses the relation 'indicates' between 'exposed rotating parts...' and 'personnel injury'. This is semantically incorrect; the source describes a causal mechanism (catching -> injury), not a symptom indicating a fault. Furthermore, the head is a long descriptive clause, not a canonical entity, and the relation type is misapplied.",
+        "evidence_quote": "exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The source states 'Do not operate the pump without the guard in place over the rotating parts.' The triple maps this to head 'Do not operate...' (InspectionAction) and tail 'installation instructions' (Standard) with relation 'located_in'. This is incorrect. The source is a safety instruction/prohibition, not an inspection action located in instructions. The tail 'installation instructions' is not the object of the relation; the instruction itself is the content. The relation 'located_in' is not supported by the text which is a direct command.",
+        "evidence_quote": "Do not operate the pump without the guard in place over the rotating parts"
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The source states 'An explosion, which may cause severe personal injury or death, could result.' The triple maps head 'An explosion...' (Risk) to tail 'explosion' (FaultMode) with relation 'increases_risk_of'. This is circular and semantically flawed. The head is the event itself, and the tail is the same event. The relation 'increases_risk_of' implies the head causes the tail, which is tautological or incorrect. The source describes the consequence of the explosion (injury/death), which is missing from the triple's tail.",
+        "evidence_quote": "An explosion, which may cause severe personal injury or death, could result"
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The source states 'Install, connect and operate the motor in accordance with the National Electric Code and all local codes.' The triple correctly identifies the action (Install, connect and operate...) and the standard it is specified by (National Electric Code...). The relation 'specified_by' is appropriate for an action governed by a standard.",
+        "evidence_quote": "Install, connect and operate the motor in accordance with the National Electric Code and all local codes"
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The source states 'If there is a conflict between the instructions in the manual accompanying the unit and the National Electric Code or applicable local code, the National or Local code shall take precedence.' The triple maps head 'If there is a conflict...' (Standard) to tail 'instructions in the manual...' (InspectionAction) with relation 'specifies'. This is incorrect. The source establishes a precedence rule, not that the standard 'specifies' the manual instructions. The manual instructions are the object of the conflict, not the specification. The relation and roles are misassigned.",
+        "evidence_quote": "If there is a conflict between the instructions in the manual accompanying the unit and the National Electric Code or applicable local code, the National or Local code shall take precedence"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2486,
+    "eval_count": 1185,
+    "total_duration": 32241364651
+  },
+  "human_Gold": false
+}

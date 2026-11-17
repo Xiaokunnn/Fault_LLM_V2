@@ -1,0 +1,114 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T15",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output triples do not contain any information regarding pressure relief valves, torque limiting devices, rupture disks, or the requirement for protection on both sides of the pump if rotation is reversed. The output focuses on general safety warnings about operating conditions and physical hazards (fingers in chamber), completely omitting the specific pressure protection mechanisms and conditional requirements described in the focus.",
+        "evidence_quote": "THE PUMP must be provided with pressure protection. This may be provided through a relief valve mounted directly on the pump, an in-line pressure relief valve, a torque limiting device, or a rupture disk. If pump rotation may be reversed during operation, pressure protection must be provided on both sides of pump.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T16",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output triples do not mention the restriction that pressure relief valves cannot be used to control pump flow or regulate discharge pressure. The output contains unrelated safety warnings about exceeding rated parameters and physical safety, but fails to capture the specific functional limitation of the relief valve described in the focus.",
+        "evidence_quote": "Pressure relief valves cannot be used to control pump flow or regulate discharge pressure.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The relation 'increases_risk_of' between 'DO NOT exceed the pumps rated pressure...' and 'DO NOT place fingers into the pumping chamber...' is not supported by the source. The source lists these as separate, independent safety warnings (one under WARNING, one under DANGER) without establishing a causal or risk-increasing relationship between them. They are distinct prohibitions.",
+        "evidence_quote": "DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The relation 'increases_risk_of' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT place fingers into the pumping chamber...' is not supported by the source. These are separate safety instructions listed in different sections (DANGER vs DANGER) with no stated causal link.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The relation 'increases_risk_of' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT exceed the pumps rated pressure...' is not supported by the source. These are independent safety warnings.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service."
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT place fingers into the pumping chamber...' and 'DO NOT exceed the pumps rated pressure...' is incorrect. The source does not describe one as a symptom or manifestation of the other. They are separate prohibitions.",
+        "evidence_quote": "DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated. ... DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service."
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT place fingers into the pumping chamber...' is incorrect. The source does not link these as symptom/manifestation.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT exceed the pumps rated pressure...' is incorrect. The source does not link these as symptom/manifestation.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service."
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "The relation 'causes' between 'DO NOT exceed the pumps rated pressure...' and 'DO NOT place fingers into the pumping chamber...' is incorrect. The source does not state that exceeding pressure causes the risk of placing fingers in the chamber. These are independent safety rules.",
+        "evidence_quote": "DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "The relation 'causes' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT place fingers into the pumping chamber...' is incorrect. The source does not establish a causal link between these two separate warnings.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 9,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT place fingers into the pumping chamber...' and 'DO NOT exceed the pumps rated pressure...' is incorrect. The source does not describe one as a manifestation of the other.",
+        "evidence_quote": "DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated. ... DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service."
+      },
+      {
+        "index": 10,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT place fingers into the pumping chamber...' is incorrect. The source does not link these as symptom/manifestation.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT place fingers into the pumping chamber, or its connection ports, or into any part of the drive train if there is any possibility of the pump shaft being rotated."
+      },
+      {
+        "index": 11,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' between 'DO NOT operate pump if the suction or discharge piping is not connected' and 'DO NOT exceed the pumps rated pressure...' is incorrect. The source does not link these as symptom/manifestation.",
+        "evidence_quote": "DO NOT operate pump if the suction or discharge piping is not connected. ... DO NOT exceed the pumps rated pressure, speed, and the pump, or change the system/duty parameters from those the pump was originally supplied, without confirming its suitability for the new service."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5090,
+    "eval_count": 2117,
+    "total_duration": 49980093213
+  },
+  "human_Gold": false
+}

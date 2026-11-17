@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "case": "empty",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data. The source mandates two distinct actions: inspecting the pump before restart and never running it dry. Since the output is empty, it retains none of these required meanings, conditions, or prohibitions.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    },
+    {
+      "case": "correct",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "S",
+        "alternative_joint": "NA",
+        "numeric_order": "NA",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains both essential instructions: the requirement to inspect the pump before restart and the prohibition against running it dry. The negation 'Never' is preserved in the tail surface of the second triple. The condition 'before restart' is preserved in the tail surface of the first triple. While the machine-readable binding is weak (using full sentences as tails), the literal meaning is fully retained.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [
+          "triples:1",
+          "triples:2"
+        ],
+        "output_quote": "Inspect the pump before restart. Never run the pump dry."
+      }
+    },
+    {
+      "case": "corrupt",
+      "assessment": {
+        "focus_id": "synthetic",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output reverses the temporal condition ('AFTER restart' vs 'before restart') and inverts the negation ('Always run' vs 'Never run'), resulting in a complete loss of the source's intended meaning and safety constraints.",
+        "evidence_quote": "Inspect the pump before restart. Never run the pump dry.",
+        "output_refs": [
+          "triples:1",
+          "triples:2"
+        ],
+        "output_quote": "Inspect the pump AFTER restart. Always run the pump dry."
+      }
+    }
+  ],
+  "synthetic_only": true,
+  "not_semantic_accuracy_certificate": true
+}

@@ -1,0 +1,159 @@
+{
+  "trial": {
+    "arm": "B0",
+    "input_sha256": "dcae9e4ad22cea8928b385a8380026ea912ac126cf78c2431187b46450d96f1c",
+    "page_key": "MP020:p0018",
+    "seed": 2026111002,
+    "split": "independent",
+    "trial_id": "B0_MP020_p0018_2026111002"
+  },
+  "used_total_tokens": 3277,
+  "used_output_tokens": 1042,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 2235,
+      "output_tokens": 1042,
+      "total_tokens": 3277,
+      "elapsed_seconds": 38.948848951025866,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "The pump must be filled with liquid before it is started.",
+        "head_canonical_zh": "泵启动前必须充满液体",
+        "head_type": "InspectionMethod",
+        "relation": "specifies",
+        "tail_surface": "Cornell Redi-Prime®",
+        "tail_canonical_zh": "Cornell Redi-Prime®",
+        "tail_type": "Equipment",
+        "evidence_text": "The pump must be filled with liquid before it is started.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Automatic priming is used for unattended operation.",
+        "head_canonical_zh": "自动充液用于无人操作",
+        "head_type": "InspectionMethod",
+        "relation": "specifies",
+        "tail_surface": "Cornell Redi-Prime®",
+        "tail_canonical_zh": "Cornell Redi-Prime®",
+        "tail_type": "Equipment",
+        "evidence_text": "Automatic priming is used for unattended operation.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Electric sensing and controls prime the unit before start-up.",
+        "head_canonical_zh": "电感测和控制在启动前充液",
+        "head_type": "InspectionMethod",
+        "relation": "specifies",
+        "tail_surface": "Cornell Redi-Prime®",
+        "tail_canonical_zh": "Cornell Redi-Prime®",
+        "tail_type": "Equipment",
+        "evidence_text": "Electric sensing and controls prime the unit before start-up.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "There is no water carry-over.",
+        "head_canonical_zh": "没有水携带过",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "Cornell Redi-Prime®",
+        "tail_canonical_zh": "Cornell Redi-Prime®",
+        "tail_type": "Equipment",
+        "evidence_text": "Cornell Redi-Prime, fully automated, self-priming pumps are ideal for unattended operation. Our positive sealing float box and diaphragm vacuum pump configuration insures that there is no water carry-over.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP020:p0018:t00:r000:c00",
+          "MP020:p0018:t00:r001:c00"
+        ],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Cornell Redi-Prime pumps handle air/water mixtures with ease.",
+        "head_canonical_zh": "Cornell Redi-Prime 泵轻松处理空气/水混合物",
+        "head_type": "InspectionMethod",
+        "relation": "specifies",
+        "tail_surface": "Cornell Redi-Prime®",
+        "tail_canonical_zh": "Cornell Redi-Prime®",
+        "tail_type": "Equipment",
+        "evidence_text": "Cornell Redi-Prime pumps handle air/water mixtures with ease.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 3,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 4,
+      "normalization_error": "ValueError: Chinese canonical labels must contain Han characters",
+      "included": false
+    },
+    {
+      "index": 5,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "ecc8503021c930fd0d9e743675b71545654a7011b12ecb54a56a1a34a2282d7c",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "d66153b77b7783121b8d9466f4a85892036143bb08a20040c84466853f99d7f2"
+  }
+}

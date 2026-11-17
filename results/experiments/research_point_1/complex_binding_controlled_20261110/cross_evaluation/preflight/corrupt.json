@@ -1,0 +1,16 @@
+{
+  "model": "qwen3.8:27b",
+  "created_at": "2026-11-10T08:35:47.686509987Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"assessments\": [\n    {\n      \"focus_id\": \"synthetic\",\n      \"atomic\": \"N\",\n      \"condition_object\": \"N\",\n      \"negation\": \"N\",\n      \"alternative_joint\": \"NA\",\n      \"numeric_order\": \"N\",\n      \"evidence_support\": \"N\",\n      \"literal_complete\": \"N\",\n      \"explicit_binding\": \"N\",\n      \"channel\": \"none\",\n      \"reason\": \"The output reverses the temporal condition ('AFTER restart' vs 'before restart') and inverts the negation ('Always run' vs 'Never run'), resulting in a complete loss of the source's intended meaning and safety constraints.\",\n      \"evidence_quote\": \"Inspect the pump before restart. Never run the pump dry.\",\n      \"output_refs\": [\n        \"triples:1\",\n        \"triples:2\"\n      ],\n      \"output_quote\": \"Inspect the pump AFTER restart. Always run the pump dry.\"\n    }\n  ],\n  \"relation_verdicts\": [\n    {\n      \"index\": 1,\n      \"verdict\": \"N\",\n      \"reason\": \"The output tail 'Inspect the pump AFTER restart' contradicts the source condition 'before restart'.\",\n      \"evidence_quote\": \"Inspect the pump before restart.\"\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"N\",\n      \"reason\": \"The output tail 'Always run the pump dry' contradicts the source prohibition 'Never run the pump dry'.\",\n      \"evidence_quote\": \"Never run the pump dry.\"\n    }\n  ]\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5851303938,
+  "load_duration": 546995065,
+  "prompt_eval_count": 714,
+  "prompt_eval_duration": 593608000,
+  "eval_count": 370,
+  "eval_duration": 4702021000
+}

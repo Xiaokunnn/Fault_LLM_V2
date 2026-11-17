@@ -1,0 +1,182 @@
+"""All requested structural views, cross-document cases and exact conclusions."""
+from common_audit import *
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
+
+def main():
+    if (OUT/'REPORT.md').exists():print('REUSE report');return
+    d,entities,E,S,C,src=dataset();stats=read(OUT/'structure_complete.json');cross=read(OUT/'cross_document_complete.json');effect=read(OUT/'implications_complete.json');defs=read(OUT/'definitions.json');rows=stats['graphs'];by={r['view']:r for r in rows};cold=read(OUT/'cold_endpoint_ledger.jsonl');causes=stats['cold_causes'];shared=read(OUT/'cross_document_shared_claims.jsonl');sem=read(OUT/'semantic_entity_pair_candidates.jsonl');facts=read(OUT/'semantic_claim_pair_candidates.jsonl');alias=read(OUT/'alias_hypothesis_clusters.jsonl');components=read(OUT/'component_provenance_summary.jsonl')
+    # Supplemental type/label summaries retain the primary typed identity.
+    node=list(csv.DictReader((OUT/'node_degrees.csv').open()));types=[]
+    for typ in sorted({e['entity_type'] for e in E.values()}):
+        rr=[r for r in node if r['view']=='G_full' and r['entity_type']==typ];degree=[int(r['neighbor_degree']) for r in rr]
+        types.append(dict(entity_type=typ,entities=len(rr),degree1=sum(k==1 for k in degree),degree1_fraction=sum(k==1 for k in degree)/len(rr),degree_ge2=sum(k>=2 for k in degree)))
+    csvsave('full_degree_by_entity_type.csv',types)
+    textgroups=defaultdict(list)
+    for e in E.values():textgroups[I.norm(e['label_zh'])].append(e)
+    labelclusters=[dict(label=k,entities=rr,types=sorted({r['entity_type'] for r in rr}),identity_not_merged=True) for k,rr in sorted(textgroups.items()) if len({r['entity_type'] for r in rr})>=2]
+    save(OUT/'cross_type_same_label_clusters.jsonl',labelclusters)
+    endpoint_expressions=defaultdict(list)
+    for r in d['normalized']:
+        endpoint_expressions[(r['head_type'],I.norm(r['head_canonical_zh']),r['tail_type'],I.norm(r['tail_canonical_zh']))].append(r)
+    relation_variants=[dict(endpoints=list(k),relations=sorted({x['relation'] for x in rr}),documents=sorted({x['doc_id'] for x in rr}),record_ids=[x['triple_id'] for x in rr],sources=[I.source_pointer(x) for x in rr],same_fact_or_conflict_not_established=True) for k,rr in sorted(endpoint_expressions.items()) if len({x['relation'] for x in rr})>1 and len({x['doc_id'] for x in rr})>1]
+    save(OUT/'relation_label_variants_same_endpoints.jsonl',relation_variants)
+    ctable=[dict(reason=k,endpoint_occurrences=causes.get(k,0),fraction=causes.get(k,0)/366) for k in ['only_this_target_claim_in_full_graph','other_full_claims_all_within_own_fact_group','other_test_groups_jointly_remove_remaining_incidence','validation_groups_remove_remaining_incidence']]
+    csvsave('cold_causes_complete_categories.csv',ctable)
+    # Compact source-linked casebook, without changing original semantic labels.
+    cases=[]
+    def claimcase(cid,title,explanation):
+        c=C[cid];return dict(title=title,claim_id=cid,head=E[c['head_entity_id']],relation=c['relation'],tail=E[c['tail_entity_id']],fold=S[cid]['fold'],group=S[cid]['group_id'],sources=[I.source_pointer(x) for x in src[cid]],explanation=explanation,expert_adjudication=False)
+    first=next(x for x in read(OUT/'cold_fact_ledger.jsonl') if x['single_status']=='both_cold')
+    cases.append(claimcase(first['claim_id'],'原完整图的单Claim双实体分量','完整图中这两个端点有该关系，度不是0；遮蔽该Claim后两端都无剩余关系，属于典型单边分量断开。'))
+    for reason,title in [('other_full_claims_all_within_own_fact_group','事实组共遮蔽'),('validation_groups_remove_remaining_incidence','额外移除验证组')]:
+        x=next(x for x in cold if x['reason']==reason);case=claimcase(x['claim_id'],title,canonical(x));eid=x['entity_id'];case['all_full_incident_claims']=[claimcase(cid,'关联Claim','保留各自fold和源文') for cid,c in C.items() if eid in [c['head_entity_id'],c['tail_entity_id']]];cases.append(case)
+    for x in shared[:2]:cases.append(dict(title='同源家族跨文档的相同Claim',data=x,explanation='已经聚合，不是遗漏；不同文档与不同设备范围不等同独立证据或条件完全一致。'))
+    for fragment,why in [('轴承损坏','可能近义但须保留部件/工况范围'),('o型圈(21)','编号不同的部件不能凭高相似度合并'),('泵和电机轴承','轴承与轴并非同一部件，名称近似可误导')]:
+        choices=[x for x in sem if fragment in x['entity_a']['label_zh'] or fragment in x['entity_b']['label_zh']]
+        if choices:
+            x=choices[0];case=dict(title='语义相似实体的正反例',pair=x,explanation=why)
+            case['sources_a']=[I.source_pointer(z) for c in C.values() if x['entity_a']['entity_id'] in [c['head_entity_id'],c['tail_entity_id']] for z in src[c['claim_id']]][:2]
+            case['sources_b']=[I.source_pointer(z) for c in C.values() if x['entity_b']['entity_id'] in [c['head_entity_id'],c['tail_entity_id']] for z in src[c['claim_id']]][:2];cases.append(case)
+    for x in facts:
+        if not x['same_full_component'] or ('润滑剂' in x['entities_a'][0]['label_zh'] and x['min_endpoint_cosine']>=.9):cases.append(dict(title='相似关系并不自动构成条件等价事实',data=x,explanation='不自动合并；共享故障/型号差异/动作编号及阶段必须区分。'))
+    pathcases=[]
+    for x in read(OUT/'paths/G_full_paths.jsonl'):
+        if x['directed'] and x['hops']==3:
+            pathcases.append(dict(nodes=[E[e] for e in x['nodes']],steps=[[claimcase(cid,'路径中的已记录关系','仅表示结构上存在') for cid in ids] for ids in x['claim_choices']],caution='不同设备范围不具共同pump_type签名，不认定可传递诊断链'))
+    save(OUT/'directed_three_hop_cases.jsonl',pathcases);save(OUT/'casebook.jsonl',cases)
+    lines=['# 实际记录案例\n','本文件是只读AI分析，原始标签、图谱和模型均未改变；相似度和可定位原文不是专家事实真值。\n']
+    def source_text(rr):
+        return '\n\n'.join(f"- {r['doc_id']}物理页{r['pdf_page_number']}，家族{r.get('source_family_id')}，设备{r.get('pump_type')}：{r.get('evidence_text','')[:550]}" for r in rr[:3])
+    for i,x in enumerate(cases):
+        lines.append(f"## {i+1}. {x['title']}")
+        if 'claim_id' in x:lines += [f"{x['claim_id']}：{x['head']['label_zh']} → {x['relation']} → {x['tail']['label_zh']}；fold={x['fold']}",x['explanation'],source_text(x['sources'])]
+        elif 'pair' in x:
+            y=x['pair'];lines += [f"{y['pair_id']}：{y['entity_a']['label_zh']} / {y['entity_b']['label_zh']}，cos={y['cosine']:.4f}；同完整分量={y['same_full_component']}",x['explanation'],source_text(x['sources_a']),source_text(x['sources_b'])]
+        else:
+            y=x['data'];lines.append(x['explanation'])
+            if 'sources' in y:lines += [str(y['claim_id']),source_text(y['sources'])]
+            else:lines += [str(y['pair_id']),source_text(y['sources_a']),source_text(y['sources_b'])]
+    lines += ['\n三个有向三跳路径的所有端点、关系与源文另见directed_three_hop_cases.jsonl。它们跨家族且没有共同设备类型字面签名，不能直接作为三条有效因果链。',
+        '事实组共遮蔽和验证组额外删除的全部关联Claim及fold在casebook.jsonl内，不能只靠例图推断原因。']
+    save(OUT/'CASEBOOK.md','\n\n'.join(lines)+'\n')
+    # Complete report with original denominators, source overlap and implications.
+    report='''# RP1完整图谱结构与跨文档关联专项检查
+
+只读诊断，2026-11-16。**完整图没有零度实体，但大部分实体是叶节点，图谱高度碎片化；97.8%是遮蔽后的测试关系冷端点比例，不能外推成完整图无关联比例。**
+
+未重新抽取、训练、评分、改写图谱或修改RP2/RP3。输入限定expanded1456、原8000级候选、15构建文档及最近实验的冻结数据/分数。域对象833c8040058055434c7f6a9595ec524c3935755f。
+
+## 1. 三个视图和计数口径
+
+全部视图使用expanded1456原2150个entity_id，含13类业务实体，**不混入Document/Claim/Evidence/Provenance记录节点**。度数为不同语义实体邻居数，Assertion重复证据不增加邻居。完整图Schema有15关系定义，实际出现14类；未出现的类别在关系表保留0。1400 Claim均通过当前Domain/Range结构检查，这不代表事实专家确认。
+
+G_full是1400个完整Claim；G_masked删除224测试事实/证据组内Claim与同一无序别名端点对的等价/逆向候选，实际没有额外删除非测试Claim，保留1176；G_train再移除187验证Claim，保留989。G_masked是结构诊断视图，不是原文检索可见性视图，不把整页屏蔽等同删除所有同页业务边。
+
+同一Claim可能有不同条件/模态的Assertion；图连通和路径存在不证明适用条件兼容。G_train对应旧冷度统计的基础图。G2还实际学习168条保守候选（含271个目录外端点），完整检索索引另有3671条不确定上下文；不能把候选上下文视为已确认基础事实。本次加入G2辅助后，测试147/72/5的ID出现分类仍未改变。
+
+| 视图 | 实体目录/活跃实体 | Claim/Assertion记录 | 不重复邻接对 | 零度 | 度1 | 度2 | 度≥3 | 分量（含零度） | 严格单Claim双实体分量 | 最大分量 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+'''
+    for r in rows:report+=f"| {r['view']} | {r['inventory_entities']}/{r['active_entities']} | {r['claims']}/{r['assertion_records']} | {r['unique_undirected_pairs']} | {r['zero_degree']} ({r['zero_degree']/2150:.2%}) | {r['degree1']} ({r['degree1']/2150:.2%}) | {r['degree2']} ({r['degree2']/2150:.2%}) | {r['degree_ge3']} ({r['degree_ge3']/2150:.2%}) | {r['components_including_zero']} | {r['two_node_exactly_one_claim_components']} | {r['largest_component_entities']} ({r['largest_component_fraction']:.2%}) |\n"
+    report+='''
+零度实体没有邻边；度1实体仍有一条到其他实体的连接；单边小分量则是两个实体仅由一个Claim相连且不连接其他实体。这三者不能互换。完整图614个严格单Claim双实体分量含1228实体，占57.12%；614/1400=43.86%的Claim位于这种分量。
+
+完整三元组保证两个端点由本条边相连，不保证与其他三元组共享实体。完整图端点目录本就来自已发布关系，0零度不构成抽取覆盖或事实质量的证据；真正需要观察的是跨三元组连接与多跳结构。
+
+1456 Assertion、1400不重复有向关系、1398无序邻接对的差异已单列，不用56条额外证据记录虚增结构。完整图平均邻居度1.3005、无向密度0.000605；754/758分量为树，独立无向循环总数6。稀疏判断来自这些实际结构，而非用训练冷比例替代。
+
+## 2. 二跳、三跳与业务关系
+
+| 视图 | 无向二跳 | 无向三跳 | 有向二跳节点路径 | 有向三跳节点路径 | 有向二跳关系标记路径 |
+| --- | --- | --- | --- | --- | --- |
+'''
+    for r in rows:report+=f"| {r['view']} | {r['undirected_2hop_node_paths']} | {r['undirected_3hop_node_paths']} | {r['directed_2hop_node_paths']} | {r['directed_3hop_node_paths']} | {r['directed_2hop_relation_paths']} |\n"
+    report+='''
+路径不重复节点，无向反向同一路只计一次，有向路径沿真实关系箭头；不同关系标签展开另计。不是允许来回走的walk，也不是自动生成的传递因果边。所有路径逐条账本在paths/；中心边/楔形独立公式重算已匹配。
+
+G_full二跳关系组合中causes→causes仅6，causes→mitigated_by为88、causes→prevented_by为47、causes→diagnosed_by为45；三跳只有3条causes→causes→prevented_by。三条路径都需要跨文档/家族，且无共同pump_type字面签名，不能自动叫有效诊断因果链。无向2598个二跳常来自共享故障/部件的星形结构，与267条有向路径含义不同。
+
+全部15类关系的Claim/Assertion、端点、叶节点和单边分量分布见relation_structure.csv；每文档在三个视图的边、实体、分量见document_structure.csv。共享Claim可在多文档重复计源分布，文档行不能简单相加当全球Claim数。
+
+## 3. 冷端点究竟从哪里来
+
+对每条测试Claim分别作逐步骤只读反事实：只删当前Claim、删它所在事实/证据组、删所有测试组、最后再删验证组。没有重新划分或重新训练。
+
+| 移除口径 | 温端点关系 | 单冷关系 | 双冷关系 | 冷实体ID去重数 |
+| --- | --- | --- | --- | --- |
+'''
+    for r in csv.DictReader((OUT/'cold_by_removal_stage.csv').open()):report+=f"| {r['stage']} | {r['warm']} | {r['one_cold']} | {r['both_cold']} | {r['unique_cold_endpoint_ids']} |\n"
+    report+='''
+224关系=448次端点出现。最终冷端点366次、321个不同实体ID；它们在完整图中全部度≥1。按互斥首要原因：
+
+| 原因 | 冷端点出现次数 | 占366次 |
+| --- | --- | --- |
+'''
+    labels={'only_this_target_claim_in_full_graph':'完整图只参与当前一个Claim','other_full_claims_all_within_own_fact_group':'其余完整关系全部属于自身同一事实/证据组','other_test_groups_jointly_remove_remaining_incidence':'其他测试组共同移除剩余邻边','validation_groups_remove_remaining_incidence':'再移除验证组才变冷'}
+    for x in ctable:report+=f"| {labels[x['reason']]} | {x['endpoint_occurrences']} | {x['fraction']:.2%} |\n"
+    report+='''
+**结论不是“全是原图问题”或“全是划分问题”。** 遮蔽触发零度，但原图的单事实端点导致删一条就断：只删单目标已经206/224关系至少一端冷；自身组共遮蔽增至219/224；再移除验证组只把7条单冷变成双冷，没有增加“至少一端冷”的关系数。全组遮蔽相同引文/单元/别名关系是防泄漏约束，不应为了造温测试而恢复这些边。
+
+因此，原图低度是主要结构脆弱性，自身事实/证据组共遮蔽进一步增强冷度；不能将97.8%解释成完整图有97.8%零连接事实，也不能归咎于验证集比例本身。逐端点及所有关联Claim/fold均可追溯。
+
+## 4. 跨文档共性：必须区分四个层次
+
+1. **共同主题/术语出现：** 用已有原文—规范名映射查15份解析文档，轴承、振动、泄漏各在15份出现，泵14、叶轮13、汽蚀12；这是字面提及探针，不是共同事实数、正确率或漏抽率。
+2. **正式共享实体与连接：** 82个实体有多文档来源，73个连接不同文档的不同Claim；57个可连接不同声明家族。47个完整分量含多文档，40个含多声明家族。跨文档并非完全断开。
+3. **完全相同Claim：** 只有12/1400（0.86%）由多个文档支持，全部来自同一声明来源家族，跨家族同Claim为0。它们已经聚合，不能称未融合；同Claim内条件仍可能不同。不同家族也是声明的来源独立性代理，不等于严格统计独立。
+4. **初始候选与语义相似：** 8003规范化记录有7583个精确类型/规范名/关系表达，跨文档重复21簇，其中4簇跨家族、16簇在正式图有对应Claim；这些状态混有合格/隔离/拒绝，不能一律当正确事实。完全相同表达少，不证明手册没有共性；共性还可能体现为共享概念和不同粒度/条件。
+
+82共享实体只占2150的3.81%。99条有向二跳路径需要不同文档拼接，80条需要不同声明家族，说明已有真实结构跨文档联系；是否条件可兼容仍未确认。重复文档支持、跨文档连接和同一事实是不同计数，不能直接相加。
+
+## 5. 命名、粒度和型号是否造成未连接
+
+同类型完全相同规范名的重复实体组为0，不能简单归因于同名ID未去重。已有同类型源语别名映射有18簇、54实体；假设全部合并仅减少36个ID：目录2150→2114、分量758→725、最大分量54→71（3.36%）。这是诊断性假设商图，所有视图使用同一映射，**没有合并正式实体，也未确认这些映射在所有型号下正确**。
+
+冻结预训练BGE的同类型、可跨文档近邻检索得到168个cos≥0.85实体对（每实体最多5个，非穷尽），150对位于不同完整分量；其中49对cos≥0.90。这是待核查相似候选，不是168个已确认别名。相同关系且两端cos均≥0.85的Claim对仅14、≥0.90的5，对应不连通分量的仅1；该例是“叶轮(0120)→拆卸叶轮(0120)”与“叶轮(27)→拆卸叶轮(27)”，编号/型号差异不能直接抹除。
+
+可疑近义有“轴承损坏/损坏轴承”“检查泄漏/泄漏检查”；反例有“泵和电机轴承/泵和电机轴”（cos0.9626）和“O型圈(21)/(12)”（cos0.9616）。同词不同类型、父子概念、动作包含关系、编号和条件都可能被名称相似度误合并；跨类型同名组单列cross_type_same_label_clusters.jsonl，不改身份。
+
+实体长度/编号分布见entity_granularity.csv：503维护动作中71个名称≥20字符，252检查动作中21个≥20；不能夸称所有端点都是整段句子。现有别名不足解决整体碎片化，更多语义相似也未被证明都可安全归并。本轮不能估算“合并后一定恢复多少正确知识”。
+
+## 6. 对transport_R3和结构模型的影响
+
+224测试中90个目标本身在完整图是单Claim双实体分量，118个在更大分量但至少有一个完整图叶节点，只有16个两端完整邻居度≥2。原图最大分量只含3个测试目标。原评测适于观察文本/类比对低度和冷端点的恢复，不能充分证明丰富图结构推理。
+
+从既有448个方向查询的R3上下文读取7168槽位：414同锚点、192不同锚点但同完整分量、3126锚点在其他完整分量、3436锚点不在基础实体目录。6396槽（89.23%）两个端点都不在查询锚点的完整图分量。**transport主要计算非邻接语义类比，而非在完整图已有路径上做多跳推理。** 这是输入来源分布，不是新因果消融，不能断言每个外部分量候选都贡献了收益。
+
+旧保存结果按完整图结构重新分层见saved_model_results_by_full_graph_shape.csv，没有重算模型分数或改变测试。总体固定迁移MRR0.235458对G2的0.224025保持原结果；该收益不能证明模型学到了密集图上的结构规律，也不能用平均收益掩盖错误角色、跨型号迁移和近义实体混淆。
+
+仅增加图传播层不会凭空产生已缺失的共享身份和长路径；相似度直接合并也会损害型号/角色。当前算法解释应明确分开：文本表征、跨分量类比、原有结构支持和条件适用性。后续若设置结构专项评价，需要预先固定支持分层和泄漏规则；本轮不改数据划分、不挑容易目标、不实施新算法。
+
+## 7. 五个问题的直接回答
+
+- **完整图是否稀疏？** 是：0零度，但87.02%度1、614单边分量、最大分量2.51%、仅3条有向三跳。不是所有三元组互不关联，也不是零度实体占97.8%。
+- **冷度主要从哪里来？** 遮蔽造成零度；多数被遮蔽端点原只参与一个Claim，另有自身证据组共遮蔽。验证集额外移除影响较小，不能把结果只解释为随机划分坏。
+- **文档有多少共性？** 主题提及广、正式共享实体82和跨文档分量47；精确共享Claim12、跨声明家族共享Claim0。候选21簇与相似度候选不等于已确认共同事实。
+- **未连接是否来自命名/粒度/型号？** 存在可回读线索，但已存别名敏感性只改善少量连接，不能解释全部稀疏；型号、编号和语义角色不同者不应强合并。
+- **如何理解既有算法？** 当前数据对非邻接文本类比更友好，丰富结构支持不足；transport收益不能包装为多跳因果补全或新事实准确率。
+
+## 复查与保全
+
+逐节点、分量、关系、文档、路径、冷端点、跨文档簇和源文案例全部在本目录；定义见definitions.json，案例见CASEBOOK.md。复现见REPRODUCE.md。前轮868文件和域输入哈希、全部路径的独立计数恒等式及147/72/5复算均已核验。没有新的模型/抽取调用，正式图谱、RP2/RP3、历史文件及标签不变。
+'''
+    modelrows=list(csv.DictReader((OUT/'saved_model_results_by_full_graph_shape.csv').open()))
+    modeltable=['| 完整图目标形态 | 关系数 | G2 MRR | transport_R3 MRR | 修正神经模型MRR |','| --- | --- | --- | --- | --- |']
+    for tag,label in [('full_single_claim_pair_component','单Claim双实体分量'),('full_larger_component_with_leaf_endpoint','较大分量但有叶端点'),('full_both_endpoints_degree_ge2','完整图双端度≥2')]:
+        select={x['method']:x for x in modelrows if x['diagnostic_stratum']==tag}
+        modeltable.append(f"| {label} | {select['simkgc_G2']['facts']} | {float(select['simkgc_G2']['link_MRR']):.6f} | {float(select['transport_R3']['link_MRR']):.6f} | {float(select['native_query_full']['link_MRR']):.6f} |")
+    report=report.replace('仅增加图传播层不会凭空产生', '\n'.join(modeltable)+'\n\n以上是原保存分数的描述分层，不是新的独立测试或因果消融。完整图度≥2也不保证遮蔽后有路径，16项类别及5项温端点不足支撑结构强弱的普遍结论。\n\n仅增加图传播层不会凭空产生')
+    report+=f'\n补充：跨类型同名实体组{len(labelclusters)}个、跨文档同类型端点但有多个关系标签的初始表达组{len(relation_variants)}个，分别见对应JSONL；这些可能是不同语义角色或条件，不自动归为错误拆分/同义关系。\n'
+    save(OUT/'REPORT.md',report)
+    # Export independent standard scientific figures, never alter old plots.
+    fig,axes=plt.subplots(1,3,figsize=(14,4));x=np.arange(3)
+    axes[0].bar(x,[r['zero_degree'] for r in rows],label='degree0');bottom=np.array([r['zero_degree'] for r in rows]);axes[0].bar(x,[r['degree1'] for r in rows],bottom=bottom,label='degree1');bottom+=np.array([r['degree1'] for r in rows]);axes[0].bar(x,[2150-r['degree1']-r['zero_degree'] for r in rows],bottom=bottom,label='degree>=2');axes[0].set_xticks(x,[r['view'] for r in rows]);axes[0].set(title='Same 2150-entity inventory',ylabel='Entities');axes[0].legend()
+    stage=list(csv.DictReader((OUT/'cold_by_removal_stage.csv').open()));axes[1].bar(range(4),[int(r['both_cold']) for r in stage],label='Both cold');axes[1].bar(range(4),[int(r['one_cold']) for r in stage],bottom=[int(r['both_cold']) for r in stage],label='One cold');axes[1].set_xticks(range(4),['Single target','Own group','Test groups','Train'],rotation=20);axes[1].set(title='Same 224 targets; removal diagnostics',ylabel='Relations');axes[1].legend()
+    axes[2].bar(['Single pair','Larger + leaf','Both degree>=2'],[90,118,16]);axes[2].tick_params(axis='x',rotation=20);axes[2].set(title='Full-graph shape of test targets',ylabel='Relations');fig.tight_layout();(OUT/'figures').mkdir(exist_ok=True);fig.savefig(OUT/'figures/structure_and_coldness.png',dpi=180);fig.savefig(OUT/'figures/structure_and_coldness.svg');plt.close(fig)
+    print('Report and source-linked casebook completed.',flush=True)
+
+
+if __name__=='__main__':main()

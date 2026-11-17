@@ -1,0 +1,263 @@
+{
+  "trial": {
+    "arm": "B2",
+    "input_sha256": "05fa2a3f9bb8950e18010ea98df2242ca4f63ad1ef817861a47a54f0152814af",
+    "page_key": "MP016:p0029",
+    "seed": 2026111002,
+    "split": "development",
+    "trial_id": "B2_MP016_p0029_2026111002"
+  },
+  "used_total_tokens": 7368,
+  "used_output_tokens": 2113,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 5255,
+      "output_tokens": 2113,
+      "total_tokens": 7368,
+      "elapsed_seconds": 95.71453775698319,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'can' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'performs' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "Osservare la pompa durante le prime ore di funziona-mento verificando che non ci siano rumori insoliti e che la pompa non sia eccessivamente surriscaldata.",
+        "head_canonical_zh": "检查泵在启动后的最初几个小时内是否发出异常声音以及泵是否过热",
+        "head_type": "InspectionAction",
+        "relation": "performs",
+        "tail_surface": "Pompa",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Component",
+        "evidence_text": "Osservare la pompa durante le prime ore di funziona-mento verificando che non ci siano rumori insoliti e che la pompa non sia eccessivamente surriscaldata.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi.",
+        "head_canonical_zh": "如果泵以高速运行或处理热水，泵表面可能会变热",
+        "head_type": "Component",
+        "relation": "can",
+        "tail_surface": "Pompa",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Component",
+        "evidence_text": "Se utilizzata a velocità elevate o con liquidi caldi, la superficie della pompa può riscaldarsi.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "TemperatureIncrease"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Non utilizzare detergenti a base di iodio e fosforo perché queste sostanze aggrediscono la pompa e riducono le sue prestazioni.",
+        "head_canonical_zh": "不要使用含碘和磷的清洁剂，因为这些物质会损害泵并降低其性能",
+        "head_type": "Standard",
+        "relation": "specifies",
+        "tail_surface": "Detergenti a base di iodio e fosforo",
+        "tail_canonical_zh": "含碘和磷的清洁剂",
+        "tail_type": "Component",
+        "evidence_text": "Non utilizzare detergenti a base di iodio e fosforo perché queste sostanze aggrediscono la pompa e riducono le sue prestazioni.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Verificare che non ci siano vibrazioni o variazioni di temperatura insolite.",
+        "head_canonical_zh": "检查是否存在异常的振动或温度变化",
+        "head_type": "InspectionAction",
+        "relation": "performs",
+        "tail_surface": "Pompa",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Component",
+        "evidence_text": "Verificare che non ci siano vibrazioni o variazioni di temperatura insolite.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "Vibration",
+          "TemperatureVariation"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Ispezionare visivamente la girante verificando che non sia danneggiata o usurata e controllare che l'alloggiamento delle tenute non presenti perdite.",
+        "head_canonical_zh": "检查旋转部件是否损坏或磨损，并检查密封件是否有泄漏",
+        "head_type": "InspectionAction",
+        "relation": "performs",
+        "tail_surface": "Pompa",
+        "tail_canonical_zh": "泵",
+        "tail_type": "Component",
+        "evidence_text": "Ispezionare visivamente la girante verificando che non sia danneggiata o usurata e controllare che l'alloggiamento delle tenute non presenti perdite.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "WearAndTear",
+          "Leakage"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Sostituire l'o-ring o la guarnizione della copertura terminale.",
+        "head_canonical_zh": "更换端盖密封圈",
+        "head_type": "MaintenanceAction",
+        "relation": "performs",
+        "tail_surface": "O-ring o la guarnizione della copertura terminale",
+        "tail_canonical_zh": "端盖密封圈",
+        "tail_type": "Component",
+        "evidence_text": "Sostituire l'o-ring o la guarnizione della copertura terminale.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "WearAndTear"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rimuovere la girante utilizzando lo strumento di rimozione della girante Jabsco della dimensione corretta.",
+        "head_canonical_zh": "使用正确的Jabsco拆卸工具拆卸旋转部件",
+        "head_type": "MaintenanceAction",
+        "relation": "performs",
+        "tail_surface": "Girante",
+        "tail_canonical_zh": "旋转部件",
+        "tail_type": "Component",
+        "evidence_text": "Rimuovere la girante utilizzando lo strumento di rimozione della girante Jabsco della dimensione corretta.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Controllare che il coperchio terminale si muova liberamente e, se è bloccato, picchiettare delicatamente lateralmente con un martello morbido, senza fare leva.",
+        "head_canonical_zh": "检查端盖是否可以自由移动，如果卡住，则轻轻敲击侧面，但不要施加杠杆力",
+        "head_type": "InspectionAction",
+        "relation": "performs",
+        "tail_surface": "Coperchio terminale",
+        "tail_canonical_zh": "端盖",
+        "tail_type": "Component",
+        "evidence_text": "Controllare che il coperchio terminale si muova liberamente e, se è bloccato, picchiettare delicatamente lateralmente con un martello morbido, senza fare leva.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "Stiction"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Rimuovere l'o-ring, verificare l'usura e sostituire se necessario.",
+        "head_canonical_zh": "移除密封圈，检查磨损情况并必要时更换",
+        "head_type": "MaintenanceAction",
+        "relation": "performs",
+        "tail_surface": "O-ring",
+        "tail_canonical_zh": "密封圈",
+        "tail_type": "Component",
+        "evidence_text": "Rimuovere l'o-ring, verificare l'usura e sostituire se necessario.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "WearAndTear"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalization_error": "ValueError: Unknown relation in model candidate: can",
+      "included": false
+    },
+    {
+      "index": 3,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 4,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 5,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 6,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 7,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 8,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    },
+    {
+      "index": 9,
+      "normalization_error": "ValueError: Unknown relation in model candidate: performs",
+      "included": false
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "420cdc76630a303dc913920d74ea9e196c748bb7521948a01ca3f107de86c200",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "98e0a5d81f3c46756dcace6a3dcfe45245bc57322859b64db7d111ce37f64855"
+  }
+}

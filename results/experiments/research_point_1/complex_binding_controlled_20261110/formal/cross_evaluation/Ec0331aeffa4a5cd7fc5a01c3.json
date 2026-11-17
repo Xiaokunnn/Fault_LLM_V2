@@ -1,0 +1,86 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T11",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T11 requires the specific row in the table where Ambient Conditions are 'Extreme dirt' and 'Dry', Operating Conditions are 'Light to medium' load and 'Slow to medium' speed, and the resulting Suggested Greasing Interval is 'Daily flushing out dirt'. The anonymous output contains no triple or auxiliary text that references 'Extreme dirt', 'Daily flushing out dirt', or the specific combination of conditions leading to this interval. The output only extracts generic column headers (Dirt, Moisture, Load, Speed) and the first row's interval ('2 to 6 months'). It fails to capture the specific condition-object relationship defined in the focus.",
+        "evidence_quote": "Extreme dirt Dry Light to medium Slow to medium Daily flushing out dirt",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The triple claims 'Dirt' is located in 'AMBIENT CONDITIONS'. While 'Dirt' is a sub-header under 'AMBIENT CONDITIONS', the relation 'located_in' is semantically weak for a table header structure, and more importantly, this does not capture the specific data row required by the focus (Extreme dirt). It is a generic structural extraction, not the specific fact requested.",
+        "evidence_quote": "AMBIENT CONDITIONS ... Dirt"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "Similar to index 1, this extracts the header 'Moisture' under 'AMBIENT CONDITIONS'. It does not capture the specific 'Dry' condition associated with the 'Extreme dirt' row in the focus.",
+        "evidence_quote": "AMBIENT CONDITIONS ... Moisture"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "Extracts header 'Load' under 'OPERATING CONDITIONS'. Does not capture the specific 'Light to medium' load condition for the focus row.",
+        "evidence_quote": "OPERATING CONDITIONS ... Load"
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "Extracts header 'Speed' under 'OPERATING CONDITIONS'. Does not capture the specific 'Slow to medium' speed condition for the focus row.",
+        "evidence_quote": "OPERATING CONDITIONS ... Speed"
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "Extracts header 'Low' under 'BEARING OPERATING TEMPERATURE'. Does not capture the specific temperature range (0F to 200F) for the focus row.",
+        "evidence_quote": "BEARING OPERATING TEMPERATURE ... Low"
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "Extracts header 'High' under 'BEARING OPERATING TEMPERATURE'. Does not capture the specific temperature range for the focus row.",
+        "evidence_quote": "BEARING OPERATING TEMPERATURE ... High"
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "Claims '2 to 6 months' is specified by 'SUGGESTED GREASING INTERVALS'. This is the interval for the 'Clean/Dry' row, not the 'Extreme dirt' row which requires 'Daily flushing out dirt'. This is factually incorrect for the focus T11.",
+        "evidence_quote": "SUGGESTED GREASING INTERVALS** ... 2 to 6 months"
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "Claims the grease recommendation is specified by 'USE THESE GREASES'. While the text exists, it is a general recommendation column, not the specific interval/action for the 'Extreme dirt' condition.",
+        "evidence_quote": "USE THESE GREASES ... High quality NGLI No. 1 or 2..."
+      },
+      {
+        "index": 9,
+        "verdict": "N",
+        "reason": "Claims the consultation recommendation is specified by 'USE THESE GREASES'. Similar to index 8, this is general advice, not the specific maintenance action for the focus condition.",
+        "evidence_quote": "USE THESE GREASES ... Consultation with a reputable lubricant supplier is recommended."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 10302,
+    "eval_count": 1114,
+    "total_duration": 36075070803
+  },
+  "human_Gold": false
+}

@@ -1,0 +1,74 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific instruction to 'Allow the pump to completely cool if overheated' as a precondition before opening or servicing. The output contains a triple for 'Check the temperature before opening any covers, plates, or plugs' (Triple 1), but this is a distinct action (checking vs. allowing to cool) and does not retain the specific meaning of waiting for the pump to cool down if it is overheated. The output fails to extract the specific cooling requirement mandated by the source focus.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Check the temperature before opening any covers, plates, or plugs' as an InspectionAction located in the Self-Priming Centrifugal Pumps. The source text explicitly lists this as item 4 under the safety section for these pumps.",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Close the suction and discharge valves' as a MaintenanceAction located in the Self-Priming Centrifugal Pumps. The source text explicitly lists this as item 5.",
+        "evidence_quote": "5. Close the suction and discharge valves."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Vent the pump slowly and cautiously' as a MaintenanceAction located in the Self-Priming Centrifugal Pumps. The source text explicitly lists this as item 6.",
+        "evidence_quote": "6. Vent the pump slowly and cautiously."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Drain the pump' as a MaintenanceAction located in the Self-Priming Centrifugal Pumps. The source text explicitly lists this as item 7.",
+        "evidence_quote": "7. Drain the pump."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the risk 'Do not attempt to pump any liquids the pump has not been designed for' as a Risk located in the Self-Priming Centrifugal Pumps. The source text contains this warning.",
+        "evidence_quote": "Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the instruction 'Use lifting and moving equipment in good repair and with adequate capacity' as a MaintenanceAction located in the Self-Priming Centrifugal Pumps. The source text contains this instruction.",
+        "evidence_quote": "Use lifting and moving equipment in good repair and with adequate capacity to prevent injuries to personnel or damage to equipment."
+      },
+      {
+        "index": 7,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the operating condition 'Make certain that the pump and all piping or hose connections are tight, properly supported and secure before operation' as an OperatingCondition located in the Self-Priming Centrifugal Pumps. The source text contains this instruction.",
+        "evidence_quote": "make certain that the pump and all pip- ing or hose connections are tight, properly supported and secure before operation."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2771,
+    "eval_count": 960,
+    "total_duration": 14832437228
+  },
+  "human_Gold": false
+}

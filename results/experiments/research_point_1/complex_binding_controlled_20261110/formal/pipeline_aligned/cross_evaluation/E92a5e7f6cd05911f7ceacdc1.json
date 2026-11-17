@@ -1,0 +1,70 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T11",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T11 refers to the specific table row for 'Extreme dirt', 'Dry', 'Light to medium', 'Slow to medium' conditions, which mandates 'Daily flushing out dirt'. The output fails to retain this specific condition-action binding. Instead, it creates a causal triple (Extreme dirt causes daily flushing) which misrepresents the table's prescriptive nature (condition -> required maintenance). Furthermore, the output completely omits the other essential conditions in the focus ('Dry', 'Light to medium', 'Slow to medium') and the specific temperature range associated with that row (0F to 200F). The output also includes unrelated triples about 'Dirt', 'Clean', and 'Moderate to dirty' that do not correspond to the specific focus T11, and misattributes the 'Daily flushing' action as a symptom or result rather than a required maintenance interval for that specific environmental profile.",
+        "evidence_quote": "Extreme dirt Dry Light to medium Slow to medium Daily flushing out dirt",
+        "output_refs": [
+          "triples:4"
+        ],
+        "output_quote": "head_surface: \"Extreme dirt\", relation: \"causes\", tail_surface: \"daily flushing out dirt\""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source text 'Watch operating temperatures...' is a general warning/inspection note, not a causal statement that 'Dirt' causes 'grease conditions'. The output fabricates a causal relationship not present in the source.",
+        "evidence_quote": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The source text does not state that 'Clean' causes 'oiliness and dirt'. This is a nonsensical causal claim not supported by the source.",
+        "evidence_quote": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications."
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The source text does not state that 'Moderate to dirty' causes 'grease conditions'. This is a fabricated causal relationship.",
+        "evidence_quote": "Watch operating temperatures as sudden rises may show need for grease or indicate over lubrication on higher speed applications."
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The source table lists 'Daily flushing out dirt' as the suggested greasing interval/maintenance action for the condition 'Extreme dirt', not as a result caused by it. The relation 'causes' is incorrect; it should be a condition-action or requirement relationship.",
+        "evidence_quote": "Extreme dirt ... Daily flushing out dirt"
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The source table lists '1 to 4 weeks grease at shutdowns' as the suggested interval for the condition 'High humidity', not as a result caused by it. The relation 'causes' is incorrect.",
+        "evidence_quote": "High humidity ... 1 to 4 weeks grease at shutdowns"
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The source table lists 'Wide temperature range Diester-type greases' as the recommended grease for the condition 'Possible frost', not as a result caused by it. The relation 'causes' is incorrect.",
+        "evidence_quote": "Possible frost ... Wide temperature range Diester-type greases"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 9962,
+    "eval_count": 942,
+    "total_duration": 35931881038
+  },
+  "human_Gold": false
+}

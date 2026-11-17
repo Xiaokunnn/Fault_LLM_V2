@@ -1,0 +1,46 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "I05",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "S",
+        "numeric_order": "S",
+        "evidence_support": "S",
+        "literal_complete": "P",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains the core causal relationship and the specific numeric conditions (+40°C, 1,000m) from the source. It correctly identifies the alternative joint condition (temperature OR altitude). However, it is marked as Partial for literal_complete because it omits the specific mechanism ('poor motor cooling effect caused by low air density') and the subsequent required action ('a motor with higher output power shall be used'), which are essential parts of the complete meaning in the source text. The explicit_binding is N because the output uses free-text surfaces rather than machine-readable entity IDs or structured bindings.",
+        "evidence_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "output_refs": [
+          "triples:2"
+        ],
+        "output_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1."
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The relation 'located_in' is incorrect. The source states that if components are made of stainless steel, 'a special material is needed'. It does not state that the components are located in the system in a way that defines the relationship as 'located_in'. The sentence is a conditional requirement for material selection, not a spatial or structural containment statement. Furthermore, the head is a full conditional clause, not a component entity.",
+        "evidence_quote": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The relation 'causes' is supported. The source states that exceeding temperature/altitude leads to a decrease in power due to cooling effects. The output captures the condition (head) and the result (tail) with the correct causal direction. Although the head is a full sentence rather than a normalized entity, the semantic relation is preserved.",
+        "evidence_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 1990,
+    "eval_count": 701,
+    "total_duration": 21228294243
+  },
+  "human_Gold": false
+}

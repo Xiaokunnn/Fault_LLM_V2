@@ -1,0 +1,70 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T06",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific vibration trip level for the 'Motor (non drive end)' location, which is >15 mm/s. The output contains a triple (index 5) with head 'Motor (non drive end)' but the relation is 'located_in' and the tail is 'DESMI centrifugal pumps and motors'. It does not contain the numeric value '>15', the unit 'mm/s', or the relation to 'Vibration trip level'. The other triples refer to generic alarm/trip levels or other locations (Pump, Motor drive end) but do not capture the specific non-drive-end trip threshold. Therefore, the essential numeric and relational meaning is absent.",
+        "evidence_quote": "Motor (non drive end)   >10                    >15",
+        "output_refs": [
+          "triples:5"
+        ],
+        "output_quote": "head_surface: \"Motor (non drive end)\", relation: \"located_in\", tail_surface: \"DESMI centrifugal pumps and motors\""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The triple claims 'vibration alarm level' manifests as 'vibration alarm level (mm/s)'. This is a tautological or malformed relation that does not capture a specific value or location from the source table. It fails to represent the data structure (Location -> Value).",
+        "evidence_quote": "Vibration alarm level\n(mm/s)"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The triple claims 'vibration trip level' manifests as 'vibration trip level (mm/s)'. Similar to index 1, this is a malformed relation that does not extract the specific protective setting values or locations defined in the source.",
+        "evidence_quote": "Vibration trip level\n(mm/s)"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The triple claims 'Pump' is located in 'DESMI centrifugal pumps and motors'. This is semantically incorrect; the pump is part of the system, not located inside the generic phrase. It fails to capture the vibration levels associated with the Pump location.",
+        "evidence_quote": "DESMI centrifugal pumps and motors"
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The triple claims 'Motor (drive end)' is located in 'DESMI centrifugal pumps and motors'. This is semantically incorrect and fails to capture the specific vibration alarm/trip levels for the drive end.",
+        "evidence_quote": "DESMI centrifugal pumps and motors"
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The triple claims 'Motor (non drive end)' is located in 'DESMI centrifugal pumps and motors'. This is semantically incorrect and completely misses the critical data point: the vibration trip level of >15 mm/s for this specific location.",
+        "evidence_quote": "DESMI centrifugal pumps and motors"
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The triple claims 'vibration causes damage' manifests as 'Vibration causes damage'. This is a tautology. While the source mentions 'Vibration causes damage' in the context of the ISO chart legend (Zone D), the triple does not link it to the specific vibration levels or the ISO standard context properly, and it is not a valid fault-symptom extraction in this context.",
+        "evidence_quote": "Vibration causes damage"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 13627,
+    "eval_count": 949,
+    "total_duration": 38072913045
+  },
+  "human_Gold": false
+}

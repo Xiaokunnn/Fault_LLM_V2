@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-10",
+  "generator": "Qwen2.5-7B-Instruct local BF16 RTX5880",
+  "judge_alias": "qwen3.8:27b",
+  "judge_independence": "different model weights/architecture/version; same broad family, not independent expert truth",
+  "arms": {
+    "B0": "frozen v4 semantic prompt + same common envelope + existing validation",
+    "B1": "B0 + generic common JSON Schema constrained decoding",
+    "B2": "B1 + generic conditions/AND-OR/negation/order/value binding instruction",
+    "B3": "B2 draft + source reread/recovery; all calls and repeated prompts charged"
+  },
+  "ontology": "unchanged13types15relations; binding annotations are not published graph edges",
+  "seeds": [
+    2026111001,
+    2026111002
+  ],
+  "temperature": 0.2,
+  "total_input_output_token_cap": 65536,
+  "total_output_cap": 5120,
+  "draft_output_cap": 1536,
+  "final_recovery_output_cap": 3584,
+  "context_cap": 32768,
+  "call_cap": 2,
+  "retries": 0,
+  "candidate_cap": 32,
+  "matched_budget_meaning": "same strict total-token/output/call ceilings, not equal realized usage; one-pass arms may spend their output ceiling at once, B3 splits it and pays repeated source input; report actual costs and do not claim iso-realized-cost causal gains",
+  "source_context": "same entire native page for all arms; no target answers, no extra pages for B3",
+  "evaluation_dims": [
+    "atomic",
+    "condition_object",
+    "negation",
+    "alternative_joint",
+    "numeric_order",
+    "evidence_support",
+    "literal_complete"
+  ],
+  "tests_not_human_Gold": true,
+  "decision_rules": {
+    "generic_solved": "one generic arm reaches >=0.8 complete_literal and >=0.9 atomic on applicable independent focuses in BOTH repeats; source-unsupported triple count no higher than B0; per-dimension failures disclosed",
+    "remaining_gap": "same source-grounded binding failure across repeats in >=2 independent documents after ruling out input/schema/parse/validation losses; indicates mechanism to investigate, NOT automatic novel-algorithm GO",
+    "default": "insufficient sample, U/disagreement or capacity limitations => necessity unproven; no new mechanism"
+  },
+  "no_graph_publication": true
+}

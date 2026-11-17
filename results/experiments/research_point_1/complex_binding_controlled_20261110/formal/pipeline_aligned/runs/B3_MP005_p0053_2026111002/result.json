@@ -1,0 +1,432 @@
+{
+  "trial": {
+    "arm": "B3",
+    "input_sha256": "d405f4499175811f1d94b47807a44e4da6ccb3093e853a509025077b34157ae3",
+    "page_key": "MP005:p0053",
+    "seed": 2026111002,
+    "split": "development",
+    "trial_id": "B3_MP005_p0053_2026111002"
+  },
+  "used_total_tokens": 17552,
+  "used_output_tokens": 2165,
+  "calls": 2,
+  "stages": [
+    {
+      "input_tokens": 6904,
+      "output_tokens": 1536,
+      "total_tokens": 8440,
+      "elapsed_seconds": 59.295222171989735,
+      "finish_reason": "length"
+    },
+    {
+      "input_tokens": 8483,
+      "output_tokens": 629,
+      "total_tokens": 9112,
+      "elapsed_seconds": 27.75982070103055,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "错误的压力和温度",
+        "tail_canonical_zh": "错误的压力和温度",
+        "tail_type": "Symptom",
+        "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "热或有毒流体泄漏",
+        "tail_canonical_zh": "热或有毒流体泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "泵运行时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "泵损坏",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "DESMI Pumping Technology A/S"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalized": {
+        "head": "操作泵时关闭吸水管线和/或排出管线",
+        "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "错误的压力和温度",
+        "tail_surface": "错误的压力和温度",
+        "tail_canonical_zh": "错误的压力和温度",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "错误的压力和温度",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1263,
+            "end": 1397,
+            "text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect\n                  pressure and temperature."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "conditional_context_not_explicit"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "conditional_context_not_explicit"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "操作泵时关闭吸水管线和/或排出管线",
+        "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "热或有毒流体泄漏",
+        "tail_surface": "热或有毒流体泄漏",
+        "tail_canonical_zh": "热或有毒流体泄漏",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "操作泵时关闭吸水管线和/或排出管线",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "热或有毒流体泄漏",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1263,
+            "end": 1487,
+            "text": "If the pump is operated with the suction and/or discharge line closed will cause incorrect\n                  pressure and temperature. Hot or hazard fluids under pressure will cause death or\n                  serious injury."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "conditional_context_not_explicit"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "conditional_context_not_explicit"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "泵运行时关闭吸水管线和/或排出管线",
+        "head_surface": "泵运行时关闭吸水管线和/或排出管线",
+        "head_canonical_zh": "关闭吸水管线和/或排出管线",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "泵损坏",
+        "tail_surface": "泵损坏",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [
+          "DESMI Pumping Technology A/S"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "泵运行时关闭吸水管线和/或排出管线",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "泵损坏",
+          "tail_type": "FaultMode",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1638,
+            "end": 1756,
+            "text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge\n                  line closed."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "c4bfecebb3bd22ddf320665c44aa9fd9026442ed373714bc8b57c4415a1c8d55",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "9325f98191e06a32c5bf6bdf346f0b611cab8d0a61bf0211403e1f5206d254c4"
+  }
+}

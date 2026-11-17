@@ -1,0 +1,79 @@
+{
+  "trial": {
+    "arm": "B0",
+    "input_sha256": "cf96ca5f5ad0e411137a8f99d4d32ae99d9928fc0af7e0b5b628a8051fba91df",
+    "page_key": "MP018:p0016",
+    "seed": 2026111002,
+    "split": "development",
+    "trial_id": "B0_MP018_p0016_2026111002"
+  },
+  "used_total_tokens": 10217,
+  "used_output_tokens": 429,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 9788,
+      "output_tokens": 429,
+      "total_tokens": 10217,
+      "elapsed_seconds": 20.968574917991646,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "Clean to dirty Dry",
+        "head_canonical_zh": "清洁至脏干",
+        "head_type": "OperatingCondition",
+        "relation": "specifies",
+        "tail_surface": "Light to Slow to 80°F to 300°F",
+        "tail_canonical_zh": "轻至慢速80°F至300°F",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Clean to dirty Dry     Light   Slow                     1 to 4 weeks  Synthetic type greases",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Light to Slow to 80°F to 300°F",
+        "head_canonical_zh": "轻至慢速80°F至300°F",
+        "head_type": "OperatingCondition",
+        "relation": "specifies",
+        "tail_surface": "1 to 4 weeks Synthetic type greases",
+        "tail_canonical_zh": "1至4周合成型润滑脂",
+        "tail_type": "MaintenanceAction",
+        "evidence_text": "Clean to dirty Dry     Light   Slow                     1 to 4 weeks  Synthetic type greases",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false
+}

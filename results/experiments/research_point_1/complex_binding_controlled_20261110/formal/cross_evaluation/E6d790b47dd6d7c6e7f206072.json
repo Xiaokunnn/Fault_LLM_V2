@@ -1,0 +1,62 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T02",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data referencing the requirement for common sensors, shutdown functions, or automatic pump start/changeover. The output only extracts fail-safe states from Table 1, which is unrelated to the specific focus T02 regarding system independence and sensor sharing.",
+        "evidence_quote": "Common sensors will be acceptable for any functions other than shutdown functions and automatic start/changeover of the required pumps",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies 'Propulsion speed control' as the head and 'Maintain state' as the tail, matching the source table row r001.",
+        "evidence_quote": "Propulsion speed control Maintain state"
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies 'Controllable pitch propeller' as the head and 'Maintain state' as the tail, matching the source table row r002.",
+        "evidence_quote": "Controllable pitch propeller Maintain state"
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies 'Propulsion safety shut down' as the head and 'Maintain state and alarm' as the tail, matching the source table row r003.",
+        "evidence_quote": "Propulsion safety shut down Maintain state and alarm"
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies 'Alarm system' as the head and 'Annunciated' as the tail, matching the source table row r004.",
+        "evidence_quote": "Alarm system Annunciated"
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies 'Cooling water valve' as the head and 'In most cases open' as the tail, matching the source table row r005.",
+        "evidence_quote": "Cooling water valve In most cases open"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 3492,
+    "eval_count": 621,
+    "total_duration": 17853892373
+  },
+  "human_Gold": false
+}

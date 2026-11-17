@@ -1,0 +1,859 @@
+{
+  "trial": {
+    "arm": "B3",
+    "input_sha256": "4d0119ea587dcb209e5decae37017bb1e87ec767d38b3b5158ec5138c0b57e88",
+    "page_key": "MP007:p0009",
+    "seed": 2026111002,
+    "split": "independent",
+    "trial_id": "B3_MP007_p0009_2026111002"
+  },
+  "used_total_tokens": 10236,
+  "used_output_tokens": 2719,
+  "calls": 2,
+  "stages": [
+    {
+      "input_tokens": 2969,
+      "output_tokens": 1536,
+      "total_tokens": 4505,
+      "elapsed_seconds": 71.70779371802928,
+      "finish_reason": "length"
+    },
+    {
+      "input_tokens": 4548,
+      "output_tokens": 1183,
+      "total_tokens": 5731,
+      "elapsed_seconds": 49.01348574500298,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+        "head_canonical_zh": "如果系统所需的全部流道组件都是高级不锈钢制成，则需要特殊材料",
+        "head_type": "Component",
+        "relation": "located_in",
+        "tail_surface": "system",
+        "tail_canonical_zh": "系统",
+        "tail_type": "Equipment",
+        "evidence_text": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "The product runs in the environment with a max temperature of +40°C.",
+        "head_canonical_zh": "产品在环境温度最高为+40°C的情况下运行",
+        "head_type": "OperatingCondition",
+        "relation": "located_in",
+        "tail_surface": "environment",
+        "tail_canonical_zh": "环境",
+        "tail_type": "Component",
+        "evidence_text": "The product runs in the environment with a max temperature of +40°C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_canonical_zh": "如果环境温度超过+40°C或者电机安装在海拔1000米以上的位置，由于空气密度低导致的散热效果差，电机额定输出功率（P2）将降低，如图表1所示",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率（P2）将降低",
+        "tail_type": "Symptom",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "a motor with higher output power shall be used.",
+        "head_canonical_zh": "应使用额定输出功率更高的电机",
+        "head_type": "MaintenanceAction",
+        "relation": "specifies",
+        "tail_surface": "motor with higher output power",
+        "tail_canonical_zh": "额定输出功率更高的电机",
+        "tail_type": "Component",
+        "evidence_text": "a motor with higher output power shall be used.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_canonical_zh": "由于空气密度低导致的散热效果差，电机额定输出功率（P2）将降低，如图表1所示",
+        "head_type": "Symptom",
+        "relation": "manifests_as",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率（P2）将降低",
+        "tail_type": "Symptom",
+        "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalized": {
+        "head": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+        "head_surface": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+        "head_canonical_zh": "如果系统所需的全部流道组件都是高级不锈钢制成，则需要特殊材料",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "located_in",
+        "tail": "system",
+        "tail_surface": "system",
+        "tail_canonical_zh": "系统",
+        "tail_type": "Equipment",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "structural_context",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP007",
+        "pdf_page_number": 9,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/c35h1n0d/t1536uk.pdf",
+        "source_tier": "B",
+        "publisher": "DESMI",
+        "document_sha256": "473B10F49E311BB79565D1132023B518E1E9BD90A1887740648009B17909101B",
+        "page_text_sha256": "d7c1706825cc29e34af3fc9a20d1173259d3d1927cc91c010409eb84223b0c0c",
+        "pump_type": "vertical_multistage_centrifugal_pump",
+        "service": "water_pumping",
+        "applicability_scope": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+          "head_type": "Component",
+          "relation": "located_in",
+          "tail_surface": "system",
+          "tail_type": "Equipment",
+          "conditions": [
+            "If all flow passage components required by the system are made of high-grade stainless steel"
+          ],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+          "evidence_text": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [
+          {
+            "rule": "LOCAL_CONDITION",
+            "reason": "source antecedent matches current subject; unrelated following warnings are not inherited",
+            "changes": {
+              "conditions": {
+                "before": [],
+                "after": [
+                  "If all flow passage components required by the system are made of high-grade stainless steel"
+                ]
+              }
+            }
+          }
+        ],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 591,
+            "end": 724,
+            "text": "If all flow passage components required by the system are made of high-grade stainless\n          steel, a special material is needed."
+          },
+          {
+            "kind": "page_span",
+            "start": 591,
+            "end": 694,
+            "text": "If all flow passage components required by the system are made of high-grade stainless\n          steel,"
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0000",
+            "start": 0,
+            "end": 86,
+            "text": "If all flow passage components required by the system are made of high-grade stainless",
+            "bbox": {
+              "bottom": 104.458,
+              "top": 93.418,
+              "x0": 72.024,
+              "x1": 500.126
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0001",
+            "start": 0,
+            "end": 36,
+            "text": "steel, a special material is needed.",
+            "bbox": {
+              "bottom": 117.058,
+              "top": 106.018,
+              "x0": 72.024,
+              "x1": 240.87
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {
+          "conditions": {
+            "before": [],
+            "after": [
+              "If all flow passage components required by the system are made of high-grade stainless steel"
+            ]
+          }
+        },
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0000",
+              "start": 0,
+              "end": 86,
+              "text": "If all flow passage components required by the system are made of high-grade stainless",
+              "bbox": {
+                "bottom": 104.458,
+                "top": 93.418,
+                "x0": 72.024,
+                "x1": 500.126
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0001",
+              "start": 0,
+              "end": 36,
+              "text": "steel, a special material is needed.",
+              "bbox": {
+                "bottom": 117.058,
+                "top": 106.018,
+                "x0": 72.024,
+                "x1": 240.87
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "The product runs in the environment with a max temperature of +40°C.",
+        "head_surface": "The product runs in the environment with a max temperature of +40°C.",
+        "head_canonical_zh": "产品在环境温度最高为+40°C的情况下运行",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "located_in",
+        "tail": "environment",
+        "tail_surface": "environment",
+        "tail_canonical_zh": "环境",
+        "tail_type": "Component",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "The product runs in the environment with a max temperature of +40°C.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "operating_condition",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP007",
+        "pdf_page_number": 9,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/c35h1n0d/t1536uk.pdf",
+        "source_tier": "B",
+        "publisher": "DESMI",
+        "document_sha256": "473B10F49E311BB79565D1132023B518E1E9BD90A1887740648009B17909101B",
+        "page_text_sha256": "d7c1706825cc29e34af3fc9a20d1173259d3d1927cc91c010409eb84223b0c0c",
+        "pump_type": "vertical_multistage_centrifugal_pump",
+        "service": "water_pumping",
+        "applicability_scope": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "The product runs in the environment with a max temperature of +40°C.",
+          "head_type": "OperatingCondition",
+          "relation": "located_in",
+          "tail_surface": "environment",
+          "tail_type": "Component",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+          "evidence_text": "The product runs in the environment with a max temperature of +40°C.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1020,
+            "end": 1088,
+            "text": "The product runs in the environment with a max temperature of +40°C."
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0004",
+            "start": 0,
+            "end": 68,
+            "text": "The product runs in the environment with a max temperature of +40°C.",
+            "bbox": {
+              "bottom": 167.698,
+              "top": 156.658,
+              "x0": 72.024,
+              "x1": 518.32
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "schema_type_direction"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction"
+          ],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0004",
+              "start": 0,
+              "end": 68,
+              "text": "The product runs in the environment with a max temperature of +40°C.",
+              "bbox": {
+                "bottom": 167.698,
+                "top": 156.658,
+                "x0": 72.024,
+                "x1": 518.32
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_surface": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_canonical_zh": "如果环境温度超过+40°C或者电机安装在海拔1000米以上的位置，由于空气密度低导致的散热效果差，电机额定输出功率（P2）将降低，如图表1所示",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "motor rated output power (P2) will decrease",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率（P2）将降低",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "cause_or_mechanism",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP007",
+        "pdf_page_number": 9,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/c35h1n0d/t1536uk.pdf",
+        "source_tier": "B",
+        "publisher": "DESMI",
+        "document_sha256": "473B10F49E311BB79565D1132023B518E1E9BD90A1887740648009B17909101B",
+        "page_text_sha256": "d7c1706825cc29e34af3fc9a20d1173259d3d1927cc91c010409eb84223b0c0c",
+        "pump_type": "vertical_multistage_centrifugal_pump",
+        "service": "water_pumping",
+        "applicability_scope": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "motor rated output power (P2) will decrease",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+          "evidence_text": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1089,
+            "end": 1347,
+            "text": "In case that ambient\n          temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated\n          output power (P2) will decrease due to the poor motor cooling effect caused by low air\n          density, as shown in Chart 1."
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0004",
+            "start": 69,
+            "end": 89,
+            "text": "In case that ambient",
+            "bbox": {
+              "bottom": 167.698,
+              "top": 156.658,
+              "x0": 72.024,
+              "x1": 518.32
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0005",
+            "start": 0,
+            "end": 90,
+            "text": "temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated",
+            "bbox": {
+              "bottom": 180.298,
+              "top": 169.258,
+              "x0": 72.024,
+              "x1": 518.239
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0006",
+            "start": 0,
+            "end": 86,
+            "text": "output power (P2) will decrease due to the poor motor cooling effect caused by low air",
+            "bbox": {
+              "bottom": 193.018,
+              "top": 181.978,
+              "x0": 72.024,
+              "x1": 490.274
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0007",
+            "start": 0,
+            "end": 29,
+            "text": "density, as shown in Chart 1.",
+            "bbox": {
+              "bottom": 205.618,
+              "top": 194.578,
+              "x0": 72.024,
+              "x1": 509.4
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0004",
+              "start": 69,
+              "end": 89,
+              "text": "In case that ambient",
+              "bbox": {
+                "bottom": 167.698,
+                "top": 156.658,
+                "x0": 72.024,
+                "x1": 518.32
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0005",
+              "start": 0,
+              "end": 90,
+              "text": "temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated",
+              "bbox": {
+                "bottom": 180.298,
+                "top": 169.258,
+                "x0": 72.024,
+                "x1": 518.239
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0006",
+              "start": 0,
+              "end": 86,
+              "text": "output power (P2) will decrease due to the poor motor cooling effect caused by low air",
+              "bbox": {
+                "bottom": 193.018,
+                "top": 181.978,
+                "x0": 72.024,
+                "x1": 490.274
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0007",
+              "start": 0,
+              "end": 29,
+              "text": "density, as shown in Chart 1.",
+              "bbox": {
+                "bottom": 205.618,
+                "top": 194.578,
+                "x0": 72.024,
+                "x1": 509.4
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 4,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    },
+    {
+      "index": 5,
+      "normalized": {
+        "head": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_surface": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "head_canonical_zh": "由于空气密度低导致的散热效果差，电机额定输出功率（P2）将降低，如图表1所示",
+        "head_type": "Symptom",
+        "head_translation_status": "needs_review",
+        "relation": "manifests_as",
+        "tail": "motor rated output power (P2) will decrease",
+        "tail_surface": "motor rated output power (P2) will decrease",
+        "tail_canonical_zh": "电机额定输出功率（P2）将降低",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP007",
+        "pdf_page_number": 9,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/c35h1n0d/t1536uk.pdf",
+        "source_tier": "B",
+        "publisher": "DESMI",
+        "document_sha256": "473B10F49E311BB79565D1132023B518E1E9BD90A1887740648009B17909101B",
+        "page_text_sha256": "d7c1706825cc29e34af3fc9a20d1173259d3d1927cc91c010409eb84223b0c0c",
+        "pump_type": "vertical_multistage_centrifugal_pump",
+        "service": "water_pumping",
+        "applicability_scope": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+          "head_type": "Symptom",
+          "relation": "manifests_as",
+          "tail_surface": "motor rated output power (P2) will decrease",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "仅适用于立式多级离心泵及明确可迁移的通用部件关系",
+          "evidence_text": "the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1195,
+            "end": 1347,
+            "text": "the motor rated\n          output power (P2) will decrease due to the poor motor cooling effect caused by low air\n          density, as shown in Chart 1."
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0005",
+            "start": 75,
+            "end": 90,
+            "text": "the motor rated",
+            "bbox": {
+              "bottom": 180.298,
+              "top": 169.258,
+              "x0": 72.024,
+              "x1": 518.239
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0006",
+            "start": 0,
+            "end": 86,
+            "text": "output power (P2) will decrease due to the poor motor cooling effect caused by low air",
+            "bbox": {
+              "bottom": 193.018,
+              "top": 181.978,
+              "x0": 72.024,
+              "x1": 490.274
+            }
+          },
+          {
+            "kind": "native_block_subspan",
+            "block_id": "MP007:p0009:b0007",
+            "start": 0,
+            "end": 29,
+            "text": "density, as shown in Chart 1.",
+            "bbox": {
+              "bottom": 205.618,
+              "top": 194.578,
+              "x0": 72.024,
+              "x1": 509.4
+            }
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "schema_type_direction"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "unique_native_path": true,
+          "candidate_paths": 1,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction"
+          ],
+          "native_path_count": 1,
+          "unique_native_proof_valid": true,
+          "removed_flags": [],
+          "source_witnesses": [
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0005",
+              "start": 75,
+              "end": 90,
+              "text": "the motor rated",
+              "bbox": {
+                "bottom": 180.298,
+                "top": 169.258,
+                "x0": 72.024,
+                "x1": 518.239
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0006",
+              "start": 0,
+              "end": 86,
+              "text": "output power (P2) will decrease due to the poor motor cooling effect caused by low air",
+              "bbox": {
+                "bottom": 193.018,
+                "top": 181.978,
+                "x0": 72.024,
+                "x1": 490.274
+              }
+            },
+            {
+              "kind": "native_block_subspan",
+              "block_id": "MP007:p0009:b0007",
+              "start": 0,
+              "end": 29,
+              "text": "density, as shown in Chart 1.",
+              "bbox": {
+                "bottom": 205.618,
+                "top": 194.578,
+                "x0": 72.024,
+                "x1": 509.4
+              }
+            }
+          ],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 33,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    }
+  ],
+  "graph_modified": false
+}

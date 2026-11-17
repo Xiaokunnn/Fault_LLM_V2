@@ -1,0 +1,16 @@
+relation,label_zh,domain,range,direction,evidence_roles,core_diagnostic
+contains,包含,Equipment;Component,Component,Equipment_or_Component -> Component,structural_context,False
+located_in,位于,Component,Equipment;Component,Component -> Equipment_or_Component,structural_context,False
+occurs_at,发生于,FaultMode;FailureMechanism,Equipment;Component,FaultMode_or_FailureMechanism -> Equipment_or_Component,structural_context,True
+causes,导致,Cause;FailureMechanism;OperatingCondition;FaultMode,FailureMechanism;FaultMode;Symptom;SignalFeature;Risk,Cause_or_Mechanism_or_Condition_or_Fault -> Mechanism_or_Fault_or_Symptom_or_Risk,cause_or_mechanism,True
+indicates,指示,Symptom;SignalFeature,Cause;FailureMechanism;FaultMode;Risk,Symptom_or_SignalFeature -> Cause_or_Mechanism_or_Fault_or_Risk,symptom,True
+manifests_as,表现为,FaultMode;FailureMechanism,Symptom;SignalFeature,FaultMode_or_FailureMechanism -> Symptom_or_SignalFeature,symptom,True
+evolves_to,演化为,FaultMode;FailureMechanism,FaultMode;FailureMechanism;Risk,FaultMode_or_FailureMechanism -> FaultMode_or_FailureMechanism_or_Risk,cause_or_mechanism,True
+diagnosed_by,诊断方法为,Cause;FailureMechanism;FaultMode;Symptom;SignalFeature;Risk,InspectionMethod;InspectionAction,DiagnosticTarget -> InspectionMethod_or_InspectionAction,inspection,True
+inspected_by,检查方法为,Equipment;Component;Cause;FailureMechanism;FaultMode,InspectionMethod;InspectionAction,Equipment_or_Component_or_DiagnosticTarget -> InspectionMethod_or_InspectionAction,inspection,True
+mitigated_by,缓解措施为,Cause;FailureMechanism;FaultMode;Risk,MaintenanceAction,Cause_or_Mechanism_or_Fault_or_Risk -> MaintenanceAction,maintenance,True
+prevented_by,预防措施为,Cause;FailureMechanism;FaultMode;OperatingCondition;Risk,MaintenanceAction,Cause_or_Mechanism_or_Fault_or_Condition_or_Risk -> MaintenanceAction,maintenance,True
+maintained_by,维护方式为,Equipment;Component,MaintenanceAction,Equipment_or_Component -> MaintenanceAction,maintenance,True
+operates_under,运行于,Equipment;Component,OperatingCondition,Equipment_or_Component -> OperatingCondition,operating_condition,False
+increases_risk_of,增加风险,Cause;FailureMechanism;FaultMode;OperatingCondition,Risk,Cause_or_Mechanism_or_Fault_or_Condition -> Risk,risk,True
+specified_by,由规范规定,Equipment;Component;FaultMode;FailureMechanism;Symptom;SignalFeature;Cause;OperatingCondition;InspectionMethod;InspectionAction;MaintenanceAction;Risk,Standard,SemanticEntity -> Standard,standard,False

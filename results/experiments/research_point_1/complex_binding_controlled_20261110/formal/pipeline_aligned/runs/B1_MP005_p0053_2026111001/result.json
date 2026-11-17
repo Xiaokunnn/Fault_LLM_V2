@@ -1,0 +1,947 @@
+{
+  "trial": {
+    "arm": "B1",
+    "input_sha256": "d405f4499175811f1d94b47807a44e4da6ccb3093e853a509025077b34157ae3",
+    "page_key": "MP005:p0053",
+    "seed": 2026111001,
+    "split": "development",
+    "trial_id": "B1_MP005_p0053_2026111001"
+  },
+  "used_total_tokens": 8364,
+  "used_output_tokens": 1577,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 6787,
+      "output_tokens": 1577,
+      "total_tokens": 8364,
+      "elapsed_seconds": 70.44308531895513,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的切断元件启动泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "incorrect pressure and temperature",
+        "tail_canonical_zh": "不正确的压力和温度",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed. Only start up the pump set with the discharge-side shut-off element slightly or fully open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "OPERATING_CONDITION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "high temperature due to dry running or too much gas content in the fluid handled",
+        "tail_canonical_zh": "由于干运转或处理流体中气体含量过高导致的高温",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "OPERATING_CONDITION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_canonical_zh": "异常噪音、振动、温度或泄漏可能导致泵损坏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "FAULT_MODE"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的切断元件启动泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nLEAKAGE OF HOT OR TOXIC FLUIDS!\nIf the pump is operated with the suction and/or discharge line closed will cause incorrect\npressure and temperature. Hot or hazard fluids under pressure will cause death or\nserious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "RISK"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nDAMAGE TO THE PUMP SET!\nHigh temperature due to dry running or too much gas content in the fluid handled will\ncause death or serious injury.\nDo not operate the pump set without liquid fill.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "RISK"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Prime the pump according to operating instructions.",
+        "head_canonical_zh": "根据操作说明进行泵的预充",
+        "head_type": "MaintenanceAction",
+        "relation": "prevented_by",
+        "tail_surface": "do not operate the pump set without liquid fill",
+        "tail_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "MAINTENANCE_ACTION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      },
+      {
+        "head_surface": "Stop the pump (set) immediately.",
+        "head_canonical_zh": "立即停泵（组）",
+        "head_type": "InspectionAction",
+        "relation": "prevented_by",
+        "tail_surface": "abnormal noises, vibrations, temperatures or leakage",
+        "tail_canonical_zh": "异常噪音、振动、温度或泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "INSPECTION_ACTION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalized": {
+        "head": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的切断元件启动泵",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "incorrect pressure and temperature",
+        "tail_surface": "incorrect pressure and temperature",
+        "tail_canonical_zh": "不正确的压力和温度",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed. Only start up the pump set with the discharge-side shut-off element slightly or fully open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "OPERATING_CONDITION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "incorrect pressure and temperature",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed. Only start up the pump set with the discharge-side shut-off element slightly or fully open.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 1638,
+            "end": 1918,
+            "text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge\n                  line closed.                                                    \n                  Only start up the pump set with the discharge-side shut-off element slightly or fully open."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "Do not operate the pump set without liquid fill.",
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "high temperature due to dry running or too much gas content in the fluid handled",
+        "tail_surface": "high temperature due to dry running or too much gas content in the fluid handled",
+        "tail_canonical_zh": "由于干运转或处理流体中气体含量过高导致的高温",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "OPERATING_CONDITION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Do not operate the pump set without liquid fill.",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "high temperature due to dry running or too much gas content in the fluid handled",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 2788,
+            "end": 3005,
+            "text": "Do not operate the pump set without liquid fill.                \n                                                                                  \n                  Prime the pump according to operating instructions."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_canonical_zh": "异常噪音、振动、温度或泄漏可能导致泵损坏",
+        "head_type": "Symptom",
+        "head_translation_status": "needs_review",
+        "relation": "indicates",
+        "tail": "damage to the pump",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "FAULT_MODE"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+          "head_type": "Symptom",
+          "relation": "indicates",
+          "tail_surface": "damage to the pump",
+          "tail_type": "FaultMode",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 3618,
+            "end": 3949,
+            "text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.\n                                                                                  \n                  Stop the pump (set) immediately.                                \n                  Eliminate the causes before returning the pump set to service."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 4,
+      "normalized": {
+        "head": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的切断元件启动泵",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "explosion hazard",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nLEAKAGE OF HOT OR TOXIC FLUIDS!\nIf the pump is operated with the suction and/or discharge line closed will cause incorrect\npressure and temperature. Hot or hazard fluids under pressure will cause death or\nserious injury.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "RISK"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "explosion hazard",
+          "tail_type": "Risk",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "DANGER\nEXPLOSION HAZARD!\nLEAKAGE OF HOT OR TOXIC FLUIDS!\nIf the pump is operated with the suction and/or discharge line closed will cause incorrect\npressure and temperature. Hot or hazard fluids under pressure will cause death or\nserious injury.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 790,
+            "end": 1487,
+            "text": "DANGER                                 \n                                                                                  \n                  EXPLOSION HAZARD!                                               \n                                                                                  \n                  LEAKAGE OF HOT OR TOXIC FLUIDS!                                 \n                                                                                  \n                  If the pump is operated with the suction and/or discharge line closed will cause incorrect\n                  pressure and temperature. Hot or hazard fluids under pressure will cause death or\n                  serious injury."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "conditional_context_not_explicit"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "conditional_context_not_explicit"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 5,
+      "normalized": {
+        "head": "Do not operate the pump set without liquid fill.",
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "head_type": "OperatingCondition",
+        "head_translation_status": "needs_review",
+        "relation": "causes",
+        "tail": "explosion hazard",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nDAMAGE TO THE PUMP SET!\nHigh temperature due to dry running or too much gas content in the fluid handled will\ncause death or serious injury.\nDo not operate the pump set without liquid fill.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [
+          "RISK"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Do not operate the pump set without liquid fill.",
+          "head_type": "OperatingCondition",
+          "relation": "causes",
+          "tail_surface": "explosion hazard",
+          "tail_type": "Risk",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "DANGER\nEXPLOSION HAZARD!\nDAMAGE TO THE PUMP SET!\nHigh temperature due to dry running or too much gas content in the fluid handled will\ncause death or serious injury.\nDo not operate the pump set without liquid fill.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 2045,
+            "end": 2836,
+            "text": "DANGER                                 \n                                                                                  \n                                                                                  \n                  EXPLOSION HAZARD!                                               \n                                                                                  \n                  DAMAGE TO THE PUMP SET!                                         \n                                                                                  \n                  High temperature due to dry running or too much gas content in the fluid handled will\n                  cause death or serious injury.                                  \n                  Do not operate the pump set without liquid fill."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 6,
+      "normalized": {
+        "head": "Prime the pump according to operating instructions.",
+        "head_surface": "Prime the pump according to operating instructions.",
+        "head_canonical_zh": "根据操作说明进行泵的预充",
+        "head_type": "MaintenanceAction",
+        "head_translation_status": "needs_review",
+        "relation": "prevented_by",
+        "tail": "do not operate the pump set without liquid fill",
+        "tail_surface": "do not operate the pump set without liquid fill",
+        "tail_canonical_zh": "不要在没有液体填充的情况下操作泵组",
+        "tail_type": "OperatingCondition",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "maintenance",
+        "fault_class_ids": [
+          "MAINTENANCE_ACTION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "do not operate the pump set without liquid fill",
+          "head_type": "OperatingCondition",
+          "relation": "prevented_by",
+          "tail_surface": "Prime the pump according to operating instructions.",
+          "tail_type": "MaintenanceAction",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 2788,
+            "end": 3005,
+            "text": "Do not operate the pump set without liquid fill.                \n                                                                                  \n                  Prime the pump according to operating instructions."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [
+          "reoriented_prevented_target_to_action"
+        ],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 7,
+      "normalized": {
+        "head": "Stop the pump (set) immediately.",
+        "head_surface": "Stop the pump (set) immediately.",
+        "head_canonical_zh": "立即停泵（组）",
+        "head_type": "InspectionAction",
+        "head_translation_status": "needs_review",
+        "relation": "prevented_by",
+        "tail": "abnormal noises, vibrations, temperatures or leakage",
+        "tail_surface": "abnormal noises, vibrations, temperatures or leakage",
+        "tail_canonical_zh": "异常噪音、振动、温度或泄漏",
+        "tail_type": "Symptom",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "inspection",
+        "fault_class_ids": [
+          "INSPECTION_ACTION"
+        ],
+        "model_confidence": 0.95,
+        "head_translation_confidence": 0.95,
+        "tail_translation_confidence": 0.95,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Stop the pump (set) immediately.",
+          "head_type": "InspectionAction",
+          "relation": "prevented_by",
+          "tail_surface": "abnormal noises, vibrations, temperatures or leakage",
+          "tail_type": "Symptom",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 3618,
+            "end": 3949,
+            "text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.\n                                                                                  \n                  Stop the pump (set) immediately.                                \n                  Eliminate the causes before returning the pump set to service."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [
+          "schema_type_direction"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    }
+  ],
+  "graph_modified": false,
+  "interface_alignment": {
+    "decoder": "existing _decode_json_content",
+    "source_result_sha256": "110c9716bb18a42e0157873924dd6eaf7075028133d23585bc3a9794b3f648b2",
+    "new_generator_calls": 0,
+    "meaning_text_not_edited": true,
+    "parse_status_changed": false,
+    "candidate_payload_same_when_old_decoder_succeeded": true,
+    "source_response_sha256": "42857a329094dbae3e1f2c88ffc0e38b12446c9b75cba7b7570abd63a73c1956"
+  }
+}

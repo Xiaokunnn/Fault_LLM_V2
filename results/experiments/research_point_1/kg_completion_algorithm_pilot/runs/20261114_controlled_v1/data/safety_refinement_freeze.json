@@ -1,0 +1,66 @@
+{
+  "decision_time": "before any candidate/text model is trained; G1 structural baselines unaffected",
+  "files": {
+    "data/noise_14112026_0.25.jsonl": "e50a99f91e41d868dd938e0a373654cb0ecca1e5481647612082783904163315",
+    "data/noise_14112026_0.5.jsonl": "71daf4003d548f3529e9d0a8a97240f1c760cebf3e4123764519a2c502ad14e2",
+    "data/noise_14112027_0.25.jsonl": "3a100433e7c960f3573543d9a6a667c1678948df791785dc1e44af333cdca43c",
+    "data/noise_14112027_0.5.jsonl": "f4a42a311b43dfed0d5d5feb513294508bcaeef4ab93231cf68010a95ea396c1",
+    "data/noise_14112028_0.25.jsonl": "51320548439e762f0f36637ac5bf36a79f4d87bc268020293f5a1e62b5141aa9",
+    "data/noise_14112028_0.5.jsonl": "e076ba2be2973fc08801d2f5a1d4b2ae0704664a9feffc58208d990a0ddcaa17",
+    "data/training_candidate_edges.jsonl": "c861e668a17e7c6010c94ce436f3e166e4d30ed681c78626f414fd1e71dfe1d8",
+    "data/training_entity_text.jsonl": "c6251032db78484758e0a2721917588a72b3b55cdd9c25aebf1484417823d145",
+    "data/training_safe_context_units.jsonl": "dd6b1cb383c51c2e836cb18c35d1acf8b0e515bf00559b9b7326d8a71800771a"
+  },
+  "input_freeze": "e8d1a473b6522d82286d9d3ae3fa3377d1ef319d15c1490642cc478623dd5cc7",
+  "summary": {
+    "G2_extra_edges": 238,
+    "candidate_strata": {
+      "qualified": 932,
+      "quarantine": 684,
+      "rejected": 3453,
+      "schema_invalid": 1098
+    },
+    "caveat": "No exhaustive semantic-paraphrase guarantee; aliases and exact shared text are conservative finite proxies",
+    "description_entities_with_context": 4137,
+    "final_extra_edges": 5416,
+    "final_units": 46923,
+    "initial_candidate_edges": 6891,
+    "initial_units": 48612,
+    "no_target_overlap_under_frozen_blockers": true,
+    "noise": [
+      {
+        "injected": 1519,
+        "rate": 0.25,
+        "seed": 14112026
+      },
+      {
+        "injected": 3118,
+        "rate": 0.5,
+        "seed": 14112026
+      },
+      {
+        "injected": 1581,
+        "rate": 0.25,
+        "seed": 14112027
+      },
+      {
+        "injected": 3133,
+        "rate": 0.5,
+        "seed": 14112027
+      },
+      {
+        "injected": 1553,
+        "rate": 0.25,
+        "seed": 14112028
+      },
+      {
+        "injected": 3072,
+        "rate": 0.5,
+        "seed": 14112028
+      }
+    ],
+    "removed_edges": 724,
+    "training_candidate_edges": 6167
+  },
+  "training_does_not_read_heldout_files": true
+}

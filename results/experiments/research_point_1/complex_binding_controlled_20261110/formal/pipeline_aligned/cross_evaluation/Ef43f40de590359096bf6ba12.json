@@ -1,0 +1,68 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific instruction 'Allow the pump to completely cool if overheated' under the condition 'Before attempting to open or service the pump'. The output contains a triple for 'Check the temperature before opening any covers, plates, or plugs' (Triple 1), which is a different instruction (Item 4 in the source) and does not retain the meaning of allowing the pump to cool (Item 3). The output fails to extract the specific cooling instruction and its conditional context.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Check the temperature before opening any covers, plates, or plugs' and its location in 'SAFETY - SECTION A'. The source text explicitly lists this as item 4 under the safety section.",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Close the suction and discharge valves' and its location in 'SAFETY - SECTION A'. The source text explicitly lists this as item 5.",
+        "evidence_quote": "5. Close the suction and discharge valves."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Vent the pump slowly and cautiously' and its location in 'SAFETY - SECTION A'. The source text explicitly lists this as item 6.",
+        "evidence_quote": "6. Vent the pump slowly and cautiously."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Drain the pump' and its location in 'SAFETY - SECTION A'. The source text explicitly lists this as item 7.",
+        "evidence_quote": "7. Drain the pump."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the risk/prohibition 'Do not attempt to pump any liquids the pump has not been designed for' and its location in 'SAFETY - SECTION A'. The source text contains this warning.",
+        "evidence_quote": "Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the operating condition 'Ensure that the pump and all piping or hose connections are tight, properly supported and secure before operation' and its location in 'SAFETY - SECTION A'. The source text contains this instruction.",
+        "evidence_quote": "make certain that the pump and all piping or hose connections are tight, properly supported and secure before operation."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2569,
+    "eval_count": 822,
+    "total_duration": 14181787231
+  },
+  "human_Gold": false
+}

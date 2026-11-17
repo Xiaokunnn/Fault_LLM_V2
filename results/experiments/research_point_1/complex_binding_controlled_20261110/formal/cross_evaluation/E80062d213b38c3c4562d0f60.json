@@ -1,0 +1,60 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data referencing the specific focus T03 (stopping the pump immediately and eliminating causes). The provided triples relate to a different warning (operating with closed lines) and do not retain the meaning of the T03 source quotes.",
+        "evidence_quote": "Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data referencing the specific focus T04 (operating against closed discharge valve for max 5 minutes at 80°C). The provided triples relate to a different warning (operating with closed suction/discharge lines causing damage) and do not retain the specific time and temperature constraints of the T04 source quotes.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source states that operating with closed lines causes 'incorrect pressure and temperature' and 'death or serious injury' due to 'hot or hazard fluids under pressure'. It does not explicitly state that this specific condition causes 'pump damage' (泵损坏) as the primary fault mode in this context, although damage is a potential consequence. More critically, the output's head_surface '泵运行时关闭吸水管线和/或排出管线' (Operating with closed suction and/or discharge lines) is a valid extraction of the condition, but the tail '泵损坏' is not the direct consequence cited in the specific DANGER block for this condition (which cites injury/death). However, looking at the second DANGER block, 'DAMAGE TO THE PUMP SET!' is associated with 'High temperature due to dry running...'. The first DANGER block associates closed lines with 'incorrect pressure and temperature' leading to 'death or serious injury'. The output conflates the condition of the first block with the consequence of the second block or generalizes 'incorrect pressure/temperature' to 'pump damage'. While 'incorrect pressure and temperature' can lead to damage, the source explicitly links the closed line condition to safety hazards (death/injury) rather than just property damage in that specific sentence structure. Furthermore, the output is a duplicate of triple 2. The primary issue is that the source text for the closed line condition emphasizes 'DANGER... DEATH OR SERIOUS INJURY' rather than 'DAMAGE TO THE PUMP SET' (which is in the next block for dry running). Therefore, mapping it directly to 'FaultMode: Pump Damage' is a misattribution of the specific consequence listed for that condition in the source.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "Identical to triple 1. The source text for the condition 'Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed' is linked to 'DANGER... DEATH OR SERIOUS INJURY' due to 'incorrect pressure and temperature'. It is not explicitly linked to 'DAMAGE TO THE PUMP SET' in that specific block. The 'DAMAGE TO THE PUMP SET' warning is in a separate block associated with 'dry running' or 'gas content'. Thus, the relation 'causes' to 'Pump Damage' is not directly supported by the specific evidence text provided for this condition.",
+        "evidence_quote": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5814,
+    "eval_count": 1073,
+    "total_duration": 35100168447
+  },
+  "human_Gold": false
+}

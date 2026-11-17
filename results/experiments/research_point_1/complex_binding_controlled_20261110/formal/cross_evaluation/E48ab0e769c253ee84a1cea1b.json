@@ -1,0 +1,160 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T11",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T11 specifies a complete row of conditions: 'Extreme dirt', 'Dry', 'Light to medium', 'Slow to medium', leading to the action 'Daily flushing out dirt'. The output fails to retain this specific combination. It extracts 'Daily flushing out dirt' (Triple 16) but links it to the generic header 'SUGGESTED GREASING INTERVALS**' rather than the specific condition row. It extracts 'Dirt' (Triple 1) and 'Moisture' (Triple 2) as generic headers, not the specific values 'Extreme dirt' and 'Dry'. It extracts 'Load' (Triple 3) and 'Speed' (Triple 4) as generic headers, not 'Light to medium' and 'Slow to medium'. Consequently, the specific conditional logic (If Extreme dirt AND Dry AND Light-Medium Load AND Slow-Medium Speed THEN Daily flushing) is lost. The output treats these as isolated entities rather than a bound set of conditions.",
+        "evidence_quote": "Extreme dirt Dry Light to medium Slow to medium Daily flushing out dirt",
+        "output_refs": [
+          "triples:16"
+        ],
+        "output_quote": "head_canonical_zh: \"每日冲洗掉污垢\", head_surface: \"Daily flushing out dirt\", relation: \"specified_by\", tail_surface: \"SUGGESTED GREASING INTERVALS**\""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source lists 'Dirt' as a column header, not a specific condition value located in 'AMBIENT CONDITIONS' as a component. The relation 'located_in' is semantically incorrect for a table header.",
+        "evidence_quote": "Dirt"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The source lists 'Moisture' as a column header, not a specific condition value located in 'AMBIENT CONDITIONS' as a component.",
+        "evidence_quote": "Moisture"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The source lists 'Load' as a column header, not a specific condition value located in 'OPERATING CONDITIONS' as a component.",
+        "evidence_quote": "Load"
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The source lists 'Speed' as a column header, not a specific condition value located in 'OPERATING CONDITIONS' as a component.",
+        "evidence_quote": "Speed"
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The source lists 'Low' as a sub-header for temperature, not a condition value located in 'OPERATING CONDITIONS'.",
+        "evidence_quote": "Low"
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The source lists 'High' as a sub-header for temperature, not a condition value located in 'OPERATING CONDITIONS'.",
+        "evidence_quote": "High"
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "The source lists '0F (-18C)' as a temperature value in the 'BEARING OPERATING TEMPERATURE' column, not a condition located in a component named 'BEARING OPERATING TEMPERATURE'. The relation 'located_in' is semantically weak for a table cell value.",
+        "evidence_quote": "0F (-18C)"
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "The source lists '120F (49C)' as a temperature value, not a condition located in a component.",
+        "evidence_quote": "120F (49C)"
+      },
+      {
+        "index": 9,
+        "verdict": "N",
+        "reason": "The source lists '200F (93C)' as a temperature value, not a condition located in a component.",
+        "evidence_quote": "200F (93C)"
+      },
+      {
+        "index": 10,
+        "verdict": "N",
+        "reason": "The source lists '2 to 6 months' as a greasing interval value, not a condition located in a component.",
+        "evidence_quote": "2 to 6 months"
+      },
+      {
+        "index": 11,
+        "verdict": "N",
+        "reason": "The source states greases are satisfactory, it does not specify a component 'USE THESE GREASES' that specifies the standard. The relation is inverted or semantically incorrect.",
+        "evidence_quote": "High quality NGLI No. 1 or 2 multipurpose bearing greases are generally satisfactory."
+      },
+      {
+        "index": 12,
+        "verdict": "N",
+        "reason": "The source recommends consultation, it does not specify a component 'USE THESE GREASES' that specifies the standard.",
+        "evidence_quote": "Consultation with a reputable lubricant supplier is recommended."
+      },
+      {
+        "index": 13,
+        "verdict": "N",
+        "reason": "The source lists '1 to 2 months' as a greasing interval value, not a condition located in a component.",
+        "evidence_quote": "1 to 2 months"
+      },
+      {
+        "index": 14,
+        "verdict": "N",
+        "reason": "The source lists '1 to 4 weeks' as a greasing interval value, not a condition located in a component.",
+        "evidence_quote": "1 to 4 weeks"
+      },
+      {
+        "index": 15,
+        "verdict": "N",
+        "reason": "The source lists '1 to 7 days' as a greasing interval value, not a condition located in a component.",
+        "evidence_quote": "1 to 7 days"
+      },
+      {
+        "index": 16,
+        "verdict": "N",
+        "reason": "The source lists 'Daily flushing out dirt' as a specific maintenance action for a specific condition row (Extreme dirt, Dry, etc.). The output links it to the generic header 'SUGGESTED GREASING INTERVALS**', losing the conditional context. The relation 'specified_by' is acceptable if the tail were the specific condition, but here the tail is the table title, which is a weak binding.",
+        "evidence_quote": "Daily flushing out dirt"
+      },
+      {
+        "index": 17,
+        "verdict": "N",
+        "reason": "The source lists '1 to 4 weeks grease at shutdowns' as a specific maintenance action for a specific condition row (High humidity, etc.). The output links it to the generic header, losing the conditional context.",
+        "evidence_quote": "1 to 4 weeks grease at shutdowns"
+      },
+      {
+        "index": 18,
+        "verdict": "N",
+        "reason": "The source lists 'Lithium or other corrosion control grease' as a recommended grease for a specific condition row. The output links it to the generic header 'USE THESE GREASES', which is a column header, not a component specifying the standard.",
+        "evidence_quote": "Lithium or other corrosion control grease"
+      },
+      {
+        "index": 19,
+        "verdict": "N",
+        "reason": "The source lists 'High viscosity lubrication' as a recommended grease type for a specific condition row. The output links it to the generic header, losing the conditional context.",
+        "evidence_quote": "High viscosity lubrication"
+      },
+      {
+        "index": 20,
+        "verdict": "N",
+        "reason": "The source lists '1 to 8 weeks' as a greasing interval value, not a condition located in a component.",
+        "evidence_quote": "1 to 8 weeks"
+      },
+      {
+        "index": 21,
+        "verdict": "N",
+        "reason": "The source lists 'Wide temperature range Diester-type greases...' as a recommended grease for a specific condition row. The output links it to the generic header, losing the conditional context.",
+        "evidence_quote": "Wide temperature range Diester-type greases (Silicone-Diester-Polyester lubricants)"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 12454,
+    "eval_count": 2086,
+    "total_duration": 56029710224
+  },
+  "human_Gold": false
+}

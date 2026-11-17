@@ -1,0 +1,46 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "I05",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "S",
+        "numeric_order": "S",
+        "evidence_support": "S",
+        "literal_complete": "P",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains the core causal relationship and the specific numeric conditions (+40°C, 1,000m) from the source. It correctly identifies the alternative joint condition (temperature OR altitude). However, it is marked as Partial for literal_complete because it omits the explicit mechanism ('poor motor cooling effect caused by low air density') and the subsequent required action ('a motor with higher output power shall be used'), which are essential parts of the complete meaning in the source text. The explicit_binding is N because the output uses free-text surfaces rather than machine-readable entity IDs or structured bindings.",
+        "evidence_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1.",
+        "output_refs": [
+          "triples:2"
+        ],
+        "output_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1."
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The relation 'contains' is incorrect. The source states that if flow passage components are made of high-grade stainless steel, 'a special material is needed'. This implies a requirement or dependency, not a structural containment relationship where the condition 'contains' the material. Furthermore, the head and tail are not distinct entities in a containment hierarchy; the head is a conditional clause. The extraction misinterprets the logical structure of the sentence.",
+        "evidence_quote": "If all flow passage components required by the system are made of high-grade stainless steel, a special material is needed."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The relation 'causes' is appropriate for the causal link between the environmental conditions (high temp/altitude) and the result (power decrease). The head captures the condition and the tail captures the effect. While the tail is phrased as a full clause rather than a noun phrase, the semantic relationship is correctly identified as causal. The conditions and numeric values are preserved in the head surface.",
+        "evidence_quote": "In case that ambient temperature exceeds +40°C or the motor is installed above 1,000m altitude, the motor rated output power (P2) will decrease due to the poor motor cooling effect caused by low air density, as shown in Chart 1."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 1990,
+    "eval_count": 714,
+    "total_duration": 15983017170
+  },
+  "human_Gold": false
+}

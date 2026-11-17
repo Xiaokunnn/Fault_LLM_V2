@@ -1,0 +1,44 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T11",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus T11 requires the retention of the specific operating condition row defined by 'Extreme dirt', 'Dry', 'Light to medium', 'Slow to medium', and the maintenance action 'Daily flushing out dirt'. The anonymous output contains two triples that reference a different row ('Clean to dirty', 'Dry', 'Light', 'Slow', '1 to 4 weeks', 'Synthetic type greases'). None of the output triples or auxiliary data contain the specific values or actions required by focus T11. The output completely misses the target focus content.",
+        "evidence_quote": "Extreme dirt Dry Light to medium Slow to medium Daily flushing out dirt",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The triple claims a relationship between 'Clean to dirty Dry' and 'Light to Slow to 80°F to 300°F'. While these values exist in the source table (row r013), the relation 'specifies' is a generic label. More critically, this triple does not address the focus T11 ('Extreme dirt' row). It extracts a different row entirely. As a relation extraction for the specific focus, it is incorrect/absent. Even as a general extraction, it conflates ambient conditions with operating conditions/temperatures in a way that doesn't clearly represent the table's structure (which separates Ambient, Operating, and Temperature columns). However, the primary failure is that it does not retain the focus T11 content.",
+        "evidence_quote": "Clean to dirty Dry Light Slow 80°F 300°F"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The triple claims a relationship between 'Light to Slow to 80°F to 300°F' and '1 to 4 weeks Synthetic type greases'. Again, this refers to row r013 ('Clean to dirty'), not the focus T11 row ('Extreme dirt'). It fails to retain the specific knowledge requested by the focus. The relation 'specifies' is vague. The content is from the wrong row relative to the focus.",
+        "evidence_quote": "Light Slow 80°F 300°F 1 to 4 weeks Synthetic type greases"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 9518,
+    "eval_count": 639,
+    "total_duration": 25001392362
+  },
+  "human_Gold": false
+}

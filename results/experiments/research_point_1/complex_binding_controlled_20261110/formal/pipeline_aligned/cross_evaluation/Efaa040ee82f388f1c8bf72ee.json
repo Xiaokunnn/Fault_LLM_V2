@@ -1,0 +1,40 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "NA",
+        "evidence_support": "P",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output captures the instruction to check temperature (item 4) but completely omits the critical precondition 'Allow the pump to completely cool if overheated' (item 3) which is part of the focus. It also misclassifies 'temperature' as a 'Symptom' rather than a safety condition or inspection target, and fails to bind the action to the specific context of 'before attempting to open or service the pump' as a structured condition, instead embedding it in the tail text. The relation 'diagnosed_by' is semantically incorrect for a safety procedure.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated. 4. Check the temperature before opening any covers, plates, or plugs.",
+        "output_refs": [
+          "triples:1"
+        ],
+        "output_quote": "Check the temperature before opening any covers, plates, or plugs."
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The relation 'diagnosed_by' is incorrect. The source text describes a safety procedure/inspection step ('Check the temperature...'), not a diagnostic relationship where a symptom is diagnosed by a method. Furthermore, the head 'temperature' is not a symptom in this context, but a physical property to be verified for safety. The tail is a full sentence instruction, not a distinct entity. The triple fails to represent the procedural nature of the source text.",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 1838,
+    "eval_count": 464,
+    "total_duration": 14654604888
+  },
+  "human_Gold": false
+}

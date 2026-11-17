@@ -1,0 +1,132 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples, auxiliary text, or bindings that reference the instruction to stop the pump immediately upon detecting abnormal conditions (noise, vibration, temperature, leakage) or the requirement to eliminate causes before returning to service. The output exclusively focuses on the prohibition of operating with closed suction/discharge lines, which is a different safety instruction found in a different section of the source text.",
+        "evidence_quote": "Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not retain the specific operational limit allowing the pump to run against a closed discharge valve for a maximum of 5 minutes at a maximum temperature of 80 °C. The output triples describe a general prohibition ('Do not operate...') and a resulting fault ('pump damage'), but they omit the critical conditional exception and the specific numeric/time/temperature constraints defined in the source focus.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source states 'Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.' This is a prohibition/instruction. The output models this as a causal relationship where the condition 'causes' 'pump damage'. While the source mentions 'DAMAGE TO THE PUMP SET!' in a different DANGER block (regarding dry running/gas content) and 'incorrect pressure and temperature' in the first DANGER block, it does not explicitly state that closing the lines *causes* damage in the context of the prohibition sentence itself, but rather warns of explosion/injury due to pressure/temperature. More critically, the output misses the specific context of the focus items T03 and T04 entirely. However, judging the triple against the source text it cites: The source says 'If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.' It does not explicitly say it causes 'pump damage' in that specific sentence, though 'DAMAGE TO THE PUMP SET' appears in the next block. The relation 'causes' is a plausible inference but the tail 'pump damage' is not the direct object of the 'cause' verb in the cited evidence sentence (which says 'cause incorrect pressure and temperature'). Furthermore, the output fails to capture the specific focus items T03 and T04. Since the task asks to evaluate the triples, and the triple is a generic interpretation of a warning that is not the focus of the provided focus_ids, but strictly speaking, does the source support 'closed lines causes pump damage'? The source says 'incorrect pressure and temperature' and 'death or serious injury'. It does not explicitly link closed lines to 'pump damage' in the same sentence, though it is implied in the broader context of 'DAMAGE TO THE PUMP SET' in the adjacent block. However, the primary failure is that this triple does not address the specific focus items T03 and T04. But the instruction says 'Evaluate ALL triples including errors outside the focus'. The triple is a weak extraction. The source says 'cause incorrect pressure and temperature'. It does not say 'cause pump damage' in that specific clause. The 'DAMAGE TO THE PUMP SET' is in the *next* DANGER block about dry running. Therefore, the causal link to 'pump damage' is not directly supported by the cited evidence text for that specific condition.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 9,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 10,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 11,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 12,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 13,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 14,
+        "verdict": "N",
+        "reason": "Duplicate of index 1. Same reasoning applies.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 7026,
+    "eval_count": 1929,
+    "total_duration": 54457206309
+  },
+  "human_Gold": false
+}

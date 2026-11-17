@@ -1,0 +1,68 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T09",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific instruction 'Allow the pump to completely cool if overheated' under the condition 'Before attempting to open or service the pump'. The output contains a triple for 'Check the temperature before opening any covers, plates, or plugs' (Triple 1), which is a different instruction (Item 4 in the source) and does not capture the cooling requirement (Item 3). The output fails to retain the specific atomic action of allowing the pump to cool, the condition of overheating, or the specific context of opening/servicing the pump as defined in the focus.",
+        "evidence_quote": "3. Allow the pump to completely cool if overheated.",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Check the temperature before opening any covers, plates, or plugs' and its location in 'SAFETY - SECTION A'. The head and tail match the source text and structure.",
+        "evidence_quote": "4. Check the temperature before opening any covers, plates, or plugs."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Close the suction and discharge valves' and its location in 'SAFETY - SECTION A'. The head and tail match the source text and structure.",
+        "evidence_quote": "5. Close the suction and discharge valves."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Vent the pump slowly and cautiously' and its location in 'SAFETY - SECTION A'. The head and tail match the source text and structure.",
+        "evidence_quote": "6. Vent the pump slowly and cautiously."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the action 'Drain the pump' and its location in 'SAFETY - SECTION A'. The head and tail match the source text and structure.",
+        "evidence_quote": "7. Drain the pump."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the risk/prohibition 'Do not attempt to pump any liquids the pump has not been designed for' and its location in 'SAFETY - SECTION A'. The head captures the core prohibition, and the tail is correct.",
+        "evidence_quote": "Do not attempt to pump any liquids the pump has not been designed for, and which may damage the pump or endanger personnel as a result of pump failure."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the requirement 'Suction and discharge hoses and piping must be removed from the pump before lifting' and its location in 'SAFETY - SECTION A'. The head and tail match the source text and structure.",
+        "evidence_quote": "Suction and discharge hoses and piping must be removed from the pump before lifting."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 2549,
+    "eval_count": 838,
+    "total_duration": 13963071244
+  },
+  "human_Gold": false
+}

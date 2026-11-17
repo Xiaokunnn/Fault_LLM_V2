@@ -1,0 +1,242 @@
+{
+  "type": "object",
+  "properties": {
+    "triples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "head_surface": {
+            "type": "string"
+          },
+          "head_canonical_zh": {
+            "type": "string"
+          },
+          "tail_surface": {
+            "type": "string"
+          },
+          "tail_canonical_zh": {
+            "type": "string"
+          },
+          "evidence_text": {
+            "type": "string"
+          },
+          "head_type": {
+            "type": "string",
+            "enum": [
+              "Cause",
+              "Component",
+              "Equipment",
+              "FailureMechanism",
+              "FaultMode",
+              "InspectionAction",
+              "InspectionMethod",
+              "MaintenanceAction",
+              "OperatingCondition",
+              "Risk",
+              "SignalFeature",
+              "Standard",
+              "Symptom"
+            ]
+          },
+          "tail_type": {
+            "type": "string",
+            "enum": [
+              "Cause",
+              "Component",
+              "Equipment",
+              "FailureMechanism",
+              "FaultMode",
+              "InspectionAction",
+              "InspectionMethod",
+              "MaintenanceAction",
+              "OperatingCondition",
+              "Risk",
+              "SignalFeature",
+              "Standard",
+              "Symptom"
+            ]
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "contains",
+              "located_in",
+              "occurs_at",
+              "causes",
+              "indicates",
+              "manifests_as",
+              "evolves_to",
+              "diagnosed_by",
+              "inspected_by",
+              "mitigated_by",
+              "prevented_by",
+              "maintained_by",
+              "operates_under",
+              "increases_risk_of",
+              "specified_by"
+            ]
+          },
+          "evidence_mode": {
+            "type": "string",
+            "enum": [
+              "E1_contiguous_text",
+              "E2_table_cells"
+            ]
+          },
+          "evidence_unit_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 24
+          },
+          "evidence_role": {
+            "type": "string",
+            "enum": [
+              "cause_or_mechanism",
+              "symptom",
+              "inspection",
+              "maintenance",
+              "operating_condition",
+              "structural_context",
+              "standard",
+              "risk"
+            ]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 16
+          },
+          "polarity": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "negative",
+              "unspecified"
+            ]
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "asserted",
+              "possible",
+              "probable",
+              "required",
+              "recommended",
+              "descriptive",
+              "conditional",
+              "unspecified"
+            ]
+          },
+          "model_confidence": {
+            "type": "number"
+          },
+          "head_translation_confidence": {
+            "type": "number"
+          },
+          "tail_translation_confidence": {
+            "type": "number"
+          },
+          "fault_class_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 32
+          }
+        },
+        "required": [
+          "head_surface",
+          "head_canonical_zh",
+          "head_type",
+          "relation",
+          "tail_surface",
+          "tail_canonical_zh",
+          "tail_type",
+          "evidence_text",
+          "evidence_mode",
+          "evidence_unit_ids",
+          "evidence_role",
+          "fault_class_ids",
+          "model_confidence",
+          "head_translation_confidence",
+          "tail_translation_confidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 32
+    },
+    "bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "operator": {
+            "type": "string",
+            "enum": [
+              "IF",
+              "AND",
+              "OR",
+              "BEFORE",
+              "AFTER",
+              "EXCEPT",
+              "LIMIT"
+            ]
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "maxItems": 32
+          },
+          "text": {
+            "type": "string"
+          },
+          "evidence_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "operator",
+          "members",
+          "text",
+          "evidence_text"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 32
+    },
+    "auxiliary": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 32
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 32
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 32
+    }
+  },
+  "required": [
+    "triples",
+    "warnings"
+  ],
+  "additionalProperties": false
+}

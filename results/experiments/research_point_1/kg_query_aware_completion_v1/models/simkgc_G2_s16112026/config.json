@@ -1,0 +1,38 @@
+{
+  "anchor_lambda": 0.0,
+  "author_commit": "97cc43e488f19ca5b0f6fbf60ffefd2ee56c0693",
+  "author_model_sha256": "cd86220c72d13c99a1aaf922ae02653d91a1888f7bcf9128ef6b8664311e38dd",
+  "batch": 32,
+  "epochs": 10,
+  "implementation": "Unchanged author CustomBertModel and compute_logits; adapted local encoder, sampling/known-train masks and uncertainty weights; IB+self-neg, pre_batch=0",
+  "lr": 2e-05,
+  "max_length": 96,
+  "options": {
+    "additive_margin": 0.02,
+    "batch_size": 32,
+    "finetune_t": true,
+    "pooling": "mean",
+    "pre_batch": 0,
+    "pre_batch_weight": 1.0,
+    "pretrained_model": "/home/hengshan10/08-zxk/Fault_LLM_V2/data/model/BAAI-bge-small-zh-v1.5-r7999e1d",
+    "t": 0.05,
+    "use_self_negative": true
+  },
+  "parameters": 47907841,
+  "patience": 3,
+  "prototype": "none",
+  "reference_checkpoint_sha256": null,
+  "sampler": "same base exposure; added separate aux batch for G2-G4; extra cost reported, not equal FLOPs",
+  "seed": 16112026,
+  "view": {
+    "active_entities": 1838,
+    "aux_edges": 168,
+    "base_edges": 989,
+    "fraction": 1.0,
+    "injected_corruptions": 0,
+    "negative_definition": "sampled unknowns, not verified false facts; synthetic corruptions are not original errors",
+    "noise": 0.0,
+    "schema_invalid_contexts": 0,
+    "view": "G2"
+  }
+}

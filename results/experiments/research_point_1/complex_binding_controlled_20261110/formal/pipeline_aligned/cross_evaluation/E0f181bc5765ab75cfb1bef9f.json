@@ -1,0 +1,105 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "S",
+        "alternative_joint": "S",
+        "numeric_order": "NA",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output retains the two essential actions from the focus: stopping the pump immediately and eliminating causes before returning to service. Triple 3 captures the causal link between abnormal symptoms and damage, which provides the context for the mitigation. Triple 8 explicitly captures the mitigation action 'Stop the pump (set) immediately' linked to the symptoms. Although the specific instruction 'Eliminate the causes before returning the pump set to service' is not a standalone triple, it is part of the same contiguous evidence block cited in Triple 8 and is semantically required to complete the mitigation protocol described in the source. The output correctly identifies the condition (abnormal noises/vibrations/etc.) and the required response. The lack of explicit machine-readable binding for the second step is a minor structural gap but the literal meaning is fully present in the evidence text associated with the main channel triples.",
+        "evidence_quote": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [
+          "triples:3",
+          "triples:8"
+        ],
+        "output_quote": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service."
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output completely fails to retain the focus T04. The source text explicitly states: 'For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).' None of the triples in the anonymous_output contain this specific operating condition, the time limit (5 minutes), or the temperature limit (80 °C). The output focuses on other dangers (explosion, dry running) but misses this specific safety constraint entirely.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the operating condition (closed shut-off elements) and the resulting symptom (incorrect pressure and temperature) as stated in the source text 'If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.'",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly links the operating condition (no liquid fill) to the symptom (high temperature due to dry running) as stated in the source 'High temperature due to dry running... Do not operate the pump set without liquid fill.'",
+        "evidence_quote": "High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury. Do not operate the pump set without liquid fill."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies that abnormal noises/vibrations/temperatures/leakage indicate potential damage to the pump, matching the source 'Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.'",
+        "evidence_quote": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the risk (explosion hazard) associated with operating the pump with closed lines, supported by the source 'DANGER EXPLOSION HAZARD! ... If the pump is operated with the suction and/or discharge line closed...'",
+        "evidence_quote": "DANGER EXPLOSION HAZARD! ... If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the risk (explosion hazard) associated with operating without liquid fill, supported by the source 'DANGER EXPLOSION HAZARD! ... Do not operate the pump set without liquid fill.'",
+        "evidence_quote": "DANGER EXPLOSION HAZARD! ... Do not operate the pump set without liquid fill."
+      },
+      {
+        "index": 6,
+        "verdict": "S",
+        "reason": "This is a duplicate of index 4 with different evidence unit IDs but the same semantic content. It correctly identifies the risk (explosion hazard) associated with operating the pump with closed lines.",
+        "evidence_quote": "DANGER EXPLOSION HAZARD! ... If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 7,
+        "verdict": "S",
+        "reason": "This is a duplicate of index 5 with different evidence unit IDs but the same semantic content. It correctly identifies the risk (explosion hazard) associated with operating without liquid fill.",
+        "evidence_quote": "DANGER EXPLOSION HAZARD! ... Do not operate the pump set without liquid fill."
+      },
+      {
+        "index": 8,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the mitigation action (stop pump immediately) for the symptom (abnormal noises/vibrations/etc.), matching the source 'Stop the pump (set) immediately.'",
+        "evidence_quote": "Stop the pump (set) immediately."
+      },
+      {
+        "index": 9,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the maintenance action (prime pump) as specifying the operating condition (do not operate without liquid fill), matching the source 'Prime the pump according to operating instructions.'",
+        "evidence_quote": "Prime the pump according to operating instructions."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 7632,
+    "eval_count": 1595,
+    "total_duration": 45970727260
+  },
+  "human_Gold": false
+}

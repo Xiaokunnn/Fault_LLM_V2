@@ -1,0 +1,205 @@
+{
+  "trial": {
+    "arm": "B0",
+    "input_sha256": "113182ea9999213188c94fb7bd2ca4a491294d0b26fa1671caad3d5878125a39",
+    "page_key": "MP017:p0015",
+    "seed": 2026111001,
+    "split": "independent",
+    "trial_id": "B0_MP017_p0015_2026111001"
+  },
+  "used_total_tokens": 2691,
+  "used_output_tokens": 559,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 2132,
+      "output_tokens": 559,
+      "total_tokens": 2691,
+      "elapsed_seconds": 24.666048804996535,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "exposed rotating parts",
+        "head_canonical_zh": "暴露的旋转部件",
+        "head_type": "Component",
+        "relation": "causes",
+        "tail_surface": "severe injury to personnel",
+        "tail_canonical_zh": "严重的人身伤害",
+        "tail_type": "Symptom",
+        "evidence_text": "exposed rotating parts can catch clothing, fingers, or tools, causing severe injury to personnel.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "causal",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "non-explosion proof motor",
+        "head_canonical_zh": "非防爆电机",
+        "head_type": "Component",
+        "relation": "increases_risk_of",
+        "tail_surface": "explosion",
+        "tail_canonical_zh": "爆炸",
+        "tail_type": "Risk",
+        "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      },
+      {
+        "head_surface": "National Electric Code",
+        "head_canonical_zh": "国家电气规范",
+        "head_type": "Standard",
+        "relation": "specifies",
+        "tail_surface": "installation and operation of electrical equipment",
+        "tail_canonical_zh": "电气设备的安装和操作",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "install, connect and operate the motor in accordance with the National Electric Code and all local codes.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalized": {
+        "head": "non-explosion proof motor",
+        "head_surface": "non-explosion proof motor",
+        "head_canonical_zh": "非防爆电机",
+        "head_type": "Component",
+        "head_translation_status": "needs_review",
+        "relation": "increases_risk_of",
+        "tail": "explosion",
+        "tail_surface": "explosion",
+        "tail_canonical_zh": "爆炸",
+        "tail_type": "Risk",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "risk",
+        "fault_class_ids": [],
+        "model_confidence": 1.0,
+        "head_translation_confidence": 1.0,
+        "tail_translation_confidence": 1.0,
+        "doc_id": "MP017",
+        "pdf_page_number": 15,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "GORMAN_RUPP",
+        "source_url": "https://assets.grpumps.com/manuals/OM-04760.pdf",
+        "source_tier": "B",
+        "publisher": "Gorman-Rupp",
+        "document_sha256": "C297530EBA7B1FB070E603DDEA58F884EC48861A988CF3F11A2416D865C5403B",
+        "page_text_sha256": "f00b87d5987b8032966b62a90798733dd87ea7dc235c2535816a5f27d9488fc2",
+        "pump_type": "self_priming_centrifugal_pump",
+        "service": "general_liquid_pumping",
+        "applicability_scope": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "non-explosion proof motor",
+          "head_type": "Component",
+          "relation": "increases_risk_of",
+          "tail_surface": "explosion",
+          "tail_type": "Risk",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "非船舶专用厂商手册;只迁移明确适用于同类自吸离心泵和泵电机组的通用机理与动作",
+          "evidence_text": "do not operate a non-explosion proof motor in an explosive atmosphere. An explosion, which may cause severe personal injury or death, could result.",
+          "evidence_unit_ids": []
+        },
+        "included": false,
+        "rules": [],
+        "source_witnesses": [],
+        "barriers": [
+          "no_same_column_or_native_cell_binding",
+          "unbound_source_quote"
+        ],
+        "screen_flags": [
+          "schema_type_direction",
+          "unbound_quote"
+        ],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [
+            "schema_type_direction",
+            "unbound_quote"
+          ],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": true,
+            "split_x": 306.0,
+            "text_units": 47,
+            "native_cells": 0
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 3,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false
+}

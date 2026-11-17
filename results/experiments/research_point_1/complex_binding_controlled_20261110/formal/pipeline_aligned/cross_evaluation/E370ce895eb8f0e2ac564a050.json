@@ -1,0 +1,82 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T13",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output triple (index 3) incorrectly maps the condition 'reference resistance not achieved' to a 'located_in' relationship with 'motor'. It fails to capture the causal consequence (winding is wet), the required action (drying in oven), or the specific numeric parameters (90°C/12-16h, 105°C/6-8h) which are essential to the focus. The relation type is semantically wrong for the source meaning.",
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn. Ugnstemperaturen skall vara 90°C under 12-16 timmar, följt av 105 °C under 6-8 timmar.",
+        "output_refs": [
+          "triples:3"
+        ],
+        "output_quote": "head_canonical_zh: 参考电阻值, relation: located_in, tail_canonical_zh: 电机"
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The source states a requirement for insulation resistance value (>100 MΩ), not a spatial location. 'located_in' is an incorrect relation type for a measurement standard.",
+        "evidence_quote": "Isolationsresistansen, korrigerad till 25°C, måste överstiga referensvärdet, dvs. 100 MΩ"
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The source states the motor housing must be grounded and windings discharged. 'located_in' is an incorrect relation type for safety/operational requirements.",
+        "evidence_quote": "Motorhöljet måste vara jordat och lindningarna måste laddas ur mot höljet"
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The source describes a conditional maintenance procedure (if resistance low -> dry in oven). 'located_in' is an incorrect relation type for a causal/procedural statement.",
+        "evidence_quote": "Om referensresistansen inte kan uppnås är lindningen fuktig och måste torkas i ugn."
+      },
+      {
+        "index": 4,
+        "verdict": "N",
+        "reason": "The source instructs to remove plugs and open valves during heating. 'located_in' is an incorrect relation type for an action instruction.",
+        "evidence_quote": "Om det finns pluggar i dräneringshålen måste dessa tas ur och stängningsventiler... måste vara öppna"
+      },
+      {
+        "index": 5,
+        "verdict": "N",
+        "reason": "The source states the bearing type is indicated on the nameplate. 'located_in' is an incorrect relation type for an informational statement about labeling.",
+        "evidence_quote": "Lagertypen anges på märkskylten."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The source warns about liquid dripping if mounted with shaft up and instructs user to take measures. 'located_in' is an incorrect relation type for a risk/warning statement.",
+        "evidence_quote": "Om en motor monteras med axeln uppåt för och vätska kan förväntas rinna ned utefrån axeln måste användaren vidta åtgärder"
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "The source warns that running without radial load can damage the rolling bearing. 'located_in' is an incorrect relation type for a causal damage warning.",
+        "evidence_quote": "Om motorn körs utan radiell belastning på axeln kan rullagret skadas."
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "The source warns that running without axial force can damage the angular contact bearing. 'located_in' is an incorrect relation type for a causal damage warning.",
+        "evidence_quote": "Om motorn körs utan axiell kraft tillämpad i rätt riktning i förhållande till axeln kan vinkelkontaktlagret skadas."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 3410,
+    "eval_count": 1118,
+    "total_duration": 29474048284
+  },
+  "human_Gold": false
+}

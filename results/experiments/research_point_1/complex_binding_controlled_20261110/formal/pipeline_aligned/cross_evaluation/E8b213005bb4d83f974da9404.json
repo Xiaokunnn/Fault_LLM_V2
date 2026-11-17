@@ -1,0 +1,38 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T06",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The focus requires the specific vibration trip level for the Motor (non drive end), which is >15 mm/s. The output contains a single triple stating 'vibration causes damage' with a relation 'manifests_as'. It completely omits the location (Motor non drive end), the specific numeric threshold (>15), the unit (mm/s), and the distinction between alarm and trip levels. The output does not retain the specific technical fact requested by the focus.",
+        "evidence_quote": "Motor (non drive end) >10 >15",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "N",
+        "reason": "The triple claims 'vibration causes damage' manifests as 'Vibration causes damage'. While the phrase 'Vibration causes damage' appears in the source legend for Zone D, the triple structure is tautological and does not capture the specific protective setting or threshold data (e.g., >15 mm/s for non-drive end) which is the primary informational content of the table. Furthermore, the relation 'manifests_as' is semantically weak for a general statement of consequence versus a specific measurement threshold. It fails to represent the specific data point 'Motor (non drive end) >15' as a fact.",
+        "evidence_quote": "Vibration causes damage"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 12976,
+    "eval_count": 426,
+    "total_duration": 25411168729
+  },
+  "human_Gold": false
+}

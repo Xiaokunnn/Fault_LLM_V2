@@ -1,0 +1,66 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "NA",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output contains no triples or auxiliary data referencing the specific actions 'Stop the pump (set) immediately' or 'Eliminate the causes before returning the pump set to service'. The extracted triples focus on closed suction/discharge lines and their consequences, which is a different section of the source text (DANGER vs CAUTION).",
+        "evidence_quote": "Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not retain the specific operational limit regarding the closed discharge valve (max 5 minutes, max 80 °C). The extracted triples discuss the general prohibition of operating with closed lines and the resulting incorrect pressure/temperature, but fail to capture the specific time and temperature constraints defined in the focus.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies the condition (operating with suction/discharge closed) and the direct symptom (incorrect pressure and temperature) as stated in the source text.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 2,
+        "verdict": "N",
+        "reason": "The triple claims the condition causes 'hot or toxic fluid leakage' (tail_surface: 热或有毒流体泄漏). The source states that 'Hot or hazard fluids under pressure will cause death or serious injury' and lists 'LEAKAGE OF HOT OR TOXIC FLUIDS!' as a hazard header, but does not explicitly state that the closed line condition *causes* the leakage itself, but rather that the resulting pressure/temperature leads to injury. More critically, the tail is a symptom/consequence, but the relation 'causes' from the operating condition to 'leakage' is an inference not explicitly linked as a direct causal chain in the sentence structure provided (Condition -> Incorrect P/T -> Injury). However, looking closely at the source: 'If the pump is operated... will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death...'. The output tail '热或有毒流体泄漏' (Hot or toxic fluid leakage) is not the direct result of the closed line in the text; the text says the closed line causes incorrect P/T. The leakage is a hazard context. The triple misattributes the causal tail.",
+        "evidence_quote": "If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature. Hot or hazard fluids under pressure will cause death or serious injury."
+      },
+      {
+        "index": 3,
+        "verdict": "N",
+        "reason": "The triple claims the condition causes 'pump damage' (tail_surface: 泵损坏). The source text in the relevant DANGER block says 'Do not operate the pump with the shut-off elements... closed.' It does not explicitly state 'will cause pump damage' in that specific sentence. The 'DAMAGE TO THE PUMP SET!' header is in the *next* DANGER block regarding dry running/gas content. The first DANGER block mentions 'EXPLOSION HAZARD!' and 'LEAKAGE...'. While damage is implied by the prohibition, the specific causal link 'closed line -> pump damage' is not explicitly stated in the text cited for this triple (which cites the 'Do not operate...' sentence). The source says 'Do not operate...', it does not say 'Operating... causes pump damage'. It says operating... causes 'incorrect pressure and temperature'.",
+        "evidence_quote": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 6061,
+    "eval_count": 1096,
+    "total_duration": 34786920919
+  },
+  "human_Gold": false
+}

@@ -1,0 +1,389 @@
+{
+  "trial": {
+    "arm": "B1",
+    "input_sha256": "d405f4499175811f1d94b47807a44e4da6ccb3093e853a509025077b34157ae3",
+    "page_key": "MP005:p0053",
+    "seed": 2026111002,
+    "split": "development",
+    "trial_id": "B1_MP005_p0053_2026111002"
+  },
+  "used_total_tokens": 9299,
+  "used_output_tokens": 2512,
+  "calls": 1,
+  "stages": [
+    {
+      "input_tokens": 6787,
+      "output_tokens": 2512,
+      "total_tokens": 9299,
+      "elapsed_seconds": 106.8834696150152,
+      "finish_reason": "stop"
+    }
+  ],
+  "failure": null,
+  "schema_errors": [
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'causal' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'mitigation' is not one of ['cause_or_mechanism', 'symptom', 'inspection', 'maintenance', 'operating_condition', 'structural_context', 'standard', 'risk']",
+    "'specifies' is not one of ['contains', 'located_in', 'occurs_at', 'causes', 'indicates', 'manifests_as', 'evolves_to', 'diagnosed_by', 'inspected_by', 'mitigated_by', 'prevented_by', 'maintained_by', 'operates_under', 'increases_risk_of', 'specified_by']"
+  ],
+  "output": {
+    "triples": [
+      {
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的截止元件启动泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "incorrect pressure and temperature",
+        "tail_canonical_zh": "压力和温度不正确",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed. Only start up the pump set with the discharge-side shut-off element slightly or fully open.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在无液体填充的情况下运行泵组",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "high temperature due to dry running or too much gas content in the fluid handled",
+        "tail_canonical_zh": "由于干运转或处理流体中气体含量过高导致的高温",
+        "tail_type": "Symptom",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_canonical_zh": "异常噪音、振动、温度或泄漏可能导致泵损坏",
+        "head_type": "Symptom",
+        "relation": "indicates",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的截止元件启动泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nLEAKAGE OF HOT OR TOXIC FLUIDS!\nIf the pump is operated with the suction and/or discharge line closed will cause incorrect\npressure and temperature. Hot or hazard fluids under pressure will cause death or\nserious injury.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0053:t01:r000:c01",
+          "MP005:p0053:t01:r002:c01",
+          "MP005:p0053:t01:r003:c01",
+          "MP005:p0053:t01:r004:c01",
+          "MP005:p0053:t01:r005:c01",
+          "MP005:p0053:t01:r006:c01",
+          "MP005:p0053:t01:r007:c01"
+        ],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在无液体填充的情况下运行泵组",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nDAMAGE TO THE PUMP SET!\nHigh temperature due to dry running or too much gas content in the fluid handled will\ncause death or serious injury.\nDo not operate the pump set without liquid fill.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0053:t03:r000:c01",
+          "MP005:p0053:t03:r002:c01",
+          "MP005:p0053:t03:r003:c01",
+          "MP005:p0053:t03:r004:c01",
+          "MP005:p0053:t03:r005:c01"
+        ],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.",
+        "head_canonical_zh": "不要关闭吸入管线和/或排出管线的截止元件启动泵",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nLEAKAGE OF HOT OR TOXIC FLUIDS!\nIf the pump is operated with the suction and/or discharge line closed will cause incorrect\npressure and temperature. Hot or hazard fluids under pressure will cause death or\nserious injury.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0053:t01:r000:c01",
+          "MP005:p0053:t01:r002:c01",
+          "MP005:p0053:t01:r003:c01",
+          "MP005:p0053:t01:r004:c01",
+          "MP005:p0053:t01:r005:c01",
+          "MP005:p0053:t01:r006:c01",
+          "MP005:p0053:t01:r007:c01"
+        ],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Do not operate the pump set without liquid fill.",
+        "head_canonical_zh": "不要在无液体填充的情况下运行泵组",
+        "head_type": "OperatingCondition",
+        "relation": "causes",
+        "tail_surface": "explosion hazard",
+        "tail_canonical_zh": "爆炸危险",
+        "tail_type": "Risk",
+        "evidence_text": "DANGER\nEXPLOSION HAZARD!\nDAMAGE TO THE PUMP SET!\nHigh temperature due to dry running or too much gas content in the fluid handled will\ncause death or serious injury.\nDo not operate the pump set without liquid fill.",
+        "evidence_mode": "E2_table_cells",
+        "evidence_unit_ids": [
+          "MP005:p0053:t03:r000:c01",
+          "MP005:p0053:t03:r002:c01",
+          "MP005:p0053:t03:r003:c01",
+          "MP005:p0053:t03:r004:c01",
+          "MP005:p0053:t03:r005:c01"
+        ],
+        "evidence_role": "causal",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Stop the pump (set) immediately.",
+        "head_canonical_zh": "立即停止泵（组）",
+        "head_type": "InspectionAction",
+        "relation": "mitigated_by",
+        "tail_surface": "abnormal noises, vibrations, temperatures or leakage",
+        "tail_canonical_zh": "异常噪音、振动、温度或泄漏",
+        "tail_type": "Symptom",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "mitigation",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      },
+      {
+        "head_surface": "Prime the pump according to operating instructions.",
+        "head_canonical_zh": "按照操作说明进行泵的预充",
+        "head_type": "MaintenanceAction",
+        "relation": "specifies",
+        "tail_surface": "do not operate the pump set without liquid fill",
+        "tail_canonical_zh": "不要在无液体填充的情况下运行泵组",
+        "tail_type": "OperatingCondition",
+        "evidence_text": "Do not operate the pump set without liquid fill. Prime the pump according to operating instructions.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "standard",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9
+      }
+    ],
+    "warnings": []
+  },
+  "validation": [
+    {
+      "index": 1,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 2,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 3,
+      "normalized": {
+        "head": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+        "head_canonical_zh": "异常噪音、振动、温度或泄漏可能导致泵损坏",
+        "head_type": "Symptom",
+        "head_translation_status": "needs_review",
+        "relation": "indicates",
+        "tail": "damage to the pump",
+        "tail_surface": "damage to the pump",
+        "tail_canonical_zh": "泵损坏",
+        "tail_type": "FaultMode",
+        "tail_translation_status": "needs_review",
+        "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "evidence_mode": "E1_contiguous_text",
+        "evidence_unit_ids": [],
+        "evidence_role": "symptom",
+        "fault_class_ids": [
+          "DOCUMENT_METADATA"
+        ],
+        "model_confidence": 0.9,
+        "head_translation_confidence": 0.9,
+        "tail_translation_confidence": 0.9,
+        "doc_id": "MP005",
+        "pdf_page_number": 53,
+        "document_split": "build_train",
+        "source_language": "en",
+        "source_family_id": "DESMI",
+        "source_url": "https://www.desmi.com/media/dx1lnug1/t1542uk.pdf",
+        "source_tier": "A",
+        "publisher": "DESMI",
+        "document_sha256": "B88E454110CFE5FE8E990C701960DA8CBE59F53D48887454502D226A25DBCB7A",
+        "page_text_sha256": "48699dd2599181e21fbeb35aaf791777f90e88456a566b9b40cca77369b5b2ef",
+        "pump_type": "centrifugal_pump",
+        "service": "marine_cooling_bilge_ballast_and_fire_service",
+        "applicability_scope": "优先适用于手册列明的NSL船用离心泵应用",
+        "inferred_edge": false
+      },
+      "legacy_result": {
+        "payload": {
+          "head_surface": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.",
+          "head_type": "Symptom",
+          "relation": "indicates",
+          "tail_surface": "damage to the pump",
+          "tail_type": "FaultMode",
+          "conditions": [],
+          "modality": "unspecified",
+          "polarity": "unspecified",
+          "scope": "primary",
+          "applicability": "优先适用于手册列明的NSL船用离心泵应用",
+          "evidence_text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump. Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+          "evidence_unit_ids": []
+        },
+        "included": true,
+        "rules": [],
+        "source_witnesses": [
+          {
+            "kind": "page_span",
+            "start": 3618,
+            "end": 3949,
+            "text": "Abnormal noises, vibrations, temperatures or leakage could cause damage to the pump.\n                                                                                  \n                  Stop the pump (set) immediately.                                \n                  Eliminate the causes before returning the pump set to service."
+          }
+        ],
+        "barriers": [],
+        "screen_flags": [],
+        "changes": {},
+        "semantic_certification": false,
+        "clause_binding": {
+          "mode": "repair",
+          "issues": [],
+          "proposal_count": 0,
+          "outcome": "unchanged",
+          "grammar_semantic_guarantee": false
+        },
+        "layout_binding": {
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "unique_native_path": false,
+          "candidate_paths": 0,
+          "original_quote_preserved": true
+        },
+        "new_rules": [],
+        "refinement_stage": "C",
+        "evidence_binding_contract": {
+          "version": "native_evidence_binding_v2",
+          "screen_flags": [],
+          "native_path_count": 0,
+          "unique_native_proof_valid": false,
+          "removed_flags": [],
+          "source_witnesses": [],
+          "geometry": {
+            "two_columns": false,
+            "split_x": null,
+            "text_units": 14,
+            "native_cells": 41
+          },
+          "semantic_support_certified": false
+        },
+        "refinement_delta": {},
+        "normalizer_actions": [],
+        "batch_reason": "no_unique_explicit_role_proof"
+      },
+      "raw_metadata_preserved_in_response": true
+    },
+    {
+      "index": 4,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 5,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 6,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 7,
+      "normalization_error": "ValueError: Unknown evidence role: causal",
+      "included": false
+    },
+    {
+      "index": 8,
+      "normalization_error": "ValueError: Unknown evidence role: mitigation",
+      "included": false
+    },
+    {
+      "index": 9,
+      "normalization_error": "ValueError: Unknown relation in model candidate: specifies",
+      "included": false
+    }
+  ],
+  "graph_modified": false
+}

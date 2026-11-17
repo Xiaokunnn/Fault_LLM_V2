@@ -1,0 +1,70 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T06",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "S",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output correctly retains the specific protective setting for the 'Motor (non drive end)' location, identifying the vibration alarm level as >10 mm/s and the vibration trip level as >15 mm/s. Triple 3 explicitly links the ISO 10816-3 standard to the 'Motor (non drive end)' equipment, and its evidence text 'Motor (non drive end) >10 >15' captures the exact numeric values and their order (alarm then trip) as defined in the source table. While the relation 'specifies_by' is a generalization, the literal meaning of the specific threshold values for this specific component is fully preserved in the main channel.",
+        "evidence_quote": "Motor (non drive end) >10 >15",
+        "output_refs": [
+          "triples:3"
+        ],
+        "output_quote": "Motor (non drive end) >10 >15"
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly identifies that the ISO 10816-3 standard specifies the vibration limits for the Pump. The evidence text 'Pump >7 >10' matches the source table row for Pump (Alarm >7, Trip >10).",
+        "evidence_quote": "Pump >7 >10"
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly identifies that the ISO 10816-3 standard specifies the vibration limits for the Motor (drive end). The evidence text 'Motor (drive end) >7 >10' matches the source table row for Motor (drive end) (Alarm >7, Trip >10).",
+        "evidence_quote": "Motor (drive end) >7 >10"
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "The triple correctly identifies that the ISO 10816-3 standard specifies the vibration limits for the Motor (non drive end). The evidence text 'Motor (non drive end) >10 >15' matches the source table row for Motor (non drive end) (Alarm >10, Trip >15).",
+        "evidence_quote": "Motor (non drive end) >10 >15"
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "The triple correctly captures the causal relationship described in the text: vibration levels above 7 mm/s are damaging and result in shorter lifetimes of bearings and shaft seals. The head 'vibration levels' and tail 'shorter lifetimes...' accurately reflect the source statement.",
+        "evidence_quote": "vibration levels above 7 mm/s are damaging – i.e. this will result in shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors) than normally expected."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "The triple correctly captures the condition where external vibrations result in velocities higher than 7 mm/s. The head 'vibration levels' and tail 'vibration velocities than 7 mm/s' reflect the source statement about ship installations.",
+        "evidence_quote": "But in pump installations on ships external excited vibrations from main engine and/or auxiliary machinery are transferred from ship hull to the pump often resulting in much higher vibration velocities than 7 mm/s."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The triple claims 'vibration alarm level' manifests as 'vibration trip level'. This is semantically incorrect. The source defines them as two distinct protective settings (columns in the table), not one manifesting as the other. The evidence text 'Pump >7 >10' lists two separate values, not a manifestation relationship. The relation 'manifests_as' is inappropriate for two distinct threshold settings.",
+        "evidence_quote": "Pump >7 >10"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 13742,
+    "eval_count": 1040,
+    "total_duration": 33544240608
+  },
+  "human_Gold": false
+}

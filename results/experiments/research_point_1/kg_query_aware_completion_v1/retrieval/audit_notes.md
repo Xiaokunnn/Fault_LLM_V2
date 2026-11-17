@@ -1,0 +1,5 @@
+# 检索统计口径补充
+
+主RETRIEVAL_RESULTS.csv的no_direct_adjacency是未作查询自排除的原始邻接；每个训练事实自身构成邻接，所以该列为0，不能据此说所有查询都有可用邻域。eligible_strata_and_mismatches.csv改用相同查询自排除后的R0空上下文分层，才对应可用直接邻接不足。
+
+same_directed_relation是检索一致性诊断，不是相关性真值；不同关系也可能有帮助。query_role_type_mismatch表示候选方向下端点类型不能直接充当该查询角色，亦不表示候选事实为假。scope_signature_disjoint只针对训练可见查询锚点恰有一个型号签名且候选有型号签名的情况，不使用目标来源；跨型号知识可能可迁移，所以不是已确认范围错误。location/entailment合同及原生地址检查都不是人工事实正确率。

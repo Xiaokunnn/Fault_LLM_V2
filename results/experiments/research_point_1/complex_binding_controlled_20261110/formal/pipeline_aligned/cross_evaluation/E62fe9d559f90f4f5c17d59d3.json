@@ -1,0 +1,83 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T06",
+        "atomic": "S",
+        "condition_object": "S",
+        "negation": "NA",
+        "alternative_joint": "NA",
+        "numeric_order": "S",
+        "evidence_support": "S",
+        "literal_complete": "S",
+        "explicit_binding": "N",
+        "channel": "main",
+        "reason": "The output correctly retains the specific protective setting for the 'Motor (non drive end)' location, identifying the vibration alarm level as '>10' and the vibration trip level as '>15'. This is supported by Triple 3 (Standard specifies Equipment) and Triple 8 (Symptom manifests as Symptom, linking alarm to trip levels). The numeric values and their order (alarm < trip) are preserved. However, the explicit machine-readable binding is weak because the specific numeric values (>10, >15) are not present in the head/tail entities of the triples, nor are they in a dedicated 'bindings' field; they are only implicit in the 'evidence_text' string. The relation 'manifests_as' in Triple 8 is semantically questionable for a configuration table (alarm/trip are settings, not symptoms manifesting as other symptoms), but the literal content of the focus is retained in the text fields.",
+        "evidence_quote": "Motor (non drive end) >10 >15",
+        "output_refs": [
+          "triples:3",
+          "triples:8"
+        ],
+        "output_quote": "Motor (non drive end) >10 >15"
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "Correctly identifies that the ISO 10816-3 standard specifies the Pump equipment context, supported by the text 'This agrees with the recommendations in the international standard ISO 10816-3' and the table context.",
+        "evidence_quote": "This agrees with the recommendations in the international standard ISO 10816-3."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "Correctly identifies that the ISO 10816-3 standard specifies the Motor (drive end) equipment context.",
+        "evidence_quote": "This agrees with the recommendations in the international standard ISO 10816-3."
+      },
+      {
+        "index": 3,
+        "verdict": "S",
+        "reason": "Correctly identifies that the ISO 10816-3 standard specifies the Motor (non drive end) equipment context.",
+        "evidence_quote": "This agrees with the recommendations in the international standard ISO 10816-3."
+      },
+      {
+        "index": 4,
+        "verdict": "S",
+        "reason": "Correctly captures the causal link between high vibration levels (>7 mm/s) and the resulting damage (shorter lifetimes of bearings/seals).",
+        "evidence_quote": "vibration levels above 7 mm/s are damaging – i.e. this will result in shorter lifetimes of e.g. bearings and/or shaft seals in pumps (and bearings in motors) than normally expected."
+      },
+      {
+        "index": 5,
+        "verdict": "S",
+        "reason": "Correctly captures the condition where ship installations result in vibration velocities higher than 7 mm/s.",
+        "evidence_quote": "But in pump installations on ships external excited vibrations from main engine and/or auxiliary machinery are transferred from ship hull to the pump often resulting in much higher vibration velocities than 7 mm/s."
+      },
+      {
+        "index": 6,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' is semantically incorrect. The source defines 'Vibration alarm level' and 'Vibration trip level' as protective settings (thresholds), not as symptoms manifesting into each other. The table lists them as distinct columns for the same location.",
+        "evidence_quote": "Location Vibration alarm level (mm/s) Vibration trip level (mm/s)"
+      },
+      {
+        "index": 7,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' is semantically incorrect. The source defines 'Vibration alarm level' and 'Vibration trip level' as protective settings (thresholds), not as symptoms manifesting into each other.",
+        "evidence_quote": "Location Vibration alarm level (mm/s) Vibration trip level (mm/s)"
+      },
+      {
+        "index": 8,
+        "verdict": "N",
+        "reason": "The relation 'manifests_as' is semantically incorrect. The source defines 'Vibration alarm level' and 'Vibration trip level' as protective settings (thresholds), not as symptoms manifesting into each other. However, the literal values (>10, >15) are correctly captured in the evidence text.",
+        "evidence_quote": "Location Vibration alarm level (mm/s) Vibration trip level (mm/s)"
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 13992,
+    "eval_count": 1185,
+    "total_duration": 41045390231
+  },
+  "human_Gold": false
+}

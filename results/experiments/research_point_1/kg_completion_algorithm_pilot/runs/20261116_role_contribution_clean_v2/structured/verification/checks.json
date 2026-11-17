@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "Both previous complete delivery manifests unchanged (1896 + 915 files), including old graphs/models/predictions",
+    "Identical architecture keys; every gate-only best checkpoint preserves all non-gate tensors exactly; labels have no known guarded target copies",
+    "Same frozen targets/all-answer rankings across arms; three raw-score rank/tie replays exact"
+  ],
+  "expert_truth_certified": false,
+  "formal_graph_modifications": 0,
+  "passed": true,
+  "replay": [
+    {
+      "MRR": 0.11782549717347779,
+      "all_rows_reconstructed": true,
+      "arm": "gate_kgc"
+    },
+    {
+      "MRR": 0.11782491534243222,
+      "all_rows_reconstructed": true,
+      "arm": "absolute_only"
+    },
+    {
+      "MRR": 0.11782491534243222,
+      "all_rows_reconstructed": true,
+      "arm": "full"
+    }
+  ],
+  "unit_tests": 8
+}

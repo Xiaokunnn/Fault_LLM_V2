@@ -1,0 +1,60 @@
+{
+  "status": "complete_AI_cross_evaluation",
+  "assessment": {
+    "assessments": [
+      {
+        "focus_id": "T03",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not contain any triple, binding, or auxiliary text referencing the instruction to stop the pump immediately or eliminate causes before returning to service. The provided triples focus on startup conditions (closed valves, liquid fill) and do not address the shutdown/emergency response protocol specified in the focus.",
+        "evidence_quote": "Stop the pump (set) immediately. Eliminate the causes before returning the pump set to service.",
+        "output_refs": [],
+        "output_quote": ""
+      },
+      {
+        "focus_id": "T04",
+        "atomic": "N",
+        "condition_object": "N",
+        "negation": "N",
+        "alternative_joint": "N",
+        "numeric_order": "N",
+        "evidence_support": "N",
+        "literal_complete": "N",
+        "explicit_binding": "N",
+        "channel": "none",
+        "reason": "The output does not contain any triple, binding, or auxiliary text referencing the specific time limit (5 minutes) or temperature limit (80 °C) for operating against a closed discharge valve. The first triple mentions 'shut-off elements... closed' but in the context of a prohibition ('Do not operate...') and startup instruction, not the specific safety exception with numeric limits described in the focus.",
+        "evidence_quote": "For safety reasons the pump is only allowed to operate against closed discharge valve for a short time (max. 5 minutes and at a max. temperature of 80 °C for standard pumps).",
+        "output_refs": [],
+        "output_quote": ""
+      }
+    ],
+    "relation_verdicts": [
+      {
+        "index": 1,
+        "verdict": "S",
+        "reason": "The triple correctly captures the prohibition against operating with closed shut-off elements and the associated risk of incorrect pressure/temperature, which is supported by the source text 'Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed.' and 'If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature.'",
+        "evidence_quote": "Do not operate the pump with the shut-off elements in the suction line and/or discharge line closed. ... If the pump is operated with the suction and/or discharge line closed will cause incorrect pressure and temperature."
+      },
+      {
+        "index": 2,
+        "verdict": "S",
+        "reason": "The triple correctly captures the prohibition against operating without liquid fill and the associated risk of high temperature due to dry running, which is supported by the source text 'Do not operate the pump set without liquid fill.' and 'High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury.'",
+        "evidence_quote": "Do not operate the pump set without liquid fill. ... High temperature due to dry running or too much gas content in the fluid handled will cause death or serious injury."
+      }
+    ]
+  },
+  "judge_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "usage": {
+    "prompt_eval_count": 5855,
+    "eval_count": 765,
+    "total_duration": 20471629255
+  },
+  "human_Gold": false
+}
