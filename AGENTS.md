@@ -100,6 +100,11 @@
 
 ### RP1 controlled-validation handoff (2026-11-10)
 
+- Latest explicit RP1 work (2026-11-17) is the completed, bounded quality/root-cause study in `results/experiments/research_point_1/kg_quality_root_cause_v1/`; read `RP1_NEXT_STEP.md` and `ROOT_CAUSE_ANALYSIS.md` before proposing another sparsity audit or transport_R3 tuning. The user's current RP1 instructions supersede the historical RP3 execution focus above; frozen upstream/RP2/RP3 protection still applies.
+- That study traces 8007 export rows/8003 normalized records and freezes 45 source units, 18 atomic AI references and 16 complex reference focuses. These are assistant source-reading proxies, not independent expert Gold or a new KGC test set.
+- GA's 276 automatic records yield 271 hypothetical Claim families; GB adds virtual concept navigation with unchanged business facts. Neither view is a released graph or new teacher. GC's reference retrieval is true by construction and must never be reported as algorithm accuracy.
+- The current decision prioritizes source-grounded object/role/scope representation over further transport_R3 tuning; no new training, external LLM API, formal-graph change or RP2/RP3 migration was executed. Do not turn this into repeated open-ended audits or silently admit the diagnostic views to training.
+
 - The completed RP1 six-check offline audit and quotation-interface fix are recorded in `docs/research/RP1_SIX_CHECKS_REPORT_20261110.md` and `results/experiments/research_point_1/six_checks_final_v1_20261110/`. No teacher graph or frozen paper result was replaced.
 - The user-authorized next RP1 validation is a separate, not-yet-executed model study. Read `docs/research/RP1_ROUND2_SERVER_HANDOFF_20261110.md` before continuing: determine scope for the 17 AI-reviewed targets, audit complete original inputs/outputs, freeze four equal-budget generic controls, run actual repeated model experiments, obtain independent small-sample evaluation, then make a go/no-go decision.
 - The new four-arm runner/config and independent evaluation do not exist yet. `scripts/run_rp1_six_checks.py` only replays the completed offline audit, not the new model study. AI development judgments are not Gold or domain-expert truth.

@@ -1,0 +1,46 @@
+relation,label_zh,definition,domain,range,raw_export_records,normalized_records,published_claims,published_assertions,schema_illegal_normalized,saved_entailed,saved_not_entailed,saved_undetermined,enumerated_in_extraction_contract,explicit_prompt_instruction_mention,normalization_actions,source_example_claim,source_example_doc,source_example_page,source_example_text
+causes,导致,Cause_or_Mechanism_or_Condition_or_Fault -> Mechanism_or_Fault_or_Symptom_or_Risk,Cause|FailureMechanism|OperatingCondition|FaultMode,FailureMechanism|FaultMode|Symptom|SignalFeature|Risk,961,971,294,307,38,290,230,451,True,True,"{""normalized_causal_manifestation_to_causes"":39,""record_audit_excess_vibration_as_operating_condition"":1,""record_audit_high_temperature_as_operating_condition"":1,""record_audit_steam_formation_as_failure_mechanism"":1,""record_audit_troubleshooting_problem_as_observable_symptom"":1,""reoriented_cause_to_effect"":467}",EXC-ff786a4a44f9cb27f96365aa,MP019,20,"Motor vibrates
+--- CELL ---
+Driven equipment unbalanced"
+contains,包含,Equipment_or_Component -> Component,Equipment|Component,Component,653,371,17,17,82,20,227,124,True,False,{},EXC-9343ac5ae9e9b0ea9d5b8d17,MP016,4,"There are 2 basic types of shaft seals available on the Bronze Flexible
+                             Impeller Pump. These are standard Lip Seal and Mechanical Seal."
+diagnosed_by,诊断方法为,DiagnosticTarget -> InspectionMethod_or_InspectionAction,Cause|FailureMechanism|FaultMode|Symptom|SignalFeature|Risk,InspectionMethod|InspectionAction,321,751,125,127,21,138,278,335,True,True,"{""normalized_symptom_inspection_to_diagnosis"":430,""reoriented_diagnosed_by_target_to_method"":72,""reoriented_inspected_by_target_to_method"":17}",EXC-3c126c93f38e83f418c66e5f,MP001,94,"Magnetic particle inspection helps detect the location of surface/near-surface cracks and discontinuities
+            caused by problems such as fatigue, wear, inclusions, laminations, heat treatment, hydrogen embrittlement,
+            seams, and corrosion."
+evolves_to,演化为,FaultMode_or_FailureMechanism -> FaultMode_or_FailureMechanism_or_Risk,FaultMode|FailureMechanism,FaultMode|FailureMechanism|Risk,1,1,1,1,0,1,0,0,True,False,{},EXC-7b073b7da73496dc0301f53e,MP001,41,"If this
+                 condition is not corrected, the belts will become hotter and the slip will increase resulting in belt
+                 failure."
+increases_risk_of,增加风险,Cause_or_Mechanism_or_Fault_or_Condition -> Risk,Cause|FailureMechanism|FaultMode|OperatingCondition,Risk,42,42,0,0,28,0,21,21,True,False,{},,,,
+indicates,指示,Symptom_or_SignalFeature -> Cause_or_Mechanism_or_Fault_or_Risk,Symptom|SignalFeature,Cause|FailureMechanism|FaultMode|Risk,333,349,25,25,171,39,118,192,True,True,"{""normalized_symptom_causation_to_indication"":38}",EXC-d72f5dfcdc30f8356eea7e2a,MP001,63,"The total density of the particles and the ratio of large-to-small particles indicate
+            the type and extent of wear."
+inspected_by,检查方法为,Equipment_or_Component_or_DiagnosticTarget -> InspectionMethod_or_InspectionAction,Equipment|Component|Cause|FailureMechanism|FaultMode,InspectionMethod|InspectionAction,2005,1575,283,299,244,419,632,524,True,True,"{""reoriented_inspected_by_target_to_method"":61}",EXC-1849dbbaa36629ae1fab5b97,MP003,68,"Tests are to demonstrate the ability of the control, protection and safety equipment to function as
+                      intended under the specified testing conditions per 4-9-9/Table 1."
+located_in,位于,Component -> Equipment_or_Component,Component,Equipment|Component,85,85,5,5,2,9,16,60,True,False,{},EXC-459da6817bc758cabdcaf646,MP003,510,Taper-thread joints for hydraulic oil system.
+maintained_by,维护方式为,Equipment_or_Component -> MaintenanceAction,Equipment|Component,MaintenanceAction,1351,1390,344,366,94,467,483,440,True,True,"{""normalized_component_mitigation_to_maintenance"":40}",EXC-b55848d0835486ddc3c8c163,MP016,5,"Remove o-ring, check for wear and replace if required."
+manifests_as,表现为,FaultMode_or_FailureMechanism -> Symptom_or_SignalFeature,FaultMode|FailureMechanism,Symptom|SignalFeature,177,163,20,20,28,22,60,81,True,True,"{""normalized_fault_indication_to_manifestation"":23}",EXC-a1b918f93a2f9e9901ff4c4a,MP007,12,"In case of dry running,
+                pump bearing and shaft seal will be damaged."
+mitigated_by,缓解措施为,Cause_or_Mechanism_or_Fault_or_Risk -> MaintenanceAction,Cause|FailureMechanism|FaultMode|Risk,MaintenanceAction,824,784,96,98,282,114,243,427,True,True,"{""reoriented_mitigated_target_to_action"":12}",EXC-c1c33d2aadec9aaa54711b41,MP004,11,"The pump has no or
+too low capacity
+--- CELL ---
+Change direction of rotation
+to clockwise when viewed
+from shaft end (the direction
+of the arrow)
+Clean or replace
+Clean the pump
+Find the leakage, repair the
+fault, non-return valve not
+submerged
+Check data sheet Q/H curve
+and NPSH or contact DESMI
+As 5
+Fit smaller V-belt pulley on
+pump. Change RPM of
+electric motor"
+occurs_at,发生于,FaultMode_or_FailureMechanism -> Equipment_or_Component,FaultMode|FailureMechanism,Equipment|Component,15,282,1,1,13,1,6,275,True,False,"{""normalized_contained_fault_to_occurs_at"":267}",EXC-1a233aa3eb02a6607fbb900a,MP015,40,For pump with a closed impeller the wear occurs between the impeller and the wear ring.
+operates_under,运行于,Equipment_or_Component -> OperatingCondition,Equipment|Component,OperatingCondition,241,241,29,29,51,37,118,86,True,False,{},EXC-f979974b8e2c23d472e51db1,MP003,771,"The electrical characteristics of electrical equipment supplied from the main or emergency systems, other
+            than battery supplies, are to be capable of being operated satisfactorily under normally occurring variations
+            in voltage and frequency."
+prevented_by,预防措施为,Cause_or_Mechanism_or_Fault_or_Condition_or_Risk -> MaintenanceAction,Cause|FailureMechanism|FaultMode|OperatingCondition|Risk,MaintenanceAction,608,608,110,111,194,212,231,165,True,True,"{""reoriented_prevented_target_to_action"":43}",EXC-9b365b24e6d7f44ebf78f59e,MP016,2,"do
+                             not dry run any longer as lack of liquid will damage the Impeller"
+specified_by,由规范规定,SemanticEntity -> Standard,Equipment|Component|FaultMode|FailureMechanism|Symptom|SignalFeature|Cause|OperatingCondition|InspectionMethod|InspectionAction|MaintenanceAction|Risk,Standard,390,390,50,50,44,65,114,211,True,False,{},EXC-eca7175c45266dd92950f999,MP022,43,"The table below specifies the tightening torques for the screws, bolts and nuts in this pump."
