@@ -1,0 +1,41 @@
+{
+  "answers": 2150,
+  "beam_width": 48,
+  "branch_limit": 16,
+  "bridge_prefetch": 24,
+  "bridge_semantic_floor": 0.6,
+  "bridge_topk": 4,
+  "four_hop_policy": "Only diagnostic extension if 3-hop bridges contain <=1 real edge for most supported queries",
+  "fusion_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "held_folds": [
+    "valid",
+    "test"
+  ],
+  "max_hops": 3,
+  "max_paths_per_query": 384,
+  "max_virtual": 2,
+  "no_consecutive_virtual": true,
+  "no_new_supervision_from_raw": true,
+  "no_test_prediction": true,
+  "real_min_hops": 2,
+  "schema_filter": false,
+  "seeds": [
+    16112026,
+    16112027,
+    16112028
+  ],
+  "selected_on": "mean validation MRR over three reused seeds",
+  "semantic_copy_rule": {
+    "both_cosine": 0.95,
+    "one_alias_exact_other_cosine": 0.9,
+    "relation_agnostic": true,
+    "types_equal": true
+  },
+  "status_filter": false,
+  "support_topm": 8
+}
